@@ -80,7 +80,7 @@ Run this full sequence after every review. The audit checks:
 - blank-to-flag coverage and two-way item/retailer flag references;
 - rejected/superseded values not becoming current values;
 - nominal fine-gold and melt calculations;
-- rendered row/source identity, internal links and fragments, CSP, and script constraints; and
+- rendered row/source identity, internal links and fragments, CSP, script constraints, and small-text WCAG AA contrast; and
 - explicit price/weight coverage warnings.
 
 The preserved earlier pass remains runnable:
