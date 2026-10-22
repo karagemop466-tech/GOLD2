@@ -291,7 +291,7 @@ def build_index(items, payloads, flags, gold, qa_summary, retrieved):
     body = f"""
 <section class="banner" aria-labelledby="no-hallucination">
   <span class="pill">NO HALLUCINATIONS</span>
-  <h2 id="no-hallucination">Nothing on this site is invented, estimated, or extrapolated.</h2>
+  <h2 id="no-hallucination">Rule: do not invent, estimate, or extrapolate values.</h2>
   <p>A published fact must be supported by a field-scoped excerpt from a page actually retrieved. If a value is absent or ambiguous, it remains <strong>blank</strong> and is linked to <a href="flags.html">Flagged for Review</a>. Search snippets are not product facts; unlabeled amounts are not assigned by position or arithmetic.</p>
   <p class="flagline"><strong>Look for hallucinations again after every review.</strong> Re-open the official source, re-read the row, and treat the official page as current if this table becomes stale. Automated checks: <strong>{esc(qa_summary)}</strong> — see <a href="methods.html">Method &amp; QA</a>.</p>
 </section>
@@ -522,7 +522,7 @@ def build_methods(qa_summary, gold, items, flags, retailers, retrieved):
 <li><strong>Rejected as product evidence:</strong> search snippets, aggregators, blogs, coupon pages, unrelated page text, and values from other items in the same category.</li></ul>
 <h2>3. Field-scoped evidence</h2><p>The current audit resolves <strong>{quote_count}</strong> field-specific quotes across 16 item files, four retailer files, and the gold/calculation evidence. A price, width, or karat in one item’s file cannot support another item. Shared category files are retained only as inherited audit history and are not authoritative inputs.</p>
 <h2>4. Current limitations</h2><ul class="clean">{limitations}</ul>
-<h2>5. Automated checks after every review</h2><p>Run <code>python3 tools/build_site.py</code>, <code>python3 tools/qa.py</code>, and <code>node tools/test_calculator.js</code>. The audit checks schema, field-level quote backing, numeric/currency consistency, null-to-flag coverage, two-way flag references, official product domains, calculator arithmetic, built-row/source identity, internal links and fragments, CSP/script constraints, and stale generated values.</p>
+<h2>5. Automated checks after every review</h2><p>Run <code>python3 tools/build_site.py</code>, <code>python3 tools/qa.py</code>, <code>node tools/test_calculator.js</code>, and <code>python3 reviews/independent_snapshot_audit.py .</code>. The audits check schema, field-level quote backing, numeric/currency consistency, null-to-flag coverage, two-way flag references, official product domains, calculator arithmetic, built-row/source identity, internal links and fragments, CSP/script constraints, stale generated values, and independent cross-schema contradictions.</p>
 <pre class="qa">RESULT: {esc(qa_summary)}
 Full timestamped log: reports/qa-report.md</pre>
 <p><a href="reports/qa-report.md">Open the complete timestamped QA report</a> · <a href="reports/source-link-review.md">Open the dated external source-link retrieval review</a></p>

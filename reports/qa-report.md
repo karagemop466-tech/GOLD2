@@ -1,6 +1,6 @@
 # QA / hallucination and integration audit
 
-- Generated: 2026-10-22 23:43:09 UTC
+- Generated: 2026-10-22 23:45:35 UTC
 - Items audited: 16 · retailers: 4 · flags: 23 · field-scoped quotes: 277
 - **RESULT: PASS** — 10 checks, 0 failures, 2 warnings
 

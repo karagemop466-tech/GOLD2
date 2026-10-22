@@ -32,6 +32,8 @@ No other active claim was present when this board was read. Completed historical
 - 2026-10-22 — Inventoried 51 unique external HTTPS destinations in the built pages. All 50 web destinations returned content during this review and the repository URL validated with `gh`; all 16 official product URLs were included. Dated record: `reports/source-link-review.md`. Redirects, dynamic extraction, and future availability limitations remain explicit.
 - 2026-10-22 — README and both workflows updated for the current evidence model, branch, calculator tests, and reproducible generated-file checks. Legacy `main` / root Pages publishing is retained; the legacy workflow verifies `site/` and is not mislabeled as the root deployment mechanism. T15 integration/PR/deployment is now active.
 - 2026-10-22 — Clean-tree reproducibility testing caught stale intermediate **FAIL** summary text in committed `index.html`/`methods.html` despite a final PASS report. Regenerated from the PASS report and added an explicit post-audit build to CI; the generated-file diff check remains enforced. This is a rendered-state correction, not a loosened audit.
+- 2026-10-22 — `git pull --rebase origin main` integrated main through PR #14 (`7276c9b`). Gold data/evidence and generated-file conflicts were resolved by combining: independent `reviews/**`, legacy `evidence_quotes`, and the `Last Updated` excerpt remain; the supported 4,028.53 quote remains; R9-01 is corrected to source-supported `quote_date: 2026-10-21` while `retrieved_at` stays 2026-10-22. No review history was deleted.
+- 2026-10-22 — Updated the inherited independent snapshot audit for per-item evidence, field-scoped quotes, and CSP-compatible external calculator scripts. Corrected its negation handling after it falsely flagged a note that explicitly said solid gold was *not* stated; the contradiction check remains and now exits nonzero on findings. Integrated result: **0 findings, 6 arithmetic controls passed**. Root QA, calculator tests, legacy checks, and HTTP preview also pass after the rebase.
 
 ## Sessions that have worked here
 
@@ -39,7 +41,7 @@ No other active claim was present when this board was read. Completed historical
 |---|---|---|---|
 | `39da17c8` | `arena/39da17c8-gold2` | initial research, dashboard in `site/`, audits, Pages | merged in PR #1 / #2 → `main` |
 | `S-6CA03571` (6ca03571) | `arena/6ca03571-gold2` | listing research, evidence trail, root dashboard, integration | PR #3–#7 merged |
-| `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9 done; R9-01 quote-date correction open |
+| `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9 done; R9-01 quote-date correction applied by S-CA4C9D8A |
 | `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 merged; open findings handed off |
 
 All sessions share one environment constraint: the runner is bound to a single branch and cannot create

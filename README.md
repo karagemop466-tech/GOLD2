@@ -69,9 +69,10 @@ python3 tools/build_site.py
 python3 tools/qa.py
 node tools/test_calculator.js
 python3 tools/build_site.py  # refresh the rendered QA summary after the audit
+python3 reviews/independent_snapshot_audit.py .
 ```
 
-Run all three after every review. The audit checks:
+Run this full sequence after every review. The audit checks:
 
 - item-scoped schema, IDs, dates, and official domains;
 - field-specific quote existence and value/currency/unit consistency;
