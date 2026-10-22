@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0.0",
+  "reviewer_session": "5ff05cf9-gold2",
+  "updated_at": "2026-10-22T23:15:15Z",
+  "subject": {
+    "branch": "arena/39da17c8-gold2",
+    "commit": "6832208a5bb0798d803280eae3fe39c377275575",
+    "report": "reviews/2026-10-22-39da17c8.md"
+  },
+  "findings": [
+    {
+      "id": "R39-01",
+      "severity": "medium",
+      "status": "open",
+      "title": "Category subpages are absent",
+      "observation": "The snapshot has one flat rings.html page and no category subpages.",
+      "requested_disposition": "Add category indexes/pages or publish the unmet requirement as an open gap; do not claim a complete categorized catalog.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/6832208a5bb0798d803280eae3fe39c377275575/scripts/build.py",
+      "official_reference_url": null
+    },
+    {
+      "id": "R39-02",
+      "severity": "medium",
+      "status": "open",
+      "title": "Checklist narrows ring weight to metal-only weight",
+      "observation": "The generated checklist replaces the requested ring weight in grams with gold-alloy weight excluding stones/components.",
+      "requested_disposition": "Keep ring weight and gold-alloy-only weight as separate, explicitly labeled official-evidence fields; never derive one from the other.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/6832208a5bb0798d803280eae3fe39c377275575/scripts/build.py",
+      "official_reference_url": null
+    },
+    {
+      "id": "R39-03",
+      "severity": "medium",
+      "status": "open",
+      "title": "Calculator UI has no usable verified inputs",
+      "observation": "Both selectable products have null weight and null gold-price inputs; no user-input path exists, so every UI calculation remains blank.",
+      "requested_disposition": "Add labeled user-input controls and unit/source/date handling without presenting user input as an official observation; retain blank outputs for missing inputs.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/6832208a5bb0798d803280eae3fe39c377275575/site/calculator.html",
+      "official_reference_url": "https://www.nist.gov/document/precious-metals-conversion-information-march2015pdf"
+    },
+    {
+      "id": "R39-04",
+      "severity": "medium",
+      "status": "open",
+      "title": "Audit does not validate every populated product claim",
+      "observation": "The audit checks source host plus price/metal/ID excerpts, but not name/category/karat/priceScope evidence; an allowlisted non-product URL can satisfy the generic row-link check.",
+      "requested_disposition": "Require field-level evidence and product-specific URLs, remove hard-coded review-date acceptance, and add negative tests for unsupported edits.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/6832208a5bb0798d803280eae3fe39c377275575/scripts/audit.py",
+      "official_reference_url": null
+    },
+    {
+      "id": "R39-05",
+      "severity": "low",
+      "status": "open",
+      "title": "Workflow actions use mutable major-version tags",
+      "observation": "The reviewed workflow references GitHub actions by major-version tags rather than full commit SHAs. The later main workflow removed deploy-pages but retains tag-pinned checkout/setup/upload actions.",
+      "requested_disposition": "Pin third-party workflow dependencies to reviewed full commit SHAs.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/6832208a5bb0798d803280eae3fe39c377275575/.github/workflows/pages.yml",
+      "official_reference_url": null
+    },
+    {
+      "id": "R39-06",
+      "severity": "low",
+      "status": "open",
+      "title": "Small eyebrow text is below WCAG AA contrast",
+      "observation": "The 10px #aa8135 eyebrow text measures approximately 3.3096:1 on #f7f7f1 and 3.5589:1 on white; ordinary text requires 4.5:1.",
+      "requested_disposition": "Darken the small text or otherwise meet at least 4.5:1 without rounding up to the threshold.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/6832208a5bb0798d803280eae3fe39c377275575/site/style.css",
+      "official_reference_url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+    }
+  ],
+  "review_pass_policy": "After every disposition or content edit, repeat official-source comparison, hallucination/security checks, build/link checks, and manual review of unresolved flags."
+}
