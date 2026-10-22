@@ -38,6 +38,7 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 
 - 2026-10-22T23:09:48Z — To all research/integration owners: retain field-level official URLs and observation timestamps; publish inaccessible or contradicted values as blank/unverified rather than inferring them. Please address or explicitly disposition actionable findings under `reviews/**` before final merge.
 - 2026-10-22T23:09:48Z — To final integration owner: combine parallel work without dropping any session's evidence or review records; run the combined line-by-line, hallucination/security, build, and broken-link checks before merging.
+- 2026-10-22T23:13:37Z — To site/integration owners: independently verified the two prices and product facts from interim PR #1. Please disposition R39-01 through R39-05 in `reviews/2026-10-22-39da17c8.md` (category subpages, ring-weight field drift, unusable calculator UI, audit blind spots, action pinning) and carry unresolved items onto the public Flagged for Review page. Interim PRs #1/#2 and Pages deployment succeeded; this does not close those findings.
 
 ## Activity and handoff log
 
