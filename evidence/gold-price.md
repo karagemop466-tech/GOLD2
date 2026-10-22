@@ -34,3 +34,6 @@ The historical tabulated data for the LBMA Precious Metals Prices has been moved
 ```
 
 **Consequence:** no free LBMA fix value is recorded in `data/gold-price.json`. The World Gold Council quote is used instead, with its date. This is recorded as flag F-013.
+
+## Integration correction — 2026-10-22
+The stored 4,028.53 was a prior moving-header observation. Its exact source quote timestamp is unconfirmed; quote_date is now null. Chart text “Data as of 21 October, 2026” must not be silently bound to the header. A later re-fetch displayed 4,025.54 in the header; this is recorded separately in research/evidence.json, not used to make the old observation live.

@@ -15,23 +15,37 @@
       "color": "Yellow",
       "width_mm": 1.9,
       "weight_g": null,
-      "price": 1125.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
       "retrieved_at": "2026-10-22",
       "evidence_file": "evidence/listings/18k.md",
-      "evidence_quotes": ["$1,125(Setting Price)", "500000y", "18K Yellow Gold", "1.90mm", "platinum prongs"],
+      "evidence_quotes": [
+        "$1,125(Setting Price)",
+        "500000y",
+        "18K Yellow Gold",
+        "1.90mm",
+        "platinum prongs"
+      ],
       "solid_gold_explicit": false,
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "verified_price_and_metal",
+      "verification_status": "metal_stated_currency_unconfirmed",
       "rejected_values": [],
-      "flags": ["F-001", "F-002", "F-003", "F-015"],
-      "notes": "Product text says the 18k yellow gold band has platinum prongs - a mixed-metal setting, not pure 18k throughout."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016"
+      ],
+      "notes": "Product text says the 18k yellow gold band has platinum prongs - a mixed-metal setting, not pure 18k throughout.",
+      "observed_display": "$1,125(Setting Price)",
+      "prior_normalized_price": 1125.0
     },
     {
       "id": "BN-195269",
@@ -45,23 +59,36 @@
       "color": "Yellow",
       "width_mm": 1.8,
       "weight_g": null,
-      "price": 1155.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
       "retrieved_at": "2026-10-22",
       "evidence_file": "evidence/listings/18k.md",
-      "evidence_quotes": ["$1,155(Setting Price)", "501130y", "18K Yellow Gold", "1.80mm"],
+      "evidence_quotes": [
+        "$1,155(Setting Price)",
+        "501130y",
+        "18K Yellow Gold",
+        "1.80mm"
+      ],
       "solid_gold_explicit": false,
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "verified_price_and_metal",
+      "verification_status": "metal_stated_currency_unconfirmed",
       "rejected_values": [],
-      "flags": ["F-001", "F-002", "F-003", "F-015"],
-      "notes": "Same design as BN-195639 (14K, $1,000) in 18K at $1,155 - a $155 difference for the higher karat."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016"
+      ],
+      "notes": "Same design as BN-195639 (14K, $1,000) in 18K at $1,155 - a $155 difference for the higher karat.",
+      "observed_display": "$1,155(Setting Price)",
+      "prior_normalized_price": 1155.0
     },
     {
       "id": "VRAI-CLASSIC-4P",
@@ -77,24 +104,41 @@
       "weight_g": 2.86,
       "weight_basis": "Metal weight 2.86 g at ring size 6, as published by the retailer",
       "price": null,
-      "currency": "USD",
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
       "source_url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
       "retrieved_at": "2026-10-22",
       "evidence_file": "evidence/listings/18k.md",
-      "evidence_quotes": ["Metal weight:2.86g (Ring size 6)", "18k Yellow Gold", "Band depth:1.6mm", "Returns accepted within 30 days"],
+      "evidence_quotes": [
+        "Metal weight:2.86g (Ring size 6)",
+        "18k Yellow Gold",
+        "Band depth:1.6mm",
+        "Returns accepted within 30 days"
+      ],
       "solid_gold_explicit": false,
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": "https://www.vrai.com/returns-exchanges",
-      "verification_status": "weight_verified_price_unverified",
+      "verification_status": "metal_stated_currency_unconfirmed",
       "rejected_values": [
-        {"value": 1035.0, "source": "search-engine snippet ('Starting at $1,035')", "reason": "No price string was present in the retrieved page HTML for this item; the price is left blank rather than repeated from an unverified snippet."}
+        {
+          "value": 1035.0,
+          "source": "search-engine snippet ('Starting at $1,035')",
+          "reason": "No price string was present in the retrieved page HTML for this item; the price is left blank rather than repeated from an unverified snippet."
+        }
       ],
-      "flags": ["F-001", "F-002", "F-008", "F-015"],
-      "notes": "Only item in the dataset that publishes a metal weight in grams. Price is JS-rendered and was not present in the retrieved HTML, so it is deliberately blank."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-008",
+        "F-015",
+        "F-016"
+      ],
+      "notes": "Only item in the dataset that publishes a metal weight in grams. Price is JS-rendered and was not present in the retrieved HTML, so it is deliberately blank.",
+      "observed_display": null,
+      "prior_normalized_price": null
     }
   ]
 }

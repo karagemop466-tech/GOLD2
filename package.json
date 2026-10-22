@@ -11,7 +11,8 @@
     "check:links": "node scripts/check-links.mjs",
     "test:browser": "node scripts/browser-tests.mjs",
     "check": "npm run verify && npm test && npm run build && npm run check:links && npm run security && npm run test:browser",
-    "dev": "node scripts/serve.mjs"
+    "dev": "node scripts/serve.mjs",
+    "sources:check": "node scripts/source-monitor.mjs"
   },
   "engines": {
     "node": ">=22"

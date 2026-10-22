@@ -6,8 +6,8 @@
       "id": "F-001",
       "severity": "high",
       "type": "checklist_gap",
-      "title": "No listing uses the words \"solid gold\"",
-      "detail": "The buying checklist requires the listing itself to say 'solid gold', not plated / vermeil / gold-filled / overlay / gold-tone. Across all 16 captured listings, the retrieved page text states a karat (10K/14K/18K) but never uses the phrase 'solid gold'. Absence was checked in the retrieved page text for each item on 2026-10-22. This is a documentation gap, not proof that the ring is plated.",
+      "title": "Target-product specifications do not establish explicit solid gold",
+      "detail": "For all 16 original-register targets, fetched target descriptions/specifications did not establish explicit solid-gold construction. A related product or general page can mention solid gold without proving this exact ring. This absence is not proof the item is plated.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -184,14 +184,16 @@
       "title": "Blue Nile returns exclude items resized after purchase and custom orders",
       "detail": "Blue Nile's official return page states a 30-day window from shipment and explicitly excludes 'items resized after initial purchase', custom orders, engraved items and personalised jewellery. Since the checklist requires inspecting and verifying before resizing, resize AFTER the independent test and only once the ring is confirmed.",
       "affected_items": [
+        "BN-194158",
+        "BN-195269",
+        "BN-192506",
+        "BN-315661",
+        "BN-195402",
+        "BN-302868",
         "BN-203348",
         "BN-195639",
         "BN-194548",
-        "BN-192506",
-        "BN-315661",
-        "BN-193625",
-        "BN-194158",
-        "BN-195269"
+        "BN-193625"
       ],
       "sources": [
         "https://www.bluenile.com/policies/returns"
@@ -219,8 +221,8 @@
       "id": "F-012",
       "severity": "low",
       "type": "unverified",
-      "title": "Credit-card acceptance was not verified on any retailer page",
-      "detail": "The checklist prefers a credit card for purchase protection. No retrieved page stated accepted card networks. Affirm / Wells Fargo financing and PayPal are mentioned on some pages, which are not equivalent to a card purchase. The field is left blank rather than assumed.",
+      "title": "General card networks and issuer protection terms remain unconfirmed",
+      "detail": "Blue Nile product pages display financing offers with the Blue Nile Credit Card. This does not establish all accepted card networks, exact checkout eligibility or guaranteed dispute protection. Other network/payment details remain unconfirmed; do not mistake an absence of captured network data for absence of a card offer.",
       "affected_items": [
         "BN-203348",
         "BE-121H6",
@@ -228,8 +230,7 @@
         "Z-19957449"
       ],
       "sources": [
-        "https://www.bluenile.com/policies/returns",
-        "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/"
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348"
       ],
       "recommended_action": "Confirm card acceptance at checkout and keep the card-issuer dispute window in mind."
     },
@@ -263,7 +264,7 @@
       "severity": "high",
       "type": "comparability",
       "title": "Setting-only prices and complete-ring prices sit in the same tables",
-      "detail": "8 Blue Nile rows, the Brilliant Earth row and the VRAI row are 'Setting Price' / 'Setting Only' - the center diamond is extra. The 4 Zales rows are complete rings including diamonds. A $1,000 setting and a $900 complete ring are not comparable, and price-per-gram cannot be computed where the diamond dominates. Every row carries a price_basis label so the two groups can be separated.",
+      "detail": "10 Blue Nile rows plus Brilliant Earth and VRAI are setting-only configurations; the center diamond is selected separately. Zales pages describe diamond rings but fetched excerpts do not establish selected size/currency/checkout scope. Preserve those distinctions and obtain the exact full-ring quote; no missing currency is inferred.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -287,6 +288,60 @@
         "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449"
       ],
       "recommended_action": "Compare setting prices with setting prices only; add a centre-stone quote before comparing with a complete ring."
+    },
+    {
+      "id": "F-016",
+      "severity": "medium",
+      "type": "unverified",
+      "title": "Dollar-sign displays lack confirmed ISO currency/configuration",
+      "detail": "The prior USD normalization was not established by the fetched official product bodies. Numeric normalized price and currency fields are now null. The original displayed string and prior normalization are retained only as historical research observations, not current verified prices. VRAI also lacks a captured main-product price.",
+      "affected_items": [
+        "BN-194158",
+        "BN-195269",
+        "VRAI-CLASSIC-4P",
+        "Z-19957449",
+        "Z-20046552",
+        "BN-192506",
+        "BN-315661",
+        "BN-195402",
+        "BN-302868",
+        "BN-203348",
+        "BN-195639",
+        "BN-194548",
+        "BN-193625",
+        "Z-20303279",
+        "Z-20301172"
+      ],
+      "sources": [
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
+        "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
+        "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
+        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-hidden-halo-solitaire-plus-diamond-engagement-ring-in-14k-yellow-gold-item-192506",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/solitaire-compass-set-engagement-ring-in-14k-white-gold-item-194548",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-three-stone-diamond-engagement-ring-in-14k-yellow-gold-item-193625",
+        "https://www.zales.com/12-ct-tw-diamond-frame-vintagestyle-twist-shank-engagement-ring-10k-gold/p/V-20303279",
+        "https://www.zales.com/13-ct-tw-diamond-three-stone-engagement-ring-10k-gold/p/V-20301172"
+      ],
+      "recommended_action": "Confirm native currency and the exact selected size/configuration at checkout. Do not infer USD from a dollar sign or a country-domain assumption."
+    },
+    {
+      "id": "F-017",
+      "severity": "medium",
+      "type": "source_limitation",
+      "title": "WGC moving-header quote timestamp is unconfirmed",
+      "detail": "The earlier recorded 4,028.53 USD/oz header observation was assigned a 22 October quote date even though chart metadata read Data as of 21 October, 2026. A fresh retrieval displayed a different moving header. The chart date does not establish the header timestamp; quote_date is left null, separate from the retained retrieval date. The expanded calculator uses a separately dated dealer body/table reference.",
+      "affected_items": [],
+      "sources": [
+        "https://www.gold.org/goldhub/data/gold-prices"
+      ],
+      "recommended_action": "Keep quote-as-of time blank until directly bound to the actual quote; never refresh the observation timestamp merely by rebuilding."
     }
   ]
 }

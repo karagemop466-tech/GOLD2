@@ -5,7 +5,10 @@
       "id": "blue-nile",
       "name": "Blue Nile",
       "website": "https://www.bluenile.com",
-      "domains": ["www.bluenile.com", "bluenile.com"],
+      "domains": [
+        "www.bluenile.com",
+        "bluenile.com"
+      ],
       "contact_phone": "+1-800-242-2728",
       "contact_email": "service@bluenile.com",
       "contact_source_url": "https://www.bluenile.com/contact-us",
@@ -21,7 +24,7 @@
       "resize_policy": "Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase if the design permits.",
       "price_display_basis": "Setting Price (center stone sold separately)",
       "payment_methods_verified": null,
-      "payment_note": "Credit-card acceptance was not stated on the retrieved product or policy pages; not asserted here.",
+      "payment_note": "Product pages advertise Blue Nile Credit Card financing. General accepted networks, exact eligibility and issuer protections are unconfirmed.",
       "evidence_file": "evidence/retailers/blue-nile.md",
       "evidence_quotes": [
         "30 days from the shipment date",
@@ -29,13 +32,19 @@
         "Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase"
       ],
       "verification_status": "verified_returns",
-      "flags": ["F-010", "F-012"]
+      "flags": [
+        "F-010",
+        "F-012"
+      ]
     },
     {
       "id": "zales",
       "name": "Zales",
       "website": "https://www.zales.com",
-      "domains": ["www.zales.com", "zales.com"],
+      "domains": [
+        "www.zales.com",
+        "zales.com"
+      ],
       "contact_phone": null,
       "contact_email": null,
       "contact_source_url": null,
@@ -53,44 +62,62 @@
       "payment_methods_verified": null,
       "payment_note": "Not verified on retrieved pages.",
       "evidence_file": "evidence/retailers/zales.md",
-      "evidence_quotes": ["Free and easy 30-day returns"],
+      "evidence_quotes": [
+        "Free and easy 30-day returns"
+      ],
       "verification_status": "partial",
-      "flags": ["F-011", "F-012"]
+      "flags": [
+        "F-011",
+        "F-012"
+      ]
     },
     {
       "id": "vrai",
       "name": "VRAI",
       "website": "https://www.vrai.com",
-      "domains": ["www.vrai.com", "vrai.com"],
+      "domains": [
+        "www.vrai.com",
+        "vrai.com"
+      ],
       "contact_phone": null,
-      "contact_email": null,
-      "contact_source_url": null,
+      "contact_email": "help@vrai.com",
+      "contact_source_url": "https://www.vrai.com/returns-exchanges",
       "contact_verified": false,
       "return_window_days": 30,
       "return_window_basis": "Returns accepted within 30 days; unworn items with original packaging",
       "return_policy_url": "https://www.vrai.com/returns-exchanges",
       "return_free_shipping": null,
       "return_free_shipments_per_year": null,
-      "return_excludes_resized": null,
-      "return_excludes_custom": null,
-      "return_exclusions_detail": null,
+      "return_excludes_resized": true,
+      "return_excludes_custom": true,
+      "return_exclusions_detail": "Modified/resized, third-party-altered and custom items excluded. Engagement-ring recycling fee $300 for original-payment refund; waived for store credit. Items above $15,000 subject to store-credit conditions.",
       "resize_policy": null,
       "price_display_basis": "Setting price (center stone selected separately in the configurator)",
       "payment_methods_verified": null,
       "payment_note": "Not verified on retrieved pages.",
       "evidence_file": "evidence/retailers/vrai.md",
-      "evidence_quotes": ["Returns accepted within 30 days", "Unworn items with original packaging"],
+      "evidence_quotes": [
+        "Returns accepted within 30 days",
+        "Unworn items with original packaging"
+      ],
       "verification_status": "partial",
-      "flags": ["F-008", "F-012"]
+      "flags": [
+        "F-008",
+        "F-012"
+      ],
+      "notes": "Email published in withdrawal-policy context; no contact test performed. Confirm exact order eligibility, independent inspection permission and fees."
     },
     {
       "id": "brilliant-earth",
       "name": "Brilliant Earth",
       "website": "https://www.brilliantearth.com",
-      "domains": ["www.brilliantearth.com", "brilliantearth.com"],
-      "contact_phone": "1.415.426.2781",
+      "domains": [
+        "www.brilliantearth.com",
+        "brilliantearth.com"
+      ],
+      "contact_phone": "800.691.0952",
       "contact_email": null,
-      "contact_source_url": "https://www.brilliantearth.com/contact/",
+      "contact_source_url": "https://www.brilliantearth.com/weve-got-you-covered/",
       "contact_verified": true,
       "return_window_days": null,
       "return_window_basis": "Product page states 'Free Shipping & Returns' and 'Free 1-Year Resizing'. Numeric return window not stated on the retrieved page.",
@@ -99,15 +126,22 @@
       "return_free_shipments_per_year": null,
       "return_excludes_resized": null,
       "return_excludes_custom": null,
-      "return_exclusions_detail": null,
+      "return_exclusions_detail": "Product body only advertised free returns; complete policy and exclusions not reviewed. Do not assume a numeric window.",
       "resize_policy": "Free 1-Year Resizing (stated on product page)",
       "price_display_basis": "Setting Only (center stone sold separately)",
       "payment_methods_verified": null,
       "payment_note": "Financing partners named on page (Affirm, Wells Fargo, layaway). Card acceptance as such not asserted.",
       "evidence_file": "evidence/retailers/brilliant-earth.md",
-      "evidence_quotes": ["Free Shipping & Returns", "Free 1-Year Resizing", "(Setting Only)"],
+      "evidence_quotes": [
+        "Free Shipping & Returns",
+        "Free 1-Year Resizing",
+        "(Setting Only)"
+      ],
       "verification_status": "partial",
-      "flags": ["F-007", "F-012"]
+      "flags": [
+        "F-007",
+        "F-012"
+      ]
     }
   ]
 }

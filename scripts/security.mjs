@@ -2,12 +2,14 @@ import {readFile,readdir} from 'node:fs/promises';
 import path from 'node:path';
 import {ROOT,loadJSON,saveReport} from './lib.mjs';
 const manifest=await loadJSON('data/site-manifest.json');
-const pages=[...manifest.pages,...['index','rings','calculator','checklist','flagged','sources'].map(p=>'site/'+p+'.html')];
+const rootPages=['index','solitaire','halo-pave','three-stone-vintage','18k','budget','retailers','prices','flags','methods'].map(p=>p+'.html');
+const pages=[...rootPages,...manifest.pages,...['index','rings','calculator','checklist','flagged','sources'].map(p=>'site/'+p+'.html')];
 const errors=[];
 for(const file of pages){
  const text=await readFile(path.join(ROOT,file),'utf8');
  const csp=text.match(/http-equiv="Content-Security-Policy" content="([^"]+)"/i)?.[1];
  if(!csp||!csp.includes("script-src 'self'")||!csp.includes("object-src 'none'")||!csp.includes("base-uri 'none'")||!csp.includes("form-action 'none'"))errors.push(file+': missing restrictive CSP');
+ if(/\sstyle=["']/.test(text))errors.push(file+': inline style blocked by CSP');
  if(/unsafe-inline|unsafe-eval/.test(csp??''))errors.push(file+': unsafe CSP exception');
  if(/<[^>]+\son[a-z]+\s*=/i.test(text))errors.push(file+': inline event handler');
  if(/(?:href|src)\s*=\s*["']\s*(?:javascript:|data:|http:|\/\/)/i.test(text))errors.push(file+': dangerous/non-HTTPS URL');
@@ -33,7 +35,7 @@ for(const file of workflows.filter(f=>/\.ya?ml$/.test(f))){
  if(/pull_request_target|permissions:\s*write-all/.test(text))errors.push(file+': excessive untrusted workflow permission');
 }
 async function walk(dir){let files=[];for(const d of await readdir(path.join(ROOT,dir),{withFileTypes:true})){if(d.name.startsWith('.')&&d.name!=='.github')continue;const file=path.posix.join(dir,d.name);if(d.isDirectory())files.push(...await walk(file));else if(/\.(?:mjs|js|json|py|md|ya?ml|html|css|svg)$/.test(d.name))files.push(file);}return files;}
-const scanFiles=[...new Set([...(await walk('explore/assets')),...(await walk('data')),...(await walk('research')),...(await walk('scripts')),...(await walk('docs')),...(await walk('.github')),'README.md','COORDINATION.md'])];
+const scanFiles=[...new Set([...(await walk('explore/assets')),...(await walk('data')),...(await walk('research')),...(await walk('scripts')),...(await walk('docs')),...(await walk('tools')),...(await walk('tests')),...(await walk('evidence')),...(await walk('site')),...(await walk('assets')),...(await walk('.github')),'README.md','COORDINATION.md'])];
 const secretPatterns=[/-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----/,/gh[pousr]_[A-Za-z0-9]{25,}/,/github_pat_[A-Za-z0-9_]{30,}/,/AKIA[0-9A-Z]{16}/];
 for(const file of scanFiles){const text=await readFile(path.join(ROOT,file),'utf8');if(secretPatterns.some(p=>p.test(text)))errors.push(file+': potential credential material');}
 const pkg=await loadJSON('package.json');

@@ -9,6 +9,9 @@ from __future__ import annotations
 import html
 import json
 import shutil
+import re
+import hashlib
+INLINE_STYLES = {}
 from datetime import date
 from pathlib import Path
 
@@ -202,13 +205,15 @@ def page(title: str, active: str, body: str, root: str = "") -> str:
         return f'<a href="{root}{href}"{cls}>{esc(label)}</a>'
 
     links = "".join(nav_link(href, label, key) for href, label, key in nav_items)
-    return f"""<!doctype html>
+    result = f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} · GOLD2</title>
-<meta name="description" content="Verified solid-gold engagement ring research: prices, karats, sources and flagged uncertainties.">
+<meta name="description" content="Source-backed engagement-ring observations. Unverified construction, prices and inspection permission are flagged.">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <link rel="stylesheet" href="{root}assets/style.css">
 </head>
 <body>
@@ -219,15 +224,29 @@ def page(title: str, active: str, body: str, root: str = "") -> str:
   </div>
 </header>
 <main><div class="wrap">
+<section class="note"><strong>No hallucinations. No invented prices.</strong> Dated source observations are not independent tests. This is the earlier 16-entry register; <a href="{root}explore/"><strong>open the combined 32-entry dashboard</strong></a> for all researched entries, explicit assumptions and field-level evidence. <a href="{root}explore/review/">Flagged for Review</a>.</section>
 {body}
 </div></main>
 <footer><div class="wrap row">
   <div><strong>GOLD2</strong> · gold engagement ring research · data retrieved 2026-10-22 (UTC)</div>
-  <div>Every value links to the retailer page it came from. Blank means unverified, never estimated.</div>
+  <div>Recorded observations link to their sources; automated consistency checks do not prove truth. Blank means unverified, never estimated.</div>
 </div></footer>
 </body>
 </html>
 """
+
+    def externalize(match):
+        tag = match.group(0)
+        style = match.group(1)
+        key = 'legacy-' + hashlib.sha256(style.encode()).hexdigest()[:12]
+        INLINE_STYLES[key] = style
+        tag = re.sub(r'\sstyle="[^"]*"', '', tag)
+        if 'class="' in tag:
+            tag = tag.replace('class="', 'class="' + key + ' ', 1)
+        else:
+            tag = tag[:-1] + ' class="' + key + '">'
+        return tag
+    return re.sub(r'<[^>]+\sstyle="([^"]*)"[^>]*>', externalize, result)
 
 
 # ---------------------------------------------------------------- data
@@ -256,17 +275,17 @@ def listing_table(items) -> str:
         rows.append(
             "<tr class=\"item-row\">"
             f'<td><div class="itemname">{esc(it["name"])}</div>'
-            f'<div class="sub">{esc(it["brand"])} · SKU {esc(it["sku"])}</div></td>'
+            f'<div class="sub">{esc(it["brand"])} · SKU {esc(it["sku"] or "unverified")}</div></td>'
             f'<td>{esc(it["retailer"])}</td>'
             f'<td class="num">{fmt_num(it.get("karat"), "K")}</td>'
             f'<td>{esc(it.get("color") or "—")}</td>'
             f'<td class="num">{fmt_num(it.get("width_mm"), " mm")}</td>'
-            f'<td class="num">{fmt_num(it.get("weight_g"), " g", 2)}</td>'
+            f'<td class="num">{fmt_num(it.get("weight_g"), " g", 2)}<div class="sub">{esc(it.get("weight_basis") or "")}</div></td>'
             f'<td class="num"><strong>{fmt_price(it)}</strong>'
             + (f'<div class="sub">was {it["original_price"]:,.2f}</div>' if it.get("original_price") else "")
             + "</td>"
             f'<td>{basis_badge(it["price_basis"])}</td>'
-            f'<td class="src"><a href="{esc(it["source_url"])}" target="_blank" rel="noopener">official listing&nbsp;↗</a>'
+            f'<td class="src"><a href="{esc(it["source_url"])}" target="_blank" rel="noopener noreferrer">official listing&nbsp;↗</a>'
             f'<div class="sub">retrieved {esc(it["retrieved_at"])}</div></td>'
             f'<td>{status_badge(it["verification_status"])}'
             f'<div class="sub">{flag_links}</div></td>'
@@ -326,11 +345,11 @@ def build_index(items, payloads, flags, gold, qa_summary):
         ("Hallmark", f"Karat stamp plus maker's mark. {sum(1 for i in items if not i.get('hallmark_stated'))} of {len(items)} listings state neither — see F-002."),
         ("Weight", f"Grams. Published for {sum(1 for i in items if i.get('weight_g') is not None)} of {len(items)} items; blank everywhere else — see F-003."),
         ("Seller", f"{len({i['retailer_id'] for i in items})} retailers with official pages; contact details recorded only where published."),
-        ("Price", "Live price captured on 2026-10-22 with its basis (setting-only vs complete ring). Cached snippet prices were rejected in 3 cases."),
-        ("Returns", "Window and the resized/custom exclusions recorded per retailer — see F-010."),
-        ("Payment", "Card acceptance is not stated on any captured page; left blank — see F-012."),
-        ("Records", "Listing URL, retrieval date and verbatim evidence kept in <code>evidence/</code> for every row."),
-        ("On arrival", "Independent jeweller check before wearing or resizing; ask for XRF."),
+        ("Price", "Dated page displays observed on 2026-10-22; no live feed with its basis (setting-only vs complete ring). Cached snippet prices were rejected in 3 cases."),
+        ("Returns", "Policy coverage is incomplete. Confirm the exact order, fees, resized/custom exclusions and inspection permission — see F-010/F-011."),
+        ("Payment", "Blue Nile Credit Card offers are displayed; accepted networks and issuer protection terms remain unconfirmed — see F-012."),
+        ("Records", "Keep research URL/date/evidence plus your receipt, exact selected configuration, seller replies, certificates, paired-mark photos and test report."),
+        ("On arrival", "Independent professional weight/purity assessment before wear or resizing, within written return permission; surface XRF alone can mislead."),
     ]
     check_html = "".join(
         f'<li><span class="k">{n:02d}</span><span><strong>{esc(k)}.</strong> {v}</span></li>'
@@ -349,7 +368,7 @@ def build_index(items, payloads, flags, gold, qa_summary):
     body = f"""
 <section class="banner">
   <span class="pill">NO HALLUCINATIONS</span>
-  <h2>Nothing on this site is invented, estimated or extrapolated.</h2>
+  <h2>No invented values: a policy, not a guarantee of perfect verification.</h2>
   <p>Every price, karat and width below was read off the retailer's own page on <strong>2026&#8209;10&#8209;22 (UTC)</strong>, and each row links to that exact page.
   If a value was not on the page it is left <strong>blank</strong> and listed on the <a href="flags.html">Flagged for Review</a> page instead of being filled in.
   Cached search-engine numbers are treated as unverified: where a snippet disagreed with the live page, the live page won and the snippet is logged as rejected (see F&#8209;004, F&#8209;005, F&#8209;006).</p>
@@ -357,14 +376,14 @@ def build_index(items, payloads, flags, gold, qa_summary):
   Automated checks: <strong>{qa_summary}</strong> — full log in <a href="methods.html">Method &amp; QA</a>.</p>
 </section>
 
-<h1>Gold engagement ring — verified shortlist</h1>
+<h1>Gold engagement-ring research — original category register</h1>
 <p class="lead">{len(items)} listings from 4 retailers, sorted into five categories, with the price basis made explicit because a
 "setting price" does not include the diamond. The three things almost no retailer publishes — the words
-<em>solid gold</em>, a hallmark / maker's mark, and the gram weight — are the three things still outstanding on every row.</p>
+<em>solid gold</em>, a hallmark / maker's mark, and the gram weight — remain gaps: construction and paired marks are unconfirmed for all targets; one seller states a size-specific metal weight.</p>
 
 <div class="grid g4" style="margin:18px 0 8px">
   <div class="card stat"><div class="n">{len(items)}</div><div class="l">listings captured</div></div>
-  <div class="card stat"><div class="n">{verified}</div><div class="l">rows with price + metal verified</div></div>
+  <div class="card stat"><div class="n">{verified}</div><div class="l">rows with sourced price + stated metal (not physical verification)</div></div>
   <div class="card stat"><div class="n">{weights}<span style="font-size:15px;color:#5b6472">/{len(items)}</span></div><div class="l">rows with published gram weight</div></div>
   <div class="card stat"><div class="n">{len(flags)}</div><div class="l">flags · {high_flags} high severity</div></div>
 </div>
@@ -373,8 +392,8 @@ def build_index(items, payloads, flags, gold, qa_summary):
   <div class="eyebrow">Gold reference used by the calculator</div>
   <div style="display:flex;gap:28px;flex-wrap:wrap;align-items:baseline;margin-top:6px">
     <div style="font-size:27px;font-weight:750">${gold["usd_per_troy_oz"]:,.2f}<span style="font-size:14px;color:#5b6472"> / troy oz</span></div>
-    <div style="color:#5b6472;font-size:13.4px">quote date {esc(gold["quote_date"])} · retrieved {esc(gold["retrieved_at"])} ·<br>
-    <a href="{esc(gold["source_url"])}" target="_blank" rel="noopener">{esc(gold["source_name"])} ↗</a></div>
+    <div style="color:#5b6472;font-size:13.4px">quote date {esc(gold["quote_date"] or "unconfirmed — see F-017")} · retrieved {esc(gold["retrieved_at"])} ·<br>
+    <a href="{esc(gold["source_url"])}" target="_blank" rel="noopener noreferrer">{esc(gold["source_name"])} ↗</a></div>
     <a class="badge b-info" href="prices.html">Open melt calculator →</a>
   </div>
 </div>
@@ -385,7 +404,7 @@ def build_index(items, payloads, flags, gold, qa_summary):
 <h2>What this project checks</h2>
 <div class="card"><ul class="checklist">{check_html}</ul>
 <div class="note" style="margin-top:14px">The key rule: a <strong>14K or 18K stamp alone does not prove purity</strong>.
-Reputable seller + correct markings + sensible price + independent XRF test after delivery is the only sequence that holds up.</div></div>
+No seller is certified trustworthy here. Require independent professional assessment and a qualifying return before purchase; see the expanded buying checklist and GIA testing caveat.</div></div>
 
 <h2>Top flagged items</h2>
 <div class="grid g2">{flag_cards}</div>
@@ -425,7 +444,7 @@ def build_retailers(retailers, items):
     for r in retailers:
         n = sum(1 for i in items if i["retailer_id"] == r["id"])
         ret = (
-            f'<a href="{esc(r["return_policy_url"])}" target="_blank" rel="noopener">policy ↗</a>'
+            f'<a href="{esc(r["return_policy_url"])}" target="_blank" rel="noopener noreferrer">policy ↗</a>'
             if r["return_policy_url"]
             else '<span class="blank">not captured</span>'
         )
@@ -444,7 +463,7 @@ def build_retailers(retailers, items):
         ) or '<span class="blank">not captured</span>'
         rows.append(
             "<tr>"
-            f'<td><strong>{esc(r["name"])}</strong><div class="sub"><a href="{esc(r["website"])}" target="_blank" rel="noopener">{esc(r["website"].replace("https://",""))} ↗</a></div></td>'
+            f'<td><strong>{esc(r["name"])}</strong><div class="sub"><a href="{esc(r["website"])}" target="_blank" rel="noopener noreferrer">{esc(r["website"].replace("https://",""))} ↗</a></div></td>'
             f'<td class="num">{n}</td>'
             f'<td>{window}<div class="sub">{ret}</div></td>'
             f'<td>{excl_s}</td>'
@@ -481,7 +500,7 @@ def build_flags(flags, items_in_flags):
         badge = {"high": "b-bad", "medium": "b-part", "low": "b-neutral"}[f["severity"]]
         affected = ", ".join(f["affected_items"]) if f["affected_items"] else "—"
         sources = "".join(
-            f'<li><a href="{esc(u)}" target="_blank" rel="noopener">{esc(u)}</a></li>' for u in f["sources"]
+            f'<li><a href="{esc(u)}" target="_blank" rel="noopener noreferrer">{esc(u)}</a></li>' for u in f["sources"]
         )
         cards.append(f"""
 <article class="flag {f["severity"]}" id="{f["id"].lower()}">
@@ -514,103 +533,25 @@ the rings are bad — but it is exactly the gap an independent jeweller visit cl
 
 
 def build_prices(gold, items, weights_note):
-    known = [i for i in items if i.get("weight_g")]
+    # Conditional reference calculations only. No product mass is physically verified.
     grams_oz = gold["grams_per_troy_ounce"]
     spot = gold["usd_per_troy_oz"]
-    ref_rows = []
-    for karat in (10, 14, 18, 22, 24):
-        fine2 = 2 * karat / 24
-        fine4 = 4 * karat / 24
-        fine6 = 6 * karat / 24
-        melt6 = fine6 / grams_oz * spot
-        ref_rows.append(
-            f"<tr><td class=\"num\">{karat}K</td><td class=\"num\">{karat/24*100:.2f}%</td>"
-            f"<td class=\"num\">{fine2:.3f} g</td><td class=\"num\">{fine4:.3f} g</td>"
-            f"<td class=\"num\">{fine6:.3f} g</td><td class=\"num\">${melt6:,.2f}</td></tr>"
-        )
-    known_rows = "".join(
-        f"<tr><td>{esc(i['name'])}</td><td class=\"num\">{i['karat']}K</td>"
-        f"<td class=\"num\">{i['weight_g']:.2f} g</td>"
-        f"<td class=\"num\">{i['weight_g']*i['karat']/24:.3f} g</td>"
-        f"<td class=\"num\">${i['weight_g']*i['karat']/24/grams_oz*spot:,.2f}</td>"
-        f"<td>{fmt_price(i)}</td></tr>"
-        for i in known
-    )
-    body = f"""
-<div class="eyebrow">Raw gold, not appraisal</div>
-<h1>Gold weight &amp; melt calculator</h1>
-<p class="lead">Convert a ring's weight and karat into fine-gold grams and the raw metal value at the quote already on this site.
-It is a sanity check on price, not a valuation: labour, the diamond, hallmarking, duty and resale spread are all outside the number.</p>
-
-<div class="card">
-  <div class="calcgrid">
-    <div><label class="f" for="w">Ring weight (g)</label><input id="w" type="number" min="0" step="0.01" value="3.00"></div>
-    <div><label class="f" for="k">Karat</label>
-      <select id="k">
-        <option value="10">10K</option><option value="14" selected>14K</option>
-        <option value="18">18K</option><option value="22">22K</option><option value="24">24K</option>
-      </select></div>
-    <div><label class="f" for="spot">Gold spot (USD / troy oz)</label><input id="spot" type="number" min="0" step="0.01" value="{spot:.2f}"></div>
-    <div><label class="f" for="ask">Asking price (optional)</label><input id="ask" type="number" min="0" step="0.01" placeholder="e.g. 1255"></div>
-  </div>
-  <div class="out">
-    <div class="box"><div class="l">Fine gold</div><div class="v" id="fine">—</div><div class="s">weight × karat/24</div></div>
-    <div class="box"><div class="l">Melt value</div><div class="v" id="melt">—</div><div class="s">at the spot price entered</div></div>
-    <div class="box"><div class="l">Price ÷ melt</div><div class="v" id="ratio">—</div><div class="s">1.0× would mean sold at scrap</div></div>
-    <div class="box"><div class="l">Above melt</div><div class="v" id="over">—</div><div class="s">the part that pays for making + stone</div></div>
-  </div>
-  <p class="sub" style="margin-top:12px">The spot field is pre-filled with the verified quote:
-  <strong>${spot:,.2f}/oz, {esc(gold["quote_date"])}</strong> —
-  <a href="{esc(gold["source_url"])}" target="_blank" rel="noopener">{esc(gold["source_name"])} ↗</a>.
-  If you change it, you are using your own number, not a verified one.</p>
-</div>
-
-<script>
-(function(){{
-  const gpo = {grams_oz};
-  const w = document.getElementById('w'), k = document.getElementById('k'),
-        s = document.getElementById('spot'), a = document.getElementById('ask');
-  const fine = document.getElementById('fine'), melt = document.getElementById('melt'),
-        ratio = document.getElementById('ratio'), over = document.getElementById('over');
-  const money = n => '$' + n.toLocaleString('en-US', {{minimumFractionDigits:2, maximumFractionDigits:2}});
-  function run(){{
-    const wt = parseFloat(w.value), kk = parseFloat(k.value), sp = parseFloat(s.value);
-    if(!(wt>0) || !(kk>0) || !(sp>0)){{ fine.textContent='—'; melt.textContent='—'; ratio.textContent='—'; over.textContent='—'; return; }}
-    const fg = wt * kk / 24;
-    const mv = fg / gpo * sp;
-    fine.textContent = fg.toFixed(3) + ' g';
-    melt.textContent = money(mv);
-    const ask = parseFloat(a.value);
-    if(ask>0){{ ratio.textContent = (ask/mv).toFixed(2) + '×'; over.textContent = money(ask-mv); }}
-    else {{ ratio.textContent='—'; over.textContent='—'; }}
-  }}
-  [w,k,s,a].forEach(el=>el.addEventListener('input', run));
-  run();
-}})();
-</script>
-
-<h2>Quick reference — fine gold by karat</h2>
-<div class="tablewrap"><table><thead><tr>
-<th>Karat</th><th>Purity (karat/24)</th><th>2 g ring</th><th>4 g ring</th><th>6 g ring</th><th>Melt of a 6 g ring</th>
-</tr></thead><tbody>{''.join(ref_rows)}</tbody></table></div>
-<p class="sub">Purity is arithmetic on the karat definition (24K = pure). Melt uses the quote above and 1 troy oz = {grams_oz} g.
-These are calculations, not retailer claims, and no listing was used to produce them.</p>
-
-<h2>Melt check for rows with a published weight</h2>
-<div class="tablewrap"><table><thead><tr>
-<th>Item</th><th>Karat</th><th>Published weight</th><th>Fine gold</th><th>Melt at quote</th><th>Price</th>
-</tr></thead><tbody>{known_rows or '<tr><td colspan="6" class="blank">No row has a published weight.</td></tr>'}</tbody></table></div>
-<p class="sub">{esc(weights_note)}</p>
-
-<h2>How to use this honestly</h2>
-<ul class="clean">
-<li>A <strong>setting-only</strong> price can never be compared to melt — the diamond is not in either number, but the making charge is.</li>
-<li>The ratio is only meaningful when the weight is real. Ask the seller for the gram weight and verify it on a jeweller's scale.</li>
-<li>Melt is a floor, not a fair price. A ring at 2× melt is normal retail; a ring at 1.05× melt with a “14K” stamp is a warning sign.</li>
-<li>Never use melt value as a resale expectation — scrap buyers pay below spot.</li>
-</ul>
-"""
-    return page("Calculator", "prices", body)
+    nist = 'https://www.nist.gov/system/files/documents/2017/05/09/Precious-Metals-Conversion-Information-march2015.pdf'
+    ftc = 'https://consumer.ftc.gov/articles/buying-platinum-gold-and-silver-jewelry'
+    context = f'<a href="{nist}" rel="noopener noreferrer">NIST units</a> · <a href="{ftc}" rel="noopener noreferrer">FTC karat definition</a> · <a href="{esc(gold["source_url"])}" rel="noopener noreferrer">Recorded WGC input</a>'
+    ref_rows = ''.join(f'<tr><td>{k}K nominal</td><td>{k/24*100:.4f}%</td><td>{6*k/24:.3f} g</td><td>${6*k/24/grams_oz*spot:,.2f} USD</td><td>{context}</td></tr>' for k in (10,14,18,22,24))
+    known_rows = ''.join(f'<tr><td>{esc(i["name"])}</td><td>{esc(i.get("weight_basis") or "Unconfirmed weight basis")}</td><td>{i["weight_g"]*i["karat"]/24:.3f} g conditional</td><td>${i["weight_g"]*i["karat"]/24/grams_oz*spot:,.2f} USD conditional</td><td><a href="{esc(i["source_url"])}" rel="noopener noreferrer">Official product</a> · {context}</td></tr>' for i in items if i.get('weight_g'))
+    body = f'''
+<div class="eyebrow">Conditional reference / not an appraisal</div>
+<h1>Gold content without inferred product values</h1>
+<p class="lead">No ring in this register has independently verified net-gold weight and purity. All product-specific verified fine-gold values remain blank. The former interactive calculator is replaced by the evidence-gated expanded calculator.</p>
+<div class="card"><h2>Use the expanded calculator</h2><p><a href="explore/calculator/">Open documented products or an explicitly acknowledged conditional scenario →</a></p><p>Enter only gold-alloy-only grams, excluding stones and non-gold components, and a compatible USD reference. No imaginary retail thresholds, guaranteed scrap floor, or automatic weight fallback is used.</p></div>
+<h2>Earlier recorded WGC input</h2><p>${spot:,.2f} USD per troy ounce was an earlier header observation retrieved {esc(gold['retrieved_at'])}, not a live quote. Its exact source quote-as-of date is unconfirmed and left blank. Chart metadata does not date a moving header. <a href="flags.html#f-017">F-017</a> · <a href="{esc(gold['source_url'])}">Official WGC page</a>.</p>
+<h2>Conditional nominal reference — assumed 6g of gold alloy</h2><p>These are explicitly hypothetical arithmetic inputs, not researched ring weights or verified product gold. Nominal karat/24 is distinct from an explicitly supplied decimal fineness.</p><div class="tablewrap"><table><thead><tr><th>Nominal karat</th><th>Nominal fineness</th><th>Calculated fine mass</th><th>Theoretical spot value at recorded input</th><th>Official method / input context</th></tr></thead><tbody>{ref_rows}</tbody></table></div>
+<h2>Size-specific seller claim — conditional illustration only</h2><p>VRAI's stated 2.86g metal weight applies to ring size 6. It is not independently weighed or assayed; the values below assume that entire stated metal mass has the nominal listed purity. This is not a verified ring valuation.</p><div class="tablewrap"><table><thead><tr><th>Item</th><th>Published basis</th><th>Conditional calculated mass</th><th>Conditional spot value</th><th>Source / method</th></tr></thead><tbody>{known_rows}</tbody></table></div>
+<p>No allowance for stones, workmanship, taxes, refining loss or buyer spreads. There is no guaranteed resale floor or normal-retail multiple. <a href="explore/review/">Read all limitations</a> before using any result.</p>
+'''
+    return page('Conditional gold reference', 'prices', body)
 
 
 def build_methods(qa_text, gold, items, flags):
@@ -656,7 +597,7 @@ a flag pointing at a missing item, or a broken internal link in the built site.<
 
 <h2>5. Earlier pass preserved</h2>
 <p>The <code>site/</code> folder holds the first dashboard built in this repository (session
-<code>39da17c8</code>): two Blue Nile settings, its own audit script and calculator. It is kept unchanged
+<code>39da17c8</code>): two Blue Nile settings, its own audit script and calculator. It is preserved with a documented currency correction
 and still works: <a href="site/index.html">open the earlier dashboard ↗</a>. Its two rings were re-fetched
 live during integration and now appear as <code>BN-195402</code> and <code>BN-302868</code> on the
 <a href="halo-pave.html">Halo &amp; Pavé</a> page.</p>
@@ -665,9 +606,9 @@ live during integration and now appear as <code>BN-195402</code> and <code>BN-30
 <dl class="kv">
 <dt>Items</dt><dd>{len(items)}</dd>
 <dt>Flags</dt><dd>{len(flags)}</dd>
-<dt>Gold quote</dt><dd>${gold["usd_per_troy_oz"]:,.2f}/oz · {esc(gold["quote_date"])} · <a href="{esc(gold["source_url"])}" target="_blank" rel="noopener">World Gold Council ↗</a></dd>
+<dt>Gold quote</dt><dd>${gold["usd_per_troy_oz"]:,.2f}/oz · {esc(gold["quote_date"] or "unconfirmed — see F-017")} · <a href="{esc(gold["source_url"])}" target="_blank" rel="noopener noreferrer">World Gold Council ↗</a></dd>
 <dt>Retrieval dates</dt><dd>2026-10-22 (UTC)</dd>
-<dt>Repository</dt><dd><a href="https://github.com/karagemop466-tech/GOLD2" target="_blank" rel="noopener">karagemop466-tech/GOLD2 ↗</a></dd>
+<dt>Repository</dt><dd><a href="https://github.com/karagemop466-tech/GOLD2" target="_blank" rel="noopener noreferrer">karagemop466-tech/GOLD2 ↗</a></dd>
 </dl>
 
 <h2>7. What to do with a flagged row</h2>
@@ -722,6 +663,7 @@ def main():
     for junk in (SITE / ".DS_Store",):
         if junk.exists():
             junk.unlink()
+    (SITE / "assets" / "style.css").write_text(CSS + "\n" + "\n".join("." + k + "{" + v + "}" for k,v in sorted(INLINE_STYLES.items())), encoding="utf-8")
     print(f"built {len(pages)} pages into {SITE}")
 
 

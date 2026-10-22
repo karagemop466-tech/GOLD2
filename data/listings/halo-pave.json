@@ -15,8 +15,8 @@
       "color": "Yellow",
       "width_mm": 1.6,
       "weight_g": null,
-      "price": 1255.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
@@ -34,15 +34,18 @@
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "verified_price_and_metal",
+      "verification_status": "metal_stated_currency_unconfirmed",
       "rejected_values": [],
       "flags": [
         "F-001",
         "F-002",
         "F-003",
-        "F-015"
+        "F-015",
+        "F-016"
       ],
-      "notes": "Side-diamond count and carat weight are based on a 1 ct. center stone, per the page disclaimer."
+      "notes": "Side-diamond count and carat weight are based on a 1 ct. center stone, per the page disclaimer.",
+      "observed_display": "$1,255(Setting Price)",
+      "prior_normalized_price": 1255.0
     },
     {
       "id": "BN-315661",
@@ -56,8 +59,8 @@
       "color": "White",
       "width_mm": 1.75,
       "weight_g": null,
-      "price": 2210.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
@@ -74,7 +77,7 @@
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "verified_price_and_metal",
+      "verification_status": "metal_stated_currency_unconfirmed",
       "rejected_values": [
         {
           "value": 1657.0,
@@ -88,9 +91,12 @@
         "F-003",
         "F-006",
         "F-009",
-        "F-015"
+        "F-015",
+        "F-016"
       ],
-      "notes": "James Allen is now sold through Blue Nile; jamesallen.com product URLs redirect to bluenile.com (see F-009)."
+      "notes": "James Allen is now sold through Blue Nile; jamesallen.com product URLs redirect to bluenile.com (see F-009).",
+      "observed_display": "$2,210(Setting Price)",
+      "prior_normalized_price": 2210.0
     },
     {
       "id": "BN-195402",
@@ -104,8 +110,8 @@
       "color": "White",
       "width_mm": 1.7,
       "weight_g": null,
-      "price": 1300.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
@@ -122,15 +128,18 @@
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "verified_price_and_metal",
+      "verification_status": "metal_stated_currency_unconfirmed",
       "rejected_values": [],
       "flags": [
         "F-001",
         "F-002",
         "F-003",
-        "F-015"
+        "F-015",
+        "F-016"
       ],
-      "notes": "Carried forward from the earlier pass (session 39da17c8) and re-fetched live on 2026-10-22 before publication. 22 pavé diamonds, 1/10 ct. total, based on a 1 ct. centre stone."
+      "notes": "Carried forward from the earlier pass (session 39da17c8) and re-fetched live on 2026-10-22 before publication. 22 pavé diamonds, 1/10 ct. total, based on a 1 ct. centre stone.",
+      "observed_display": "$1,300(Setting Price)",
+      "prior_normalized_price": 1300.0
     },
     {
       "id": "BN-302868",
@@ -144,8 +153,8 @@
       "color": "White",
       "width_mm": 1.7,
       "weight_g": null,
-      "price": 1050.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
@@ -162,15 +171,18 @@
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "verified_price_and_metal",
+      "verification_status": "metal_stated_currency_unconfirmed",
       "rejected_values": [],
       "flags": [
         "F-001",
         "F-002",
         "F-003",
-        "F-015"
+        "F-015",
+        "F-016"
       ],
-      "notes": "Carried forward from the earlier pass (session 39da17c8) and re-fetched live on 2026-10-22. Lab-grown accent diamonds; $250 less than the natural-diamond twin BN-195402."
+      "notes": "Carried forward from the earlier pass (session 39da17c8) and re-fetched live on 2026-10-22. Lab-grown accent diamonds; $250 less than the natural-diamond twin BN-195402.",
+      "observed_display": "$1,050(Setting Price)",
+      "prior_normalized_price": 1050.0
     }
   ]
 }

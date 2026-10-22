@@ -29,7 +29,7 @@ export function createPreviewServer(root = ROOT) {
       try {
         if (!inside(await realpath(filename))) {res.writeHead(403);return res.end('Not public');}
         if (!(await stat(filename)).isFile()) throw new Error('Not a file');
-      } catch {filename = path.join(root,'404.html');status = 404;}
+      } catch {filename = path.join(root,'explore/404.html');status = 404;}
       const type = types[path.extname(filename)];
       if (!type) {res.writeHead(403);return res.end('Not public');}
       const data = await readFile(filename);

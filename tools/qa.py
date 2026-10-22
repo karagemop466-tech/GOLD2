@@ -77,15 +77,15 @@ def main() -> int:
 
     # ---------------------------------------------------------- 1 integrity
     m = len(issues)
-    for key in ("quote_date", "retrieved_at", "usd_per_troy_oz", "source_url", "evidence_file"):
+    for key in ("retrieved_at", "usd_per_troy_oz", "source_url", "evidence_file"):
         if not gold.get(key):
             fail("gold-price", f"gold-price.json missing {key}")
     if isinstance(gold.get("usd_per_troy_oz"), (int, float)) and gold["usd_per_troy_oz"] <= 0:
         fail("gold-price", "spot price is not positive")
     try:
-        qd = datetime.strptime(gold["quote_date"], "%Y-%m-%d").date()
+        qd = datetime.strptime(gold["quote_date"], "%Y-%m-%d").date() if gold.get("quote_date") else None
         rd = datetime.strptime(gold["retrieved_at"], "%Y-%m-%d").date()
-        if qd > rd:
+        if qd and qd > rd:
             fail("gold-price", "quote_date is after retrieved_at")
         if rd > date.today():
             fail("gold-price", "retrieved_at is in the future")
@@ -135,7 +135,7 @@ def main() -> int:
         for u in extra:
             if u and norm(u) not in text:
                 warn("evidence", f"{kind} {obj.get('id', obj.get('name','?'))}: URL not echoed in {rel}: {u}")
-    record(f"Every value traces to a verbatim quote ({quote_count} quotes)", m)
+    record(f"Stored excerpts match evidence files (not a truth certificate) ({quote_count} quotes)", m)
 
     # ---------------------------------------------------------- 3 field backing
     m = len(issues)
@@ -206,7 +206,7 @@ def main() -> int:
             fail("null-coverage", f"{it['id']}: no hallmark stated but F-002 missing")
         if it.get("currency") != "USD" and "F-007" not in applied and it.get("price") is not None:
             fail("null-coverage", f"{it['id']}: non-USD price without F-007")
-        if it.get("price") is None and "F-008" not in applied:
+        if it.get("price") is None and not ({"F-008", "F-016"} & applied):
             fail("null-coverage", f"{it['id']}: blank price without an unverified flag")
         if it.get("hallmark_stated") is False and it.get("makers_mark_stated") is False:
             pass
@@ -345,8 +345,8 @@ def main() -> int:
         "",
         "## What this audit proves, and what it does not",
         "",
-        "It proves that every published number is present in the stored evidence for that item, that the source URL belongs to the seller, "
-        "and that every blank is covered by a flag. It cannot prove the retailer told the truth, and it does not replace an XRF test "
+        "It checks selected stored-excerpt/numeric consistency and publisher URLs, "
+        "with specific null-coverage rules. It does not check every claim, prove the retailer told the truth, or replace professional assessment "
         "or an appraisal after delivery.",
         "",
         "**Run this again after every review pass.** A stale table is the most likely way a wrong number enters this project.",

@@ -30,3 +30,9 @@ Unworn items with original packaging
 
 - Price: no price string existed in the retrieved HTML (flag F-008).
 - Accepted payment networks: not stated (flag F-012).
+
+## Direct recheck — 2026-10-22
+Source: https://www.vrai.com/returns-exchanges
+“Engagement ring: A $300 recycling fee will apply.” Eligible below-$15,000 items: 30 days, original-payment refund minus recycling fee or store credit. Modified/resized, third-party-altered and custom items excluded. Fee waived for store credit. Exact order/testing permission remains unconfirmed.
+
+Published email help@vrai.com appears in the withdrawal-submission policy context. It was not contacted.

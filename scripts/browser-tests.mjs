@@ -1,11 +1,12 @@
 import {chromium as playwrightChromium,expect} from '@playwright/test';
-import chromium from '@sparticuz/chromium';
+import chromium, {inflate,setupLambdaEnvironment} from '@sparticuz/chromium';
+import {fileURLToPath} from 'node:url';
 import AxeBuilder from '@axe-core/playwright';
 import {mkdir} from 'node:fs/promises';
 import path from 'node:path';
 import {ROOT,loadResearch,loadJSON,saveReport} from './lib.mjs';
 import {createPreviewServer} from './serve.mjs';
-import {calculateScenario} from '../assets/domain.mjs';
+import {calculateScenario} from '../explore/assets/domain.mjs';
 
 const server=createPreviewServer();
 await new Promise(resolve=>server.listen(0,'0.0.0.0',resolve));
@@ -15,7 +16,12 @@ const dashboard=base+'explore/';
 const errors=[],violations=[],requests=[];
 let browser;
 try{
- browser=await playwrightChromium.launch({headless:true,executablePath:await chromium.executablePath(),args:chromium.args});
+ // The npm bundle supplies NSS/NSPR for minimal Debian sandboxes as well as Lambda.
+ const packageDir=path.dirname(fileURLToPath(import.meta.resolve('@sparticuz/chromium')));
+ const libs=await inflate(path.resolve(packageDir,'../bin/al2023.tar.br'));
+ setupLambdaEnvironment(path.join(libs,'lib'));
+ const args=chromium.args.filter(a=>!['--disable-web-security','--allow-running-insecure-content','--disable-site-isolation-trials','--single-process'].includes(a)&&!a.startsWith('--disable-features='));
+ browser=await playwrightChromium.launch({headless:true,executablePath:await chromium.executablePath(),args});
  const context=await browser.newContext({viewport:{width:1440,height:1050}});
  const page=await context.newPage();
  page.on('pageerror',error=>errors.push(error.message));
@@ -36,20 +42,20 @@ try{
  await page.screenshot({path:path.join(ROOT,'test-results/desktop.png'),fullPage:true});
  // All researched entries and their primary publisher links are available without filtering.
  await page.goto(dashboard+'catalog/',{waitUntil:'networkidle'});
- await expect(page.locator('#research-table tbody tr')).toHaveCount(18);
- await expect(page.locator('#research-table tbody tr a.source-link')).toHaveCount(18);
+ await expect(page.locator('#research-table tbody tr')).toHaveCount(32);
+ await expect(page.locator('#research-table tbody tr a.source-link')).toHaveCount(32);
  await page.locator('#catalog-search').fill('ruby');
- await expect(page.locator('#filter-status')).toHaveText('1 of 18 entries shown');
+ await expect(page.locator('#filter-status')).toHaveText('1 of 32 entries shown');
  await page.locator('#catalog-search').fill('<img src=x onerror=alert(1)>');
- await expect(page.locator('#filter-status')).toHaveText('0 of 18 entries shown');
+ await expect(page.locator('#filter-status')).toHaveText('0 of 32 entries shown');
  await expect(page.locator('#no-results')).toBeVisible();
  await page.locator('#clear-filters').click();
  await page.locator('#category-filter').selectOption('gemstone');
- await expect(page.locator('#filter-status')).toHaveText('3 of 18 entries shown');
+ await expect(page.locator('#filter-status')).toHaveText('3 of 32 entries shown');
  await page.locator('#seller-filter').selectOption('catbird');
- await expect(page.locator('#filter-status')).toHaveText('0 of 18 entries shown');
+ await expect(page.locator('#filter-status')).toHaveText('0 of 32 entries shown');
  await page.locator('#clear-filters').click();
- await expect(page.locator('#filter-status')).toHaveText('18 of 18 entries shown');
+ await expect(page.locator('#filter-status')).toHaveText('32 of 32 entries shown');
  // Every documented product blocks automatic valuation, including the mixed-metal listing.
  const {catalog}=await loadResearch();
  await page.goto(dashboard+'calculator/',{waitUntil:'networkidle'});
@@ -107,18 +113,26 @@ try{
  // Static research is complete without JavaScript; calculator never invents a fallback result.
  const noJs=await browser.newContext({javaScriptEnabled:false,viewport:{width:1280,height:900}});
  const staticPage=await noJs.newPage();
- await staticPage.goto(dashboard+'catalog/');await expect(staticPage.locator('#research-table tbody tr')).toHaveCount(18);
- await staticPage.goto(dashboard+'calculator/');await expect(staticPage.locator('noscript')).toContainText('Product gold values remain blank');
+ await staticPage.goto(dashboard+'catalog/');await expect(staticPage.locator('#research-table tbody tr')).toHaveCount(32);
+ await staticPage.goto(dashboard+'calculator/');expect(await staticPage.locator('noscript').evaluate(n=>n.textContent)).toContain('Product gold values remain blank');
  await noJs.close();
  // Retained dashboard remains functional and its CommonJS unit tests remain compatible.
  for(const route of ['site/','site/rings.html','site/calculator.html','site/checklist.html','site/flagged.html','site/sources.html']){
   const r=await page.goto(base+route,{waitUntil:'networkidle'});expect(r.status()).toBe(200);await expect(page.locator('body')).toContainText('No hallucinations. No invented prices.');
  }
+ for(const root of ['index','solitaire','halo-pave','three-stone-vintage','18k','budget','retailers','prices','flags','methods']){
+  const response=await page.goto(base+root+'.html',{waitUntil:'networkidle'});expect(response.status()).toBe(200);
+  await expect(page.locator('main')).toContainText('No hallucinations. No invented prices.');
+  await expect(page.locator('main a[href="explore/"]')).toHaveCount(1);
+  expect(await page.locator('script:not([src])').count()).toBe(0);
+  const css=await page.locator('body').evaluate(el=>getComputedStyle(el).fontFamily);expect(css).toContain('system-ui');
+ }
+ await page.goto(base+'prices.html');await expect(page.locator('input')).toHaveCount(0);await expect(page.locator('a[href="explore/calculator/"]')).toBeVisible();
  await context.close();
  if(requests.length)errors.push('Unexpected external runtime requests: '+requests.join(', '));
  if(violations.length)errors.push(`${violations.length} automated accessibility violations (see report)`);
  if(errors.length)throw new Error(errors.join('\n'));
- console.log(`PASS browser: ${routes.length} primary pages + 6 preserved pages, desktop/mobile, all 18 automatic gates, filters, conditional calculator, stale warning, no-JS research and zero external runtime requests. Automated axe checks found no WCAG A/AA violations in exercised states; this is not a full accessibility certification.`);
+ console.log(`PASS browser: ${routes.length} expanded pages + 16 preserved/root pages, desktop/mobile, all 32 automatic gates, filters, conditional calculator, stale warning, no-JS research and zero external runtime requests. Automated axe checks found no WCAG A/AA violations in exercised states; this is not a full accessibility certification.`);
 }catch(error){errors.push(error.message);console.error(error.stack??error);process.exitCode=1;}
 finally{
  await saveReport('browser.json',{checkedAt:new Date().toISOString(),errors:[...new Set(errors)],violations,externalRuntimeRequests:requests,limitation:'Chromium and automated axe checks only. Not a cross-browser, manual assistive-technology, factual-truth or physical-product certification.'});

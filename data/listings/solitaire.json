@@ -15,23 +15,36 @@
       "color": "Yellow",
       "width_mm": 2.4,
       "weight_g": null,
-      "price": 1145.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
       "retrieved_at": "2026-10-22",
       "evidence_file": "evidence/listings/solitaire.md",
-      "evidence_quotes": ["$1,145(Setting Price)", "502120y14", "14K Yellow Gold", "2.40mm"],
+      "evidence_quotes": [
+        "$1,145(Setting Price)",
+        "502120y14",
+        "14K Yellow Gold",
+        "2.40mm"
+      ],
       "solid_gold_explicit": false,
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "verified_price_and_metal",
+      "verification_status": "metal_stated_currency_unconfirmed",
       "rejected_values": [],
-      "flags": ["F-001", "F-002", "F-003", "F-015"],
-      "notes": "Price labelled '(Setting Price)' on the product page: the center diamond is not included."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016"
+      ],
+      "notes": "Price labelled '(Setting Price)' on the product page: the center diamond is not included.",
+      "observed_display": "$1,145(Setting Price)",
+      "prior_normalized_price": 1145.0
     },
     {
       "id": "BN-195639",
@@ -45,23 +58,36 @@
       "color": "Yellow",
       "width_mm": 1.8,
       "weight_g": null,
-      "price": 1000.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639",
       "retrieved_at": "2026-10-22",
       "evidence_file": "evidence/listings/solitaire.md",
-      "evidence_quotes": ["$1,000(Setting Price)", "501130y14", "14K Yellow Gold", "1.80mm"],
+      "evidence_quotes": [
+        "$1,000(Setting Price)",
+        "501130y14",
+        "14K Yellow Gold",
+        "1.80mm"
+      ],
       "solid_gold_explicit": false,
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "verified_price_and_metal",
+      "verification_status": "metal_stated_currency_unconfirmed",
       "rejected_values": [],
-      "flags": ["F-001", "F-002", "F-003", "F-015"],
-      "notes": "Price labelled '(Setting Price)'."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016"
+      ],
+      "notes": "Price labelled '(Setting Price)'.",
+      "observed_display": "$1,000(Setting Price)",
+      "prior_normalized_price": 1000.0
     },
     {
       "id": "BN-194548",
@@ -75,23 +101,37 @@
       "color": "White",
       "width_mm": 2.0,
       "weight_g": null,
-      "price": 1045.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/solitaire-compass-set-engagement-ring-in-14k-white-gold-item-194548",
       "retrieved_at": "2026-10-22",
       "evidence_file": "evidence/listings/solitaire.md",
-      "evidence_quotes": ["$1,045(Setting Price)", "501290w14", "14K White Gold", "2.00mm", "Rhodium Finish"],
+      "evidence_quotes": [
+        "$1,045(Setting Price)",
+        "501290w14",
+        "14K White Gold",
+        "2.00mm",
+        "Rhodium Finish"
+      ],
       "solid_gold_explicit": false,
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "verified_price_and_metal",
+      "verification_status": "metal_stated_currency_unconfirmed",
       "rejected_values": [],
-      "flags": ["F-001", "F-002", "F-003", "F-015"],
-      "notes": "White gold with rhodium finish is still a solid 14K gold alloy underneath; the listing states karat but never the words 'solid gold'."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016"
+      ],
+      "notes": "The seller states 14K white gold and a rhodium finish; explicit solid-gold construction is not established by the fetched target specifications.",
+      "observed_display": "$1,045(Setting Price)",
+      "prior_normalized_price": 1045.0
     },
     {
       "id": "BE-121H6",
@@ -113,14 +153,27 @@
       "source_url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
       "retrieved_at": "2026-10-22",
       "evidence_file": "evidence/listings/solitaire.md",
-      "evidence_quotes": ["990.00(Setting Only)", "BE121H6-14KY", "14K Yellow Gold", "Width: 2.5 mm", "Prong metal: 14K White Gold", "Free 1-Year Resizing"],
+      "evidence_quotes": [
+        "990.00(Setting Only)",
+        "BE121H6-14KY",
+        "14K Yellow Gold",
+        "Width: 2.5 mm",
+        "Prong metal: 14K White Gold",
+        "Free 1-Year Resizing"
+      ],
       "solid_gold_explicit": false,
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": "https://www.brilliantearth.com/weve-got-you-covered/",
       "verification_status": "verified_price_non_usd",
       "rejected_values": [],
-      "flags": ["F-001", "F-002", "F-003", "F-007", "F-015"],
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-007",
+        "F-015"
+      ],
       "notes": "Price rendered in EUR (geo-localised) on retrieval. USD price is NOT recorded because it was never displayed. Prong metal is 14K white gold, so the ring is two-tone."
     }
   ]

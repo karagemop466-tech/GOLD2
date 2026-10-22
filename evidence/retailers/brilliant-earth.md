@@ -47,3 +47,7 @@ The page served **EUR** at retrieval (currency selector showed EUR active, price
 The centre diamond is priced separately, so the figure above is a setting price (flag F-015).
 
 - Care / warranty hub referenced by the row: https://www.brilliantearth.com/weve-got-you-covered/
+
+## Contact citation correction — 2026-10-22
+Source: https://www.brilliantearth.com/weve-got-you-covered/
+Published header phone: 800.691.0952. The localized EUR product page displayed 1.415.426.2781, a different source/region context; it is not attributed to the contact page. No call was placed.

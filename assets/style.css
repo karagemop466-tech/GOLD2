@@ -104,3 +104,17 @@ footer .row{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
 .kv dt{color:var(--muted)}
 .kv dd{margin:0;font-weight:600}
 @media(max-width:640px){h1{font-size:25px}.topbar{min-height:auto;padding:10px 0}nav.main{margin-left:0}}
+
+.legacy-0230ce59c85c{padding:18px 20px}
+.legacy-2b77b320689e{margin-top:0;font-size:12.6px}
+.legacy-34eff3d5880e{display:flex;gap:28px;flex-wrap:wrap;align-items:baseline;margin-top:6px}
+.legacy-426aa71cc5ac{font-size:27px;font-weight:750}
+.legacy-4799f052f140{font-size:14px;color:#5b6472}
+.legacy-4b545251f185{margin-bottom:18px}
+.legacy-4eaec73dff5c{color:#5b6472;font-size:13.4px}
+.legacy-532b080da9ef{grid-template-columns:1fr}
+.legacy-92c18f6bdac1{margin-top:16px}
+.legacy-b38c80c203ae{font-size:15px;color:#5b6472}
+.legacy-bf4a218e05ab{margin-bottom:16px}
+.legacy-c53ea1da2385{margin-top:14px}
+.legacy-d380b95f1a78{margin:18px 0 8px}
