@@ -129,6 +129,22 @@ deployment mechanism was not changed. Consequence: the site must live at the rep
 
 ## Result
 
-- PR: https://github.com/karagemop466-tech/GOLD2/pull/3 (merged below)
-- Audit: `tools/qa.py` → **PASS**, 0 failures, 2 coverage warnings
-- Pages: legacy build from `main` `/`; post-merge verification below
+- **PR #3:** https://github.com/karagemop466-tech/GOLD2/pull/3 — checks `audit` (pass, 8s) and `verify` (pass, 11s)
+- **Merge:** `gh pr merge 3 --merge` succeeded; merge commit `eb12a1b2b30201516f53c9d8ebf15e71bfb0ec73` on `main`
+- **Pages:** API reports `build_type: legacy`, source `main` `/`, build for commit `eb12a1b` reached `status: built` at 2026-10-22T23:17:51Z
+- **Live check:** `https://karagemop466-tech.github.io/GOLD2/index.html` returned the new dashboard (title `Dashboard · GOLD2`), 16 listings, 15 flags, gold quote $4,024.36/oz
+- **Audit locally:** `tools/qa.py` → **PASS**, 11 checks, 0 failures, 2 coverage warnings
+
+## Post-deploy fixes (PR #4)
+
+The first live render exposed four defects that local checks had not caught, now fixed and re-verified:
+
+1. The dashboard badge said "Automated checks: not run yet" — the summary parser looked for a line starting
+   with `RESULT:` but the report writes `- **RESULT: PASS**`. Parser fixed; the badge now shows the real result.
+2. Checklist item 04 still said "1 of 14 items" — a hard-coded count. All checklist counts are now derived
+   from the data.
+3. Flag F-003's title still read "13 of 14" while its detail said "15 of 16". Title corrected.
+4. A single-value currency range rendered as "990.00–990.00". Collapsed to one figure.
+
+This is recorded because it is the exact failure mode this project is about: a page can look right and still
+carry a stale number. Re-read the rendered site, not only the source data.

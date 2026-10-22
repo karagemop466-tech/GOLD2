@@ -290,11 +290,14 @@ def price_summary(items) -> str:
     for basis, group in by_basis.items():
         currencies = sorted({i["currency"] for i in group})
         if len(currencies) > 1:
-            detail = "; ".join(
-                f'{c}: {min(i["price"] for i in group if i["currency"] == c):,.2f}–'
-                f'{max(i["price"] for i in group if i["currency"] == c):,.2f}'
-                for c in currencies
-            )
+            bits = []
+            for c in currencies:
+                vals = [i["price"] for i in group if i["currency"] == c]
+                lo_c, hi_c = min(vals), max(vals)
+                bits.append(
+                    f"{c} {lo_c:,.2f}" if lo_c == hi_c else f"{c} {lo_c:,.2f}–{hi_c:,.2f}"
+                )
+            detail = "; ".join(bits)
             parts.append(f"{len(group)} {basis_label(basis).lower()} row(s) — {detail} (not converted)")
         else:
             lo = min(i["price"] for i in group)
@@ -319,10 +322,10 @@ def build_index(items, payloads, flags, gold, qa_summary):
     )
     checklist = [
         ("Purity", "Karat is recorded only where the retailer states it on the page. 10K, 14K and 18K rows are kept separate."),
-        ("Solid gold", "The listing must say <em>solid gold</em>. No captured listing uses that phrase while stating a karat — see F-001."),
-        ("Hallmark", "Karat stamp plus maker's mark. No listing states either — see F-002."),
-        ("Weight", "Grams. Published for 1 of 14 items; blank everywhere else — see F-003."),
-        ("Seller", "4 retailers with official pages; contact details recorded only where published."),
+        ("Solid gold", f"The listing must say <em>solid gold</em>. {sum(1 for i in items if not i.get('solid_gold_explicit'))} of {len(items)} captured listings state a karat but never that phrase — see F-001."),
+        ("Hallmark", f"Karat stamp plus maker's mark. {sum(1 for i in items if not i.get('hallmark_stated'))} of {len(items)} listings state neither — see F-002."),
+        ("Weight", f"Grams. Published for {sum(1 for i in items if i.get('weight_g') is not None)} of {len(items)} items; blank everywhere else — see F-003."),
+        ("Seller", f"{len({i['retailer_id'] for i in items})} retailers with official pages; contact details recorded only where published."),
         ("Price", "Live price captured on 2026-10-22 with its basis (setting-only vs complete ring). Cached snippet prices were rejected in 3 cases."),
         ("Returns", "Window and the resized/custom exclusions recorded per retailer — see F-010."),
         ("Payment", "Card acceptance is not stated on any captured page; left blank — see F-012."),
@@ -690,8 +693,8 @@ def main():
     qa_text = qa_path.read_text(encoding="utf-8") if qa_path.exists() else ""
     qa_summary = "not run yet"
     for line in qa_text.splitlines():
-        if line.startswith("RESULT:"):
-            qa_summary = line.replace("RESULT:", "").strip()
+        if "RESULT:" in line:
+            qa_summary = line.split("RESULT:", 1)[1].replace("*", "").strip(" -—").strip()
             break
 
     pages = {"index.html": build_index(items, payloads, flags, gold, qa_summary)}
