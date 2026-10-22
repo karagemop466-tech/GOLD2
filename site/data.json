@@ -1,0 +1,52 @@
+[
+  {
+    "id": "501480w14",
+    "name": "Petite Micropav\u00e9 Diamond Engagement Ring",
+    "category": "Natural accent diamonds",
+    "karat": 14,
+    "metal": "14K White Gold",
+    "price": 1300,
+    "currency": "USD",
+    "priceScope": "Setting only; center diamond selected separately",
+    "source": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
+    "evidence": {
+      "price": "$1,300(Setting Price)",
+      "metal": "14K White Gold",
+      "id": "501480w14"
+    },
+    "checked": "2026-10-22",
+    "weightGrams": null,
+    "solidGold": null,
+    "hallmark": null,
+    "makerMark": null,
+    "spotUSDPerGram": null,
+    "rawGoldGrams": null,
+    "completeRingPrice": null,
+    "status": "Needs review \u2014 not qualified"
+  },
+  {
+    "id": "501480w14l",
+    "name": "Petite Micropav\u00e9 Lab-Grown Diamond Engagement Ring",
+    "category": "Lab-grown accent diamonds",
+    "karat": 14,
+    "metal": "14K White Gold",
+    "price": 1050,
+    "currency": "USD",
+    "priceScope": "Setting only; center diamond selected separately",
+    "source": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
+    "evidence": {
+      "price": "$1,050(Setting Price)",
+      "metal": "14K White Gold",
+      "id": "501480w14l"
+    },
+    "checked": "2026-10-22",
+    "weightGrams": null,
+    "solidGold": null,
+    "hallmark": null,
+    "makerMark": null,
+    "spotUSDPerGram": null,
+    "rawGoldGrams": null,
+    "completeRingPrice": null,
+    "status": "Needs review \u2014 not qualified"
+  }
+]
