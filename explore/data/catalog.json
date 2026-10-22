@@ -1,0 +1,1108 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "title": "GOLD",
+    "reviewedAt": "2026-10-22T23:19:45Z",
+    "reviewSession": "arena-24aeb4a8",
+    "scope": "18 named product pages across six retailers: 16 researched in this session plus two previously published Blue Nile settings, directly rechecked and retained. Complete reviewed set, not an exhaustive market inventory. Gemstone and band alternatives are explicitly categorized.",
+    "pricePolicy": "No hallucinations: never invent prices, specifications, or verification. Null means unverified. Prices are dated observations, not live quotes or checkout totals. Source claims are not independent authentication.",
+    "freshnessHours": 24,
+    "sourceReviewDays": 30,
+    "observationWindow": {
+      "start": "2026-10-22T23:08:10Z",
+      "end": "2026-10-22T23:19:45Z"
+    },
+    "benchmark": {
+      "amount": null,
+      "source": "lbma-prices"
+    },
+    "marketReference": {
+      "amount": 4039.76,
+      "currency": "USD",
+      "unit": "troy ounce",
+      "side": "dealer body/table ask",
+      "publishedAt": "2026-10-22T23:09:00Z",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "source": "jm-gold",
+      "quote": "quote",
+      "caveat": "Dated dealer reference, not LBMA and not a live feed. Header panel differed. Calculations are conditional illustrations only."
+    }
+  },
+  "sellers": [
+    {
+      "id": "automic",
+      "name": "Automic Gold",
+      "contact": "automic-contact",
+      "policy": "automic-returns",
+      "independent": "bbb-automic",
+      "payment": "automic-faq",
+      "returnDays": {
+        "value": 30,
+        "source": "automic-returns",
+        "quote": "window"
+      },
+      "returnFrom": "delivery",
+      "summary": "U.S. returns: 30 days from delivery; mail within 14 days to avoid the stated recycling fee. Unworn/original condition. Custom, engraved and modified items final sale.",
+      "notes": "Exact-size metal mass, paired marks and non-destructive inspection/return permission remain unconfirmed."
+    },
+    {
+      "id": "catbird",
+      "name": "Catbird",
+      "contact": "catbird-contact",
+      "policy": "catbird-returns",
+      "independent": "bbb-catbird",
+      "payment": null,
+      "returnDays": {
+        "value": 20,
+        "source": "catbird-returns",
+        "quote": "window"
+      },
+      "returnFrom": "delivery",
+      "summary": "Domestic online: 20 days from delivery; $9 return shipping deducted. Unused, authorized return in original packaging. Special orders/engraving final sale. International sales final.",
+      "notes": "Do not assume a configured or resized ring is returnable. Fetched specifications were incomplete."
+    },
+    {
+      "id": "auvere",
+      "name": "Auvere",
+      "contact": "auvere-contact",
+      "policy": "auvere-returns",
+      "independent": "bbb-auvere",
+      "payment": null,
+      "returnDays": {
+        "value": 15,
+        "source": "auvere-returns",
+        "quote": "window"
+      },
+      "returnFrom": "delivery",
+      "summary": "Start within 15 days of delivery; dispatch within 10 days of the return-instructions email. Original unaltered condition and intact tag. Sale/Rare Collection excluded.",
+      "notes": "“Fine Weight” definition is unresolved. Stock-size eligibility and independent-testing permission not confirmed."
+    },
+    {
+      "id": "quince",
+      "name": "Quince",
+      "contact": "quince-contact",
+      "policy": "quince-returns",
+      "independent": "bbb-quince",
+      "payment": null,
+      "returnDays": {
+        "value": 60,
+        "source": "quince-returns",
+        "quote": "window"
+      },
+      "returnFrom": "purchase",
+      "summary": "Engagement rings: 60 days from purchase, NOT the generic 365-day delivery window. Made-to-order jewelry: $35 restocking. Original packaging/certificates required; customized items excluded.",
+      "notes": "Mixed-metal head/band must not be valued as if all of the ring were 14k gold."
+    },
+    {
+      "id": "mene",
+      "name": "Menē",
+      "contact": "mene-terms",
+      "policy": "mene-terms",
+      "independent": "tp-mene",
+      "payment": "mene-terms",
+      "returnDays": null,
+      "returnFrom": null,
+      "summary": "Return window not yet confirmed in captured evidence. Crafted-on-Demand weights may vary by up to 1g and final price may be adjusted. Buyback is not a refund.",
+      "notes": "Do not substitute weights/prices from recommendation cards for the main product."
+    },
+    {
+      "id": "bluenile",
+      "name": "Blue Nile",
+      "contact": "bn-returns",
+      "policy": "bn-returns",
+      "independent": null,
+      "payment": null,
+      "returnDays": {
+        "value": 30,
+        "source": "bn-returns",
+        "quote": "window"
+      },
+      "returnFrom": "shipment",
+      "summary": "Eligible original, unworn items: 30 days from shipment; RMA required. Two complimentary returns/year. Engraved, custom and items resized after initial purchase excluded; retain certificates.",
+      "notes": "Existing two-setting research retained and directly rechecked. Full-ring price, currency context and independent reputation remain unconfirmed."
+    }
+  ],
+  "products": [
+    {
+      "id": "ag-natural",
+      "name": {
+        "value": "Natural Diamond Ring",
+        "source": "ag-natural",
+        "quote": "name"
+      },
+      "seller": "automic",
+      "category": "natural",
+      "source": "ag-natural",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ag-natural",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "ag-natural",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "Reclaimed natural diamond",
+          "source": "ag-natural",
+          "quote": "stone"
+        },
+        "itemWeightG": {
+          "value": 1.2,
+          "source": "ag-natural",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 726,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-22T23:16:03Z",
+        "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+        "evidence": [
+          {
+            "source": "ag-natural",
+            "quote": "price"
+          },
+          {
+            "source": "automic-currency",
+            "quote": "usd"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 1.2,
+        "max": 1.2,
+        "unit": "g",
+        "basis": "item",
+        "approximate": true,
+        "evidence": {
+          "source": "ag-natural",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "approximate-item-weight",
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "ag-cluster",
+      "name": {
+        "value": "Diamond Cluster Ring",
+        "source": "ag-cluster",
+        "quote": "name"
+      },
+      "seller": "automic",
+      "category": "natural",
+      "source": "ag-cluster",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "14k Yellow Gold · Natural Diamond · default page display; no engraving; size-specific checkout not confirmed",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ag-cluster",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "ag-cluster",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "Reclaimed natural diamond or Lab-created diamond",
+          "source": "ag-cluster",
+          "quote": "stone"
+        },
+        "itemWeightG": {
+          "value": 3.1,
+          "source": "ag-cluster",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 2862,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-22T23:16:03Z",
+        "scope": "14k Yellow Gold · Natural Diamond · default page display; no engraving; size-specific checkout not confirmed",
+        "evidence": [
+          {
+            "source": "ag-cluster",
+            "quote": "price"
+          },
+          {
+            "source": "automic-currency",
+            "quote": "usd"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 3.1,
+        "max": 3.1,
+        "unit": "g",
+        "basis": "item",
+        "approximate": true,
+        "evidence": {
+          "source": "ag-cluster",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "approximate-item-weight",
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "ag-petal",
+      "name": {
+        "value": "0.6ct Round Diamond Petal Ring",
+        "source": "ag-petal",
+        "quote": "name"
+      },
+      "seller": "automic",
+      "category": "lab",
+      "source": "ag-petal",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "14k Yellow Gold · Lab Created Diamond · default page display; no engraving; size-specific checkout not confirmed",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ag-petal",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "ag-petal",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "Reclaimed natural diamond or Lab created diamond",
+          "source": "ag-petal",
+          "quote": "stone"
+        },
+        "itemWeightG": {
+          "value": 2.7,
+          "source": "ag-petal",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 1774,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-22T23:16:03Z",
+        "scope": "14k Yellow Gold · Lab Created Diamond · default page display; no engraving; size-specific checkout not confirmed",
+        "evidence": [
+          {
+            "source": "ag-petal",
+            "quote": "price"
+          },
+          {
+            "source": "automic-currency",
+            "quote": "usd"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 2.7,
+        "max": 2.7,
+        "unit": "g",
+        "basis": "item",
+        "approximate": true,
+        "evidence": {
+          "source": "ag-petal",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "approximate-item-weight",
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "ag-ruby",
+      "name": {
+        "value": "Ruby Ring",
+        "source": "ag-ruby",
+        "quote": "name"
+      },
+      "seller": "automic",
+      "category": "gemstone",
+      "source": "ag-ruby",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ag-ruby",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "ag-ruby",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "Natural ruby. Natural stones may vary in color",
+          "source": "ag-ruby",
+          "quote": "stone"
+        },
+        "itemWeightG": {
+          "value": 1.2,
+          "source": "ag-ruby",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 526,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-22T23:16:03Z",
+        "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+        "evidence": [
+          {
+            "source": "ag-ruby",
+            "quote": "price"
+          },
+          {
+            "source": "automic-currency",
+            "quote": "usd"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 1.2,
+        "max": 1.2,
+        "unit": "g",
+        "basis": "item",
+        "approximate": true,
+        "evidence": {
+          "source": "ag-ruby",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "approximate-item-weight",
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "ag-sapphire",
+      "name": {
+        "value": "Sapphire Ring",
+        "source": "ag-sapphire",
+        "quote": "name"
+      },
+      "seller": "automic",
+      "category": "gemstone",
+      "source": "ag-sapphire",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ag-sapphire",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "ag-sapphire",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "Natural sapphire. Natural stones may vary in color",
+          "source": "ag-sapphire",
+          "quote": "stone"
+        },
+        "itemWeightG": {
+          "value": 1.2,
+          "source": "ag-sapphire",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 526,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-22T23:16:03Z",
+        "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+        "evidence": [
+          {
+            "source": "ag-sapphire",
+            "quote": "price"
+          },
+          {
+            "source": "automic-currency",
+            "quote": "usd"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 1.2,
+        "max": 1.2,
+        "unit": "g",
+        "basis": "item",
+        "approximate": true,
+        "evidence": {
+          "source": "ag-sapphire",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "approximate-item-weight",
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "ag-moissanite",
+      "name": {
+        "value": "Moissanite Ring",
+        "source": "ag-moissanite",
+        "quote": "name"
+      },
+      "seller": "automic",
+      "category": "gemstone",
+      "source": "ag-moissanite",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ag-moissanite",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "ag-moissanite",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "Lab-created moissanite",
+          "source": "ag-moissanite",
+          "quote": "stone"
+        },
+        "itemWeightG": {
+          "value": 1.2,
+          "source": "ag-moissanite",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 420,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-22T23:16:03Z",
+        "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+        "evidence": [
+          {
+            "source": "ag-moissanite",
+            "quote": "price"
+          },
+          {
+            "source": "automic-currency",
+            "quote": "usd"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 1.2,
+        "max": 1.2,
+        "unit": "g",
+        "basis": "item",
+        "approximate": true,
+        "evidence": {
+          "source": "ag-moissanite",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "approximate-item-weight",
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "ag-24k",
+      "name": {
+        "value": "24k Band",
+        "source": "ag-24k",
+        "quote": "name"
+      },
+      "seller": "automic",
+      "category": "bands",
+      "source": "ag-24k",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "Solid 24k Gold · Hammered default finish · no engraving; exact size/weight not confirmed",
+      "facts": {
+        "karat": {
+          "value": 24,
+          "source": "ag-24k",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "ag-24k",
+          "quote": "material"
+        },
+        "stone": null,
+        "itemWeightG": {
+          "value": 11,
+          "source": "ag-24k",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": {
+          "value": 0.9999,
+          "source": "ag-24k",
+          "quote": "purity"
+        },
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 3520,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-22T23:16:03Z",
+        "scope": "Solid 24k Gold · Hammered default finish · no engraving; exact size/weight not confirmed",
+        "evidence": [
+          {
+            "source": "ag-24k",
+            "quote": "price"
+          },
+          {
+            "source": "automic-currency",
+            "quote": "usd"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 11,
+        "max": 11,
+        "unit": "g",
+        "basis": "item",
+        "approximate": true,
+        "evidence": {
+          "source": "ag-24k",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "approximate-item-weight",
+        "exact-size-unconfirmed",
+        "soft-high-karat"
+      ]
+    },
+    {
+      "id": "cb-odile",
+      "name": {
+        "value": "Odile the Swan Black Diamond Ring",
+        "source": "cb-odile",
+        "quote": "name"
+      },
+      "seller": "catbird",
+      "category": "natural",
+      "source": "cb-odile",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "Unselected product page; gold configuration and currency context not bound to price",
+      "facts": {
+        "karat": null,
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "dynamic-specifications",
+        "price-unbound",
+        "indexed-price-conflict"
+      ]
+    },
+    {
+      "id": "cb-sonnet",
+      "name": {
+        "value": "Sonnet Lab-Grown Diamond Ring",
+        "source": "cb-sonnet",
+        "quote": "name"
+      },
+      "seller": "catbird",
+      "category": "lab",
+      "source": "cb-sonnet",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "Unselected product page; gold configuration and currency context not bound to price",
+      "facts": {
+        "karat": null,
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "dynamic-specifications",
+        "price-unbound"
+      ]
+    },
+    {
+      "id": "cb-ballet",
+      "name": {
+        "value": "Night at the Ballet Diamond Ring, Emerald Cut",
+        "source": "cb-ballet",
+        "quote": "name"
+      },
+      "seller": "catbird",
+      "category": "natural",
+      "source": "cb-ballet",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "Unselected product page; gold configuration and currency context not bound to price",
+      "facts": {
+        "karat": null,
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "dynamic-specifications",
+        "price-unbound"
+      ]
+    },
+    {
+      "id": "cb-pointelle",
+      "name": {
+        "value": "Pointelle Diamond Ring",
+        "source": "cb-pointelle",
+        "quote": "name"
+      },
+      "seller": "catbird",
+      "category": "bands",
+      "source": "cb-pointelle",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "Unselected product page; gold configuration and currency context not bound to price",
+      "facts": {
+        "karat": null,
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "dynamic-specifications",
+        "price-unbound"
+      ]
+    },
+    {
+      "id": "av-bridge",
+      "name": {
+        "value": "Diamond Bridge Ring Tall",
+        "source": "av-bridge",
+        "quote": "name"
+      },
+      "seller": "auvere",
+      "category": "natural",
+      "source": "av-bridge",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "22 karat gold; size unselected; source weight range not size-bound",
+      "facts": {
+        "karat": {
+          "value": 22,
+          "source": "av-bridge",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "av-bridge",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "four round cut natural diamonds",
+          "source": "av-bridge",
+          "quote": "stone"
+        },
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": {
+        "min": 5,
+        "max": 6.1,
+        "unit": "g",
+        "basis": "fine-undefined",
+        "approximate": true,
+        "evidence": {
+          "source": "av-bridge",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "fine-weight-ambiguous",
+        "price-not-exposed",
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "av-clean",
+      "name": {
+        "value": "Clean Cut Stack Ring Polished",
+        "source": "av-clean",
+        "quote": "name"
+      },
+      "seller": "auvere",
+      "category": "bands",
+      "source": "av-clean",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "22 karat gold; size unselected; source weight range not size-bound",
+      "facts": {
+        "karat": {
+          "value": 22,
+          "source": "av-clean",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "av-clean",
+          "quote": "material"
+        },
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": {
+        "min": 2.8,
+        "max": 3.7,
+        "unit": "g",
+        "basis": "fine-undefined",
+        "approximate": true,
+        "evidence": {
+          "source": "av-clean",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "fine-weight-ambiguous",
+        "price-not-exposed",
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "quince-oval",
+      "name": {
+        "value": "Lab Grown Diamond Oval Petite Classic Engagement Ring - 1ct",
+        "source": "quince-oval",
+        "quote": "name"
+      },
+      "seller": "quince",
+      "category": "lab",
+      "source": "quince-oval",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "Yellow Gold display; 1ct product; 14k band with platinum head; size not selected",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "quince-oval",
+          "quote": "metal"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "mixed-metal",
+        "price-unbound",
+        "solid-wording-missing"
+      ]
+    },
+    {
+      "id": "mene-rose",
+      "name": {
+        "value": "Rose Ring",
+        "source": "mene-rose",
+        "quote": "name"
+      },
+      "seller": "mene",
+      "category": "bands",
+      "source": "mene-rose",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
+      "facts": {
+        "karat": {
+          "value": 24,
+          "source": "mene-rose",
+          "quote": "karat"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 1346,
+        "currency": "USD",
+        "kind": "unbound-display",
+        "observedAt": "2026-10-22T23:16:03Z",
+        "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
+        "evidence": [
+          {
+            "source": "mene-rose",
+            "quote": "price"
+          },
+          {
+            "source": "mene-rose",
+            "quote": "currency"
+          }
+        ]
+      },
+      "reportedWeight": null,
+      "flags": [
+        "crafted-on-demand",
+        "exact-size-unconfirmed",
+        "solid-wording-missing"
+      ]
+    },
+    {
+      "id": "mene-knot",
+      "name": {
+        "value": "Knot Ring",
+        "source": "mene-knot",
+        "quote": "name"
+      },
+      "seller": "mene",
+      "category": "bands",
+      "source": "mene-knot",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
+      "facts": {
+        "karat": {
+          "value": 24,
+          "source": "mene-knot",
+          "quote": "karat"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 1465,
+        "currency": "USD",
+        "kind": "unbound-display",
+        "observedAt": "2026-10-22T23:16:03Z",
+        "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
+        "evidence": [
+          {
+            "source": "mene-knot",
+            "quote": "price"
+          },
+          {
+            "source": "mene-knot",
+            "quote": "currency"
+          }
+        ]
+      },
+      "reportedWeight": null,
+      "flags": [
+        "crafted-on-demand",
+        "exact-size-unconfirmed",
+        "solid-wording-missing"
+      ]
+    },
+    {
+      "id": "bn-501480w14",
+      "name": {
+        "value": "Petite Micropavé Diamond Engagement Ring",
+        "source": "bn-501480w14",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "natural",
+      "source": "bn-501480w14",
+      "observedAt": "2026-10-22T23:19:45Z",
+      "scope": "14K White Gold · rhodium finish · stock 501480w14 · setting only; no center diamond or size selected",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "bn-501480w14",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": {
+          "value": "Natural Diamond Information",
+          "source": "bn-501480w14",
+          "quote": "stone"
+        },
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "setting-only",
+        "currency-unconfirmed",
+        "exact-size-unconfirmed",
+        "inherited-rechecked"
+      ]
+    },
+    {
+      "id": "bn-501480w14l",
+      "name": {
+        "value": "Petite Micropavé Lab-Grown Diamond Engagement Ring",
+        "source": "bn-501480w14l",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "lab",
+      "source": "bn-501480w14l",
+      "observedAt": "2026-10-22T23:19:45Z",
+      "scope": "14K White Gold · rhodium finish · stock 501480w14l · setting only; no center diamond or size selected",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "bn-501480w14l",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": {
+          "value": "Lab-Grown Diamond Information",
+          "source": "bn-501480w14l",
+          "quote": "stone"
+        },
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "setting-only",
+        "currency-unconfirmed",
+        "exact-size-unconfirmed",
+        "inherited-rechecked"
+      ]
+    }
+  ]
+}

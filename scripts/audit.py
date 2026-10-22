@@ -8,6 +8,7 @@ allowed={'www.bluenile.com','www.ecfr.gov'}
 for p in data:
  assert urlsplit(p['source']).hostname in allowed
  assert p['checked']=='2026-10-22'
+ assert p['currency'] is None, 'Currency context remains unverified; do not infer USD from a dollar symbol'
  assert f"${p['price']:,}(Setting Price)"==p['evidence']['price']
  assert p['metal']==p['evidence']['metal'] and p['id']==p['evidence']['id']
  assert p['priceScope'].startswith('Setting only')

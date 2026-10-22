@@ -1,7 +1,7 @@
 {
   "meta": {
     "recordedAt": "2026-10-22T23:16:03Z",
-    "format": "Short normalized excerpts, transcribed from tool-returned official pages; not full archived pages. Whitespace and Markdown emphasis may be normalized.",
+    "format": "Short excerpts and normalized researcher transcriptions of directly retrieved pages, not full archives. Some entries summarize a source passage rather than quote it verbatim; wording/format may be normalized. Numbers are never synthesized.",
     "limits": "Evidence consistency tests cannot certify that an external claim is true or detect every hallucination."
   },
   "sources": [
@@ -27,7 +27,8 @@
       "relevantChunks": [
         0,
         1
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "ftc-shopping",
@@ -47,7 +48,8 @@
       },
       "relevantChunks": [
         0
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "gia-testing",
@@ -64,7 +66,8 @@
       },
       "relevantChunks": [
         0
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "nist-units",
@@ -159,7 +162,8 @@
       },
       "relevantChunks": [
         4
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "ag-cluster",
@@ -182,7 +186,8 @@
       },
       "relevantChunks": [
         4
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "ag-petal",
@@ -205,7 +210,8 @@
       },
       "relevantChunks": [
         4
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "ag-ruby",
@@ -291,12 +297,13 @@
         "weight-heading": "Item Weight",
         "purity": "Please note that because this ring is 99.99% pure gold it only comes in yellow.",
         "care": "It can bend, warp, or scratch easily so it’s best to wear your pieces with a little extra care.",
-        "engraved": "Engraved items are final sale and cannot be returned."
+        "engraved": "All engraved items are final sale."
       },
       "relevantChunks": [
         4,
         5
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "ag-natural-json",
@@ -335,7 +342,8 @@
       "relevantChunks": [
         3,
         4
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "automic-faq",
@@ -439,7 +447,8 @@
       },
       "relevantChunks": [
         0
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "catbird-returns",
@@ -496,7 +505,8 @@
       },
       "relevantChunks": [
         1
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "av-clean",
@@ -595,7 +605,8 @@
         0,
         1,
         2
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "quince-contact",
@@ -632,7 +643,8 @@
       "relevantChunks": [
         0,
         2
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "mene-knot",
@@ -653,7 +665,8 @@
       "relevantChunks": [
         0,
         2
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "mene-terms",
@@ -663,19 +676,20 @@
       "observedAt": "2026-10-22T23:16:03Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Effective Sep 2, 2026. Relevant reviewed clauses only. Buyback is not a refund right. Return window is left unconfirmed until the relevant return clauses are captured.",
+      "note": "Relevant Terms of Purchase clauses reviewed through chunk 2 of 7. Full terms not yet captured. Return window unconfirmed in captured excerpts; buyback is not a return policy.",
       "quotes": {
-        "weight": "For Crafted-on-Demand Investment Jewelry, the actual weight may vary by up to 1 gram from the advertised weight, and the final price may be adjusted to reflect the final weight.",
-        "coa": "The Product’s final weight will be stated on its Certificate of Authenticity.",
+        "weight": "Investment Jewelry is individually crafted and may vary in weight by up to 0.5 grams for in-stock Products and up to 1 gram for Crafted-on-Demand Products. The final price of Crafted-on-Demand Investment Jewelry may be adjusted to reflect its final weight.",
         "contact": "1-833-MENE-24K",
-        "address": "307-334 Adelaide Street West, Toronto, Ontario M5V 1R4, Canada.",
-        "card": "For payment by card, all credit and debit cardholders may be subject to authorization and authentication."
+        "card": "For payment by card, all credit and debit cardholders may be subject to authorization and authentication.",
+        "buyback": "The Lifetime Buyback Guarantee does not guarantee recovery of the original purchase price or any appreciation in value.",
+        "cancellation": "A restocking fee of up to 10% will be deducted for orders cancelled after they have shipped or more than 24 hours after they were placed."
       },
       "relevantChunks": [
         0,
         1,
         2
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
     },
     {
       "id": "bbb-automic",
@@ -778,6 +792,70 @@
         0,
         1
       ]
+    },
+    {
+      "id": "bn-501480w14",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
+      "observedAt": "2026-10-22T23:19:45Z",
+      "method": "fetch_page; rechecked after importing existing session 39da17c8 records",
+      "access": "fetched",
+      "note": "Setting only, center diamond sold separately. Direct page displayed the dollar symbol but did not establish an ISO currency context; USD price is withheld in the integrated catalog. Exact ring size unselected. Rhodium-finished white gold is disclosed; this is not evidence of gold plating over base metal.",
+      "relevantChunks": [
+        0
+      ],
+      "quotes": {
+        "name": "Petite Micropavé Diamond Engagement Ring",
+        "stock": "501480w14",
+        "price": "$1,300(Setting Price)",
+        "material": "14K White Gold",
+        "size": "Ring Size: Select",
+        "finish": "Rhodium Finish: Yes",
+        "stone": "Natural Diamond Information"
+      }
+    },
+    {
+      "id": "bn-501480w14l",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
+      "observedAt": "2026-10-22T23:19:45Z",
+      "method": "fetch_page; rechecked after importing existing session 39da17c8 records",
+      "access": "fetched",
+      "note": "Setting only, center diamond sold separately. Direct page displayed the dollar symbol but did not establish an ISO currency context; USD price is withheld in the integrated catalog. Exact ring size unselected. Rhodium-finished white gold is disclosed; this is not evidence of gold plating over base metal.",
+      "relevantChunks": [
+        0
+      ],
+      "quotes": {
+        "name": "Petite Micropavé Lab-Grown Diamond Engagement Ring",
+        "stock": "501480w14l",
+        "price": "$1,050(Setting Price)",
+        "material": "14K White Gold",
+        "size": "Ring Size: Select",
+        "finish": "Rhodium Finish: Yes",
+        "stone": "Lab-Grown Diamond Information"
+      }
+    },
+    {
+      "id": "bn-returns",
+      "publisher": "Blue Nile",
+      "kind": "policy",
+      "url": "https://www.bluenile.com/policies/returns",
+      "observedAt": "2026-10-22T23:19:45Z",
+      "method": "fetch_page; relevant excerpt transcribed",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Window runs from SHIPMENT, not delivery. Two complimentary returns per customer/year; RMA required. No independent testing permission established.",
+      "quotes": {
+        "window": "you may return eligible items in their original, unworn condition within 30 days from the shipment date for a full refund or exchange.",
+        "exclusions": "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and “Final Sale” items are not eligible for return or exchange.",
+        "limit": "Two complimentary returns are allowed per customer, per year. A Return Merchandise Authorization (RMA) number is required for all returns.",
+        "email": "service@bluenile.com",
+        "phone": "+1-800-242-2728"
+      }
     }
   ]
 }

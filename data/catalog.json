@@ -2,15 +2,15 @@
   "meta": {
     "schemaVersion": 1,
     "title": "GOLD",
-    "reviewedAt": "2026-10-22T23:16:03Z",
+    "reviewedAt": "2026-10-22T23:19:45Z",
     "reviewSession": "arena-24aeb4a8",
-    "scope": "16 named product pages across five retailers, selected for evidence review in this session. This is the complete reviewed set, not an exhaustive list of rings on the market. Gemstone and band alternatives are explicitly categorized.",
+    "scope": "18 named product pages across six retailers: 16 researched in this session plus two previously published Blue Nile settings, directly rechecked and retained. Complete reviewed set, not an exhaustive market inventory. Gemstone and band alternatives are explicitly categorized.",
     "pricePolicy": "No hallucinations: never invent prices, specifications, or verification. Null means unverified. Prices are dated observations, not live quotes or checkout totals. Source claims are not independent authentication.",
     "freshnessHours": 24,
     "sourceReviewDays": 30,
     "observationWindow": {
       "start": "2026-10-22T23:08:10Z",
-      "end": "2026-10-22T23:16:03Z"
+      "end": "2026-10-22T23:19:45Z"
     },
     "benchmark": {
       "amount": null,
@@ -104,6 +104,22 @@
       "returnFrom": null,
       "summary": "Return window not yet confirmed in captured evidence. Crafted-on-Demand weights may vary by up to 1g and final price may be adjusted. Buyback is not a refund.",
       "notes": "Do not substitute weights/prices from recommendation cards for the main product."
+    },
+    {
+      "id": "bluenile",
+      "name": "Blue Nile",
+      "contact": "bn-returns",
+      "policy": "bn-returns",
+      "independent": null,
+      "payment": null,
+      "returnDays": {
+        "value": 30,
+        "source": "bn-returns",
+        "quote": "window"
+      },
+      "returnFrom": "shipment",
+      "summary": "Eligible original, unworn items: 30 days from shipment; RMA required. Two complimentary returns/year. Engraved, custom and items resized after initial purchase excluded; retain certificates.",
+      "notes": "Existing two-setting research retained and directly rechecked. Full-ring price, currency context and independent reputation remain unconfirmed."
     }
   ],
   "products": [
@@ -145,7 +161,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": {
         "amount": 726,
@@ -218,7 +235,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": {
         "amount": 2862,
@@ -291,7 +309,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": {
         "amount": 1774,
@@ -364,7 +383,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": {
         "amount": 526,
@@ -437,7 +457,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": {
         "amount": 526,
@@ -510,7 +531,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": {
         "amount": 420,
@@ -556,7 +578,7 @@
       "category": "bands",
       "source": "ag-24k",
       "observedAt": "2026-10-22T23:16:03Z",
-      "scope": "Solid 24k Gold · default page display; no engraving; size-specific checkout not confirmed",
+      "scope": "Solid 24k Gold · Hammered default finish · no engraving; exact size/weight not confirmed",
       "facts": {
         "karat": {
           "value": 24,
@@ -583,14 +605,15 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": {
         "amount": 3520,
         "currency": "USD",
         "kind": "displayed-option",
         "observedAt": "2026-10-22T23:16:03Z",
-        "scope": "Solid 24k Gold · default page display; no engraving; size-specific checkout not confirmed",
+        "scope": "Solid 24k Gold · Hammered default finish · no engraving; exact size/weight not confirmed",
         "evidence": [
           {
             "source": "ag-24k",
@@ -641,7 +664,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": null,
       "reportedWeight": null,
@@ -673,7 +697,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": null,
       "reportedWeight": null,
@@ -704,7 +729,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": null,
       "reportedWeight": null,
@@ -735,7 +761,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": null,
       "reportedWeight": null,
@@ -778,7 +805,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": null,
       "reportedWeight": {
@@ -828,7 +856,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": null,
       "reportedWeight": {
@@ -874,7 +903,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": null,
       "reportedWeight": null,
@@ -910,7 +940,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": {
         "amount": 1346,
@@ -962,7 +993,8 @@
         "hallmark": null,
         "makerMark": null,
         "independentTest": null,
-        "independentInspectionReturnPermission": null
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
       },
       "price": {
         "amount": 1465,
@@ -986,6 +1018,90 @@
         "crafted-on-demand",
         "exact-size-unconfirmed",
         "solid-wording-missing"
+      ]
+    },
+    {
+      "id": "bn-501480w14",
+      "name": {
+        "value": "Petite Micropavé Diamond Engagement Ring",
+        "source": "bn-501480w14",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "natural",
+      "source": "bn-501480w14",
+      "observedAt": "2026-10-22T23:19:45Z",
+      "scope": "14K White Gold · rhodium finish · stock 501480w14 · setting only; no center diamond or size selected",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "bn-501480w14",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": {
+          "value": "Natural Diamond Information",
+          "source": "bn-501480w14",
+          "quote": "stone"
+        },
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "setting-only",
+        "currency-unconfirmed",
+        "exact-size-unconfirmed",
+        "inherited-rechecked"
+      ]
+    },
+    {
+      "id": "bn-501480w14l",
+      "name": {
+        "value": "Petite Micropavé Lab-Grown Diamond Engagement Ring",
+        "source": "bn-501480w14l",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "lab",
+      "source": "bn-501480w14l",
+      "observedAt": "2026-10-22T23:19:45Z",
+      "scope": "14K White Gold · rhodium finish · stock 501480w14l · setting only; no center diamond or size selected",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "bn-501480w14l",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": {
+          "value": "Lab-Grown Diamond Information",
+          "source": "bn-501480w14l",
+          "quote": "stone"
+        },
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "setting-only",
+        "currency-unconfirmed",
+        "exact-size-unconfirmed",
+        "inherited-rechecked"
       ]
     }
   ]
