@@ -2,6 +2,19 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Active claim — Session S-CA4C9D8A (2026-10-22 UTC)
+
+Platform constraint: this session is bound to `arena/ca4c9d8a-gold2`; no other branch or worktree may be created or pushed. File scopes below are exclusive to this session while active.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T12 | Line-by-line repository, provenance, and security audit | in progress | S-CA4C9D8A | `tools/qa.py`, `scripts/**`, `reports/**` |
+| T13 | Re-verify all published data against primary sources; resolve open handoffs where possible | unclaimed | S-CA4C9D8A | `data/**`, `evidence/**` |
+| T14 | Dashboard, calculator, accessibility, and generated-page review | unclaimed | S-CA4C9D8A | `tools/build_site.py`, `assets/**`, root `*.html` |
+| T15 | Final integration, PR, merge, and Pages deployment | unclaimed | S-CA4C9D8A | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
+
+No other active claim was present when this board was read. Completed historical tasks are not being reclaimed as pending work; this pass is a fresh verification and integration review.
+
 - Repository: `karagemop466-tech/GOLD2`
 - Publishing: GitHub Pages, **legacy** build, branch `main`, path `/` (confirmed via API: `build_type: legacy`)
 - Last updated: 2026-10-22 (UTC)
