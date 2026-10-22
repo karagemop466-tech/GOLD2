@@ -10,9 +10,9 @@
       "brand": "Zales",
       "name": "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
       "sku": "V-19957449",
-      "metal": "10K Yellow Gold",
+      "metal": "10K Gold",
       "karat": 10,
-      "color": "Yellow",
+      "color": null,
       "width_mm": null,
       "weight_g": null,
       "price": 899.0,
@@ -22,18 +22,68 @@
       "original_price": null,
       "source_url": "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/budget.md",
-      "evidence_quotes": ["Discounted Price $899.00", "in 10K Gold", "Free and easy 30-day returns"],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
-      "return_policy_url": null,
-      "verification_status": "verified_price_karat",
+      "evidence_file": "evidence/listings/z-19957449.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE",
+      "verification_status": "partial_official_fields",
       "rejected_values": [
-        {"value": 719.2, "source": "search-engine snippet ('Discounted Price $719.20, 20% Off')", "reason": "The live page on 2026-10-22 showed 'Discounted Price $899.00' with no discount or original price. The snippet value was not reproducible and is rejected."}
+        {
+          "value": 719.2,
+          "source": "search-engine snippet ('Discounted Price $719.20, 20% Off')",
+          "reason": "The live page on 2026-10-22 showed 'Discounted Price $899.00' with no discount or original price. The snippet value was not reproducible and is rejected."
+        }
       ],
-      "flags": ["F-001", "F-002", "F-003", "F-004", "F-011", "F-015"],
-      "notes": "Largest price discrepancy found in this pass: snippet price 20% below the live page."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-004",
+        "F-011",
+        "F-015",
+        "F-016",
+        "F-017",
+        "F-021",
+        "F-023",
+        "F-024"
+      ],
+      "notes": "The current page labels Discounted Price $899.00. The earlier search-snippet price is retained only as rejected audit evidence.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Product identifier in the official source URL",
+      "field_evidence": {
+        "name": [
+          "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold"
+        ],
+        "sku": [
+          "V-19957449"
+        ],
+        "metal": [
+          "in 10K Gold"
+        ],
+        "karat": [
+          "in 10K Gold"
+        ],
+        "price_basis": [
+          "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold"
+        ],
+        "center_stone_included": [
+          "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold"
+        ],
+        "price": [
+          "Discounted Price $899.00"
+        ],
+        "currency": [
+          "Discounted Price $899.00"
+        ]
+      }
     },
     {
       "id": "Z-20046552",
@@ -42,9 +92,9 @@
       "brand": "Zales",
       "name": "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold",
       "sku": "V-20046552",
-      "metal": "10K Yellow Gold",
+      "metal": "10K Gold",
       "karat": 10,
-      "color": "Yellow",
+      "color": null,
       "width_mm": null,
       "weight_g": null,
       "price": 909.3,
@@ -54,16 +104,64 @@
       "original_price": 1299.0,
       "source_url": "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/budget.md",
-      "evidence_quotes": ["Discounted Price $909.30", "Original Price was $1,299.00", "30% Off", "in 10K Gold", "Free and easy 30-day returns"],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
-      "return_policy_url": null,
-      "verification_status": "verified_price_karat",
+      "evidence_file": "evidence/listings/z-20046552.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE",
+      "verification_status": "partial_official_fields",
       "rejected_values": [],
-      "flags": ["F-001", "F-002", "F-003", "F-011", "F-015"],
-      "notes": "Cushion-shaped composite of round diamonds - the 'center' is a cluster, not one stone."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-011",
+        "F-015",
+        "F-016",
+        "F-017",
+        "F-021",
+        "F-023",
+        "F-024"
+      ],
+      "notes": "The current page explicitly labels discounted and original prices and shows 30% Off.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Product identifier in the official source URL",
+      "field_evidence": {
+        "name": [
+          "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold"
+        ],
+        "sku": [
+          "V-20046552"
+        ],
+        "metal": [
+          "in 10K Gold"
+        ],
+        "karat": [
+          "in 10K Gold"
+        ],
+        "price_basis": [
+          "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold"
+        ],
+        "center_stone_included": [
+          "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold"
+        ],
+        "price": [
+          "Discounted Price $909.30"
+        ],
+        "currency": [
+          "Discounted Price $909.30"
+        ],
+        "original_price": [
+          "Original Price was $1,299.00"
+        ]
+      }
     }
   ]
 }
