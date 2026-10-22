@@ -22,16 +22,65 @@
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/solitaire.md",
-      "evidence_quotes": ["$1,145(Setting Price)", "502120y14", "14K Yellow Gold", "2.40mm"],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
+      "evidence_file": "evidence/listings/bn-203348.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "verified_price_and_metal",
+      "verification_status": "partial_official_fields",
       "rejected_values": [],
-      "flags": ["F-001", "F-002", "F-003", "F-015"],
-      "notes": "Price labelled '(Setting Price)' on the product page: the center diamond is not included."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-010",
+        "F-015",
+        "F-016",
+        "F-021",
+        "F-024"
+      ],
+      "notes": "The official price is labeled Setting Price.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Stock Number on the official product page",
+      "field_evidence": {
+        "name": [
+          "Classic Simple Solitaire Engagement Ring in 14K Yellow Gold"
+        ],
+        "sku": [
+          "502120y14"
+        ],
+        "metal": [
+          "14K Yellow Gold"
+        ],
+        "karat": [
+          "14K Yellow Gold"
+        ],
+        "color": [
+          "14K Yellow Gold"
+        ],
+        "width_mm": [
+          "2.40mm"
+        ],
+        "price": [
+          "$1,145(Setting Price)"
+        ],
+        "currency": [
+          "$1,145(Setting Price)"
+        ],
+        "price_basis": [
+          "$1,145(Setting Price)"
+        ],
+        "center_stone_included": [
+          "$1,145(Setting Price)"
+        ]
+      }
     },
     {
       "id": "BN-195639",
@@ -52,16 +101,65 @@
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/solitaire.md",
-      "evidence_quotes": ["$1,000(Setting Price)", "501130y14", "14K Yellow Gold", "1.80mm"],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
+      "evidence_file": "evidence/listings/bn-195639.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "verified_price_and_metal",
+      "verification_status": "partial_official_fields",
       "rejected_values": [],
-      "flags": ["F-001", "F-002", "F-003", "F-015"],
-      "notes": "Price labelled '(Setting Price)'."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-010",
+        "F-015",
+        "F-016",
+        "F-021",
+        "F-024"
+      ],
+      "notes": "The official price is labeled Setting Price.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Stock Number on the official product page",
+      "field_evidence": {
+        "name": [
+          "Petite Solitaire Engagement Ring in 14k Yellow Gold"
+        ],
+        "sku": [
+          "501130y14"
+        ],
+        "metal": [
+          "14K Yellow Gold"
+        ],
+        "karat": [
+          "14K Yellow Gold"
+        ],
+        "color": [
+          "14K Yellow Gold"
+        ],
+        "width_mm": [
+          "1.80mm"
+        ],
+        "price": [
+          "$1,000(Setting Price)"
+        ],
+        "currency": [
+          "$1,000(Setting Price)"
+        ],
+        "price_basis": [
+          "$1,000(Setting Price)"
+        ],
+        "center_stone_included": [
+          "$1,000(Setting Price)"
+        ]
+      }
     },
     {
       "id": "BN-194548",
@@ -82,16 +180,68 @@
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/solitaire-compass-set-engagement-ring-in-14k-white-gold-item-194548",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/solitaire.md",
-      "evidence_quotes": ["$1,045(Setting Price)", "501290w14", "14K White Gold", "2.00mm", "Rhodium Finish"],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
+      "evidence_file": "evidence/listings/bn-194548.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "verified_price_and_metal",
+      "verification_status": "partial_official_fields",
       "rejected_values": [],
-      "flags": ["F-001", "F-002", "F-003", "F-015"],
-      "notes": "White gold with rhodium finish is still a solid 14K gold alloy underneath; the listing states karat but never the words 'solid gold'."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-010",
+        "F-015",
+        "F-016",
+        "F-021",
+        "F-024"
+      ],
+      "notes": "The page states 14K White Gold and Rhodium Finish: Yes. It does not state the words solid gold; no underlying-construction claim is inferred from the finish.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": "Rhodium",
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Stock Number on the official product page",
+      "field_evidence": {
+        "name": [
+          "Solitaire Compass Set Engagement Ring in 14k White Gold"
+        ],
+        "sku": [
+          "501290w14"
+        ],
+        "metal": [
+          "14K White Gold"
+        ],
+        "karat": [
+          "14K White Gold"
+        ],
+        "color": [
+          "14K White Gold"
+        ],
+        "width_mm": [
+          "2.00mm"
+        ],
+        "price": [
+          "$1,045(Setting Price)"
+        ],
+        "currency": [
+          "$1,045(Setting Price)"
+        ],
+        "price_basis": [
+          "$1,045(Setting Price)"
+        ],
+        "center_stone_included": [
+          "$1,045(Setting Price)"
+        ],
+        "surface_finish": [
+          "Rhodium Finish\n\nYes"
+        ]
+      }
     },
     {
       "id": "BE-121H6",
@@ -112,16 +262,69 @@
       "original_price": null,
       "source_url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/solitaire.md",
-      "evidence_quotes": ["990.00(Setting Only)", "BE121H6-14KY", "14K Yellow Gold", "Width: 2.5 mm", "Prong metal: 14K White Gold", "Free 1-Year Resizing"],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
-      "return_policy_url": "https://www.brilliantearth.com/weve-got-you-covered/",
-      "verification_status": "verified_price_non_usd",
+      "evidence_file": "evidence/listings/be-121h6.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.brilliantearth.com/30-Day-Returns/",
+      "verification_status": "partial_eur_price",
       "rejected_values": [],
-      "flags": ["F-001", "F-002", "F-003", "F-007", "F-015"],
-      "notes": "Price rendered in EUR (geo-localised) on retrieval. USD price is NOT recorded because it was never displayed. Prong metal is 14K white gold, so the ring is two-tone."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-007",
+        "F-015",
+        "F-016",
+        "F-019",
+        "F-021",
+        "F-024"
+      ],
+      "notes": "The official page rendered EUR 990.00 Setting Only. No USD price was displayed, recorded, or converted. The listed prong metal is 14K White Gold.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": "14K White Gold",
+      "surface_finish": null,
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Style on the official product page",
+      "field_evidence": {
+        "name": [
+          "Classic Six-Prong Solitaire Ring in 14K Yellow Gold"
+        ],
+        "sku": [
+          "BE121H6-14KY"
+        ],
+        "metal": [
+          "14K Yellow Gold"
+        ],
+        "karat": [
+          "14K Yellow Gold"
+        ],
+        "color": [
+          "14K Yellow Gold"
+        ],
+        "width_mm": [
+          "Width: 2.5 mm"
+        ],
+        "price": [
+          "€ 990.00(Setting Only)"
+        ],
+        "currency": [
+          "€ 990.00(Setting Only)"
+        ],
+        "price_basis": [
+          "€ 990.00(Setting Only)"
+        ],
+        "center_stone_included": [
+          "€ 990.00(Setting Only)"
+        ],
+        "prong_metal": [
+          "Prong metal: 14K White Gold"
+        ]
+      }
     }
   ]
 }

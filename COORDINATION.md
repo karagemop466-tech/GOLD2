@@ -9,7 +9,7 @@ Platform constraint: this session is bound to `arena/ca4c9d8a-gold2`; no other b
 | ID | Task | Status | Owner | File scope |
 |----|------|--------|-------|------------|
 | T12 | Line-by-line repository, provenance, and security audit | in progress | S-CA4C9D8A | `tools/qa.py`, `scripts/**`, `reports/**` |
-| T13 | Re-verify all published data against primary sources; resolve open handoffs where possible | unclaimed | S-CA4C9D8A | `data/**`, `evidence/**` |
+| T13 | Re-verify all published data against primary sources; resolve open handoffs where possible | in progress | S-CA4C9D8A | `data/**`, `evidence/**` |
 | T14 | Dashboard, calculator, accessibility, and generated-page review | unclaimed | S-CA4C9D8A | `tools/build_site.py`, `assets/**`, root `*.html` |
 | T15 | Final integration, PR, merge, and Pages deployment | unclaimed | S-CA4C9D8A | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
 
@@ -18,6 +18,14 @@ No other active claim was present when this board was read. Completed historical
 - Repository: `karagemop466-tech/GOLD2`
 - Publishing: GitHub Pages, **legacy** build, branch `main`, path `/` (confirmed via API: `build_type: legacy`)
 - Last updated: 2026-10-22 (UTC)
+
+## S-CA4C9D8A working log
+
+- 2026-10-22 — Re-read all 16 official product URLs. Displayed names and labeled current prices matched inherited records where rendered. VRAI still exposes no price; Brilliant Earth exposes **EUR 990 Setting Only**, not USD. Zales `Z-20303279` and `Z-20301172` now render two amounts plus `30% Off` without Discounted/Original labels, so their structured current/original prices are blank and the exact text is flagged (F-018), not inferred.
+- 2026-10-22 — Refreshed official returns, payments, and contact evidence for Blue Nile, Zales, VRAI, and Brilliant Earth. Material corrections include VRAI's $300 engagement-ring recycling fee / value-based store-credit terms, Brilliant Earth's $40 engraved-ring removal fee and resized/modified exclusions, and Zales' channel-specific resizing rules from its official return policy and ring-sizer PDF.
+- 2026-10-22 — Consulted BBB profile, complaint, and review pages as independent third-party evidence. Blue Nile and Brilliant Earth metrics are profile-scoped; Zales metrics are explicitly combined Signet metrics; VRAI candidate-profile metrics are withheld because the profile does not link `vrai.com`. BBB allegations are not treated as proven facts.
+- 2026-10-22 — Updated WGC spot reference to **$4,028.53/troy oz**, data dated 2026-10-21; retained $4,024.36 only as superseded intraday evidence. Added NIST's 31.103 476 8 g/troy-oz conversion chart and eCFR gold-labeling context.
+- 2026-10-22 — Migrated all listings to per-item evidence with 277 field-scoped quotes across items, retailers, and gold references; intermediate quote-integrity check found 0 missing quotes. Current data: 16 items, 13 assigned prices, 1 published metal weight, 23 flags. `null` now means not stated (including solid-gold/hallmark fields), never a negative physical finding. Final generator/QA/build checks have not yet run.
 
 ## Sessions that have worked here
 
