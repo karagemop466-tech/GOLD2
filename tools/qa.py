@@ -58,6 +58,19 @@ def norm(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip().lower()
 
 
+def relative_luminance(color: str) -> float:
+    if len(color) == 4:
+        color = "#" + "".join(channel * 2 for channel in color[1:])
+    channels = [int(color[index:index + 2], 16) / 255 for index in (1, 3, 5)]
+    linear = [value / 12.92 if value <= 0.04045 else ((value + 0.055) / 1.055) ** 2.4 for value in channels]
+    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2]
+
+
+def contrast_ratio(foreground: str, background: str) -> float:
+    lighter, darker = sorted((relative_luminance(foreground), relative_luminance(background)), reverse=True)
+    return (lighter + 0.05) / (darker + 0.05)
+
+
 def digits(text: str) -> str:
     return re.sub(r"\D", "", text)
 
@@ -582,7 +595,34 @@ def main() -> int:
         for name, (text, _) in parsed_pages.items():
             if stale in text:
                 fail("stale", f"{name} exposes superseded gold quote {stale}")
-    record(f"Built pages: row/source identity, CSP, internal destinations/fragments, and external URL structure ({link_total} link occurrences, {external_total} external). External retrieval is documented separately; future availability is not guaranteed.", before)
+    css = (SITE / "assets" / "style.css").read_text(encoding="utf-8")
+    css_variables = dict(re.findall(r"--([a-z-]+):\s*(#(?:[0-9a-fA-F]{6}|[0-9a-fA-F]{3}))", css))
+    required_colors = {"bg", "card", "muted", "gold", "ok", "ok-soft", "warn", "warn-soft", "bad", "bad-soft", "info", "info-soft"}
+    missing_colors = sorted(required_colors - set(css_variables))
+    if missing_colors:
+        fail("accessibility", f"stylesheet lacks colors needed for contrast audit: {missing_colors}")
+    else:
+        contrast_pairs = [
+            ("gold small text on page", "gold", "bg"),
+            ("gold small text on card", "gold", "card"),
+            ("muted small text on card", "muted", "card"),
+            ("OK badge", "ok", "ok-soft"),
+            ("warning badge", "warn", "warn-soft"),
+            ("error badge", "bad", "bad-soft"),
+            ("info badge", "info", "info-soft"),
+        ]
+        for label, foreground, background in contrast_pairs:
+            ratio = contrast_ratio(css_variables[foreground], css_variables[background])
+            if ratio < 4.5:
+                fail("accessibility", f"{label} contrast {ratio:.2f}:1 is below WCAG AA 4.5:1")
+    blank_match = re.search(r"td\.blank,\.blank\{color:(#[0-9a-fA-F]{6})\}", css)
+    if not blank_match:
+        fail("accessibility", "blank-value text color not found for contrast audit")
+    elif "card" in css_variables:
+        ratio = contrast_ratio(blank_match.group(1), css_variables["card"])
+        if ratio < 4.5:
+            fail("accessibility", f"blank-value text contrast {ratio:.2f}:1 is below WCAG AA 4.5:1")
+    record(f"Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure ({link_total} link occurrences, {external_total} external). External retrieval is documented separately; future availability is not guaranteed.", before)
 
     # 10 — explicit open coverage, never hidden by a PASS.
     before = len(issues)
