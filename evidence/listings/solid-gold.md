@@ -1,7 +1,7 @@
 # Evidence — Solid gold stated on the listing (Stone and Strand)
 
 All pages retrieved 2026-10-22 (UTC) by live page fetch (session S-75094819).
-Excerpts are copied from the retrieved page text; the fetcher's bold markers (`**`) are removed,
+Excerpts are copied from the retrieved page text; the fetcher's markup (bold `**`, heading `##`) is removed,
 wording is otherwise unchanged. Label/value pairs from the spec tables are shown as `Label: value`
 (the page renders them as a two-column spec list).
 
@@ -15,7 +15,7 @@ They are also all marked **final sale / non-returnable** (flag F-016).
 **URL:** https://www.stoneandstrand.com/products/the-clara-ring
 
 ```
-## The Clara Ring
+The Clara Ring
 
 $2,200
 
@@ -68,7 +68,7 @@ and a "Sold out" button state. Availability is not recorded in the dataset.
 **URL:** https://www.stoneandstrand.com/products/the-rita-ring
 
 ```
-## The Rita Ring
+The Rita Ring
 
 $1,950
 
@@ -123,7 +123,7 @@ The 60% discount alone makes this ring non-returnable under the retailer's own p
 **URL:** https://www.stoneandstrand.com/products/the-mia-ring
 
 ```
-## The Mia Ring in Yellow Gold
+The Mia Ring in Yellow Gold
 
 $1,850
 

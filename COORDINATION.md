@@ -344,3 +344,23 @@ Conflicts resolved by **combining**, nothing discarded:
 
 Open independent-review findings (R39/R6 series in `reviews/findings.json`) are dispositions for the
 integration record below; none were silently closed.
+
+## S-75094819 — dispositions of independent-review findings (2026-10-22)
+
+Integration re-ran `reviews/independent_snapshot_audit.py` before/after: **30 findings → 3**.
+`reviews/findings.json` was NOT edited (5ff05cf9's scope); dispositions are recorded here for re-review.
+
+| Finding | Disposition in this merge |
+|---|---|
+| R9-01 (high) | **Fixed.** `quote_date` = 2026-10-21 (official dataset date); value 4,028.53 kept (two sessions converged). The reviewer's own GOLD-QUOTE-DATE-MISMATCH control now passes. |
+| R6-01 (high) | **Fixed.** 4 Zales rows: metal "10K Yellow Gold"→"10K Gold", color "Yellow"→blank (titles support only "10K Gold"); correction noted in each row. |
+| R6-03 (high) | **Fixed.** BN-194548 note no longer asserts an alloy conclusion; site meta description and dashboard H1 narrowed ("evidence-checked listings"); XRF-after-delivery remains mandatory guidance. |
+| R6-04 (medium) | **Fixed.** Blue Nile's own store credit card recorded with exact scope (verbatim quote added to evidence); F-012 rewritten per-retailer; no network/protection inference. |
+| R6-05 (medium) | **Mostly fixed.** VRAI full policy retrieved (resized/custom excluded, $300 recycling fee, free U.S. return shipping, 1 free resize, help@vrai.com); Zales policy retrieved (T02); landing "recorded per retailer" claim narrowed. **Still open:** Brilliant Earth 30-day policy text and the region scope of its recorded phone — left blank/open rather than guessed. |
+| R6-06 (medium) | **Fixed.** `weight_basis` ("…at ring size 6") now rendered under the weight in category tables. |
+| R6-10 (medium) | **Fixed.** F-015 counts corrected (10 Blue Nile setting rows; 12 setting / 7 complete); F-001 and templates narrowed to "describe the ring itself" (VRAI editorial-text caveat recorded); landing counts fully data-derived; absolute banner claim narrowed to table values. |
+| R6-02 (medium) | **Fixed for flagged rows.** URL-derived SKUs (VRAI + 4 Zales) blanked; identifiers preserved in notes with URL-derived provenance. |
+| R6-07 (high) | **Partially fixed.** `Number.isFinite` guards + karat ≤ 24; USD label on ask input; weight input explicitly metal-only. Full input-domain review remains open. |
+| R6-08 (medium) | **Fixed (wording).** Unsourced market-norm lines ("normal retail", "sold at scrap", "Melt is a floor") replaced with sourced-arithmetic wording. |
+| R6-09 (high), R6-11, R6-12, R39-02, R39-04, R39-05, R39-06 | **Open / handed off.** QA false-negative classes, seller-reputation assessment, one archived excerpt's reproducibility, terminology scope, audit coverage, action pinning, contrast. Published in `reviews/` and referenced from README; not silently closed. |
+| REVIEW-ROW ×3 (SS-CLARA/RITA/MIA) | **Awaiting independent re-review.** New rows from this session are not yet in `reviews/2026-10-22-6ca03571.md` — by design; the reviewer session owns that file. |

@@ -1,4 +1,4 @@
-# GOLD2 — verified gold engagement ring research
+# GOLD2 — evidence-checked gold engagement ring research
 
 **No hallucinations. Every price, karat and width on the site was read from the retailer's own page on the stated retrieval date, and every row links to that page. If a value was not on the page it is left blank and listed on the "Flagged for Review" page — never estimated, averaged or converted.**
 

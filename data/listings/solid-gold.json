@@ -1,7 +1,7 @@
 {
   "category_id": "solid-gold",
   "category_label": "Solid gold stated",
-  "category_title": "Engagement rings whose listing says “solid gold”",
+  "category_title": "Engagement rings whose listing says \u201csolid gold\u201d",
   "retrieved_at": "2026-10-22",
   "items": [
     {
@@ -11,7 +11,7 @@
       "brand": "Stone and Strand",
       "name": "The Clara Ring",
       "sku": null,
-      "metal": "14K Yellow Gold",
+      "metal": "Yellow Gold",
       "karat": 14,
       "color": "Yellow",
       "width_mm": 1.65,
@@ -44,8 +44,13 @@
           "reason": "The live page on 2026-10-22 showed $2,200 with no discount. The snippet value was not reproducible and is rejected."
         }
       ],
-      "flags": ["F-002", "F-003", "F-015", "F-016"],
-      "notes": "First listing in this dataset whose product page uses the words 'solid gold' ('Solid Gold' badge; 'set in 14K solid gold or platinum'). Spec table also states 'Rhodium Plating: Yes: Diamond area' — a rhodium finish over the diamond area, recorded verbatim and separate from the solid-gold metal claim. Page shows both 'In stock. Ships out in 3-5 days.' and a 'Sold out' state; availability is not resolved from the text. Buy-box marks 'Final Sale — This product is non-returnable' while advertising '100 Day Returns' (F-016), so the receive-test-return sequence cannot be followed for this ring as listed. 0.620 CTW total / 0.50 CTW center per spec table."
+      "flags": [
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016"
+      ],
+      "notes": "First listing in this dataset whose product page uses the words 'solid gold' ('Solid Gold' badge; 'set in 14K solid gold or platinum'). Spec table also states 'Rhodium Plating: Yes: Diamond area' \u2014 a rhodium finish over the diamond area, recorded verbatim and separate from the solid-gold metal claim. Page shows both 'In stock. Ships out in 3-5 days.' and a 'Sold out' state; availability is not resolved from the text. Buy-box marks 'Final Sale \u2014 This product is non-returnable' while advertising '100 Day Returns' (F-016), so the receive-test-return sequence cannot be followed for this ring as listed. 0.620 CTW total / 0.50 CTW center per spec table."
     },
     {
       "id": "SS-RITA",
@@ -54,7 +59,7 @@
       "brand": "Stone and Strand",
       "name": "The Rita Ring",
       "sku": null,
-      "metal": "14K Yellow Gold",
+      "metal": "Yellow Gold",
       "karat": 14,
       "color": "Yellow",
       "width_mm": 1.7,
@@ -82,7 +87,12 @@
       "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
       "verification_status": "verified_price_karat",
       "rejected_values": [],
-      "flags": ["F-002", "F-003", "F-015", "F-016"],
+      "flags": [
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016"
+      ],
       "notes": "Product page says 'solid gold' ('Solid Gold' badge; 'set in 14K solid gold or platinum'). Spec table states 'Rhodium Plating: Yes: Diamond area'. Product Description bullets state 'Final sale and non-returnable'; at 60% off the ring is also non-returnable under the retailer's own 'discount of 50% or greater' rule (F-016), so independent-verify-then-return is impossible at this price. 0.42 CTW total / 0.20 CTW center per spec table."
     },
     {
@@ -92,7 +102,7 @@
       "brand": "Stone and Strand",
       "name": "The Mia Ring in Yellow Gold",
       "sku": null,
-      "metal": "14K Yellow Gold",
+      "metal": "Yellow Gold",
       "karat": 14,
       "color": "Yellow",
       "width_mm": 1.5,
@@ -121,7 +131,13 @@
       "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
       "verification_status": "price_verified_karat_conflict",
       "rejected_values": [],
-      "flags": ["F-002", "F-003", "F-015", "F-016", "F-017"],
+      "flags": [
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016",
+        "F-017"
+      ],
       "notes": "CONTESTED KARAT (F-017): the Metals spec table says 'Gold Karat: 14K' (the value published here), but the same page's product-image alt text repeatedly says '10K Yellow Gold The Mia Diamond Ring'. Both are quoted in evidence. Do not rely on 14K until the seller confirms in writing or an XRF test is done. Page also states 'Rhodium Plating: Yes: Diamond area', 'Final sale and non-returnable', and at 50% off the ring is non-returnable under the retailer's own discount rule (F-016). 0.5 CTW total / 0.200 CTW center per spec table."
     }
   ]

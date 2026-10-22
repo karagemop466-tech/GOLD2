@@ -5,7 +5,10 @@
       "id": "blue-nile",
       "name": "Blue Nile",
       "website": "https://www.bluenile.com",
-      "domains": ["www.bluenile.com", "bluenile.com"],
+      "domains": [
+        "www.bluenile.com",
+        "bluenile.com"
+      ],
       "contact_phone": "+1-800-242-2728",
       "contact_email": "service@bluenile.com",
       "contact_source_url": "https://www.bluenile.com/contact-us",
@@ -20,22 +23,28 @@
       "return_exclusions_detail": "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and 'Final Sale' items are not eligible for return or exchange.",
       "resize_policy": "Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase if the design permits.",
       "price_display_basis": "Setting Price (center stone sold separately)",
-      "payment_methods_verified": null,
-      "payment_note": "Credit-card acceptance was not stated on the retrieved product or policy pages; not asserted here.",
+      "payment_methods_verified": "Product pages name 'the Blue Nile Credit Card' as a payment/financing option (verbatim on item 203348, retrieved 2026-10-22). General card networks (Visa/Mastercard/Amex) are not named on the retrieved pages.",
+      "payment_note": "Corrected 2026-10-22 (independent review finding R6-04): the earlier blanket note that card acceptance was 'not stated on the retrieved pages' was wrong \u2014 Blue Nile's own store credit card is stated on product pages. A store card is not the same as a general-purpose credit card; no chargeback/protection outcome is inferred.",
       "evidence_file": "evidence/retailers/blue-nile.md",
       "evidence_quotes": [
         "30 days from the shipment date",
         "items resized after initial purchase",
-        "Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase"
+        "Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase",
+        "with the Blue Nile Credit Card"
       ],
       "verification_status": "verified_returns",
-      "flags": ["F-010", "F-012"]
+      "flags": [
+        "F-010"
+      ]
     },
     {
       "id": "zales",
       "name": "Zales",
       "website": "https://www.zales.com",
-      "domains": ["www.zales.com", "zales.com"],
+      "domains": [
+        "www.zales.com",
+        "zales.com"
+      ],
       "contact_phone": null,
       "contact_email": null,
       "contact_source_url": null,
@@ -54,41 +63,67 @@
       "payment_methods_verified": "Policy names 'Credit and Debit Cards' as an original-purchase tender (refunds credited to the same account). Card networks are not stated on the retrieved page.",
       "payment_note": "Verified from the standalone return policy retrieved 2026-10-22 (session S-75094819). Refund-to-tender language confirms cards are accepted tender; it does not name Visa/Mastercard/Amex networks.",
       "evidence_file": "evidence/retailers/zales.md",
-      "evidence_quotes": ["Free and easy 30-day returns", "You may return your purchase within 30 days of the purchase(shipped) date", "Returns and exchanges are not allowed on special ordered watches, custom designs, ear piercing earrings, gift cards and merchandise received via the Jewelry Replacement Plan", "Credit and Debit Cards \u2013 The same account will be credited.", "Ship your items with the prepaid shipping label that we'll email to you to print at home."],
+      "evidence_quotes": [
+        "Free and easy 30-day returns",
+        "You may return your purchase within 30 days of the purchase(shipped) date",
+        "Returns and exchanges are not allowed on special ordered watches, custom designs, ear piercing earrings, gift cards and merchandise received via the Jewelry Replacement Plan",
+        "Credit and Debit Cards \u2013 The same account will be credited.",
+        "Ship your items with the prepaid shipping label that we'll email to you to print at home."
+      ],
       "verification_status": "verified_returns",
-      "flags": ["F-011"]
+      "flags": [
+        "F-011"
+      ]
     },
     {
       "id": "vrai",
       "name": "VRAI",
       "website": "https://www.vrai.com",
-      "domains": ["www.vrai.com", "vrai.com"],
+      "domains": [
+        "www.vrai.com",
+        "vrai.com"
+      ],
       "contact_phone": null,
-      "contact_email": null,
-      "contact_source_url": null,
-      "contact_verified": false,
+      "contact_email": "help@vrai.com",
+      "contact_source_url": "https://www.vrai.com/returns-exchanges",
+      "contact_verified": true,
       "return_window_days": 30,
-      "return_window_basis": "Returns accepted within 30 days; unworn items with original packaging",
+      "return_window_basis": "Full policy (last revised March 21, 2025, retrieved 2026-10-22): eligible items returned within 30 days; under $15,000 = full store credit or refund minus recycling fee ($300 for an engagement ring); $15,000+ = store credit only. Product page summarizes: 'Returns accepted within 30 days; unworn items with original packaging'.",
       "return_policy_url": "https://www.vrai.com/returns-exchanges",
-      "return_free_shipping": null,
+      "return_free_shipping": true,
       "return_free_shipments_per_year": null,
-      "return_excludes_resized": null,
-      "return_excludes_custom": null,
-      "return_exclusions_detail": null,
-      "resize_policy": null,
+      "return_excludes_resized": true,
+      "return_excludes_custom": true,
+      "return_exclusions_detail": "Policy NON-ELIGIBLE list includes verbatim: 'Modified or resized rings', 'Custom-designed items', 'Items altered by a third-party', personalized fine jewelry, gift cards, and shipping/engraving fees. Refund to original payment carries a $300 recycling fee for engagement rings (waived for full store credit). Free return shipping in the U.S. EU withdrawal carve-outs also exclude rings made to accommodate a customer-configured diamond.",
+      "resize_policy": "One complimentary resize up to one full U.S. size (policy page, retrieved 2026-10-22).",
       "price_display_basis": "Setting price (center stone selected separately in the configurator)",
       "payment_methods_verified": null,
       "payment_note": "Not verified on retrieved pages.",
       "evidence_file": "evidence/retailers/vrai.md",
-      "evidence_quotes": ["Returns accepted within 30 days", "Unworn items with original packaging"],
-      "verification_status": "partial",
-      "flags": ["F-008", "F-012"]
+      "evidence_quotes": [
+        "Returns accepted within 30 days",
+        "Unworn items with original packaging",
+        "Modified or resized rings",
+        "Custom-designed items",
+        "Engagement ring: A $300 recycling fee will apply.",
+        "We offer free return shipping in the US",
+        "We offer one complimentary resize up to one full US size",
+        "help@vrai.com"
+      ],
+      "verification_status": "verified_returns",
+      "flags": [
+        "F-008",
+        "F-012"
+      ]
     },
     {
       "id": "brilliant-earth",
       "name": "Brilliant Earth",
       "website": "https://www.brilliantearth.com",
-      "domains": ["www.brilliantearth.com", "brilliantearth.com"],
+      "domains": [
+        "www.brilliantearth.com",
+        "brilliantearth.com"
+      ],
       "contact_phone": "1.415.426.2781",
       "contact_email": null,
       "contact_source_url": "https://www.brilliantearth.com/contact/",
@@ -106,15 +141,25 @@
       "payment_methods_verified": null,
       "payment_note": "Financing partners named on page (Affirm, Wells Fargo, layaway). Card acceptance as such not asserted.",
       "evidence_file": "evidence/retailers/brilliant-earth.md",
-      "evidence_quotes": ["Free Shipping & Returns", "Free 1-Year Resizing", "(Setting Only)"],
+      "evidence_quotes": [
+        "Free Shipping & Returns",
+        "Free 1-Year Resizing",
+        "(Setting Only)"
+      ],
       "verification_status": "partial",
-      "flags": ["F-007", "F-012"]
+      "flags": [
+        "F-007",
+        "F-012"
+      ]
     },
     {
       "id": "stone-and-strand",
       "name": "Stone and Strand",
       "website": "https://www.stoneandstrand.com",
-      "domains": ["www.stoneandstrand.com", "stoneandstrand.com"],
+      "domains": [
+        "www.stoneandstrand.com",
+        "stoneandstrand.com"
+      ],
       "contact_phone": null,
       "contact_email": "care@stoneandstrand.com",
       "contact_source_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
@@ -132,9 +177,18 @@
       "payment_methods_verified": "Returns page refers to refunds 'to the original payment method' and to 'your credit card provider'. Card networks are not stated on the retrieved page.",
       "payment_note": "Basis: Stone and Strand returns page retrieved 2026-10-22 (session S-75094819). Refund language implies card tender; networks not named. Same evidentiary standard as Zales.",
       "evidence_file": "evidence/retailers/stone-and-strand.md",
-      "evidence_quotes": ["we offer 100 days to receive a return", "There is a $12.50 return fee for refunds to the original payment method", "Any piece marked as final sale on the product page or purchased at a discount of 50% or greater", "Made-to-Order Jewelry: Custom or made-to-order pieces are final sale", "Depending on your credit card provider", "care@stoneandstrand.com"],
+      "evidence_quotes": [
+        "we offer 100 days to receive a return",
+        "There is a $12.50 return fee for refunds to the original payment method",
+        "Any piece marked as final sale on the product page or purchased at a discount of 50% or greater",
+        "Made-to-Order Jewelry: Custom or made-to-order pieces are final sale",
+        "Depending on your credit card provider",
+        "care@stoneandstrand.com"
+      ],
       "verification_status": "verified_returns",
-      "flags": ["F-016"]
+      "flags": [
+        "F-016"
+      ]
     }
   ]
 }

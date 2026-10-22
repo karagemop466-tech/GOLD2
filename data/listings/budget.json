@@ -9,10 +9,10 @@
       "retailer": "Zales",
       "brand": "Zales",
       "name": "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
-      "sku": "V-19957449",
-      "metal": "10K Yellow Gold",
+      "sku": null,
+      "metal": "10K Gold",
       "karat": 10,
-      "color": "Yellow",
+      "color": null,
       "width_mm": null,
       "weight_g": null,
       "price": 899.0,
@@ -23,17 +23,32 @@
       "source_url": "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
       "retrieved_at": "2026-10-22",
       "evidence_file": "evidence/listings/budget.md",
-      "evidence_quotes": ["Discounted Price $899.00", "in 10K Gold", "Free and easy 30-day returns"],
+      "evidence_quotes": [
+        "Discounted Price $899.00",
+        "in 10K Gold",
+        "Free and easy 30-day returns"
+      ],
       "solid_gold_explicit": false,
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": null,
       "verification_status": "verified_price_karat",
       "rejected_values": [
-        {"value": 719.2, "source": "search-engine snippet ('Discounted Price $719.20, 20% Off')", "reason": "The live page on 2026-10-22 showed 'Discounted Price $899.00' with no discount or original price. The snippet value was not reproducible and is rejected."}
+        {
+          "value": 719.2,
+          "source": "search-engine snippet ('Discounted Price $719.20, 20% Off')",
+          "reason": "The live page on 2026-10-22 showed 'Discounted Price $899.00' with no discount or original price. The snippet value was not reproducible and is rejected."
+        }
       ],
-      "flags": ["F-001", "F-002", "F-003", "F-004", "F-011", "F-015"],
-      "notes": "Largest price discrepancy found in this pass: snippet price 20% below the live page."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-004",
+        "F-011",
+        "F-015"
+      ],
+      "notes": "Largest price discrepancy found in this pass: snippet price 20% below the live page. CORRECTION 2026-10-22 (independent review R6-01): metal/color previously read '10K Yellow Gold'/'Yellow', but the retrieved Zales page text supports only '10K Gold' (product title); no color is stated, so color is now blank rather than inferred from photos. SKU blanked 2026-10-22 (independent review R6-02): 'V-19957449' came from the canonical product URL, not from text on the retrieved page, so it is recorded here as a URL-derived identifier instead of a page-stated SKU."
     },
     {
       "id": "Z-20046552",
@@ -41,10 +56,10 @@
       "retailer": "Zales",
       "brand": "Zales",
       "name": "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold",
-      "sku": "V-20046552",
-      "metal": "10K Yellow Gold",
+      "sku": null,
+      "metal": "10K Gold",
       "karat": 10,
-      "color": "Yellow",
+      "color": null,
       "width_mm": null,
       "weight_g": null,
       "price": 909.3,
@@ -55,15 +70,27 @@
       "source_url": "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
       "retrieved_at": "2026-10-22",
       "evidence_file": "evidence/listings/budget.md",
-      "evidence_quotes": ["Discounted Price $909.30", "Original Price was $1,299.00", "30% Off", "in 10K Gold", "Free and easy 30-day returns"],
+      "evidence_quotes": [
+        "Discounted Price $909.30",
+        "Original Price was $1,299.00",
+        "30% Off",
+        "in 10K Gold",
+        "Free and easy 30-day returns"
+      ],
       "solid_gold_explicit": false,
       "hallmark_stated": false,
       "makers_mark_stated": false,
       "return_policy_url": null,
       "verification_status": "verified_price_karat",
       "rejected_values": [],
-      "flags": ["F-001", "F-002", "F-003", "F-011", "F-015"],
-      "notes": "Cushion-shaped composite of round diamonds - the 'center' is a cluster, not one stone."
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-011",
+        "F-015"
+      ],
+      "notes": "Cushion-shaped composite of round diamonds - the 'center' is a cluster, not one stone. CORRECTION 2026-10-22 (independent review R6-01): metal/color previously read '10K Yellow Gold'/'Yellow', but the retrieved Zales page text supports only '10K Gold' (product title); no color is stated, so color is now blank rather than inferred from photos. SKU blanked 2026-10-22 (independent review R6-02): 'V-20046552' came from the canonical product URL, not from text on the retrieved page, so it is recorded here as a URL-derived identifier instead of a page-stated SKU."
     }
   ]
 }

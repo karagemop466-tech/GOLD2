@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Method &amp; QA · GOLD2</title>
-<meta name="description" content="Verified solid-gold engagement ring research: prices, karats, sources and flagged uncertainties.">
+<meta name="description" content="Gold engagement ring research where every value traces to the retailer's own page — unverified values stay blank and are flagged, never filled in.">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -44,7 +44,7 @@ A snippet is never a source — it was caught disagreeing with the live page thr
 <li>Brilliant Earth served EUR at retrieval; the USD price is not recorded and was not converted (F-007).</li>
 <li>VRAI renders its price client-side; the retrieved HTML had no price, so that cell is blank (F-008).</li>
 <li>Costco was probed and excluded: price and gram weight did not render (F-014).</li>
-<li>16 of 19 listings never use the words “solid gold”, and 19 of 19 state no hallmark or maker's mark (F-001, F-002).</li>
+<li>16 of 19 listings never describe the ring itself as “solid gold”, and 19 of 19 state no hallmark or maker's mark (F-001, F-002).</li>
 <li>Only 1 of 19 items publish a gram weight, so price-per-gram comparison is not possible for the rest (F-003).</li>
 <li>The only listings that say “solid gold” (Stone and Strand) are marked final sale and cannot be returned after independent testing (F-016).</li>
 <li>Catbird was attempted, but its product-detail text was absent from the retrieved pages, so it is excluded until its pages can be quoted verbatim (F-018).</li>
@@ -57,8 +57,8 @@ supporting quote, a source URL outside the retailer's own domain, a rejected cac
 a flag pointing at a missing item, or a broken internal link in the built site.</p>
 <pre class="qa"># QA / hallucination audit
 
-- Generated: 2026-10-22 23:44 UTC
-- Items audited: 19 · flags: 18 · evidence quotes checked: 114
+- Generated: 2026-10-22 23:51 UTC
+- Items audited: 19 · flags: 18 · evidence quotes checked: 121
 - **RESULT: PASS** — 11 checks, 0 failures, 2 warnings
 
 ## Checks
@@ -66,7 +66,7 @@ a flag pointing at a missing item, or a broken internal link in the built site.<
 | # | Check | Result | Findings |
 |---|-------|--------|----------|
 | 1 | JSON schema &amp; unique ids | ✅ PASS | 0 |
-| 2 | Every value traces to a verbatim quote (114 quotes) | ✅ PASS | 0 |
+| 2 | Every value traces to a verbatim quote (121 quotes) | ✅ PASS | 0 |
 | 3 | Price / weight / width / karat backed by quotes | ✅ PASS | 0 |
 | 4 | Source links point at the seller&#x27;s own domain | ✅ PASS | 0 |
 | 5 | Blank values are covered by an explicit flag | ✅ PASS | 0 |
@@ -74,7 +74,7 @@ a flag pointing at a missing item, or a broken internal link in the built site.<
 | 7 | Flag definitions are complete and consistent | ✅ PASS | 0 |
 | 8 | Price vs melt sanity check | ✅ PASS | 0 |
 | 9 | Every table row carries an official source link (19 rows) | ✅ PASS | 0 |
-| 10 | Built site: no broken internal links (354 links, 68 external) | ✅ PASS | 0 |
+| 10 | Built site: no broken internal links (355 links, 69 external) | ✅ PASS | 0 |
 | 11 | Coverage summary | ✅ PASS | 0 |
 
 ## Failures

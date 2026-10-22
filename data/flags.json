@@ -6,8 +6,8 @@
       "id": "F-001",
       "severity": "high",
       "type": "checklist_gap",
-      "title": "16 of 19 listings never use the words \"solid gold\"",
-      "detail": "UPDATED 2026-10-22 (session S-75094819). The buying checklist requires the listing itself to say 'solid gold', not plated / vermeil / gold-filled / overlay / gold-tone. 16 of the 19 captured listings state a karat (10K/14K/18K) but never use the phrase 'solid gold'. The 3 exceptions are the Stone and Strand rings added in this pass (SS-CLARA, SS-RITA, SS-MIA): each product page carries a 'Solid Gold' badge and the sentence 'set in 14K solid gold or platinum'. Absence was checked in the retrieved page text for each item. Absence of the phrase is a documentation gap, not proof that a ring is plated \u2014 and presence of the phrase is not proof of purity either: all three Stone and Strand rings are final sale (F-016), so they cannot be returned after an XRF test.",
+      "title": "16 of 19 listings do not describe the ring itself as \"solid gold\"",
+      "detail": "UPDATED 2026-10-22 (S-75094819; wording narrowed per independent review R6-10). The checklist requires the listing itself to say 'solid gold', not plated / vermeil / gold-filled / overlay / gold-tone. In the retrieved product text, 16 of 19 listings state a karat but never describe the ring itself as solid gold. Precision note: the VRAI configurator page does contain the phrase 'solid gold' in unrelated editorial text (a celebrity-style caption about other jewelry) \u2014 it does not describe the ring being sold, so the VRAI row still counts as not stating it. The 3 exceptions are the Stone and Strand rings (SS-CLARA, SS-RITA, SS-MIA), whose pages describe the ring itself as solid gold \u2014 but all three are final sale (F-016). Absence of the phrase is a documentation gap, not proof a ring is plated; presence is not proof of purity either.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -160,7 +160,7 @@
       "severity": "medium",
       "type": "unverified",
       "title": "VRAI price is rendered client-side and was absent from the retrieved HTML",
-      "detail": "The VRAI configurator page supplied full specs (18k yellow gold, 2.86 g metal weight, 1.6 mm band depth, 30-day returns) but no price string was present in the retrieved text. The price field is deliberately blank. A search snippet claimed 'Starting at $1,035' - that figure is rejected and shown only as an audit note.",
+      "detail": "The VRAI configurator page supplied full specs (18k yellow gold, 2.86 g metal weight, 1.6 mm band depth, 30-day returns) but no price string was present in the retrieved text. The price field is deliberately blank. A search snippet claimed 'Starting at $1,035' - that figure is rejected and shown only as an audit note. The same page gives band width only as the word 'Standard' (the 1.6 mm figure is band depth, not width), so the width field is blank for the same reason. (Width coverage added 2026-10-22, session S-75094819.)",
       "affected_items": [
         "VRAI-CLASSIC-4P"
       ],
@@ -228,19 +228,19 @@
       "id": "F-012",
       "severity": "low",
       "type": "unverified",
-      "title": "Credit-card acceptance verified for Zales only; not verified for Blue Nile, VRAI or Brilliant Earth",
-      "detail": "The checklist prefers a credit card for purchase protection. UPDATED 2026-10-22 (session S-75094819): Zales' standalone return policy names 'Credit and Debit Cards' as an original-purchase tender ('The same account will be credited'), so card acceptance is verified for Zales (networks not named). For Blue Nile, VRAI and Brilliant Earth, no retrieved page states accepted card networks. Affirm / Wells Fargo financing and PayPal are mentioned on some pages, which are not equivalent to a card purchase. Those fields are left blank rather than assumed.",
+      "title": "Card acceptance: scoped evidence for Zales, Blue Nile (own store card) and Stone and Strand; not verified for VRAI or Brilliant Earth; networks named nowhere",
+      "detail": "UPDATED 2026-10-22 (S-75094819 + independent review R6-04). The checklist prefers a credit card for purchase protection. What official pages actually state: Zales' return policy names 'Credit and Debit Cards' as an original-purchase tender; Blue Nile product pages offer 'the Blue Nile Credit Card' (its own store card \u2014 not evidence of general network acceptance, and store-card protections differ); Stone and Strand's returns page refers to 'your credit card provider'. For VRAI and Brilliant Earth no retrieved page names cards, so those fields stay blank. No retailer page retrieved names Visa/Mastercard/Amex networks, and no chargeback outcome is inferred for any retailer.",
       "affected_items": [
-        "BN-203348",
         "BE-121H6",
         "VRAI-CLASSIC-4P"
       ],
       "sources": [
         "https://www.zales.com/return-and-exchange-modal",
-        "https://www.bluenile.com/policies/returns",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
+        "https://www.stoneandstrand.com/pages/returns-exchanges",
         "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/"
       ],
-      "recommended_action": "Confirm card acceptance at checkout and keep the card-issuer dispute window in mind."
+      "recommended_action": "Pay with a general-purpose credit card where accepted (confirm networks at checkout \u2014 they are stated nowhere in this dataset), and do not mistake a retailer's own store card or financing plan for equivalent purchase protection."
     },
     {
       "id": "F-013",
@@ -272,7 +272,7 @@
       "severity": "high",
       "type": "comparability",
       "title": "Setting-only prices and complete-ring prices sit in the same tables",
-      "detail": "8 Blue Nile rows, the Brilliant Earth row and the VRAI row are 'Setting Price' / 'Setting Only' - the center diamond is extra. The 4 Zales rows and the 3 Stone and Strand rows are complete rings including diamonds. A $1,000 setting and a $900 complete ring are not comparable, and price-per-gram cannot be computed where the diamond dominates. Every row carries a price_basis label so the two groups can be separated.",
+      "detail": "12 of the 19 rows are setting prices: all 10 Blue Nile rows, the Brilliant Earth row and the VRAI row ('Setting Price' / 'Setting Only' \u2014 the center diamond is extra; the VRAI price itself is blank, F-008). The other 7 rows are complete rings including diamonds (4 Zales, 3 Stone and Strand). A $1,000 setting and a $900 complete ring are not comparable, and price-per-gram cannot be computed where the diamond dominates. Every row carries a price_basis label so the two groups can be separated. (Counts corrected 2026-10-22 per independent review R6-10: the flag previously said '8 Blue Nile rows', stale since the integration to 10.)",
       "affected_items": [
         "BN-203348",
         "BN-195639",

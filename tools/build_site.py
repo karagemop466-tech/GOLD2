@@ -212,7 +212,7 @@ def page(title: str, active: str, body: str, root: str = "") -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} · GOLD2</title>
-<meta name="description" content="Verified solid-gold engagement ring research: prices, karats, sources and flagged uncertainties.">
+<meta name="description" content="Gold engagement ring research where every value traces to the retailer's own page — unverified values stay blank and are flagged, never filled in.">
 <link rel="stylesheet" href="{root}assets/style.css">
 </head>
 <body>
@@ -265,7 +265,9 @@ def listing_table(items) -> str:
             f'<td class="num">{fmt_num(it.get("karat"), "K")}</td>'
             f'<td>{esc(it.get("color") or "—")}</td>'
             f'<td class="num">{fmt_num(it.get("width_mm"), " mm")}</td>'
-            f'<td class="num">{fmt_num(it.get("weight_g"), " g", 2)}</td>'
+            f'<td class="num">{fmt_num(it.get("weight_g"), " g", 2)}'
+            + (f'<div class="sub">{esc(it["weight_basis"])}</div>' if it.get("weight_basis") else "")
+            + "</td>"
             f'<td class="num"><strong>{fmt_price(it)}</strong>'
             + (f'<div class="sub">was {it["original_price"]:,.2f}</div>' if it.get("original_price") else "")
             + "</td>"
@@ -330,12 +332,12 @@ def build_index(items, payloads, flags, gold, qa_summary):
     )
     checklist = [
         ("Purity", "Karat is recorded only where the retailer states it on the page. 10K, 14K and 18K rows are kept separate."),
-        ("Solid gold", f"The listing must say <em>solid gold</em>. {sum(1 for i in items if not i.get('solid_gold_explicit'))} of {len(items)} captured listings state a karat but never that phrase — see F-001."),
+        ("Solid gold", f"The listing must say <em>solid gold</em>. {sum(1 for i in items if not i.get('solid_gold_explicit'))} of {len(items)} captured listings state a karat but never describe the ring itself that way — see F-001."),
         ("Hallmark", f"Karat stamp plus maker's mark. {sum(1 for i in items if not i.get('hallmark_stated'))} of {len(items)} listings state neither — see F-002."),
         ("Weight", f"Grams. Published for {sum(1 for i in items if i.get('weight_g') is not None)} of {len(items)} items; blank everywhere else — see F-003."),
         ("Seller", f"{len({i['retailer_id'] for i in items})} retailers with official pages; contact details recorded only where published."),
         ("Price", "Live price captured on 2026-10-22 with its basis (setting-only vs complete ring). Cached snippet prices were rejected in 3 cases."),
-        ("Returns", "Window and the resized/custom/final-sale exclusions recorded per retailer — see F-010, F-016."),
+        ("Returns", "Window and resized/custom/final-sale exclusions recorded where the retailer's own policy states them; unstated cells stay blank — see F-010, F-016."),
         ("Payment", "Card acceptance is recorded only where the retailer's own page names cards as tender — see F-012 and the Retailers page."),
         ("Records", "Listing URL, retrieval date and verbatim evidence kept in <code>evidence/</code> for every row."),
         ("On arrival", "Independent jeweller check before wearing or resizing; ask for XRF."),
@@ -357,7 +359,7 @@ def build_index(items, payloads, flags, gold, qa_summary):
     body = f"""
 <section class="banner">
   <span class="pill">NO HALLUCINATIONS</span>
-  <h2>Nothing on this site is invented, estimated or extrapolated.</h2>
+  <h2>No invented values — every number in these tables was read off the retailer's own page.</h2>
   <p>Every price, karat and width below was read off the retailer's own page on <strong>2026&#8209;10&#8209;22 (UTC)</strong>, and each row links to that exact page.
   If a value was not on the page it is left <strong>blank</strong> and listed on the <a href="flags.html">Flagged for Review</a> page instead of being filled in.
   Cached search-engine numbers are treated as unverified: where a snippet disagreed with the live page, the live page won and the snippet is logged as rejected (see F&#8209;004, F&#8209;005, F&#8209;006).</p>
@@ -365,10 +367,10 @@ def build_index(items, payloads, flags, gold, qa_summary):
   Automated checks: <strong>{qa_summary}</strong> — full log in <a href="methods.html">Method &amp; QA</a>.</p>
 </section>
 
-<h1>Gold engagement ring — verified shortlist</h1>
+<h1>Gold engagement ring — evidence-checked listings</h1>
 <p class="lead">{len(items)} listings from {n_retailers} retailers, sorted into {len(payloads)} categories, with the price basis made explicit because a
 "setting price" does not include the diamond. The three things almost no retailer publishes — the words
-<em>solid gold</em> (missing on {solid_missing} of {len(items)} rows), a hallmark / maker's mark ({hallmark_missing} of {len(items)}),
+<em>solid gold</em> describing the ring itself (missing on {solid_missing} of {len(items)} rows), a hallmark / maker's mark ({hallmark_missing} of {len(items)}),
 and the gram weight ({weight_missing} of {len(items)}) — are still the gaps to close before buying.</p>
 
 <div class="grid g4" style="margin:18px 0 8px">
@@ -515,7 +517,7 @@ Flags do not block the shortlist — they tell you exactly what to ask the selle
 Each flag links to the page that produced it.</p>
 <div class="note" style="margin-bottom:18px">
 <strong>No-hallucination policy, applied.</strong> These are the values that were deliberately <em>not</em> filled in.
-The strongest pattern: {solid_n} of {total} listings state a karat but never the words “solid gold”, {hallmark_n} of {total} never state a
+The strongest pattern: {solid_n} of {total} listings state a karat but never describe the ring itself as “solid gold”, {hallmark_n} of {total} never state a
 hallmark or maker's mark, and {weight_missing} of {total} never publish a gram weight. That is a gap in the listings, not proof
 the rings are bad — but it is exactly the gap an independent jeweller visit closes.</div>
 <div class="grid" style="grid-template-columns:1fr">{''.join(cards)}</div>
@@ -549,24 +551,24 @@ def build_prices(gold, items, weights_note):
     body = f"""
 <div class="eyebrow">Raw gold, not appraisal</div>
 <h1>Gold weight &amp; melt calculator</h1>
-<p class="lead">Convert a ring's weight and karat into fine-gold grams and the raw metal value at the quote already on this site.
+<p class="lead">Convert a ring's metal weight (excluding any stones) and karat into fine-gold grams and the raw metal value at the quote already on this site.
 It is a sanity check on price, not a valuation: labour, the diamond, hallmarking, duty and resale spread are all outside the number.</p>
 
 <div class="card">
   <div class="calcgrid">
-    <div><label class="f" for="w">Ring weight (g)</label><input id="w" type="number" min="0" step="0.01" value="3.00"></div>
+    <div><label class="f" for="w">Metal weight (g) — metal only, excl. stones</label><input id="w" type="number" min="0" step="0.01" value="3.00"></div>
     <div><label class="f" for="k">Karat</label>
       <select id="k">
         <option value="10">10K</option><option value="14" selected>14K</option>
         <option value="18">18K</option><option value="22">22K</option><option value="24">24K</option>
       </select></div>
     <div><label class="f" for="spot">Gold spot (USD / troy oz)</label><input id="spot" type="number" min="0" step="0.01" value="{spot:.2f}"></div>
-    <div><label class="f" for="ask">Asking price (optional)</label><input id="ask" type="number" min="0" step="0.01" placeholder="e.g. 1255"></div>
+    <div><label class="f" for="ask">Asking price, USD (optional)</label><input id="ask" type="number" min="0" step="0.01" placeholder="e.g. 1255"></div>
   </div>
   <div class="out">
     <div class="box"><div class="l">Fine gold</div><div class="v" id="fine">—</div><div class="s">weight × karat/24</div></div>
     <div class="box"><div class="l">Melt value</div><div class="v" id="melt">—</div><div class="s">at the spot price entered</div></div>
-    <div class="box"><div class="l">Price ÷ melt</div><div class="v" id="ratio">—</div><div class="s">1.0× would mean sold at scrap</div></div>
+    <div class="box"><div class="l">Price ÷ melt</div><div class="v" id="ratio">—</div><div class="s">1.0× = price equals raw metal value</div></div>
     <div class="box"><div class="l">Above melt</div><div class="v" id="over">—</div><div class="s">the part that pays for making + stone</div></div>
   </div>
   <p class="sub" style="margin-top:12px">The spot field is pre-filled with the verified quote:
@@ -585,13 +587,13 @@ It is a sanity check on price, not a valuation: labour, the diamond, hallmarking
   const money = n => '$' + n.toLocaleString('en-US', {{minimumFractionDigits:2, maximumFractionDigits:2}});
   function run(){{
     const wt = parseFloat(w.value), kk = parseFloat(k.value), sp = parseFloat(s.value);
-    if(!(wt>0) || !(kk>0) || !(sp>0)){{ fine.textContent='—'; melt.textContent='—'; ratio.textContent='—'; over.textContent='—'; return; }}
+    if(!Number.isFinite(wt) || !Number.isFinite(kk) || !Number.isFinite(sp) || !(wt>0) || !(kk>0) || !(kk<=24) || !(sp>0)){{ fine.textContent='—'; melt.textContent='—'; ratio.textContent='—'; over.textContent='—'; return; }}
     const fg = wt * kk / 24;
     const mv = fg / gpo * sp;
     fine.textContent = fg.toFixed(3) + ' g';
     melt.textContent = money(mv);
     const ask = parseFloat(a.value);
-    if(ask>0){{ ratio.textContent = (ask/mv).toFixed(2) + '×'; over.textContent = money(ask-mv); }}
+    if(Number.isFinite(ask) && ask>0){{ ratio.textContent = (ask/mv).toFixed(2) + '×'; over.textContent = money(ask-mv); }}
     else {{ ratio.textContent='—'; over.textContent='—'; }}
   }}
   [w,k,s,a].forEach(el=>el.addEventListener('input', run));
@@ -601,7 +603,7 @@ It is a sanity check on price, not a valuation: labour, the diamond, hallmarking
 
 <h2>Quick reference — fine gold by karat</h2>
 <div class="tablewrap"><table><thead><tr>
-<th>Karat</th><th>Purity (karat/24)</th><th>2 g ring</th><th>4 g ring</th><th>6 g ring</th><th>Melt of a 6 g ring</th>
+<th>Karat</th><th>Purity (karat/24)</th><th>2 g metal</th><th>4 g metal</th><th>6 g metal</th><th>Melt of 6 g metal</th>
 </tr></thead><tbody>{''.join(ref_rows)}</tbody></table></div>
 <p class="sub">Purity is arithmetic on the karat definition (24K = pure). Melt uses the quote above and 1 troy oz = {grams_oz} g.
 These are calculations, not retailer claims, and no listing was used to produce them.</p>
@@ -616,7 +618,7 @@ These are calculations, not retailer claims, and no listing was used to produce 
 <ul class="clean">
 <li>A <strong>setting-only</strong> price can never be compared to melt — the diamond is not in either number, but the making charge is.</li>
 <li>The ratio is only meaningful when the weight is real. Ask the seller for the gram weight and verify it on a jeweller's scale.</li>
-<li>Melt is a floor, not a fair price. A ring at 2× melt is normal retail; a ring at 1.05× melt with a “14K” stamp is a warning sign.</li>
+<li>Melt counts raw metal only — making, stones and margin sit on top, and this page has no sourced basis for calling any multiple “fair”. A price at or below melt for a ring sold as high-karat is a prompt to verify the weight and purity before paying, not proof of a bargain.</li>
 <li>Never use melt value as a resale expectation — scrap buyers pay below spot.</li>
 </ul>
 """
@@ -656,7 +658,7 @@ A snippet is never a source — it was caught disagreeing with the live page thr
 <li>Brilliant Earth served EUR at retrieval; the USD price is not recorded and was not converted (F-007).</li>
 <li>VRAI renders its price client-side; the retrieved HTML had no price, so that cell is blank (F-008).</li>
 <li>Costco was probed and excluded: price and gram weight did not render (F-014).</li>
-<li>{solid_missing_m} of {len(items)} listings never use the words “solid gold”, and {hallmark_missing_m} of {len(items)} state no hallmark or maker's mark (F-001, F-002).</li>
+<li>{solid_missing_m} of {len(items)} listings never describe the ring itself as “solid gold”, and {hallmark_missing_m} of {len(items)} state no hallmark or maker's mark (F-001, F-002).</li>
 <li>Only {with_weight_m} of {len(items)} items publish a gram weight, so price-per-gram comparison is not possible for the rest (F-003).</li>
 <li>The only listings that say “solid gold” (Stone and Strand) are marked final sale and cannot be returned after independent testing (F-016).</li>
 <li>Catbird was attempted, but its product-detail text was absent from the retrieved pages, so it is excluded until its pages can be quoted verbatim (F-018).</li>
