@@ -380,8 +380,8 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 
 | ID | Task | Status | Owner | File scope (exclusive before integration) |
 |----|------|--------|-------|-------------------------------------------|
-| S8C8-T1 | Independent line-by-line live re-verification of all existing rows, gold spot quote, and retailer policy/payment/contact pages | in progress | S-8C810C15 | `audit/8c810c15/live_line_by_line_verification.md` |
-| S8C8-T2 | Official-source research for explicit "solid gold" & weight/hallmark engagement rings (strictly blank + flagged where absent) | unclaimed | S-8C810C15 | `audit/8c810c15/verified_solid_gold.json`, `audit/8c810c15/evidence_solid_gold.md` |
+| S8C8-T1 | Independent line-by-line live re-verification of all existing rows, gold spot quote, and retailer policy/payment/contact pages | done | S-8C810C15 | `audit/8c810c15/live_line_by_line_verification.md` |
+| S8C8-T2 | Official-source research for explicit "solid gold" & weight/hallmark engagement rings (strictly blank + flagged where absent) | in progress | S-8C810C15 | `audit/8c810c15/verified_solid_gold.json`, `audit/8c810c15/evidence_solid_gold.md` |
 | S8C8-T3 | Standalone field-level hallucination, HTML source-link, CSP/security & calculator unit test suite | unclaimed | S-8C810C15 | `audit/8c810c15/security_and_hallucination_scanner.py`, `audit/8c810c15/test_calculator_and_scanner.py` |
 | S8C8-T4 | Final integration of verified fixes, category & dashboard tables, calculator, Flagged for Review page, PR merge & Pages verification | unclaimed | S-8C810C15 | Shared integration scope after `S8C8-T1`–`S8C8-T3` complete: `data/**`, `evidence/**`, `tools/**`, `assets/**`, `reports/**`, root `*.html`, `README.md`, `.github/workflows/gold2-verify.yml`, `COORDINATION.md` (preserving `site/**`, `scripts/**`, and any merged peer-session files) |
 
