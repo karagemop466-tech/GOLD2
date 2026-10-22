@@ -96,6 +96,7 @@ LBMA fix data now sits behind an IBA licence, so the free World Gold Council quo
 - `docs/REPOSITORY_AUDIT.md` preserves the exact initial-tree audit.
 - `reviews/` contains the independent review protocol, official terminology/calculation baseline, commit-specific evidence reviews, raw negative-audit output, and machine-readable R39/R6 findings.
 - The latest independent report is `reviews/2026-10-22-6ca03571.md`. It confirms the populated numeric observations and arithmetic while keeping unsupported secondary fields, overbroad claims, calculator risks, and QA blind spots open. A supplied QA PASS is not a substitute for official-source and hallucination/security re-review.
+- PR #8's exact merge/deployment evidence and post-merge review errata are recorded in `reviews/2026-10-22-pr8-publication.md`.
 
 ## Earlier pass — session 39da17c8 (preserved)
 

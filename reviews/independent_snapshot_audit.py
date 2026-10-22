@@ -70,6 +70,32 @@ def main() -> int:
             if not any("width" in (f["title"] + " " + f["detail"]).lower() for f in related):
                 flag("WIDTH-BLANK-WITHOUT-WIDTH-FLAG", item_id, "Blank is titled unverified but has no width-specific flag")
 
+    review_report = root / "reviews" / "2026-10-22-6ca03571.md"
+    if review_report.exists():
+        report_lines = review_report.read_text().splitlines()
+        for item in items:
+            matching = [line for line in report_lines if line.startswith(f"| {item['id']} |")]
+            if len(matching) != 1:
+                flag("REVIEW-ROW-MISSING-OR-DUPLICATE", item["id"], f"found {len(matching)}")
+                continue
+            line = matching[0]
+            if item["source_url"] not in line:
+                flag("REVIEW-SOURCE-URL-MISMATCH", item["id"], item["source_url"])
+            if item.get("width_mm") is not None:
+                width = Decimal(str(item["width_mm"]))
+                precision = max(0, -width.as_tuple().exponent)
+                accepted_widths = {f"{width:.{places}f} mm" for places in range(precision, 4)}
+                if not any(value in line for value in accepted_widths):
+                    flag("REVIEW-WIDTH-MISMATCH", item["id"], f"expected {item['width_mm']} mm")
+            if item.get("weight_g") is not None and f"{item['weight_g']} g" not in line:
+                flag("REVIEW-WEIGHT-MISMATCH", item["id"], f"expected {item['weight_g']} g")
+            if item.get("price") is not None:
+                mark = {"USD": "$", "EUR": "€"}.get(item["currency"], item["currency"] + " ")
+                price = Decimal(str(item["price"]))
+                accepted = {f"{mark}{price:,.2f}", f"{mark}{price:,.0f}"}
+                if not any(value in line for value in accepted):
+                    flag("REVIEW-PRICE-MISMATCH", item["id"], f"expected one of {sorted(accepted)}")
+
     build_text = (root / "tools" / "build_site.py").read_text()
     if any(item.get("weight_basis") for item in items) and "weight_basis" not in build_text:
         for item in items:
