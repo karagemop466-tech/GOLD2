@@ -58,17 +58,17 @@ Status values: `unclaimed` · `in progress` · `done` · `needs review` · `bloc
 
 | ID  | Task | Status | Owner | File scope (exclusive) |
 |-----|------|--------|-------|------------------------|
-| T01 | Gold price reference + melt-value calculator data | in progress | S-6CA03571 | `data/gold-price.json`, `evidence/gold-price.md`, `site/calculator.html` |
-| T02 | Retailer policies (returns, contact, payment, hallmark statements) | in progress | S-6CA03571 | `data/retailers.json`, `evidence/retailers/**` |
-| T03 | Listings: solitaire | in progress | S-6CA03571 | `data/listings/solitaire.json`, `evidence/listings/solitaire/**` |
-| T04 | Listings: halo & pavé | in progress | S-6CA03571 | `data/listings/halo-pave.json`, `evidence/listings/halo-pave/**` |
-| T05 | Listings: three-stone & vintage | in progress | S-6CA03571 | `data/listings/three-stone-vintage.json`, `evidence/listings/three-stone-vintage/**` |
-| T06 | Listings: 18K / high-karat | in progress | S-6CA03571 | `data/listings/18k.json`, `evidence/listings/18k/**` |
-| T07 | Listings: 10K/14K lower-price band | in progress | S-6CA03571 | `data/listings/budget.json`, `evidence/listings/budget/**` |
-| T08 | Flagged-for-review dataset + unverified register | in progress | S-6CA03571 | `data/flags.json`, `site/flags.html` |
-| T09 | Site build: generator, templates, styles, nav | in progress | S-6CA03571 | `tools/**`, `site/assets/**`, `site/*.html` (except `site/calculator.html`, `site/flags.html`) |
-| T10 | QA: hallucination audit, link check, build check | in progress | S-6CA03571 | `tools/qa.py`, `reports/qa-report.md` |
-| T11 | Final integration: merge, re-verify, publish, PR | in progress | S-6CA03571 | `COORDINATION.md`, `README.md`, `.github/workflows/**`, `data/manifest.json` |
+| T01 | Gold price reference + melt-value calculator data | done | S-6CA03571 | `data/gold-price.json`, `evidence/gold-price.md`, `site/calculator.html` |
+| T02 | Retailer policies (returns, contact, payment, hallmark statements) | done | S-6CA03571 | `data/retailers.json`, `evidence/retailers/**` |
+| T03 | Listings: solitaire | done | S-6CA03571 | `data/listings/solitaire.json`, `evidence/listings/solitaire/**` |
+| T04 | Listings: halo & pavé | done | S-6CA03571 | `data/listings/halo-pave.json`, `evidence/listings/halo-pave/**` |
+| T05 | Listings: three-stone & vintage | done | S-6CA03571 | `data/listings/three-stone-vintage.json`, `evidence/listings/three-stone-vintage/**` |
+| T06 | Listings: 18K / high-karat | done | S-6CA03571 | `data/listings/18k.json`, `evidence/listings/18k/**` |
+| T07 | Listings: 10K/14K lower-price band | done | S-6CA03571 | `data/listings/budget.json`, `evidence/listings/budget/**` |
+| T08 | Flagged-for-review dataset + unverified register | done | S-6CA03571 | `data/flags.json`, `site/flags.html` |
+| T09 | Site build: generator, templates, styles, nav | done | S-6CA03571 | `tools/**`, `site/assets/**`, `site/*.html` (except `site/calculator.html`, `site/flags.html`) |
+| T10 | QA: hallucination audit, link check, build check | done | S-6CA03571 | `tools/qa.py`, `reports/qa-report.md` |
+| T11 | Final integration: merge, re-verify, publish, PR | done | S-6CA03571 | `COORDINATION.md`, `README.md`, `.github/workflows/**`, `data/manifest.json` |
 
 > Why everything is claimed by one session: this session is the only active agent
 > in this environment. The tasks are still split into disjoint scopes so a second
@@ -84,18 +84,34 @@ Status values: `unclaimed` · `in progress` · `done` · `needs review` · `bloc
 | 2026-10-22 | T01 | World Gold Council gold spot page reachable; USD/oz quote read | https://www.gold.org/goldhub/data/gold-prices | Quote captured with date; see `data/gold-price.json` |
 | 2026-10-22 | T01 | LBMA public price table | https://www.lbma.org.uk/prices-and-data/precious-metal-prices | **Blocked**: LBMA moved tabulated data to MyLBMA portal behind IBA licence. No free citable value. Recorded as limitation, not guessed. |
 | 2026-10-22 | T03 | Blue Nile product page renders live price + karat + width | https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639 | Price shown as "(Setting Price)" → `price_basis=setting_price` |
+| 2026-10-22 | T03/T04/T05/T06 | 8 Blue Nile product pages re-read live: price, stock no, karat, width | see `evidence/listings/*.md` | All 8 captured; none states "solid gold", hallmark or gram weight |
+| 2026-10-22 | T07 | 4 Zales product pages | https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449 (+3) | Price + 10K stated in title; width/weight/hallmark absent. Cached $719.20 rejected vs live $899.00 |
+| 2026-10-22 | T02 | Blue Nile return policy | https://www.bluenile.com/policies/returns | 30 days from shipment; resized/custom excluded; 1 free resize within 6 months |
+| 2026-10-22 | T06 | VRAI configurator spec block | https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893 | Metal weight 2.86 g @ size 6 verified; price absent from HTML → left blank |
+| 2026-10-22 | T04 | Brilliant Earth product page | https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/ | €990.00 setting-only (EUR served, USD not displayed); 2.5 mm; free 1-year resizing |
+| 2026-10-22 | T09 | Site rebuilt from data; 10 pages, 281 links | `docs/` | 0 broken internal links; 14/14 rows carry an external official link |
+| 2026-10-22 | T10 | Hallucination audit | `tools/qa.py` → `reports/qa-report.md` | **PASS** — 11 checks, 0 failures, 2 coverage warnings (blank weight/price by design) |
+| 2026-10-22 | T08 | 15 flags published with source links | `data/flags.json` | 3 high (no "solid gold" wording, no hallmark, no gram weight), 6 medium, 6 low |
 
 ---
 
 ## 4. Crash / takeover log
 
-_None yet._
+_None. No claim exceeded the 60-minute takeover window._
+
+### Deviation recorded
+James Allen product URLs redirect to Blue Nile; the previously cached item 41515 is sold out and was
+excluded rather than listed at a stale price (flag F-009).
 
 ---
 
 ## 5. Requests / handoffs / conflicts
 
-_None yet._
+- **No other session was detected** in this repository during the run (no other branches, no edits
+  outside this session's scope). Nothing was taken over.
+- Request for any future session (T02 owner): retrieve the **Zales standalone return policy** so the
+  resize/custom exclusions stop being blank (F-011), and confirm **card acceptance** at each retailer
+  (F-012). Neither needs a code change, only a new evidence file plus a flag update.
 
 ---
 
