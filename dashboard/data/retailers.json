@@ -1,0 +1,70 @@
+{
+  "_note": "SOURCE OF TRUTH for retailer directory. Every claim must be traceable to the linked official page fetched on the stated date. Summaries are paraphrases \u2014 the linked official page controls.",
+  "retailers": [
+    {
+      "id": "bluenile",
+      "name": "Blue Nile",
+      "site_url": "https://www.bluenile.com/",
+      "contact": "US: +1-800-242-2728 \u00b7 Email: service@bluenile.com \u00b7 Live chat, WhatsApp, virtual appointments, showrooms (see Contact page).",
+      "contact_url": "https://www.bluenile.com/contact-us",
+      "contact_verified": "2026-10-22",
+      "returns_summary": "30-day money-back guarantee: eligible items in original, unworn condition may be returned within 30 days from the shipment date for refund or exchange. NOT eligible: personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance and 'Final Sale' items. Two complimentary returns per customer per year; Return Merchandise Authorization (RMA) required; missing diamond grading report replacement costs $150.",
+      "returns_url": "https://www.bluenile.com/policies/returns",
+      "returns_verified": "2026-10-22",
+      "jewelry_notes": "Product pages state a limited lifetime warranty on gold/platinum jewelry items with purchase price of $1,000+ against manufacturer's defect (limitations apply). Credit-card financing ('Blue Nile Credit Card') advertised on product pages; returns page also references PayPal and bank-wire refunds. Full payment options live at checkout \u2014 confirm there.",
+      "jewelry_notes_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
+      "flags": [],
+      "evidence_file": "evidence/retailers.md",
+      "evidence_quotes": [
+        "+1-800-242-2728",
+        "service@bluenile.com",
+        "30 days from the shipment date",
+        "Two complimentary returns are allowed per customer, per year.",
+        "A Return Merchandise Authorization (RMA) number is required for all returns."
+      ]
+    },
+    {
+      "id": "jamesallen",
+      "name": "James Allen (now part of Blue Nile)",
+      "site_url": "https://www.jamesallen.com/",
+      "contact": "James Allen storefront now resolves to Blue Nile. Contact Blue Nile: US +1-800-242-2728, service@bluenile.com.",
+      "contact_url": "https://www.bluenile.com/contact-us",
+      "contact_verified": "2026-10-22",
+      "returns_summary": "Standalone James Allen policy pages redirect to Blue Nile. Returns handled under Blue Nile's 30-day policy (see Blue Nile entry). Transition questions: Blue Nile's James Allen information page.",
+      "returns_url": "https://www.bluenile.com/policies/returns",
+      "returns_verified": "2026-10-22",
+      "jewelry_notes": "VERIFIED 2026-10-22: jamesallen.com fetches land on bluenile.com (observed final URL bluenile.com/?jaRedirect=true) and Blue Nile pages display 'James Allen is Now Part of Blue Nile'. 'By James Allen' collections are sold on bluenile.com. Treat any old standalone James Allen policy text found elsewhere as stale until re-verified.",
+      "jewelry_notes_url": "https://www.bluenile.com/james-allen",
+      "flags": [
+        "F-JA-REDIRECT"
+      ],
+      "evidence_file": "evidence/retailers.md",
+      "evidence_quotes": [
+        "James Allen is Now Part of Blue Nile",
+        "https://www.bluenile.com/james-allen"
+      ]
+    },
+    {
+      "id": "costco",
+      "name": "Costco",
+      "site_url": "https://www.costco.com/",
+      "contact": "Costco Customer Service: https://customerservice.costco.com/ (linked from Costco product pages as 'Contact Customer Service'). Warehouse membership counter for in-person help.",
+      "contact_url": "https://customerservice.costco.com/",
+      "contact_verified": "2026-10-22",
+      "returns_summary": "Jewelry bought on Costco.com may be returned for a refund including all shipping and handling fees \u2014 at any warehouse (bring IGI/GIA certificates) or by arranged mail pickup. Diamonds over 1.00 carat receive a Jewelry Credit Memo and Graduate Gemologist authenticity inspection: allow 3\u20135 business days (warehouse) or up to 2 weeks (mail). Product pages cite a risk-free 100% satisfaction guarantee 'with some exceptions and limitations' \u2014 read the full official return policy before purchase.",
+      "returns_url": "https://customerservice.costco.com/app/answers/detail/a_id/754/~/can-i-return-jewelry-purchased-on-costco.com",
+      "returns_verified": "2026-10-22",
+      "jewelry_notes": "Finished jewelry only \u2014 no loose stones or semi-mounts. Majority in 14kt gold, 18kt gold, or 950 platinum. Costco does not clean or resize jewelry and cannot customize metal beyond what is offered. All 14kt/18kt white gold is rhodium plated (noted on product pages). Items $500+ ship insured with signature delivery.",
+      "jewelry_notes_url": "https://www.costco.com/f/-/jewelry-buying-guide-faq",
+      "flags": [],
+      "evidence_file": "evidence/retailers.md",
+      "evidence_quotes": [
+        "Costco sells only finished jewelry.",
+        "14kt gold, 18kt gold, or 950 platinum",
+        "You may return jewelry purchased on Costco.com for a refund including all shipping and handling fees.",
+        "Jewelry Credit Memo",
+        "Costco does not clean or resize jewelry."
+      ]
+    }
+  ]
+}

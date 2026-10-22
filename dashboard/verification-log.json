@@ -1,0 +1,264 @@
+[
+  {
+    "timestamp_utc": "2026-10-22T23:20:17Z",
+    "command": "verify.py",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
+  },
+  {
+    "timestamp_utc": "2026-10-22T23:20:57Z",
+    "command": "verify.py --check-build",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS",
+      "P6-build": "PASS",
+      "P7-links": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
+  },
+  {
+    "timestamp_utc": "2026-10-22T23:22:15Z",
+    "command": "verify.py",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
+  },
+  {
+    "timestamp_utc": "2026-10-22T23:22:15Z",
+    "command": "verify.py --check-build",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS",
+      "P6-build": "PASS",
+      "P7-links": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
+  },
+  {
+    "timestamp_utc": "2026-10-22T23:22:15Z",
+    "command": "verify.py --check-build",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS",
+      "P6-build": "PASS",
+      "P7-links": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
+  },
+  {
+    "timestamp_utc": "2026-10-22T23:36:38Z",
+    "command": "verify.py --check-build",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS",
+      "P6-build": "PASS",
+      "P7-links": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
+  },
+  {
+    "timestamp_utc": "2026-10-22T23:37:55Z",
+    "command": "verify.py",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS",
+      "P8-evidence": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
+  },
+  {
+    "timestamp_utc": "2026-10-22T23:40:46Z",
+    "command": "verify.py",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS",
+      "P8-evidence": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
+  },
+  {
+    "timestamp_utc": "2026-10-22T23:40:46Z",
+    "command": "verify.py --check-build",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS",
+      "P8-evidence": "PASS",
+      "P6-build": "PASS",
+      "P7-links": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
+  },
+  {
+    "timestamp_utc": "2026-10-22T23:48:35Z",
+    "command": "verify.py --check-build",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS",
+      "P8-evidence": "PASS",
+      "P6-build": "PASS",
+      "P7-links": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
+  },
+  {
+    "timestamp_utc": "2026-10-22T23:48:56Z",
+    "command": "verify.py --check-build",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS",
+      "P8-evidence": "PASS",
+      "P6-build": "PASS",
+      "P7-links": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
+  },
+  {
+    "timestamp_utc": "2026-10-22T23:59:13Z",
+    "command": "verify.py --check-build",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS",
+      "P8-evidence": "PASS",
+      "P6-build": "PASS",
+      "P7-links": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
+  }
+]

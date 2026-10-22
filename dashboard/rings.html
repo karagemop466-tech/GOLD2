@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ring listings — GOLD2</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">GOLD<span>◆</span>2</a>
+<nav class="main" aria-label="Main">
+<a href="index.html">Home</a>
+<a href="checklist.html">Checklist</a>
+<a href="rings.html">Rings</a>
+<a href="retailers.html">Retailers</a>
+<a href="calculator.html">Calculator</a>
+<a href="reference.html">Reference</a>
+<a href="methodology.html">Method</a>
+<a href="flagged.html">Flagged&nbsp;for&nbsp;Review</a>
+</nav>
+</div></header>
+<main>
+<div class="banner" role="alert">
+<h2>⛔ NO HALLUCINATIONS</h2>
+<p>Every row links the <strong>official product page</strong> it was read from, with a <strong>capture date</strong>.
+Blank + <span class="tag unverified">unverified</span> means “not confirmed on the official page” — never inferred.
+Prices are <strong>point-in-time observations (2026-10-22)</strong>, not live quotes. <strong>Re-open each source link before deciding.</strong></p>
+</div>
+<h1>Ring listings</h1>
+<p class="muted">Blue Nile prices are <strong>setting only</strong> (center diamond/gemstone sold separately). Costco price could not be
+observed (page required an interactive session) and is blank per policy. Weights, hallmark wordings, and “solid gold” wording
+were not stated on the fetched pages — all blank and listed on <a href="flagged.html">Flagged for Review</a>.</p>
+<div class="toolbar">
+<label>Search: <input id="ring-filter" type="search" placeholder="e.g. petite, 18k, Costco…"></label>
+<label>Karat: <select id="karat-filter"><option value="">All</option><option value="14K">14K</option><option value="18K">18K</option></select></label>
+</div>
+<div style="overflow-x:auto">
+<table class="data" id="rings-table">
+<thead><tr>
+<th>ID</th><th>Ring (official source)</th><th>Retailer</th><th>Karat (as stated)</th>
+<th>Price USD (as observed)</th><th>Captured</th><th>Stock / Item</th><th>Specs (as stated)</th>
+<th>Weight</th><th>Hallmark</th><th>Flags</th>
+</tr></thead>
+<tbody id="rings-tbody">
+<!-- BUILD:RINGS_ROWS -->
+<tr data-karat="14K"><td><code>BN-001</code></td><td><a href="https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348">Classic Simple Solitaire Engagement Ring in 14K Yellow Gold</a></td><td>Blue Nile</td><td>14K<br><span class="small muted">14K Yellow Gold</span></td><td class="num"><span class="tag verified">$1,145</span><br><span class="small muted">Setting price only. Page shows a &#x27;Choose a Diamond&#x27; step and &#x27;Total carat weights are approximate&#x27; — center diamond sold separately.</span></td><td>2026-10-22</td><td><code>502120y14</code><br><span class="small">width 2.40mm</span></td><td class="small">Can be set with Round/Princess/Cushion/Emerald/Oval/Radiant/Asscher/Marquise/Heart/Pear and others, 0.20–8.00 carat (as listed on page).</td><td>— <span class="tag unverified">unverified</span><br><span class="small muted">not published on product page</span></td><td>— <span class="tag unverified">unverified</span><br><span class="small muted">not described on product page</span></td><td><a class="tag flag" href="flagged.html#F-WEIGHT">F-WEIGHT</a> <a class="tag flag" href="flagged.html#F-HALLMARK">F-HALLMARK</a> <a class="tag flag" href="flagged.html#F-SOLID-WORDING">F-SOLID-WORDING</a></td></tr>
+<tr data-karat="14K"><td><code>BN-002</code></td><td><a href="https://www.bluenile.com/engagement-rings/design-your-own-ring/comfort-fit-solitaire-engagement-ring-in-14k-white-gold-by-james-allen-item-316238">Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen</a></td><td>Blue Nile</td><td>14K<br><span class="small muted">14K White Gold</span></td><td class="num"><span class="tag verified">$1,240</span><br><span class="small muted">Setting price only. Page shows a &#x27;Choose a Diamond&#x27; step — center diamond/gemstone sold separately.</span></td><td>2026-10-22</td><td><code>505097w14</code><br><span class="small">width 1.50mm</span></td><td class="small">Rhodium Finish: Yes (as listed on page). Can be set with Round/Princess/Cushion/Emerald/Oval/Radiant/Asscher/Marquise/Heart/Pear and others, 0.30–6.00 carat.</td><td>— <span class="tag unverified">unverified</span><br><span class="small muted">not published on product page</span></td><td>— <span class="tag unverified">unverified</span><br><span class="small muted">not described on product page</span></td><td><a class="tag flag" href="flagged.html#F-WEIGHT">F-WEIGHT</a> <a class="tag flag" href="flagged.html#F-HALLMARK">F-HALLMARK</a> <a class="tag flag" href="flagged.html#F-SOLID-WORDING">F-SOLID-WORDING</a></td></tr>
+<tr data-karat="18K"><td><code>BN-003</code></td><td><a href="https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158">Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold</a></td><td>Blue Nile</td><td>18K<br><span class="small muted">18K Yellow Gold</span></td><td class="num"><span class="tag verified">$1,125</span><br><span class="small muted">Setting price only. Page shows a &#x27;Choose a Diamond&#x27; step — center diamond sold separately.</span></td><td>2026-10-22</td><td><code>500000y</code><br><span class="small">width 1.90mm</span></td><td class="small">Product details state &#x27;platinum prongs&#x27;. Can be set with Round/Princess/Cushion/Emerald/Oval/Radiant/Asscher and others, 0.20–8.00 carat.</td><td>— <span class="tag unverified">unverified</span><br><span class="small muted">not published on product page</span></td><td>— <span class="tag unverified">unverified</span><br><span class="small muted">not described on product page</span></td><td><a class="tag flag" href="flagged.html#F-WEIGHT">F-WEIGHT</a> <a class="tag flag" href="flagged.html#F-HALLMARK">F-HALLMARK</a> <a class="tag flag" href="flagged.html#F-SOLID-WORDING">F-SOLID-WORDING</a></td></tr>
+<tr data-karat="18K"><td><code>BN-004</code></td><td><a href="https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269">Petite Solitaire Engagement Ring in 18k Yellow Gold</a></td><td>Blue Nile</td><td>18K<br><span class="small muted">18K Yellow Gold</span></td><td class="num"><span class="tag verified">$1,155</span><br><span class="small muted">Setting price only. Page shows a &#x27;Choose a Diamond&#x27; step — center diamond sold separately.</span></td><td>2026-10-22</td><td><code>501130y</code><br><span class="small">width 1.80mm</span></td><td class="small">Can be set with Round/Princess/Cushion/Emerald/Oval/Radiant/Asscher/Marquise/Heart/Pear and others, 0.20–8.00 carat.</td><td>— <span class="tag unverified">unverified</span><br><span class="small muted">not published on product page</span></td><td>— <span class="tag unverified">unverified</span><br><span class="small muted">not described on product page</span></td><td><a class="tag flag" href="flagged.html#F-WEIGHT">F-WEIGHT</a> <a class="tag flag" href="flagged.html#F-HALLMARK">F-HALLMARK</a> <a class="tag flag" href="flagged.html#F-SOLID-WORDING">F-SOLID-WORDING</a></td></tr>
+<tr data-karat="14K"><td><code>CS-001</code></td><td><a href="https://www.costco.com/p/-/gemstone-diamond-14kt-yellow-gold-ring/100799255">Gemstone &amp; Diamond 14kt Yellow Gold Ring</a></td><td>Costco</td><td>14kt<br><span class="small muted">14kt Yellow Gold</span></td><td class="num">— <span class="tag unverified">unverified</span><br><span class="small muted">Price NOT observed: the fetched page showed &#x27;Loading&#x27; in the price area (requires an interactive session). Left blank per the no-hallucination rule — open the source link to see the live price.</span></td><td>2026-10-22</td><td><code>Item 1593579</code></td><td class="small">Round gemstone approx. 5.9mm (Citrine shown; Garnet/White Opal/Amethyst/Aquamarine options listed). Diamonds: 0.18 ctw total, VS2 clarity, I color, 2 stones. Ring size 7 — &#x27;Sizeable within one size (Costco does not provide this service)&#x27;. Member rating shown as 4.6 (38 reviews) on capture date — volatile, re-check live page.</td><td>— <span class="tag unverified">unverified</span><br><span class="small muted">not published on product page</span></td><td>— <span class="tag unverified">unverified</span><br><span class="small muted">not described on product page</span></td><td><a class="tag flag" href="flagged.html#F-PRICE-COSTCO">F-PRICE-COSTCO</a> <a class="tag flag" href="flagged.html#F-WEIGHT">F-WEIGHT</a> <a class="tag flag" href="flagged.html#F-HALLMARK">F-HALLMARK</a> <a class="tag flag" href="flagged.html#F-SOLID-WORDING">F-SOLID-WORDING</a></td></tr>
+<!-- /BUILD:RINGS_ROWS -->
+</tbody>
+</table>
+</div>
+<div class="notice"><strong>How to use this table:</strong> (1) open the source link; (2) confirm price, metal, and availability live;
+(3) ask the seller for weight in grams + written solid-gold confirmation; (4) file the listing + receipt (<a href="checklist.html">checklist item 9</a>);
+(5) verify independently after delivery (<a href="checklist.html">items 10–11</a>).</div>
+<p class="small muted">Machine-readable source: <code>dashboard/data/rings.json</code> in the repo. Table rows above are generated from that file — see <a href="methodology.html">method</a>.</p>
+</main>
+<footer class="site"><div class="wrap">
+<p>GOLD2 research dashboard · <a href="index.html">Home</a> · <a href="methodology.html">Verification method</a> · <a href="flagged.html">Flagged for Review</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

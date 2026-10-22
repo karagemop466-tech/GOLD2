@@ -1,0 +1,171 @@
+{
+  "_note": "SOURCE OF TRUTH for ring listings. Anti-hallucination rule: every value must be observed on the linked official product page on capture_date. Unobserved values are null + flagged in data/flags.json. Prices are USD as displayed on capture_date; setting prices exclude center diamond/gemstone unless stated. Re-verify via the source link before any purchase.",
+  "capture_method": "Official product pages fetched and read on 2026-10-22 (UTC). Prices transcribed only when visible in fetched page content.",
+  "rings": [
+    {
+      "id": "BN-001",
+      "name": "Classic Simple Solitaire Engagement Ring in 14K Yellow Gold",
+      "retailer_id": "bluenile",
+      "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
+      "capture_date": "2026-10-22",
+      "karat_stated": "14K",
+      "metal_stated": "14K Yellow Gold",
+      "price_usd": 1145,
+      "price_note": "Setting price only. Page shows a 'Choose a Diamond' step and 'Total carat weights are approximate' \u2014 center diamond sold separately.",
+      "stock_number": "502120y14",
+      "width": "2.40mm",
+      "extra_specs": "Can be set with Round/Princess/Cushion/Emerald/Oval/Radiant/Asscher/Marquise/Heart/Pear and others, 0.20\u20138.00 carat (as listed on page).",
+      "weight_g": null,
+      "weight_status": "unverified",
+      "hallmark_stated": null,
+      "hallmark_status": "unverified",
+      "solid_gold_wording_observed": false,
+      "solid_gold_note": "Page states the metal as '14K Yellow Gold' but the fetched page text does not contain the words 'solid gold'. Confirm construction with the seller before purchase.",
+      "flags": [
+        "F-WEIGHT",
+        "F-HALLMARK",
+        "F-SOLID-WORDING"
+      ],
+      "evidence_file": "evidence/rings.md",
+      "evidence_quotes": [
+        "$1,145(Setting Price)",
+        "502120y14",
+        "14K Yellow Gold",
+        "2.40mm",
+        "0.20 - 8.00 Carat"
+      ]
+    },
+    {
+      "id": "BN-002",
+      "name": "Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen",
+      "retailer_id": "bluenile",
+      "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/comfort-fit-solitaire-engagement-ring-in-14k-white-gold-by-james-allen-item-316238",
+      "capture_date": "2026-10-22",
+      "karat_stated": "14K",
+      "metal_stated": "14K White Gold",
+      "price_usd": 1240,
+      "price_note": "Setting price only. Page shows a 'Choose a Diamond' step \u2014 center diamond/gemstone sold separately.",
+      "stock_number": "505097w14",
+      "width": "1.50mm",
+      "extra_specs": "Rhodium Finish: Yes (as listed on page). Can be set with Round/Princess/Cushion/Emerald/Oval/Radiant/Asscher/Marquise/Heart/Pear and others, 0.30\u20136.00 carat.",
+      "weight_g": null,
+      "weight_status": "unverified",
+      "hallmark_stated": null,
+      "hallmark_status": "unverified",
+      "solid_gold_wording_observed": false,
+      "solid_gold_note": "Page states the metal as '14K White Gold' but the fetched page text does not contain the words 'solid gold'. Confirm construction with the seller before purchase.",
+      "flags": [
+        "F-WEIGHT",
+        "F-HALLMARK",
+        "F-SOLID-WORDING"
+      ],
+      "evidence_file": "evidence/rings.md",
+      "evidence_quotes": [
+        "$1,240(Setting Price)",
+        "505097w14",
+        "14K White Gold",
+        "1.50mm",
+        "Rhodium Finish",
+        "0.30 - 6.00 Carat"
+      ]
+    },
+    {
+      "id": "BN-003",
+      "name": "Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold",
+      "retailer_id": "bluenile",
+      "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
+      "capture_date": "2026-10-22",
+      "karat_stated": "18K",
+      "metal_stated": "18K Yellow Gold",
+      "price_usd": 1125,
+      "price_note": "Setting price only. Page shows a 'Choose a Diamond' step \u2014 center diamond sold separately.",
+      "stock_number": "500000y",
+      "width": "1.90mm",
+      "extra_specs": "Product details state 'platinum prongs'. Can be set with Round/Princess/Cushion/Emerald/Oval/Radiant/Asscher and others, 0.20\u20138.00 carat.",
+      "weight_g": null,
+      "weight_status": "unverified",
+      "hallmark_stated": null,
+      "hallmark_status": "unverified",
+      "solid_gold_wording_observed": false,
+      "solid_gold_note": "Page states the metal as '18K Yellow Gold' but the fetched page text does not contain the words 'solid gold'. Confirm construction with the seller before purchase.",
+      "flags": [
+        "F-WEIGHT",
+        "F-HALLMARK",
+        "F-SOLID-WORDING"
+      ],
+      "evidence_file": "evidence/rings.md",
+      "evidence_quotes": [
+        "$1,125(Setting Price)",
+        "500000y",
+        "18K Yellow Gold",
+        "1.90mm",
+        "platinum prongs"
+      ]
+    },
+    {
+      "id": "BN-004",
+      "name": "Petite Solitaire Engagement Ring in 18k Yellow Gold",
+      "retailer_id": "bluenile",
+      "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
+      "capture_date": "2026-10-22",
+      "karat_stated": "18K",
+      "metal_stated": "18K Yellow Gold",
+      "price_usd": 1155,
+      "price_note": "Setting price only. Page shows a 'Choose a Diamond' step \u2014 center diamond sold separately.",
+      "stock_number": "501130y",
+      "width": "1.80mm",
+      "extra_specs": "Can be set with Round/Princess/Cushion/Emerald/Oval/Radiant/Asscher/Marquise/Heart/Pear and others, 0.20\u20138.00 carat.",
+      "weight_g": null,
+      "weight_status": "unverified",
+      "hallmark_stated": null,
+      "hallmark_status": "unverified",
+      "solid_gold_wording_observed": false,
+      "solid_gold_note": "Page states the metal as '18K Yellow Gold' but the fetched page text does not contain the words 'solid gold'. Confirm construction with the seller before purchase.",
+      "flags": [
+        "F-WEIGHT",
+        "F-HALLMARK",
+        "F-SOLID-WORDING"
+      ],
+      "evidence_file": "evidence/rings.md",
+      "evidence_quotes": [
+        "$1,155(Setting Price)",
+        "501130y",
+        "18K Yellow Gold",
+        "1.80mm"
+      ]
+    },
+    {
+      "id": "CS-001",
+      "name": "Gemstone & Diamond 14kt Yellow Gold Ring",
+      "retailer_id": "costco",
+      "product_url": "https://www.costco.com/p/-/gemstone-diamond-14kt-yellow-gold-ring/100799255",
+      "capture_date": "2026-10-22",
+      "karat_stated": "14kt",
+      "metal_stated": "14kt Yellow Gold",
+      "price_usd": null,
+      "price_note": "Price NOT observed: the fetched page showed 'Loading' in the price area (requires an interactive session). Left blank per the no-hallucination rule \u2014 open the source link to see the live price.",
+      "stock_number": "Item 1593579",
+      "width": null,
+      "extra_specs": "Round gemstone approx. 5.9mm (Citrine shown; Garnet/White Opal/Amethyst/Aquamarine options listed). Diamonds: 0.18 ctw total, VS2 clarity, I color, 2 stones. Ring size 7 \u2014 'Sizeable within one size (Costco does not provide this service)'. Member rating shown as 4.6 (38 reviews) on capture date \u2014 volatile, re-check live page.",
+      "weight_g": null,
+      "weight_status": "unverified",
+      "hallmark_stated": null,
+      "hallmark_status": "unverified",
+      "solid_gold_wording_observed": false,
+      "solid_gold_note": "Page states the metal as '14kt Yellow Gold' but the fetched page text does not contain the words 'solid gold'. Confirm construction with the seller before purchase.",
+      "flags": [
+        "F-PRICE-COSTCO",
+        "F-WEIGHT",
+        "F-HALLMARK",
+        "F-SOLID-WORDING"
+      ],
+      "evidence_file": "evidence/rings.md",
+      "evidence_quotes": [
+        "Item 1593579",
+        "14kt Yellow Gold",
+        "0.18 ctw, VS2 Clarity, I Color Diamond",
+        "Online Only"
+      ]
+    }
+  ]
+}

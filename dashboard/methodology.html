@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verification method — GOLD2</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">GOLD<span>◆</span>2</a>
+<nav class="main" aria-label="Main">
+<a href="index.html">Home</a>
+<a href="checklist.html">Checklist</a>
+<a href="rings.html">Rings</a>
+<a href="retailers.html">Retailers</a>
+<a href="calculator.html">Calculator</a>
+<a href="reference.html">Reference</a>
+<a href="methodology.html">Method</a>
+<a href="flagged.html">Flagged&nbsp;for&nbsp;Review</a>
+</nav>
+</div></header>
+<main>
+<div class="banner" role="alert">
+<h2>⛔ NO HALLUCINATIONS — the rule everything refers back to</h2>
+<p><strong>No value without a same-row official source link. No inference. No filled-in blanks.</strong>
+Unconfirmed = blank + <span class="tag unverified">unverified</span> + a published flag. Hallucinated prices are the
+top risk in this project, so <strong>prices are transcribed only when visible on the fetched official page, with a capture date</strong> —
+otherwise blank. Standing recommendation after every review: <strong>keep looking for hallucinations</strong>.</p>
+</div>
+<h1>Verification method</h1>
+
+<h2>1. Source hierarchy</h2>
+<ol>
+<li><strong>Official pages, fetched and read</strong> (product, policy, contact, government, LBMA pages) — values transcribed; capture date recorded.</li>
+<li><strong>Official pages, linked for manual review</strong> — cited as links only, labeled “not reviewed” where applicable.</li>
+<li><strong>Arithmetic shown with its formula</strong> (karat ÷ 24; melt math) — checkable, not asserted.</li>
+<li><strong>Project brief</strong> — checklist requirements from the brief, labeled as such (not official sources).</li>
+</ol>
+<p>Search-result snippets are never treated as verified values; they only point at pages to fetch.</p>
+
+<h2>2. How each ring row is verified (line by line)</h2>
+<ol>
+<li>Fetch the official product URL; read the full page text.</li>
+<li>Transcribe <em>only</em> observed fields: name, retailer, karat/metal as stated, price if visible, stock number, width, specs.</li>
+<li>Leave weight, hallmark wording, and anything else unobserved as <strong>blank + unverified</strong>; add/keep the matching flag.</li>
+<li>Record the capture date (all current rows: 2026-10-22).</li>
+<li>Run the security passes (<code>dashboard/scripts/verify.py</code>) after every review; fix failures before publishing.</li>
+</ol>
+
+<h2>3. Security passes (hallucination checks)</h2>
+<table class="data">
+<thead><tr><th>Pass</th><th>What it checks</th></tr></thead>
+<tbody>
+<tr><td><code>P1-sources</code></td><td>Every ring/retailer URL is <code>https://</code> on an allowlisted official domain.</td></tr>
+<tr><td><code>P2-prices</code></td><td>Every non-blank price is a positive number <em>with</em> a capture date; no price may exist without both.</td></tr>
+<tr><td><code>P3-blanks</code></td><td>Every blank weight/hallmark/price has <code>unverified</code> status and a matching flag entry.</td></tr>
+<tr><td><code>P4-crossref</code></td><td>Ring → retailer and ring/retailer → flag references all resolve; flag IDs are unique.</td></tr>
+<tr><td><code>P5-retailers</code></td><td>Retailer contact/returns URLs are official-domain links with verification dates.</td></tr>
+<tr><td><code>P8-evidence</code></td><td>Every ring/retailer value traces to a verbatim quote in <code>dashboard/evidence/*.md</code>; source URLs echoed; price digits backed.</td></tr>
+<tr><td><code>P6-build</code></td><td>Generated pages contain every ring, retailer, and flag ID (data ↔ site in sync).</td></tr>
+<tr><td><code>P7-links</code></td><td>All internal links resolve to repo files; all external links are <code>https://</code>.</td></tr>
+</tbody>
+</table>
+<p>Run: <code>python3 dashboard/scripts/verify.py</code> (data passes) → <code>python3 dashboard/scripts/build.py</code> (render pages) →
+<code>python3 dashboard/scripts/verify.py --check-build</code> (sync + link passes) →
+<code>node dashboard/scripts/calc-test.js</code> (calculator arithmetic + negative tests).
+Results append to <code>dashboard/verification-log.json</code>.</p>
+
+<h2>4. How to manually re-verify (please do)</h2>
+<ol>
+<li>Pick any row on <a href="rings.html">Rings</a> or <a href="retailers.html">Retailers</a>; open its source link.</li>
+<li>Confirm the price, metal, stock number, and policy text live. Note the date.</li>
+<li>Check the <a href="flagged.html">Flagged for Review</a> page for known gaps before concluding anything is “missing.”</li>
+<li>If a value here disagrees with the live official page, the live page wins — file an issue/PR with the new capture.</li>
+</ol>
+
+<h2>5. What we deliberately do NOT do</h2>
+<ul>
+<li>No spot-price snapshots (they go stale). No inferred weights, hallmarks, or “solid” claims.</li>
+<li>No third-party reviews presented as fact; no retailer reputation scores.</li>
+<li>No valuation of any ring; the <a href="calculator.html">calculator</a> computes melt value from <em>your</em> inputs only.</li>
+<li>No category subpages: this dashboard keeps one flat, filterable <a href="rings.html">ring table</a> — a known limitation, not a complete categorized catalog.</li>
+</ul>
+
+<h2>6. Limitations (read before relying on anything)</h2>
+<ul>
+<li><strong>Evidence quotes prove transcription, not truth.</strong> Pass P8 checks that published values match the stored evidence files — it cannot prove the retailer told the truth. Independent testing after delivery (XRF) is still mandatory.</li>
+<li><strong>Single flat table.</strong> Five rows, one table, no category pages. Coverage is bounded, not a market inventory.</li>
+<li><strong>Point-in-time prices.</strong> Captured 2026-10-22; promotions and metal markets move them. Always re-open the source link.</li>
+<li><strong>Seller reputation unassessed.</strong> Contacts are verified; independent reviews/complaints research is yours to do (<a href="checklist.html">checklist item 5</a>).</li>
+<li><strong>Calculator needs metal-only weight.</strong> Total ring weight (stones included) overstates melt value; the calculator rejects non-finite/empty input and blanks its outputs.</li>
+<li><strong>Accessibility.</strong> Dashboard text contrast was computed against WCAG AA: all running text ≥ 4.5:1; the large gold display numerals (30px bold) are 3.25:1, which meets the 3:1 large-text threshold.</li>
+</ul>
+<p>Independent peer-review findings for this repository live in <a href="../reviews/findings.json">reviews/findings.json</a>;
+this session's dispositions are recorded in <a href="https://github.com/karagemop466-tech/GOLD2/blob/main/COORDINATION.md">COORDINATION.md</a>. Open findings stay open until their owning session resolves them.</p>
+
+<h2>7. Pass history</h2>
+<p>Every pass run is appended to <code>dashboard/verification-log.json</code> in the repo
+(<a href="https://github.com/karagemop466-tech/GOLD2/blob/arena/70b76800-gold2/dashboard/verification-log.json">view on GitHub</a>).
+Latest result is also shown on the <a href="index.html">home page</a>.</p>
+<p>Related dashboards in this repo: <a href="../index.html">root research dashboard</a> ·
+<a href="../site/index.html">earlier pass (site/)</a>.</p>
+</main>
+<footer class="site"><div class="wrap">
+<p>GOLD2 research dashboard · <a href="index.html">Home</a> · <a href="flagged.html">Flagged for Review</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

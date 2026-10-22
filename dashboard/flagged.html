@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review — GOLD2</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">GOLD<span>◆</span>2</a>
+<nav class="main" aria-label="Main">
+<a href="index.html">Home</a>
+<a href="checklist.html">Checklist</a>
+<a href="rings.html">Rings</a>
+<a href="retailers.html">Retailers</a>
+<a href="calculator.html">Calculator</a>
+<a href="reference.html">Reference</a>
+<a href="methodology.html">Method</a>
+<a href="flagged.html">Flagged&nbsp;for&nbsp;Review</a>
+</nav>
+</div></header>
+<main>
+<div class="banner" role="alert">
+<h2>⛔ NO HALLUCINATIONS — this page is the point</h2>
+<p>Anything we could <strong>not</strong> confirm on an official source is published here — with its evidence and what would resolve it —
+instead of being guessed at. Flagged items do <strong>not</strong> block publishing; they are your manual-review queue.
+After reviewing, we recommend you <strong>keep looking for hallucinations</strong> anywhere on the site.</p>
+</div>
+<h1>Flagged for Review</h1>
+<p class="muted">Source of truth: <code>dashboard/data/flags.json</code>. Each flag links the affected rows and the official pages to check.</p>
+<!-- BUILD:FLAGS -->
+<div class="card" id="F-WEIGHT"><h3>F-WEIGHT — Ring weight (grams) not published on product pages</h3><p><strong>Applies to:</strong> <a class="tag" href="rings.html">BN-001</a> <a class="tag" href="rings.html">BN-002</a> <a class="tag" href="rings.html">BN-003</a> <a class="tag" href="rings.html">BN-004</a> <a class="tag" href="rings.html">CS-001</a></p><p><strong>Issue:</strong> None of the fetched official product pages state the ring&#x27;s weight in grams. Weight cells are blank (unverified).</p><p><strong>Evidence:</strong> Full fetched page text for each product (2026-10-22) contains stock number, metal, width, and price (Blue Nile) but no gram weight. See each ring&#x27;s source link.</p><p><strong>How to resolve:</strong> Ask the seller for the weight in grams before purchase; after delivery, have an independent jeweler weigh the ring. Do not infer weight from width or photos.</p><p class="small muted">Blocks merge: no (review after publish)</p></div>
+<div class="card" id="F-HALLMARK"><h3>F-HALLMARK — Hallmark / maker&#x27;s mark wording not stated on product pages</h3><p><strong>Applies to:</strong> <a class="tag" href="rings.html">BN-001</a> <a class="tag" href="rings.html">BN-002</a> <a class="tag" href="rings.html">BN-003</a> <a class="tag" href="rings.html">BN-004</a> <a class="tag" href="rings.html">CS-001</a></p><p><strong>Issue:</strong> None of the fetched pages describe the physical hallmark (karat stamp + maker&#x27;s mark) on the ring itself.</p><p><strong>Evidence:</strong> Fetched page text (2026-10-22) for all five products; hallmark cells blank per the no-hallucination rule.</p><p><strong>How to resolve:</strong> Before wearing/resizing, inspect the stamp under magnification and ask an independent jeweler to confirm a karat mark plus a maker&#x27;s mark. The stamp alone does not prove purity — request XRF or another professional assay.</p><p class="small muted">Blocks merge: no (review after publish)</p></div>
+<div class="card" id="F-SOLID-WORDING"><h3>F-SOLID-WORDING — &#x27;Solid gold&#x27; wording not observed on listing pages</h3><p><strong>Applies to:</strong> <a class="tag" href="rings.html">BN-001</a> <a class="tag" href="rings.html">BN-002</a> <a class="tag" href="rings.html">BN-003</a> <a class="tag" href="rings.html">BN-004</a> <a class="tag" href="rings.html">CS-001</a></p><p><strong>Issue:</strong> Listings state the metal (e.g., &#x27;14K Yellow Gold&#x27;) but the fetched page text does not include the words &#x27;solid gold&#x27;. The project checklist requires an explicit &#x27;solid gold&#x27; statement (not plated/vermeil/filled/overlay/tone).</p><p><strong>Evidence:</strong> Fetched page text for all five products (2026-10-22). FTC 16 CFR 23.3 permits karat+&#x27;Gold&#x27; marking and separately bars calling hollow-center items &#x27;solid&#x27; — see reference page.</p><p><strong>How to resolve:</strong> Ask the seller in writing whether the ring is solid gold throughout (and solid vs. hollow construction), and keep the reply with the receipt. Do not treat karat metal text as proof of solid construction.</p><p class="small muted">Blocks merge: no (review after publish)</p></div>
+<div class="card" id="F-PRICE-COSTCO"><h3>F-PRICE-COSTCO — Costco ring price not captured (page required interactive session)</h3><p><strong>Applies to:</strong> <a class="tag" href="rings.html">CS-001</a></p><p><strong>Issue:</strong> The Costco product page fetch on 2026-10-22 showed &#x27;Loading&#x27; in the price area, so no price was transcribed. Price cell is blank (unverified) — never inferred.</p><p><strong>Evidence:</strong> Fetched page content for https://www.costco.com/p/-/gemstone-diamond-14kt-yellow-gold-ring/100799255 on 2026-10-22.</p><p><strong>How to resolve:</strong> Open the source link in a browser to see the live price; record the price and date yourself. A future verification pass may capture it.</p><p class="small muted">Blocks merge: no (review after publish)</p></div>
+<div class="card" id="F-JA-REDIRECT"><h3>F-JA-REDIRECT — James Allen storefront now redirects to Blue Nile</h3><p><strong>Applies to:</strong> <a class="tag" href="retailers.html">jamesallen</a></p><p><strong>Issue:</strong> jamesallen.com (homepage, product, and policy URLs) resolves to bluenile.com. Standalone James Allen contact/return/warranty pages are retired; any old James Allen policy text found elsewhere on the web should be treated as stale.</p><p><strong>Evidence:</strong> Fetches on 2026-10-22: jamesallen.com requests landed on bluenile.com (&#x27;?jaRedirect=true&#x27;); Blue Nile pages display &#x27;James Allen is Now Part of Blue Nile&#x27; with a transition page at https://www.bluenile.com/james-allen.</p><p><strong>How to resolve:</strong> Use Blue Nile contact/returns information for &#x27;By James Allen&#x27; items, and re-verify at the linked official pages before purchase.</p><p class="small muted">Blocks merge: no (review after publish)</p></div>
+<div class="card" id="F-SPOT-PRICE"><h3>F-SPOT-PRICE — No gold spot-price snapshot stored (by design)</h3><p><strong>Applies to:</strong> <span class="tag">calculator</span> <span class="tag">all-rings</span></p><p><strong>Issue:</strong> Gold prices move constantly; any stored snapshot would go stale and risk becoming a hallucinated &#x27;current price&#x27;. This site stores no spot price.</p><p><strong>Evidence:</strong> LBMA publishes the benchmark twice daily on business days and requires a licence for data redistribution — see reference page.</p><p><strong>How to resolve:</strong> Enter a current USD-per-troy-ounce figure yourself in the calculator from the LBMA page or your broker, and note its date/time. Compare the setting price against the computed melt value as one input — not as a valuation.</p><p class="small muted">Blocks merge: no (review after publish)</p></div>
+<div class="card" id="F-PRICE-VOLATILITY"><h3>F-PRICE-VOLATILITY — Blue Nile prices are point-in-time captures (2026-10-22)</h3><p><strong>Applies to:</strong> <a class="tag" href="rings.html">BN-001</a> <a class="tag" href="rings.html">BN-002</a> <a class="tag" href="rings.html">BN-003</a> <a class="tag" href="rings.html">BN-004</a></p><p><strong>Issue:</strong> Prices were transcribed from official pages on 2026-10-22. Promotions (e.g., &#x27;Fall Edit: Up to 30% Off Select Styles&#x27; banners observed on site) and metal markets can change them at any time.</p><p><strong>Evidence:</strong> Capture dates on each row; promotional banners observed in fetched page headers on 2026-10-22.</p><p><strong>How to resolve:</strong> Always re-open the source link to confirm the live price before deciding. Prices here are evidence of what was shown on the capture date, not live quotes.</p><p class="small muted">Blocks merge: no (review after publish)</p></div>
+<!-- /BUILD:FLAGS -->
+</main>
+<footer class="site"><div class="wrap">
+<p>GOLD2 research dashboard · <a href="index.html">Home</a> · <a href="methodology.html">Verification method</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

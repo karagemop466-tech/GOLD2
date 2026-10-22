@@ -1,0 +1,70 @@
+{
+  "_note": "Reference facts for gold buying. Each entry states HOW it was verified. Computed values show their formula. No spot-price snapshots are stored (they go stale); the calculator takes a user-supplied price with an LBMA link.",
+  "karat_definition": {
+    "method": "computed",
+    "formula": "pure-gold fraction = karat ÷ 24",
+    "note": "Pure (fine) gold is 24 karat. Retailers state the same figures on official education pages (linked for manual review).",
+    "rows": [
+      {"karat": 24, "fraction": 1.0, "percent": "100%"},
+      {"karat": 18, "fraction": 0.75, "percent": "75%"},
+      {"karat": 14, "fraction": 0.5833333333, "percent": "58.333…% (≈58.3%)"},
+      {"karat": 10, "fraction": 0.4166666667, "percent": "41.666…% (≈41.7%)"}
+    ],
+    "manual_review_links": [
+      "https://www.bluenile.com/jewelry/gold-jewelry/gold-rings",
+      "https://www.costco.com/opt/yellow-gold-rings",
+      "https://www.costco.com/jewelry-buying-guide-metals.html"
+    ]
+  },
+  "troy_ounce": {
+    "grams_per_troy_ounce": 31.1034768,
+    "exact": true,
+    "verification": "Figure read on the official LBMA 'Troy Ounce' page (fetched 2026-10-22): '1 troy ounce = 31.1034768 grams (exactly)'. Same figure published by NIST for precious-metal conversions (linked for manual review).",
+    "sources": [
+      "https://www.lbma.org.uk/wonders-of-gold/items/the-troy-ounce",
+      "https://www.nist.gov/document/precious-metals-conversion-information-march2015pdf"
+    ]
+  },
+  "lbma_price_method": {
+    "summary": "The LBMA Gold Price is set twice daily in auctions (10:30 and 15:00 London time), independently operated and administered by ICE Benchmark Administration (IBA), in US dollars. Prices in sterling/euro are indicative, for settlement only. Benchmarks are not published on weekends or UK bank holidays. Real-time/historical benchmark data requires a licence from IBA.",
+    "verification": "Read on the official LBMA Precious Metal Prices page (fetched 2026-10-22).",
+    "sources": [
+      "https://www.lbma.org.uk/prices-and-data/lbma-precious-metal-prices",
+      "https://www.lbma.org.uk/prices-and-data/about-lbma-daily-auction-prices"
+    ],
+    "snapshot": null,
+    "snapshot_note": "No price snapshot is stored on this site. Enter the current price yourself in the calculator from the LBMA page or your broker quote, and record the date/time."
+  },
+  "hallmark_law": [
+    {
+      "title": "National Gold and Silver Stamping Act — fineness tolerances (15 U.S.C. § 295)",
+      "summary": "Gold articles must not test more than 3 parts per thousand below the stamped fineness (solder-free portion); the whole article including solder must not test more than 3ppt below (watchcases, flatware) or 7ppt below (all other articles) the mark.",
+      "verification": "Read on govinfo 15 U.S.C. Chapter 8 (fetched 2026-10-22).",
+      "source": "https://www.govinfo.gov/content/pkg/USCODE-2009-title15/html/USCODE-2009-title15-chap8.htm"
+    },
+    {
+      "title": "Stamping Act — maker's mark required with any quality mark (15 U.S.C. § 297(b))",
+      "summary": "Anyone who applies (or imports an article bearing) a quality mark stating gold content must also apply their registered trademark or name — by the same means, in type at least as large, as close as possible to the quality mark.",
+      "verification": "Read on govinfo 15 U.S.C. Chapter 8, § 297(b) (fetched 2026-10-22).",
+      "source": "https://www.govinfo.gov/content/pkg/USCODE-2009-title15/html/USCODE-2009-title15-chap8.htm"
+    },
+    {
+      "title": "FTC Jewelry Guides — gold content (16 CFR § 23.3)",
+      "summary": "Misrepresenting gold presence, quantity, or karat fineness is unfair/deceptive. A karat designation must immediately precede the word 'Gold' with at least equal conspicuousness (e.g., '14 Karat Gold'). Hollow-center gold-alloy products must disclose it and must NOT be called 'solid'. Gold plate/filled/overlay/rolled and electroplate have specific fineness, thickness, and disclosure rules.",
+      "verification": "Read on eCFR 16 CFR Part 23 (fetched 2026-10-22).",
+      "source": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23"
+    },
+    {
+      "title": "FTC Jewelry Guides — vermeil (16 CFR § 23.4)",
+      "summary": "'Vermeil' means a sterling-silver base coated on all significant surfaces with gold (or ≥10K gold alloy) of reasonable durability and at least 2.5 microns of fine gold. A base-metal layer under the gold must be disclosed.",
+      "verification": "Read on eCFR 16 CFR Part 23 (fetched 2026-10-22).",
+      "source": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23"
+    },
+    {
+      "title": "FTC Jewelry Guides — quality marks (16 CFR § 23.10)",
+      "summary": "NOT line-by-line reviewed for this project. Linked for manual review.",
+      "verification": "not reviewed — link only",
+      "source": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "_note": "Flagged-for-review items. Every null/unverified value in rings.json and retailers.json must have a flag here. Flags do NOT block publishing — they are published on flagged.html for manual review.",
+  "flags": [
+    {
+      "id": "F-WEIGHT",
+      "title": "Ring weight (grams) not published on product pages",
+      "applies_to": ["BN-001", "BN-002", "BN-003", "BN-004", "CS-001"],
+      "issue": "None of the fetched official product pages state the ring's weight in grams. Weight cells are blank (unverified).",
+      "evidence": "Full fetched page text for each product (2026-10-22) contains stock number, metal, width, and price (Blue Nile) but no gram weight. See each ring's source link.",
+      "resolution": "Ask the seller for the weight in grams before purchase; after delivery, have an independent jeweler weigh the ring. Do not infer weight from width or photos.",
+      "blocks_merge": false
+    },
+    {
+      "id": "F-HALLMARK",
+      "title": "Hallmark / maker's mark wording not stated on product pages",
+      "applies_to": ["BN-001", "BN-002", "BN-003", "BN-004", "CS-001"],
+      "issue": "None of the fetched pages describe the physical hallmark (karat stamp + maker's mark) on the ring itself.",
+      "evidence": "Fetched page text (2026-10-22) for all five products; hallmark cells blank per the no-hallucination rule.",
+      "resolution": "Before wearing/resizing, inspect the stamp under magnification and ask an independent jeweler to confirm a karat mark plus a maker's mark. The stamp alone does not prove purity — request XRF or another professional assay.",
+      "blocks_merge": false
+    },
+    {
+      "id": "F-SOLID-WORDING",
+      "title": "'Solid gold' wording not observed on listing pages",
+      "applies_to": ["BN-001", "BN-002", "BN-003", "BN-004", "CS-001"],
+      "issue": "Listings state the metal (e.g., '14K Yellow Gold') but the fetched page text does not include the words 'solid gold'. The project checklist requires an explicit 'solid gold' statement (not plated/vermeil/filled/overlay/tone).",
+      "evidence": "Fetched page text for all five products (2026-10-22). FTC 16 CFR 23.3 permits karat+'Gold' marking and separately bars calling hollow-center items 'solid' — see reference page.",
+      "resolution": "Ask the seller in writing whether the ring is solid gold throughout (and solid vs. hollow construction), and keep the reply with the receipt. Do not treat karat metal text as proof of solid construction.",
+      "blocks_merge": false
+    },
+    {
+      "id": "F-PRICE-COSTCO",
+      "title": "Costco ring price not captured (page required interactive session)",
+      "applies_to": ["CS-001"],
+      "issue": "The Costco product page fetch on 2026-10-22 showed 'Loading' in the price area, so no price was transcribed. Price cell is blank (unverified) — never inferred.",
+      "evidence": "Fetched page content for https://www.costco.com/p/-/gemstone-diamond-14kt-yellow-gold-ring/100799255 on 2026-10-22.",
+      "resolution": "Open the source link in a browser to see the live price; record the price and date yourself. A future verification pass may capture it.",
+      "blocks_merge": false
+    },
+    {
+      "id": "F-JA-REDIRECT",
+      "title": "James Allen storefront now redirects to Blue Nile",
+      "applies_to": ["jamesallen"],
+      "issue": "jamesallen.com (homepage, product, and policy URLs) resolves to bluenile.com. Standalone James Allen contact/return/warranty pages are retired; any old James Allen policy text found elsewhere on the web should be treated as stale.",
+      "evidence": "Fetches on 2026-10-22: jamesallen.com requests landed on bluenile.com ('?jaRedirect=true'); Blue Nile pages display 'James Allen is Now Part of Blue Nile' with a transition page at https://www.bluenile.com/james-allen.",
+      "resolution": "Use Blue Nile contact/returns information for 'By James Allen' items, and re-verify at the linked official pages before purchase.",
+      "blocks_merge": false
+    },
+    {
+      "id": "F-SPOT-PRICE",
+      "title": "No gold spot-price snapshot stored (by design)",
+      "applies_to": ["calculator", "all-rings"],
+      "issue": "Gold prices move constantly; any stored snapshot would go stale and risk becoming a hallucinated 'current price'. This site stores no spot price.",
+      "evidence": "LBMA publishes the benchmark twice daily on business days and requires a licence for data redistribution — see reference page.",
+      "resolution": "Enter a current USD-per-troy-ounce figure yourself in the calculator from the LBMA page or your broker, and note its date/time. Compare the setting price against the computed melt value as one input — not as a valuation.",
+      "blocks_merge": false
+    },
+    {
+      "id": "F-PRICE-VOLATILITY",
+      "title": "Blue Nile prices are point-in-time captures (2026-10-22)",
+      "applies_to": ["BN-001", "BN-002", "BN-003", "BN-004"],
+      "issue": "Prices were transcribed from official pages on 2026-10-22. Promotions (e.g., 'Fall Edit: Up to 30% Off Select Styles' banners observed on site) and metal markets can change them at any time.",
+      "evidence": "Capture dates on each row; promotional banners observed in fetched page headers on 2026-10-22.",
+      "resolution": "Always re-open the source link to confirm the live price before deciding. Prices here are evidence of what was shown on the capture date, not live quotes.",
+      "blocks_merge": false
+    }
+  ]
+}

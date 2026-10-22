@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GOLD — Gold Engagement Ring Research Dashboard</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">GOLD<span>◆</span>2</a>
+<nav class="main" aria-label="Main">
+<a href="index.html">Home</a>
+<a href="checklist.html">Checklist</a>
+<a href="rings.html">Rings</a>
+<a href="retailers.html">Retailers</a>
+<a href="calculator.html">Calculator</a>
+<a href="reference.html">Reference</a>
+<a href="methodology.html">Method</a>
+<a href="flagged.html">Flagged&nbsp;for&nbsp;Review</a>
+</nav>
+</div></header>
+<main>
+<div class="banner" role="alert">
+<h2>⛔ NO HALLUCINATIONS — read this first</h2>
+<p><strong>Every price, spec, and policy claim on this site must trace to an official source linked on the same row.</strong>
+If a value could not be confirmed on an official page, the cell is left <strong>blank</strong> and flagged <span class="tag unverified">unverified</span>.
+We never infer, estimate, or fill in values. Blank does not mean zero — it means “not confirmed.”</p>
+<p>All verification on this site refers back to this rule: see <a href="methodology.html">Method</a>
+for the passes we run after every review, and <a href="flagged.html">Flagged for Review</a> for everything
+currently unverified. <strong>Always re-open the source link and confirm the live page before any purchase —
+listings and prices change.</strong></p>
+</div>
+
+<h1>Gold Engagement Ring Research Dashboard</h1>
+<p class="muted">Goal: collect, organize, and analyze solid-gold engagement-ring options against a strict
+<a href="checklist.html">online-buying checklist</a> — with dates, source links, current-as-observed prices,
+and a gold-weight calculator. Last research capture: <strong>2026-10-22 (UTC)</strong>.
+Related dashboards in this repo: <a href="../index.html">root research dashboard</a> ·
+<a href="../site/index.html">earlier pass (site/)</a>.</p>
+
+<!-- BUILD:STATS -->
+<div class="grid"><div class="card"><div class="big">5</div><h3>Rings tracked</h3><p class="small muted">Each with an official source link + capture date.</p></div><div class="card"><div class="big">4</div><h3>Prices verified</h3><p class="small muted">1 blank (unverified) — never inferred.</p></div><div class="card"><div class="big">3</div><h3>Retailers</h3><p class="small muted">Official sites, contacts, return policies.</p></div><div class="card"><div class="big">7</div><h3>Open flags</h3><p class="small muted">Published for manual review; none block.</p></div></div>
+<!-- /BUILD:STATS -->
+<div class="grid">
+<div class="card"><h3>✔ Buying checklist</h3>
+<p>The 12-point online-buying checklist: karat, solid gold, hallmark, weight, seller reputation, price-vs-gold, returns, payment, documentation, independent verification, XRF testing.</p>
+<p><a href="checklist.html">Open checklist →</a></p></div>
+<div class="card"><h3>💍 Ring listings</h3>
+<p>Every candidate ring in one table: karat as stated, price as observed with capture date, stock number, specs, weight, hallmark, source link, and flags.</p>
+<p><a href="rings.html">Open ring table →</a></p></div>
+<div class="card"><h3>🏬 Retailers</h3>
+<p>Official sites, verified contact details, return-policy summaries with exclusions, and jewelry notes — each linked to the official page.</p>
+<p><a href="retailers.html">Open retailer directory →</a></p></div>
+<div class="card"><h3>🧮 Gold calculator</h3>
+<p>Melt (raw-gold) value from weight × karat × your own current spot price. No stored prices — you enter the quote and its date.</p>
+<p><a href="calculator.html">Open calculator →</a></p></div>
+<div class="card"><h3>📖 Gold reference</h3>
+<p>Karat math, troy-ounce conversion, how the LBMA benchmark works, and the hallmark/maker’s-mark law (15 U.S.C. §§ 295, 297; FTC 16 CFR Part 23).</p>
+<p><a href="reference.html">Open reference →</a></p></div>
+<div class="card"><h3>🚩 Flagged for Review</h3>
+<p>Everything unverified or needing your eyes: blank weights, unstated hallmarks, uncaptured prices, and redirect notices — with what would resolve each.</p>
+<p><a href="flagged.html">Open flagged items →</a></p></div>
+</div>
+
+<h2>Latest verification pass</h2>
+<!-- BUILD:VERIFY_SUMMARY -->
+<div class="ok"><p><strong>Latest published pass: PASS</strong> (2026-10-22T23:48:35Z, <code>verify.py --check-build</code>)</p><p class="small">P1-sources: PASS · P2-prices: PASS · P3-blanks: PASS · P4-crossref: PASS · P5-retailers: PASS · P8-evidence: PASS · P6-build: PASS · P7-links: PASS</p></div>
+<!-- /BUILD:VERIFY_SUMMARY -->
+<p class="small muted">Passes run automatically after every review (<code>dashboard/scripts/verify.py</code>). Full history: <code>dashboard/verification-log.json</code> in the repo. Standing recommendation: <strong>keep looking for hallucinations</strong> — if any value lacks a same-row official source link, treat it as unverified and report it.</p>
+
+<h2>Key findings (each linked to its source page)</h2>
+<ul>
+<li><strong>4 Blue Nile settings verified 2026-10-22</strong> with prices $1,125–$1,240 (setting only, center stone separate) — see <a href="rings.html">ring table</a>.</li>
+<li><strong>Weights and hallmark wordings are not published</strong> on any of the five product pages — all blank and flagged. You must ask the seller and verify after delivery.</li>
+<li><strong>“Solid gold” wording was not observed</strong> on the listing pages (they state karat metal, e.g. “14K Yellow Gold”) — flagged for written confirmation with the seller.</li>
+<li><strong>James Allen now redirects to Blue Nile</strong> (verified by fetch 2026-10-22) — old standalone James Allen policy text should be treated as stale.</li>
+<li><strong>Costco jewelry is returnable</strong> incl. shipping/handling, with gemologist inspection for diamonds over 1.00 ct — see <a href="retailers.html">retailers</a>.</li>
+<li><strong>A karat stamp alone does not prove purity</strong> — U.S. law pairs the quality mark with a maker’s mark and tolerances, and the checklist requires independent testing (XRF) after delivery.</li>
+</ul>
+</main>
+<footer class="site"><div class="wrap">
+<p>GOLD2 research dashboard · Data captured 2026-10-22 (UTC) · Prices are point-in-time observations, not live quotes ·
+<a href="methodology.html">Verification method</a> · <a href="flagged.html">Flagged for Review</a> ·
+Repo: <a href="https://github.com/karagemop466-tech/GOLD2">karagemop466-tech/GOLD2</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

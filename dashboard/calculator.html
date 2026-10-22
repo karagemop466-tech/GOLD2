@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gold calculator — GOLD2</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="index.html">GOLD<span>◆</span>2</a>
+<nav class="main" aria-label="Main">
+<a href="index.html">Home</a>
+<a href="checklist.html">Checklist</a>
+<a href="rings.html">Rings</a>
+<a href="retailers.html">Retailers</a>
+<a href="calculator.html">Calculator</a>
+<a href="reference.html">Reference</a>
+<a href="methodology.html">Method</a>
+<a href="flagged.html">Flagged&nbsp;for&nbsp;Review</a>
+</nav>
+</div></header>
+<main>
+<div class="banner" role="alert">
+<h2>⛔ NO HALLUCINATIONS</h2>
+<p>This calculator stores <strong>no prices</strong>. You enter a current USD-per-troy-ounce quote <strong>and its date/time</strong>;
+the math is shown step by step so you can check it. Get the benchmark method at the
+<a href="https://www.lbma.org.uk/prices-and-data/lbma-precious-metal-prices">LBMA Precious Metal Prices page</a>.</p>
+</div>
+<h1>Gold weight / melt-value calculator</h1>
+<p class="muted">Melt (raw-gold) value tells you what the gold content alone is worth — one input for
+<a href="checklist.html">checklist item 6</a> (price vs. gold value). It is <strong>not</strong> a retail valuation:
+craftsmanship, stones, brand, and margin are extra, and this spot-price arithmetic is theoretical —
+actual buy/sell spreads differ. Per the project checklist, an unusually cheap asking price is a red flag;
+finished jewelry normally prices far above melt.</p>
+<form class="calc" onsubmit="return false">
+<div class="row">
+<div><label for="weight">Metal weight (grams, metal only)</label>
+<input id="weight" type="number" min="0" step="0.01" placeholder="e.g. 4.50">
+<p class="small muted">Exclude stones and non-gold components — total ring weight overstates gold content. Use the seller's stated metal weight or a jeweler's measurement.</p></div>
+<div><label for="karat">Karat</label>
+<select id="karat"><option value="14">14K (14 ÷ 24 = 58.333…%)</option><option value="18">18K (18 ÷ 24 = 75%)</option><option value="10">10K (10 ÷ 24 = 41.666…%)</option><option value="24">24K fine (100%)</option></select></div>
+</div>
+<div class="row">
+<div><label for="spot">Spot price (USD per troy ounce)</label>
+<input id="spot" type="number" min="0" step="0.01" placeholder="e.g. 4189.20">
+<p class="small muted">Currency: USD only. Convert other currencies first (not done here). Only finite positive numbers are accepted — anything else blanks the outputs.</p></div>
+<div><label for="spot-date">Spot quote date/time (required for your records)</label>
+<input id="spot-date" type="text" placeholder="e.g. 2026-10-22 15:00 London PM fix"></div>
+</div>
+<div class="result" id="calc-result" aria-live="polite"></div>
+</form>
+<h2>Formulas (check our math)</h2>
+<pre>pure-gold grams   = metal weight (g) × karat ÷ 24
+price per gram    = spot (USD/troy oz) ÷ 31.1034768
+melt value (USD)  = pure-gold grams × price per gram</pre>
+<p class="src">Constants: 1 troy ounce = <strong>31.1034768 g exact</strong> —
+<a href="https://www.lbma.org.uk/wonders-of-gold/items/the-troy-ounce">LBMA, The Troy Ounce</a> ·
+<a href="https://www.nist.gov/document/precious-metals-conversion-information-march2015pdf">NIST precious-metals conversions</a>.
+Benchmark method (no snapshot stored here):
+<a href="https://www.lbma.org.uk/prices-and-data/lbma-precious-metal-prices">LBMA Precious Metal Prices</a>.</p>
+<div class="notice"><strong>Worked example (HYPOTHETICAL — not a real ring):</strong> 4.50 g of metal at 14K with a $4,000/troy-oz quote →
+pure gold = 4.50 × 14 ÷ 24 = 2.625 g; per-gram = 4000 ÷ 31.1034768 ≈ $128.60; melt ≈ 2.625 × 128.60 ≈ <strong>$337.58</strong>.
+Labeled hypothetical so it can never be mistaken for a finding.</div>
+</main>
+<footer class="site"><div class="wrap">
+<p>GOLD2 research dashboard · <a href="index.html">Home</a> · <a href="methodology.html">Verification method</a> · <a href="flagged.html">Flagged for Review</a></p>
+</div></footer>
+<script src="assets/app.js"></script>
+<script src="assets/calculator.js"></script>
+</body>
+</html>
