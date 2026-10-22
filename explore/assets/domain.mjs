@@ -4,7 +4,9 @@ export const CATEGORIES = Object.freeze([
   {id: 'natural', name: 'Natural diamonds', eyebrow: '01 / NATURAL', description: 'Natural-diamond rings and two-stage settings. A stone description does not authenticate the metal.'},
   {id: 'lab', name: 'Lab-grown diamonds', eyebrow: '02 / LAB-GROWN', description: 'Lab-grown-diamond options. Compare the exact selected stone, metal, size and complete-ring scope.'},
   {id: 'gemstone', name: 'Gemstones & moissanite', eyebrow: '03 / ALTERNATIVES', description: 'Ruby, sapphire and lab-created moissanite alternatives; no style or durability preference assumed.'},
-  {id: 'bands', name: 'Bands & sculptural rings', eyebrow: '04 / ALTERNATIVES', description: 'Plain, decorative and diamond-accent alternatives. Not all are sold as conventional engagement rings.'}
+  {id: 'settings', name: 'Settings & unselected centers', eyebrow: '04 / SETTING ONLY', description: 'Settings without a selected center stone. Neither natural nor lab-grown origin is assumed.'},
+  {id: 'unclassified', name: 'Diamond origin unconfirmed', eyebrow: '05 / OPEN EVIDENCE', description: 'Diamond-ring leads whose fetched specifications do not establish natural or lab-grown origin.'},
+  {id: 'bands', name: 'Bands & sculptural rings', eyebrow: '06 / ALTERNATIVES', description: 'Plain, decorative and diamond-accent alternatives. Not all are sold as conventional engagement rings.'}
 ]);
 export const REQUIRED_FACTS = Object.freeze([
   'karat', 'solidGold', 'stone', 'itemWeightG', 'netMetalWeightG', 'fineGoldWeightG',

@@ -12,11 +12,11 @@ export const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':
 export const escapeAttr = escapeHTML;
 export const PRODUCT_HOSTS = Object.freeze({
   automic: ['www.automicgold.com'], catbird: ['www.catbirdnyc.com'], auvere: ['auvere.com'],
-  quince: ['www.quince.com'], mene: ['mene.com'], bluenile: ['www.bluenile.com']
+  quince: ['www.quince.com'], mene: ['mene.com'], bluenile: ['www.bluenile.com'], zales: ['www.zales.com'], vrai: ['www.vrai.com'], 'brilliant-earth': ['www.brilliantearth.com']
 });
 export const SOURCE_HOSTS = new Set([
   ...Object.values(PRODUCT_HOSTS).flat(), 'consumer.ftc.gov', 'www.gia.edu', 'www.nist.gov',
-  'www.lbma.org.uk', 'www.jmbullion.com', 'www.bbb.org', 'www.trustpilot.com'
+  'www.lbma.org.uk', 'www.gold.org', 'www.jmbullion.com', 'www.bbb.org', 'www.trustpilot.com'
 ]);
 export function safeSourceURL(value) {
   try {const url = new URL(value); return url.protocol === 'https:' && !url.username && !url.password && (!url.port || url.port === '443') && SOURCE_HOSTS.has(url.hostname);}
@@ -26,7 +26,8 @@ export function hasNumber(text, number) {
   // Numeric token match, not a loose substring (e.g. 726 must not match 1726).
   const normalized = text.replaceAll(',', '').replace(/\s+/g, ' ');
   const token = String(number).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  return new RegExp(`(?<![\\d.])${token}(?![\\d.])`).test(normalized);
+  const zeroes = Number.isInteger(number) ? '(?:\\.0+)?' : '0*';
+  return new RegExp(`(?<![\\d.])${token}${zeroes}(?![\\d.])`).test(normalized);
 }
 export function validateResearch({catalog, evidence, review}, now = Date.now()) {
   const errors = [], warnings = [];
@@ -78,17 +79,17 @@ export function validateResearch({catalog, evidence, review}, now = Date.now()) 
     }
     if (p.price !== null) {
       const price = p.price;
-      if (!finitePositive(price.amount) || price.currency !== 'USD' || !price.scope || !['displayed-option','unbound-display','setting-only'].includes(price.kind)) addError(p.id, 'invalid observed price/scope/currency');
+      if (!finitePositive(price.amount) || !['USD','EUR'].includes(price.currency) || !price.scope || !['displayed-option','unbound-display','setting-only'].includes(price.kind)) addError(p.id, 'invalid observed price/scope/currency');
       const proofs = (price.evidence ?? []).map(r => resolve(r, p.id + '.price')).filter(Boolean);
       if (!proofs.some(x => hasNumber(x.text, price.amount))) addError(p.id, 'price amount is not present in cited passage');
-      if (!proofs.some(x => /\bUSD\b/.test(x.text))) addError(p.id, 'currency context is not evidenced');
+      if (!proofs.some(x => new RegExp('\\b'+price.currency+'\\b').test(x.text))) addError(p.id, 'currency context is not evidenced');
       if (proofs.some(x => x.source.kind === 'independent-platform' || x.source.access === 'unavailable')) addError(p.id, 'price cannot come from a review or unavailable source');
       if (['future-dated','unverified'].includes(freshness(price.observedAt, now))) addError(p.id, 'price timestamp invalid');
       if (freshness(price.observedAt, now, catalog.meta.freshnessHours) === 'stale') warnings.push(`${p.id}: price older than ${catalog.meta.freshnessHours}h; manual refresh required`);
     } else warnings.push(`${p.id}: USD/configured price unverified; blank`);
     if (p.reportedWeight !== null) {
       const w = p.reportedWeight, proof = resolve(w.evidence, p.id + '.reportedWeight');
-      if (!finitePositive(w.min) || !finitePositive(w.max) || w.max < w.min || w.unit !== 'g' || w.approximate !== true || !['item','fine-undefined'].includes(w.basis)) addError(p.id, 'invalid reported weight range/basis');
+      if (!finitePositive(w.min) || !finitePositive(w.max) || w.max < w.min || w.unit !== 'g' || typeof w.approximate !== 'boolean' || !['item','fine-undefined','seller-metal'].includes(w.basis)) addError(p.id, 'invalid reported weight range/basis');
       if (proof && (!hasNumber(proof.text, w.min) || !hasNumber(proof.text, w.max))) addError(p.id, 'weight range not present in passage');
     }
     const missing = missingRequirements(p);
@@ -98,7 +99,7 @@ export function validateResearch({catalog, evidence, review}, now = Date.now()) 
   }
   for (const s of catalog.sellers ?? []) {
     if (!s.id || !s.name) addError('sellers', 'missing identity');
-    for (const key of ['contact','policy']) if (!sources.has(s[key])) addError(s.id, `missing ${key} source`);
+    for (const key of ['contact','policy']) if (s[key] !== null && !sources.has(s[key])) addError(s.id, `missing ${key} source`);
     if (s.independent !== null && sources.get(s.independent)?.kind !== 'independent-platform') addError(s.id, 'invalid independent platform reference');
     if (s.returnDays !== null) {
       const proof = resolve(s.returnDays, s.id + '.returnDays');

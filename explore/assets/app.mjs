@@ -38,7 +38,7 @@ if (choice) {
   const byId = id => document.getElementById(id);
   const money = n => new Intl.NumberFormat('en-US', {style:'currency', currency:'USD'}).format(n);
   const decimal = n => new Intl.NumberFormat('en-US', {maximumFractionDigits:6}).format(n);
-  const allowedProducts = new Set(['www.automicgold.com','www.catbirdnyc.com','auvere.com','www.quince.com','mene.com','www.bluenile.com']);
+  const allowedProducts = new Set(['www.automicgold.com','www.catbirdnyc.com','auvere.com','www.quince.com','mene.com','www.bluenile.com','www.zales.com','www.vrai.com','www.brilliantearth.com']);
   const toggleMode = isScenario => {
     byId('automatic-panel').hidden = isScenario;
     byId('scenario-panel').hidden = !isScenario;

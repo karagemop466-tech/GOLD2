@@ -4,11 +4,21 @@ import {loadResearch,validateResearch,escapeHTML,safeSourceURL,hasNumber} from '
 const original=await loadResearch();
 const check=(mutate)=> {const r=structuredClone({catalog:original.catalog,evidence:original.evidence,review:original.review});mutate(r);return validateResearch(r).errors;};
 test('current record has no provenance consistency errors; gaps remain warnings',()=> {
-  const r=validateResearch(original);assert.deepEqual(r.errors,[]);assert.ok(r.warnings.length>18);assert.equal(r.counts.products,18);assert.equal(r.counts.purchaseReady,0);
+  const r=validateResearch(original);assert.deepEqual(r.errors,[]);assert.ok(r.warnings.length>18);assert.equal(r.counts.products,32);assert.equal(r.counts.purchaseReady,0);
 });
 test('existing two Blue Nile records and all sixteen extension candidates are retained',()=> {
   const ids=new Set(original.catalog.products.map(p=>p.id));
   for(const id of ['bn-501480w14','bn-501480w14l','ag-natural','ag-24k','av-clean','av-bridge','mene-knot','cb-odile','quince-oval'])assert.ok(ids.has(id));
+});
+test('combined register covers every original root URL exactly once',async()=>{
+  const {readdir,readFile}=await import('node:fs/promises');
+  const urls=original.catalog.products.map(p=>original.sourceMap.get(p.source).url);
+  assert.equal(new Set(urls).size,32);
+  for(const file of await readdir(new URL('../data/listings/',import.meta.url))){
+    const d=JSON.parse(await readFile(new URL('../data/listings/'+file,import.meta.url),'utf8'));
+    for(const p of d.items)assert.equal(urls.filter(u=>u===p.source_url).length,1,p.id);
+  }
+  assert.equal(original.catalog.products.find(p=>p.id==='ext-be-121h6').category,'settings');
 });
 test('invented or mismatched prices are rejected',()=> {
   assert.ok(check(r=>r.catalog.products[0].price.amount=1726).some(e=>e.includes('price amount')));
@@ -37,6 +47,8 @@ test('publisher allowlist is exact, HTTPS only, and disallows embedded credentia
 });
 test('escape rendered fields, and do not match unrelated numeric substrings',()=> {
   assert.equal(escapeHTML('<img src=x onerror="bad">'), '&lt;img src=x onerror=&quot;bad&quot;&gt;');
+  assert.equal(hasNumber('€990.00(Setting Only)',990),true);
+  assert.equal(hasNumber('€990.01',990),false);assert.equal(hasNumber('1.20g',1.2),true);assert.equal(hasNumber('1.201g',1.2),false);
   assert.equal(hasNumber('$1,726',726),false);assert.equal(hasNumber('$726',726),true);
   assert.equal(hasNumber('11.2 grams',1.2),false);assert.equal(hasNumber('1.2g',1.2),true);
 });

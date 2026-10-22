@@ -2,15 +2,15 @@
   "meta": {
     "schemaVersion": 1,
     "title": "GOLD",
-    "reviewedAt": "2026-10-22T23:19:45Z",
+    "reviewedAt": "2026-10-22T23:44:35Z",
     "reviewSession": "arena-24aeb4a8",
-    "scope": "18 named product pages across six retailers: 16 researched in this session plus two previously published Blue Nile settings, directly rechecked and retained. Complete reviewed set, not an exhaustive market inventory. Gemstone and band alternatives are explicitly categorized.",
+    "scope": "32 unique named product pages across nine retailers: 16 researched in this session plus all 16 previously published root-register entries, deduplicating the two shared Blue Nile settings. Product pages were directly rechecked; the complete reviewed set is not an exhaustive market inventory. Unselected settings and unconfirmed diamond origin have separate categories.",
     "pricePolicy": "No hallucinations: never invent prices, specifications, or verification. Null means unverified. Prices are dated observations, not live quotes or checkout totals. Source claims are not independent authentication.",
     "freshnessHours": 24,
     "sourceReviewDays": 30,
     "observationWindow": {
       "start": "2026-10-22T23:08:10Z",
-      "end": "2026-10-22T23:19:45Z"
+      "end": "2026-10-22T23:44:35Z"
     },
     "benchmark": {
       "amount": null,
@@ -120,6 +120,50 @@
       "returnFrom": "shipment",
       "summary": "Eligible original, unworn items: 30 days from shipment; RMA required. Two complimentary returns/year. Engraved, custom and items resized after initial purchase excluded; retain certificates.",
       "notes": "Existing two-setting research retained and directly rechecked. Full-ring price, currency context and independent reputation remain unconfirmed."
+    },
+    {
+      "id": "zales",
+      "name": "Zales",
+      "contact": null,
+      "policy": "ext-z-19957449",
+      "independent": null,
+      "payment": null,
+      "returnDays": {
+        "value": 30,
+        "source": "ext-z-19957449",
+        "quote": "returns"
+      },
+      "returnFrom": null,
+      "summary": "Product excerpt says free and easy 30-day returns. Standalone policy, clock, resized/custom exclusions and inspection permission are unconfirmed.",
+      "notes": "No contact channel or independent reputation check established in this combined review."
+    },
+    {
+      "id": "vrai",
+      "name": "VRAI",
+      "contact": "vrai-returns",
+      "policy": "vrai-returns",
+      "independent": null,
+      "payment": null,
+      "returnDays": {
+        "value": 30,
+        "source": "vrai-returns",
+        "quote": "window"
+      },
+      "returnFrom": "delivery",
+      "summary": "Eligible items: 30 days. Engagement-ring recycling fee $300 for original-payment refund; fee waived for store credit. Items above $15,000: store-credit conditions. Modified/resized, third-party-altered and custom items excluded.",
+      "notes": "Published withdrawal email only; contact not tested. Ring-size-6 metal-weight claim is not an independent assay."
+    },
+    {
+      "id": "brilliant-earth",
+      "name": "Brilliant Earth",
+      "contact": "be-context",
+      "policy": "be-context",
+      "independent": null,
+      "payment": null,
+      "returnDays": null,
+      "returnFrom": null,
+      "summary": "Full order-specific return terms not captured in this recheck. Consult the official care/returns hub; do not substitute promotional benefits for eligibility.",
+      "notes": "Care hub publishes 800.691.0952; the localized product page displayed 1.415.426.2781. Region/source context differs; no call placed."
     }
   ],
   "products": [
@@ -650,7 +694,7 @@
         "quote": "name"
       },
       "seller": "catbird",
-      "category": "natural",
+      "category": "unclassified",
       "source": "cb-odile",
       "observedAt": "2026-10-22T23:16:03Z",
       "scope": "Unselected product page; gold configuration and currency context not bound to price",
@@ -672,7 +716,8 @@
       "flags": [
         "dynamic-specifications",
         "price-unbound",
-        "indexed-price-conflict"
+        "indexed-price-conflict",
+        "diamond-origin-unconfirmed"
       ]
     },
     {
@@ -715,7 +760,7 @@
         "quote": "name"
       },
       "seller": "catbird",
-      "category": "natural",
+      "category": "unclassified",
       "source": "cb-ballet",
       "observedAt": "2026-10-22T23:16:03Z",
       "scope": "Unselected product page; gold configuration and currency context not bound to price",
@@ -736,7 +781,8 @@
       "reportedWeight": null,
       "flags": [
         "dynamic-specifications",
-        "price-unbound"
+        "price-unbound",
+        "diamond-origin-unconfirmed"
       ]
     },
     {
@@ -1103,6 +1149,657 @@
         "exact-size-unconfirmed",
         "inherited-rechecked"
       ]
+    },
+    {
+      "id": "ext-bn-194158",
+      "name": {
+        "value": "Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold",
+        "source": "ext-bn-194158",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "settings",
+      "source": "ext-bn-194158",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "18K Yellow Gold · setting only; center diamond and ring size unselected · platinum prongs disclosed",
+      "facts": {
+        "karat": {
+          "value": 18,
+          "source": "ext-bn-194158",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "setting-only",
+        "currency-unconfirmed",
+        "mixed-metal"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/18k.json",
+        "id": "BN-194158",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-bn-195269",
+      "name": {
+        "value": "Petite Solitaire Engagement Ring in 18k Yellow Gold",
+        "source": "ext-bn-195269",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "settings",
+      "source": "ext-bn-195269",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "18K Yellow Gold · setting only; center diamond and ring size unselected",
+      "facts": {
+        "karat": {
+          "value": 18,
+          "source": "ext-bn-195269",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "setting-only",
+        "currency-unconfirmed"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/18k.json",
+        "id": "BN-195269",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-vrai-classic-4p",
+      "name": {
+        "value": "Classic Round Brilliant Engagement Ring",
+        "source": "ext-vrai-classic-4p",
+        "quote": "name"
+      },
+      "seller": "vrai",
+      "category": "settings",
+      "source": "ext-vrai-classic-4p",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "18k Yellow Gold · Plain Band · Standard Width · 2.86g is stated only for ring size 6; no selected center or price",
+      "facts": {
+        "karat": {
+          "value": 18,
+          "source": "ext-vrai-classic-4p",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": {
+        "min": 2.86,
+        "max": 2.86,
+        "unit": "g",
+        "basis": "seller-metal",
+        "approximate": false,
+        "context": "Ring size 6 only; seller statement, not independently weighed",
+        "evidence": {
+          "source": "ext-vrai-classic-4p",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "price-not-exposed",
+        "size-six-metal-weight"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/18k.json",
+        "id": "VRAI-CLASSIC-4P",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-z-19957449",
+      "name": {
+        "value": "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
+        "source": "ext-z-19957449",
+        "quote": "name"
+      },
+      "seller": "zales",
+      "category": "unclassified",
+      "source": "ext-z-19957449",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "10K Gold stated in title · color, stone origin and selected size unconfirmed",
+      "facts": {
+        "karat": {
+          "value": 10,
+          "source": "ext-z-19957449",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "currency-unconfirmed",
+        "diamond-origin-unconfirmed",
+        "contact-unconfirmed"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/budget.json",
+        "id": "Z-19957449",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-z-20046552",
+      "name": {
+        "value": "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold",
+        "source": "ext-z-20046552",
+        "quote": "name"
+      },
+      "seller": "zales",
+      "category": "unclassified",
+      "source": "ext-z-20046552",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "10K Gold stated in title · color, stone origin and selected size unconfirmed",
+      "facts": {
+        "karat": {
+          "value": 10,
+          "source": "ext-z-20046552",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "currency-unconfirmed",
+        "diamond-origin-unconfirmed",
+        "contact-unconfirmed"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/budget.json",
+        "id": "Z-20046552",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-bn-192506",
+      "name": {
+        "value": "Petite Hidden Halo Solitaire Plus Diamond Engagement Ring in 14k Yellow Gold",
+        "source": "ext-bn-192506",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "natural",
+      "source": "ext-bn-192506",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "14K Yellow Gold · setting only; center diamond and ring size unselected",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ext-bn-192506",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": {
+          "value": "Natural Diamond Information",
+          "source": "ext-bn-192506",
+          "quote": "stone"
+        },
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "setting-only",
+        "currency-unconfirmed"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/halo-pave.json",
+        "id": "BN-192506",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-bn-315661",
+      "name": {
+        "value": "Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen",
+        "source": "ext-bn-315661",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "natural",
+      "source": "ext-bn-315661",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "14K White Gold · setting only; center diamond and ring size unselected",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ext-bn-315661",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": {
+          "value": "Natural Diamond Information",
+          "source": "ext-bn-315661",
+          "quote": "stone"
+        },
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "setting-only",
+        "currency-unconfirmed"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/halo-pave.json",
+        "id": "BN-315661",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-bn-203348",
+      "name": {
+        "value": "Classic Simple Solitaire Engagement Ring in 14K Yellow Gold",
+        "source": "ext-bn-203348",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "settings",
+      "source": "ext-bn-203348",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "14K Yellow Gold · setting only; center diamond and ring size unselected",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ext-bn-203348",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "setting-only",
+        "currency-unconfirmed"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/solitaire.json",
+        "id": "BN-203348",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-bn-195639",
+      "name": {
+        "value": "Petite Solitaire Engagement Ring in 14k Yellow Gold",
+        "source": "ext-bn-195639",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "settings",
+      "source": "ext-bn-195639",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "14K Yellow Gold · setting only; center diamond and ring size unselected",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ext-bn-195639",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "setting-only",
+        "currency-unconfirmed"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/solitaire.json",
+        "id": "BN-195639",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-bn-194548",
+      "name": {
+        "value": "Solitaire Compass Set Engagement Ring in 14k White Gold",
+        "source": "ext-bn-194548",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "settings",
+      "source": "ext-bn-194548",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "14K White Gold · setting only; center diamond and ring size unselected",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ext-bn-194548",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "setting-only",
+        "currency-unconfirmed"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/solitaire.json",
+        "id": "BN-194548",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-be-121h6",
+      "name": {
+        "value": "Classic Six-Prong Solitaire Ring in 14K Yellow Gold",
+        "source": "ext-be-121h6",
+        "quote": "name"
+      },
+      "seller": "brilliant-earth",
+      "category": "settings",
+      "source": "ext-be-121h6",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "14K Yellow Gold · 14K White Gold prongs · Natural origin selected · setting only; center diamond and size not selected · EUR locale",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ext-be-121h6",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": {
+          "value": "Diamond Origin: Natural",
+          "source": "ext-be-121h6",
+          "quote": "stone"
+        },
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 990,
+        "currency": "EUR",
+        "kind": "setting-only",
+        "observedAt": "2026-10-22T23:44:35Z",
+        "scope": "14K Yellow Gold · 14K White Gold prongs · Natural origin selected · setting only; center diamond and size not selected · EUR locale",
+        "evidence": [
+          {
+            "source": "ext-be-121h6",
+            "quote": "price"
+          },
+          {
+            "source": "ext-be-121h6",
+            "quote": "currency"
+          }
+        ]
+      },
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "setting-only",
+        "localized-eur",
+        "two-tone-prongs"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/solitaire.json",
+        "id": "BE-121H6",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-bn-193625",
+      "name": {
+        "value": "Petite Three-Stone Diamond Engagement Ring in 14k Yellow Gold",
+        "source": "ext-bn-193625",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "natural",
+      "source": "ext-bn-193625",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "14K Yellow Gold · setting only; center diamond and ring size unselected",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ext-bn-193625",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": {
+          "value": "Natural Diamond Information",
+          "source": "ext-bn-193625",
+          "quote": "stone"
+        },
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "setting-only",
+        "currency-unconfirmed"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/three-stone-vintage.json",
+        "id": "BN-193625",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-z-20303279",
+      "name": {
+        "value": "1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold",
+        "source": "ext-z-20303279",
+        "quote": "name"
+      },
+      "seller": "zales",
+      "category": "unclassified",
+      "source": "ext-z-20303279",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "10K Gold stated in title · color, stone origin and selected size unconfirmed",
+      "facts": {
+        "karat": {
+          "value": 10,
+          "source": "ext-z-20303279",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "currency-unconfirmed",
+        "diamond-origin-unconfirmed",
+        "contact-unconfirmed"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/three-stone-vintage.json",
+        "id": "Z-20303279",
+        "retrievedAt": "2026-10-22"
+      }
+    },
+    {
+      "id": "ext-z-20301172",
+      "name": {
+        "value": "1/3 CT. T.W. Diamond Three Stone Engagement Ring in 10K Gold",
+        "source": "ext-z-20301172",
+        "quote": "name"
+      },
+      "seller": "zales",
+      "category": "unclassified",
+      "source": "ext-z-20301172",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "scope": "10K Gold stated in title · color, stone origin and selected size unconfirmed",
+      "facts": {
+        "karat": {
+          "value": 10,
+          "source": "ext-z-20301172",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "inherited-rechecked",
+        "exact-size-unconfirmed",
+        "currency-unconfirmed",
+        "diamond-origin-unconfirmed",
+        "contact-unconfirmed"
+      ],
+      "inheritedFrom": {
+        "file": "data/listings/three-stone-vintage.json",
+        "id": "Z-20301172",
+        "retrievedAt": "2026-10-22"
+      }
     }
   ]
 }

@@ -856,6 +856,356 @@
         "email": "service@bluenile.com",
         "phone": "+1-800-242-2728"
       }
+    },
+    {
+      "id": "ext-bn-194158",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold",
+        "material": "18K Yellow Gold",
+        "display": "$1,125(Setting Price)",
+        "stock": "500000y",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,125(Setting Price)",
+        "mixed": "18k yellow gold four-prong solitaire engagement ring with platinum prongs"
+      }
+    },
+    {
+      "id": "ext-bn-195269",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Petite Solitaire Engagement Ring in 18k Yellow Gold",
+        "material": "18K Yellow Gold",
+        "display": "$1,155(Setting Price)",
+        "stock": "501130y",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,155(Setting Price)"
+      }
+    },
+    {
+      "id": "ext-vrai-classic-4p",
+      "publisher": "VRAI",
+      "kind": "product",
+      "url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0,
+        1
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Classic Round Brilliant Engagement Ring",
+        "material": "18k Yellow Gold",
+        "weight": "Metal weight:2.86g (Ring size 6)",
+        "stone-context": "We grow our own diamonds",
+        "size-context": "Band width:Standard; Band:Plain band",
+        "pave-context": "Pavé carat weight:0.18 ctw; selected Band:Plain band"
+      }
+    },
+    {
+      "id": "ext-z-19957449",
+      "publisher": "Zales",
+      "kind": "product",
+      "url": "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
+        "material": "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
+        "display": "Discounted Price $899.00",
+        "returns": "Free and easy 30-day returns",
+        "contact-gap": "Contact details not exposed in the fetched product excerpt."
+      }
+    },
+    {
+      "id": "ext-z-20046552",
+      "publisher": "Zales",
+      "kind": "product",
+      "url": "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold",
+        "material": "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold",
+        "display": "Discounted Price $909.30",
+        "returns": "Free and easy 30-day returns",
+        "contact-gap": "Contact details not exposed in the fetched product excerpt."
+      }
+    },
+    {
+      "id": "ext-bn-192506",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-hidden-halo-solitaire-plus-diamond-engagement-ring-in-14k-yellow-gold-item-192506",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Petite Hidden Halo Solitaire Plus Diamond Engagement Ring in 14k Yellow Gold",
+        "material": "14K Yellow Gold",
+        "display": "$1,255(Setting Price)",
+        "stock": "502250y14",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,255(Setting Price)",
+        "stone": "Natural Diamond Information"
+      }
+    },
+    {
+      "id": "ext-bn-315661",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen",
+        "material": "14K White Gold",
+        "display": "$2,210(Setting Price)",
+        "stock": "505094w14",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$2,210(Setting Price)",
+        "stone": "Natural Diamond Information"
+      }
+    },
+    {
+      "id": "ext-bn-203348",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Classic Simple Solitaire Engagement Ring in 14K Yellow Gold",
+        "material": "14K Yellow Gold",
+        "display": "$1,145(Setting Price)",
+        "stock": "502120y14",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,145(Setting Price)"
+      }
+    },
+    {
+      "id": "ext-bn-195639",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Petite Solitaire Engagement Ring in 14k Yellow Gold",
+        "material": "14K Yellow Gold",
+        "display": "$1,000(Setting Price)",
+        "stock": "501130y14",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,000(Setting Price)"
+      }
+    },
+    {
+      "id": "ext-bn-194548",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/solitaire-compass-set-engagement-ring-in-14k-white-gold-item-194548",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Solitaire Compass Set Engagement Ring in 14k White Gold",
+        "material": "14K White Gold",
+        "display": "$1,045(Setting Price)",
+        "stock": "501290w14",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,045(Setting Price)"
+      }
+    },
+    {
+      "id": "ext-be-121h6",
+      "publisher": "Brilliant Earth",
+      "kind": "product",
+      "url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0,
+        4
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Classic Six-Prong Solitaire Ring in 14K Yellow Gold",
+        "material": "14K Yellow Gold",
+        "price": "€990.00(Setting Only)",
+        "currency": "EUR in locale selector; main-product amount displayed with €",
+        "stone": "Diamond Origin: Natural",
+        "prongs": "Prong metal: 14K White Gold",
+        "phone": "1.415.426.2781"
+      }
+    },
+    {
+      "id": "ext-bn-193625",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-three-stone-diamond-engagement-ring-in-14k-yellow-gold-item-193625",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Petite Three-Stone Diamond Engagement Ring in 14k Yellow Gold",
+        "material": "14K Yellow Gold",
+        "display": "$1,950(Setting Price)",
+        "stock": "502350y14",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,950(Setting Price)",
+        "stone": "Natural Diamond Information"
+      }
+    },
+    {
+      "id": "ext-z-20303279",
+      "publisher": "Zales",
+      "kind": "product",
+      "url": "https://www.zales.com/12-ct-tw-diamond-frame-vintagestyle-twist-shank-engagement-ring-10k-gold/p/V-20303279",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold",
+        "material": "1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold",
+        "display": "Discounted Price $979.30",
+        "returns": "Free and easy 30-day returns",
+        "contact-gap": "Contact details not exposed in the fetched product excerpt."
+      }
+    },
+    {
+      "id": "ext-z-20301172",
+      "publisher": "Zales",
+      "kind": "product",
+      "url": "https://www.zales.com/13-ct-tw-diamond-three-stone-engagement-ring-10k-gold/p/V-20301172",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "1/3 CT. T.W. Diamond Three Stone Engagement Ring in 10K Gold",
+        "material": "1/3 CT. T.W. Diamond Three Stone Engagement Ring in 10K Gold",
+        "display": "Discounted Price $769.30",
+        "returns": "Free and easy 30-day returns",
+        "contact-gap": "Contact details not exposed in the fetched product excerpt."
+      }
+    },
+    {
+      "id": "vrai-returns",
+      "publisher": "VRAI",
+      "kind": "policy",
+      "url": "https://www.vrai.com/returns-exchanges",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Fee waived for store credit; items above $15,000 eligible for store credit rather than the stated original-payment refund. Specific order/testing permission unconfirmed. Contact email appears for withdrawal submissions, not independently contacted.",
+      "quotes": {
+        "window": "Eligible items below $15,000 can be returned within 30 days for full credit to store or refund minus recycling fee to the original payment method.",
+        "fee": "Engagement ring: A $300 recycling fee will apply.",
+        "exclusions": "Modified or resized rings; Items altered by a third-party; Custom-designed items",
+        "email": "help@vrai.com"
+      }
+    },
+    {
+      "id": "be-context",
+      "publisher": "Brilliant Earth",
+      "kind": "policy",
+      "url": "https://www.brilliantearth.com/weve-got-you-covered/",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "partial",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Only contact header captured in this recheck; do not infer a full return policy from the URL or promotional header.",
+      "quotes": {
+        "phone": "800.691.0952"
+      }
+    },
+    {
+      "id": "wgc-panel-review",
+      "publisher": "World Gold Council",
+      "kind": "market-context",
+      "url": "https://www.gold.org/goldhub/data/gold-prices",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Current moving header differed from earlier session header observations. Chart as-of metadata does not establish the moving header quote timestamp. No WGC value is imported as the primary calculator reference; no header/date panel is silently combined.",
+      "quotes": {
+        "header": "Gold Spot price USD /oz 4,025.54",
+        "chart-as-of": "Data as of 21 October, 2026",
+        "units": "Prices are quoted in currency unit per troy ounce unless otherwise stated."
+      }
     }
   ]
 }

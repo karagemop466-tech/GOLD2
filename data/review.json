@@ -1,19 +1,249 @@
 {
   "findings": [
-    {"id":"weight-basis","title":"Item grams are not net gold grams","scope":"Automic Gold · seven entries","sources":["ag-natural","ag-cluster","ag-petal","ag-ruby","ag-sapphire","ag-moissanite","ag-24k"],"finding":"The seller labels these approximate figures Item Weight. No exact-size, metal-only basis is established. The catalog preserves the stated item grams but leaves net-alloy and fine-gold grams blank.","action":"Obtain exact-size total weight and a separate gold-alloy-only weight, excluding stones and other materials. Have an independent jeweler check them before wear or resizing."},
-    {"id":"fine-weight","title":"“Fine Weight” is undefined","scope":"Auvere · two entries","sources":["av-bridge","av-clean"],"finding":"Fetched product bodies label ranges Approximate Fine Weight. An older indexed label said Gold Weight. Neither the meaning nor a selected-size value is confirmed. These ranges are not imported as total weight, net-alloy weight or fine-gold mass.","action":"Ask Auvere to define the term in writing and supply the exact selected-size metal mass. Do not multiply the range by 22/24 or treat it as pure gold."},
-    {"id":"dynamic-pages","title":"Incomplete pages: values deliberately withheld","scope":"Catbird · four entries; Quince; Auvere prices","sources":["cb-odile","cb-sonnet","cb-pointelle","cb-ballet","quince-oval","av-bridge","av-clean"],"finding":"Some fetched pages expose price-like strings without a confirmed currency/configuration; others expose specifications but no main-product price. Image filenames, URL slugs, recommendation cards and search snippets do not verify missing fields.","action":"Open the official page, select the exact gold configuration and size, and preserve its complete current specifications and final checkout quote. Until then, relevant cells stay blank."},
-    {"id":"mixed-metal","title":"Quince uses a platinum head with the gold band","scope":"Quince oval 1ct","sources":["quince-oval"],"finding":"The page offers a 14k gold band with a platinum head, or all platinum. Whole-ring grams would not be an acceptable gold-alloy-only mass. Explicit solid-gold wording and component weights were not confirmed.","action":"Request component-specific weights and construction details. Never count the platinum head or diamond as gold."},
-    {"id":"quince-exception","title":"365-day banner does not apply to engagement rings","scope":"Quince return policy","sources":["quince-returns"],"finding":"The engagement-ring exception is 60 days from purchase, not 365 days from delivery. Made-to-order jewelry is subject to a $35 restocking fee; packaging and certificates matter.","action":"Get the exact order’s eligibility, resizing/custom exclusions, refund method and inspection permission in writing before paying."},
-    {"id":"automic-return-link","title":"Return-policy mail link contains a typo","scope":"Automic Gold return policy","sources":["automic-returns","automic-contact"],"finding":"The displayed care@automicgold.com text points to a mailto address ending .om in the fetched return policy. The official Contact page separately publishes care@automicgold.com. The policy also says to mail within 14 days to avoid a recycling fee, despite its 30-day return window.","action":"Use the checked Contact page, not the malformed mail link. Ask which deadline and fee apply to your order, particularly custom, engraved or modified items."},
-    {"id":"high-karat-care","title":"24k softness is a practical trade-off","scope":"Automic Gold 24k Band","sources":["ag-24k"],"finding":"The seller states 99.99% purity and warns the ring can bend, warp or scratch easily. Nominal 24/24 is not the same calculation input as a seller-declared 0.9999 fineness.","action":"Consider daily-wear suitability with an independent jeweler. Neither purity wording nor a numerical calculation is a physical assay."},
-    {"id":"mene-final-price","title":"Crafted-on-Demand price and weight can change","scope":"Menē Rose and Knot","sources":["mene-rose","mene-knot","mene-terms"],"finding":"The reviewed pages show USD amounts but no primary-product grams or bound size. Terms permit up to 1g variation for Crafted-on-Demand pieces and a final-price adjustment. Cancellation after shipment or more than 24 hours can incur up to a 10% restocking fee. The return window is not confirmed in captured clauses.","action":"Get the final size, weight, total price and applicable return policy before ordering. Buyback is a separate, conditional transaction, not a guaranteed recovery of purchase price."},
-    {"id":"price-conflicts","title":"Search and page snapshots disagree","scope":"Catbird Odile · Menē Knot · gold reference","sources":["cb-odile","mene-knot","jm-gold"],"finding":"Indexed discovery values differed from directly fetched product displays. JM Bullion’s header also differed from its dated body/table ask. Search snippets and separate panels are not silently reconciled or used to pick the lowest price.","action":"Use the exact linked product and selected configuration at checkout. The calculator identifies its dated dealer body/table reference and never presents it as live or as an LBMA benchmark."},
-    {"id":"bluenile-recheck","title":"Two inherited settings retained; currency not re-established","scope":"Previously published Blue Nile research","sources":["bn-501480w14","bn-501480w14l","bn-returns"],"finding":"Both official pages were rechecked: 14K white gold with rhodium finish; displayed amounts are setting-only and exclude the center stone. The fetched bodies did not explicitly establish USD currency context. The integrated numeric USD price cells remain blank; the preserved original dashboard has been corrected to label currency unconfirmed.","action":"Confirm the currency, center diamond, ring size and full-ring checkout total. Do not compare a setting-only display against a complete engagement ring."},
-    {"id":"marks-and-tests","title":"No candidate has verified paired marks or a physical test","scope":"All 18 entries","sources":["ftc-jewelry","gia-testing"],"finding":"Candidate-specific karat hallmark and maker/manufacturer-mark evidence is absent. No ring was physically inspected, weighed or assayed. A seller’s metal description, a stamp and a review score cannot establish actual purity.","action":"Require both marks and independent professional assessment before wearing or resizing. Surface XRF can be misleading on gold-over-gold plating; ask the jeweler which additional assessment is appropriate."},
-    {"id":"inspection-returns","title":"Independent inspection and return permission is unconfirmed","scope":"All sellers","sources":["automic-returns","catbird-returns","auvere-returns","quince-returns","mene-terms","bn-returns"],"finding":"Published generic return windows do not establish that a particular order remains returnable after professional testing, resizing or customization. No seller was contacted for written permission during this review.","action":"Do not buy under this project’s rules if independent verification and an eligible return are not both allowed. Do not perform destructive tests without authorization."},
-    {"id":"reviews-not-assays","title":"Review channels are not trust or purity certifications","scope":"Five independent platforms/profiles; Blue Nile reputation gap","sources":["bbb-automic","bbb-catbird","bbb-auvere","bbb-quince","tp-mene","ftc-shopping","bn-501480w14"],"finding":"BBB profiles/complaints and Menē’s Trustpilot channel were read. These contain opinions or allegations, not independently established assay findings. Non-accreditation alone is not wrongdoing. Scores and complaint counts were not imported as purchase ratings. No independent Blue Nile reputation review was completed in this extension.","action":"Read multiple independent sources, assess seller responses and validate contact details. A published phone/email does not prove a working business; no calls or emails were made."},
-    {"id":"market-reference","title":"No licensed numeric LBMA benchmark; dealer quote is dated","scope":"Gold calculator","sources":["lbma-prices","jm-gold","nist-units"],"finding":"LBMA’s public page did not expose a licensed numeric gold price. A dated JM Bullion body/table ask is recorded separately, with a conflicting header flagged. It is a dealer reference, not a guaranteed liquidation payout or a live feed.","action":"Refresh the relevant source manually before a buying decision. Raw-gold values for catalog products stay blank until an admissible net metal weight and purity basis exist."},
-    {"id":"excluded-maze","title":"Excluded discovery lead: Auvere Maze page unavailable","scope":"Outside the 18-candidate catalog","sources":["av-maze-unavailable"],"finding":"The official URL returned not-found content. No old indexed weight or price was imported; this is an excluded research lead, not a current listing.","action":"Find a working official replacement before adding a candidate. A link checker should report this known unavailable lead, not silently remove the flag."}
+    {
+      "id": "weight-basis",
+      "title": "Item grams are not net gold grams",
+      "scope": "Automic Gold · seven entries",
+      "sources": [
+        "ag-natural",
+        "ag-cluster",
+        "ag-petal",
+        "ag-ruby",
+        "ag-sapphire",
+        "ag-moissanite",
+        "ag-24k"
+      ],
+      "finding": "The seller labels these approximate figures Item Weight. No exact-size, metal-only basis is established. The catalog preserves the stated item grams but leaves net-alloy and fine-gold grams blank.",
+      "action": "Obtain exact-size total weight and a separate gold-alloy-only weight, excluding stones and other materials. Have an independent jeweler check them before wear or resizing."
+    },
+    {
+      "id": "fine-weight",
+      "title": "“Fine Weight” is undefined",
+      "scope": "Auvere · two entries",
+      "sources": [
+        "av-bridge",
+        "av-clean"
+      ],
+      "finding": "Fetched product bodies label ranges Approximate Fine Weight. An older indexed label said Gold Weight. Neither the meaning nor a selected-size value is confirmed. These ranges are not imported as total weight, net-alloy weight or fine-gold mass.",
+      "action": "Ask Auvere to define the term in writing and supply the exact selected-size metal mass. Do not multiply the range by 22/24 or treat it as pure gold."
+    },
+    {
+      "id": "dynamic-pages",
+      "title": "Incomplete pages: values deliberately withheld",
+      "scope": "Catbird · four entries; Quince; Auvere prices",
+      "sources": [
+        "cb-odile",
+        "cb-sonnet",
+        "cb-pointelle",
+        "cb-ballet",
+        "quince-oval",
+        "av-bridge",
+        "av-clean"
+      ],
+      "finding": "Some fetched pages expose price-like strings without a confirmed currency/configuration; others expose specifications but no main-product price. Image filenames, URL slugs, recommendation cards and search snippets do not verify missing fields.",
+      "action": "Open the official page, select the exact gold configuration and size, and preserve its complete current specifications and final checkout quote. Until then, relevant cells stay blank."
+    },
+    {
+      "id": "mixed-metal",
+      "title": "Quince uses a platinum head with the gold band",
+      "scope": "Quince oval 1ct",
+      "sources": [
+        "quince-oval"
+      ],
+      "finding": "The page offers a 14k gold band with a platinum head, or all platinum. Whole-ring grams would not be an acceptable gold-alloy-only mass. Explicit solid-gold wording and component weights were not confirmed.",
+      "action": "Request component-specific weights and construction details. Never count the platinum head or diamond as gold."
+    },
+    {
+      "id": "quince-exception",
+      "title": "365-day banner does not apply to engagement rings",
+      "scope": "Quince return policy",
+      "sources": [
+        "quince-returns"
+      ],
+      "finding": "The engagement-ring exception is 60 days from purchase, not 365 days from delivery. Made-to-order jewelry is subject to a $35 restocking fee; packaging and certificates matter.",
+      "action": "Get the exact order’s eligibility, resizing/custom exclusions, refund method and inspection permission in writing before paying."
+    },
+    {
+      "id": "automic-return-link",
+      "title": "Return-policy mail link contains a typo",
+      "scope": "Automic Gold return policy",
+      "sources": [
+        "automic-returns",
+        "automic-contact"
+      ],
+      "finding": "The displayed care@automicgold.com text points to a mailto address ending .om in the fetched return policy. The official Contact page separately publishes care@automicgold.com. The policy also says to mail within 14 days to avoid a recycling fee, despite its 30-day return window.",
+      "action": "Use the checked Contact page, not the malformed mail link. Ask which deadline and fee apply to your order, particularly custom, engraved or modified items."
+    },
+    {
+      "id": "high-karat-care",
+      "title": "24k softness is a practical trade-off",
+      "scope": "Automic Gold 24k Band",
+      "sources": [
+        "ag-24k"
+      ],
+      "finding": "The seller states 99.99% purity and warns the ring can bend, warp or scratch easily. Nominal 24/24 is not the same calculation input as a seller-declared 0.9999 fineness.",
+      "action": "Consider daily-wear suitability with an independent jeweler. Neither purity wording nor a numerical calculation is a physical assay."
+    },
+    {
+      "id": "mene-final-price",
+      "title": "Crafted-on-Demand price and weight can change",
+      "scope": "Menē Rose and Knot",
+      "sources": [
+        "mene-rose",
+        "mene-knot",
+        "mene-terms"
+      ],
+      "finding": "The reviewed pages show USD amounts but no primary-product grams or bound size. Terms permit up to 1g variation for Crafted-on-Demand pieces and a final-price adjustment. Cancellation after shipment or more than 24 hours can incur up to a 10% restocking fee. The return window is not confirmed in captured clauses.",
+      "action": "Get the final size, weight, total price and applicable return policy before ordering. Buyback is a separate, conditional transaction, not a guaranteed recovery of purchase price."
+    },
+    {
+      "id": "price-conflicts",
+      "title": "Search and page snapshots disagree",
+      "scope": "Catbird Odile · Menē Knot · gold reference",
+      "sources": [
+        "cb-odile",
+        "mene-knot",
+        "jm-gold"
+      ],
+      "finding": "Indexed discovery values differed from directly fetched product displays. JM Bullion’s header also differed from its dated body/table ask. Search snippets and separate panels are not silently reconciled or used to pick the lowest price.",
+      "action": "Use the exact linked product and selected configuration at checkout. The calculator identifies its dated dealer body/table reference and never presents it as live or as an LBMA benchmark."
+    },
+    {
+      "id": "bluenile-recheck",
+      "title": "Two inherited settings retained; currency not re-established",
+      "scope": "Previously published Blue Nile research",
+      "sources": [
+        "bn-501480w14",
+        "bn-501480w14l",
+        "bn-returns"
+      ],
+      "finding": "Both official pages were rechecked: 14K white gold with rhodium finish; displayed amounts are setting-only and exclude the center stone. The fetched bodies did not explicitly establish USD currency context. The integrated numeric USD price cells remain blank; the preserved original dashboard has been corrected to label currency unconfirmed.",
+      "action": "Confirm the currency, center diamond, ring size and full-ring checkout total. Do not compare a setting-only display against a complete engagement ring."
+    },
+    {
+      "id": "marks-and-tests",
+      "title": "No candidate has verified paired marks or a physical test",
+      "scope": "All 32 entries",
+      "sources": [
+        "ftc-jewelry",
+        "gia-testing"
+      ],
+      "finding": "Candidate-specific karat hallmark and maker/manufacturer-mark evidence is absent. No ring was physically inspected, weighed or assayed. A seller’s metal description, a stamp and a review score cannot establish actual purity.",
+      "action": "Require both marks and independent professional assessment before wearing or resizing. Surface XRF can be misleading on gold-over-gold plating; ask the jeweler which additional assessment is appropriate."
+    },
+    {
+      "id": "inspection-returns",
+      "title": "Independent inspection and return permission is unconfirmed",
+      "scope": "All sellers",
+      "sources": [
+        "automic-returns",
+        "catbird-returns",
+        "auvere-returns",
+        "quince-returns",
+        "mene-terms",
+        "bn-returns"
+      ],
+      "finding": "Published generic return windows do not establish that a particular order remains returnable after professional testing, resizing or customization. No seller was contacted for written permission during this review.",
+      "action": "Do not buy under this project’s rules if independent verification and an eligible return are not both allowed. Do not perform destructive tests without authorization."
+    },
+    {
+      "id": "reviews-not-assays",
+      "title": "Review channels are not trust or purity certifications",
+      "scope": "Five independent platforms/profiles; Blue Nile reputation gap",
+      "sources": [
+        "bbb-automic",
+        "bbb-catbird",
+        "bbb-auvere",
+        "bbb-quince",
+        "tp-mene",
+        "ftc-shopping",
+        "bn-501480w14"
+      ],
+      "finding": "BBB profiles/complaints and Menē’s Trustpilot channel were read. These contain opinions or allegations, not independently established assay findings. Non-accreditation alone is not wrongdoing. Scores and complaint counts were not imported as purchase ratings. No independent Blue Nile reputation review was completed in this extension. Independent reputation also remains unassessed for VRAI, Brilliant Earth and Zales.",
+      "action": "Read multiple independent sources, assess seller responses and validate contact details. A published phone/email does not prove a working business; no calls or emails were made."
+    },
+    {
+      "id": "market-reference",
+      "title": "No licensed numeric LBMA benchmark; dealer quote is dated",
+      "scope": "Gold calculator",
+      "sources": [
+        "lbma-prices",
+        "jm-gold",
+        "nist-units"
+      ],
+      "finding": "LBMA’s public page did not expose a licensed numeric gold price. A dated JM Bullion body/table ask is recorded separately, with a conflicting header flagged. It is a dealer reference, not a guaranteed liquidation payout or a live feed.",
+      "action": "Refresh the relevant source manually before a buying decision. Raw-gold values for catalog products stay blank until an admissible net metal weight and purity basis exist."
+    },
+    {
+      "id": "excluded-maze",
+      "title": "Excluded discovery lead: Auvere Maze page unavailable",
+      "scope": "Outside the 18-candidate catalog",
+      "sources": [
+        "av-maze-unavailable"
+      ],
+      "finding": "The official URL returned not-found content. No old indexed weight or price was imported; this is an excluded research lead, not a current listing.",
+      "action": "Find a working official replacement before adding a candidate. A link checker should report this known unavailable lead, not silently remove the flag."
+    },
+    {
+      "id": "parallel-integration",
+      "title": "All concurrent-session listings retained without filling gaps",
+      "scope": "32-entry combined register",
+      "sources": [
+        "ext-bn-203348",
+        "ext-z-19957449",
+        "ext-vrai-classic-4p",
+        "ext-be-121h6",
+        "bn-501480w14",
+        "bn-501480w14l"
+      ],
+      "finding": "The previously published 16-entry root register was combined with the 16 new product pages. Shared Blue Nile settings are deduplicated. Official product pages were directly rechecked. Dollar-symbol displays are preserved as source observations but not normalized to USD without currency evidence. No Zales color or unselected-center origin is inferred.",
+      "action": "Use the complete combined register rather than adding the two historical dashboards together. Inspect exact SKU, metal, selected size and native currency on the official page."
+    },
+    {
+      "id": "vrai-size-and-fees",
+      "title": "VRAI metal weight is size-specific; returns have a fee",
+      "scope": "VRAI Classic 4-Prong",
+      "sources": [
+        "ext-vrai-classic-4p",
+        "vrai-returns"
+      ],
+      "finding": "The seller states Metal weight: 2.86g (Ring size 6). This is not an independently verified measurement and cannot be generalized to all sizes. The full return policy specifies a $300 engagement-ring recycling fee and excludes modified/resized, third-party-altered and custom items.",
+      "action": "Preserve the ring-size-6 context and confirm the actual ordered weight, refund method and permission for testing. Automatic verified fine-gold values remain blank."
+    },
+    {
+      "id": "inherited-quote-date",
+      "title": "WGC chart date does not date its moving header quote",
+      "scope": "Earlier root dashboard gold reference",
+      "sources": [
+        "wgc-panel-review",
+        "jm-gold"
+      ],
+      "finding": "Earlier sessions recorded a WGC header value with a 22 October quote-date label while the chart said data as of 21 October. The current moving header differs again. Chart metadata and a header price are separate panels; neither the retrieval date nor the chart date proves the header quote timestamp.",
+      "action": "Keep an unknown source quote-as-of date blank, distinguish it from the observation date, and preserve the discrepancy. The expanded calculator uses its separately identified dated dealer body/table reference, not an inferred WGC timestamp."
+    },
+    {
+      "id": "unconfirmed-diamond-origin",
+      "title": "Do not choose a diamond origin for an unselected center",
+      "scope": "Bare settings and incomplete diamond-origin evidence",
+      "sources": [
+        "ext-bn-203348",
+        "ext-bn-194158",
+        "cb-odile",
+        "cb-ballet",
+        "ext-z-19957449"
+      ],
+      "finding": "A bare setting can accept different center stones. A diamond in a product name does not establish natural versus lab-grown origin. Incomplete Catbird and Zales origin evidence is grouped as unconfirmed instead of being asserted as natural.",
+      "action": "Confirm the exact center/accent stone description and full-ring scope. Category placement is a research organizer, not a gemological finding."
+    },
+    {
+      "id": "vrai-plain-pave",
+      "title": "VRAI Plain band selection also displays a pavé specification",
+      "scope": "VRAI Classic Round Brilliant setting",
+      "sources": [
+        "ext-vrai-classic-4p"
+      ],
+      "finding": "The fetched selected configuration says Plain band but also displays Pavé carat weight:0.18 ctw. The correspondence of this field to the selected variant is unconfirmed. No pavé weight or diamond mass is used in any ring-gold calculation.",
+      "action": "Have the seller confirm the exact plain/pavé configuration, size-specific metal-only weight, chosen center and all-in native-currency quote in writing."
+    }
   ]
 }
