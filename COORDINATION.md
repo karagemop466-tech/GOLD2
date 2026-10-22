@@ -168,6 +168,12 @@ carry a stale number. Re-read the rendered site, not only the source data.
 | Live URL | https://karagemop466-tech.github.io/GOLD2/ |
 | Earlier pass | preserved at /site/, still passing its own audit |
 
+A fifth defect was found by re-reading `flags.html` after PR #5: its intro still hard-coded "14 of 14 … 13 of 14".
+It is now derived from the data ("16 of 16 … 15 of 16"). Lesson repeated: the numbers a template carries must be
+computed, never typed — a grep for `of 14` in `tools/build_site.py` is now part of the polish pass.
+
+- **PR #6:** grammar/count fix on the flags intro, merged below.
+
 **Open items, published and non-blocking:** every listing still lacks the words "solid gold", a stated hallmark
 or maker's mark, and (15 of 16) a gram weight. Those are the seller questions listed on `flags.html`, not
 something this repo can resolve by itself.

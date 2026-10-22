@@ -474,7 +474,7 @@ so the brand on the ring and the company you buy from are no longer the same. Se
     return page("Retailers", "retailers", body)
 
 
-def build_flags(flags):
+def build_flags(flags, items_in_flags):
     order = {"high": 0, "medium": 1, "low": 2}
     cards = []
     for f in sorted(flags, key=lambda x: (order[x["severity"]], x["id"])):
@@ -494,6 +494,9 @@ def build_flags(flags):
   <p class="meta"><strong>Source links:</strong></p>
   <ul class="clean" style="margin-top:0;font-size:12.6px">{sources}</ul>
 </article>""")
+    total = len(items_in_flags)
+    solid_n = sum(1 for i in items_in_flags if not i.get("solid_gold_explicit"))
+    weight_missing = sum(1 for i in items_in_flags if i.get("weight_g") is None)
     body = f"""
 <div class="eyebrow">Do not treat these as verified</div>
 <h1>Flagged for review</h1>
@@ -502,9 +505,9 @@ Flags do not block the shortlist — they tell you exactly what to ask the selle
 Each flag links to the page that produced it.</p>
 <div class="note" style="margin-bottom:18px">
 <strong>No-hallucination policy, applied.</strong> These are the values that were deliberately <em>not</em> filled in.
-The strongest pattern: 14 of 14 listings state a karat but none states the words “solid gold”, none states a hallmark
-or maker's mark, and 13 of 14 never publish a gram weight. That is a gap in the listings, not proof the rings are bad —
-but it is exactly the gap an independent jeweller visit closes.</div>
+The strongest pattern: {solid_n} of {total} listings state a karat but none states the words “solid gold”, none states a
+hallmark or maker's mark, and {weight_missing} of {total} never publish a gram weight. That is a gap in the listings, not proof
+the rings are bad — but it is exactly the gap an independent jeweller visit closes.</div>
 <div class="grid" style="grid-template-columns:1fr">{''.join(cards)}</div>
 """
     return page("Flagged for Review", "flags", body)
@@ -703,7 +706,7 @@ def main():
             payload, payload["items"], flags
         )
     pages["retailers.html"] = build_retailers(retailers, items)
-    pages["flags.html"] = build_flags(flags)
+    pages["flags.html"] = build_flags(flags, items)
     known = [i for i in items if i.get("weight_g")]
     weights_note = (
         f"{len(known)} of {len(items)} rows publish{'es' if len(known) == 1 else ''} a gram weight. "
