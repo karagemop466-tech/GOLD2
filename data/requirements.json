@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "project": "GOLD engagement-ring evidence desk",
+  "updated_at": "2026-10-22T23:08:49Z",
+  "source_of_requirements": "User project brief, 2026-10-22",
+  "publication_policy": {
+    "no_hallucinations": true,
+    "official_sources_for_product_facts": true,
+    "unconfirmed_value": null,
+    "unconfirmed_must_be_flagged": true,
+    "inference_forbidden": true,
+    "price_requires_currency_and_observed_at": true,
+    "verification_pass_required_after_every_review": true
+  },
+  "buying_checklist": [
+    {"id": "purity", "requirement": "Confirm karat such as 10K, 14K, or 18K; higher karat means a higher nominal gold proportion.", "evidence": "Official product specification", "gate": "required_for_verified_catalog"},
+    {"id": "solid_gold", "requirement": "Listing explicitly says solid gold; exclude plated, vermeil, gold-filled, gold overlay, and gold-tone.", "evidence": "Official product description or specifications", "gate": "required_for_eligibility"},
+    {"id": "karat_hallmark", "requirement": "Look for a 10K/14K/18K stamp.", "evidence": "Official listing text or official hallmark documentation", "gate": "review_if_unconfirmed"},
+    {"id": "makers_mark", "requirement": "Look for a maker's or manufacturer's mark in addition to a karat stamp.", "evidence": "Official listing text or official hallmark documentation", "gate": "review_if_unconfirmed"},
+    {"id": "weight", "requirement": "Check the ring's weight in grams.", "evidence": "Official variant-specific specification", "gate": "review_if_unconfirmed"},
+    {"id": "seller_reputation", "requirement": "Research independent reviews and complaints and verify real contact information.", "evidence": "Independent sources plus official contact page", "gate": "separate_research_not_seller_self_attestation"},
+    {"id": "price_reasonableness", "requirement": "Compare price with gold weight and current gold value; unusually cheap pricing is a red flag.", "evidence": "Official listing price, verified gram weight, dated official metal-price source", "gate": "analysis_only_inputs_must_be_verified"},
+    {"id": "returns", "requirement": "Confirm returns after receipt and inspection; check resized/custom exclusions.", "evidence": "Official return-policy page and product-level exclusions", "gate": "review_if_unconfirmed"},
+    {"id": "payment", "requirement": "Prefer credit-card purchase protection; avoid irreversible payment methods.", "evidence": "Official payment terms and buyer's card terms", "gate": "buyer_action"},
+    {"id": "documentation", "requirement": "Keep the listing, receipt, description, and seller claims about gold purity.", "evidence": "Buyer records", "gate": "buyer_action"},
+    {"id": "arrival", "requirement": "Before wearing or resizing, ask an independent jeweler to verify gold purity and weight.", "evidence": "Independent professional inspection", "gate": "post_purchase_required"},
+    {"id": "best_verification", "requirement": "Request XRF or another professional gold-purity test; do not rely only on the stamp.", "evidence": "Independent professional test", "gate": "post_purchase_required"},
+    {"id": "walk_away", "requirement": "Do not buy if the seller will not permit independent verification or return.", "evidence": "Official policy plus seller response where applicable", "gate": "buyer_decision"}
+  ],
+  "site_requirements": [
+    "Top landing-page summary states the no-hallucinations policy.",
+    "All entries and findings appear in readable tables with official source links.",
+    "Category subpages, a flagged-review page, a source register, and a gold-weight calculator are available.",
+    "Prices show currency and observation timestamp; unverified prices remain blank.",
+    "Raw-gold calculations distinguish nominal mathematical content from tested purity and monetary value.",
+    "Verification and security scans flag unsupported values and recommend further hallucination review after every pass."
+  ]
+}
