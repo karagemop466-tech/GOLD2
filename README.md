@@ -16,4 +16,4 @@ Dependency-free static dashboard in `site/`. Source data and observed excerpts a
 
 Every research table row links official evidence or clearly labeled official context. The checklist is the owner's acceptance policy, not a set of externally verified seller claims. Automated audits run on pushes, PRs and builds, checking sources, null handling, price-excerpt consistency, internal links and static security. They cannot prove facts or detect all hallucinations. Recheck official sources and look for hallucinations after every review. External content may change.
 
-GitHub Actions verifies and publishes `site/` to Pages on main. See COORDINATION.md for ownership, sources and deployment log.
+GitHub Actions verifies the site. Existing GitHub Pages legacy publishing serves main from the repository root; the root index redirects to `site/`. Switching Pages to Actions was denied by the GitHub integration (HTTP 403), so the existing configuration is retained. See COORDINATION.md for ownership, sources and deployment log.
