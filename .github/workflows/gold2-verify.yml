@@ -1,0 +1,33 @@
+name: GOLD2 verify
+
+on:
+  push:
+    branches: [main, arena/6ca03571-gold2]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build the site from verified data
+        run: python3 tools/build_site.py
+
+      - name: Hallucination audit (evidence quotes, source domains, blanks, links)
+        run: python3 tools/qa.py
+
+      - name: Upload the audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qa-report
+          path: reports/qa-report.md

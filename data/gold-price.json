@@ -1,0 +1,18 @@
+{
+  "quote_date": "2026-10-22",
+  "retrieved_at": "2026-10-22",
+  "usd_per_troy_oz": 4028.53,
+  "currency": "USD",
+  "quote_type": "gold_spot",
+  "source_name": "World Gold Council - Gold spot price (Market Data: ICE Data Services)",
+  "source_url": "https://www.gold.org/goldhub/data/gold-prices",
+  "evidence_file": "evidence/gold-price.md",
+  "evidence_quotes": ["4,028.53", "Data as of 21 October, 2026"],
+  "grams_per_troy_ounce": 31.1034768,
+  "grams_basis": "1 troy ounce = 31.1034768 grams (standard conversion, not a market quote)",
+  "limitations": [
+    "LBMA publishes tabulated historical prices only through the licensed MyLBMA portal; no free LBMA fix value was retrievable on 2026-10-22. The World Gold Council quote above is the citable alternative.",
+    "Spot quotes move continuously. Any melt calculation shown on this site is only valid as of the quote_date above.",
+    "This is not an appraisal. Melt value ignores labour, setting, diamonds, brand, duty and resale spread."
+  ]
+}

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Method &amp; QA · GOLD2</title>
+<meta name="description" content="Verified solid-gold engagement ring research: prices, karats, sources and flagged uncertainties.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap topbar">
+    <a class="brand" href="index.html"><span class="dot"></span>GOLD2 <span class="chip">research</span></a>
+    <nav class="main"><a href="index.html">Dashboard</a><a href="solitaire.html">Solitaire</a><a href="halo-pave.html">Halo &amp; Pavé</a><a href="three-stone-vintage.html">Three-Stone</a><a href="18k.html">18K</a><a href="budget.html">10K</a><a href="retailers.html">Retailers</a><a href="prices.html">Calculator</a><a href="flags.html">Flagged</a><a href="methods.html" class="active">Method</a></nav>
+  </div>
+</header>
+<main><div class="wrap">
+
+<div class="eyebrow">Method, sources, audit</div>
+<h1>Method &amp; QA</h1>
+<p class="lead">This page exists so the table can be challenged. It records how each value was obtained, what was
+refused, and the result of the automated checks that run after every review.</p>
+
+<h2>1. The no-hallucination rule</h2>
+<div class="banner" style="padding:18px 20px">
+<p><strong>A value is only published if it was read off a page that was actually retrieved.</strong>
+Each row stores the URL, the UTC retrieval date, and a verbatim quote list in <code>evidence/</code>.
+The build fails the audit if a quote cannot be found in its evidence file. Anything not on the page is <code>null</code>
+and appears on the <a href="flags.html">Flagged</a> page. No value is derived by averaging, conversion or “reasonable assumption”.</p>
+</div>
+
+<h2>2. Source hierarchy</h2>
+<ul class="clean">
+<li><strong>Tier 1 — product facts:</strong> the retailer's own product page (Blue Nile, Zales, VRAI, Brilliant Earth).</li>
+<li><strong>Tier 1 — policies:</strong> the retailer's own return policy page.</li>
+<li><strong>Tier 1 — gold price:</strong> World Gold Council gold spot page, market data by ICE Data Services, with an explicit quote date.</li>
+<li><strong>Rejected:</strong> search-engine snippets, aggregators, blogs, coupon sites, marketplace listings.
+A snippet is never a source — it was caught disagreeing with the live page three times in this pass (F-004, F-005, F-006).</li>
+</ul>
+
+<h2>3. Known limitations</h2>
+<ul class="clean">
+<li>LBMA fix data now sits behind an IBA licence, so the free World Gold Council spot quote is used instead (F-013).</li>
+<li>Brilliant Earth served EUR at retrieval; the USD price is not recorded and was not converted (F-007).</li>
+<li>VRAI renders its price client-side; the retrieved HTML had no price, so that cell is blank (F-008).</li>
+<li>Costco was probed and excluded: price and gram weight did not render (F-014).</li>
+<li>No listing states a hallmark, a maker's mark, or the words “solid gold” (F-001, F-002).</li>
+<li>Only one item publishes a gram weight, so price-per-gram comparison is not possible for the rest (F-003).</li>
+</ul>
+
+<h2>4. Automated checks after every review</h2>
+<p>Run <code>python3 tools/qa.py</code> (then <code>python3 tools/build_site.py</code>) after any edit. The audit
+re-reads every JSON file and fails on: a quote missing from its evidence file, a non-null price/weight/width without a
+supporting quote, a source URL outside the retailer's own domain, a rejected cached value that matches the published value,
+a flag pointing at a missing item, or a broken internal link in the built site.</p>
+<pre class="qa"># QA / hallucination audit
+
+- Generated: 2026-10-22 23:28 UTC
+- Items audited: 16 · flags: 15 · evidence quotes checked: 83
+- **RESULT: PASS** — 11 checks, 0 failures, 2 warnings
+
+## Checks
+
+| # | Check | Result | Findings |
+|---|-------|--------|----------|
+| 1 | JSON schema &amp; unique ids | ✅ PASS | 0 |
+| 2 | Every value traces to a verbatim quote (83 quotes) | ✅ PASS | 0 |
+| 3 | Price / weight / width / karat backed by quotes | ✅ PASS | 0 |
+| 4 | Source links point at the seller&#x27;s own domain | ✅ PASS | 0 |
+| 5 | Blank values are covered by an explicit flag | ✅ PASS | 0 |
+| 6 | Cached/contradictory values are rejected, not published | ✅ PASS | 0 |
+| 7 | Flag definitions are complete and consistent | ✅ PASS | 0 |
+| 8 | Price vs melt sanity check | ✅ PASS | 0 |
+| 9 | Every table row carries an official source link (16 rows) | ✅ PASS | 0 |
+| 10 | Built site: no broken internal links (293 links, 50 external) | ✅ PASS | 0 |
+| 11 | Coverage summary | ✅ PASS | 0 |
+
+## Failures
+
+- none
+
+## Warnings
+
+- [coverage] 1 of 16 rows have no verified price
+- [coverage] 15 of 16 rows have no published gram weight
+
+## What this audit proves, and what it does not
+
+It proves that every published number is present in the stored evidence for that item, that the source URL belongs to the seller, and that every blank is covered by a flag. It cannot prove the retailer told the truth, and it does not replace an XRF test or an appraisal after delivery.
+
+**Run this again after every review pass.** A stale table is the most likely way a wrong number enters this project.</pre>
+
+<h2>5. Earlier pass preserved</h2>
+<p>The <code>site/</code> folder holds the first dashboard built in this repository (session
+<code>39da17c8</code>): two Blue Nile settings, its own audit script and calculator. It is kept unchanged
+and still works: <a href="site/index.html">open the earlier dashboard ↗</a>. Its two rings were re-fetched
+live during integration and now appear as <code>BN-195402</code> and <code>BN-302868</code> on the
+<a href="halo-pave.html">Halo &amp; Pavé</a> page.</p>
+
+<h2>6. Data provenance summary</h2>
+<dl class="kv">
+<dt>Items</dt><dd>16</dd>
+<dt>Flags</dt><dd>15</dd>
+<dt>Gold quote</dt><dd>$4,028.53/oz · 2026-10-22 · <a href="https://www.gold.org/goldhub/data/gold-prices" target="_blank" rel="noopener">World Gold Council ↗</a></dd>
+<dt>Retrieval dates</dt><dd>2026-10-22 (UTC)</dd>
+<dt>Repository</dt><dd><a href="https://github.com/karagemop466-tech/GOLD2" target="_blank" rel="noopener">karagemop466-tech/GOLD2 ↗</a></dd>
+</dl>
+
+<h2>7. What to do with a flagged row</h2>
+<ol class="clean">
+<li>Open the source link and re-read the price, karat and width yourself.</li>
+<li>Ask the seller, in writing: <em>“Is this solid gold (not plated or filled), what is the gram weight, and what hallmark and maker's mark are stamped inside?”</em></li>
+<li>Keep the reply with the order record.</li>
+<li>On arrival, before wearing or resizing, have an independent jeweller XRF-test the metal and weigh it.</li>
+<li>If the seller will not allow independent verification or a return, do not buy.</li>
+</ol>
+
+</div></main>
+<footer><div class="wrap row">
+  <div><strong>GOLD2</strong> · gold engagement ring research · data retrieved 2026-10-22 (UTC)</div>
+  <div>Every value links to the retailer page it came from. Blank means unverified, never estimated.</div>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calculator · GOLD2</title>
+<meta name="description" content="Verified solid-gold engagement ring research: prices, karats, sources and flagged uncertainties.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap topbar">
+    <a class="brand" href="index.html"><span class="dot"></span>GOLD2 <span class="chip">research</span></a>
+    <nav class="main"><a href="index.html">Dashboard</a><a href="solitaire.html">Solitaire</a><a href="halo-pave.html">Halo &amp; Pavé</a><a href="three-stone-vintage.html">Three-Stone</a><a href="18k.html">18K</a><a href="budget.html">10K</a><a href="retailers.html">Retailers</a><a href="prices.html" class="active">Calculator</a><a href="flags.html">Flagged</a><a href="methods.html">Method</a></nav>
+  </div>
+</header>
+<main><div class="wrap">
+
+<div class="eyebrow">Raw gold, not appraisal</div>
+<h1>Gold weight &amp; melt calculator</h1>
+<p class="lead">Convert a ring's weight and karat into fine-gold grams and the raw metal value at the quote already on this site.
+It is a sanity check on price, not a valuation: labour, the diamond, hallmarking, duty and resale spread are all outside the number.</p>
+
+<div class="card">
+  <div class="calcgrid">
+    <div><label class="f" for="w">Ring weight (g)</label><input id="w" type="number" min="0" step="0.01" value="3.00"></div>
+    <div><label class="f" for="k">Karat</label>
+      <select id="k">
+        <option value="10">10K</option><option value="14" selected>14K</option>
+        <option value="18">18K</option><option value="22">22K</option><option value="24">24K</option>
+      </select></div>
+    <div><label class="f" for="spot">Gold spot (USD / troy oz)</label><input id="spot" type="number" min="0" step="0.01" value="4028.53"></div>
+    <div><label class="f" for="ask">Asking price (optional)</label><input id="ask" type="number" min="0" step="0.01" placeholder="e.g. 1255"></div>
+  </div>
+  <div class="out">
+    <div class="box"><div class="l">Fine gold</div><div class="v" id="fine">—</div><div class="s">weight × karat/24</div></div>
+    <div class="box"><div class="l">Melt value</div><div class="v" id="melt">—</div><div class="s">at the spot price entered</div></div>
+    <div class="box"><div class="l">Price ÷ melt</div><div class="v" id="ratio">—</div><div class="s">1.0× would mean sold at scrap</div></div>
+    <div class="box"><div class="l">Above melt</div><div class="v" id="over">—</div><div class="s">the part that pays for making + stone</div></div>
+  </div>
+  <p class="sub" style="margin-top:12px">The spot field is pre-filled with the verified quote:
+  <strong>$4,028.53/oz, 2026-10-22</strong> —
+  <a href="https://www.gold.org/goldhub/data/gold-prices" target="_blank" rel="noopener">World Gold Council - Gold spot price (Market Data: ICE Data Services) ↗</a>.
+  If you change it, you are using your own number, not a verified one.</p>
+</div>
+
+<script>
+(function(){
+  const gpo = 31.1034768;
+  const w = document.getElementById('w'), k = document.getElementById('k'),
+        s = document.getElementById('spot'), a = document.getElementById('ask');
+  const fine = document.getElementById('fine'), melt = document.getElementById('melt'),
+        ratio = document.getElementById('ratio'), over = document.getElementById('over');
+  const money = n => '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+  function run(){
+    const wt = parseFloat(w.value), kk = parseFloat(k.value), sp = parseFloat(s.value);
+    if(!(wt>0) || !(kk>0) || !(sp>0)){ fine.textContent='—'; melt.textContent='—'; ratio.textContent='—'; over.textContent='—'; return; }
+    const fg = wt * kk / 24;
+    const mv = fg / gpo * sp;
+    fine.textContent = fg.toFixed(3) + ' g';
+    melt.textContent = money(mv);
+    const ask = parseFloat(a.value);
+    if(ask>0){ ratio.textContent = (ask/mv).toFixed(2) + '×'; over.textContent = money(ask-mv); }
+    else { ratio.textContent='—'; over.textContent='—'; }
+  }
+  [w,k,s,a].forEach(el=>el.addEventListener('input', run));
+  run();
+})();
+</script>
+
+<h2>Quick reference — fine gold by karat</h2>
+<div class="tablewrap"><table><thead><tr>
+<th>Karat</th><th>Purity (karat/24)</th><th>2 g ring</th><th>4 g ring</th><th>6 g ring</th><th>Melt of a 6 g ring</th>
+</tr></thead><tbody><tr><td class="num">10K</td><td class="num">41.67%</td><td class="num">0.833 g</td><td class="num">1.667 g</td><td class="num">2.500 g</td><td class="num">$323.80</td></tr><tr><td class="num">14K</td><td class="num">58.33%</td><td class="num">1.167 g</td><td class="num">2.333 g</td><td class="num">3.500 g</td><td class="num">$453.32</td></tr><tr><td class="num">18K</td><td class="num">75.00%</td><td class="num">1.500 g</td><td class="num">3.000 g</td><td class="num">4.500 g</td><td class="num">$582.84</td></tr><tr><td class="num">22K</td><td class="num">91.67%</td><td class="num">1.833 g</td><td class="num">3.667 g</td><td class="num">5.500 g</td><td class="num">$712.36</td></tr><tr><td class="num">24K</td><td class="num">100.00%</td><td class="num">2.000 g</td><td class="num">4.000 g</td><td class="num">6.000 g</td><td class="num">$777.12</td></tr></tbody></table></div>
+<p class="sub">Purity is arithmetic on the karat definition (24K = pure). Melt uses the quote above and 1 troy oz = 31.1034768 g.
+These are calculations, not retailer claims, and no listing was used to produce them.</p>
+
+<h2>Melt check for rows with a published weight</h2>
+<div class="tablewrap"><table><thead><tr>
+<th>Item</th><th>Karat</th><th>Published weight</th><th>Fine gold</th><th>Melt at quote</th><th>Price</th>
+</tr></thead><tbody><tr><td>The Classic Round Brilliant Engagement Ring - 18k Yellow Gold, Plain Band, Standard Width</td><td class="num">18K</td><td class="num">2.86 g</td><td class="num">2.145 g</td><td class="num">$277.82</td><td><span class="blank" title="not present on the retrieved page">&mdash;</span></td></tr></tbody></table></div>
+<p class="sub">1 of 16 rows publishes a gram weight. The rest are blank, so no melt comparison is shown for them. A blank is not zero.</p>
+
+<h2>How to use this honestly</h2>
+<ul class="clean">
+<li>A <strong>setting-only</strong> price can never be compared to melt — the diamond is not in either number, but the making charge is.</li>
+<li>The ratio is only meaningful when the weight is real. Ask the seller for the gram weight and verify it on a jeweller's scale.</li>
+<li>Melt is a floor, not a fair price. A ring at 2× melt is normal retail; a ring at 1.05× melt with a “14K” stamp is a warning sign.</li>
+<li>Never use melt value as a resale expectation — scrap buyers pay below spot.</li>
+</ul>
+
+</div></main>
+<footer><div class="wrap row">
+  <div><strong>GOLD2</strong> · gold engagement ring research · data retrieved 2026-10-22 (UTC)</div>
+  <div>Every value links to the retailer page it came from. Blank means unverified, never estimated.</div>
+</div></footer>
+</body>
+</html>
