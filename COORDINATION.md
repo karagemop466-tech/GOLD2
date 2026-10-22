@@ -172,7 +172,12 @@ A fifth defect was found by re-reading `flags.html` after PR #5: its intro still
 It is now derived from the data ("16 of 16 … 15 of 16"). Lesson repeated: the numbers a template carries must be
 computed, never typed — a grep for `of 14` in `tools/build_site.py` is now part of the polish pass.
 
-- **PR #6:** grammar/count fix on the flags intro, merged below.
+- **PR #5:** https://github.com/karagemop466-tech/GOLD2/pull/5 — merged, commit `e17b558`; calculator grammar + full state table
+- **PR #6:** https://github.com/karagemop466-tech/GOLD2/pull/6 — merged, commit `966e87b`; flags-intro counts derived from data
+- **Final Pages build:** commit `966e87b` → `status: built`; live `flags.html` re-read and confirmed
+  "16 of 16 listings state a karat but none states the words 'solid gold' … and 15 of 16 never publish a gram weight"
+- **All PRs:** #3, #4, #5, #6 merged to `main`; every one passed `audit` + `verify` before merge; no force-push,
+  no branch other than `arena/6ca03571-gold2` used for this session's work.
 
 **Open items, published and non-blocking:** every listing still lacks the words "solid gold", a stated hallmark
 or maker's mark, and (15 of 16) a gram weight. Those are the seller questions listed on `flags.html`, not
