@@ -16,9 +16,10 @@ whether a ring is really solid gold are the three things retailers rarely publis
 2. a **karat stamp plus a maker's mark**,
 3. the **gram weight**.
 
-Current dataset (retrieved 2026-10-22 UTC): **16 listings from 4 retailers** across five categories.
-**0 of 16** listings state the words "solid gold", **0 of 16** state a hallmark or maker's mark, and
-**1 of 16** publishes a gram weight. Those are the findings, not a data-entry problem.
+Current dataset (retrieved 2026-10-22 UTC): **19 listings from 5 retailers** across six categories.
+**3 of 19** listings state the words "solid gold" (all Stone and Strand — and all three are final sale /
+non-returnable, F-016), **0 of 19** state a hallmark or maker's mark, and
+**1 of 19** publishes a gram weight. Those are the findings, not a data-entry problem.
 
 ## Pages (served from the repository root)
 
@@ -30,6 +31,7 @@ Current dataset (retrieved 2026-10-22 UTC): **16 listings from 4 retailers** acr
 | `three-stone-vintage.html` | Three-stone and vintage-style rings |
 | `18k.html` | 18K / high-karat settings, incl. the only published gram weight |
 | `budget.html` | 10K / lower-price complete rings |
+| `solid-gold.html` | Listings that explicitly say "solid gold" (Stone and Strand; all final sale — F-016) |
 | `retailers.html` | Return windows, exclusions, contact info, price basis per seller |
 | `prices.html` | Melt calculator + fine-gold quick reference |
 | `flags.html` | **Flagged for Review** — everything unverified or irregular, with source links |
@@ -42,8 +44,8 @@ Current dataset (retrieved 2026-10-22 UTC): **16 listings from 4 retailers** acr
 data/                  machine-readable verified facts (JSON)
   gold-price.json        one dated gold quote + limitations
   retailers.json         policies/contact, blanks where not stated
-  listings/*.json        five categories, one row per listing
-  flags.json             15 flags with sources and recommended actions
+  listings/*.json        six categories, one row per listing
+  flags.json             18 flags with sources and recommended actions
 evidence/              audit trail: URL + retrieval date + verbatim quotes
 tools/build_site.py    renders the root pages from data/ (no invented values)
 tools/qa.py            hallucination audit + link check
@@ -71,7 +73,7 @@ value equals a published value, or when a blank cell has no flag explaining it.
 
 ## Source hierarchy
 
-- **Product facts:** the retailer's own product page only — Blue Nile, Zales, VRAI, Brilliant Earth.
+- **Product facts:** the retailer's own product page only — Blue Nile, Zales, VRAI, Brilliant Earth, Stone and Strand.
 - **Policies:** the retailer's own return-policy page.
 - **Gold price:** World Gold Council gold-spot page (market data: ICE Data Services), quoted with its date.
 - **Rejected:** search-engine snippets, aggregators, blogs, coupon sites. Snippets disagreed with the live
@@ -85,8 +87,11 @@ LBMA fix data now sits behind an IBA licence, so the free World Gold Council quo
    way a wrong number appears.
 2. Ask the seller in writing: *is it solid gold, what is the gram weight, and what hallmark and maker's mark
    are stamped inside?* Keep the reply.
-3. Prefer a **credit card** (card acceptance is not stated on any captured page — F-012).
+3. Prefer a **credit card** (named as tender on the Zales and Stone and Strand policy pages; verified for
+   no other retailer here — F-012).
 4. Do not accept a resize before testing: Blue Nile excludes resized and custom items from returns (F-010).
+   And never buy a ring you cannot return at all: the three Stone and Strand rings listed here are final
+   sale / non-returnable (F-016), so there is no path back if the metal fails an XRF test.
 5. On arrival, before wearing or resizing, have an **independent jeweller XRF-test the metal and weigh it**.
 6. If the seller will not allow independent verification or a return, don't buy.
 

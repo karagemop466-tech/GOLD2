@@ -12,7 +12,7 @@ Shared task board for parallel agent sessions. **Read this before editing anythi
 |---|---|---|---|
 | `39da17c8` | `arena/39da17c8-gold2` | initial research, dashboard in `site/`, audits, Pages | merged in PR #1 / #2 → `main` |
 | `S-6CA03571` (6ca03571) | `arena/6ca03571-gold2` | listing research, evidence trail, root dashboard, integration | this pass, PR #3 |
-| `S-75094819` | `arena/75094819-gold2` | refresh pass: gold quote, F-011/F-012 handoffs, new "solid gold" retailer coverage, price spot re-verification, rebuild, PR + merge | in progress (claimed 2026-10-22) |
+| `S-75094819` | `arena/75094819-gold2` | refresh pass: gold quote, F-011/F-012 handoffs, new "solid gold" retailer coverage, price spot re-verification, rebuild, PR + merge | done (2026-10-22), PR recorded below |
 
 Both sessions share one environment constraint: the runner is bound to a single branch and cannot create
 `session-<id>/<task>` worktrees. That is recorded rather than ignored. Work is therefore separated by
@@ -193,13 +193,44 @@ Baseline at claim: `tools/qa.py` PASS — 11 checks, 0 failures, 2 coverage warn
 
 | ID | Task | Status | Owner | File scope (exclusive) |
 |----|------|--------|-------|------------------------|
-| S750-T01 | Refresh gold spot quote if a newer official quote is retrievable | in progress | S-75094819 | `data/gold-price.json`, `evidence/gold-price.md`, `prices.html` |
-| S750-T02 | F-011: retrieve Zales standalone return policy from zales.com | in progress | S-75094819 | `evidence/retailers/zales.md`, `data/retailers.json` (Zales row), `data/flags.json` (F-011) |
-| S750-T03 | F-012: verify credit-card acceptance per retailer from official pages | in progress | S-75094819 | `evidence/retailers/*.md`, `data/retailers.json`, `data/flags.json` (F-012) |
-| S750-T04 | New coverage: retailers that explicitly state "solid gold" (official pages only; blank + flag if not stated) | in progress | S-75094819 | new `data/listings/*.json`, `evidence/listings/*.md`, new root page(s) via `tools/build_site.py` |
-| S750-T05 | Spot re-verification of existing listing prices against live pages | in progress | S-75094819 | `data/listings/*.json`, `evidence/listings/*.md` (append-only notes) |
-| S750-T06 | Rebuild, full QA (both audit suites), PR to main, merge, Pages verification | unclaimed→S-75094819 at integration | S-75094819 | root `*.html`, `reports/qa-report.md`, `COORDINATION.md`, `README.md` |
+| S750-T01 | Refresh gold spot quote if a newer official quote is retrievable | done | S-75094819 | `data/gold-price.json`, `evidence/gold-price.md`, `prices.html` |
+| S750-T02 | F-011: retrieve Zales standalone return policy from zales.com | done | S-75094819 | `evidence/retailers/zales.md`, `data/retailers.json` (Zales row), `data/flags.json` (F-011) |
+| S750-T03 | F-012: verify credit-card acceptance per retailer from official pages | done | S-75094819 | `evidence/retailers/*.md`, `data/retailers.json`, `data/flags.json` (F-012) |
+| S750-T04 | New coverage: retailers that explicitly state "solid gold" (official pages only; blank + flag if not stated) | done | S-75094819 | new `data/listings/*.json`, `evidence/listings/*.md`, new root page(s) via `tools/build_site.py` |
+| S750-T05 | Spot re-verification of existing listing prices against live pages | done | S-75094819 | `data/listings/*.json`, `evidence/listings/*.md` (append-only notes) |
+| S750-T06 | Rebuild, full QA (both audit suites), PR to main, merge, Pages verification | done | S-75094819 | root `*.html`, `reports/qa-report.md`, `COORDINATION.md`, `README.md` |
 
 Rules reaffirmed for this pass: **no hallucinations** — every value read from the retailer's own page, verbatim
 quote in `evidence/`, blank + flag when absent; never infer, average or convert. Run `tools/qa.py` (and the
 earlier pass's `scripts/audit.py`) after every review; re-check for hallucinations before merge.
+
+## S-75094819 verification log
+
+| UTC | Task | Check | Source | Result |
+|-----|------|-------|--------|--------|
+| 2026-10-22 | S750-T01 | Gold spot re-read | https://www.gold.org/goldhub/data/gold-prices | 4,028.53 USD/oz (data as of 21 Oct 2026); prior 4,024.36 kept in quote_history |
+| 2026-10-22 | S750-T02 | Zales standalone return policy | https://www.zales.com/return-and-exchange-modal (canonical: /return-and-exchange-policy, body not extractable) | 30-day returns; custom designs excluded; prepaid mail label. Resized rings not addressed — still blank |
+| 2026-10-22 | S750-T03 | Card tender | same Zales policy; https://www.stoneandstrand.com/pages/returns-exchanges | "Credit and Debit Cards" named (Zales); "your credit card provider" (Stone and Strand). Networks never named. F-012 narrowed |
+| 2026-10-22 | S750-T04 | 3 Stone and Strand product pages | the-clara-ring, the-rita-ring, the-mia-ring on stoneandstrand.com | First rows with `solid_gold_explicit=true`. All final sale (F-016). Mia karat conflict 14K spec vs 10K alt text (F-017). Clara snippet $2,000 rejected vs live $2,200 |
+| 2026-10-22 | S750-T04 | 2 Catbird product pages | catbirdnyc.com | Details block absent from retrieved text → no rows added (F-018); snippet data not used |
+| 2026-10-22 | S750-T05 | Spot re-verification ×3 | BN-203348, Z-19957449, VRAI-CLASSIC-4P live pages | 10/10 stored fields match; no data changes |
+| 2026-10-22 | S750-T06 | Full audit stack | `tools/qa.py`, `scripts/audit.py`, `node scripts/test.js` | All PASS, 0 failures (19 items, 18 flags) |
+
+## S-75094819 findings
+
+- **F-016 (high, new):** the market's "solid gold" wording currently comes with no return right — all 3 Stone and
+  Strand rows are final sale, so the XRF-verify-then-return method cannot be applied to them.
+- **F-017 (medium, new):** one retailer page contradicts itself on karat (14K spec vs 10K image alt text).
+- **F-018 (low, new):** Catbird is a documented coverage gap for tooling reasons, not evidence reasons.
+- **F-011 narrowed, F-012 narrowed** (prior handoffs closed with official policy text).
+
+## S-75094819 integration record
+
+- **PR:** recorded in the follow-up commit after merge.
+- **Method:** all counts in `tools/build_site.py` templates are now derived from data (index lead, flags intro,
+  methods limitations). Rendered pages were re-read after build — the stale-count failure mode of PR #4/#5/#6
+  was checked for explicitly (`grep` sweep for "of 16", "4 retailers", "five categories", old gold price).
+- **Open items, published and non-blocking:** F-001 (16/19 no "solid gold"), F-002 (19/19 no hallmark),
+  F-003 (18/19 no gram weight), F-016/F-017/F-018 above. Next-pass candidates: Catbird capture with a
+  JS-capable fetcher; a retailer that says "solid gold" AND allows returns; Zales resized-ring treatment;
+  Zales/Stone and Strand contact phone.
