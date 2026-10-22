@@ -12,6 +12,7 @@ Shared task board for parallel agent sessions. **Read this before editing anythi
 |---|---|---|---|
 | `39da17c8` | `arena/39da17c8-gold2` | initial research, dashboard in `site/`, audits, Pages | merged in PR #1 / #2 → `main` |
 | `S-6CA03571` (6ca03571) | `arena/6ca03571-gold2` | listing research, evidence trail, root dashboard, integration | PR #3–#7 merged |
+| `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9 merged; R9-01 quote-date correction open |
 | `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1 done; T6 review PR #8 |
 
 All sessions share one environment constraint: the runner is bound to a single branch and cannot create
@@ -35,6 +36,9 @@ All sessions share one environment constraint: the runner is bound to a single b
 | T09 | Site generator | done | S-6CA03571 | `tools/build_site.py`, `assets/style.css`, root `*.html` |
 | T10 | QA / hallucination audit | done | S-6CA03571 | `tools/qa.py`, `reports/qa-report.md` |
 | T11 | Integration, merge, publish | done | S-6CA03571 | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
+| T12 | Re-verify gold spot price from WGC + update quote | in progress | S-da963b79 | `data/gold-price.json`, `evidence/gold-price.md` |
+| T13 | Run QA audit + rebuild site + verify Pages deploy | unclaimed | S-da963b79 | `tools/qa.py`, `tools/build_site.py`, root `*.html`, `reports/qa-report.md` |
+| T14 | PR + merge to main, confirm Pages live | unclaimed | S-da963b79 | `COORDINATION.md`, PR #8 |
 
 ## Verification log
 
@@ -229,6 +233,7 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - 2026-10-22T23:09:48Z — To final integration owner: combine parallel work without dropping any session's evidence or review records; run the combined line-by-line, hallucination/security, build, and broken-link checks before merging.
 - 2026-10-22T23:13:37Z — To site/integration owners: independently verified the two prices and product facts from interim PR #1. Please disposition R39-01 through R39-06 in `reviews/2026-10-22-39da17c8.md` (category subpages, ring-weight field drift, unusable calculator UI, audit blind spots, action pinning, small-text contrast) and carry unresolved items onto the public Flagged for Review page. Interim PRs #1/#2 and Pages deployment succeeded; this does not close those findings.
 - 2026-10-22T23:23:38Z — To `S-6CA03571` / final integration owner: review `reviews/2026-10-22-6ca03571.md` and R6-01 through R6-12 in `reviews/findings.json`. All 15 populated current prices and the VRAI arithmetic matched official pages, but unsupported Zales colors, solid/meta overclaims, payment/policy/citation problems, calculator validation/guidance, and QA blind spots remain. Please correct or explicitly blank unsupported assertions, publish unresolved buyer-safety items on the public Flagged page, and request re-review after each corrective pass. Do not treat the supplied 11-check PASS as proof of official truth.
+- 2026-10-22T23:27:55Z — To `S-da963b79` and integration owners: R9-01 on merged PR #9 requests correction of `quote_date` and generated labels to the official source's `2026-10-21` while retaining the independently matched 4,028.53 numeric quote and `retrieved_at: 2026-10-22`. Comment posted directly on PR #9. The external T14 board entry says PR #8, but the actual gold-update PR was #9; this note preserves that history without editing the other session's task row.
 
 ## Activity and handoff log
 
@@ -238,6 +243,8 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - 2026-10-22T23:20:07Z — `5ff05cf9-gold2`: independently retrieved all 14 product sources plus retailer/policy/gold sources for `9efc9d5`; numeric observations matched, while secondary-field and narrative/QA issues did not. The branch advanced to integrated `7a894ed` (16 rows); both new Blue Nile sources were also retrieved and matched.
 - 2026-10-22T23:22:14Z — `5ff05cf9-gold2`: ran both builders/audits and calculator tests on `7a894ed`; all supplied checks passed and regeneration reproduced the archive. The separate negative audit reported 30 findings after its final narrative-control pass. Wrote the commit-specific report and machine-readable R6 findings instead of duplicating or editing the implementation.
 - 2026-10-22T23:23:38Z — `5ff05cf9-gold2`: rechecked main `966e87b` after PR #6. Both build/audit suites still passed; independent audit still reported 30 findings and six arithmetic controls passed. Live cache-busted root, Flagged, calculator, and legacy `/site/` routes loaded. PR #6 fixed the Flagged page's 14/16 and 13/16 summaries; F-015's 8-Blue-Nile text and other R6 findings remain visible. A draft review transcription error in the quick-reference values was caught by the live re-read, corrected, and converted into five additional automated arithmetic controls; the implementation's values were correct.
+- 2026-10-22T23:24:49Z — `5ff05cf9-gold2`: pushed commit `77477c2` and opened review PR #8. Merged main `a47b0e5` into the fixed branch, preserving every implementation file and combining README/coordination content. A subsequent pull-rebase attempted to replay main-origin commits; it was aborted immediately, the merge was verified intact, and no work was discarded. Do not rebase a branch after merging main; fetch and verify the own remote ancestor instead.
+- 2026-10-22T23:27:55Z — `5ff05cf9-gold2`: integrated and independently checked main `fc2a882` from PR #9. The new 4,028.53 quote and all six arithmetic controls matched, but the official page still says data as of 2026-10-21. Recorded R9-01, added an automated source-date control, and commented on PR #9 requesting correction of the quote date rather than the supported number.
 
 ## Completion records
 
@@ -251,6 +258,7 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 ## Pull request and deployment
 
 - External implementation PRs #1–#6 are merged. Reviewed main is `966e87b82cb306ad1695dc147355ed2f0f4a0971`; PR #6 merged as that exact commit at 2026-10-22T23:21:32Z.
+- PR #7 advanced main to `a47b0e5` with coordination records. PR #9 then advanced it to `fc2a882444f4ae92246ebbe5a4851cc2d921d519` with the 4,028.53 quote update; R9-01 keeps its incorrect 2026-10-22 quote-date label open. PR #8 has incorporated both main states without discarding implementation work.
 - Main verification runs `39871245614` (GOLD2 verify) and `39871245531` (Verify GOLD) succeeded for `966e87b`; Pages run `39871244612` succeeded for the same commit.
 - Live cache-busted `/GOLD2/?review=966e87b` displayed the 16-row current dashboard and corrected QA badge. `/GOLD2/flags.html` displayed 16/16 solid-gold and 15/16 missing-weight counts but still displayed F-015's stale 8-Blue-Nile sentence. `/GOLD2/prices.html` displayed the correct VRAI and quick-reference arithmetic plus the open calculator guidance/label issues. `/GOLD2/site/` remains the explicitly described earlier two-record dashboard.
 - The unqueried root retrieval reused an earlier `/site/` redirect in the fetch cache; a cache-busted URL retrieved the current root and the archived source contains no root redirect. This is recorded as a retrieval-cache irregularity, not misreported as a Pages failure.

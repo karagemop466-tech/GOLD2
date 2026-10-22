@@ -1,10 +1,10 @@
 {
   "schema_version": "1.1.0",
   "reviewer_session": "5ff05cf9-gold2",
-  "updated_at": "2026-10-22T23:22:14Z",
+  "updated_at": "2026-10-22T23:27:55Z",
   "subject": {
     "branch": "main",
-    "commit": "966e87b82cb306ad1695dc147355ed2f0f4a0971",
+    "commit": "fc2a882444f4ae92246ebbe5a4851cc2d921d519",
     "report": "reviews/2026-10-22-6ca03571.md"
   },
   "findings": [
@@ -199,6 +199,17 @@
       "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/evidence/listings/three-stone-vintage.md",
       "official_reference_url": "https://www.zales.com/13-ct-tw-diamond-three-stone-engagement-ring-10k-gold/p/V-20301172",
       "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "id": "R9-01",
+      "severity": "high",
+      "status": "open",
+      "title": "Gold quote number was updated but assigned the retrieval date",
+      "observation": "Main fc2a882 records 4,028.53 with quote_date 2026-10-22, while the independently retrieved official page and its own archived excerpt say Data as of 21 October, 2026. retrieved_at 2026-10-22 is separately correct; arithmetic at the new number passes.",
+      "requested_disposition": "Set quote_date and generated date labels back to 2026-10-21 unless the official as-of date changes; retain the supported numeric quote, rebuild, and rerun official-source and hallucination/security checks.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/fc2a882444f4ae92246ebbe5a4851cc2d921d519/data/gold-price.json",
+      "official_reference_url": "https://www.gold.org/goldhub/data/gold-prices",
+      "report": "reviews/2026-10-22-6ca03571.md"
     }
   ],
   "review_pass_policy": "After every disposition or content edit, repeat official-source comparison, hallucination/security checks, build/link checks, and manual review of unresolved flags.",
@@ -216,6 +227,11 @@
     {
       "branch": "arena/6ca03571-gold2",
       "commit": "7a894edc6c8c134ca554c290649797991ac618f0",
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "branch": "main",
+      "commit": "966e87b82cb306ad1695dc147355ed2f0f4a0971",
       "report": "reviews/2026-10-22-6ca03571.md"
     }
   ]

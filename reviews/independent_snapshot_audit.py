@@ -11,6 +11,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from datetime import datetime
 from decimal import Decimal
 from pathlib import Path
 
@@ -109,6 +110,16 @@ def main() -> int:
         flag("NONFINITE-INPUT-CHECK-MISSING", "calculator", "parseFloat and >0 checks do not reject Infinity")
 
     gold = json.loads((root / "data" / "gold-price.json").read_text())
+    for quote in gold.get("evidence_quotes", []):
+        date_match = re.fullmatch(r"Data as of (\d{1,2} [A-Za-z]+, \d{4})", quote)
+        if date_match:
+            source_date = datetime.strptime(date_match.group(1), "%d %B, %Y").date().isoformat()
+            if source_date != gold.get("quote_date"):
+                flag(
+                    "GOLD-QUOTE-DATE-MISMATCH",
+                    "data/gold-price.json",
+                    f"quote_date={gold.get('quote_date')} but official excerpt says {source_date}; retrieved_at is a separate field",
+                )
     grams_per_oz = Decimal(str(gold["grams_per_troy_ounce"]))
     spot = Decimal(str(gold["usd_per_troy_oz"]))
     for item in items:
