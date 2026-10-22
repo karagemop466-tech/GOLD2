@@ -98,3 +98,73 @@ $2,210(Setting Price)
 - VRAI returns: https://www.vrai.com/returns-exchanges
 - Brilliant Earth care/warranty hub: https://www.brilliantearth.com/weve-got-you-covered/
 - Brilliant Earth contact: https://www.brilliantearth.com/contact/
+
+---
+
+## BN-195402 — Blue Nile (carried forward from session 39da17c8, re-verified 2026-10-22)
+
+**URL:** https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402
+
+```
+Stock Number
+
+501480w14
+
+Metal
+
+14K White Gold
+
+Width
+
+1.70mm
+
+Rhodium Finish
+
+Yes
+```
+
+```
+$1,300(Setting Price)
+```
+
+```
+Quantity
+
+22
+
+Total Carat
+
+1/10
+```
+
+---
+
+## BN-302868 — Blue Nile (carried forward from session 39da17c8, re-verified 2026-10-22)
+
+**URL:** https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868
+
+```
+Stock Number
+
+501480w14l
+
+Metal
+
+14K White Gold
+
+Width
+
+1.70mm
+
+Rhodium Finish
+
+Yes
+```
+
+```
+$1,050(Setting Price)
+```
+
+```
+Diamond Type:Lab-Grown Diamond
+```

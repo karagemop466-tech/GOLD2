@@ -7,8 +7,25 @@
       "severity": "high",
       "type": "checklist_gap",
       "title": "No listing uses the words \"solid gold\"",
-      "detail": "The buying checklist requires the listing itself to say 'solid gold', not plated / vermeil / gold-filled / overlay / gold-tone. Across all 14 captured listings, the retrieved page text states a karat (10K/14K/18K) but never uses the phrase 'solid gold'. Absence was checked in the retrieved page text for each item on 2026-10-22. This is a documentation gap, not proof that the ring is plated.",
-      "affected_items": ["BN-203348", "BN-195639", "BN-194548", "BE-121H6", "BN-192506", "BN-315661", "BN-193625", "Z-20303279", "Z-20301172", "BN-194158", "BN-195269", "VRAI-CLASSIC-4P", "Z-19957449", "Z-20046552"],
+      "detail": "The buying checklist requires the listing itself to say 'solid gold', not plated / vermeil / gold-filled / overlay / gold-tone. Across all 16 captured listings, the retrieved page text states a karat (10K/14K/18K) but never uses the phrase 'solid gold'. Absence was checked in the retrieved page text for each item on 2026-10-22. This is a documentation gap, not proof that the ring is plated.",
+      "affected_items": [
+        "BN-203348",
+        "BN-195639",
+        "BN-194548",
+        "BE-121H6",
+        "BN-192506",
+        "BN-315661",
+        "BN-195402",
+        "BN-302868",
+        "BN-193625",
+        "Z-20303279",
+        "Z-20301172",
+        "BN-194158",
+        "BN-195269",
+        "VRAI-CLASSIC-4P",
+        "Z-19957449",
+        "Z-20046552"
+      ],
       "sources": [
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
         "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
@@ -22,8 +39,25 @@
       "severity": "high",
       "type": "checklist_gap",
       "title": "No listing states a hallmark or maker's mark",
-      "detail": "The checklist asks for a 10K/14K/18K stamp PLUS a maker's/manufacturer's mark. None of the 14 product pages states what is stamped inside the band, and none names a manufacturer's mark. Blue Nile and VRAI do publish stock/style numbers, which is not the same thing as a physical hallmark.",
-      "affected_items": ["BN-203348", "BN-195639", "BN-194548", "BE-121H6", "BN-192506", "BN-315661", "BN-193625", "Z-20303279", "Z-20301172", "BN-194158", "BN-195269", "VRAI-CLASSIC-4P", "Z-19957449", "Z-20046552"],
+      "detail": "The checklist asks for a 10K/14K/18K stamp PLUS a maker's/manufacturer's mark. None of the 16 product pages states what is stamped inside the band, and none names a manufacturer's mark. Blue Nile and VRAI do publish stock/style numbers, which is not the same thing as a physical hallmark.",
+      "affected_items": [
+        "BN-203348",
+        "BN-195639",
+        "BN-194548",
+        "BE-121H6",
+        "BN-192506",
+        "BN-315661",
+        "BN-195402",
+        "BN-302868",
+        "BN-193625",
+        "Z-20303279",
+        "Z-20301172",
+        "BN-194158",
+        "BN-195269",
+        "VRAI-CLASSIC-4P",
+        "Z-19957449",
+        "Z-20046552"
+      ],
       "sources": [
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
         "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/"
@@ -35,9 +69,27 @@
       "severity": "high",
       "type": "unverified",
       "title": "Metal weight in grams is not published for 13 of 14 items",
-      "detail": "Only VRAI publishes a metal weight (2.86 g at size 6 for the Classic 4-prong). For the other 13 listings the gram weight field is left blank rather than estimated. Without a weight, a price-per-gram or melt comparison cannot be computed for those items.",
-      "affected_items": ["BN-203348", "BN-195639", "BN-194548", "BE-121H6", "BN-192506", "BN-315661", "BN-193625", "Z-20303279", "Z-20301172", "BN-194158", "BN-195269", "Z-19957449", "Z-20046552"],
-      "sources": ["https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893"],
+      "detail": "Only VRAI publishes a metal weight (2.86 g at size 6 for the Classic 4-prong). For the other 15 listings the gram weight field is left blank rather than estimated. Without a weight, a price-per-gram or melt comparison cannot be computed for those items.",
+      "affected_items": [
+        "BN-203348",
+        "BN-195639",
+        "BN-194548",
+        "BE-121H6",
+        "BN-192506",
+        "BN-315661",
+        "BN-195402",
+        "BN-302868",
+        "BN-193625",
+        "Z-20303279",
+        "Z-20301172",
+        "BN-194158",
+        "BN-195269",
+        "Z-19957449",
+        "Z-20046552"
+      ],
+      "sources": [
+        "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893"
+      ],
       "recommended_action": "Request the gram weight from the seller before paying, then verify on a jeweller's scale after delivery."
     },
     {
@@ -46,8 +98,12 @@
       "type": "price_discrepancy",
       "title": "Zales V-19957449: cached snippet $719.20 vs live page $899.00",
       "detail": "A search-engine snippet for this product showed 'Discounted Price $719.20, Original Price $899.00, 20% Off'. The live product page retrieved on 2026-10-22 shows 'Discounted Price $899.00' with no original price and no discount. The live value is recorded; the snippet value is rejected and kept only as an audit note.",
-      "affected_items": ["Z-19957449"],
-      "sources": ["https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449"],
+      "affected_items": [
+        "Z-19957449"
+      ],
+      "sources": [
+        "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449"
+      ],
       "recommended_action": "Re-check the price in the cart at checkout; do not budget from any cached figure."
     },
     {
@@ -56,8 +112,12 @@
       "type": "price_discrepancy",
       "title": "Blue Nile 193625: snippet $1,845 vs live page $1,950",
       "detail": "A search-engine snippet for the Petite Three-Stone in 14k yellow gold showed $1,845. The live page on 2026-10-22 showed $1,950 (Setting Price). Live value recorded.",
-      "affected_items": ["BN-193625"],
-      "sources": ["https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-three-stone-diamond-engagement-ring-in-14k-yellow-gold-item-193625"],
+      "affected_items": [
+        "BN-193625"
+      ],
+      "sources": [
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-three-stone-diamond-engagement-ring-in-14k-yellow-gold-item-193625"
+      ],
       "recommended_action": "Treat all Blue Nile prices as live-only; re-check before ordering."
     },
     {
@@ -66,8 +126,12 @@
       "type": "price_discrepancy",
       "title": "Blue Nile 315661: snippet showed -25% ($1,657) but live page shows $2,210",
       "detail": "The cached snippet advertised a 25% reduction to $1,657. The live page showed $2,210 (Setting Price) with no discount banner in the retrieved text. The higher, live figure is recorded. A promotional price may still exist in-cart; it was not verifiable at retrieval.",
-      "affected_items": ["BN-315661"],
-      "sources": ["https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661"],
+      "affected_items": [
+        "BN-315661"
+      ],
+      "sources": [
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661"
+      ],
       "recommended_action": "If a promo is claimed, capture the cart screen with the discount line before paying."
     },
     {
@@ -76,8 +140,12 @@
       "type": "currency",
       "title": "Brilliant Earth price was served in EUR, not USD",
       "detail": "The Brilliant Earth page rendered '€ 990.00 (Setting Only)' at retrieval, and the site's currency selector showed EUR active. The USD price was never displayed, so it is not recorded and no exchange-rate conversion was invented. The item is marked with currency EUR.",
-      "affected_items": ["BE-121H6"],
-      "sources": ["https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/"],
+      "affected_items": [
+        "BE-121H6"
+      ],
+      "sources": [
+        "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/"
+      ],
       "recommended_action": "Switch the site region to United States to read the USD price before comparing with the other rows."
     },
     {
@@ -86,8 +154,12 @@
       "type": "unverified",
       "title": "VRAI price is rendered client-side and was absent from the retrieved HTML",
       "detail": "The VRAI configurator page supplied full specs (18k yellow gold, 2.86 g metal weight, 1.6 mm band depth, 30-day returns) but no price string was present in the retrieved text. The price field is deliberately blank. A search snippet claimed 'Starting at $1,035' - that figure is rejected and shown only as an audit note.",
-      "affected_items": ["VRAI-CLASSIC-4P"],
-      "sources": ["https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893"],
+      "affected_items": [
+        "VRAI-CLASSIC-4P"
+      ],
+      "sources": [
+        "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893"
+      ],
       "recommended_action": "Read the price in the VRAI configurator directly, or request a written quote."
     },
     {
@@ -96,7 +168,9 @@
       "type": "irregularity",
       "title": "James Allen product URLs now redirect to Blue Nile and some items are sold out",
       "detail": "jamesallen.com/.../comfort-fit-engagement-ring-item-41515 (listed at $660 in a cached snippet) redirected to bluenile.com and rendered 'This popular style is sold out'. James Allen settings are now sold inside the Blue Nile catalogue, so brand and seller are no longer the same entity. Item 41515 is excluded from the tables.",
-      "affected_items": ["BN-315661"],
+      "affected_items": [
+        "BN-315661"
+      ],
       "sources": [
         "https://www.jamesallen.com/engagement-rings/solitaire/14k-yellow-gold-15mm-comfort-fit-engagement-ring-item-41515",
         "https://www.bluenile.com/james-allen"
@@ -109,8 +183,19 @@
       "type": "policy",
       "title": "Blue Nile returns exclude items resized after purchase and custom orders",
       "detail": "Blue Nile's official return page states a 30-day window from shipment and explicitly excludes 'items resized after initial purchase', custom orders, engraved items and personalised jewellery. Since the checklist requires inspecting and verifying before resizing, resize AFTER the independent test and only once the ring is confirmed.",
-      "affected_items": ["BN-203348", "BN-195639", "BN-194548", "BN-192506", "BN-315661", "BN-193625", "BN-194158", "BN-195269"],
-      "sources": ["https://www.bluenile.com/policies/returns"],
+      "affected_items": [
+        "BN-203348",
+        "BN-195639",
+        "BN-194548",
+        "BN-192506",
+        "BN-315661",
+        "BN-193625",
+        "BN-194158",
+        "BN-195269"
+      ],
+      "sources": [
+        "https://www.bluenile.com/policies/returns"
+      ],
       "recommended_action": "Order the ring in your size; do not accept a resize before XRF testing."
     },
     {
@@ -119,8 +204,15 @@
       "type": "unverified",
       "title": "Zales return policy is only evidenced by a product-page claim",
       "detail": "Every Zales product page retrieved states 'Free and easy 30-day returns', but the standalone return-policy page URL was not captured, so exclusions (resized, custom, clearance) are unknown and left blank.",
-      "affected_items": ["Z-20303279", "Z-20301172", "Z-19957449", "Z-20046552"],
-      "sources": ["https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449"],
+      "affected_items": [
+        "Z-20303279",
+        "Z-20301172",
+        "Z-19957449",
+        "Z-20046552"
+      ],
+      "sources": [
+        "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449"
+      ],
       "recommended_action": "Open the Zales return policy and confirm the resize/custom exclusions before ordering."
     },
     {
@@ -129,7 +221,12 @@
       "type": "unverified",
       "title": "Credit-card acceptance was not verified on any retailer page",
       "detail": "The checklist prefers a credit card for purchase protection. No retrieved page stated accepted card networks. Affirm / Wells Fargo financing and PayPal are mentioned on some pages, which are not equivalent to a card purchase. The field is left blank rather than assumed.",
-      "affected_items": ["BN-203348", "BE-121H6", "VRAI-CLASSIC-4P", "Z-19957449"],
+      "affected_items": [
+        "BN-203348",
+        "BE-121H6",
+        "VRAI-CLASSIC-4P",
+        "Z-19957449"
+      ],
       "sources": [
         "https://www.bluenile.com/policies/returns",
         "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/"
@@ -167,7 +264,24 @@
       "type": "comparability",
       "title": "Setting-only prices and complete-ring prices sit in the same tables",
       "detail": "8 Blue Nile rows, the Brilliant Earth row and the VRAI row are 'Setting Price' / 'Setting Only' - the center diamond is extra. The 4 Zales rows are complete rings including diamonds. A $1,000 setting and a $900 complete ring are not comparable, and price-per-gram cannot be computed where the diamond dominates. Every row carries a price_basis label so the two groups can be separated.",
-      "affected_items": ["BN-203348", "BN-195639", "BN-194548", "BE-121H6", "BN-192506", "BN-315661", "BN-193625", "BN-194158", "BN-195269", "VRAI-CLASSIC-4P", "Z-20303279", "Z-20301172", "Z-19957449", "Z-20046552"],
+      "affected_items": [
+        "BN-203348",
+        "BN-195639",
+        "BN-194548",
+        "BE-121H6",
+        "BN-192506",
+        "BN-315661",
+        "BN-195402",
+        "BN-302868",
+        "BN-193625",
+        "Z-20303279",
+        "Z-20301172",
+        "BN-194158",
+        "BN-195269",
+        "VRAI-CLASSIC-4P",
+        "Z-19957449",
+        "Z-20046552"
+      ],
       "sources": [
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
         "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449"

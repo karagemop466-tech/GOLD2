@@ -14,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-DOCS = ROOT / "docs"
+SITE = ROOT  # GitHub Pages serves main "/" (legacy build), so pages live at the root
 CATEGORY_FILES = [
     ("solitaire", "solitaire.json"),
     ("halo-pave", "halo-pave.json"),
@@ -648,7 +648,14 @@ supporting quote, a source URL outside the retailer's own domain, a rejected cac
 a flag pointing at a missing item, or a broken internal link in the built site.</p>
 <pre class="qa">{esc(qa_text.strip()) if qa_text.strip() else "QA report not generated yet."}</pre>
 
-<h2>5. Data provenance summary</h2>
+<h2>5. Earlier pass preserved</h2>
+<p>The <code>site/</code> folder holds the first dashboard built in this repository (session
+<code>39da17c8</code>): two Blue Nile settings, its own audit script and calculator. It is kept unchanged
+and still works: <a href="site/index.html">open the earlier dashboard ↗</a>. Its two rings were re-fetched
+live during integration and now appear as <code>BN-195402</code> and <code>BN-302868</code> on the
+<a href="halo-pave.html">Halo &amp; Pavé</a> page.</p>
+
+<h2>6. Data provenance summary</h2>
 <dl class="kv">
 <dt>Items</dt><dd>{len(items)}</dd>
 <dt>Flags</dt><dd>{len(flags)}</dd>
@@ -657,7 +664,7 @@ a flag pointing at a missing item, or a broken internal link in the built site.<
 <dt>Repository</dt><dd><a href="https://github.com/karagemop466-tech/GOLD2" target="_blank" rel="noopener">karagemop466-tech/GOLD2 ↗</a></dd>
 </dl>
 
-<h2>6. What to do with a flagged row</h2>
+<h2>7. What to do with a flagged row</h2>
 <ol class="clean">
 <li>Open the source link and re-read the price, karat and width yourself.</li>
 <li>Ask the seller, in writing: <em>“Is this solid gold (not plated or filled), what is the gram weight, and what hallmark and maker's mark are stamped inside?”</em></li>
@@ -670,9 +677,8 @@ a flag pointing at a missing item, or a broken internal link in the built site.<
 
 
 def main():
-    DOCS.mkdir(exist_ok=True)
-    (DOCS / "assets").mkdir(exist_ok=True)
-    (DOCS / "assets" / "style.css").write_text(CSS, encoding="utf-8")
+    (SITE / "assets").mkdir(exist_ok=True)
+    (SITE / "assets" / "style.css").write_text(CSS, encoding="utf-8")
 
     gold = load(DATA / "gold-price.json")
     retailers = load(DATA / "retailers.json")["retailers"]
@@ -704,13 +710,13 @@ def main():
     pages["methods.html"] = build_methods(qa_text, gold, items, flags)
 
     for name, content in pages.items():
-        (DOCS / name).write_text(content, encoding="utf-8")
+        (SITE / name).write_text(content, encoding="utf-8")
 
     # no build artefacts inside the site folder
-    for junk in (DOCS / ".DS_Store",):
+    for junk in (SITE / ".DS_Store",):
         if junk.exists():
             junk.unlink()
-    print(f"built {len(pages)} pages into {DOCS}")
+    print(f"built {len(pages)} pages into {SITE}")
 
 
 if __name__ == "__main__":

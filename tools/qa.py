@@ -19,7 +19,11 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-DOCS = ROOT / "docs"
+SITE = ROOT  # Pages serves main "/"
+PAGE_NAMES = [
+    "index.html", "solitaire.html", "halo-pave.html", "three-stone-vintage.html",
+    "18k.html", "budget.html", "retailers.html", "prices.html", "flags.html", "methods.html",
+]
 REPORTS = ROOT / "reports"
 LISTING_FILES = ["solitaire.json", "halo-pave.json", "three-stone-vintage.json", "18k.json", "budget.json"]
 
@@ -257,10 +261,11 @@ def main() -> int:
 
     # ---------------------------------------------------------- 9 build output
     m = len(issues)
-    if not DOCS.exists():
-        fail("html", "docs/ does not exist - run tools/build_site.py")
+    missing = [n for n in PAGE_NAMES if not (SITE / n).exists()]
+    if missing:
+        fail("html", f"missing built pages: {missing} - run tools/build_site.py")
     else:
-        pages = sorted(DOCS.glob("*.html"))
+        pages = [SITE / n for n in PAGE_NAMES]
         if len(pages) < 10:
             fail("html", f"only {len(pages)} pages built")
         link_total = 0
@@ -284,7 +289,7 @@ def main() -> int:
                 target = href.split("#")[0]
                 if not target:
                     continue
-                if not (DOCS / target).exists():
+                if not (SITE / target).exists():
                     fail("html", f"{p.name}: broken internal link {href}")
             for anchor in re.findall(r'id="(f-\d{3})"', txt):
                 pass

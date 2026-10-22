@@ -55,8 +55,8 @@ supporting quote, a source URL outside the retailer's own domain, a rejected cac
 a flag pointing at a missing item, or a broken internal link in the built site.</p>
 <pre class="qa"># QA / hallucination audit
 
-- Generated: 2026-10-22 23:14 UTC
-- Items audited: 14 · flags: 15 · evidence quotes checked: 75
+- Generated: 2026-10-22 23:16 UTC
+- Items audited: 16 · flags: 15 · evidence quotes checked: 83
 - **RESULT: PASS** — 11 checks, 0 failures, 2 warnings
 
 ## Checks
@@ -64,15 +64,15 @@ a flag pointing at a missing item, or a broken internal link in the built site.<
 | # | Check | Result | Findings |
 |---|-------|--------|----------|
 | 1 | JSON schema &amp; unique ids | ✅ PASS | 0 |
-| 2 | Every value traces to a verbatim quote (75 quotes) | ✅ PASS | 0 |
+| 2 | Every value traces to a verbatim quote (83 quotes) | ✅ PASS | 0 |
 | 3 | Price / weight / width / karat backed by quotes | ✅ PASS | 0 |
 | 4 | Source links point at the seller&#x27;s own domain | ✅ PASS | 0 |
 | 5 | Blank values are covered by an explicit flag | ✅ PASS | 0 |
 | 6 | Cached/contradictory values are rejected, not published | ✅ PASS | 0 |
 | 7 | Flag definitions are complete and consistent | ✅ PASS | 0 |
 | 8 | Price vs melt sanity check | ✅ PASS | 0 |
-| 9 | Every table row carries an official source link | ✅ PASS | 0 |
-| 10 | Built site: no broken internal links (281 links, 48 external) | ✅ PASS | 0 |
+| 9 | Every table row carries an official source link (16 rows) | ✅ PASS | 0 |
+| 10 | Built site: no broken internal links (293 links, 50 external) | ✅ PASS | 0 |
 | 11 | Coverage summary | ✅ PASS | 0 |
 
 ## Failures
@@ -81,8 +81,8 @@ a flag pointing at a missing item, or a broken internal link in the built site.<
 
 ## Warnings
 
-- [coverage] 1 of 14 rows have no verified price
-- [coverage] 13 of 14 rows have no published gram weight
+- [coverage] 1 of 16 rows have no verified price
+- [coverage] 15 of 16 rows have no published gram weight
 
 ## What this audit proves, and what it does not
 
@@ -90,16 +90,23 @@ It proves that every published number is present in the stored evidence for that
 
 **Run this again after every review pass.** A stale table is the most likely way a wrong number enters this project.</pre>
 
-<h2>5. Data provenance summary</h2>
+<h2>5. Earlier pass preserved</h2>
+<p>The <code>site/</code> folder holds the first dashboard built in this repository (session
+<code>39da17c8</code>): two Blue Nile settings, its own audit script and calculator. It is kept unchanged
+and still works: <a href="site/index.html">open the earlier dashboard ↗</a>. Its two rings were re-fetched
+live during integration and now appear as <code>BN-195402</code> and <code>BN-302868</code> on the
+<a href="halo-pave.html">Halo &amp; Pavé</a> page.</p>
+
+<h2>6. Data provenance summary</h2>
 <dl class="kv">
-<dt>Items</dt><dd>14</dd>
+<dt>Items</dt><dd>16</dd>
 <dt>Flags</dt><dd>15</dd>
 <dt>Gold quote</dt><dd>$4,024.36/oz · 2026-10-21 · <a href="https://www.gold.org/goldhub/data/gold-prices" target="_blank" rel="noopener">World Gold Council ↗</a></dd>
 <dt>Retrieval dates</dt><dd>2026-10-22 (UTC)</dd>
 <dt>Repository</dt><dd><a href="https://github.com/karagemop466-tech/GOLD2" target="_blank" rel="noopener">karagemop466-tech/GOLD2 ↗</a></dd>
 </dl>
 
-<h2>6. What to do with a flagged row</h2>
+<h2>7. What to do with a flagged row</h2>
 <ol class="clean">
 <li>Open the source link and re-read the price, karat and width yourself.</li>
 <li>Ask the seller, in writing: <em>“Is this solid gold (not plated or filled), what is the gram weight, and what hallmark and maker's mark are stamped inside?”</em></li>
