@@ -1,7 +1,7 @@
 # QA / hallucination audit
 
-- Generated: 2026-10-22 23:24 UTC
-- Items audited: 16 · flags: 15 · evidence quotes checked: 83
+- Generated: 2026-10-22 23:27 UTC
+- Items audited: 16 · flags: 15 · evidence quotes checked: 87
 - **RESULT: PASS** — 11 checks, 0 failures, 2 warnings
 
 ## Checks
@@ -9,7 +9,7 @@
 | # | Check | Result | Findings |
 |---|-------|--------|----------|
 | 1 | JSON schema & unique ids | ✅ PASS | 0 |
-| 2 | Every value traces to a verbatim quote (83 quotes) | ✅ PASS | 0 |
+| 2 | Every value traces to a verbatim quote (87 quotes) | ✅ PASS | 0 |
 | 3 | Price / weight / width / karat backed by quotes | ✅ PASS | 0 |
 | 4 | Source links point at the seller's own domain | ✅ PASS | 0 |
 | 5 | Blank values are covered by an explicit flag | ✅ PASS | 0 |

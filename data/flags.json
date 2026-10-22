@@ -139,7 +139,7 @@
       "severity": "medium",
       "type": "currency",
       "title": "Brilliant Earth price was served in EUR, not USD",
-      "detail": "The Brilliant Earth page rendered '€ 990.00 (Setting Only)' at retrieval, and the site's currency selector showed EUR active. The USD price was never displayed, so it is not recorded and no exchange-rate conversion was invented. The item is marked with currency EUR.",
+      "detail": "The Brilliant Earth page rendered '\u20ac 990.00 (Setting Only)' at retrieval, and the site's currency selector showed EUR active. The USD price was never displayed, so it is not recorded and no exchange-rate conversion was invented. The item is marked with currency EUR.",
       "affected_items": [
         "BE-121H6"
       ],
@@ -202,8 +202,8 @@
       "id": "F-011",
       "severity": "low",
       "type": "unverified",
-      "title": "Zales return policy is only evidenced by a product-page claim",
-      "detail": "Every Zales product page retrieved states 'Free and easy 30-day returns', but the standalone return-policy page URL was not captured, so exclusions (resized, custom, clearance) are unknown and left blank.",
+      "title": "Zales return policy now captured; resized-ring treatment and contact details still not stated",
+      "detail": "RESOLVED IN PART on 2026-10-22 (session S-75094819): Zales' standalone return policy was retrieved from zales.com. It states returns within 30 days of the purchase (shipped) date, jewelry exchanges within 60 days, excludes custom designs, and offers a prepaid mail return label. Still unverified: the retrieved policy text does not address resized or sized-to-order rings, and no contact phone/email was captured on the retrieved pages, so those fields stay blank. The canonical policy page body was not extractable by the text fetcher, so the text was read from Zales' official modal rendition of the same policy; both URLs are linked below. A lookalike domain (zales-jewelry.com) appeared in search results and was rejected as a source \u2014 it is not Zales' official site.",
       "affected_items": [
         "Z-20303279",
         "Z-20301172",
@@ -211,23 +211,25 @@
         "Z-20046552"
       ],
       "sources": [
+        "https://www.zales.com/return-and-exchange-modal",
+        "https://www.zales.com/return-and-exchange-policy",
         "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449"
       ],
-      "recommended_action": "Open the Zales return policy and confirm the resize/custom exclusions before ordering."
+      "recommended_action": "Before ordering from Zales, ask in writing whether a ring sized to order can still be returned after independent testing, and capture full contact details from the order confirmation."
     },
     {
       "id": "F-012",
       "severity": "low",
       "type": "unverified",
-      "title": "Credit-card acceptance was not verified on any retailer page",
-      "detail": "The checklist prefers a credit card for purchase protection. No retrieved page stated accepted card networks. Affirm / Wells Fargo financing and PayPal are mentioned on some pages, which are not equivalent to a card purchase. The field is left blank rather than assumed.",
+      "title": "Credit-card acceptance verified for Zales only; not verified for Blue Nile, VRAI or Brilliant Earth",
+      "detail": "The checklist prefers a credit card for purchase protection. UPDATED 2026-10-22 (session S-75094819): Zales' standalone return policy names 'Credit and Debit Cards' as an original-purchase tender ('The same account will be credited'), so card acceptance is verified for Zales (networks not named). For Blue Nile, VRAI and Brilliant Earth, no retrieved page states accepted card networks. Affirm / Wells Fargo financing and PayPal are mentioned on some pages, which are not equivalent to a card purchase. Those fields are left blank rather than assumed.",
       "affected_items": [
         "BN-203348",
         "BE-121H6",
-        "VRAI-CLASSIC-4P",
-        "Z-19957449"
+        "VRAI-CLASSIC-4P"
       ],
       "sources": [
+        "https://www.zales.com/return-and-exchange-modal",
         "https://www.bluenile.com/policies/returns",
         "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/"
       ],
