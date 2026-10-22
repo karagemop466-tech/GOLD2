@@ -12,6 +12,7 @@ Shared task board for parallel agent sessions. **Read this before editing anythi
 |---|---|---|---|
 | `39da17c8` | `arena/39da17c8-gold2` | initial research, dashboard in `site/`, audits, Pages | merged in PR #1 / #2 → `main` |
 | `S-6CA03571` (6ca03571) | `arena/6ca03571-gold2` | listing research, evidence trail, root dashboard, integration | this pass, PR #3 |
+| `S-75094819` | `arena/75094819-gold2` | refresh pass: gold quote, F-011/F-012 handoffs, new "solid gold" retailer coverage, price spot re-verification, rebuild, PR + merge | in progress (claimed 2026-10-22) |
 
 Both sessions share one environment constraint: the runner is bound to a single branch and cannot create
 `session-<id>/<task>` worktrees. That is recorded rather than ignored. Work is therefore separated by
@@ -182,3 +183,23 @@ computed, never typed — a grep for `of 14` in `tools/build_site.py` is now par
 **Open items, published and non-blocking:** every listing still lacks the words "solid gold", a stated hallmark
 or maker's mark, and (15 of 16) a gram weight. Those are the seller questions listed on `flags.html`, not
 something this repo can resolve by itself.
+
+---
+
+# Session S-75094819 — refresh & expansion pass (claimed 2026-10-22 UTC)
+
+Branch: `arena/75094819-gold2` (platform-bound single branch; same constraint recorded by prior sessions).
+Baseline at claim: `tools/qa.py` PASS — 11 checks, 0 failures, 2 coverage warnings. No open PRs, no other remote branches.
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| S750-T01 | Refresh gold spot quote if a newer official quote is retrievable | in progress | S-75094819 | `data/gold-price.json`, `evidence/gold-price.md`, `prices.html` |
+| S750-T02 | F-011: retrieve Zales standalone return policy from zales.com | in progress | S-75094819 | `evidence/retailers/zales.md`, `data/retailers.json` (Zales row), `data/flags.json` (F-011) |
+| S750-T03 | F-012: verify credit-card acceptance per retailer from official pages | in progress | S-75094819 | `evidence/retailers/*.md`, `data/retailers.json`, `data/flags.json` (F-012) |
+| S750-T04 | New coverage: retailers that explicitly state "solid gold" (official pages only; blank + flag if not stated) | in progress | S-75094819 | new `data/listings/*.json`, `evidence/listings/*.md`, new root page(s) via `tools/build_site.py` |
+| S750-T05 | Spot re-verification of existing listing prices against live pages | in progress | S-75094819 | `data/listings/*.json`, `evidence/listings/*.md` (append-only notes) |
+| S750-T06 | Rebuild, full QA (both audit suites), PR to main, merge, Pages verification | unclaimed→S-75094819 at integration | S-75094819 | root `*.html`, `reports/qa-report.md`, `COORDINATION.md`, `README.md` |
+
+Rules reaffirmed for this pass: **no hallucinations** — every value read from the retailer's own page, verbatim
+quote in `evidence/`, blank + flag when absent; never infer, average or convert. Run `tools/qa.py` (and the
+earlier pass's `scripts/audit.py`) after every review; re-check for hallucinations before merge.
