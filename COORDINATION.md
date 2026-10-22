@@ -12,7 +12,7 @@ Shared task board for parallel agent sessions. **Read this before editing anythi
 |---|---|---|---|
 | `39da17c8` | `arena/39da17c8-gold2` | initial research, dashboard in `site/`, audits, Pages | merged in PR #1 / #2 → `main` |
 | `S-6CA03571` (6ca03571) | `arena/6ca03571-gold2` | listing research, evidence trail, root dashboard, integration | PR #3–#7 merged |
-| `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9 merged; R9-01 quote-date correction open |
+| `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9 done; R9-01 quote-date correction open |
 | `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1 done; T6 review PR #8 |
 
 All sessions share one environment constraint: the runner is bound to a single branch and cannot create
@@ -36,9 +36,9 @@ All sessions share one environment constraint: the runner is bound to a single b
 | T09 | Site generator | done | S-6CA03571 | `tools/build_site.py`, `assets/style.css`, root `*.html` |
 | T10 | QA / hallucination audit | done | S-6CA03571 | `tools/qa.py`, `reports/qa-report.md` |
 | T11 | Integration, merge, publish | done | S-6CA03571 | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
-| T12 | Re-verify gold spot price from WGC + update quote | in progress | S-da963b79 | `data/gold-price.json`, `evidence/gold-price.md` |
-| T13 | Run QA audit + rebuild site + verify Pages deploy | unclaimed | S-da963b79 | `tools/qa.py`, `tools/build_site.py`, root `*.html`, `reports/qa-report.md` |
-| T14 | PR + merge to main, confirm Pages live | unclaimed | S-da963b79 | `COORDINATION.md`, PR #8 |
+| T12 | Re-verify gold spot price from WGC + update quote | done | S-da963b79 | `data/gold-price.json`, `evidence/gold-price.md` |
+| T13 | Run QA audit + rebuild site + verify Pages deploy | done | S-da963b79 | `tools/qa.py`, `tools/build_site.py`, root `*.html`, `reports/qa-report.md` |
+| T14 | PR + merge to main, confirm Pages live | done | S-da963b79 | `COORDINATION.md`, PR #9 |
 
 ## Verification log
 
@@ -54,6 +54,9 @@ All sessions share one environment constraint: the runner is bound to a single b
 | 2026-10-22 | T04 | Brilliant Earth product page | https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/ | €990.00 setting-only (EUR served; USD never displayed) |
 | 2026-10-22 | T10 | Hallucination audit | `tools/qa.py` | **PASS** 11 checks, 0 failures, 2 coverage warnings |
 | 2026-10-22 | T11 | Re-verified prior-session rows | Blue Nile items 195402 and 302868 | $1,300 (501480w14) and $1,050 (501480w14l) both confirmed live |
+| 2026-10-22 | T12 | Gold spot price re-verified | https://www.gold.org/goldhub/data/gold-prices | $4,028.53/oz live on 2026-10-22 (was $4,024.36 from 2026-10-21 data); updated in data/gold-price.json + evidence/gold-price.md |
+| 2026-10-22 | T13 | QA audit + site rebuild | tools/qa.py, tools/build_site.py | PASS — 11 checks, 0 failures, 2 warnings; 10 pages built; all 16 rows carry official source links |
+| 2026-10-22 | T14 | PR + merge + Pages deploy | PR #9 → main | PR https://github.com/karagemop466-tech/GOLD2/pull/9 merged; Pages status `built` for commit on main; live URL https://karagemop466-tech.github.io/GOLD2/ |
 
 ## Findings (full detail on `flags.html`)
 
