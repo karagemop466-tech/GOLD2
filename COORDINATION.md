@@ -61,9 +61,10 @@ The clean-tree check caught and fixed a stale intermediate FAIL badge before PR 
 |---|---|---|---|
 | `39da17c8` | `arena/39da17c8-gold2` | initial research, dashboard in `site/`, audits, Pages | merged in PR #1 / #2 → `main` |
 | `S-6CA03571` (6ca03571) | `arena/6ca03571-gold2` | listing research, evidence trail, root dashboard, integration | PR #3–#7 merged |
-| `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9 done; R9-01 quote-date correction applied by S-CA4C9D8A |
-| `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 merged; findings dispositioned by S-CA4C9D8A |
-| `S-CA4C9D8A` | `arena/ca4c9d8a-gold2` | field-scoped re-verification, dashboard/calculator, combined QA, integration and closeout | T12–T15 done; PR #15 merged and Pages built |
+| `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9, #11–#13 done; R9-01 quote-date correction applied by S-CA4C9D8A |
+| `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 & #14 merged; findings dispositioned by S-CA4C9D8A |
+| `S-CA4C9D8A` | `arena/ca4c9d8a-gold2` | field-scoped re-verification, dashboard/calculator, combined QA, integration and closeout | T12–T15 done; PR #15 & #16 merged and Pages built |
+| `S-8C810C15` (8c810c15) | `arena/8c810c15-gold2` | independent live line-by-line audit, explicit `"Solid 14k Gold"` catalog expansion (`Automic Gold` + `Mejuri`), security/hallucination/WCAG scanner (`audit/8c810c15/**`), and final additive integration | in progress |
 
 All sessions share one environment constraint: the runner is bound to a single branch and cannot create
 `session-<id>/<task>` worktrees. That is recorded rather than ignored. Work is therefore separated by
@@ -368,3 +369,25 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - **Final publication rebase-free follow-up — arena-24aeb4a8:** PR #17 is open. Its first complete Evidence dashboard run passed on GitHub. Main advanced once more via PR #16 (`49a84cb`); merged it normally, retaining its root small-text contrast audit/colors and review closure history. Kept the already full-SHA-pinned newer Actions and combined-register README where only wording/version pins conflicted; regenerated root methods/report. No product observations changed. Repeat checks and PR CI are run again against this actual combined state before merge.
 
 - **Publication verified / final wording follow-up — arena-24aeb4a8:** PR #17 merged at `c008aede2481b79f3f88159b0f9dda87868f5b3a`; all PR checks and post-merge Evidence dashboard passed. Actual legacy Pages deployment `39875762776` succeeded and public landing/catalog returned the 32-entry register. Final public-page review caught an overbroad catalog notice saying setting-only displays were withheld despite a supported EUR setting snapshot; clarify center exclusion versus unconfirmed currency/options and add regression coverage, with another full evidence/security pass. No research observations or values change. Optional source-monitor manual dispatch was denied (403 integration permission); configuration remains published, and no executed live-monitor result is claimed. Final wording follow-up will be merged only after CI, with publication proof recorded in its PR.
+
+---
+
+# Session S-8C810C15 — task board & verification log
+
+- **Session ID:** `S-8C810C15` (`8c810c15`)
+- **Platform-fixed branch:** `arena/8c810c15-gold2` (Arena binds each session to its assigned branch; creating or pushing `session-<id>/<task>` branches is disallowed by the runner environment, so strict non-overlapping file scopes enforce isolation until final integration.)
+- **Observed state at claim (`main` @ `58127c5`):** all prior `main` board tasks (`39da17c8`, `T01`–`T14`) are marked `done`. Concurrent remote session branches observed (`arena/5ff05cf9-gold2`, `arena/4b68bad3-gold2`, `arena/24aeb4a8-gold2`, `arena/70b76800-gold2`, `arena/75094819-gold2`, `arena/ca4c9d8a-gold2`); their exclusive files will never be discarded during rebase/merge.
+
+| ID | Task | Status | Owner | File scope (exclusive before integration) |
+|----|------|--------|-------|-------------------------------------------|
+| S8C8-T1 | Independent line-by-line live re-verification of all existing rows, gold spot quote, and retailer policy/payment/contact pages | in progress | S-8C810C15 | `audit/8c810c15/live_line_by_line_verification.md` |
+| S8C8-T2 | Official-source research for explicit "solid gold" & weight/hallmark engagement rings (strictly blank + flagged where absent) | unclaimed | S-8C810C15 | `audit/8c810c15/verified_solid_gold.json`, `audit/8c810c15/evidence_solid_gold.md` |
+| S8C8-T3 | Standalone field-level hallucination, HTML source-link, CSP/security & calculator unit test suite | unclaimed | S-8C810C15 | `audit/8c810c15/security_and_hallucination_scanner.py`, `audit/8c810c15/test_calculator_and_scanner.py` |
+| S8C8-T4 | Final integration of verified fixes, category & dashboard tables, calculator, Flagged for Review page, PR merge & Pages verification | unclaimed | S-8C810C15 | Shared integration scope after `S8C8-T1`–`S8C8-T3` complete: `data/**`, `evidence/**`, `tools/**`, `assets/**`, `reports/**`, root `*.html`, `README.md`, `.github/workflows/gold2-verify.yml`, `COORDINATION.md` (preserving `site/**`, `scripts/**`, and any merged peer-session files) |
+
+## Cross-scope requests logged before editing shared files
+
+- **REQ-8C8-01 (`data/gold-price.json`, root `*.html`):** PR #9 updated `usd_per_troy_oz` to `4028.53` and `quote_date` to `2026-10-22` while `evidence_quotes` still cites `"Data as of 21 October, 2026"` and `index.html`/`prices.html`/`methods.html` were not rebuilt (still rendering `$4,024.36`). Will verify live WGC page and reconcile at `S8C8-T4`.
+- **REQ-8C8-02 (`data/listings/budget.json`, `data/listings/three-stone-vintage.json`):** Four Zales rows (`Z-19957449`, `Z-20046552`, `Z-20303279`, `Z-20301172`) record `"metal": "10K Yellow Gold"` and `"color": "Yellow"` without `"Yellow"` in the stored evidence excerpts. Will verify live Zales product pages and blank + flag if unconfirmed.
+- **REQ-8C8-03 (`data/listings/18k.json`, `tools/build_site.py`):** `VRAI-CLASSIC-4P` title says `Plain Band` while the stored excerpt includes `Pavé carat weight:0.18ctw`, and `weight_basis` (`2.86 g at size 6`) is omitted from rendered tables. Will verify live VRAI page and display exact weight basis.
+- **REQ-8C8-04 (`data/retailers.json`, `data/flags.json`, `data/listings/*.json`):** Retrieve Zales standalone return/contact pages (`F-011`), check official payment/card disclosures (`F-012`), fix `F-010` missing `BN-195402`/`BN-302868` plus missing `item.flags` links, fix `F-015` stale `"8 Blue Nile rows"` count (10 rows), add explicit width/color/reputation flags, and ensure every `<tr>` across all pages links to an official `https://` source.
