@@ -15,7 +15,7 @@ Last updated: 2026-10-22T23:08:49Z
 
 | ID | Task | Status | Owner session | Started (UTC) | File scope |
 |---|---|---|---|---|---|
-| T1 | Repository and requirements audit | in progress | `5ff05cf9-gold2` | 2026-10-22T23:08:49Z | `README.md`, `data/requirements.json`, `docs/REPOSITORY_AUDIT.md` |
+| T1 | Repository and requirements audit | done | `5ff05cf9-gold2` | 2026-10-22T23:08:49Z | `README.md`, `data/requirements.json`, `docs/REPOSITORY_AUDIT.md` |
 | T2 | Official-source ring research and evidence records | unclaimed | — | — | `data/products.json`, `data/sources.json`, `docs/SOURCES.md` |
 | T3 | Reusable verification, hallucination, and security checks | unclaimed | — | — | `scripts/**`, `tests/**`, `docs/VERIFICATION.md` |
 | T4 | Dashboard UI and category/calculator page components | unclaimed | — | — | `site/assets/**`, `site/*.html`, `site/*/index.html` (excluding generated `site/data/**`) |
@@ -33,7 +33,12 @@ None.
 
 ## Completion records
 
-None yet.
+### T1 — 2026-10-22
+
+- **Sources:** exact starting [README](https://github.com/karagemop466-tech/GOLD2/blob/b00633e9fd6d3b2e82dcf21cbd4a8a6aabb7afe7/README.md), [tree](https://github.com/karagemop466-tech/GOLD2/tree/b00633e9fd6d3b2e82dcf21cbd4a8a6aabb7afe7), and [commit](https://github.com/karagemop466-tech/GOLD2/commit/b00633e9fd6d3b2e82dcf21cbd4a8a6aabb7afe7).
+- **Verification:** inventoried the complete tracked starting tree, compared its only line with the exact-commit GitHub source, validated `data/requirements.json` with Python's JSON parser, and ran `git diff --check`.
+- **Irregularities:** no existing product or price records; no legacy hallucinations to flag. Missing research, validation, and deployment infrastructure were recorded as work requirements, not as verified product findings.
+- **Residual review:** future edits must be checked against official sources and followed by hallucination/security scans. See Flagged for Review once published.
 
 ## Pull request and deployment
 
