@@ -706,8 +706,8 @@ def main():
     pages["flags.html"] = build_flags(flags)
     known = [i for i in items if i.get("weight_g")]
     weights_note = (
-        f"{len(known)} of {len(items)} rows publish a gram weight. The rest are blank, so no melt comparison is shown for them. "
-        "A blank is not zero."
+        f"{len(known)} of {len(items)} rows publish{'es' if len(known) == 1 else ''} a gram weight. "
+        "The rest are blank, so no melt comparison is shown for them. A blank is not zero."
     )
     pages["prices.html"] = build_prices(gold, items, weights_note)
     pages["methods.html"] = build_methods(qa_text, gold, items, flags)

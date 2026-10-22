@@ -148,3 +148,26 @@ The first live render exposed four defects that local checks had not caught, now
 
 This is recorded because it is the exact failure mode this project is about: a page can look right and still
 carry a stale number. Re-read the rendered site, not only the source data.
+
+- **PR #4:** https://github.com/karagemop466-tech/GOLD2/pull/4 — checks `audit` (pass, 8s) and `verify` (pass, 6s)
+- **Merge:** `gh pr merge 4 --merge` succeeded; merge commit `99782bd468fb9b97267ab1dfecb2d492b4f17820`
+- **Pages:** build for `99782bd` reached `status: built`; live `/index.html` re-read and confirmed:
+  badge now "PASS — 11 checks, 0 failures, 2 warnings", checklist "1 of 16", F-003 title "15 of 16",
+  calculator defaults 3.00 g / 14K → 1.750 g fine gold → $226.43 melt at $4,024.36/oz.
+
+## Final state
+
+| Item | Value |
+|---|---|
+| Listings published | 16 (Blue Nile 10, Zales 4, VRAI 1, Brilliant Earth 1) |
+| Retailers verified | 4 |
+| Categories | 5 (solitaire, halo & pavé, three-stone & vintage, 18K, 10K) |
+| Flags published | 15 (4 high, 6 medium, 5 low) |
+| Evidence quotes audited | 75+ per run |
+| Audit | PASS, 0 failures |
+| Live URL | https://karagemop466-tech.github.io/GOLD2/ |
+| Earlier pass | preserved at /site/, still passing its own audit |
+
+**Open items, published and non-blocking:** every listing still lacks the words "solid gold", a stated hallmark
+or maker's mark, and (15 of 16) a gram weight. Those are the seller questions listed on `flags.html`, not
+something this repo can resolve by itself.
