@@ -1,6 +1,6 @@
 # QA / hallucination audit
 
-- Generated: 2026-10-22 23:44 UTC
+- Generated: 2026-10-22 23:48 UTC
 - Items audited: 19 · flags: 18 · evidence quotes checked: 114
 - **RESULT: PASS** — 11 checks, 0 failures, 2 warnings
 

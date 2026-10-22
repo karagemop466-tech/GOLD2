@@ -17,7 +17,7 @@
     "LBMA publishes tabulated historical prices only through the licensed MyLBMA portal; no free LBMA fix value was retrievable on 2026-10-22. The World Gold Council quote above is the citable alternative.",
     "Spot quotes move continuously. Any melt calculation shown on this site is only valid as of the quote_date above.",
     "This is not an appraisal. Melt value ignores labour, setting, diamonds, brand, duty and resale spread.",
-    "Re-checked 2026-10-22 by session S-75094819: the same World Gold Council page displayed 4,028.53 USD/oz in its spot widget (no timestamp rendered beside it) with chart data 'as of 21 October, 2026'. The previous observation (4,024.36) is preserved in quote_history and in evidence/gold-price.md."
+    "Re-checked 2026-10-22 by session S-75094819: the same World Gold Council page displayed 4,028.53 USD/oz in its spot widget (no timestamp rendered beside it) with chart data 'as of 21 October, 2026'. The previous observation (4,024.36) is preserved in quote_history and in evidence/gold-price.md. Session S-da963b79 independently re-read the same page (PR #9) and recorded the identical 4,028.53 value; the merged record keeps quote_date 2026-10-21 per independent-review finding R9-01, which this dispositions."
   ],
   "quote_history": [
     {

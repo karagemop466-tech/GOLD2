@@ -58,3 +58,11 @@ Data as of 21 October, 2026
 **Action:** `data/gold-price.json` updated to 4028.53 USD/troy oz with `retrieved_at` 2026-10-22 and
 `quote_date` 2026-10-21 (the dataset date printed on the page). The earlier 4024.36 observation above is
 preserved verbatim and in `quote_history`. No value was averaged or carried forward without re-reading the page.
+
+**Parallel independent re-verification (merged 2026-10-22):** session `S-da963b79` independently re-read the
+same WGC page in PR #9 and recorded the identical value, 4,028.53 USD/oz — two sessions converged on the same
+number from the same official page. That session initially set `quote_date` to its retrieval date (2026-10-22);
+independent review finding **R9-01** requested the official source date (2026-10-21) instead. The merged
+record keeps the agreed value with `quote_date: 2026-10-21`, which dispositions R9-01. (During the merge,
+that session's in-place edit briefly replaced the first 4,024.36 excerpt above; it was restored so the
+first observation stays verbatim. Nothing was discarded: both observations and both sessions' records remain.)
