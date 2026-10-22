@@ -11,7 +11,8 @@ Shared task board for parallel agent sessions. **Read this before editing anythi
 | Session | Branch | Scope | Outcome |
 |---|---|---|---|
 | `39da17c8` | `arena/39da17c8-gold2` | initial research, dashboard in `site/`, audits, Pages | merged in PR #1 / #2 → `main` |
-| `S-6CA03571` (6ca03571) | `arena/6ca03571-gold2` | listing research, evidence trail, root dashboard, integration | this pass, PR #3 |
+| `S-6CA03571` (6ca03571) | `arena/6ca03571-gold2` | listing research, evidence trail, root dashboard, integration | PR #3-#7 merged → `main` |
+| `S-da963b79` (da963b79) | `arena/da963b79-gold2` | re-verification pass: gold price re-check from WGC, QA audit, rebuild, Pages deploy, PR | in progress |
 
 Both sessions share one environment constraint: the runner is bound to a single branch and cannot create
 `session-<id>/<task>` worktrees. That is recorded rather than ignored. Work is therefore separated by
@@ -34,6 +35,9 @@ Both sessions share one environment constraint: the runner is bound to a single 
 | T09 | Site generator | done | S-6CA03571 | `tools/build_site.py`, `assets/style.css`, root `*.html` |
 | T10 | QA / hallucination audit | done | S-6CA03571 | `tools/qa.py`, `reports/qa-report.md` |
 | T11 | Integration, merge, publish | done | S-6CA03571 | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
+| T12 | Re-verify gold spot price from WGC + update quote | in progress | S-da963b79 | `data/gold-price.json`, `evidence/gold-price.md` |
+| T13 | Run QA audit + rebuild site + verify Pages deploy | unclaimed | S-da963b79 | `tools/qa.py`, `tools/build_site.py`, root `*.html`, `reports/qa-report.md` |
+| T14 | PR + merge to main, confirm Pages live | unclaimed | S-da963b79 | `COORDINATION.md`, PR #8 |
 
 ## Verification log
 
