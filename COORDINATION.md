@@ -13,7 +13,7 @@ Shared task board for parallel agent sessions. **Read this before editing anythi
 | `39da17c8` | `arena/39da17c8-gold2` | initial research, dashboard in `site/`, audits, Pages | merged in PR #1 / #2 → `main` |
 | `S-6CA03571` (6ca03571) | `arena/6ca03571-gold2` | listing research, evidence trail, root dashboard, integration | PR #3–#7 merged |
 | `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9 done; R9-01 quote-date correction open |
-| `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1 done; T6 review PR #8 |
+| `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 merged; open findings handed off |
 
 All sessions share one environment constraint: the runner is bound to a single branch and cannot create
 `session-<id>/<task>` worktrees. That is recorded rather than ignored. Work is therefore separated by
@@ -215,7 +215,7 @@ This is the independent reviewer's claim board. T2–T5 were subsequently comple
 | T3 | Reusable verification, hallucination, and security checks | unclaimed | — | — | `scripts/**`, `tests/**`, `docs/VERIFICATION.md` |
 | T4 | Dashboard UI and category/calculator page components | unclaimed | — | — | `site/assets/**`, `site/*.html`, `site/*/index.html` (excluding generated `site/data/**`) |
 | T5 | Final integration, generated site data, Pages workflow, PR and deploy | unclaimed | — | — | `site/data/**`, `.github/**`, `docs/INTEGRATION.md`, root workflow/config files not otherwise claimed |
-| T6 | Independent cross-branch evidence and publication review | in progress | `5ff05cf9-gold2` | 2026-10-22T23:09:48Z | `reviews/**` only; read-only inspection of other branches and deployed output |
+| T6 | Independent cross-branch evidence and publication review | done | `5ff05cf9-gold2` | 2026-10-22T23:09:48Z | `reviews/**` only; read-only inspection of other branches and deployed output |
 
 `COORDINATION.md` is the shared board: sessions may update only their own task rows, handoff notes, requests, and completion records.
 
@@ -248,6 +248,8 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - 2026-10-22T23:23:38Z — `5ff05cf9-gold2`: rechecked main `966e87b` after PR #6. Both build/audit suites still passed; independent audit still reported 30 findings and six arithmetic controls passed. Live cache-busted root, Flagged, calculator, and legacy `/site/` routes loaded. PR #6 fixed the Flagged page's 14/16 and 13/16 summaries; F-015's 8-Blue-Nile text and other R6 findings remain visible. A draft review transcription error in the quick-reference values was caught by the live re-read, corrected, and converted into five additional automated arithmetic controls; the implementation's values were correct.
 - 2026-10-22T23:24:49Z — `5ff05cf9-gold2`: pushed commit `77477c2` and opened review PR #8. Merged main `a47b0e5` into the fixed branch, preserving every implementation file and combining README/coordination content. A subsequent pull-rebase attempted to replay main-origin commits; it was aborted immediately, the merge was verified intact, and no work was discarded. Do not rebase a branch after merging main; fetch and verify the own remote ancestor instead.
 - 2026-10-22T23:27:55Z — `5ff05cf9-gold2`: integrated and independently checked main `fc2a882` from PR #9. The new 4,028.53 quote and all six arithmetic controls matched, but the official page still says data as of 2026-10-21. Recorded R9-01, added an automated source-date control, and commented on PR #9 requesting correction of the quote date rather than the supported number.
+- 2026-10-22T23:29:48Z — `5ff05cf9-gold2`: PR #8 merged as `73a98fe1338f901b6c85452b237469d3bde29327`. Exact-merge verification and Pages runs succeeded; live dashboard, category, Flagged, calculator, methods, report, and JSON routes loaded. Exact-merge isolated builds/audits/tests passed. The independent review remains visible rather than being treated as blocked by a supplied PASS.
+- 2026-10-22T23:34:05Z — `5ff05cf9-gold2`: final live/self-review caught five width and three URL transcription errors in the review report itself. Direct official re-fetch confirmed the implementation data; corrected only the report/reference prose and added row-to-record controls. R8-01 is resolved with pre/post outputs preserved. R39-01 and R39-03 are also resolved by the integrated category pages and input calculator. Current machine register: 17 open findings (5 high, 9 medium, 3 low), 3 resolved.
 
 ## Completion records
 
@@ -265,4 +267,6 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - Main verification runs `39871245614` (GOLD2 verify) and `39871245531` (Verify GOLD) succeeded for `966e87b`; Pages run `39871244612` succeeded for the same commit.
 - Live cache-busted `/GOLD2/?review=966e87b` displayed the 16-row current dashboard and corrected QA badge. `/GOLD2/flags.html` displayed 16/16 solid-gold and 15/16 missing-weight counts but still displayed F-015's stale 8-Blue-Nile sentence. `/GOLD2/prices.html` displayed the correct VRAI and quick-reference arithmetic plus the open calculator guidance/label issues. `/GOLD2/site/` remains the explicitly described earlier two-record dashboard.
 - The unqueried root retrieval reused an earlier `/site/` redirect in the fetch cache; a cache-busted URL retrieved the current root and the archived source contains no root redirect. This is recorded as a retrieval-cache irregularity, not misreported as a Pages failure.
-- Review PR #8 is open; its merge, post-merge deployment, and final combined re-review are pending. Open R39/R6 findings are not closed by successful builds or merges.
+- Review PR #8 final head `779020d40bc328decb6240044da7a305366ef856` passed runs `39872116197` and `39872116200`, then merged as `73a98fe1338f901b6c85452b237469d3bde29327` at 2026-10-22T23:29:48Z. Exact-main runs `39872158608` and `39872158539` passed; Pages run `39872158049` built and deployed that commit. The PR-head and merge trees were identical.
+- PR #13 subsequently changed only `reports/qa-report.md`; main `7a453927ac410c45894c480bef47494322798e1f` verification/Pages runs `39872212871`, `39872212900`, and `39872212893` succeeded.
+- Final publication and errata evidence is in `reviews/2026-10-22-pr8-publication.md`. R39-01/R39-03/R8-01 are resolved; R9-01 and 16 other findings remain open. Successful builds/merges do not close evidence findings. Further hallucination/security review is required after every corrective edit.
