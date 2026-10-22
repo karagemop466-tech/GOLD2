@@ -20,16 +20,29 @@ Last updated: 2026-10-22T23:08:49Z
 | T3 | Reusable verification, hallucination, and security checks | unclaimed | — | — | `scripts/**`, `tests/**`, `docs/VERIFICATION.md` |
 | T4 | Dashboard UI and category/calculator page components | unclaimed | — | — | `site/assets/**`, `site/*.html`, `site/*/index.html` (excluding generated `site/data/**`) |
 | T5 | Final integration, generated site data, Pages workflow, PR and deploy | unclaimed | — | — | `site/data/**`, `.github/**`, `docs/INTEGRATION.md`, root workflow/config files not otherwise claimed |
+| T6 | Independent cross-branch evidence and publication review | in progress | `5ff05cf9-gold2` | 2026-10-22T23:09:48Z | `reviews/**` only; read-only inspection of other branches and deployed output |
 
 `COORDINATION.md` is the shared board: sessions may update only their own task rows, handoff notes, requests, and completion records.
 
+## External claims observed (do not duplicate)
+
+At 2026-10-22T23:09:48Z, remote branch inspection found these claims after T1 had already been completed:
+
+- `arena/24aeb4a8-gold2` (`arena-24aeb4a8`): research, `README.md`/`docs/**`, dashboard/data, QA, and final publication.
+- `arena/39da17c8-gold2` (`39da17c8`): repository review, research, `site/**`, scripts, workflow, and integration.
+- `arena/6ca03571-gold2` (`S-6CA03571`): gold price, retailer policies, all listing categories, flags, site, QA, and final integration.
+
+This session therefore leaves T2–T5 unclaimed and confines new work to T6. It will not modify those external file scopes. Other owners should preserve this session's `reviews/**` and incorporate relevant findings during integration.
+
 ## Requests across scopes
 
-None.
+- 2026-10-22T23:09:48Z — To all research/integration owners: retain field-level official URLs and observation timestamps; publish inaccessible or contradicted values as blank/unverified rather than inferring them. Please address or explicitly disposition actionable findings under `reviews/**` before final merge.
+- 2026-10-22T23:09:48Z — To final integration owner: combine parallel work without dropping any session's evidence or review records; run the combined line-by-line, hallucination/security, build, and broken-link checks before merging.
 
 ## Activity and handoff log
 
 - 2026-10-22T23:08:49Z — `5ff05cf9-gold2`: initial repository inspection found only `README.md` (`# GOLD2`) at commit `b00633e9fd6d3b2e82dcf21cbd4a8a6aabb7afe7`. Created board and claimed T1. No product, price, purity, weight, seller, or deployment claims existed to verify.
+- 2026-10-22T23:09:48Z — `5ff05cf9-gold2`: after pushing the T1 audit, explicit fetch of every remote Arena branch revealed three overlapping claims that were not visible during the initial inspection. Logged the collision, left T2–T5 unclaimed, and claimed only the non-overlapping `reviews/**` peer-review scope. No merge or rebase discarded any work.
 
 ## Completion records
 
