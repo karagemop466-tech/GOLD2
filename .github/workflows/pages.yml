@@ -1,26 +1,37 @@
-name: Verify GOLD
+name: Legacy dashboard verify
+
+# GitHub Pages publication is configured separately as legacy main /.
+# This workflow preserves and verifies the earlier site/ dashboard; it is not
+# the deployment mechanism for the current root dashboard.
 on:
   push:
-    branches: [main, arena/39da17c8-gold2]
+    branches: [main, arena/ca4c9d8a-gold2]
   pull_request:
   workflow_dispatch:
+
 permissions:
   contents: read
+
 concurrency:
-  group: pages-${{ github.ref }}
+  group: legacy-dashboard-${{ github.ref }}
   cancel-in-progress: false
+
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09
+
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1
         with:
-          python-version: '3.12'
+          python-version: "3.12"
+
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
-          node-version: '22'
-      - run: python scripts/build.py && python scripts/audit.py && node scripts/test.js
-      - uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b
-        with:
-          path: site
+          node-version: "22"
+
+      - name: Build and audit the preserved dashboard
+        run: python3 scripts/build.py && python3 scripts/audit.py && node scripts/test.js
+
+      - name: Confirm preserved generated files are reproducible
+        run: git diff --exit-code

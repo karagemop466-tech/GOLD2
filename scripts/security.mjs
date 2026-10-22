@@ -20,7 +20,7 @@ for(const file of pages){
  if(/<iframe|<object|<embed/i.test(text))errors.push(file+': unnecessary embedded active content');
  if(/target="_blank"/.test(text)&&!text.includes('noopener'))errors.push(file+': unsafe opener');
 }
-const runtime=['explore/assets/app.mjs','explore/assets/domain.mjs','site/app.js'];
+const runtime=['explore/assets/app.mjs','explore/assets/domain.mjs','site/app.js','assets/calculator.js'];
 for(const file of runtime){
  const text=await readFile(path.join(ROOT,file),'utf8');
  if(/\beval\s*\(|new\s+Function\s*\(|\.innerHTML\s*=|document\.write\s*\(/.test(text))errors.push(file+': unsafe code/HTML sink');

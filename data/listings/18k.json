@@ -22,30 +22,78 @@
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/18k.md",
-      "evidence_quotes": [
-        "$1,125(Setting Price)",
-        "500000y",
-        "18K Yellow Gold",
-        "1.90mm",
-        "platinum prongs"
-      ],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
+      "evidence_file": "evidence/listings/bn-194158.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "metal_stated_currency_unconfirmed",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
         "F-002",
         "F-003",
+        "F-010",
         "F-015",
-        "F-016"
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-025"
       ],
-      "notes": "Product text says the 18k yellow gold band has platinum prongs - a mixed-metal setting, not pure 18k throughout.",
-      "observed_display": "$1,125(Setting Price)",
-      "prior_normalized_price": 1125.0
+      "notes": "The description states platinum prongs; the 18K yellow-gold description is not applied to that separate component.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": "platinum",
+      "surface_finish": null,
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Stock Number on the official product page",
+      "field_evidence": {
+        "name": [
+          "Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold"
+        ],
+        "sku": [
+          "500000y"
+        ],
+        "metal": [
+          "18K Yellow Gold"
+        ],
+        "karat": [
+          "18K Yellow Gold"
+        ],
+        "color": [
+          "18K Yellow Gold"
+        ],
+        "width_mm": [
+          "1.90mm"
+        ],
+        "price": [
+          "$1,125(Setting Price)"
+        ],
+        "currency": [
+          "$1,125(Setting Price)"
+        ],
+        "price_basis": [
+          "$1,125(Setting Price)"
+        ],
+        "center_stone_included": [
+          "$1,125(Setting Price)"
+        ],
+        "prong_metal": [
+          "18k yellow gold four-prong solitaire engagement ring with platinum prongs"
+        ]
+      },
+      "superseded_normalization": {
+        "price": 1125.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "$1,125(Setting Price)"
+      ]
     },
     {
       "id": "BN-195269",
@@ -66,43 +114,89 @@
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/18k.md",
-      "evidence_quotes": [
-        "$1,155(Setting Price)",
-        "501130y",
-        "18K Yellow Gold",
-        "1.80mm"
-      ],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
+      "evidence_file": "evidence/listings/bn-195269.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "metal_stated_currency_unconfirmed",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
         "F-002",
         "F-003",
+        "F-010",
         "F-015",
-        "F-016"
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-025"
       ],
-      "notes": "Same design as BN-195639 (14K, $1,000) in 18K at $1,155 - a $155 difference for the higher karat.",
-      "observed_display": "$1,155(Setting Price)",
-      "prior_normalized_price": 1155.0
+      "notes": "The official price is labeled Setting Price.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Stock Number on the official product page",
+      "field_evidence": {
+        "name": [
+          "Petite Solitaire Engagement Ring in 18k Yellow Gold"
+        ],
+        "sku": [
+          "501130y"
+        ],
+        "metal": [
+          "18K Yellow Gold"
+        ],
+        "karat": [
+          "18K Yellow Gold"
+        ],
+        "color": [
+          "18K Yellow Gold"
+        ],
+        "width_mm": [
+          "1.80mm"
+        ],
+        "price": [
+          "$1,155(Setting Price)"
+        ],
+        "currency": [
+          "$1,155(Setting Price)"
+        ],
+        "price_basis": [
+          "$1,155(Setting Price)"
+        ],
+        "center_stone_included": [
+          "$1,155(Setting Price)"
+        ]
+      },
+      "superseded_normalization": {
+        "price": 1155.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "$1,155(Setting Price)"
+      ]
     },
     {
       "id": "VRAI-CLASSIC-4P",
       "retailer_id": "vrai",
       "retailer": "VRAI",
       "brand": "VRAI",
-      "name": "The Classic Round Brilliant Engagement Ring - 18k Yellow Gold, Plain Band, Standard Width",
-      "sku": "classic-4-prong-dome/round-brilliant-yellow-gold",
-      "metal": "18K Yellow Gold",
+      "name": "Classic Round Brilliant Engagement Ring",
+      "sku": "32797281484893",
+      "metal": "18k Yellow Gold",
       "karat": 18,
       "color": "Yellow",
       "width_mm": null,
       "weight_g": 2.86,
-      "weight_basis": "Metal weight 2.86 g at ring size 6, as published by the retailer",
+      "weight_basis": "Metal weight:2.86g (Ring size 6)",
       "price": null,
       "currency": null,
       "price_basis": "setting_price",
@@ -110,18 +204,12 @@
       "original_price": null,
       "source_url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/18k.md",
-      "evidence_quotes": [
-        "Metal weight:2.86g (Ring size 6)",
-        "18k Yellow Gold",
-        "Band depth:1.6mm",
-        "Returns accepted within 30 days"
-      ],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
+      "evidence_file": "evidence/listings/vrai-classic-4p.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
       "return_policy_url": "https://www.vrai.com/returns-exchanges",
-      "verification_status": "metal_stated_currency_unconfirmed",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [
         {
           "value": 1035.0,
@@ -134,11 +222,58 @@
         "F-002",
         "F-008",
         "F-015",
-        "F-016"
+        "F-016",
+        "F-020",
+        "F-021",
+        "F-022",
+        "F-024"
       ],
-      "notes": "Only item in the dataset that publishes a metal weight in grams. Price is JS-rendered and was not present in the retrieved HTML, so it is deliberately blank.",
-      "observed_display": null,
-      "prior_normalized_price": null
+      "notes": "Metal weight is published for ring size 6. Width is only described as Standard, so numeric width is blank. No price string appeared in the retrieved text.",
+      "depth_mm": 1.6,
+      "band_width_text": "Standard",
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Numeric variant identifier in the official source URL; not represented as a manufacturer SKU",
+      "field_evidence": {
+        "name": [
+          "Classic Round Brilliant Engagement Ring | Plain Band | 18k Yellow Gold"
+        ],
+        "sku": [
+          "32797281484893"
+        ],
+        "metal": [
+          "Metal:18k Yellow Gold"
+        ],
+        "karat": [
+          "Metal:18k Yellow Gold"
+        ],
+        "color": [
+          "Metal:18k Yellow Gold"
+        ],
+        "band_width_text": [
+          "Band width:Standard"
+        ],
+        "depth_mm": [
+          "Band depth:1.6mm"
+        ],
+        "weight_g": [
+          "Metal weight:2.86g (Ring size 6)"
+        ],
+        "weight_basis": [
+          "Metal weight:2.86g (Ring size 6)"
+        ],
+        "price_basis": [
+          "Setting Details",
+          "configure/setting-to-diamond/classic-4-prong-dome"
+        ],
+        "center_stone_included": [
+          "Setting Details",
+          "Shown with center stone1.5ct"
+        ]
+      }
     }
   ]
 }

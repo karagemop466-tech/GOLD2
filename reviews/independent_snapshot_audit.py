@@ -45,11 +45,16 @@ def main() -> int:
         item_id = item["id"]
         evidence_path = root / item["evidence_file"]
         evidence = evidence_path.read_text()
+        item_file_heading = re.search(rf"(?m)^#\s+Evidence\s+—\s+{re.escape(item_id)}\s*$", evidence)
         heading = re.search(rf"(?m)^##\s+{re.escape(item_id)}\b.*$", evidence)
-        if not heading:
+        if item_file_heading:
+            # Current schema: one item per evidence file, with field-scoped excerpts.
+            section = evidence
+        elif not heading:
             flag("EVIDENCE-SECTION", item_id, "No item-specific evidence heading")
             section = ""
         else:
+            # Legacy schema: multiple items in one shared category evidence file.
             next_heading = re.search(r"(?m)^##\s+", evidence[heading.end():])
             end = heading.end() + next_heading.start() if next_heading else len(evidence)
             section = evidence[heading.start():end]
@@ -60,15 +65,47 @@ def main() -> int:
             flag("METAL-NOT-IN-ITEM-EVIDENCE", item_id, item["metal"])
         if item.get("color") and not re.search(rf"\b{re.escape(str(item['color']))}\b", section, re.I):
             flag("COLOR-NOT-IN-ITEM-EVIDENCE", item_id, str(item["color"]))
-        quote_text = " ".join(item.get("evidence_quotes", []))
+        scoped_quotes = [quote for quotes in item.get("field_evidence", {}).values() for quote in quotes]
+        quote_text = " ".join([*item.get("evidence_quotes", []), *scoped_quotes])
         if item.get("sku") and norm(item["sku"]) not in norm(quote_text):
             flag("SKU-NOT-IN-QUOTES", item_id, "Identifier may be URL-derived; no SKU/style quote")
-        if not item.get("solid_gold_explicit") and "solid" in item.get("notes", "").lower():
+        notes = norm(item.get("notes", ""))
+        affirmative_solid_claim = re.search(
+            r"\b(?:is|are|was|were|made of|made from|constructed from|verified as)\s+(?!(?:not|never|no)\b)(?:\w+\s+){0,2}solid[ -]gold\b",
+            notes,
+        )
+        if not item.get("solid_gold_explicit") and affirmative_solid_claim:
             flag("SOLID-NARRATIVE-CONTRADICTION", item_id, item["notes"])
         if item.get("width_mm") is None:
             related = [flags[fid] for fid in item.get("flags", []) if fid in flags]
             if not any("width" in (f["title"] + " " + f["detail"]).lower() for f in related):
                 flag("WIDTH-BLANK-WITHOUT-WIDTH-FLAG", item_id, "Blank is titled unverified but has no width-specific flag")
+
+    review_report = root / "reviews" / "2026-10-22-6ca03571.md"
+    if review_report.exists():
+        report_lines = review_report.read_text().splitlines()
+        for item in items:
+            matching = [line for line in report_lines if line.startswith(f"| {item['id']} |")]
+            if len(matching) != 1:
+                flag("REVIEW-ROW-MISSING-OR-DUPLICATE", item["id"], f"found {len(matching)}")
+                continue
+            line = matching[0]
+            if item["source_url"] not in line:
+                flag("REVIEW-SOURCE-URL-MISMATCH", item["id"], item["source_url"])
+            if item.get("width_mm") is not None:
+                width = Decimal(str(item["width_mm"]))
+                precision = max(0, -width.as_tuple().exponent)
+                accepted_widths = {f"{width:.{places}f} mm" for places in range(precision, 4)}
+                if not any(value in line for value in accepted_widths):
+                    flag("REVIEW-WIDTH-MISMATCH", item["id"], f"expected {item['width_mm']} mm")
+            if item.get("weight_g") is not None and f"{item['weight_g']} g" not in line:
+                flag("REVIEW-WEIGHT-MISMATCH", item["id"], f"expected {item['weight_g']} g")
+            if item.get("price") is not None:
+                mark = {"USD": "$", "EUR": "€"}.get(item["currency"], item["currency"] + " ")
+                price = Decimal(str(item["price"]))
+                accepted = {f"{mark}{price:,.2f}", f"{mark}{price:,.0f}"}
+                if not any(value in line for value in accepted):
+                    flag("REVIEW-PRICE-MISMATCH", item["id"], f"expected one of {sorted(accepted)}")
 
     build_text = (root / "tools" / "build_site.py").read_text()
     if any(item.get("weight_basis") for item in items) and "weight_basis" not in build_text:
@@ -105,7 +142,22 @@ def main() -> int:
     for phrase in ("normal retail", "would mean sold at scrap", "Melt is a floor"):
         if phrase in prices:
             flag("UNSOURCED-MARKET-GUIDANCE", "calculator", phrase)
-    calc_script = prices.split("<script>", 1)[1].split("</script>", 1)[0]
+    inline_scripts = re.findall(r"<script(?:\s[^>]*)?>(.*?)</script>", prices, re.S)
+    calc_script = "\n".join(inline_scripts)
+    script_source = re.search(r'<script[^>]*\bsrc="([^"]+)"[^>]*>', prices)
+    if script_source:
+        source = script_source.group(1)
+        if source.startswith(("https://", "http://", "//", "/")):
+            flag("CALCULATOR-SCRIPT-NOT-LOCAL", "calculator", source)
+        else:
+            script_path = (published / source).resolve()
+            try:
+                script_path.relative_to(published.resolve())
+                calc_script += "\n" + script_path.read_text()
+            except (ValueError, OSError) as exc:
+                flag("CALCULATOR-SCRIPT-UNREADABLE", "calculator", f"{source}: {exc}")
+    if not calc_script.strip():
+        flag("CALCULATOR-SCRIPT-MISSING", "calculator", "No inline or readable local external script")
     if "Number.isFinite" not in calc_script:
         flag("NONFINITE-INPUT-CHECK-MISSING", "calculator", "parseFloat and >0 checks do not reject Infinity")
 
@@ -114,11 +166,11 @@ def main() -> int:
         date_match = re.fullmatch(r"Data as of (\d{1,2} [A-Za-z]+, \d{4})", quote)
         if date_match:
             source_date = datetime.strptime(date_match.group(1), "%d %B, %Y").date().isoformat()
-            if source_date != gold.get("quote_date"):
+            if source_date != gold.get("chart_as_of_date", gold.get("quote_date")):
                 flag(
                     "GOLD-QUOTE-DATE-MISMATCH",
                     "data/gold-price.json",
-                    f"quote_date={gold.get('quote_date')} but official excerpt says {source_date}; retrieved_at is a separate field",
+                    f"chart_as_of_date={gold.get('chart_as_of_date')} but official chart excerpt says {source_date}; the header quote timestamp is separate",
                 )
     grams_per_oz = Decimal(str(gold["grams_per_troy_ounce"]))
     spot = Decimal(str(gold["usd_per_troy_oz"]))
@@ -157,7 +209,7 @@ def main() -> int:
         print(f"PASS [{detail}]")
     print("LIMITATION: these static negative checks do not replace official-page retrieval or prove truth.")
     print("NEXT: manually recheck every flag and rerun hallucination/security review after each edit.")
-    return 0
+    return 1 if findings else 0
 
 
 if __name__ == "__main__":

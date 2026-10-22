@@ -22,30 +22,75 @@
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-hidden-halo-solitaire-plus-diamond-engagement-ring-in-14k-yellow-gold-item-192506",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/halo-pave.md",
-      "evidence_quotes": [
-        "$1,255(Setting Price)",
-        "502250y14",
-        "14K Yellow Gold",
-        "1.60mm",
-        "Total Carat"
-      ],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
+      "evidence_file": "evidence/listings/bn-192506.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "metal_stated_currency_unconfirmed",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
         "F-002",
         "F-003",
+        "F-010",
         "F-015",
-        "F-016"
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-025"
       ],
-      "notes": "Side-diamond count and carat weight are based on a 1 ct. center stone, per the page disclaimer.",
-      "observed_display": "$1,255(Setting Price)",
-      "prior_normalized_price": 1255.0
+      "notes": "The page says diamond quantity and total carat weight are based on a 1 ct. center stone.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Stock Number on the official product page",
+      "field_evidence": {
+        "name": [
+          "Petite Hidden Halo Solitaire Plus Diamond Engagement Ring in 14k Yellow Gold"
+        ],
+        "sku": [
+          "502250y14"
+        ],
+        "metal": [
+          "14K Yellow Gold"
+        ],
+        "karat": [
+          "14K Yellow Gold"
+        ],
+        "color": [
+          "14K Yellow Gold"
+        ],
+        "width_mm": [
+          "1.60mm"
+        ],
+        "price": [
+          "$1,255(Setting Price)"
+        ],
+        "currency": [
+          "$1,255(Setting Price)"
+        ],
+        "price_basis": [
+          "$1,255(Setting Price)"
+        ],
+        "center_stone_included": [
+          "$1,255(Setting Price)"
+        ]
+      },
+      "superseded_normalization": {
+        "price": 1255.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "$1,255(Setting Price)"
+      ]
     },
     {
       "id": "BN-315661",
@@ -66,18 +111,12 @@
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/halo-pave.md",
-      "evidence_quotes": [
-        "$2,210(Setting Price)",
-        "505094w14",
-        "14K White Gold",
-        "1.75mm"
-      ],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
+      "evidence_file": "evidence/listings/bn-315661.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "metal_stated_currency_unconfirmed",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [
         {
           "value": 1657.0,
@@ -91,12 +130,67 @@
         "F-003",
         "F-006",
         "F-009",
+        "F-010",
         "F-015",
-        "F-016"
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-025"
       ],
-      "notes": "James Allen is now sold through Blue Nile; jamesallen.com product URLs redirect to bluenile.com (see F-009).",
-      "observed_display": "$2,210(Setting Price)",
-      "prior_normalized_price": 2210.0
+      "notes": "James Allen design sold on a Blue Nile product page; seller contact and policies are Blue Nile.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": "Rhodium",
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Stock Number on the official product page",
+      "field_evidence": {
+        "name": [
+          "Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen"
+        ],
+        "sku": [
+          "505094w14"
+        ],
+        "metal": [
+          "14K White Gold"
+        ],
+        "karat": [
+          "14K White Gold"
+        ],
+        "color": [
+          "14K White Gold"
+        ],
+        "width_mm": [
+          "1.75mm"
+        ],
+        "price": [
+          "$2,210(Setting Price)"
+        ],
+        "currency": [
+          "$2,210(Setting Price)"
+        ],
+        "price_basis": [
+          "$2,210(Setting Price)"
+        ],
+        "center_stone_included": [
+          "$2,210(Setting Price)"
+        ],
+        "surface_finish": [
+          "Rhodium Finish\n\nYes"
+        ]
+      },
+      "superseded_normalization": {
+        "price": 2210.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "$2,210(Setting Price)"
+      ]
     },
     {
       "id": "BN-195402",
@@ -117,29 +211,78 @@
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/halo-pave.md",
-      "evidence_quotes": [
-        "$1,300(Setting Price)",
-        "501480w14",
-        "14K White Gold",
-        "1.70mm"
-      ],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
+      "evidence_file": "evidence/listings/bn-195402.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "metal_stated_currency_unconfirmed",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
         "F-002",
         "F-003",
+        "F-010",
         "F-015",
-        "F-016"
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-025"
       ],
-      "notes": "Carried forward from the earlier pass (session 39da17c8) and re-fetched live on 2026-10-22 before publication. 22 pavé diamonds, 1/10 ct. total, based on a 1 ct. centre stone.",
-      "observed_display": "$1,300(Setting Price)",
-      "prior_normalized_price": 1300.0
+      "notes": "Re-fetched during integration. The page lists 22 diamonds totaling 1/10 ct.; the price is Setting Price.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": "Rhodium",
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Stock Number on the official product page",
+      "field_evidence": {
+        "name": [
+          "Petite Micropavé Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)"
+        ],
+        "sku": [
+          "501480w14"
+        ],
+        "metal": [
+          "14K White Gold"
+        ],
+        "karat": [
+          "14K White Gold"
+        ],
+        "color": [
+          "14K White Gold"
+        ],
+        "width_mm": [
+          "1.70mm"
+        ],
+        "price": [
+          "$1,300(Setting Price)"
+        ],
+        "currency": [
+          "$1,300(Setting Price)"
+        ],
+        "price_basis": [
+          "$1,300(Setting Price)"
+        ],
+        "center_stone_included": [
+          "$1,300(Setting Price)"
+        ],
+        "surface_finish": [
+          "Rhodium Finish\n\nYes"
+        ]
+      },
+      "superseded_normalization": {
+        "price": 1300.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "$1,300(Setting Price)"
+      ]
     },
     {
       "id": "BN-302868",
@@ -160,29 +303,78 @@
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
       "retrieved_at": "2026-10-22",
-      "evidence_file": "evidence/listings/halo-pave.md",
-      "evidence_quotes": [
-        "$1,050(Setting Price)",
-        "501480w14l",
-        "14K White Gold",
-        "1.70mm"
-      ],
-      "solid_gold_explicit": false,
-      "hallmark_stated": false,
-      "makers_mark_stated": false,
+      "evidence_file": "evidence/listings/bn-302868.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "metal_stated_currency_unconfirmed",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
         "F-002",
         "F-003",
+        "F-010",
         "F-015",
-        "F-016"
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-025"
       ],
-      "notes": "Carried forward from the earlier pass (session 39da17c8) and re-fetched live on 2026-10-22. Lab-grown accent diamonds; $250 less than the natural-diamond twin BN-195402.",
-      "observed_display": "$1,050(Setting Price)",
-      "prior_normalized_price": 1050.0
+      "notes": "Re-fetched during integration. The page identifies lab-grown accent diamonds; the price is Setting Price.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": "Rhodium",
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Stock Number on the official product page",
+      "field_evidence": {
+        "name": [
+          "Petite Micropavé Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)"
+        ],
+        "sku": [
+          "501480w14l"
+        ],
+        "metal": [
+          "14K White Gold"
+        ],
+        "karat": [
+          "14K White Gold"
+        ],
+        "color": [
+          "14K White Gold"
+        ],
+        "width_mm": [
+          "1.70mm"
+        ],
+        "price": [
+          "$1,050(Setting Price)"
+        ],
+        "currency": [
+          "$1,050(Setting Price)"
+        ],
+        "price_basis": [
+          "$1,050(Setting Price)"
+        ],
+        "center_stone_included": [
+          "$1,050(Setting Price)"
+        ],
+        "surface_finish": [
+          "Rhodium Finish\n\nYes"
+        ]
+      },
+      "superseded_normalization": {
+        "price": 1050.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "$1,050(Setting Price)"
+      ]
     }
   ]
 }

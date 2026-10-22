@@ -125,9 +125,12 @@ try{
   await expect(page.locator('main')).toContainText('No hallucinations. No invented prices.');
   await expect(page.locator('main a[href="explore/"]')).toHaveCount(1);
   expect(await page.locator('script:not([src])').count()).toBe(0);
-  const css=await page.locator('body').evaluate(el=>getComputedStyle(el).fontFamily);expect(css).toContain('system-ui');
+  const css=await page.locator('body').evaluate(el=>getComputedStyle(el).fontFamily);expect(css).toContain('sans-serif');
  }
- await page.goto(base+'prices.html');await expect(page.locator('input')).toHaveCount(0);await expect(page.locator('a[href="explore/calculator/"]')).toBeVisible();
+ await page.goto(base+'prices.html');await expect(page.locator('a[href="explore/calculator/"]')).toBeVisible();
+ await page.locator('#w').fill('6');await expect(page.locator('#fine')).toHaveText('—');
+ await page.locator('#root-scenario-ack').check();await expect(page.locator('#fine')).toHaveText('3.500 g');
+ await page.locator('#w').fill('1e308');await expect(page.locator('#fine')).toHaveText('—');
  await context.close();
  if(requests.length)errors.push('Unexpected external runtime requests: '+requests.join(', '));
  if(violations.length)errors.push(`${violations.length} automated accessibility violations (see report)`);
