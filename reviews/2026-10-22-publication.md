@@ -25,6 +25,6 @@ The following rendered routes were independently retrieved successfully after de
 
 ## Publication disposition
 
-**Interim deployment passes.** No broken route or unsupported live price was found in this pass. This is not final acceptance of a complete catalog: findings R39-01 through R39-05 in the commit review remain open, other research sessions are still active, and the live site itself discloses bounded coverage.
+**Interim deployment passes.** No broken route or unsupported live price was found in this pass. This is not final acceptance of a complete catalog: findings R39-01 through R39-06 in the commit review remain open, other research sessions are still active, and the live site itself discloses bounded coverage.
 
 The final integrator should carry the peer-review findings into the public Flagged for Review page or explicitly disposition them, then repeat the complete official-source and hallucination/security review on the final combined commit. A successful Pages deployment does not close factual or requirement-coverage findings.
