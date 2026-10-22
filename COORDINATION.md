@@ -31,6 +31,7 @@ No other active claim was present when this board was read. Completed historical
 - 2026-10-22 — Final local root result: **PASS — 10 checks, 0 failures, 2 intentional coverage warnings**, 277 field-scoped quotes. Calculator tests and the preserved dashboard's build/audit/tests also pass. Local HTTP preview returned 200 and the current no-hallucination rule/gold quote.
 - 2026-10-22 — Inventoried 51 unique external HTTPS destinations in the built pages. All 50 web destinations returned content during this review and the repository URL validated with `gh`; all 16 official product URLs were included. Dated record: `reports/source-link-review.md`. Redirects, dynamic extraction, and future availability limitations remain explicit.
 - 2026-10-22 — README and both workflows updated for the current evidence model, branch, calculator tests, and reproducible generated-file checks. Legacy `main` / root Pages publishing is retained; the legacy workflow verifies `site/` and is not mislabeled as the root deployment mechanism. T15 integration/PR/deployment is now active.
+- 2026-10-22 — Clean-tree reproducibility testing caught stale intermediate **FAIL** summary text in committed `index.html`/`methods.html` despite a final PASS report. Regenerated from the PASS report and added an explicit post-audit build to CI; the generated-file diff check remains enforced. This is a rendered-state correction, not a loosened audit.
 
 ## Sessions that have worked here
 

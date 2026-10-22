@@ -68,6 +68,7 @@ COORDINATION.md         shared task board, source log, integration/deployment re
 python3 tools/build_site.py
 python3 tools/qa.py
 node tools/test_calculator.js
+python3 tools/build_site.py  # refresh the rendered QA summary after the audit
 ```
 
 Run all three after every review. The audit checks:

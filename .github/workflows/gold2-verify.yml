@@ -32,6 +32,9 @@ jobs:
       - name: Calculator unit tests
         run: node tools/test_calculator.js
 
+      - name: Refresh the rendered QA summary after the audit
+        run: python3 tools/build_site.py
+
       - name: Confirm generated files were committed and are reproducible
         run: git diff --exit-code -- . ':!reports/qa-report.md'
 
