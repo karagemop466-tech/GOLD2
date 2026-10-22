@@ -8,10 +8,10 @@ Platform constraint: this session is bound to `arena/ca4c9d8a-gold2`; no other b
 
 | ID | Task | Status | Owner | File scope |
 |----|------|--------|-------|------------|
-| T12 | Line-by-line repository, provenance, and security audit | in progress | S-CA4C9D8A | `tools/qa.py`, `scripts/**`, `reports/**` |
-| T13 | Re-verify all published data against primary sources; resolve open handoffs where possible | in progress | S-CA4C9D8A | `data/**`, `evidence/**` |
-| T14 | Dashboard, calculator, accessibility, and generated-page review | unclaimed | S-CA4C9D8A | `tools/build_site.py`, `assets/**`, root `*.html` |
-| T15 | Final integration, PR, merge, and Pages deployment | unclaimed | S-CA4C9D8A | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
+| T12 | Line-by-line repository, provenance, and security audit | done | S-CA4C9D8A | `tools/qa.py`, `scripts/**`, `reports/**` |
+| T13 | Re-verify all published data against primary sources; resolve open handoffs where possible | done | S-CA4C9D8A | `data/**`, `evidence/**` |
+| T14 | Dashboard, calculator, accessibility, and generated-page review | done | S-CA4C9D8A | `tools/build_site.py`, `assets/**`, root `*.html` |
+| T15 | Final integration, PR, merge, and Pages deployment | in progress | S-CA4C9D8A | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
 
 No other active claim was present when this board was read. Completed historical tasks are not being reclaimed as pending work; this pass is a fresh verification and integration review.
 
@@ -25,7 +25,12 @@ No other active claim was present when this board was read. Completed historical
 - 2026-10-22 — Refreshed official returns, payments, and contact evidence for Blue Nile, Zales, VRAI, and Brilliant Earth. Material corrections include VRAI's $300 engagement-ring recycling fee / value-based store-credit terms, Brilliant Earth's $40 engraved-ring removal fee and resized/modified exclusions, and Zales' channel-specific resizing rules from its official return policy and ring-sizer PDF.
 - 2026-10-22 — Consulted BBB profile, complaint, and review pages as independent third-party evidence. Blue Nile and Brilliant Earth metrics are profile-scoped; Zales metrics are explicitly combined Signet metrics; VRAI candidate-profile metrics are withheld because the profile does not link `vrai.com`. BBB allegations are not treated as proven facts.
 - 2026-10-22 — Updated WGC spot reference to **$4,028.53/troy oz**, data dated 2026-10-21; retained $4,024.36 only as superseded intraday evidence. Added NIST's 31.103 476 8 g/troy-oz conversion chart and eCFR gold-labeling context.
-- 2026-10-22 — Migrated all listings to per-item evidence with 277 field-scoped quotes across items, retailers, and gold references; intermediate quote-integrity check found 0 missing quotes. Current data: 16 items, 13 assigned prices, 1 published metal weight, 23 flags. `null` now means not stated (including solid-gold/hallmark fields), never a negative physical finding. Final generator/QA/build checks have not yet run.
+- 2026-10-22 — Migrated all listings to per-item evidence with 277 field-scoped quotes across items, retailers, and gold references; intermediate quote-integrity check found 0 missing quotes. Current data: 16 items, 13 assigned prices, 1 published metal weight, 23 flags. `null` now means not stated (including solid-gold/hallmark fields), never a negative physical finding. Data/evidence checkpoint committed as `866d7c8`; generator/QA integration follows below.
+- 2026-10-22 — Rebuilt the root generator into 10 data-derived pages, moved the nominal-gold calculator to dependency-free `assets/calculator.js`, added unit tests, and preserved the earlier `site/` dashboard and its tests. The calculator never invents missing weights and labels melt output as theoretical rather than appraisal/resale value.
+- 2026-10-22 — Strengthened `tools/qa.py` for item/field provenance, semantic value checks, two-way flags, rejected-value checks, generated row/source identity, CSP, internal destinations/fragments, and external URL structure. Its first run caught VRAI's paraphrased weight basis and Zales `Z-20046552`'s incorrect original-price quote; both evidence/data defects were corrected without weakening the checks.
+- 2026-10-22 — Final local root result: **PASS — 10 checks, 0 failures, 2 intentional coverage warnings**, 277 field-scoped quotes. Calculator tests and the preserved dashboard's build/audit/tests also pass. Local HTTP preview returned 200 and the current no-hallucination rule/gold quote.
+- 2026-10-22 — Inventoried 51 unique external HTTPS destinations in the built pages. All 50 web destinations returned content during this review and the repository URL validated with `gh`; all 16 official product URLs were included. Dated record: `reports/source-link-review.md`. Redirects, dynamic extraction, and future availability limitations remain explicit.
+- 2026-10-22 — README and both workflows updated for the current evidence model, branch, calculator tests, and reproducible generated-file checks. Legacy `main` / root Pages publishing is retained; the legacy workflow verifies `site/` and is not mislabeled as the root deployment mechanism. T15 integration/PR/deployment is now active.
 
 ## Sessions that have worked here
 

@@ -2,7 +2,7 @@ name: GOLD2 verify
 
 on:
   push:
-    branches: [main, arena/6ca03571-gold2]
+    branches: [main, arena/ca4c9d8a-gold2]
   pull_request:
   workflow_dispatch:
 
@@ -19,11 +19,21 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Build the site from verified data
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Build the root dashboard from source-backed data
         run: python3 tools/build_site.py
 
-      - name: Hallucination audit (evidence quotes, source domains, blanks, links)
+      - name: Field-level hallucination, integration, link, and security audit
         run: python3 tools/qa.py
+
+      - name: Calculator unit tests
+        run: node tools/test_calculator.js
+
+      - name: Confirm generated files were committed and are reproducible
+        run: git diff --exit-code -- . ':!reports/qa-report.md'
 
       - name: Upload the audit report
         if: always()
