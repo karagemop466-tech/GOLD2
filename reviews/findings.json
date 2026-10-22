@@ -1,11 +1,11 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "reviewer_session": "5ff05cf9-gold2",
-  "updated_at": "2026-10-22T23:15:15Z",
+  "updated_at": "2026-10-22T23:22:14Z",
   "subject": {
-    "branch": "arena/39da17c8-gold2",
-    "commit": "6832208a5bb0798d803280eae3fe39c377275575",
-    "report": "reviews/2026-10-22-39da17c8.md"
+    "branch": "main",
+    "commit": "966e87b82cb306ad1695dc147355ed2f0f4a0971",
+    "report": "reviews/2026-10-22-6ca03571.md"
   },
   "findings": [
     {
@@ -67,7 +67,156 @@
       "requested_disposition": "Darken the small text or otherwise meet at least 4.5:1 without rounding up to the threshold.",
       "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/6832208a5bb0798d803280eae3fe39c377275575/site/style.css",
       "official_reference_url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+    },
+    {
+      "id": "R6-01",
+      "severity": "high",
+      "status": "open",
+      "title": "Four Zales rows publish unsupported yellow-gold fields",
+      "observation": "Official Zales titles support 10K Gold but not Yellow for four rows; the data populates 10K Yellow Gold and Yellow.",
+      "requested_disposition": "Blank unsupported color and narrow metal wording unless official yellow-gold text is retrieved and quoted.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/data/listings/three-stone-vintage.json",
+      "official_reference_url": "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "id": "R6-02",
+      "severity": "medium",
+      "status": "open",
+      "title": "Some identifiers and product notes are URL-derived or unquoted",
+      "observation": "VRAI and four Zales SKU displays lack direct SKU/style quotes; one Zales note asserts round constituent stones without retrieved support.",
+      "requested_disposition": "Label URL identifiers as such or blank them; remove or officially support product notes; include these fields in QA.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/data/listings/budget.json",
+      "official_reference_url": "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "id": "R6-03",
+      "severity": "high",
+      "status": "open",
+      "title": "Solid-gold and verification language exceeds the evidence",
+      "observation": "BN-194548 asserts a solid-alloy conclusion despite solid_gold_explicit false, and generated metadata says Verified solid-gold although all rows lack explicit target-product support.",
+      "requested_disposition": "Remove unsupported solid claims, narrow metadata, and keep independent professional purity testing mandatory.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/tools/build_site.py",
+      "official_reference_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-nouveau-four-prong-solitaire-engagement-ring-in-14k-white-gold-item-194548",
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "id": "R6-04",
+      "severity": "medium",
+      "status": "open",
+      "title": "Blanket card-acceptance statement is contradicted by official pages",
+      "observation": "F-012 and the landing page say no captured page states card acceptance, while official Blue Nile product pages explicitly offer the Blue Nile Credit Card.",
+      "requested_disposition": "Record the exact scoped card offer; leave other networks/retailers unverified and do not infer protection outcomes.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/data/flags.json",
+      "official_reference_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "id": "R6-05",
+      "severity": "medium",
+      "status": "open",
+      "title": "Policy and contact evidence is incomplete or mismatched",
+      "observation": "VRAI omits sourced fees/eligibility/exclusions; Brilliant Earth omits an official 30-day policy and its contact_source_url does not support the recorded localized product-header phone.",
+      "requested_disposition": "Retrieve and quote official policy/contact evidence with region and scope; correct the landing claim that exclusions are recorded per retailer.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/data/retailers.json",
+      "official_reference_url": "https://www.vrai.com/returns-exchanges",
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "id": "R6-06",
+      "severity": "medium",
+      "status": "open",
+      "title": "VRAI size-specific weight loses context in category tables",
+      "observation": "The official source and weight_basis say 2.86 g at size 6, but the builder does not render weight_basis.",
+      "requested_disposition": "Display the size/variant beside every weight and item-specific calculation.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/tools/build_site.py",
+      "official_reference_url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "id": "R6-07",
+      "severity": "high",
+      "status": "open",
+      "title": "Calculator accepts risky weight basis, ambiguous currency, and nonfinite input",
+      "observation": "Ring weight is not labeled metal-only; asking price has no currency; actual execution with Infinity produced Infinity g and $∞.",
+      "requested_disposition": "Require finite positive metal-only weight and explicit ask currency; show validation errors and blank outputs; add negative tests.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/tools/build_site.py",
+      "official_reference_url": "https://www.nist.gov/document/precious-metals-conversion-information-march2015pdf",
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "id": "R6-08",
+      "severity": "medium",
+      "status": "open",
+      "title": "Retail and scrap rules lack authoritative sources",
+      "observation": "The calculator gives 2x normal-retail, 1.05x warning, 1.0x scrap, and melt-floor generalizations without dated authoritative support.",
+      "requested_disposition": "Remove or authoritatively source and scope these claims; distinguish theoretical spot arithmetic from actual transactions.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/tools/build_site.py",
+      "official_reference_url": null,
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "id": "R6-09",
+      "severity": "high",
+      "status": "open",
+      "title": "QA PASS has material false-negative paths",
+      "observation": "Shared-file substring checks do not map every field to item-specific evidence and miss unsupported colors, identifiers, notes, policy summaries, and some blank flags.",
+      "requested_disposition": "Use item-scoped field-level evidence and mutation tests; narrow report claims and retain independent official-source review after PASS.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/tools/qa.py",
+      "official_reference_url": null,
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "id": "R6-10",
+      "severity": "medium",
+      "status": "open",
+      "title": "Published narrative contains stale or overbroad claims",
+      "observation": "At main 966e87b, F-015 still says 8 Blue Nile rows after integration to 10; F-001 makes a whole-page absence claim contradicted by unrelated VRAI text; absolute no-invention language exceeds QA scope. Earlier QA-badge and Flagged-page hard-coded counts were fixed in 7a894ed and 966e87b respectively. The landing says all three evidence gaps affect every row even though VRAI has a published weight.",
+      "requested_disposition": "Derive counts, narrow absence claims to target-product evidence, and publish precise limitations/open findings.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/data/flags.json",
+      "official_reference_url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "id": "R6-11",
+      "severity": "medium",
+      "status": "open",
+      "title": "Seller reputation and purchase documentation are not independently assessed",
+      "observation": "README calls sellers reputable without independent reputation evidence; the buyer records checklist omits invoice, replies, marks, certificates, and test report.",
+      "requested_disposition": "Assess reputation with appropriate independent evidence or mark it unassessed; add a purchase-documentation checklist.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/README.md",
+      "official_reference_url": null,
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "id": "R6-12",
+      "severity": "low",
+      "status": "open",
+      "title": "One archived Zales excerpt is not currently reproducible verbatim",
+      "observation": "Z-20301172 numbers match, but the independent current retrieval omits the archived Discounted Price and Original Price labels.",
+      "requested_disposition": "Preserve timestamped raw evidence or refresh exact excerpt wording and disclose extraction changes.",
+      "evidence_url": "https://github.com/karagemop466-tech/GOLD2/blob/7a894edc6c8c134ca554c290649797991ac618f0/evidence/listings/three-stone-vintage.md",
+      "official_reference_url": "https://www.zales.com/13-ct-tw-diamond-three-stone-engagement-ring-10k-gold/p/V-20301172",
+      "report": "reviews/2026-10-22-6ca03571.md"
     }
   ],
-  "review_pass_policy": "After every disposition or content edit, repeat official-source comparison, hallucination/security checks, build/link checks, and manual review of unresolved flags."
+  "review_pass_policy": "After every disposition or content edit, repeat official-source comparison, hallucination/security checks, build/link checks, and manual review of unresolved flags.",
+  "prior_subjects": [
+    {
+      "branch": "arena/39da17c8-gold2",
+      "commit": "6832208a5bb0798d803280eae3fe39c377275575",
+      "report": "reviews/2026-10-22-39da17c8.md"
+    },
+    {
+      "branch": "arena/6ca03571-gold2",
+      "commit": "9efc9d57c38f753e7a235e92f4e14607e934f709",
+      "report": "reviews/2026-10-22-6ca03571.md"
+    },
+    {
+      "branch": "arena/6ca03571-gold2",
+      "commit": "7a894edc6c8c134ca554c290649797991ac618f0",
+      "report": "reviews/2026-10-22-6ca03571.md"
+    }
+  ]
 }

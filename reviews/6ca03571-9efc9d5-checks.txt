@@ -1,0 +1,40 @@
+INDEPENDENT REVIEW: 31 findings; 6 arithmetic controls passed
+FLAG [SKU-NOT-IN-QUOTES] VRAI-CLASSIC-4P: Identifier may be URL-derived; no SKU/style quote
+FLAG [WIDTH-BLANK-WITHOUT-WIDTH-FLAG] VRAI-CLASSIC-4P: Blank is titled unverified but has no width-specific flag
+FLAG [METAL-NOT-IN-ITEM-EVIDENCE] Z-19957449: 10K Yellow Gold
+FLAG [COLOR-NOT-IN-ITEM-EVIDENCE] Z-19957449: Yellow
+FLAG [SKU-NOT-IN-QUOTES] Z-19957449: Identifier may be URL-derived; no SKU/style quote
+FLAG [WIDTH-BLANK-WITHOUT-WIDTH-FLAG] Z-19957449: Blank is titled unverified but has no width-specific flag
+FLAG [METAL-NOT-IN-ITEM-EVIDENCE] Z-20046552: 10K Yellow Gold
+FLAG [COLOR-NOT-IN-ITEM-EVIDENCE] Z-20046552: Yellow
+FLAG [SKU-NOT-IN-QUOTES] Z-20046552: Identifier may be URL-derived; no SKU/style quote
+FLAG [WIDTH-BLANK-WITHOUT-WIDTH-FLAG] Z-20046552: Blank is titled unverified but has no width-specific flag
+FLAG [SOLID-NARRATIVE-CONTRADICTION] BN-194548: White gold with rhodium finish is still a solid 14K gold alloy underneath; the listing states karat but never the words 'solid gold'.
+FLAG [METAL-NOT-IN-ITEM-EVIDENCE] Z-20303279: 10K Yellow Gold
+FLAG [COLOR-NOT-IN-ITEM-EVIDENCE] Z-20303279: Yellow
+FLAG [SKU-NOT-IN-QUOTES] Z-20303279: Identifier may be URL-derived; no SKU/style quote
+FLAG [WIDTH-BLANK-WITHOUT-WIDTH-FLAG] Z-20303279: Blank is titled unverified but has no width-specific flag
+FLAG [METAL-NOT-IN-ITEM-EVIDENCE] Z-20301172: 10K Yellow Gold
+FLAG [COLOR-NOT-IN-ITEM-EVIDENCE] Z-20301172: Yellow
+FLAG [SKU-NOT-IN-QUOTES] Z-20301172: Identifier may be URL-derived; no SKU/style quote
+FLAG [WIDTH-BLANK-WITHOUT-WIDTH-FLAG] Z-20301172: Blank is titled unverified but has no width-specific flag
+FLAG [WEIGHT-CONTEXT-NOT-RENDERED] VRAI-CLASSIC-4P: Metal weight 2.86 g at ring size 6, as published by the retailer
+FLAG [QA-STATUS-CONTRADICTION] site/index: Landing says checks not run; embedded report says PASS
+FLAG [ABSOLUTE-TRUTH-CLAIM] site/index: Policy is written as an absolute guarantee
+FLAG [SOLID-META-OVERSTATEMENT] site metadata: No listing has explicit solid-gold evidence
+FLAG [WEIGHT-SUMMARY-CONTRADICTION] site/index: VRAI has a published weight, so weight is not outstanding on every row
+FLAG [RETURNS-SUMMARY-OVERSTATEMENT] site/index: Some resized/custom exclusion fields are null
+FLAG [GROSS-WEIGHT-CALCULATION-RISK] calculator: Ring weight is not explicitly metal-only; stones could be counted
+FLAG [ASK-CURRENCY-MISSING] calculator: Ask input can be compared with a USD quote without an ask-currency label
+FLAG [UNSOURCED-MARKET-GUIDANCE] calculator: normal retail
+FLAG [UNSOURCED-MARKET-GUIDANCE] calculator: would mean sold at scrap
+FLAG [UNSOURCED-MARKET-GUIDANCE] calculator: Melt is a floor
+FLAG [NONFINITE-INPUT-CHECK-MISSING] calculator: parseFloat and >0 checks do not reject Infinity
+PASS [ARITHMETIC VRAI-CLASSIC-4P: 2.145 g; $277.53]
+PASS [QUICK-REFERENCE 10K: 10K | 41.67% | 0.833 g | 1.667 g | 2.500 g | $323.47]
+PASS [QUICK-REFERENCE 14K: 14K | 58.33% | 1.167 g | 2.333 g | 3.500 g | $452.85]
+PASS [QUICK-REFERENCE 18K: 18K | 75.00% | 1.500 g | 3.000 g | 4.500 g | $582.24]
+PASS [QUICK-REFERENCE 22K: 22K | 91.67% | 1.833 g | 3.667 g | 5.500 g | $711.62]
+PASS [QUICK-REFERENCE 24K: 24K | 100.00% | 2.000 g | 4.000 g | 6.000 g | $776.32]
+LIMITATION: these static negative checks do not replace official-page retrieval or prove truth.
+NEXT: manually recheck every flag and rerun hallucination/security review after each edit.
