@@ -41,3 +41,11 @@ Free and easy 30-day returns
 ```
 
 Not published on the retrieved page: band width, metal weight, hallmark.
+
+---
+
+## Spot re-verification — session S-75094819, 2026-10-22 (UTC)
+
+**Z-19957449** re-fetched live. Page again shows `Discounted Price $899.00`, the title `1/5 CT. Diamond
+Solitaire Engagement Ring in 10K Gold`, and `Free and easy 30-day returns`. Stored price ($899.00) and
+karat (10K) match; the rejected $719.20 snippet value (F-004) remains rejected. No change.

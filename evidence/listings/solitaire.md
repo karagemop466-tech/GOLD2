@@ -121,3 +121,10 @@ Absence check: no `solid gold`, no hallmark, no gram weight in the retrieved tex
 - VRAI returns: https://www.vrai.com/returns-exchanges
 - Brilliant Earth care/warranty hub: https://www.brilliantearth.com/weve-got-you-covered/
 - Brilliant Earth contact: https://www.brilliantearth.com/contact/
+
+---
+
+## Spot re-verification — session S-75094819, 2026-10-22 (UTC)
+
+**BN-203348** re-fetched live from the URL above. Page again shows `$1,145(Setting Price)`,
+`Stock Number 502120y14`, `Metal 14K Yellow Gold`, `Width 2.40mm`. All stored values match; no change.
