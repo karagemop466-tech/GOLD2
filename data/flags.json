@@ -68,7 +68,7 @@
       "id": "F-003",
       "severity": "high",
       "type": "unverified",
-      "title": "Metal weight in grams is not published for 13 of 14 items",
+      "title": "Metal weight in grams is not published for 15 of 16 items",
       "detail": "Only VRAI publishes a metal weight (2.86 g at size 6 for the Classic 4-prong). For the other 15 listings the gram weight field is left blank rather than estimated. Without a weight, a price-per-gram or melt comparison cannot be computed for those items.",
       "affected_items": [
         "BN-203348",
