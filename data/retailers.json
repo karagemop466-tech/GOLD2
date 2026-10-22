@@ -109,6 +109,32 @@
       "evidence_quotes": ["Free Shipping & Returns", "Free 1-Year Resizing", "(Setting Only)"],
       "verification_status": "partial",
       "flags": ["F-007", "F-012"]
+    },
+    {
+      "id": "stone-and-strand",
+      "name": "Stone and Strand",
+      "website": "https://www.stoneandstrand.com",
+      "domains": ["www.stoneandstrand.com", "stoneandstrand.com"],
+      "contact_phone": null,
+      "contact_email": "care@stoneandstrand.com",
+      "contact_source_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "contact_verified": true,
+      "return_window_days": 100,
+      "return_window_basis": "Policy: 'From the date your order arrives at your door, we offer 100 days to receive a return' (U.S. customers only). Item must be unworn with the original security tag attached.",
+      "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "return_free_shipping": false,
+      "return_free_shipments_per_year": null,
+      "return_excludes_resized": null,
+      "return_excludes_custom": true,
+      "return_exclusions_detail": "Policy excludes: final-sale items (anything marked final sale on the product page OR purchased at a discount of 50% or greater); personalized jewelry (custom, engraved, monogrammed); made-to-order jewelry (final sale); worn items (store credit only at their discretion, 20%+ restocking fee); international returns not accepted. A $12.50 return fee applies to refunds. Resizing is not mentioned in the retrieved policy text.",
+      "resize_policy": null,
+      "price_display_basis": "Complete ring (diamonds included in the listed price)",
+      "payment_methods_verified": "Returns page refers to refunds 'to the original payment method' and to 'your credit card provider'. Card networks are not stated on the retrieved page.",
+      "payment_note": "Basis: Stone and Strand returns page retrieved 2026-10-22 (session S-75094819). Refund language implies card tender; networks not named. Same evidentiary standard as Zales.",
+      "evidence_file": "evidence/retailers/stone-and-strand.md",
+      "evidence_quotes": ["we offer 100 days to receive a return", "There is a $12.50 return fee for refunds to the original payment method", "Any piece marked as final sale on the product page or purchased at a discount of 50% or greater", "Made-to-Order Jewelry: Custom or made-to-order pieces are final sale", "Depending on your credit card provider", "care@stoneandstrand.com"],
+      "verification_status": "verified_returns",
+      "flags": ["F-016"]
     }
   ]
 }

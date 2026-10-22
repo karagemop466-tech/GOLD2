@@ -6,8 +6,8 @@
       "id": "F-001",
       "severity": "high",
       "type": "checklist_gap",
-      "title": "No listing uses the words \"solid gold\"",
-      "detail": "The buying checklist requires the listing itself to say 'solid gold', not plated / vermeil / gold-filled / overlay / gold-tone. Across all 16 captured listings, the retrieved page text states a karat (10K/14K/18K) but never uses the phrase 'solid gold'. Absence was checked in the retrieved page text for each item on 2026-10-22. This is a documentation gap, not proof that the ring is plated.",
+      "title": "16 of 19 listings never use the words \"solid gold\"",
+      "detail": "UPDATED 2026-10-22 (session S-75094819). The buying checklist requires the listing itself to say 'solid gold', not plated / vermeil / gold-filled / overlay / gold-tone. 16 of the 19 captured listings state a karat (10K/14K/18K) but never use the phrase 'solid gold'. The 3 exceptions are the Stone and Strand rings added in this pass (SS-CLARA, SS-RITA, SS-MIA): each product page carries a 'Solid Gold' badge and the sentence 'set in 14K solid gold or platinum'. Absence was checked in the retrieved page text for each item. Absence of the phrase is a documentation gap, not proof that a ring is plated \u2014 and presence of the phrase is not proof of purity either: all three Stone and Strand rings are final sale (F-016), so they cannot be returned after an XRF test.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -39,7 +39,7 @@
       "severity": "high",
       "type": "checklist_gap",
       "title": "No listing states a hallmark or maker's mark",
-      "detail": "The checklist asks for a 10K/14K/18K stamp PLUS a maker's/manufacturer's mark. None of the 16 product pages states what is stamped inside the band, and none names a manufacturer's mark. Blue Nile and VRAI do publish stock/style numbers, which is not the same thing as a physical hallmark.",
+      "detail": "The checklist asks for a 10K/14K/18K stamp PLUS a maker's/manufacturer's mark. None of the 19 product pages states what is stamped inside the band, and none names a manufacturer's mark. Blue Nile and VRAI do publish stock/style numbers, which is not the same thing as a physical hallmark. The 3 Stone and Strand pages added 2026-10-22 are no different: no stamp, no maker's mark, and not even a SKU in the retrieved text.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -56,11 +56,15 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "SS-CLARA",
+        "SS-RITA",
+        "SS-MIA"
       ],
       "sources": [
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
-        "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/"
+        "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
+        "https://www.stoneandstrand.com/products/the-clara-ring"
       ],
       "recommended_action": "On arrival, photograph the inside of the band and have an independent jeweller read the stamp and maker's mark under magnification."
     },
@@ -68,8 +72,8 @@
       "id": "F-003",
       "severity": "high",
       "type": "unverified",
-      "title": "Metal weight in grams is not published for 15 of 16 items",
-      "detail": "Only VRAI publishes a metal weight (2.86 g at size 6 for the Classic 4-prong). For the other 15 listings the gram weight field is left blank rather than estimated. Without a weight, a price-per-gram or melt comparison cannot be computed for those items.",
+      "title": "Metal weight in grams is not published for 18 of 19 items",
+      "detail": "Only VRAI publishes a metal weight (2.86 g at size 6 for the Classic 4-prong). For the other 18 listings \u2014 including the 3 Stone and Strand rings added 2026-10-22 \u2014 the gram weight field is left blank rather than estimated. Stone and Strand publishes carat weights and band widths but no metal weight in grams. Without a weight, a price-per-gram or melt comparison cannot be computed for those items.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -85,7 +89,10 @@
         "BN-194158",
         "BN-195269",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "SS-CLARA",
+        "SS-RITA",
+        "SS-MIA"
       ],
       "sources": [
         "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893"
@@ -265,7 +272,7 @@
       "severity": "high",
       "type": "comparability",
       "title": "Setting-only prices and complete-ring prices sit in the same tables",
-      "detail": "8 Blue Nile rows, the Brilliant Earth row and the VRAI row are 'Setting Price' / 'Setting Only' - the center diamond is extra. The 4 Zales rows are complete rings including diamonds. A $1,000 setting and a $900 complete ring are not comparable, and price-per-gram cannot be computed where the diamond dominates. Every row carries a price_basis label so the two groups can be separated.",
+      "detail": "8 Blue Nile rows, the Brilliant Earth row and the VRAI row are 'Setting Price' / 'Setting Only' - the center diamond is extra. The 4 Zales rows and the 3 Stone and Strand rows are complete rings including diamonds. A $1,000 setting and a $900 complete ring are not comparable, and price-per-gram cannot be computed where the diamond dominates. Every row carries a price_basis label so the two groups can be separated.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -282,13 +289,63 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "SS-CLARA",
+        "SS-RITA",
+        "SS-MIA"
       ],
       "sources": [
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
-        "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449"
+        "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
+        "https://www.stoneandstrand.com/products/the-rita-ring"
       ],
       "recommended_action": "Compare setting prices with setting prices only; add a centre-stone quote before comparing with a complete ring."
+    },
+    {
+      "id": "F-016",
+      "severity": "high",
+      "type": "policy",
+      "title": "All 3 Stone and Strand rings are final sale / non-returnable \u2014 they cannot be returned after independent testing",
+      "detail": "Each of the three Stone and Strand product pages retrieved on 2026-10-22 shows 'Final Sale \u2014 This product is non-returnable' (for Rita and Mia it is also in the Product Description bullets verbatim), on the same page that advertises '100 Day Returns'. The retailer's returns policy confirms the exclusion: 'Any piece marked as final sale on the product page or purchased at a discount of 50% or greater' cannot be returned or exchanged. Rita (60% off) and Mia (50% off) are non-returnable on the discount rule alone. Consequence for this project's method: the receive \u2192 independent XRF test \u2192 return if it fails sequence cannot be followed for these three rings at these prices. They are published here because they are the first captured listings to say 'solid gold' \u2014 not as recommendations.",
+      "affected_items": [
+        "SS-CLARA",
+        "SS-RITA",
+        "SS-MIA"
+      ],
+      "sources": [
+        "https://www.stoneandstrand.com/products/the-clara-ring",
+        "https://www.stoneandstrand.com/products/the-rita-ring",
+        "https://www.stoneandstrand.com/products/the-mia-ring",
+        "https://www.stoneandstrand.com/pages/returns-exchanges"
+      ],
+      "recommended_action": "Do not buy these three rings as listed if post-delivery verification matters \u2014 there is no return path. If buying from Stone and Strand, choose an item that is not marked final sale and is discounted less than 50%, and get written confirmation before paying that it can be returned after independent testing."
+    },
+    {
+      "id": "F-017",
+      "severity": "medium",
+      "type": "irregularity",
+      "title": "The Mia Ring page contradicts itself on karat: spec table says 14K, image alt text says 10K",
+      "detail": "On the live Mia Ring page retrieved 2026-10-22, the structured Metals spec states 'Gold Karat: 14K', while the product-image alt text on the same page repeatedly says '10K Yellow Gold The Mia Diamond Ring'. The published karat (14) is taken from the spec table, the structured source; the conflicting alt text is quoted in evidence/listings/solid-gold.md and the item's verification status is downgraded to reflect the conflict. One of the two numbers on the retailer's own page is wrong; this dataset cannot determine which.",
+      "affected_items": [
+        "SS-MIA"
+      ],
+      "sources": [
+        "https://www.stoneandstrand.com/products/the-mia-ring"
+      ],
+      "recommended_action": "Ask Stone and Strand in writing which karat the Mia Ring actually is, and keep the reply. An XRF test after delivery would settle it \u2014 but note this ring is final sale (F-016), so there is no return if the test disagrees with the listing."
+    },
+    {
+      "id": "F-018",
+      "severity": "low",
+      "type": "excluded_source",
+      "title": "Catbird not yet included: product-detail text was absent from the retrieved pages, so nothing could be evidence-quoted",
+      "detail": "On 2026-10-22 (session S-75094819) two Catbird engagement product pages were fetched in full (Night at the Ballet Diamond Ring, Emerald Cut \u2014 'from $5,300.00' visible; Odile the Swan Black Diamond Ring \u2014 'from $1,600.00' visible). In both cases the retrieved text contained the product name and starting price but NOT the materials/details block, so karat, solid-gold wording, width and weight could not be backed by verbatim quotes and no rows were added. Search snippets for these pages show material details, but snippets are rejected sources in this project (F-004/F-005/F-006). Catbird is a promising candidate for a future pass with a fetcher that can read the details tab.",
+      "affected_items": [],
+      "sources": [
+        "https://www.catbirdnyc.com/night-at-the-ballet-diamond-ring-emerald-cut.html",
+        "https://www.catbirdnyc.com/odile-the-swan-black-diamond-ring.html"
+      ],
+      "recommended_action": "Re-attempt Catbird capture with a browser that renders the product-details section; only add rows once karat and any 'solid gold' wording can be quoted verbatim from the page itself."
     }
   ]
 }

@@ -22,10 +22,10 @@ DATA = ROOT / "data"
 SITE = ROOT  # Pages serves main "/"
 PAGE_NAMES = [
     "index.html", "solitaire.html", "halo-pave.html", "three-stone-vintage.html",
-    "18k.html", "budget.html", "retailers.html", "prices.html", "flags.html", "methods.html",
+    "18k.html", "budget.html", "solid-gold.html", "retailers.html", "prices.html", "flags.html", "methods.html",
 ]
 REPORTS = ROOT / "reports"
-LISTING_FILES = ["solitaire.json", "halo-pave.json", "three-stone-vintage.json", "18k.json", "budget.json"]
+LISTING_FILES = ["solitaire.json", "halo-pave.json", "three-stone-vintage.json", "18k.json", "budget.json", "solid-gold.json"]
 
 issues: list[tuple[str, str]] = []   # (severity, message) severity: FAIL | WARN | INFO
 checks: list[tuple[str, str, int]] = []  # (name, status, findings)

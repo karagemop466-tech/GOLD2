@@ -21,6 +21,7 @@ CATEGORY_FILES = [
     ("three-stone-vintage", "three-stone-vintage.json"),
     ("18k", "18k.json"),
     ("budget", "budget.json"),
+    ("solid-gold", "solid-gold.json"),
 ]
 DASH = "&mdash;"
 
@@ -181,6 +182,8 @@ def status_badge(status: str) -> str:
         return '<span class="badge b-part">price verified (EUR)</span>'
     if status.startswith("weight_verified"):
         return '<span class="badge b-part">weight verified · price blank</span>'
+    if status == "price_verified_karat_conflict":
+        return '<span class="badge b-bad">price verified · karat conflict (F-017)</span>'
     return f'<span class="badge b-part">{esc(status)}</span>'
 
 
@@ -192,6 +195,7 @@ def page(title: str, active: str, body: str, root: str = "") -> str:
         ("three-stone-vintage.html", "Three-Stone", "three-stone-vintage"),
         ("18k.html", "18K", "18k"),
         ("budget.html", "10K", "budget"),
+        ("solid-gold.html", "Solid Gold", "solid-gold"),
         ("retailers.html", "Retailers", "retailers"),
         ("prices.html", "Calculator", "prices"),
         ("flags.html", "Flagged", "flags"),
@@ -256,7 +260,7 @@ def listing_table(items) -> str:
         rows.append(
             "<tr class=\"item-row\">"
             f'<td><div class="itemname">{esc(it["name"])}</div>'
-            f'<div class="sub">{esc(it["brand"])} · SKU {esc(it["sku"])}</div></td>'
+            f'<div class="sub">{esc(it["brand"])} · SKU {esc(it.get("sku") or "not stated")}</div></td>'
             f'<td>{esc(it["retailer"])}</td>'
             f'<td class="num">{fmt_num(it.get("karat"), "K")}</td>'
             f'<td>{esc(it.get("color") or "—")}</td>'
@@ -312,6 +316,10 @@ def price_summary(items) -> str:
 def build_index(items, payloads, flags, gold, qa_summary):
     verified = sum(1 for i in items if i["verification_status"].startswith("verified"))
     weights = sum(1 for i in items if i.get("weight_g") is not None)
+    n_retailers = len({i["retailer_id"] for i in items})
+    solid_missing = sum(1 for i in items if not i.get("solid_gold_explicit"))
+    hallmark_missing = sum(1 for i in items if not i.get("hallmark_stated"))
+    weight_missing = len(items) - weights
     high_flags = sum(1 for f in flags if f["severity"] == "high")
     cat_cards = "".join(
         f'<a class="catlink" href="{p["category_id"]}.html">'
@@ -327,8 +335,8 @@ def build_index(items, payloads, flags, gold, qa_summary):
         ("Weight", f"Grams. Published for {sum(1 for i in items if i.get('weight_g') is not None)} of {len(items)} items; blank everywhere else — see F-003."),
         ("Seller", f"{len({i['retailer_id'] for i in items})} retailers with official pages; contact details recorded only where published."),
         ("Price", "Live price captured on 2026-10-22 with its basis (setting-only vs complete ring). Cached snippet prices were rejected in 3 cases."),
-        ("Returns", "Window and the resized/custom exclusions recorded per retailer — see F-010."),
-        ("Payment", "Card acceptance is not stated on any captured page; left blank — see F-012."),
+        ("Returns", "Window and the resized/custom/final-sale exclusions recorded per retailer — see F-010, F-016."),
+        ("Payment", "Card acceptance is recorded only where the retailer's own page names cards as tender — see F-012 and the Retailers page."),
         ("Records", "Listing URL, retrieval date and verbatim evidence kept in <code>evidence/</code> for every row."),
         ("On arrival", "Independent jeweller check before wearing or resizing; ask for XRF."),
     ]
@@ -358,9 +366,10 @@ def build_index(items, payloads, flags, gold, qa_summary):
 </section>
 
 <h1>Gold engagement ring — verified shortlist</h1>
-<p class="lead">{len(items)} listings from 4 retailers, sorted into five categories, with the price basis made explicit because a
+<p class="lead">{len(items)} listings from {n_retailers} retailers, sorted into {len(payloads)} categories, with the price basis made explicit because a
 "setting price" does not include the diamond. The three things almost no retailer publishes — the words
-<em>solid gold</em>, a hallmark / maker's mark, and the gram weight — are the three things still outstanding on every row.</p>
+<em>solid gold</em> (missing on {solid_missing} of {len(items)} rows), a hallmark / maker's mark ({hallmark_missing} of {len(items)}),
+and the gram weight ({weight_missing} of {len(items)}) — are still the gaps to close before buying.</p>
 
 <div class="grid g4" style="margin:18px 0 8px">
   <div class="card stat"><div class="n">{len(items)}</div><div class="l">listings captured</div></div>
@@ -405,7 +414,7 @@ def build_category(payload, items, flags):
     )
     body = f"""
 <div class="eyebrow">{esc(payload["category_label"])}</div>
-<h1>{esc(payload["category_label"])} gold engagement rings</h1>
+<h1>{esc(payload.get("category_title") or payload["category_label"] + " gold engagement rings")}</h1>
 <p class="lead">{len(items)} verified listing(s). Price summary: {esc(price_summary(items))}.
 Blank cells are values the retailer does not publish — they are not zero and not estimates.</p>
 <div class="note" style="margin-bottom:16px">
@@ -496,6 +505,7 @@ def build_flags(flags, items_in_flags):
 </article>""")
     total = len(items_in_flags)
     solid_n = sum(1 for i in items_in_flags if not i.get("solid_gold_explicit"))
+    hallmark_n = sum(1 for i in items_in_flags if not i.get("hallmark_stated"))
     weight_missing = sum(1 for i in items_in_flags if i.get("weight_g") is None)
     body = f"""
 <div class="eyebrow">Do not treat these as verified</div>
@@ -505,7 +515,7 @@ Flags do not block the shortlist — they tell you exactly what to ask the selle
 Each flag links to the page that produced it.</p>
 <div class="note" style="margin-bottom:18px">
 <strong>No-hallucination policy, applied.</strong> These are the values that were deliberately <em>not</em> filled in.
-The strongest pattern: {solid_n} of {total} listings state a karat but none states the words “solid gold”, none states a
+The strongest pattern: {solid_n} of {total} listings state a karat but never the words “solid gold”, {hallmark_n} of {total} never state a
 hallmark or maker's mark, and {weight_missing} of {total} never publish a gram weight. That is a gap in the listings, not proof
 the rings are bad — but it is exactly the gap an independent jeweller visit closes.</div>
 <div class="grid" style="grid-template-columns:1fr">{''.join(cards)}</div>
@@ -614,6 +624,9 @@ These are calculations, not retailer claims, and no listing was used to produce 
 
 
 def build_methods(qa_text, gold, items, flags):
+    solid_missing_m = sum(1 for i in items if not i.get("solid_gold_explicit"))
+    hallmark_missing_m = sum(1 for i in items if not i.get("hallmark_stated"))
+    with_weight_m = sum(1 for i in items if i.get("weight_g") is not None)
     body = f"""
 <div class="eyebrow">Method, sources, audit</div>
 <h1>Method &amp; QA</h1>
@@ -630,7 +643,7 @@ and appears on the <a href="flags.html">Flagged</a> page. No value is derived by
 
 <h2>2. Source hierarchy</h2>
 <ul class="clean">
-<li><strong>Tier 1 — product facts:</strong> the retailer's own product page (Blue Nile, Zales, VRAI, Brilliant Earth).</li>
+<li><strong>Tier 1 — product facts:</strong> the retailer's own product page (Blue Nile, Zales, VRAI, Brilliant Earth, Stone and Strand).</li>
 <li><strong>Tier 1 — policies:</strong> the retailer's own return policy page.</li>
 <li><strong>Tier 1 — gold price:</strong> World Gold Council gold spot page, market data by ICE Data Services, with an explicit quote date.</li>
 <li><strong>Rejected:</strong> search-engine snippets, aggregators, blogs, coupon sites, marketplace listings.
@@ -643,8 +656,10 @@ A snippet is never a source — it was caught disagreeing with the live page thr
 <li>Brilliant Earth served EUR at retrieval; the USD price is not recorded and was not converted (F-007).</li>
 <li>VRAI renders its price client-side; the retrieved HTML had no price, so that cell is blank (F-008).</li>
 <li>Costco was probed and excluded: price and gram weight did not render (F-014).</li>
-<li>No listing states a hallmark, a maker's mark, or the words “solid gold” (F-001, F-002).</li>
-<li>Only one item publishes a gram weight, so price-per-gram comparison is not possible for the rest (F-003).</li>
+<li>{solid_missing_m} of {len(items)} listings never use the words “solid gold”, and {hallmark_missing_m} of {len(items)} state no hallmark or maker's mark (F-001, F-002).</li>
+<li>Only {with_weight_m} of {len(items)} items publish a gram weight, so price-per-gram comparison is not possible for the rest (F-003).</li>
+<li>The only listings that say “solid gold” (Stone and Strand) are marked final sale and cannot be returned after independent testing (F-016).</li>
+<li>Catbird was attempted, but its product-detail text was absent from the retrieved pages, so it is excluded until its pages can be quoted verbatim (F-018).</li>
 </ul>
 
 <h2>4. Automated checks after every review</h2>
