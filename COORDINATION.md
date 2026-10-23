@@ -403,3 +403,21 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - **REQ-8C8-02 (`data/listings/budget.json`, `data/listings/three-stone-vintage.json`):** Four Zales rows (`Z-19957449`, `Z-20046552`, `Z-20303279`, `Z-20301172`) record `"metal": "10K Yellow Gold"` and `"color": "Yellow"` without `"Yellow"` in the stored evidence excerpts. Will verify live Zales product pages and blank + flag if unconfirmed.
 - **REQ-8C8-03 (`data/listings/18k.json`, `tools/build_site.py`):** `VRAI-CLASSIC-4P` title says `Plain Band` while the stored excerpt includes `Pavé carat weight:0.18ctw`, and `weight_basis` (`2.86 g at size 6`) is omitted from rendered tables. Will verify live VRAI page and display exact weight basis.
 - **REQ-8C8-04 (`data/retailers.json`, `data/flags.json`, `data/listings/*.json`):** Retrieve Zales standalone return/contact pages (`F-011`), check official payment/card disclosures (`F-012`), fix `F-010` missing `BN-195402`/`BN-302868` plus missing `item.flags` links, fix `F-015` stale `"8 Blue Nile rows"` count (10 rows), add explicit width/color/reputation flags, and ensure every `<tr>` across all pages links to an official `https://` source.
+
+---
+
+# Session S-062F314F — task board & verification log
+
+- **Session ID:** `S-062F314F` (`062f314f`)
+- **Platform-fixed branch:** `arena/062f314f-gold2` (Arena binds this session to its assigned branch; no other branch/worktree may be created or pushed. Strict non-overlapping file scopes enforce isolation until final integration.)
+- **Base observed at claim:** `main` @ `22d9f85` (PR #21 merged). No other session has an open claim on this board; all earlier tasks are `done`.
+- **Baseline before edits:** `python3 tools/qa.py` → PASS, 10 checks, 0 failures, 3 coverage warnings; `node scripts/verify.mjs` → PASS (32 products, 60 sources, 20 findings, 0 purchase approvals); `node --test tests/*.test.mjs` → 23/23 pass.
+
+| ID | Task | Status | Owner | File scope (exclusive before integration) |
+|----|------|--------|-------|-------------------------------------------|
+| T16 | Live line-by-line re-verification of all 32 product rows, the gold reference quote, and retailer policy/reputation records against official sources | in progress | S-062F314F | `data/catalog.json`, `data/gold-price.json`, `research/evidence.json`, `evidence/**`, `audit/062f314f/**` |
+| T17 | Hallucination/security re-scan, independent audit, and fixes | in progress | S-062F314F | `tools/**`, `scripts/**`, `reports/**`, `reviews/062f314f*` |
+| T18 | Site build, link, accessibility, and dashboard review (root pages + `explore/` + `site/`) | unclaimed | — | `explore/**`, root `*.html`, `assets/**`, `site/**` |
+| T19 | Final integration, PR to `main`, merge, and GitHub Pages deployment verification | unclaimed | — | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
+
+No manual user input is required; this session works autonomously. Findings will be published on the Flagged for Review pages, never silently filled in.
