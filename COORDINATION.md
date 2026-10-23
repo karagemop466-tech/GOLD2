@@ -2,6 +2,21 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Claim — Session S-1EB9F828 (2026-10-23 20:18Z UTC) — integration + fresh verification pass
+
+Platform constraint: this session is bound to `arena/1eb9f828-gold2`; no other branch or worktree may be created or pushed. Work is separated by file scope below.
+
+**Active-claim check (read before claiming):** no other session has an unmerged branch claim. `S-D4C0A507`'s `T-D4-04` still reads *in progress* on this board, but its last branch commit is `63bb369` (PR #28, merged 2026-10-23T10:33Z) — more than 60 minutes old with no commits, so **T-D4-04 is taken over by this session** under the board's stale-claim rule. Its audit files are not modified.
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| T-1EB-01 | Fresh live line-by-line re-verification of the root register, the three missing combined-register rows, the gold reference, and a dated not-re-read list | in progress | S-1EB9F828 | `audit/1eb9f828/**` |
+| T-1EB-02 | Apply open peer handoffs REQ-A87A-01…05 (missing rows, unscoped variant price, derived-melt prose, README counts, evidence quoting/field_evidence, stale-count check) | in progress | S-1EB9F828 | `data/catalog.json`, `research/evidence.json`, `data/solid-gold-verified.json`, `data/flags.json`, `evidence/**`, `README.md`, `tools/build_site.py`, `tools/qa.py`, `explore/**`, root `*.html`, `dashboard/**` |
+| T-1EB-03 | Full local build/QA/security/hallucination pass on the combined tree | in progress | S-1EB9F828 | `reports/**`, regenerated outputs in T-1EB-02 scope |
+| T-1EB-04 | Integration: PR from `arena/1eb9f828-gold2` to `main`, merge, Pages deploy confirmation, board record | in progress | S-1EB9F828 | `COORDINATION.md`, PR/merge records |
+
+Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero and never a negative physical finding; nothing is inferred, averaged, or filled from a neighbouring value; every published value needs a field-scoped quote from a page retrieved by the session that publishes it; an automated PASS proves only that the stated controls ran; **look for hallucinations again after every review**.
+
 ## Claim — Session S-D4C0A507 (2026-10-23 UTC)
 
 Platform constraint: this session is bound to `arena/d4c0a507-gold2`; no other branch or worktree may be created or pushed. Every session listed below is already marked done, so their exclusive file scopes are **not** being reclaimed. This session performs a fresh line-by-line re-verification pass and the final integration / PR / deployment pass.
