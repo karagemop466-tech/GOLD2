@@ -753,9 +753,10 @@ def build_verification(log, items, retrieved):
   after this pass makes the row stale, not true.</p>
 </section>
 
-<div class="grid g4 mt18">
+<div class="grid g5 mt18">
   <div class="card stat"><div class="n">{counts.get("verified_match", 0)}</div><div class="l">re-read · unchanged</div></div>
   <div class="card stat"><div class="n">{counts.get("verified_correction", 0)}</div><div class="l">re-read · register corrected</div></div>
+  <div class="card stat"><div class="n">{counts.get("verified_no_price", 0)}</div><div class="l">re-read · no price published</div></div>
   <div class="card stat"><div class="n">{counts.get("not_re_read", 0)}</div><div class="l">not re-read this pass</div></div>
   <div class="card stat"><div class="n">{counts.get("dead_end", 0)}</div><div class="l">dead ends recorded</div></div>
 </div>

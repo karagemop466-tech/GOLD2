@@ -518,3 +518,38 @@ and every conflict is recorded here rather than silently choosing a side.
 - **Concurrency encountered and resolved:** session `S-8B9E189A` merged PR #23 (then PR #26) while this branch was open. `origin/main` was merged into `arena/062f314f-gold2`; the only conflict was `COORDINATION.md`, where **both** records were kept. Their merged data files were taken as-is (this session's PR #22 values — `$4,024.45`, Menē `$1,336`/`$1,454`, Brilliant Earth `$890` USD, 22 findings — are all still present in `main`). No other session's work was discarded, and the merged state re-ran clean locally: `tools/qa.py` PASS 11/0/3, `node --test` 23/23, `verify.mjs`, `check-links.mjs` (30 pages / 71 targets), `security.mjs`, and both auditor suites.
 - **Pages deployment after merge:** `pages-build-deployment` run `39937501830` success; Pages build `built` for `120230f` at 2026-10-23T10:13:14Z. Live re-read of https://karagemop466-tech.github.io/GOLD2/ returned `$4,024.45 / troy oz`, `retrieved 2026-10-23`, `USD $890.00` in the Solitaire category, 20 entries / 6 retailers / 30 flags, and the no-hallucination rule at the top of the page.
 - **Hallucination check remains continuous:** the next reviewer should re-open every official page, because the failure mode observed today was locale/variant drift (Brilliant Earth currency switch, Menē metal-price movement, Catbird/Zales currency ambiguity), not only invented numbers.
+
+## Publication record — S-8B9E189A (2026-10-23)
+
+- **PR #23 — merged:** https://github.com/karagemop466-tech/GOLD2/pull/23
+  ("Dated re-verification of all 20 rows, currency-rule fix, verification + analysis pages").
+  Merged into `main` at **2026-10-23T10:09:14Z**, merge commit `fee89f0`.
+- **GitHub Pages:** build for commit `fee89f0` reported `status: built`; `verification.html`,
+  `analysis.html` and the regenerated dashboard were fetched live afterwards and render the generated
+  content (no 404s).
+- **Post-merge conflict:** `origin/main` had advanced to `693e472` (PR #22, session `S-062F314F`) while this
+  PR was open, so the PR was merged again after `8c2a7ec` resolved every conflict file by file — see
+  "Integration record" above. Nothing from S-062F314F was discarded: its `F-007` wording, its gold
+  superseded observation, its `audit/062f314f/` log, its `data/catalog.json` and `data/review.json` updates
+  and its board section are all present on `main`.
+- **Flag count after integration:** **31** (`F-001`–`F-031`, `F-033`; `F-012` unused, `F-032` merged into
+  `F-007` to avoid a duplicate finding).
+- **Deployment gate:** `python3 tools/qa.py` → PASS 11/0/3, `npm test` 23/23, `npm run verify/build/
+  check:links/security` PASS, independent snapshot audit 0 findings, security scanner 0 findings.
+
+### Follow-up PR #25 — merged
+
+- **PR #25 — merged:** https://github.com/karagemop466-tech/GOLD2/pull/25
+  ("Align verification-log stat cards and flag counts after the S-062F314F merge"),
+  merged into `main` at **2026-10-23T10:11:16Z**, merge commit `48f582b`.
+- **Content:** added the missing `re-read · no price published` stat card so the verification cards sum to
+  the 29 records; fixed one typo in a verification note; aligned the flag count to **31** after `F-032`
+  was merged into `F-007`.
+- **GitHub Pages:** build for `48f582b` reported `status: built`; the live
+  `https://karagemop466-tech.github.io/GOLD2/verification.html` was fetched afterwards and shows all five
+  stat cards (18 unchanged · 6 corrected · 1 no-price · 1 not re-read · 3 dead ends) and the corrected
+  wording. `analysis.html` and the root dashboard were fetched live as well.
+- **Verification at deployment:** `tools/qa.py` PASS 11/0/3 · `npm test` 23/23 ·
+  `npm run verify/build/check:links/security` PASS · independent snapshot audit 0 findings ·
+  security/hallucination scanner 0 findings (154 controls).
+
