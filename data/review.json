@@ -3,7 +3,7 @@
     {
       "id": "weight-basis",
       "title": "Item grams are not net gold grams",
-      "scope": "Automic Gold · seven entries",
+      "scope": "Automic Gold \u00b7 seven entries",
       "sources": [
         "ag-natural",
         "ag-cluster",
@@ -18,8 +18,8 @@
     },
     {
       "id": "fine-weight",
-      "title": "“Fine Weight” is undefined",
-      "scope": "Auvere · two entries",
+      "title": "\u201cFine Weight\u201d is undefined",
+      "scope": "Auvere \u00b7 two entries",
       "sources": [
         "av-bridge",
         "av-clean"
@@ -30,7 +30,7 @@
     {
       "id": "dynamic-pages",
       "title": "Incomplete pages: values deliberately withheld",
-      "scope": "Catbird · four entries; Quince; Auvere prices",
+      "scope": "Catbird \u00b7 four entries; Quince; Auvere prices",
       "sources": [
         "cb-odile",
         "cb-sonnet",
@@ -61,7 +61,7 @@
         "quince-returns"
       ],
       "finding": "The engagement-ring exception is 60 days from purchase, not 365 days from delivery. Made-to-order jewelry is subject to a $35 restocking fee; packaging and certificates matter.",
-      "action": "Get the exact order’s eligibility, resizing/custom exclusions, refund method and inspection permission in writing before paying."
+      "action": "Get the exact order\u2019s eligibility, resizing/custom exclusions, refund method and inspection permission in writing before paying."
     },
     {
       "id": "automic-return-link",
@@ -87,7 +87,7 @@
     {
       "id": "mene-final-price",
       "title": "Crafted-on-Demand price and weight can change",
-      "scope": "Menē Rose and Knot",
+      "scope": "Men\u0113 Rose and Knot",
       "sources": [
         "mene-rose",
         "mene-knot",
@@ -99,13 +99,13 @@
     {
       "id": "price-conflicts",
       "title": "Search and page snapshots disagree",
-      "scope": "Catbird Odile · Menē Knot · gold reference",
+      "scope": "Catbird Odile \u00b7 Men\u0113 Knot \u00b7 gold reference",
       "sources": [
         "cb-odile",
         "mene-knot",
         "jm-gold"
       ],
-      "finding": "Indexed discovery values differed from directly fetched product displays. JM Bullion’s header also differed from its dated body/table ask. Search snippets and separate panels are not silently reconciled or used to pick the lowest price.",
+      "finding": "Indexed discovery values differed from directly fetched product displays. JM Bullion\u2019s header also differed from its dated body/table ask. Search snippets and separate panels are not silently reconciled or used to pick the lowest price.",
       "action": "Use the exact linked product and selected configuration at checkout. The calculator identifies its dated dealer body/table reference and never presents it as live or as an LBMA benchmark."
     },
     {
@@ -128,7 +128,7 @@
         "ftc-jewelry",
         "gia-testing"
       ],
-      "finding": "Candidate-specific karat hallmark and maker/manufacturer-mark evidence is absent. No ring was physically inspected, weighed or assayed. A seller’s metal description, a stamp and a review score cannot establish actual purity.",
+      "finding": "Candidate-specific karat hallmark and maker/manufacturer-mark evidence is absent. No ring was physically inspected, weighed or assayed. A seller\u2019s metal description, a stamp and a review score cannot establish actual purity.",
       "action": "Require both marks and independent professional assessment before wearing or resizing. Surface XRF can be misleading on gold-over-gold plating; ask the jeweler which additional assessment is appropriate."
     },
     {
@@ -144,7 +144,7 @@
         "bn-returns"
       ],
       "finding": "Published generic return windows do not establish that a particular order remains returnable after professional testing, resizing or customization. No seller was contacted for written permission during this review.",
-      "action": "Do not buy under this project’s rules if independent verification and an eligible return are not both allowed. Do not perform destructive tests without authorization."
+      "action": "Do not buy under this project\u2019s rules if independent verification and an eligible return are not both allowed. Do not perform destructive tests without authorization."
     },
     {
       "id": "reviews-not-assays",
@@ -159,7 +159,7 @@
         "ftc-shopping",
         "bn-501480w14"
       ],
-      "finding": "BBB profiles/complaints and Menē’s Trustpilot channel were read. These contain opinions or allegations, not independently established assay findings. Non-accreditation alone is not wrongdoing. Scores and complaint counts were not imported as purchase ratings. No independent Blue Nile reputation review was completed in this extension. Independent reputation also remains unassessed for VRAI, Brilliant Earth and Zales.",
+      "finding": "BBB profiles/complaints and Men\u0113\u2019s Trustpilot channel were read. These contain opinions or allegations, not independently established assay findings. Non-accreditation alone is not wrongdoing. Scores and complaint counts were not imported as purchase ratings. No independent Blue Nile reputation review was completed in this extension. Independent reputation also remains unassessed for VRAI, Brilliant Earth and Zales.",
       "action": "Read multiple independent sources, assess seller responses and validate contact details. A published phone/email does not prove a working business; no calls or emails were made."
     },
     {
@@ -171,7 +171,7 @@
         "jm-gold",
         "nist-units"
       ],
-      "finding": "LBMA’s public page did not expose a licensed numeric gold price. A dated JM Bullion body/table ask is recorded separately, with a conflicting header flagged. It is a dealer reference, not a guaranteed liquidation payout or a live feed.",
+      "finding": "LBMA\u2019s public page did not expose a licensed numeric gold price. A dated JM Bullion body/table ask is recorded separately, with a conflicting header flagged. It is a dealer reference, not a guaranteed liquidation payout or a live feed.",
       "action": "Refresh the relevant source manually before a buying decision. Raw-gold values for catalog products stay blank until an admissible net metal weight and purity basis exist."
     },
     {
@@ -237,18 +237,18 @@
     },
     {
       "id": "vrai-plain-pave",
-      "title": "VRAI Plain band selection also displays a pavé specification",
+      "title": "VRAI Plain band selection also displays a pav\u00e9 specification",
       "scope": "VRAI Classic Round Brilliant setting",
       "sources": [
         "ext-vrai-classic-4p"
       ],
-      "finding": "The fetched selected configuration says Plain band but also displays Pavé carat weight:0.18 ctw. The correspondence of this field to the selected variant is unconfirmed. No pavé weight or diamond mass is used in any ring-gold calculation.",
-      "action": "Have the seller confirm the exact plain/pavé configuration, size-specific metal-only weight, chosen center and all-in native-currency quote in writing."
+      "finding": "The fetched selected configuration says Plain band but also displays Pav\u00e9 carat weight:0.18 ctw. The correspondence of this field to the selected variant is unconfirmed. No pav\u00e9 weight or diamond mass is used in any ring-gold calculation.",
+      "action": "Have the seller confirm the exact plain/pav\u00e9 configuration, size-specific metal-only weight, chosen center and all-in native-currency quote in writing."
     },
     {
       "id": "reobservation-2026-10-23",
       "title": "Re-observation on 2026-10-23 changed several displayed values",
-      "scope": "Menē Rose Ring · Menē Knot Ring · Brilliant Earth Classic Six-Prong · dealer gold reference",
+      "scope": "Men\u0113 Rose Ring \u00b7 Men\u0113 Knot Ring \u00b7 Brilliant Earth Classic Six-Prong \u00b7 dealer gold reference",
       "sources": [
         "mene-rose",
         "mene-knot",
@@ -256,13 +256,13 @@
         "jm-gold",
         "wgc-panel-review"
       ],
-      "finding": "Direct official-page fetches on 2026-10-23 replaced earlier dated observations: Menē Rose Ring $1,346 → $1,336 and Menē Knot Ring $1,465 → $1,454 (both USD, Crafted-on-Demand); Brilliant Earth's Classic Six-Prong setting rendered in a USD locale as $890 (Setting Only) instead of the 2026-10-22 EUR-locale €990.00; the JM Bullion dealer reference moved from $4,039.76 to $4,035.54 and the World Gold Council moving header changed again within the same day. Each figure is a dated display observation, not a fixed price; nothing was converted between currencies or averaged.",
+      "finding": "Direct official-page fetches on 2026-10-23 replaced earlier dated observations: Men\u0113 Rose Ring $1,346 \u2192 $1,336 and Men\u0113 Knot Ring $1,465 \u2192 $1,454 (both USD, Crafted-on-Demand); Brilliant Earth's Classic Six-Prong setting rendered in a USD locale as $890 (Setting Only) instead of the 2026-10-22 EUR-locale \u20ac990.00; the JM Bullion dealer reference moved from $4,039.76 to $4,035.54 and the World Gold Council moving header changed again within the same day. Each figure is a dated display observation, not a fixed price; nothing was converted between currencies or averaged.",
       "action": "Re-open each official page and the cart for the exact configuration before deciding. Treat every amount here as dated, record the observation date with any comparison, and never treat a locale change as an exchange-rate conversion."
     },
     {
       "id": "newly-rendered-amounts",
       "title": "Labeled amounts now render where the register previously recorded none",
-      "scope": "Zales 1/5 CT. Diamond Solitaire · Catbird Odile the Swan · Sonnet · Night at the Ballet (Emerald Cut) · Pointelle",
+      "scope": "Zales 1/5 CT. Diamond Solitaire \u00b7 Catbird Odile the Swan \u00b7 Sonnet \u00b7 Night at the Ballet (Emerald Cut) \u00b7 Pointelle",
       "sources": [
         "ext-z-19957449",
         "cb-odile",
@@ -323,6 +323,17 @@
         "ag-cushion-signet",
         "mj-bold-eternity"
       ]
+    },
+    {
+      "id": "karat-quote-provenance",
+      "title": "A karat sentence was published as a verbatim quote from pages that do not contain it",
+      "scope": "Gold reference \u2014 karat basis (16 CFR 23.3 and FTC consumer guidance)",
+      "sources": [
+        "ecfr-23-3",
+        "ftc-jewelry"
+      ],
+      "finding": "The stored karat basis carried 'an item marked 18 k is made of 75 % gold' as a field-scoped excerpt attributed to the eCFR section and, in the evidence file, to the NIST conversion chart. On 2026-10-23 both the regulation and the FTC article were re-read: the regulation contains no such sentence and the FTC article expresses the same fact in parts ('18 parts gold mixed with six parts of another metal'), which makes 75 % arithmetic rather than a quotation. The sentence was removed and replaced with verified text; the arithmetic stays, clearly labelled.",
+      "action": "Quote only text present in a dated fetch, and label derived percentages as derived. Re-run a string-matching hallucination scan after every review \u2014 a plausible quotation is exactly what an unchecked pipeline propagates."
     }
   ]
 }

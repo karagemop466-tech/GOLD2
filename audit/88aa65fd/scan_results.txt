@@ -1,0 +1,15 @@
+S-88AA65FD scanner: 10 checks passed, 0 failures, 6/6 mutation controls caught
+  PASS [C1] 17 assigned prices trace to their own quotes
+  PASS [C8] 44 products resolve to product sources and 13 sellers
+  PASS [C2] every assigned amount is rendered in the explore table
+  PASS [C3] 13 root pages checked against the current gold value
+  PASS [C4] dashboard and root agree at 3,995.47
+  PASS [C5] 41 flags have unique ids and self-consistent title counts
+  PASS [C6] README and manifest counts equal the JSON
+  PASS [C7] 82 distinct evidence URLs on reviewed publisher hosts
+  PASS [C9] no None/NaN cells in the checked tables
+  PASS [C10] superseded Menē amounts are not stored as current
+RESULT: PASS
+LIMITATION: this proves internal traceability and rendering consistency only. It cannot prove a
+publisher's claim, a ring's physical purity, or that a price is still current. Re-read the official
+source and look for hallucinations again after every review.

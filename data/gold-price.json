@@ -17,7 +17,7 @@
   "grams_basis": "NIST conversion chart: 1 troy ounce = 31.103 476 8 grams; stored without grouping spaces as 31.1034768.",
   "karat_source_name": "eCFR - 16 CFR 23.3, Misrepresentation as to gold content",
   "karat_source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3",
-  "karat_basis": "Nominal karat/24 arithmetic for a documented gold-alloy weight. A listed karat is not an assay result; eCFR distinguishes fine 24-karat gold, alloys, and surface coatings.",
+  "karat_basis": "Nominal karat/24 arithmetic for a documented gold-alloy weight. The percentage is arithmetic on the listed karat, not a quoted percentage and not an assay. 16 CFR 23.3 (read 2026-10-23) distinguishes fine 24-karat gold, gold alloys and surface coatings; the FTC consumer page states the karat parts in words ('18 parts gold mixed with six parts of another metal').",
   "field_evidence": {
     "usd_per_troy_oz": [
       "USD\n\n/oz\n\n-\n\n3,995.47"
@@ -30,7 +30,7 @@
     ],
     "karat_basis": [
       "fine (24 karat) gold",
-      "an item marked 18 k is made of 75 % gold"
+      "composed throughout of an alloy of gold (i.e., gold that is less than 24 karats)"
     ],
     "chart_as_of_date": [
       "Data as of 22 October, 2026"
@@ -70,7 +70,7 @@
       "retrieved_at": "2026-10-23",
       "chart_as_of_date": "2026-10-22",
       "status": "superseded_moving_header",
-      "reason": "Header value observed earlier the same day (2026-10-23). The moving header is not a fixed benchmark; only the latest 2026-10-23 observation (3,995.47) is used in calculations."
+      "reason": "Header value observed earlier the same day (2026-10-23T20:00Z). The moving header is not a fixed benchmark; only the later 2026-10-23T23:41Z observation (3,995.47) is used in calculations."
     }
   ],
   "limitations": [
@@ -81,6 +81,6 @@
     "F-026: exact header quote-as-of timestamp unconfirmed. The chart date is stored separately; observed/retrieval dates do not establish quote time."
   ],
   "chart_as_of_date": "2026-10-22",
-  "quote_scope": "Moving-header observation retrieved 2026-10-23T23:4xZ; exact quote-as-of timestamp is unconfirmed (F-026). The chart's stated date (22 October 2026) is stored separately and is not assigned to the header.",
+  "quote_scope": "Moving-header observation retrieved 2026-10-23T23:41Z; exact quote-as-of timestamp is unconfirmed (F-026). The chart's stated date (22 October 2026) is stored separately and is not assigned to the header.",
   "limits_note": ""
 }
