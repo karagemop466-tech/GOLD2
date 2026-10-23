@@ -868,3 +868,21 @@ None. This session performed read-only verification and created only audit docum
 4. **Automated PASS proves only that controls passed** — Not proof of source truth or physical purity
 
 **Completion:** Session S-F98AE489 completed independent line-by-line verification with zero findings. No hallucinations detected. All repository requirements met.
+
+## Claim — Session S-F69A82EA (2026-10-23 UTC)
+
+Platform constraint: this session is bound to `arena/f69a82ea-gold2`; it cannot create the requested parallel branch/worktree name. Prior integration sections are closed. This follow-up is a final consistency pass on the stale public overview and a known catalog-coverage omission; it does not re-verify physical gold or claim a price is current.
+
+| ID | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| F69-01 | Correct stale README counts/scope and remove the combined-catalog claim that all root entries are covered | done | S-F69A82EA | `README.md`, `data/catalog.json`, `data/review.json`, `research/evidence.json`, generated `explore/**`, `COORDINATION.md` |
+| F69-02 | Re-run provenance/hallucination, security, build, link, browser, calculator and Pages/PR checks; record limitations | in progress | S-F69A82EA | `audit/f69a82ea/**`, `COORDINATION.md` |
+
+### S-F69A82EA initial verification
+
+- 2026-10-23 — Read the coordination board before editing. The inherited integration is complete, but independent scanner `audit/a87a02a5/hallucination_provenance_scan.py` still reports three root-register URLs absent from the 41-product combined catalog (`AG-COFFIN-RING`, `AG-CUSHION-SIGNET`, `MJ-BOLD-ETERNITY`) and README prose has stale counts (32/9/60/20; 30 pages; 32 valuation gates; 31 flags). Claim does not take over any active peer scope.
+- 2026-10-23 — Ran root QA, independent snapshot audit, calculator, legacy build/audit/tests, all four existing provenance/security scanners and their unit tests, plus full `npm run check`. Detailed results are in `audit/f69a82ea/consistency-and-hallucination-review.md`; warnings are coverage/provenance gaps and remain disclosed.
+- 2026-10-23 — Re-read the three official product URLs named by the provenance scanner. Added identity-only evidence sources and a 26th review finding; no missing price or physical gold value was inferred. Updated root/combined counts and corrected the catalog scope to disclose the three omitted root-only pages. Deterministic build regenerated Explore pages and the manifest.
+- 2026-10-23 — Verification after changes: `npm run check` PASS (23/23 Node tests, 46-page security/link pass, 41 automatic gates, browser/axe pass, npm audit 0 vulnerabilities); `npm run verify` 41 products / 80 sources / 26 findings; root QA 11/11 with 3 coverage warnings; independent snapshot audit 0 findings / 12 arithmetic controls; legacy tests PASS; four independent scanners PASS with 10 provenance warnings remaining; their unit suites 32/32. Warnings are recorded verbatim in the audit report; they are not suppressed.
+- 2026-10-23 — Rebase claim conflict with concurrent main update (`S-F98AE489`) was resolved by combining both session blocks; neither block was discarded. Claim was pushed to `arena/f69a82ea-gold2` before implementation work.
+- 2026-10-23 — PR, merge, CI and Pages deployment confirmation pending; do not treat the edited preview as live until the GitHub Pages API reports the merged commit built.

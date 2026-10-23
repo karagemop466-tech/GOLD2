@@ -4,7 +4,7 @@
     "title": "GOLD",
     "reviewedAt": "2026-10-23T10:00:00Z",
     "reviewSession": "arena-062f314f",
-    "scope": "41 unique named product pages across 12 retailers verified through 2026-10-23 UTC, covering all root-register and companion-dashboard listings without duplication.",
+    "scope": "41 unique named product pages across 12 retailers in the combined register. This is not the full cross-register set: three source-checked root-register product pages (AG-COFFIN-RING, AG-CUSHION-SIGNET, MJ-BOLD-ETERNITY) are not included here and are published as a Flagged for Review completeness gap. The root dashboard remains a separate register.",
     "pricePolicy": "No hallucinations: never invent prices, specifications, or verification. Null means unverified. Prices are dated observations, not live quotes or checkout totals. Source claims are not independent authentication.",
     "freshnessHours": 24,
     "sourceReviewDays": 30,
