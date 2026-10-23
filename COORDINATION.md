@@ -88,6 +88,7 @@ The clean-tree check caught and fixed a stale intermediate FAIL badge before PR 
 | `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 & #14 merged; findings dispositioned by S-CA4C9D8A |
 | `S-CA4C9D8A` | `arena/ca4c9d8a-gold2` | field-scoped re-verification, dashboard/calculator, combined QA, integration and closeout | T12–T15 done; PR #15 & #16 merged and Pages built |
 | `S-8C810C15` (8c810c15) | `arena/8c810c15-gold2` | independent live line-by-line audit, explicit `"Solid 14k Gold"` catalog expansion (`Automic Gold` + `Mejuri`), security/hallucination/WCAG scanner (`audit/8c810c15/**`), and final additive integration | in progress |
+| `S-B200A880` (b200a880) | `arena/b200a880-gold2` | independent 2026-10-23 live re-verification of all 20 root rows, gold quote and 6 policy sources; independent hallucination/security scanner (`audit/b200a880/**`, 3,056 controls, 25 unit tests); rebase onto `39c81db` with corroboration-only integration and Z-203 wording correction | see section below |
 
 All sessions share one environment constraint: the runner is bound to a single branch and cannot create
 `session-<id>/<task>` worktrees. That is recorded rather than ignored. Work is therefore separated by
@@ -576,3 +577,60 @@ and every conflict is recorded here rather than silently choosing a side.
   `npm run verify/build/check:links/security` PASS · independent snapshot audit 0 findings ·
   security/hallucination scanner 0 findings (154 controls).
 
+
+---
+
+# Session S-B200A880 — independent re-verification, scanner, and rebase integration
+
+- **Session ID:** `S-B200A880` (`b200a880`)
+- **Platform-fixed branch:** `arena/b200a880-gold2` (no other branch/worktree can be created; isolation by file scope).
+- **Base at claim:** `main` @ `22d9f85`. **Rebased before integration onto:** `main` @ `39c81db` (PRs #22–#27 by `S-062F314F` and `S-8B9E189A` had landed in the interim).
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| B1 | Independent live line-by-line re-verification of all 20 root product rows, the WGC gold quote and 6 retailer policy sources on 2026-10-23 | done | S-B200A880 | `audit/b200a880/**` (read-only inspection of `data/**`, `evidence/**`) |
+| B2 | Independent hallucination/security scanner and unit tests; rebuild and full-gate verification | done | S-B200A880 | `audit/b200a880/hallucination_security_scanner.py`, `audit/b200a880/test_scanner.py` |
+| B3 | Rebase onto current `main`, combine without discarding other sessions' work, PR and Pages confirmation | in progress | S-B200A880 | `COORDINATION.md`, `README.md`, plus the two Z-203 wording corrections noted below |
+
+## S-B200A880 working log
+
+- **2026-10-23 — Independent pass (B1).** All 20 official product URLs, the WGC gold page and 6 retailer
+  policy URLs were re-fetched live. Result: 16 exact row matches, 4 dated evidence updates, zero
+  hallucinated values, 15 unconfirmable values left blank. Machine-readable record and narrative in
+  `audit/b200a880/live_verification_2026-10-23.json` and `live_line_by_line_verification.md`.
+- **2026-10-23 — Gold and Brilliant Earth findings corroborated, not duplicated.** This session
+  independently read WGC **4,024.45 USD/oz** (chart "Data as of 22 October, 2026", header timestamp
+  absent → `quote_date` null) and BE-121H6 **`$890(Setting Only)`** with a page-level USD selector
+  (EUR €990 retained only as superseded history, no FX conversion). The parallel sessions had already
+  integrated the identical observations via PRs #22–#27; after the rebase this branch therefore keeps
+  no overlapping data edits and accepts `main`'s stricter one-currency model (F-033): 4 assigned
+  prices, 16 displayed-but-unassigned amounts.
+- **2026-10-23 — Unique re-read.** `main`'s verification log marks `AG-CUSHION-SIGNET` "not re-read
+  this pass"; this session re-fetched it on 2026-10-23 and re-read `$2,758`, solid 14k gold and the
+  ~5.5 g stone-inclusive item weight exactly as stored. Recorded in this session's audit JSON only;
+  the register's 2026-10-22 dating is left untouched because no structured value changed.
+- **2026-10-23 — Zales label instability (F-018) corroborated.** This session read Z-20303279 and
+  Z-20301172 **with** explicit Discounted/Original labels while Z-20046552 rendered **without** labels;
+  the parallel sessions recorded the opposite split for the same URLs. All amounts stay unassigned.
+  One evidence-backed wording correction was made: the two Z-203 rows' present-tense "renders ...
+  without labels" notes (and their 2026-10-22 evidence sections) now describe the render-to-render
+  instability and point at the labeled 2026-10-23 re-verification already present in the same evidence
+  files. No values, flags or assignments changed.
+- **2026-10-23 — B200-F1 disposition updated.** This session's static fetch of the Zales policy page
+  returned a client-rendered shell; `S-062F314F` retrieved the same URL successfully the same day and
+  re-confirmed the 30-day returns / 60-day exchanges wording on `verification.html`, so the policy is
+  re-verified on `main` and the shell limitation is recorded as tool-path-specific.
+- **2026-10-23 — Scanner adapted to the integrated model (B2).** The independent scanner now mirrors
+  `tools/qa.py`'s authoritative three-branch blank-price rule (unassigned text → F-018; native display
+  without ISO currency → F-025; no price string → F-008), covers the new `verification.html` and
+  `analysis.html` pages, and adds currency-evidence and baseline blank-state flag controls. Result:
+  **3,056 controls, 0 failures, 0 warnings**; unit tests extended from 18 to **25**
+  (`required_item_flags` rule tests included).
+- **2026-10-23 — Full gate after rebase (all PASS).** `tools/build_site.py` + `tools/qa.py`
+  (11 checks, 0 failures, 3 coverage warnings); `tools/test_calculator.js`;
+  `reviews/independent_snapshot_audit.py` (0 findings, 6 arithmetic controls); `scripts/build.py`,
+  `scripts/audit.py`, `scripts/test.js`; `audit/8c810c15` scanner (0 findings, 154 controls);
+  `audit/b200a880` scanner (3,056 controls) and 25 unit tests; `npm run check` end-to-end
+  (`verify` 32 products/60 records, 23/23 node tests, 13-page build, 30 pages/102 external links,
+  static security + `npm audit` 0 vulnerabilities, browser/axe 32 gates, zero external runtime
+  requests). Nothing from the parallel sessions was discarded or overwritten.
