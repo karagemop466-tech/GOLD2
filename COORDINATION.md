@@ -584,7 +584,7 @@ and every conflict is recorded here rather than silently choosing a side.
 
 - **Session ID:** `S-B200A880` (`b200a880`)
 - **Platform-fixed branch:** `arena/b200a880-gold2` (no other branch/worktree can be created; isolation by file scope).
-- **Base at claim:** `main` @ `22d9f85`. **Rebased before integration onto:** `main` @ `39c81db` (PRs #22–#27 by `S-062F314F` and `S-8B9E189A` had landed in the interim).
+- **Base at claim:** `main` @ `22d9f85`. **Rebased before integration onto:** `main` @ `a84c153` (PRs #22–#28 by `S-062F314F`, `S-8B9E189A` and `S-D4C0A507` had landed in the interim; only generated-report/board conflicts, resolved by combining).
 
 | ID | Task | Status | Owner | File scope |
 |----|------|--------|-------|------------|
@@ -605,10 +605,11 @@ and every conflict is recorded here rather than silently choosing a side.
   integrated the identical observations via PRs #22–#27; after the rebase this branch therefore keeps
   no overlapping data edits and accepts `main`'s stricter one-currency model (F-033): 4 assigned
   prices, 16 displayed-but-unassigned amounts.
-- **2026-10-23 — Unique re-read.** `main`'s verification log marks `AG-CUSHION-SIGNET` "not re-read
-  this pass"; this session re-fetched it on 2026-10-23 and re-read `$2,758`, solid 14k gold and the
-  ~5.5 g stone-inclusive item weight exactly as stored. Recorded in this session's audit JSON only;
-  the register's 2026-10-22 dating is left untouched because no structured value changed.
+- **2026-10-23 — Corroborated re-read.** `main`'s verification log marks `AG-CUSHION-SIGNET` "not
+  re-read this pass"; this session re-fetched it on 2026-10-23 and re-read `$2,758`, solid 14k gold
+  and the ~5.5 g stone-inclusive item weight exactly as stored. The later-merged `S-D4C0A507` audit
+  (PR #28) independently re-read the same row with the identical match, so two independent dated
+  observations now back it; no structured value changed and the register's dating is untouched.
 - **2026-10-23 — Zales label instability (F-018) corroborated.** This session read Z-20303279 and
   Z-20301172 **with** explicit Discounted/Original labels while Z-20046552 rendered **without** labels;
   the parallel sessions recorded the opposite split for the same URLs. All amounts stay unassigned.

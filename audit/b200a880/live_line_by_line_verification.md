@@ -8,7 +8,8 @@
 ## 0. Integration outcome after rebasing onto `main` (2026-10-23)
 
 This branch's data-refresh commit was prepared against the pre-merge tree, then rebased onto
-`main` `39c81db` (PRs #22–#27, sessions `S-062F314F` and `S-8B9E189A`). The rebase showed that
+`main` `a84c153` (PRs #22–#28, sessions `S-062F314F`, `S-8B9E189A` and `S-D4C0A507`). The rebases
+showed that
 **every data change this pass had independently reached had already been integrated on `main`
 from the parallel sessions' own live fetches**, in several cases under a stricter evidence model.
 Rather than overwrite their work, this branch keeps only its unique artifacts — this audit folder,
@@ -30,11 +31,13 @@ backed by its rendered USD selector); 16 displayed amounts remain verbatim-but-u
 including Blue Nile setting prices and the Mejuri "From $2,900" display that this pass re-read
 verbatim. That is stricter than, and not in conflict with, the observations recorded below.
 
-**Unique contribution of this pass:** `AG-CUSHION-SIGNET` is marked "not re-read this pass" on
-`main`'s verification log (stored observation dated 2026-10-22). This session re-fetched
-<https://www.automicgold.com/products/cushion-diamond-signet> on 2026-10-23 and re-read
-`$2,758`, solid 14k gold, and the stone-inclusive ~5.5 g item weight exactly as stored — an
-additional independent dated observation for that one row, recorded in the machine-readable JSON.
+**Corroboration beyond `main`'s verification log:** `AG-CUSHION-SIGNET` is marked "not re-read this
+pass" on `main`'s own verification log (stored observation dated 2026-10-22). Two independent
+sessions nevertheless re-fetched <https://www.automicgold.com/products/cushion-diamond-signet> on
+2026-10-23 — this session and, after the second rebase, the merged `S-D4C0A507` audit (PR #28,
+`audit/d4c0a507/`) — and both re-read `$2,758`, solid 14k gold, and the stone-inclusive ~5.5 g item
+weight exactly as stored. Two independent dated matches therefore back a row the merged verification
+log could not itself re-read; neither pass changed a structured value.
 
 ## 1. Gold reference — verified change
 
