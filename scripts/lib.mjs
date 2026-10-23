@@ -16,7 +16,7 @@ export const PRODUCT_HOSTS = Object.freeze({
   sarraf: ['www.sarraf.com', 'sarraf.com'], 'factory-direct': ['www.factorydirectjewelry.com', 'factorydirectjewelry.com'], 'stone-and-strand': ['www.stoneandstrand.com', 'stoneandstrand.com']
 });
 export const SOURCE_HOSTS = new Set([
-  ...Object.values(PRODUCT_HOSTS).flat(), 'consumer.ftc.gov', 'www.gia.edu', 'www.nist.gov',
+  ...Object.values(PRODUCT_HOSTS).flat(), 'consumer.ftc.gov', 'www.ecfr.gov', 'www.gia.edu', 'www.nist.gov',
   'www.lbma.org.uk', 'www.gold.org', 'www.jmbullion.com', 'www.bbb.org', 'www.trustpilot.com'
 ]);
 export function safeSourceURL(value) {

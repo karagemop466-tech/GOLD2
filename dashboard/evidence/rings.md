@@ -43,12 +43,12 @@
 ## MENE-ROSE — Menē Rose Ring — Pure 24k Solid Gold
 - Official URL: https://mene.com/products/rose-ring-gold
 - Capture Date: `2026-10-23`
-- Verbatim Quote: `Menē Rose Ring - 24k Gold | pure 24 karat jewelry by gram weight | $1,336`
+- Verbatim Quote: `Menē Rose Ring - 24k Gold | pure 24 karat jewelry by gram weight | $1,325`
 
 ## MENE-KNOT — Menē Knot Ring — Pure 24k Solid Gold
 - Official URL: https://mene.com/products/knot-ring-gold
 - Capture Date: `2026-10-23`
-- Verbatim Quote: `Knot ring - 24k Gold | pure 24 karat jewelry by gram weight | $1,454`
+- Verbatim Quote: `Knot ring - 24k Gold | pure 24 karat jewelry by gram weight | $1,442`
 
 ## AV-BRIDGE — Diamond Bridge Ring Tall (Solid 22k Gold, 0.07 ctw)
 - Official URL: https://auvere.com/product/diamond-bridge-ring-tall/
