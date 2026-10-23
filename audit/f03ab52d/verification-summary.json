@@ -1,0 +1,28 @@
+{
+  "session": "S-F03AB52D",
+  "branch": "arena/f03ab52d-gold2",
+  "date": "2026-10-23",
+  "baseline_commit": "ca39632b212684db0caa6bb57d4979860519dd9f",
+  "rebased_onto": "627ee4f (main after PR #45 S-1B04074F and PR #47 S-88AA65FD)",
+  "reconciliation": "Audit authored against ca39632; main advanced during the pass. S-1B04074F independently read the same WGC 3,995.47 and refreshed the stored quote (PR #45). This session adopts that refresh and keeps only additive audit files; no peer work discarded.",
+  "task": "Independent hallucination/provenance audit + live re-verification sample",
+  "file_scope": ["audit/f03ab52d/**", "COORDINATION.md"],
+  "checks": {
+    "tools/qa.py": "PASS 12 checks, 0 failures, 3 warnings (coverage/gold-quote)",
+    "tools/build_site.py": "13 pages, byte-reproducible (no diff)",
+    "npm run check": "PASS — verify 44 products/85 sources/26 findings/0 approvals; 23/23 node tests; 13-page build; 46 pages/102 local/179 external links; security 0 vulns; browser/axe 44 gates",
+    "independent scanner (audit/f03ab52d)": "PASS 9 checks, 0 failures, 0 warnings",
+    "mutation controls": "9/9"
+  },
+  "live_rereads": 4,
+  "live_contradictions": 0,
+  "irregularities": [
+    "F-026 WGC quote-as-of timestamp unconfirmed (carried forward)",
+    "WGC header moved intraday 3,996.31 -> 3,995.47 (same-day; recommend dated refresh)",
+    "evidence/gold-price.md mentions 4,025.54 only as a documented non-observation (exempt)",
+    "Coverage: 20/30 root rows no assigned price; 23/30 no metal weight; zero physical/XRF verification"
+  ],
+  "hallucinations_found": 0,
+  "values_inferred_or_filled": 0,
+  "boundary": "Automated PASS proves only that stated controls passed. It cannot prove seller truth, page freshness tomorrow, or actual purity."
+}
