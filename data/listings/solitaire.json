@@ -21,7 +21,7 @@
       "center_stone_included": false,
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/bn-203348.md",
       "solid_gold_explicit": null,
       "hallmark_stated": null,
@@ -110,7 +110,7 @@
       "center_stone_included": false,
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/bn-195639.md",
       "solid_gold_explicit": null,
       "hallmark_stated": null,
@@ -199,7 +199,7 @@
       "center_stone_included": false,
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/solitaire-compass-set-engagement-ring-in-14k-white-gold-item-194548",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/bn-194548.md",
       "solid_gold_explicit": null,
       "hallmark_stated": null,
@@ -285,19 +285,19 @@
       "color": "Yellow",
       "width_mm": 2.5,
       "weight_g": null,
-      "price": 990.0,
-      "currency": "EUR",
+      "price": 890.0,
+      "currency": "USD",
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
       "source_url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/be-121h6.md",
       "solid_gold_explicit": null,
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.brilliantearth.com/30-Day-Returns/",
-      "verification_status": "partial_eur_price",
+      "verification_status": "partial_official_fields",
       "rejected_values": [],
       "flags": [
         "F-001",
@@ -308,9 +308,10 @@
         "F-016",
         "F-019",
         "F-021",
-        "F-024"
+        "F-024",
+        "F-032"
       ],
-      "notes": "The official page rendered EUR 990.00 Setting Only. No USD price was displayed, recorded, or converted. The listed prong metal is 14K White Gold.",
+      "notes": "Served currency changed between retrievals (EUR €990 on 2026-10-22; USD $890 on 2026-10-23 with a USD selector). Setting-only price; centre stone excluded.",
       "depth_mm": null,
       "band_width_text": null,
       "weight_basis": null,
@@ -340,21 +341,34 @@
           "Width: 2.5 mm"
         ],
         "price": [
-          "€ 990.00(Setting Only)"
+          "$890(Setting Only)"
         ],
         "currency": [
-          "€ 990.00(Setting Only)"
+          "$890(Setting Only)",
+          "USD"
         ],
         "price_basis": [
-          "€ 990.00(Setting Only)"
+          "$890(Setting Only)"
         ],
         "center_stone_included": [
-          "€ 990.00(Setting Only)"
+          "$890(Setting Only)"
         ],
         "prong_metal": [
           "Prong metal: 14K White Gold"
         ]
-      }
+      },
+      "currency_source_url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
+      "currency_evidence": "The product page header renders a currency selector reading \"USD\", and the setting price is labeled \"$890(Setting Only)\".",
+      "superseded_observations": [
+        {
+          "price": 990.0,
+          "currency": "EUR",
+          "display": "€ 990.00(Setting Only)",
+          "retrieved_at": "2026-10-22",
+          "status": "superseded_region_currency",
+          "reason": "The 2026-10-22 retrieval was served a euro price while the 2026-10-23 retrieval was served a dollar price with a USD selector. Neither is converted; only the dated USD observation is used in calculations."
+        }
+      ]
     }
   ]
 }

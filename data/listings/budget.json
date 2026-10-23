@@ -21,7 +21,7 @@
       "center_stone_included": true,
       "original_price": null,
       "source_url": "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/z-19957449.md",
       "solid_gold_explicit": null,
       "hallmark_stated": null,
@@ -113,13 +113,13 @@
       "center_stone_included": true,
       "original_price": null,
       "source_url": "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/z-20046552.md",
       "solid_gold_explicit": null,
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE",
-      "verification_status": "partial_price_unverified",
+      "verification_status": "partial_price_unassigned",
       "rejected_values": [],
       "flags": [
         "F-001",
@@ -129,6 +129,7 @@
         "F-015",
         "F-016",
         "F-017",
+        "F-018",
         "F-021",
         "F-023",
         "F-024",
@@ -138,7 +139,7 @@
       "depth_mm": null,
       "band_width_text": null,
       "weight_basis": null,
-      "unassigned_price_text": null,
+      "unassigned_price_text": "$909.30  $1,299.00 30% Off",
       "prong_metal": null,
       "surface_finish": null,
       "physical_test_status": "not_tested",
@@ -164,13 +165,16 @@
           "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold"
         ],
         "price": [
-          "Discounted Price $909.30"
+          "$909.30  $1,299.00 30% Off"
         ],
         "currency": [
-          "Discounted Price $909.30"
+          "$909.30  $1,299.00 30% Off"
         ],
         "original_price": [
-          "Original Price was $1,299.00"
+          "$909.30  $1,299.00 30% Off"
+        ],
+        "unassigned_price_text": [
+          "$909.30  $1,299.00 30% Off"
         ]
       },
       "superseded_normalization": {
@@ -180,7 +184,17 @@
         "status": "Unsupported ISO inference; historical normalization only, not a verified price"
       },
       "observed_native_display": [
-        "Discounted Price $909.30"
+        "$909.30  $1,299.00 30% Off"
+      ],
+      "render_history": [
+        {
+          "retrieved_at": "2026-10-22",
+          "rendered": [
+            "Discounted Price $909.30",
+            "Original Price was $1,299.00"
+          ],
+          "note": "Labeled amounts on the earlier render; the 2026-10-23 render of the same URL dropped the labels."
+        }
       ]
     }
   ]

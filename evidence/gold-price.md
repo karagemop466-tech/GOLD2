@@ -95,3 +95,29 @@ No free LBMA fix is claimed. This limitation is recorded as F-013.
 
 ## Integration correction — 2026-10-22
 The stored 4,028.53 was a prior moving-header observation. Its exact source quote timestamp is unconfirmed; quote_date is now null. Chart text “Data as of 21 October, 2026” must not be silently bound to the header. A later re-fetch displayed 4,025.54 in the header; this is recorded separately in research/evidence.json, not used to make the old observation live.
+
+## Re-verification — 2026-10-23 (UTC)
+
+Direct page fetch of https://www.gold.org/goldhub/data/gold-prices.
+
+### Current observation (`usd_per_troy_oz`) — retrieved 2026-10-23
+
+```
+USD
+
+/oz
+
+-
+
+4,024.45
+```
+
+### Chart date shown on the same page
+
+```
+Data as of 22 October, 2026
+```
+
+The moving header carries no rendered quote timestamp, so `quote_date` stays `null` (F-026).
+The prior observation, 4,028.53 with chart date 21 October 2026, is retained only inside
+`superseded_observations`; it is not used in any calculation and no page renders it.

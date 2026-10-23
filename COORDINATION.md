@@ -419,9 +419,9 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 
 | ID | Task | Status | Owner | File scope (exclusive) | Touches |
 |----|------|--------|-------|------------------------|---------|
-| T20 | Dated live re-verification of the root register (20 rows), the gold quote and every retailer policy/payment/contact page, plus a written line-by-line verification log | in progress | S-8B9E189A | `audit/8b9e189a/**` | read-only inspection of `data/**`, `evidence/**` |
-| T21 | Official-source expansion: entries that explicitly state solid gold/karat **and** publish a gram weight; evidence files; blank + flag where a required field is absent | in progress | S-8B9E189A | `data/solid-gold-verified.json`, `data/listings/**`, `data/gold-price.json`, `data/flags.json`, `evidence/**` | `data/catalog.json` untouched |
-| T22 | Site build: derived (never typed) counts, dated verification-log page, nominal fine-gold analysis page, navigation, accessible tables | in progress | S-8B9E189A | `tools/build_site.py`, `tools/qa.py`, `assets/**`, root `*.html`, `reports/**` | `explore/**`, `site/**` untouched |
+| T20 | Dated live re-verification of the root register (20 rows), the gold quote and every retailer policy/payment/contact page, plus a written line-by-line verification log | done | S-8B9E189A | `audit/8b9e189a/**` | read-only inspection of `data/**`, `evidence/**` |
+| T21 | Official-source expansion plus one consistent evidence rule for displayed amounts, currency, and weights; evidence files; blank + flag where a required field is absent | done | S-8B9E189A | `data/solid-gold-verified.json`, `data/listings/**`, `data/gold-price.json`, `data/flags.json`, `evidence/**` | `data/catalog.json` untouched |
+| T22 | Site build: derived (never typed) counts, dated verification-log page, nominal fine-gold analysis page, navigation, accessible tables | done | S-8B9E189A | `tools/build_site.py`, `tools/qa.py`, `assets/**`, root `*.html`, `reports/**` | `explore/**`, `site/**` untouched |
 | T23 | Final integration: full check suite, PR to `main`, merge, Pages deploy verification, closeout | in progress | S-8B9E189A | `COORDINATION.md`, `README.md`, `.github/workflows/**` | — |
 
 ## Working log (S-8B9E189A)

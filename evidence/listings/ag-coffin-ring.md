@@ -78,3 +78,19 @@ Solid 14k Gold
 - All-metal ring design contains zero gemstones, so `6.1g (gold)` is stone-free gold alloy mass; however, the exact reference ring size across sizes 2–16 is not stated (flagged F-027).
 - No physical interior karat stamp or maker’s mark was documented in the retrieved product text (flagged F-002).
 - No physical inspection, XRF assay, or jeweller’s-scale verification was performed (flagged F-024).
+
+## Re-verification — 2026-10-23 (UTC)
+
+- **Currency source:** https://www.automicgold.com/cart.js
+- **Result:** the public cart endpoint reports the store currency, which is the only formal
+  currency statement found for this retailer. It is quoted verbatim, not inferred.
+
+```
+"currency":"USD"
+```
+
+- **Product page re-read 2026-10-23:** https://www.automicgold.com/products/coffin-ring
+
+```
+$1,910
+```

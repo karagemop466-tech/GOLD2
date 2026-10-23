@@ -81,3 +81,19 @@ Natural sapphire
 - Published `1.2g` item weight includes the `3mm` natural sapphire, so stone-excluded `weight_g` remains `null` (flagged F-003, F-028).
 - Ultra-thin `1.1mm` band carries elevated bending risk for everyday engagement wear (flagged F-029).
 - Physical hallmark / maker’s mark is unstated (flagged F-002).
+
+## Re-verification — 2026-10-23 (UTC)
+
+- **Currency source:** https://www.automicgold.com/cart.js
+- **Result:** the public cart endpoint reports the store currency, which is the only formal
+  currency statement found for this retailer. It is quoted verbatim, not inferred.
+
+```
+"currency":"USD"
+```
+
+- **Product page re-read 2026-10-23:** https://www.automicgold.com/products/sapphire-ring
+
+```
+$526
+```
