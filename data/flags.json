@@ -6,8 +6,8 @@
       "id": "F-001",
       "severity": "high",
       "type": "checklist_gap",
-      "title": "Item-specific “solid gold” wording is not stated",
-      "detail": "No item-specific title or specification explicitly describes any of the 16 listed settings/rings as “solid gold.” Karat wording alone is not substituted for that checklist requirement. A page-wide “solid gold” phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
+      "title": "Item-specific \u201csolid gold\u201d wording is not stated",
+      "detail": "No item-specific title or specification explicitly describes any of the 16 listed settings/rings as \u201csolid gold.\u201d Karat wording alone is not substituted for that checklist requirement. A page-wide \u201csolid gold\u201d phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -45,14 +45,14 @@
         "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
         "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552"
       ],
-      "recommended_action": "Ask each seller in writing to confirm “solid gold, not plated, vermeil, filled, overlay, or gold-tone,” and keep the reply with the order."
+      "recommended_action": "Ask each seller in writing to confirm \u201csolid gold, not plated, vermeil, filled, overlay, or gold-tone,\u201d and keep the reply with the order."
     },
     {
       "id": "F-002",
       "severity": "high",
       "type": "checklist_gap",
-      "title": "Physical hallmark and maker’s mark are not documented",
-      "detail": "None of the 16 captured product pages documents the physical karat stamp inside the band plus a maker’s/manufacturer’s mark. Stock numbers, styles, and URL identifiers are not physical hallmarks. Both fields remain null, not false.",
+      "title": "Physical hallmark and maker\u2019s mark are not documented",
+      "detail": "None of the 16 captured product pages documents the physical karat stamp inside the band plus a maker\u2019s/manufacturer\u2019s mark. Stock numbers, styles, and URL identifiers are not physical hallmarks. Both fields remain null, not false.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -69,7 +69,11 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "AG-COFFIN-RING",
+        "AG-CUSHION-SIGNET",
+        "AG-SAPPHIRE-RING",
+        "MJ-BOLD-ETERNITY"
       ],
       "affected_retailers": [],
       "sources": [
@@ -88,9 +92,13 @@
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
         "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
         "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
-        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552"
+        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
+        "https://www.automicgold.com/products/coffin-ring",
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://www.automicgold.com/products/sapphire-ring",
+        "https://mejuri.com/products/bold-diamond-eternity-ring"
       ],
-      "recommended_action": "Before relying on the marking, photograph the inside of the band and have an independent jeweller read the karat stamp and maker’s mark under magnification."
+      "recommended_action": "Before relying on the marking, photograph the inside of the band and have an independent jeweller read the karat stamp and maker\u2019s mark under magnification."
     },
     {
       "id": "F-003",
@@ -113,7 +121,10 @@
         "BN-194158",
         "BN-195269",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "AG-CUSHION-SIGNET",
+        "AG-SAPPHIRE-RING",
+        "MJ-BOLD-ETERNITY"
       ],
       "affected_retailers": [],
       "sources": [
@@ -132,9 +143,12 @@
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
         "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
         "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
-        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552"
+        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://www.automicgold.com/products/sapphire-ring",
+        "https://mejuri.com/products/bold-diamond-eternity-ring"
       ],
-      "recommended_action": "Request the metal-only gram weight for the exact size and configuration, then verify it on a jeweller’s scale before calculating fine-gold content."
+      "recommended_action": "Request the metal-only gram weight for the exact size and configuration, then verify it on a jeweller\u2019s scale before calculating fine-gold content."
     },
     {
       "id": "F-004",
@@ -186,7 +200,7 @@
       "severity": "medium",
       "type": "currency",
       "title": "Brilliant Earth rendered EUR, not USD",
-      "detail": "The official Brilliant Earth product page rendered €990.00 Setting Only. No USD item price was displayed in the captured content, so the record remains EUR and no exchange-rate conversion or USD substitution is made.",
+      "detail": "The official Brilliant Earth product page rendered \u20ac990.00 Setting Only. No USD item price was displayed in the captured content, so the record remains EUR and no exchange-rate conversion or USD substitution is made.",
       "affected_items": [
         "BE-121H6"
       ],
@@ -201,7 +215,7 @@
       "severity": "medium",
       "type": "unverified",
       "title": "VRAI price is absent from the retrieved product text",
-      "detail": "The official configurator supplied setting details and a size-6 metal weight but no price string in the retrieved product chunks. The price and currency fields are blank. A search snippet claiming “Starting at $1,035” is rejected and is not used.",
+      "detail": "The official configurator supplied setting details and a size-6 metal weight but no price string in the retrieved product chunks. The price and currency fields are blank. A search snippet claiming \u201cStarting at $1,035\u201d is rejected and is not used.",
       "affected_items": [
         "VRAI-CLASSIC-4P"
       ],
@@ -216,7 +230,7 @@
       "severity": "medium",
       "type": "irregularity",
       "title": "James Allen item 41515 redirects to a sold-out Blue Nile page",
-      "detail": "The captured James Allen comfort-fit item 41515 URL redirected to Blue Nile and displayed “This popular style is sold out.” Blue Nile’s official James Allen page describes an exclusive curated collection. Item 41515 is excluded; BN-315661 remains a Blue Nile-sold James Allen design.",
+      "detail": "The captured James Allen comfort-fit item 41515 URL redirected to Blue Nile and displayed \u201cThis popular style is sold out.\u201d Blue Nile\u2019s official James Allen page describes an exclusive curated collection. Item 41515 is excluded; BN-315661 remains a Blue Nile-sold James Allen design.",
       "affected_items": [
         "BN-315661"
       ],
@@ -232,7 +246,7 @@
       "severity": "medium",
       "type": "policy",
       "title": "Blue Nile excludes resized-after-purchase and custom orders",
-      "detail": "Blue Nile’s official policy states a 30-day window from shipment and excludes personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance, and Final Sale items. Two complimentary returns per customer/year are stated; other shipping circumstances can incur fees.",
+      "detail": "Blue Nile\u2019s official policy states a 30-day window from shipment and excludes personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance, and Final Sale items. Two complimentary returns per customer/year are stated; other shipping circumstances can incur fees.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -258,7 +272,7 @@
       "severity": "high",
       "type": "policy",
       "title": "Zales online returns depend on where resizing was performed",
-      "detail": "The official return policy allows 30-day returns and excludes custom designs and jewelry altered/modified beyond sizing or stone setting. The separate official ring-sizer PDF says rings purchased and sized from the online store can be returned/exchanged, but rings resized at a Zales store, another retailer, or an independent jeweler are not accepted for online refund/exchange. This is not a blanket “all resized rings” rule; the location/channel matters.",
+      "detail": "The official return policy allows 30-day returns and excludes custom designs and jewelry altered/modified beyond sizing or stone setting. The separate official ring-sizer PDF says rings purchased and sized from the online store can be returned/exchanged, but rings resized at a Zales store, another retailer, or an independent jeweler are not accepted for online refund/exchange. This is not a blanket \u201call resized rings\u201d rule; the location/channel matters.",
       "affected_items": [
         "Z-20303279",
         "Z-20301172",
@@ -323,7 +337,11 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "AG-COFFIN-RING",
+        "AG-CUSHION-SIGNET",
+        "AG-SAPPHIRE-RING",
+        "MJ-BOLD-ETERNITY"
       ],
       "affected_retailers": [],
       "sources": [
@@ -342,7 +360,11 @@
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
         "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
         "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
-        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552"
+        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
+        "https://www.automicgold.com/products/coffin-ring",
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://www.automicgold.com/products/sapphire-ring",
+        "https://mejuri.com/products/bold-diamond-eternity-ring"
       ],
       "recommended_action": "Compare setting prices only with setting prices, and add the exact centre-stone cost before comparing with a complete ring."
     },
@@ -351,7 +373,7 @@
       "severity": "low",
       "type": "unverified",
       "title": "Numeric band-width and depth coverage is incomplete",
-      "detail": "Five rows have no numeric band width (four Zales rows plus VRAI, which says only “Standard”). Fifteen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth. All unavailable dimensions remain blank.",
+      "detail": "Five rows have no numeric band width (four Zales rows plus VRAI, which says only \u201cStandard\u201d). Fifteen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth. All unavailable dimensions remain blank.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -368,7 +390,10 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "AG-COFFIN-RING",
+        "AG-CUSHION-SIGNET",
+        "MJ-BOLD-ETERNITY"
       ],
       "affected_retailers": [],
       "sources": [
@@ -387,7 +412,10 @@
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
         "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
         "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
-        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552"
+        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
+        "https://www.automicgold.com/products/coffin-ring",
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://mejuri.com/products/bold-diamond-eternity-ring"
       ],
       "recommended_action": "Ask for the exact band width and depth/thickness in millimetres for the selected size; do not infer them from photographs."
     },
@@ -396,7 +424,7 @@
       "severity": "low",
       "type": "unverified",
       "title": "Zales gold colour is not explicit in the retrieved titles",
-      "detail": "The four Zales titles state “10K Gold” but do not explicitly state yellow, white, or rose in the retrieved text. Their metal is recorded as 10K Gold and colour is blank; no colour is inferred from images or URLs.",
+      "detail": "The four Zales titles state \u201c10K Gold\u201d but do not explicitly state yellow, white, or rose in the retrieved text. Their metal is recorded as 10K Gold and colour is blank; no colour is inferred from images or URLs.",
       "affected_items": [
         "Z-20303279",
         "Z-20301172",
@@ -417,7 +445,7 @@
       "severity": "medium",
       "type": "price_ambiguity",
       "title": "Two Zales pages render unlabeled price amounts",
-      "detail": "Z-20303279 renders “$979.30  $1,399.00 30% Off” and Z-20301172 renders “$769.30  $1,099.00 30% Off” without Discounted/Original labels in the current extraction. Both amounts are preserved verbatim, but current price, original price, and currency fields are not assigned by position or discount arithmetic.",
+      "detail": "Z-20303279 renders \u201c$979.30  $1,399.00 30% Off\u201d and Z-20301172 renders \u201c$769.30  $1,099.00 30% Off\u201d without Discounted/Original labels in the current extraction. Both amounts are preserved verbatim, but current price, original price, and currency fields are not assigned by position or discount arithmetic.",
       "affected_items": [
         "Z-20303279",
         "Z-20301172"
@@ -434,7 +462,7 @@
       "severity": "medium",
       "type": "policy",
       "title": "Brilliant Earth excludes resized/modified and custom-designed returns",
-      "detail": "Brilliant Earth’s official policy offers free 30-day returns but excludes custom-designed jewelry and rings that have been resized or modified. It separately says an engraved ring can be returned with a $40 engraving-removal charge. Resizing is complimentary within the stated 60-day/1-year conditions, but a resize can affect return eligibility.",
+      "detail": "Brilliant Earth\u2019s official policy offers free 30-day returns but excludes custom-designed jewelry and rings that have been resized or modified. It separately says an engraved ring can be returned with a $40 engraving-removal charge. Resizing is complimentary within the stated 60-day/1-year conditions, but a resize can affect return eligibility.",
       "affected_items": [
         "BE-121H6"
       ],
@@ -485,19 +513,29 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "AG-COFFIN-RING",
+        "AG-CUSHION-SIGNET",
+        "AG-SAPPHIRE-RING",
+        "MJ-BOLD-ETERNITY"
       ],
       "affected_retailers": [
         "blue-nile",
         "zales",
         "vrai",
-        "brilliant-earth"
+        "brilliant-earth",
+        "automic-gold",
+        "mejuri"
       ],
       "sources": [
         "https://www.bluenile.com/policies/returns",
         "https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE",
         "https://www.vrai.com/returns-exchanges",
-        "https://www.brilliantearth.com/30-Day-Returns/"
+        "https://www.brilliantearth.com/30-Day-Returns/",
+        "https://www.automicgold.com/products/coffin-ring",
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://www.automicgold.com/products/sapphire-ring",
+        "https://mejuri.com/products/bold-diamond-eternity-ring"
       ],
       "recommended_action": "Before purchase, ask in writing whether independent non-destructive XRF/inspection is permitted without voiding returns. If the seller refuses independent verification or a return, do not buy."
     },
@@ -506,7 +544,7 @@
       "severity": "medium",
       "type": "source_limitation",
       "title": "VRAI candidate BBB profile is not identity-confirmed",
-      "detail": "The candidate BBB profile is named Vrai and lists alternate name Vrai & Oro; VRAI’s official privacy policy identifies Vrai & Oro, LLC as VRAI. However, the BBB profile does not link vrai.com. Its ratings, review average, and complaint counts are withheld rather than attributed to VRAI as confirmed seller-reputation facts.",
+      "detail": "The candidate BBB profile is named Vrai and lists alternate name Vrai & Oro; VRAI\u2019s official privacy policy identifies Vrai & Oro, LLC as VRAI. However, the BBB profile does not link vrai.com. Its ratings, review average, and complaint counts are withheld rather than attributed to VRAI as confirmed seller-reputation facts.",
       "affected_items": [
         "VRAI-CLASSIC-4P"
       ],
@@ -561,7 +599,11 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "AG-COFFIN-RING",
+        "AG-CUSHION-SIGNET",
+        "AG-SAPPHIRE-RING",
+        "MJ-BOLD-ETERNITY"
       ],
       "affected_retailers": [],
       "sources": [
@@ -580,9 +622,13 @@
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
         "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
         "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
-        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552"
+        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
+        "https://www.automicgold.com/products/coffin-ring",
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://www.automicgold.com/products/sapphire-ring",
+        "https://mejuri.com/products/bold-diamond-eternity-ring"
       ],
-      "recommended_action": "Before wearing or resizing, use an independent jeweller for non-destructive XRF, hallmark/maker’s-mark inspection, and metal-only weight verification, subject to the seller’s written return terms."
+      "recommended_action": "Before wearing or resizing, use an independent jeweller for non-destructive XRF, hallmark/maker\u2019s-mark inspection, and metal-only weight verification, subject to the seller\u2019s written return terms."
     },
     {
       "id": "F-025",
@@ -633,6 +679,104 @@
         "https://www.gold.org/goldhub/data/gold-prices"
       ],
       "recommended_action": "Obtain a timestamp directly bound to the quote; never substitute chart date or retrieval date. See the expanded calculator for a separately dated body/table reference."
+    },
+    {
+      "id": "F-027",
+      "severity": "medium",
+      "type": "policy",
+      "title": "Automic Gold excludes modified/custom items from returns and omits reference size on published weights",
+      "detail": "Automic Gold offers free 30-day US returns (items must be mailed within 14 days to avoid a recycling fee) and excludes engraved, custom, and modified items. In addition, Coffin Ring states 'Approximately 6.1g (gold)' without specifying which ring size across sizes 2\u201316 was weighed.",
+      "affected_items": [
+        "AG-COFFIN-RING",
+        "AG-CUSHION-SIGNET",
+        "AG-SAPPHIRE-RING"
+      ],
+      "affected_retailers": [
+        "automic-gold"
+      ],
+      "sources": [
+        "https://www.automicgold.com/pages/returns-exchange-policy",
+        "https://www.automicgold.com/products/coffin-ring",
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://www.automicgold.com/products/sapphire-ring"
+      ],
+      "recommended_action": "Request expected gram weight for your exact ordered size before checkout, mail returns within 14 days if rejected, and never modify or resize before XRF testing."
+    },
+    {
+      "id": "F-028",
+      "severity": "medium",
+      "type": "unverified",
+      "title": "Stone-set rings report gross item weight including gemstones; metal-only weight kept null",
+      "detail": "Automic Gold's Cushion Diamond Signet Ring (5.5 g including ~0.65 ct diamond) and Sapphire Ring (1.2 g including 3 mm sapphire) publish approximate gross item weights rather than net gold-alloy weights. To avoid overstating fine-gold mass, weight_g is kept strictly null.",
+      "affected_items": [
+        "AG-CUSHION-SIGNET",
+        "AG-SAPPHIRE-RING"
+      ],
+      "affected_retailers": [],
+      "sources": [
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://www.automicgold.com/products/sapphire-ring"
+      ],
+      "recommended_action": "Ask the seller for unmounted gold casting weight before using the melt calculator."
+    },
+    {
+      "id": "F-029",
+      "severity": "medium",
+      "type": "irregularity",
+      "title": "Ultra-thin 1.1 mm band width carries daily-wear bending risk",
+      "detail": "Automic Gold's Sapphire Ring specifies a 1.1 mm band width and 1.1 mm thickness. While explicitly Solid 14k Gold at $526, ultra-thin bands below ~1.8 mm deform more easily in daily engagement wear.",
+      "affected_items": [
+        "AG-SAPPHIRE-RING"
+      ],
+      "affected_retailers": [],
+      "sources": [
+        "https://www.automicgold.com/products/sapphire-ring"
+      ],
+      "recommended_action": "Consider ordering at least a 1.8 mm\u20132.0 mm band for everyday lifetime wear."
+    },
+    {
+      "id": "F-030",
+      "severity": "low",
+      "type": "policy",
+      "title": "Mejuri Bold Diamond Eternity Ring price starts 'From $2,900' by size and resize policy is unstated",
+      "detail": "Mejuri's Bold Diamond Eternity Ring displays 'From$2,900' because diamond count (1.15 ct \u2013 1.57 ct) varies with ring size, and full eternity bands generally cannot be resized.",
+      "affected_items": [
+        "MJ-BOLD-ETERNITY"
+      ],
+      "affected_retailers": [
+        "mejuri"
+      ],
+      "sources": [
+        "https://mejuri.com/products/bold-diamond-eternity-ring",
+        "https://mejuri.com/faq/return-exchanges/what-is-the-standard-return-policy"
+      ],
+      "recommended_action": "Confirm exact size price on Mejuri's product page before checkout and verify ring size carefully prior to ordering."
+    },
+    {
+      "id": "F-031",
+      "severity": "low",
+      "type": "source_limitation",
+      "title": "Automic Gold and Mejuri BBB pages omit static letter ratings and summary counts",
+      "detail": "Direct fetches of the official-website-linked BBB profiles for Automic Gold (NYC) and Mejuri (Toronto) confirmed 'NOT BBB Accredited', while dynamic rating badges and summary counts were absent from the static HTML extract and left null.",
+      "affected_items": [
+        "AG-COFFIN-RING",
+        "AG-CUSHION-SIGNET",
+        "AG-SAPPHIRE-RING",
+        "MJ-BOLD-ETERNITY"
+      ],
+      "affected_retailers": [
+        "automic-gold",
+        "mejuri"
+      ],
+      "sources": [
+        "https://www.bbb.org/us/ny/new-york/profile/jewelry-stores/automic-gold-0121-87147097",
+        "https://www.bbb.org/ca/on/toronto/profile/jewelry-manufacturers/mejuri-0107-1370644",
+        "https://www.automicgold.com/products/coffin-ring",
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://www.automicgold.com/products/sapphire-ring",
+        "https://mejuri.com/products/bold-diamond-eternity-ring"
+      ],
+      "recommended_action": "Open the linked BBB profile directly in a browser when reviewing third-party complaint narratives."
     }
   ]
 }

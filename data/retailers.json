@@ -66,7 +66,7 @@
       ],
       "field_evidence": {
         "contact_phone": [
-          "+1‑800‑242‑2728"
+          "+1\u2011800\u2011242\u20112728"
         ],
         "contact_email": [
           "service@bluenile.com"
@@ -99,19 +99,19 @@
           "custom orders"
         ],
         "return_exclusions_detail": [
-          "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and “Final Sale” items are not eligible for return or exchange."
+          "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and \u201cFinal Sale\u201d items are not eligible for return or exchange."
         ],
         "resize_policy": [
           "Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase if the design permits."
         ],
         "payment_methods_verified": [
-          "Credit cards: We accept major credit cards, including Visa®, Mastercard®, American Express®, and Discover®",
-          "We accept payment through PayPal® for orders totaling up to $50,000",
+          "Credit cards: We accept major credit cards, including Visa\u00ae, Mastercard\u00ae, American Express\u00ae, and Discover\u00ae",
+          "We accept payment through PayPal\u00ae for orders totaling up to $50,000",
           "We accept secure wire transfers from most banking institutions",
           "We offer financing options through Affirm and Splitit"
         ],
         "payment_note": [
-          "Blue Nile U.S. payment methods include only Visa® Debit and Mastercard® Debit cards. No other debit cards are accepted.",
+          "Blue Nile U.S. payment methods include only Visa\u00ae Debit and Mastercard\u00ae Debit cards. No other debit cards are accepted.",
           "this option is currently unavailable for purchases totaling $50,000 or more"
         ],
         "reputation_accreditation": [
@@ -339,7 +339,7 @@
         ],
         "return_window_days": [
           "Eligible items below $15,000 can be returned within 30 days",
-          "VRAI’s standard 30-day return window from delivery"
+          "VRAI\u2019s standard 30-day return window from delivery"
         ],
         "return_window_basis": [
           "Eligible items below $15,000 can be returned within 30 days for full credit to store or refund minus recycling fee to the original payment method. Eligible items above $15,000 can be returned within 30 days for full credit to store."
@@ -510,6 +510,222 @@
         ],
         "reputation_identity": [
           "[Visit Website](https://www.brilliantearth.com/)"
+        ]
+      }
+    },
+    {
+      "id": "automic-gold",
+      "name": "Automic Gold",
+      "website": "https://www.automicgold.com",
+      "domains": [
+        "www.automicgold.com",
+        "automicgold.com"
+      ],
+      "contact_phone": null,
+      "contact_email": "care@automicgold.com",
+      "contact_channels": [
+        "email"
+      ],
+      "contact_source_url": "https://www.automicgold.com/pages/returns-exchange-policy",
+      "contact_verified": true,
+      "return_window_days": 30,
+      "return_window_basis": "Free US returns within 30 days of delivery (mail within 14 days to avoid recycling fee)",
+      "return_policy_url": "https://www.automicgold.com/pages/returns-exchange-policy",
+      "return_free_shipping": true,
+      "return_free_shipping_basis": "Free US return shipping; mail within 14 days to avoid a recycling fee",
+      "return_free_shipments_per_year": null,
+      "return_excludes_resized": true,
+      "return_excludes_custom": true,
+      "return_exclusions_detail": "Engraved items, custom items, and modified items are final sale.",
+      "resize_policy": "Paid resizing starting at $50\u2013$60; modified items become final sale.",
+      "payment_methods_verified": [
+        "credit",
+        "debit",
+        "PayPal",
+        "Shop Pay",
+        "Affirm",
+        "AfterPay",
+        "Google Pay",
+        "Apple Pay"
+      ],
+      "payment_source_url": "https://www.automicgold.com/pages/faq-general",
+      "payment_note": "Official FAQ lists all major credit & debit cards, PayPal, Shop Pay, Affirm, AfterPay, Google Pay, and Apple Pay.",
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": "https://www.bbb.org/us/ny/new-york/profile/jewelry-stores/automic-gold-0121-87147097",
+        "candidate_profile_url": null,
+        "complaints_url": "https://www.bbb.org/us/ny/new-york/profile/jewelry-stores/automic-gold-0121-87147097/complaints",
+        "reviews_url": "https://www.bbb.org/us/ny/new-york/profile/jewelry-stores/automic-gold-0121-87147097/customer-reviews",
+        "identity_status": "official_website_linked",
+        "profile_scope": "Automic Gold New York BBB profile linking automicgold.com (0 reviews, 0 complaints; BBB letter grade not published on profile).",
+        "bbb_accredited": false,
+        "bbb_rating": null,
+        "review_average_out_of_5": null,
+        "review_count": 0,
+        "complaints_last_3_years": 0,
+        "complaints_last_12_months": 0,
+        "retrieved_at": "2026-10-22"
+      },
+      "evidence_file": "evidence/retailers/automic-gold.md",
+      "verification_status": "official_policies_partial",
+      "flags": [
+        "F-021",
+        "F-027",
+        "F-031"
+      ],
+      "field_evidence": {
+        "contact_email": [
+          "care@automicgold.com"
+        ],
+        "contact_channels": [
+          "care@automicgold.com"
+        ],
+        "return_window_days": [
+          "Automic Gold offers free returns within 30 days of the delivery date for customers who reside in the U.S."
+        ],
+        "return_window_basis": [
+          "Automic Gold offers free returns within 30 days of the delivery date for customers who reside in the U.S.",
+          "To avoid a recycling fee, please mail your items within 14 days."
+        ],
+        "return_free_shipping": [
+          "Automic Gold offers free returns within 30 days of the delivery date for customers who reside in the U.S."
+        ],
+        "return_free_shipping_basis": [
+          "To avoid a recycling fee, please mail your items within 14 days."
+        ],
+        "return_excludes_resized": [
+          "Modified Items"
+        ],
+        "return_excludes_custom": [
+          "Custom items"
+        ],
+        "return_exclusions_detail": [
+          "Engraved items",
+          "Custom items",
+          "Modified Items"
+        ],
+        "resize_policy": [
+          "paid resizing starting at $50\u2013$60"
+        ],
+        "payment_methods_verified": [
+          "All major credit & debit cards, PayPal, Shop Pay, Affirm, AfterPay, Google Pay, and Apple Pay."
+        ],
+        "payment_note": [
+          "All major credit & debit cards, PayPal, Shop Pay, Affirm, AfterPay, Google Pay, and Apple Pay."
+        ],
+        "reputation_accreditation": [
+          "This business is **NOT BBB Accredited.**"
+        ],
+        "reputation_scope": [
+          "[Visit Website](https://www.automicgold.com/)"
+        ],
+        "reputation_reviews": [
+          "This business has 0 reviews"
+        ],
+        "reputation_complaints": [
+          "This business has 0 complaints"
+        ]
+      }
+    },
+    {
+      "id": "mejuri",
+      "name": "Mejuri",
+      "website": "https://mejuri.com",
+      "domains": [
+        "mejuri.com",
+        "www.mejuri.com"
+      ],
+      "contact_phone": null,
+      "contact_email": null,
+      "contact_channels": [
+        "live chat"
+      ],
+      "contact_source_url": "https://mejuri.com/faq",
+      "contact_verified": true,
+      "return_window_days": 30,
+      "return_window_basis": "Free 30-day returns in the US, Canada, UK, Australia, and Germany from delivery or pickup",
+      "return_policy_url": "https://mejuri.com/faq/return-exchanges/what-is-the-standard-return-policy",
+      "return_free_shipping": true,
+      "return_free_shipping_basis": "Free 30-day returns in the US, Canada, UK, Australia, and Germany",
+      "return_free_shipments_per_year": null,
+      "return_excludes_resized": null,
+      "return_excludes_custom": null,
+      "return_exclusions_detail": "Engraved and monogrammed products, piercing stud earrings, gift cards, and final sale items are excluded; post-purchase resize/custom exclusions are unstated.",
+      "resize_policy": null,
+      "payment_methods_verified": [
+        "Visa",
+        "Mastercard",
+        "American Express"
+      ],
+      "payment_source_url": "https://mejuri.com/faq/payment/what-payment-methods-do-you-accept",
+      "payment_note": "Official FAQ lists credit cards accepted: Visa, Mastercard, and American Express.",
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": "https://www.bbb.org/ca/on/toronto/profile/jewelry-manufacturers/mejuri-0107-1370644",
+        "candidate_profile_url": null,
+        "complaints_url": "https://www.bbb.org/ca/on/toronto/profile/jewelry-manufacturers/mejuri-0107-1370644/complaints",
+        "reviews_url": "https://www.bbb.org/ca/on/toronto/profile/jewelry-manufacturers/mejuri-0107-1370644/customer-reviews",
+        "identity_status": "official_website_linked",
+        "profile_scope": "Mejuri headquarters and corporate-owned locations BBB profile linking mejuri.com.",
+        "bbb_accredited": false,
+        "bbb_rating": null,
+        "review_average_out_of_5": 1.0,
+        "review_count": 6,
+        "complaints_last_3_years": 35,
+        "complaints_last_12_months": 4,
+        "retrieved_at": "2026-10-22"
+      },
+      "evidence_file": "evidence/retailers/mejuri.md",
+      "verification_status": "official_policies_partial",
+      "flags": [
+        "F-021",
+        "F-030",
+        "F-031"
+      ],
+      "field_evidence": {
+        "contact_channels": [
+          "chat with us"
+        ],
+        "return_window_days": [
+          "We offer free 30-day returns for customers in the US, Canada, UK, Australia, and Germany, starting from the day the shipment is delivered or picked up in-store."
+        ],
+        "return_window_basis": [
+          "We offer free 30-day returns for customers in the US, Canada, UK, Australia, and Germany, starting from the day the shipment is delivered or picked up in-store."
+        ],
+        "return_free_shipping": [
+          "We offer free 30-day returns for customers in the US, Canada, UK, Australia, and Germany, starting from the day the shipment is delivered or picked up in-store."
+        ],
+        "return_free_shipping_basis": [
+          "We offer free 30-day returns for customers in the US, Canada, UK, Australia, and Germany, starting from the day the shipment is delivered or picked up in-store."
+        ],
+        "return_exclusions_detail": [
+          "Engraved and monogrammed products",
+          "Piercing stud earrings",
+          "Gift cards",
+          "Final sale items"
+        ],
+        "payment_methods_verified": [
+          "We currently accept the following credit cards: Visa, Mastercard, and American Express"
+        ],
+        "payment_note": [
+          "We currently accept the following credit cards: Visa, Mastercard, and American Express"
+        ],
+        "reputation_accreditation": [
+          "This business is **NOT BBB Accredited.**"
+        ],
+        "reputation_scope": [
+          "[Visit Website](https://mejuri.com/)",
+          "This profile includes complaints for Mejuri's headquarters and its corporate-owned locations."
+        ],
+        "reputation_reviews": [
+          "1/5 stars",
+          "Average of6 Customer Reviews"
+        ],
+        "reputation_complaints": [
+          "35 complaintsin the last 3 years.",
+          "4 complaintsin the last 12 months."
         ]
       }
     }
