@@ -2,6 +2,37 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Claim — Session S-C74095E5 (2026-10-23 23:39Z UTC) — fresh verification pass + final integration
+
+Platform constraint: this session is bound to branch `arena/c74095e5-gold2`; no other branch or worktree may be
+created or pushed, so the board's `session-<id>/<task>` naming is recorded as not creatable. Isolation is enforced
+by the file scope below. Claim written and pushed before any data edit. No peer claim is live: the last recorded
+session (S-E0D6DD62) marked its tasks done/merging and its PR #44 is merged; PR #19 (`arena/70b76800-gold2`,
+updated 2026-10-23T00:09Z, >23 h stale) is left untouched and logged below as a needs-review item rather than
+duplicated or merged by this session.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T-C74-01 | Claim the board, record scope & baseline | in progress | S-C74095E5 | `COORDINATION.md`, `audit/c74095e5/**` |
+| T-C74-02 | Clean-tree baseline: all builders/scanners/tests on `ca39632` | unclaimed→S-C74095E5 | S-C74095E5 | `audit/c74095e5/check_runs/**` (outputs only) |
+| T-C74-03 | Fresh live line-by-line re-verification from official pages (gold reference + priced/weighted rows first; not-re-read rows named) | unclaimed→S-C74095E5 | S-C74095E5 | `audit/c74095e5/live_verification_2026-10-23.md`; data edits only where a live official read contradicts a stored value, each with dated evidence |
+| T-C74-04 | Independent hallucination/security scanner + mutation controls, re-run after every review change | unclaimed→S-C74095E5 | S-C74095E5 | `audit/c74095e5/**` |
+| T-C74-05 | New-listing research from official seller pages only (explicit solid gold; blanks stay blank) | unclaimed→S-C74095E5 | S-C74095E5 | additive only: new evidence files + register rows, rebuilt via repo generators |
+| T-C74-06 | Rebuild all registers, broken-link sweep, preview, PR → merge → Pages verification → record | unclaimed→S-C74095E5 | S-C74095E5 | generated artifacts via repo builders, `COORDINATION.md` |
+
+### S-C74095E5 working log
+
+- 2026-10-23 23:39Z — Board + repo read on `ca39632` (merge of PR #44). State measured before editing: root
+  register 30 rows (17 `data/listings/*.json` + 13 `data/solid-gold-verified.json`), combined register 44
+  products / 13 sellers / 85 sources / 26 findings, 39 root flags, dashboard register 26 rings, gold reference
+  $3,996.31/ozt (retrieved 2026-10-23, quote date unconfirmed, F-026). Pages: `built`, legacy `main` `/`,
+  HTTPS enforced. PRs #1–#44 merged except #19 open/stale and #10 closed. **Needs review (does not block):**
+  PR #19's scope (`dashboard/`, BN-316238, Costco retailer record) appears superseded by later merges; this
+  session will verify supersession and log it, not merge or close another session's PR.
+- Standing rule re-affirmed: **run the hallucination/security pass after every review change and keep looking for
+  hallucinations.** Blank = unverified, never zero or estimated. No price, weight, karat or policy value is
+  published without a field-scoped excerpt from an official page actually retrieved in the pass that records it.
+
 ### Integration record (S-E0D6DD62)
 
 - **Branch:** `arena/e0d6dd62-gold2` — the platform binds this runner to one branch, so the board's
