@@ -876,7 +876,7 @@ Platform constraint: this session is bound to `arena/f69a82ea-gold2`; it cannot 
 | ID | Task | Status | Owner | File scope |
 |---|---|---|---|---|
 | F69-01 | Correct stale README counts/scope and remove the combined-catalog claim that all root entries are covered | done | S-F69A82EA | `README.md`, `data/catalog.json`, `data/review.json`, `research/evidence.json`, generated `explore/**`, `COORDINATION.md` |
-| F69-02 | Re-run provenance/hallucination, security, build, link, browser, calculator and Pages/PR checks; record limitations | in progress | S-F69A82EA | `audit/f69a82ea/**`, `COORDINATION.md` |
+| F69-02 | Re-run provenance/hallucination, security, build, link, browser, calculator and Pages/PR checks; record limitations | done | S-F69A82EA | `audit/f69a82ea/**`, `COORDINATION.md` |
 
 ### S-F69A82EA initial verification
 
@@ -885,4 +885,16 @@ Platform constraint: this session is bound to `arena/f69a82ea-gold2`; it cannot 
 - 2026-10-23 — Re-read the three official product URLs named by the provenance scanner. Added identity-only evidence sources and a 26th review finding; no missing price or physical gold value was inferred. Updated root/combined counts and corrected the catalog scope to disclose the three omitted root-only pages. Deterministic build regenerated Explore pages and the manifest.
 - 2026-10-23 — Verification after changes: `npm run check` PASS (23/23 Node tests, 46-page security/link pass, 41 automatic gates, browser/axe pass, npm audit 0 vulnerabilities); `npm run verify` 41 products / 80 sources / 26 findings; root QA 11/11 with 3 coverage warnings; independent snapshot audit 0 findings / 12 arithmetic controls; legacy tests PASS; four independent scanners PASS with 10 provenance warnings remaining; their unit suites 32/32. Warnings are recorded verbatim in the audit report; they are not suppressed.
 - 2026-10-23 — Rebase claim conflict with concurrent main update (`S-F98AE489`) was resolved by combining both session blocks; neither block was discarded. Claim was pushed to `arena/f69a82ea-gold2` before implementation work.
-- 2026-10-23 — PR, merge, CI and Pages deployment confirmation pending; do not treat the edited preview as live until the GitHub Pages API reports the merged commit built.
+- 2026-10-23 — PR #37 merged after all pull-request checks passed. Post-merge CI and deployment were verified; the published root, Explore landing page, and Flagged for Review page were retrieved from GitHub Pages and checked for the new disclosure/flag.
+
+### S-F69A82EA integration record
+
+- **PR #37:** https://github.com/karagemop466-tech/GOLD2/pull/37 — *docs(research): disclose catalog coverage and correct dashboard counts*.
+- **Merge:** merged 2026-10-23T20:31:06Z; merge commit `2bf7b7e7860680152711646c2e8e9d649a3b318d`.
+- **PR checks:** `audit` run `40019563753` PASS; `verify` runs `40019563480` and `40019563791` PASS.
+- **Post-merge main checks:** `GOLD2 verify` run `40019840475` SUCCESS; `Evidence dashboard` run `40019840261` SUCCESS; `Legacy dashboard verify` run `40019840299` SUCCESS; `pages build and deployment` run `40019840383` SUCCESS.
+- **GitHub Pages:** build `1309130902` reports `built` for merge commit `2bf7b7e7860680152711646c2e8e9d649a3b318d`; legacy `main` / `/`, HTTPS enforced. Live URL: https://karagemop466-tech.github.io/GOLD2/.
+- **Live re-read:** `fetch_page` successfully re-read `/`, `/explore/`, `/explore/review/`, and `/explore/sources/`. The live review page shows the 26th finding with all three official product links; sources page reports 80 source records. No hallucinated current price, purity, net weight, hallmark, or physical test is claimed.
+- **Branch synchronization note:** after rebasing the pushed claim onto the then-current `main`, the first normal push was rejected because the remote branch still pointed to the original claim commit (`620000d`). The remote was fetched and compared; its only unique change was this session’s same claim commit, already represented in the rebased local tree. Resolved with `--force-with-lease` pinned to `620000d`; no other session’s work was removed.
+- **Remaining irregularities:** 10 provenance warnings remain disclosed (three evidence quotes not mirrored to JSON fields; four ambiguous Zales display strings); root QA has three coverage warnings; three root-only products remain omitted from Explore but visible in the root dashboard and linked on the review page. See `audit/f69a82ea/consistency-and-hallucination-review.md`.
+- **Recommendation carried forward:** re-open primary sources and look for hallucinations again after every review. Automated PASS is not proof of seller claims or physical gold purity.
