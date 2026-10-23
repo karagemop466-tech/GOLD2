@@ -2,6 +2,21 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Claim — Session S-66F158E6 (2026-10-23 UTC)
+
+Platform constraint: this session is bound to `arena/66f158e6-gold2`; no other branch or worktree may be created, renamed, or pushed. The remote branch list and open-PR list were inspected before this claim. `main` is at `7fb0334`; the most recent prior integration (S-A87A02A5) is complete, and its remaining cross-scope requests are being taken over as stale handoffs, not treated as active claims. Open PR #19 is more than 60 minutes old and its substantive dashboard/listing work is already present on `main`; it will not be merged over the newer registers.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+|----|------|--------|-------|----------------------|
+| S66-T1 | Re-verify outstanding official-source findings and preserve a dated line-by-line audit | in progress | S-66F158E6 | `audit/66f158e6/**` |
+| S66-T2 | Integrate the three omitted researched products, scope variant prices, repair field provenance, and move conditional melt prose behind an explicit scenario | unclaimed → claimed | S-66F158E6 | `data/**`, `research/evidence.json`, `evidence/listings/{ag-coffin-ring,ag-cushion-signet,ag-sapphire-ring,fdj-gr0001}.md` |
+| S66-T3 | Regenerate and review all dashboards; correct stale counts; adopt the independent provenance/count scanner in CI | unclaimed → claimed | S-66F158E6 | `tools/**`, `scripts/**`, `assets/**`, `explore/**`, `dashboard/**`, root `*.html`, `README.md`, `reports/**`, `.github/workflows/**` |
+| S66-T4 | Final combined verification, security/hallucination passes, PR, merge, Pages deployment, and closeout | unclaimed → claimed | S-66F158E6 | `COORDINATION.md`, PR/merge/deployment records |
+
+### S-66F158E6 working log
+
+- 2026-10-23 — Read the repository, package/workflow configuration, QA report, current data summaries, complete remote-head list, open PRs, and S-A87A02A5's findings/handoffs before editing. Claimed the four scopes above. No prices or product facts have been changed yet. Standing rule: **no hallucinations; re-open official sources and rerun source/security/hallucination checks after every review.**
+
 ## Claim — Session S-D4C0A507 (2026-10-23 UTC)
 
 Platform constraint: this session is bound to `arena/d4c0a507-gold2`; no other branch or worktree may be created or pushed. Every session listed below is already marked done, so their exclusive file scopes are **not** being reclaimed. This session performs a fresh line-by-line re-verification pass and the final integration / PR / deployment pass.
