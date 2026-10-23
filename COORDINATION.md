@@ -15,7 +15,37 @@ and pushed **before** any data or page edit.
 | V-88-01 | Claim the board; baseline every check before editing | done | S-88AA65FD | `COORDINATION.md` |
 | V-88-02 | Live re-read of the highest-risk published claims (gold reference, two Automic products, Sarraf, Factory Direct, two Menē rings, 16 CFR 23.3, FTC) | done | S-88AA65FD | `audit/88aa65fd/**` |
 | V-88-03 | Hallucination pass: count/claim consistency, stale or contradictory values, unverified rows — flag, never infer | done | S-88AA65FD | `audit/88aa65fd/**`, `data/**`, `README.md` |
-| V-88-04 | Site build, broken-link sweep, security scan, PR to `main`, merge, Pages verification | in progress | S-88AA65FD | `COORDINATION.md`, generated pages via the generators only |
+| V-88-04 | Site build, broken-link sweep, security scan, PR to `main`, merge, Pages verification | done | S-88AA65FD | `COORDINATION.md`, generated pages via the generators only |
+
+
+### S-88AA65FD integration record
+
+- **PR:** [#47](https://github.com/karagemop466-tech/GOLD2/pull/47) — *verify(S-88AA65FD): line-by-line
+  re-verification — gold refreshed, a fabricated standards quote removed, 2 new flags.* Base `main` @ `e8f3d32`
+  (which included PR #45/#46 from S-1B04074F), head `6dd0055`.
+- **Checks on the PR:** `audit` pass · `verify` pass (two runs: `40041994106`, `40041994245`) · PR state
+  `MERGEABLE` / `CLEAN` at merge time. No check was skipped or bypassed.
+- **Merge:** **MERGED 2026-10-23T23:54:27Z**, method `--merge`, no approval requested or waited for. Merge commit
+  **`627ee4f39768e4bc429f8bf62aeb9144c66cb8be`**.
+- **Post-merge CI:** `GOLD2 verify` success · `Legacy dashboard verify` success · `pages build and deployment`
+  success — all on `627ee4f`. `Evidence dashboard` was still running at the time of writing and is not claimed
+  as passed.
+- **GitHub Pages:** `status: built`, build type `legacy`, source `main` `/`, `https_enforced: true`, live at
+  <https://karagemop466-tech.github.io/GOLD2/>. The first read after deploy returned the **cached** pre-merge
+  page (39 flags, $3,996.31); a cache-busted re-read served the merged build, which is what is recorded here.
+- **Live re-read of the merged site (not assumed):** the root page now renders **41 published flags**,
+  **$3,995.47 / troy oz** with the F-026 caveat, `PASS — 12 checks, 0 failures, 3 warnings`, 30 root rows,
+  44 researched entries across 13 sellers, and a link to the Flagged for Review page. The Flagged for Review
+  page serves **F-043** with its official Factory Direct source link, and the built tree carries **F-044**.
+  The Explore catalog renders the Menē rows at **$1,325** and **$1,442**.
+- **No peer work discarded.** Twelve conflicted paths were resolved by hand during the rebase; the peer's richer
+  verification-log notes, its later WGC observation time, its README sentence and its scanner are all preserved.
+  Every generated artifact was rebuilt from the merged sources, and the tree rebuilds byte-identically.
+- **Handover / still open (published, non-blocking):** F-026 (WGC header quote time unconfirmed), F-043, F-044;
+  20 of 30 root rows without an assigned price and 23 of 30 without a metal weight; 35 combined rows, 26 root
+  rows and 76 evidence records not re-read in this pass; **zero** physical, XRF or scale verification and **zero**
+  purchase approvals; the two explained `C04` warnings from the peer scanner. **Look for hallucinations again
+  after every review — this pass is one review, not a certificate.**
 
 ### S-88AA65FD working log
 
