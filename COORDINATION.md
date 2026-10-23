@@ -2,6 +2,29 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Claim — Session S-D4C0A507 (2026-10-23 UTC)
+
+Platform constraint: this session is bound to `arena/d4c0a507-gold2`; no other branch or worktree may be created or pushed. Every session listed below is already marked done, so their exclusive file scopes are **not** being reclaimed. This session performs a fresh line-by-line re-verification pass and the final integration / PR / deployment pass.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T-D4-01 | Independent live line-by-line re-verification of the root register, gold reference, and evidence trail | done | S-D4C0A507 | `audit/d4c0a507/**` |
+| T-D4-02 | Gold reference freshness refresh from the official WGC page | done | S-D4C0A507 | `data/gold-price.json`, `evidence/gold-price.md`, regenerated root `*.html`, `reports/qa-report.md` |
+| T-D4-03 | Flag correction where the official pages contradicted the flag's premise | done | S-D4C0A507 | `data/flags.json`, regenerated `flags.html`, `three-stone-vintage.html` |
+| T-D4-04 | Final integration, PR, merge, and Pages deployment | in progress | S-D4C0A507 | `COORDINATION.md`, PR/merge records |
+
+### S-D4C0A507 working log
+
+- 2026-10-23 — Read the board. All prior `main` tasks (`39da17c8`, `T01`–`T14`, `S-CA4C9D8A`, `arena-24aeb4a8`, `S-8C810C15`) are done; PR #21 merged and Pages live. Claimed T-D4-01–T-D4-04 with the non-overlapping scopes above. No prior session's files were discarded or rewritten beyond the two corrections logged below.
+- 2026-10-23 — Re-read the official WGC page: header `USD /oz - 4,024.45 Last Updated`, chart `Data as of 22 October, 2026`. The published reference (4,028.53, retrieved 2026-10-22) was one retrieval day stale. Refreshed `data/gold-price.json` to 4,024.45 / retrieved 2026-10-23, moved 4,028.53 to `superseded_observations`, and updated `evidence/gold-price.md`. Regenerated the root pages. This is a freshness refresh of the existing dated-observation model, not a new inference.
+- 2026-10-23 — Live re-read of both Zales pages showed explicitly labeled amounts (`Discounted Price $979.30  Original Price was $1,399.00 30% Off` and `Discounted Price $769.30  Original Price was $1,099.00 30% Off`), contradicting F-018's "unlabeled" premise; an earlier session recheck (`research/evidence.json`) had already recorded `Discounted Price …` for both. Corrected F-018's title, detail, and recommended action. The amounts stay **unassigned** because the currency is a bare dollar sign with no confirmed ISO code (F-025).
+- 2026-10-23 — Automated evidence-trail check across all 20 root rows: every `source_url` matches its evidence file's official URL and every `field_evidence` quote appears verbatim — 0 mismatches, 0 missing quotes.
+- 2026-10-23 — Live re-verified Automic Gold (3 rows), Mejuri, Blue Nile BN-203348, VRAI (URL resolves), and both Zales rows against their official pages; the re-read values matched. VRAI's size-6 `2.86 g` line and Brilliant Earth's `€ 990.00` block are rendered client-side and were not present in the markdown extraction; recorded as *not re-confirmed by this pass*, with no value changed.
+- 2026-10-23 — `tools/qa.py` first **FAILED** the stale-output guard because the new F-026 text repeated the superseded figures. Reworded F-026 to describe the four header observations without repeating superseded values. The guard was **not** weakened; it correctly caught the repetition.
+- 2026-10-23 — Full local pass after the edits: root QA **PASS — 10 checks, 0 failures, 3 warnings**; calculator tests PASS; `reviews/independent_snapshot_audit.py` 0 findings / 6 arithmetic controls; `node --test` 23/23; `verify` PASS (32 products, 60 sources, 0 purchase approvals); `build.mjs` 13 pages; `check-links` PASS (102 external publisher URLs); `audit.py` PASS. The generator is reproducible (rebuild produces no diff).
+- 2026-10-23 — **Rebase conflict with a concurrent session — resolved without discarding work.** `git pull --rebase origin main` found `main` advanced to `fee89f0` (PR #23, session `S-8B9E189A`), which had independently re-read the same official pages and corrected the same items: gold reference 4,028.53→4,024.45, the Zales label-instability finding, the Brilliant Earth USD correction, and a single currency rule for every row (F-033). Conflicts in `data/gold-price.json`, `data/flags.json`, `evidence/gold-price.md`, `flags.html`, `methods.html`, `three-stone-vintage.html`, and `reports/qa-report.md` were resolved by taking the **merged PR #23 content** (it is newer and CI-verified) and keeping this session's independent audit record in `audit/d4c0a507/`. No prior session's data, evidence, review, or coordination record was deleted.
+- 2026-10-23 — Re-verified the integrated tree after the rebase: root QA **PASS — 11 checks, 0 failures, 3 warnings**; calculator PASS; independent snapshot audit PASS (6 arithmetic controls); `node --test` 23/23; `check-links` PASS (71 local targets, 102 external publisher URLs); `audit.py` PASS. Remaining warnings are coverage gaps, not verification failures: 16 of 20 rows have no assigned price, 18 of 20 publish no metal weight, and the WGC header quote time stays unconfirmed (F-026).
+
 ## Claim — Session S-CA4C9D8A (completed 2026-10-22 UTC)
 
 Platform constraint: this session is bound to `arena/ca4c9d8a-gold2`; no other branch or worktree may be created or pushed. File scopes below are exclusive to this session while active.
