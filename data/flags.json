@@ -7,7 +7,7 @@
       "severity": "high",
       "type": "checklist_gap",
       "title": "Item-specific “solid gold” wording is not stated",
-      "detail": "No item-specific title or specification explicitly describes any of the 16 listed settings/rings as “solid gold.” Karat wording alone is not substituted for that checklist requirement. A page-wide “solid gold” phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
+      "detail": "No item-specific title or specification explicitly describes any of these 16 settings/rings as “solid gold.” Karat wording alone is not substituted for that checklist requirement. A page-wide “solid gold” phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -52,7 +52,7 @@
       "severity": "high",
       "type": "checklist_gap",
       "title": "Physical hallmark and maker’s mark are not documented",
-      "detail": "None of the 16 captured product pages documents the physical karat stamp inside the band plus a maker’s/manufacturer’s mark. Stock numbers, styles, and URL identifiers are not physical hallmarks. Both fields remain null, not false.",
+      "detail": "None of the 19 captured product pages documents the physical karat stamp inside the band plus a maker’s/manufacturer’s mark. Stock numbers, styles, and URL identifiers are not physical hallmarks. Both fields remain null, not false.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -69,7 +69,10 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "SS-CLARA",
+        "SS-RITA",
+        "SS-MIA"
       ],
       "affected_retailers": [],
       "sources": [
@@ -96,8 +99,8 @@
       "id": "F-003",
       "severity": "high",
       "type": "unverified",
-      "title": "Metal weight in grams is missing for 15 of 16 items",
-      "detail": "Only VRAI publishes an item-specific metal weight: 2.86 g at ring size 6. The other 15 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
+      "title": "Metal weight in grams is missing for 18 of 19 items",
+      "detail": "Only VRAI publishes an item-specific metal weight: 2.86 g at ring size 6. The other 18 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -113,7 +116,10 @@
         "BN-194158",
         "BN-195269",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "SS-CLARA",
+        "SS-RITA",
+        "SS-MIA"
       ],
       "affected_retailers": [],
       "sources": [
@@ -306,7 +312,7 @@
       "severity": "high",
       "type": "comparability",
       "title": "Setting-only and complete-ring price bases are not directly comparable",
-      "detail": "Ten Blue Nile rows, the Brilliant Earth row, and the VRAI row use a setting/configurator basis (12 rows); the four Zales rows are complete diamond-ring products. Two Zales prices are additionally unassigned under F-018. Prices are never ranked across these bases, and EUR is not converted into USD.",
+      "detail": "Ten Blue Nile rows, the Brilliant Earth row, and the VRAI row use a setting/configurator basis (12 rows); the four Zales rows and three Stone and Strand rows are complete diamond-ring products. Two Zales prices are additionally unassigned under F-018. Prices are never ranked across these bases, and EUR is not converted into USD.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -323,7 +329,10 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "SS-CLARA",
+        "SS-RITA",
+        "SS-MIA"
       ],
       "affected_retailers": [],
       "sources": [
@@ -351,7 +360,7 @@
       "severity": "low",
       "type": "unverified",
       "title": "Numeric band-width and depth coverage is incomplete",
-      "detail": "Five rows have no numeric band width (four Zales rows plus VRAI, which says only “Standard”). Fifteen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth. All unavailable dimensions remain blank.",
+      "detail": "Five rows have no numeric band width (four Zales rows plus VRAI, which says only “Standard”). Eighteen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth. All unavailable dimensions remain blank.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -368,7 +377,10 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "SS-CLARA",
+        "SS-RITA",
+        "SS-MIA"
       ],
       "affected_retailers": [],
       "sources": [
@@ -485,13 +497,17 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "SS-CLARA",
+        "SS-RITA",
+        "SS-MIA"
       ],
       "affected_retailers": [
         "blue-nile",
         "zales",
         "vrai",
-        "brilliant-earth"
+        "brilliant-earth",
+        "stone-and-strand"
       ],
       "sources": [
         "https://www.bluenile.com/policies/returns",
@@ -561,7 +577,10 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
+        "Z-20046552",
+        "SS-CLARA",
+        "SS-RITA",
+        "SS-MIA"
       ],
       "affected_retailers": [],
       "sources": [
@@ -583,6 +602,57 @@
         "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552"
       ],
       "recommended_action": "Before wearing or resizing, use an independent jeweller for non-destructive XRF, hallmark/maker’s-mark inspection, and metal-only weight verification, subject to the seller’s written return terms."
+    },
+    {
+      "id": "F-025",
+      "title": "All 3 Stone and Strand rings are final sale / non-returnable — they cannot be returned after independent testing",
+      "detail": "Each of the three Stone and Strand product pages retrieved on 2026-10-22 shows 'Final Sale — This product is non-returnable' (for Rita and Mia it is also in the Product Description bullets verbatim), on the same page that advertises '100 Day Returns'. The retailer's returns policy confirms the exclusion: 'Any piece marked as final sale on the product page or purchased at a discount of 50% or greater' cannot be returned or exchanged. Rita (60% off) and Mia (50% off) are non-returnable on the discount rule alone. Consequence for this project's method: the receive → independent XRF test → return if it fails sequence cannot be followed for these three rings at these prices. They are published here because they are the first captured listings to say 'solid gold' — not as recommendations.",
+      "recommended_action": "Do not buy these three rings as listed if post-delivery verification matters — there is no return path. If buying from Stone and Strand, choose an item that is not marked final sale and is discounted less than 50%, and get written confirmation before paying that it can be returned after independent testing.",
+      "severity": "high",
+      "type": "policy",
+      "sources": [
+        "https://www.stoneandstrand.com/products/the-clara-ring",
+        "https://www.stoneandstrand.com/products/the-rita-ring",
+        "https://www.stoneandstrand.com/products/the-mia-ring",
+        "https://www.stoneandstrand.com/pages/returns-exchanges"
+      ],
+      "affected_items": [
+        "SS-CLARA",
+        "SS-RITA",
+        "SS-MIA"
+      ],
+      "affected_retailers": [
+        "stone-and-strand"
+      ]
+    },
+    {
+      "id": "F-026",
+      "title": "The Mia Ring page contradicts itself on karat: spec table says 14K, image alt text says 10K",
+      "detail": "On the live Mia Ring page retrieved 2026-10-22, the structured Metals spec states 'Gold Karat: 14K', while the product-image alt text on the same page repeatedly says '10K Yellow Gold The Mia Diamond Ring'. The published karat (14) is taken from the spec table, the structured source; the conflicting alt text is quoted in evidence/listings/ss-mia.md and the item carries this flag and its notes mark the karat as contested. One of the two numbers on the retailer's own page is wrong; this dataset cannot determine which.",
+      "recommended_action": "Ask Stone and Strand in writing which karat the Mia Ring actually is, and keep the reply. An XRF test after delivery would settle it — but note this ring is final sale (F-025), so there is no return if the test disagrees with the listing.",
+      "severity": "medium",
+      "type": "irregularity",
+      "sources": [
+        "https://www.stoneandstrand.com/products/the-mia-ring"
+      ],
+      "affected_items": [
+        "SS-MIA"
+      ],
+      "affected_retailers": []
+    },
+    {
+      "id": "F-027",
+      "title": "Catbird not yet included: product-detail text was absent from the retrieved pages, so nothing could be evidence-quoted",
+      "detail": "On 2026-10-22 (session S-75094819) two Catbird engagement product pages were fetched in full (Night at the Ballet Diamond Ring, Emerald Cut — 'from $5,300.00' visible; Odile the Swan Black Diamond Ring — 'from $1,600.00' visible). In both cases the retrieved text contained the product name and starting price but NOT the materials/details block, so karat, solid-gold wording, width and weight could not be backed by verbatim quotes and no rows were added. Search snippets for these pages show material details, but snippets are rejected sources in this project (F-004/F-005/F-006). Catbird is a promising candidate for a future pass with a fetcher that can read the details tab.",
+      "recommended_action": "Re-attempt Catbird capture with a browser that renders the product-details section; only add rows once karat and any 'solid gold' wording can be quoted verbatim from the page itself.",
+      "severity": "low",
+      "type": "excluded_source",
+      "sources": [
+        "https://www.catbirdnyc.com/night-at-the-ballet-diamond-ring-emerald-cut.html",
+        "https://www.catbirdnyc.com/odile-the-swan-black-diamond-ring.html"
+      ],
+      "affected_items": [],
+      "affected_retailers": []
     }
   ]
 }

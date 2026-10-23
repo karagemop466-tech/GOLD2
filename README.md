@@ -7,7 +7,7 @@ Publishing: GitHub Pages legacy source, `main` branch, repository root.
 
 ## What this repository contains
 
-An auditable register of **16 engagement-ring listings from 4 retailers**, organized into five categories. It separates:
+An auditable register of **19 engagement-ring listings from 5 retailers**, organized into six categories. It separates:
 
 - official product facts from seller policy claims;
 - official seller pages from independent BBB profile data;
@@ -16,7 +16,7 @@ An auditable register of **16 engagement-ring listings from 4 retailers**, organ
 - retrieved facts from nominal gold calculations; and
 - remote document review from physical verification, which has **not** been performed.
 
-Current coverage: **13 assigned prices**, **1 published metal weight**, and **23 open flags**. No item-specific capture states the required “solid gold” wording or documents a physical hallmark plus maker’s mark. Those are evidence gaps, not findings that a ring is fake.
+Current coverage: **16 assigned prices**, **1 published metal weight**, and **26 open flags**. Three Stone and Strand rows use the words “solid gold” on the product page but are final sale / non-returnable (F-025); the other 16 rows do not state it. No row documents a physical hallmark plus maker’s mark. Those are evidence gaps, not findings that a ring is fake.
 
 ## Dashboard pages
 
@@ -28,6 +28,7 @@ Current coverage: **13 assigned prices**, **1 published metal weight**, and **23
 | `three-stone-vintage.html` | Three-stone/vintage rows, including two unlabeled Zales price displays |
 | `18k.html` | 18K settings and VRAI’s published size-6 metal weight |
 | `budget.html` | 10K / lower-price complete-ring rows |
+| `solid-gold.html` | Stone and Strand complete rings whose pages say “solid gold” (all final sale — F-025) |
 | `retailers.html` | Official returns/payments/contact details plus independently sourced, scope-labeled BBB metrics |
 | `prices.html` | Metal-only weight → nominal fine-gold → theoretical melt calculator |
 | `flags.html` | **Flagged for Review:** missing evidence, discrepancies, source limits, and material policy restrictions |
@@ -40,9 +41,9 @@ Every current listing row links its **official product page** and its **own fiel
 
 ```text
 data/
-  listings/*.json       five categories; nullable fields and field_evidence per row
+  listings/*.json       six categories; nullable fields and field_evidence per row
   retailers.json        official policies plus scoped independent reputation data
-  flags.json            23 findings with affected rows/retailers and source links
+  flags.json            26 findings with affected rows/retailers and source links
   gold-price.json       dated WGC quote, NIST conversion, eCFR context, limitations
 evidence/
   listings/<item>.md    authoritative item-scoped excerpts and capture limits
@@ -53,7 +54,7 @@ assets/
   calculator.js         dependency-free, testable nominal-gold calculator
   style.css             shared dashboard styling
 tools/
-  build_site.py         renders 10 root HTML pages from data
+  build_site.py         renders 11 root HTML pages from data
   qa.py                 field-level provenance, integration, link, and security audit
   test_calculator.js    calculator unit tests
 reports/qa-report.md    latest automated audit result
@@ -96,7 +97,7 @@ node scripts/test.js
 ## Source hierarchy
 
 1. **Product and policy facts:** the retailer’s official product, return, payment, and contact pages.
-2. **Independent reputation context:** BBB profile/review/complaint pages, dated and labeled by identity and coverage. Blue Nile and Brilliant Earth have linked profiles; Zales figures are combined Signet figures; VRAI candidate metrics are withheld pending identity confirmation. BBB allegations are not treated as proven facts, and BBB does not endorse businesses.
+2. **Independent reputation context:** BBB profile/review/complaint pages, dated and labeled by identity and coverage. Blue Nile and Brilliant Earth have linked profiles; Zales figures are combined Signet figures; VRAI candidate metrics are withheld pending identity confirmation; Stone and Strand has no BBB profile captured in this pass, so its reputation fields are blank. BBB allegations are not treated as proven facts, and BBB does not endorse businesses.
 3. **Gold quote:** World Gold Council spot page with an explicit quote date and ICE Data Services attribution. LBMA’s tabulated data requires licensed portal access (F-013).
 4. **Calculation sources:** NIST’s troy-ounce conversion chart (`31.103 476 8 g`) and eCFR gold-labeling context. Nominal karat/24 arithmetic is not an assay.
 5. **Rejected as product evidence:** snippets, aggregators, blogs, coupon pages, unrelated page text, and values borrowed from another item.
@@ -106,7 +107,7 @@ node scripts/test.js
 1. Open both the official listing and the row’s field evidence; recheck the exact configuration, price basis, currency, and retrieval date.
 2. Ask in writing whether the item is solid gold (not plated/filled), its metal-only gram weight, its physical karat/maker’s marks, and whether independent non-destructive XRF is permitted without voiding returns.
 3. Review the seller’s accepted payment methods and your own card/provider protection terms. Official acceptance does not prove a dispute outcome.
-4. Read the exact return and resizing policy. Zales rules depend on where resizing occurred; Blue Nile, VRAI, and Brilliant Earth have their own resized/custom exclusions; VRAI fees and Brilliant Earth engraving terms are published separately.
+4. Read the exact return and resizing policy. Zales rules depend on where resizing occurred; Blue Nile, VRAI, and Brilliant Earth have their own resized/custom exclusions; VRAI fees and Brilliant Earth engraving terms are published separately. The three Stone and Strand rings captured are marked final sale and cannot be returned at all (F-025), so the receive–test–return sequence is impossible for them.
 5. Keep the item unworn and unaltered until independent inspection and the keep/return decision are complete. Do not resize before understanding the consequences.
 6. If the seller refuses independent verification or a return, do not buy.
 

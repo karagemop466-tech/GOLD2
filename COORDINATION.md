@@ -64,6 +64,7 @@ The clean-tree check caught and fixed a stale intermediate FAIL badge before PR 
 | `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9 done; R9-01 quote-date correction applied by S-CA4C9D8A |
 | `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 merged; findings dispositioned by S-CA4C9D8A |
 | `S-CA4C9D8A` | `arena/ca4c9d8a-gold2` | field-scoped re-verification, dashboard/calculator, combined QA, integration and closeout | T12–T15 done; PR #15 merged and Pages built |
+| `S-75094819` | `arena/75094819-gold2` | gold/Zales refresh, new `solid-gold` category (Stone and Strand), review-finding dispositions, merge integration | see S-75094819 record at the end of this file |
 
 All sessions share one environment constraint: the runner is bound to a single branch and cannot create
 `session-<id>/<task>` worktrees. That is recorded rather than ignored. Work is therefore separated by
@@ -320,3 +321,78 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - Review PR #8 final head `779020d40bc328decb6240044da7a305366ef856` passed runs `39872116197` and `39872116200`, then merged as `73a98fe1338f901b6c85452b237469d3bde29327` at 2026-10-22T23:29:48Z. Exact-main runs `39872158608` and `39872158539` passed; Pages run `39872158049` built and deployed that commit. The PR-head and merge trees were identical.
 - PR #13 subsequently changed only `reports/qa-report.md`; main `7a453927ac410c45894c480bef47494322798e1f` verification/Pages runs `39872212871`, `39872212900`, and `39872212893` succeeded.
 - Final publication and errata evidence is in `reviews/2026-10-22-pr8-publication.md`. R39-01/R39-03/R8-01 are resolved; R9-01 and 16 other findings remain open. Successful builds/merges do not close evidence findings. Further hallucination/security review is required after every corrective edit.
+
+---
+
+# Session S-75094819 — record (branch `arena/75094819-gold2`, 2026-10-22)
+
+This session ran in parallel with S-CA4C9D8A. Its early work (T01–T05) was done against the
+pre-restructure tree; at integration time `main` had adopted S-CA4C9D8A's field-scoped evidence
+framework (PRs #15/#16), which this session then adopted wholesale. Most of this session's data
+fixes had been independently reached — and exceeded — by S-CA4C9D8A (gold $4,028.53 with
+`quote_date` 2026-10-21 and the superseded $4,024.36 preserved; Zales metal as "10K Gold" with
+blank colour; VRAI $300 recycling-fee and store-credit terms; verified payment lists; BBB
+reputation scope). Those fixes are **not** double-claimed here: S-CA4C9D8A's versions on `main`
+are the authoritative ones. This session's remaining unique contribution, ported into that
+framework, is the Stone and Strand dataset and the Catbird gap note below.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| S750-T01 | Gold re-verification from WGC | done (converged with S-CA4C9D8A) | S-75094819 | `data/gold-price.json`, `evidence/gold-price.md` |
+| S750-T02 | Zales official return/payment policy capture | done (superseded by S-CA4C9D8A's richer capture) | S-75094819 | `evidence/retailers/zales.md`, `data/retailers.json` |
+| S750-T03 | New-retailer discovery: Catbird (not quotable), Stone and Strand (3 rows) | done | S-75094819 | `data/listings/solid-gold.json`, `evidence/listings/*`, `evidence/retailers/stone-and-strand.md` |
+| S750-T04 | Solid-gold category page + flags | done | S-75094819 | `tools/build_site.py`, `tools/qa.py`, `data/flags.json` |
+| S750-T05 | Spot re-verification (BN-203348, Z-19957449, VRAI) | done — 10/10 fields matched | S-75094819 | `evidence/**` appendices |
+| S750-T06 | Integration: two merges of `origin/main`, port, PR, deploy | done | S-75094819 | all above + `COORDINATION.md`, `README.md` |
+
+## Merge log (no rebase — branch contains merge commits; nothing discarded)
+
+1. First merge `c86d5cc`: main at `7276c9b` (PRs #8–#14). Generated files rebuilt; an auto-merge
+   corruption in `evidence/gold-price.md` (first excerpt value) was caught, repaired, and credited.
+2. Review-findings disposition pass on this branch (R9-01, R6-01…R6-10): largely convergent with
+   S-CA4C9D8A's parallel dispositions; `reviews/**` was never edited by this session.
+3. Second merge `fcb5ff2`: main at `49a84cb` (PRs #15/#16). Framework, restructured data/evidence,
+   and generated pages taken from main (`--theirs`); S-75094819-unique files retained.
+4. Port: Stone and Strand rewritten into the field-scoped schema — per-item evidence
+   (`evidence/listings/ss-Clara.md`, `ss-Rita.md`, `ss-mia.md`), retailer record with
+   `independent_reputation` not assessed (no BBB profile was captured for this retailer; fields are
+   blank, not inferred), and this session's capture log retained as `evidence/listings/solid-gold.md`.
+   Flags renumbered to the S-CA4C9D8A register: final sale → **F-025**, Mia karat conflict → **F-026**,
+   Catbird gap → **F-027**. Count-citing flag texts updated (F-001 scope, F-002/F-003/F-015/F-016/F-021/F-024).
+   The generator gained null-guards for the first no-BBB-profile retailer (`resize_policy`, reputation
+   cells) and a `category_title` override; nav/QA registries extended for the new category.
+
+## Sources (all retrieved 2026-10-22 UTC, official pages only)
+
+- World Gold Council `https://www.gold.org/goldhub/data/gold-prices` — $4,028.53/oz, data dated 2026-10-21.
+- Stone and Strand product pages (Clara $2,200; Rita $780 was $1,950; Mia $925 was $1,850) and
+  `https://www.stoneandstrand.com/pages/returns-exchanges` (100 days, $12.50 fee, final-sale rule,
+  `care@stoneandstrand.com`). Search snippets were used for discovery only, never as evidence;
+  a snippet price of $2,000 for Clara is stored in `rejected_values`.
+- Catbird product pages fetched in full; only name and starting price were quotable, so no rows (F-027).
+
+## Irregularities flagged by this session
+
+- **F-025 (high):** all three Stone and Strand rings are final sale on pages advertising "100 Day Returns";
+  receive → XRF-test → return is impossible for them as listed.
+- **F-026 (medium):** Mia page contradicts itself — spec table "Gold Karat: 14K" vs image alt text "10K".
+  Published karat is from the spec table and marked contested.
+- **F-027 (low):** Catbird not included — materials/details text was absent from retrieved pages.
+- Clara page also shows both "In stock" and "Sold out" states; availability not recorded (item notes/evidence).
+
+## Verification after integration (2026-10-22)
+
+- `tools/build_site.py` → 11 pages; `tools/qa.py` → **PASS — 10 checks, 0 failures, 2 coverage warnings** (19 items).
+- `tools/test_calculator.js` PASS; preserved `site/` suite (`scripts/audit.py`, `scripts/test.js`) PASS.
+- `reviews/independent_snapshot_audit.py .` → **3 findings**, all `REVIEW-ROW-MISSING-OR-DUPLICATE` for
+  `SS-CLARA`/`SS-RITA`/`SS-MIA`: the new rows await independent re-review. This session does not edit
+  `reviews/**` to clear flags about its own rows. 6 arithmetic controls pass.
+- Rendered pages re-read: new category rows/prices, retailer row (100 days, blank payment/BBB cells — no
+  `None` artifacts), derived counts on index/methods. A QA PASS is not proof of physical truth.
+
+## Handoff
+
+- Independent reviewer: please re-review `SS-CLARA`, `SS-RITA`, `SS-MIA` (field-scoped evidence files are
+  `evidence/listings/ss-*.md`; capture log `evidence/listings/solid-gold.md`) and Stone and Strand's
+  unassessed BBB reputation.
+- PR to `main` and Pages verification recorded below when complete.

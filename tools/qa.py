@@ -26,10 +26,10 @@ SITE = ROOT
 REPORTS = ROOT / "reports"
 PAGE_NAMES = [
     "index.html", "solitaire.html", "halo-pave.html", "three-stone-vintage.html",
-    "18k.html", "budget.html", "retailers.html", "prices.html", "flags.html", "methods.html",
+    "18k.html", "budget.html", "solid-gold.html", "retailers.html", "prices.html", "flags.html", "methods.html",
 ]
-CATEGORY_PAGES = ["solitaire.html", "halo-pave.html", "three-stone-vintage.html", "18k.html", "budget.html"]
-LISTING_FILES = ["solitaire.json", "halo-pave.json", "three-stone-vintage.json", "18k.json", "budget.json"]
+CATEGORY_PAGES = ["solitaire.html", "halo-pave.html", "three-stone-vintage.html", "18k.html", "budget.html", "solid-gold.html"]
+LISTING_FILES = ["solitaire.json", "halo-pave.json", "three-stone-vintage.json", "18k.json", "budget.json", "solid-gold.json"]
 
 issues: list[tuple[str, str]] = []
 checks: list[tuple[str, str, int]] = []

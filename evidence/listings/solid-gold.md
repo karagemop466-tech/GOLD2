@@ -179,3 +179,13 @@ the seller confirms in writing or an XRF test is done.
 
 **Not on the page:** gram weight (F-003), hallmark / maker's mark (F-002), SKU.
 The 50% discount alone makes this ring non-returnable under the retailer's own policy (F-016).
+
+---
+
+## Merge note (2026-10-22, S-75094819)
+
+This file is the original session capture log for the three Stone and Strand items. At merge time
+the excerpts above were ported verbatim into per-item field-scoped evidence files —
+`ss-Clara.md`, `ss-Rita.md`, `ss-mia.md` — which are the authoritative inputs for
+`data/listings/solid-gold.json`; this file is retained as capture history. Flag references above
+use S-75094819's original numbering: F-016 (final sale) → **F-025**, F-017 (Mia karat conflict) → **F-026**.

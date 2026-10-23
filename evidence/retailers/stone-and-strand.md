@@ -62,3 +62,46 @@ If your question isn't here, please email care@stoneandstrand.com and we'll repl
 - A resize service/policy: stays blank.
 - Contact phone: not on the retrieved page. Stays blank.
 - Gram weights on product pages: not published (F-003).
+
+## Field-scoped excerpts (mapping to `data/retailers.json`)
+
+### `contact_email` / `contact_channels`
+
+```
+If your question isn't here, please email care@stoneandstrand.com and we'll reply within 48 hours.
+```
+
+### `return_window_days` / `return_window_basis`
+
+```
+From the date your order arrives at your door, we offer 100 days to receive a return.
+```
+
+### `return_free_shipping` / `return_free_shipping_basis`
+
+```
+There is a $12.50 return fee for refunds to the original payment method. If you choose to receive a STONE AND STRAND shopping credit, the return fee is reduced to $5.
+```
+
+### `return_excludes_custom` / `return_exclusions_detail`
+
+```
+- Final Sale Items: Any piece marked as final sale on the product page or purchased at a discount of 50% or greater
+- Personalized Jewelry: This includes custom, engraved, or monogrammed pieces
+- Made-to-Order Jewelry: Custom or made-to-order pieces are final sale
+- International customers: We cannot offer any returns or exchanges initiated and shipped from outside of the U.S.
+```
+
+### `payment_note`
+
+```
+Depending on your credit card provider, it may take an additional 5 to 10 business days for the refund to appear on your statement.
+```
+
+## Merge note (2026-10-22, S-75094819)
+
+This evidence was captured by session S-75094819 and ported into the S-CA4C9D8A field-scoped
+framework at merge time. Flag references above written during capture use S-75094819's original
+numbering: F-016 (final sale) is now **F-025** and F-017 (Mia karat conflict) is now **F-026**.
+No retailer claim in this file was re-fetched during the merge; every quote is from the
+2026-10-22 capture. Independent reputation (BBB) was not assessed for this retailer in this pass.

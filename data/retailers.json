@@ -512,6 +512,91 @@
           "[Visit Website](https://www.brilliantearth.com/)"
         ]
       }
+    },
+    {
+      "id": "stone-and-strand",
+      "name": "Stone and Strand",
+      "website": "https://www.stoneandstrand.com",
+      "domains": [
+        "www.stoneandstrand.com",
+        "stoneandstrand.com"
+      ],
+      "contact_phone": null,
+      "contact_email": "care@stoneandstrand.com",
+      "contact_channels": [
+        "email"
+      ],
+      "contact_source_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "contact_verified": true,
+      "return_window_days": 100,
+      "return_window_basis": "100 days from the date the order arrives (U.S. customers only)",
+      "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "return_free_shipping": false,
+      "return_free_shipping_basis": "$12.50 return fee for refunds to the original payment method; $5 for store credit",
+      "return_free_shipments_per_year": null,
+      "return_excludes_resized": null,
+      "return_excludes_custom": true,
+      "return_exclusions_detail": "Final-sale items (marked on the product page or discounted 50% or more), personalized (custom/engraved/monogrammed) and made-to-order pieces cannot be returned; no returns/exchanges shipped from outside the U.S. All three captured engagement rings are marked final sale (F-025).",
+      "resize_policy": null,
+      "payment_methods_verified": null,
+      "payment_source_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "payment_note": "The returns page refers to refunds to the original payment method and to 'your credit card provider'; accepted card networks are not named on the retrieved page.",
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": null,
+        "candidate_profile_url": null,
+        "complaints_url": null,
+        "reviews_url": null,
+        "identity_status": "not_assessed",
+        "profile_scope": null,
+        "bbb_accredited": null,
+        "bbb_rating": null,
+        "review_average_out_of_5": null,
+        "review_count": null,
+        "complaints_last_3_years": null,
+        "complaints_last_12_months": null,
+        "retrieved_at": null
+      },
+      "evidence_file": "evidence/retailers/stone-and-strand.md",
+      "verification_status": "official_policies_partial",
+      "flags": [
+        "F-021",
+        "F-025"
+      ],
+      "field_evidence": {
+        "contact_email": [
+          "If your question isn't here, please email care@stoneandstrand.com and we'll reply within 48 hours."
+        ],
+        "contact_channels": [
+          "If your question isn't here, please email care@stoneandstrand.com and we'll reply within 48 hours."
+        ],
+        "return_window_days": [
+          "From the date your order arrives at your door, we offer 100 days to receive a return."
+        ],
+        "return_window_basis": [
+          "From the date your order arrives at your door, we offer 100 days to receive a return."
+        ],
+        "return_free_shipping": [
+          "There is a $12.50 return fee for refunds to the original payment method."
+        ],
+        "return_free_shipping_basis": [
+          "There is a $12.50 return fee for refunds to the original payment method. If you choose to receive a STONE AND STRAND shopping credit, the return fee is reduced to $5."
+        ],
+        "return_excludes_custom": [
+          "Personalized Jewelry: This includes custom, engraved, or monogrammed pieces",
+          "Made-to-Order Jewelry: Custom or made-to-order pieces are final sale"
+        ],
+        "return_exclusions_detail": [
+          "Final Sale Items: Any piece marked as final sale on the product page or purchased at a discount of 50% or greater",
+          "Personalized Jewelry: This includes custom, engraved, or monogrammed pieces",
+          "Made-to-Order Jewelry: Custom or made-to-order pieces are final sale",
+          "International customers: We cannot offer any returns or exchanges initiated and shipped from outside of the U.S."
+        ],
+        "payment_note": [
+          "Depending on your credit card provider, it may take an additional 5 to 10 business days for the refund to appear on your statement."
+        ]
+      }
     }
   ]
 }
