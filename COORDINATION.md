@@ -2,6 +2,36 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+### Integration record (S-E0D6DD62)
+
+- **Branch:** `arena/e0d6dd62-gold2` — the platform binds this runner to one branch, so the board's
+  `session-<id>/<task>` naming is recorded as not creatable rather than ignored. Isolation was enforced by the
+  file scope in the claim table above.
+- **PR:** [#38](https://github.com/karagemop466-tech/GOLD2/pull/38) — *audit(S-E0D6DD62): independent 12-check
+  verification of the merged register + gold-evidence contradiction fixed*.
+- **Merge:** **MERGED 2026-10-23T20:52:57Z**, merge commit
+  **`54e3e236eb45960d4a40586c984ed19f9f875521`**, method `--merge`, no approval required.
+- **Diff shape:** `audit/e0d6dd62/**` (independent scanner, 8 mutation controls, live verification log), a
+  re-ordered `evidence/gold-price.md`, and this board block. No peer's data file, generator, page, stylesheet or
+  workflow was reverted or overwritten; three separate merges of `main` (PR #36, #39, #42) landed during the pass
+  and were resolved by keeping the peer implementation and regenerating every generated artifact.
+- **Duplicate-work note:** PR #39 (`S-1EB9F828`) merged an equivalent integration to `main` while PR #38 was in CI.
+  Its data changes were adopted rather than re-applied. See the log above.
+- **CI on the merge commit `54e3e23`:** `GOLD2 verify` success · `Legacy dashboard verify` success ·
+  `Evidence dashboard` success · `pages-build-deployment` success — all four completed/success.
+- **GitHub Pages:** `status: built`, build type `legacy`, source branch `main` path `/`, `https_enforced: true`,
+  **built commit `54e3e236eb45960d4a40586c984ed19f9f875521`** (created 2026-10-23T20:52:58Z, updated 20:53:18Z).
+- **Post-merge verification:** the live page https://karagemop466-tech.github.io/GOLD2/ was read back directly this
+  time (not assumed): it renders the No-Hallucinations rule, `30` root listings across `9` sellers, `10` assigned
+  prices, `7 / 30` published weights, the dated gold reference `$3,996.31 / troy oz` with F-026, the two-register
+  note (`30` root rows, `44` Explore entries, `30` shared product URLs), and a link to **all 44 researched entries
+  across 13 sellers**. The flag count on the live page (`39`) reflects flags added by later merged sessions, not
+  only this one.
+- **Handover / still open:** F-026 quote time unconfirmed; 20 of 30 root rows without an assigned price; 23 of 30
+  without a metal weight; the rows not re-read in this pass are named in
+  `audit/e0d6dd62/live_verification_2026-10-23.md` §2; zero physical, XRF or scale verification; zero purchase
+  approvals. **Look for hallucinations again after every review — this pass is one review, not a certificate.**
+
 ## Claim — Session S-E0D6DD62 (2026-10-23 20:17Z UTC) — integration, reconciled with S-1EB9F828
 
 Platform constraint: this session is bound to `arena/e0d6dd62-gold2`; no other branch or worktree may be created
