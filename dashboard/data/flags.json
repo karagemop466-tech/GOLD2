@@ -17,7 +17,7 @@
       "id": "DF-002",
       "severity": "high",
       "title": "Factory Direct Jewelry `FDJ-GR0001`: Ultra-Light `1.25 g` Displayed Weight vs `1.37 ctw` Diamonds & `1.8/5` BBB Score",
-      "detail": "Although FDJ-GR0001 explicitly states 'Made with solid gold. Never plated.' and 'Karat stamped inside the band.', its default displayed weight is 'Weight:1.25 Grams' alongside 1.37 carats of lab diamonds (0.274 g gem mass). If gross weight, net 14K gold is only 0.976 g ($73.67 melt at $4,024.45/oz) \u2014 extreme bending/snapping risk matching BBB complaints (Not Accredited, 1.8/5 across 5 reviews, 11 complaints, 20% alteration restocking fee).",
+      "detail": "Although FDJ-GR0001 explicitly states 'Made with solid gold. Never plated.' and 'Karat stamped inside the band.', its default displayed weight is 'Weight:1.25 Grams' alongside 1.37 carats of lab diamonds. Converting the diamond total at 0.2 g/ct gives 0.274 g; subtracting that from a gross 1.25 g would leave 0.976 g of 14K alloy \u2014 but the captured page does not label the 1.25 g as gross, so this is an explicitly hypothetical scenario, not a product fact. No melt value is stated here because it moves with the dated gold reference; use the calculator page. Extreme bending/snapping risk remains consistent with BBB complaints (Not Accredited, 1.8/5 across 5 reviews, 11 complaints, 20% alteration restocking fee).",
       "action": "Treat verbal 'solid gold + stamped' claims as insufficient whenever gram mass is ultra-low or BBB complaints report snapped shanks.",
       "sources": [
         "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/",
@@ -40,7 +40,7 @@
       "id": "DF-004",
       "severity": "medium",
       "title": "Sarraf Jewelry Inc. (`SAR-*`): Internal Policy Contradictions & Size-10 Weight Benchmark Variance",
-      "detail": "Sarraf publishes explicit '14K Solid Gold', 'US$' prices, and separate 'Approximate Metal Weight' in grams, and holds an A+ Accredited BBB profile since 1998. However, live audit caught: (1) product tab allows engraved ring returns less $25 fee while /about-sarraf/ says 'non-engraved items'; (2) warranty deductible reads '$100 or 10%' on diamond ring pages vs '$50 or 5%' on 10K bands; (3) SAR-144773's 13.40 g weight ($1,011.39 melt = 74.3% of US$1,362) is benchmarked at ring size 10, weighing less in smaller sizes (10.1\u201310.2 g reported in buyer reviews; BBB customer reviews 2.33/5).",
+      "detail": "Sarraf publishes explicit '14K Solid Gold', 'US$' prices, and separate 'Approximate Metal Weight' in grams, and holds an A+ Accredited BBB profile since 1998. However, live audit caught: (1) product tab allows engraved ring returns less $25 fee while /about-sarraf/ says 'non-engraved items'; (2) warranty deductible reads '$100 or 10%' on diamond ring pages vs '$50 or 5%' on 10K bands; (3) SAR-144773's 13.40 g weight is benchmarked at ring size 10 (nominal 7.817 g fine gold at 14K), weighing less in smaller sizes (10.1\u201310.2 g reported in buyer reviews; BBB customer reviews 2.33/5). No melt value is stated in this flag because it moves with the dated gold reference.",
       "action": "Confirm exact gram weight for your ring size in writing before ordering, avoid engraving before XRF/scale inspection, and pay by credit card.",
       "sources": [
         "https://www.sarraf.com/products/14k-yellow-gold-12mm-high-polished-traditional-domed-wedding-band.html",

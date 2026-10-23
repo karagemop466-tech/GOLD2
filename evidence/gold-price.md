@@ -121,3 +121,37 @@ Data as of 22 October, 2026
 The moving header carries no rendered quote timestamp, so `quote_date` stays `null` (F-026).
 The prior observation, 4,028.53 with chart date 21 October 2026, is retained only inside
 `superseded_observations`; it is not used in any calculation and no page renders it.
+
+## Re-verification — 2026-10-23 20:xxZ (UTC)
+
+Direct page fetch of https://www.gold.org/goldhub/data/gold-prices.
+
+### Current observation (`usd_per_troy_oz`) — retrieved 2026-10-23
+
+```
+USD
+
+/oz
+
+-
+
+3,996.31
+```
+
+### Chart date shown on the same page
+
+```
+Data as of 22 October, 2026
+```
+
+### `source_name`
+
+```
+Market Data: Provided by ICE Data Services.
+```
+
+The moving header still carries no rendered quote timestamp, so `quote_date` stays `null`
+(F-026). The 4,024.45 header value observed earlier on 2026-10-23 is now retained only in
+`superseded_observations`; it is not used in any calculation and no page renders it. The
+two readings are honest observations of a moving header, not a correction of a fixed
+benchmark.

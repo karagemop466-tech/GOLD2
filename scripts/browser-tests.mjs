@@ -13,6 +13,8 @@ await new Promise(resolve=>server.listen(0,'0.0.0.0',resolve));
 const origin='http://127.0.0.1:'+server.address().port;
 const base=origin+'/GOLD2/';
 const dashboard=base+'explore/';
+const goldQuote=await loadJSON('data/gold-price.json');
+const expectedMelt=(1.25-1.37*0.2)*(14/24)/31.1034768*goldQuote.usd_per_troy_oz;
 const errors=[],violations=[],requests=[];
 let browser;
 try{
@@ -132,7 +134,7 @@ try{
  await page.goto(base+'dashboard/calculator.html',{waitUntil:'networkidle'});
  await page.locator('#calc-weight').fill('1.25');await page.locator('#calc-stone-ct').fill('1.37');
  await expect(page.locator('#out-net-g')).toHaveText('0.976 g');
- await expect(page.locator('#out-melt')).toHaveText('$73.67');
+ await expect(page.locator('#out-melt')).toHaveText('$'+expectedMelt.toFixed(2));
  for(const root of ['index','solid-gold','solitaire','halo-pave','three-stone-vintage','18k','budget','retailers','analysis','verification','prices','flags','methods']){
   const response=await page.goto(base+root+'.html',{waitUntil:'networkidle'});expect(response.status()).toBe(200);
   await expect(page.locator('main')).toContainText('No hallucinations. No invented prices.');
