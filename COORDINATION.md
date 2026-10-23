@@ -529,3 +529,19 @@ and every conflict is recorded here rather than silently choosing a side.
 - **Deployment gate:** `python3 tools/qa.py` → PASS 11/0/3, `npm test` 23/23, `npm run verify/build/
   check:links/security` PASS, independent snapshot audit 0 findings, security scanner 0 findings.
 
+### Follow-up PR #25 — merged
+
+- **PR #25 — merged:** https://github.com/karagemop466-tech/GOLD2/pull/25
+  ("Align verification-log stat cards and flag counts after the S-062F314F merge"),
+  merged into `main` at **2026-10-23T10:11:16Z**, merge commit `48f582b`.
+- **Content:** added the missing `re-read · no price published` stat card so the verification cards sum to
+  the 29 records; fixed one typo in a verification note; aligned the flag count to **31** after `F-032`
+  was merged into `F-007`.
+- **GitHub Pages:** build for `48f582b` reported `status: built`; the live
+  `https://karagemop466-tech.github.io/GOLD2/verification.html` was fetched afterwards and shows all five
+  stat cards (18 unchanged · 6 corrected · 1 no-price · 1 not re-read · 3 dead ends) and the corrected
+  wording. `analysis.html` and the root dashboard were fetched live as well.
+- **Verification at deployment:** `tools/qa.py` PASS 11/0/3 · `npm test` 23/23 ·
+  `npm run verify/build/check:links/security` PASS · independent snapshot audit 0 findings ·
+  security/hallucination scanner 0 findings (154 controls).
+
