@@ -403,3 +403,32 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - **REQ-8C8-02 (`data/listings/budget.json`, `data/listings/three-stone-vintage.json`):** Four Zales rows (`Z-19957449`, `Z-20046552`, `Z-20303279`, `Z-20301172`) record `"metal": "10K Yellow Gold"` and `"color": "Yellow"` without `"Yellow"` in the stored evidence excerpts. Will verify live Zales product pages and blank + flag if unconfirmed.
 - **REQ-8C8-03 (`data/listings/18k.json`, `tools/build_site.py`):** `VRAI-CLASSIC-4P` title says `Plain Band` while the stored excerpt includes `Pavé carat weight:0.18ctw`, and `weight_basis` (`2.86 g at size 6`) is omitted from rendered tables. Will verify live VRAI page and display exact weight basis.
 - **REQ-8C8-04 (`data/retailers.json`, `data/flags.json`, `data/listings/*.json`):** Retrieve Zales standalone return/contact pages (`F-011`), check official payment/card disclosures (`F-012`), fix `F-010` missing `BN-195402`/`BN-302868` plus missing `item.flags` links, fix `F-015` stale `"8 Blue Nile rows"` count (10 rows), add explicit width/color/reputation flags, and ensure every `<tr>` across all pages links to an official `https://` source.
+
+---
+
+# Session S-8B9E189A — task board (active)
+
+- **Session ID:** `S-8B9E189A` (Arena session bound to `arena/8b9e189a-gold2`)
+- **Platform constraint (recorded, not ignored):** this runner is bound to one branch. Branch
+  names of the form `session-<id>/<task>` and additional worktrees cannot be created or pushed.
+  Isolation is therefore enforced by the exclusive file scopes below, exactly as in prior sessions.
+- **Board read at claim:** every task in every earlier board block is `done`. The most recent
+  external claim (`S-8C810C15`) merged as PR #21 (`22d9f85`) and left no active claim. No other
+  session held an unexpired claim when this block was written, so no task is being stolen.
+- **Branch base:** `main` @ `22d9f85db301cc1d6d87901a89ee02052b2c0b81`.
+
+| ID | Task | Status | Owner | File scope (exclusive) | Touches |
+|----|------|--------|-------|------------------------|---------|
+| T20 | Dated live re-verification of the root register (20 rows), the gold quote and every retailer policy/payment/contact page, plus a written line-by-line verification log | in progress | S-8B9E189A | `audit/8b9e189a/**` | read-only inspection of `data/**`, `evidence/**` |
+| T21 | Official-source expansion: entries that explicitly state solid gold/karat **and** publish a gram weight; evidence files; blank + flag where a required field is absent | in progress | S-8B9E189A | `data/solid-gold-verified.json`, `data/listings/**`, `data/gold-price.json`, `data/flags.json`, `evidence/**` | `data/catalog.json` untouched |
+| T22 | Site build: derived (never typed) counts, dated verification-log page, nominal fine-gold analysis page, navigation, accessible tables | in progress | S-8B9E189A | `tools/build_site.py`, `tools/qa.py`, `assets/**`, root `*.html`, `reports/**` | `explore/**`, `site/**` untouched |
+| T23 | Final integration: full check suite, PR to `main`, merge, Pages deploy verification, closeout | in progress | S-8B9E189A | `COORDINATION.md`, `README.md`, `.github/workflows/**` | — |
+
+## Working log (S-8B9E189A)
+
+- 2026-10-23 — Claim written and pushed before any edit. Base `22d9f85`. Scopes above do not
+  overlap `explore/**`, `site/**`, `reviews/**`, `data/catalog.json`, `research/**` or
+  `audit/8c810c15/**`; those are treated as other sessions' records and are not rewritten.
+- 2026-10-23 — Audit rule for this session: a value is only reused if the official page renders it
+  again today. Anything that cannot be re-read stays at its original dated observation and is
+  marked `not re-read this pass`, never silently refreshed.
