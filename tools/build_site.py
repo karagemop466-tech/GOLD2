@@ -522,7 +522,7 @@ def build_prices(gold, items, retrieved):
 <p class="sub">These are hypothetical calculations at the quote above. They are not retailer claims, product weights, or appraisals.</p>
 <h2>Rows with a published metal-only weight</h2>
 <div class="tablewrap"><table><thead><tr><th>Item</th><th>Karat</th><th>Published metal weight</th><th>Conditional nominal fine gold</th><th>Conditional theoretical value</th><th>Assigned price</th></tr></thead><tbody>{known_rows or '<tr><td colspan="6" class="blank">No row has a published metal weight.</td></tr>'}</tbody></table></div>
-<p class="sub">{len(known)} of {len(items)} rows publish a metal weight. This is a conditional calculation using a size-6 seller claim and nominal listed karat, not independently tested weight/purity. Verified product fine-gold values remain blank; blank is not zero.</p>
+<p class="sub">{len(known)} of {len(items)} rows publish a stone-free metal weight (Automic Gold Coffin Ring 6.10 g 14K; VRAI Classic 4-Prong Dome 2.86 g at size 6 18K). This is a conditional calculation using seller-published weights and nominal listed karat, not independently tested weight/purity. Verified product fine-gold values remain blank; blank is not zero.</p>
 <h2>How to use this honestly</h2><ul class="clean">
 <li>Do not use gross ring weight if it includes diamonds, gemstones, platinum prongs, or other non-gold components.</li>
 <li>Keep setting/configurator and complete-ring prices separate. A price-to-melt ratio does not appraise craftsmanship, stones, brand, duties, fees, or resale spread.</li>

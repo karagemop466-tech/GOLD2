@@ -211,6 +211,12 @@ def audit_repository(root: Path) -> dict:
     items = load_all_listing_items(root)
     if not items:
         add_finding("NO-LISTINGS", "data/listings", "No listing items found")
+    else:
+        missing_w = sum(1 for it in items if it.get("weight_g") is None)
+        if "F-003" in flags_map and f"{missing_w} of {len(items)}" not in flags_map["F-003"].get("title", ""):
+            add_finding("STALE-FLAG-COUNT", "F-003", f"Expected '{missing_w} of {len(items)}' in F-003 title: {flags_map['F-003'].get('title')!r}")
+        else:
+            controls_passed += 1
 
     for item in items:
         iid = item["id"]
