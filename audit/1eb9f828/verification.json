@@ -43,6 +43,16 @@
       "note": "$2,758 is the 14k Yellow Gold / Salt and Pepper Diamond configuration; product JSON range $2,408\u2013$3,253 (F-039). 5.5 g is gross, weight_g stays null."
     },
     {
+      "id": "Z-19957449",
+      "url": "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
+      "status": "verified_no_price",
+      "observed": [
+        "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
+        "Discounted Price $899.00"
+      ],
+      "note": "Displayed amount unchanged; no ISO currency statement, so the catalog price stays null (F-018)."
+    },
+    {
       "id": "MJ-BOLD-ETERNITY",
       "url": "https://mejuri.com/products/bold-diamond-eternity-ring",
       "status": "verified_match",
@@ -86,7 +96,7 @@
     }
   ],
   "not_re_read": {
-    "count": 41,
+    "count": 40,
     "scope": "all other combined-register rows and the 26 root rows outside Automic Gold and Mejuri",
     "note": "Stored values and dates unchanged; the verification log retains their earlier checked_at. Not re-read is not the same as invalidated."
   },

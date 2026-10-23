@@ -23,6 +23,7 @@ retrieval path; it returns extracted text, not a byte-level archive.
 | Automic Gold — cart endpoint | https://www.automicgold.com/cart.js | currency field on an empty cart | `"currency":"USD"`; cart identifier deliberately not retained |
 | Mejuri — Bold Diamond Eternity Ring | https://mejuri.com/products/bold-diamond-eternity-ring?Material=Solid+White+Gold+%2814k%29&Stone=Natural+Diamond | title, price, materials, specifications, shipping/returns | `From$2,900`; `Solid White Gold (14k), Natural Diamond`; `handcrafted in 14k solid gold`; `Band Width: 2.6 mm`; `Minimum Carat Weight: 1.15 ct - 1.57 ct`; `Diamond Clarity: SI - I`; `Diamond Color: GHI`; `Stone Size: 2.5 mm`; free 30-day returns; engraving not returnable; no ISO currency statement |
 | Mejuri — standard return policy | https://mejuri.com/faq/return-exchanges/what-is-the-standard-return-policy | window, exclusions, fees | free 30-day returns from delivery (US/Canada/UK/Australia/Germany); engraved and monogrammed products non-returnable; `US | Free` |
+| Zales — V-19957449 | https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449 | title, price label | `1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold`; `Discounted Price $899.00`; no ISO currency statement in the excerpt (price stays null) |
 | BBB — Mejuri (Toronto) | https://www.bbb.org/ca/on/toronto/profile/jewelry-manufacturers/mejuri-0107-1370644 | accreditation, phone | `NOT BBB Accredited`; `(310) 597-4745`; no static letter rating rendered (F-031) |
 
 ## 2. Dated observations and what changed
@@ -71,15 +72,15 @@ retrieval path; it returns extracted text, not a byte-level archive.
   figure, but the retrieved chunk did not include the variant title that carries it, so the
   site says "range to $2,233" without naming a metal.
 
-## 4. Rows deliberately NOT re-read this pass
-
-The other 41 combined-register rows and the 26 non-Automic/Mejuri root rows were **not
+The other 40 combined-register rows and the 26 non-Automic/Mejuri root rows were **not
 re-read** during this pass. Their stored values and dates are unchanged; the verification
 log marks them with their earlier `checked_at` (2026-10-22 or 2026-10-23) and this file does
 not present them as freshly verified. The automated passes prove quote/provenance
-consistency, not present-day availability. Priority for the next pass: the four Zales
-pages (F-018 label instability), Brilliant Earth `BE-121H6` (locale-dependent currency),
-VRAI (no rendered price), and every Sarraf gram weight.
+consistency, not present-day availability. Priority for the next pass: the three remaining Zales pages
+(F-018 label instability), Brilliant Earth `BE-121H6` (locale-dependent currency; the
+Zales V-19957449 page WAS re-read and still shows `Discounted Price $899.00` with no
+currency statement), VRAI (no rendered price; its configure URL is session-scoped and not
+stable), and every Sarraf gram weight.
 
 ## 5. What this pass did not do
 
