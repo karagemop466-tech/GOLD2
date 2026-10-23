@@ -28,8 +28,8 @@
 <li><strong>Gold reference:</strong> World Gold Council spot page with quote date and ICE Data Services attribution.</li>
 <li><strong>Calculation constants/context:</strong> NIST troy-ounce conversion chart and eCFR gold-labeling guidance.</li>
 <li><strong>Rejected as product evidence:</strong> search snippets, aggregators, blogs, coupon pages, unrelated page text, and values from other items in the same category.</li></ul>
-<h2>3. Field-scoped evidence</h2><p>The current audit resolves <strong>362</strong> field-specific quotes across 16 item files, four retailer files, and the gold/calculation evidence. A price, width, or karat in one item’s file cannot support another item. Shared category files are retained only as inherited audit history and are not authoritative inputs.</p>
-<h2>4. Current limitations</h2><ul class="clean"><li><a href="flags.html#f-007">F-007</a> — Brilliant Earth rendered EUR, not USD</li><li><a href="flags.html#f-008">F-008</a> — VRAI price is absent from the retrieved product text</li><li><a href="flags.html#f-013">F-013</a> — LBMA tabulated prices require licensed portal access</li><li><a href="flags.html#f-018">F-018</a> — Two Zales pages render unlabeled price amounts</li><li><a href="flags.html#f-021">F-021</a> — Written permission for independent testing was not captured</li><li><a href="flags.html#f-022">F-022</a> — VRAI candidate BBB profile is not identity-confirmed</li><li><a href="flags.html#f-023">F-023</a> — Zales BBB metrics are combined Signet metrics</li><li><a href="flags.html#f-024">F-024</a> — No physical inspection, XRF assay, or scale verification was performed</li></ul>
+<h2>3. Field-scoped evidence</h2><p>The current audit resolves <strong>363</strong> field-specific quotes across 16 item files, four retailer files, and the gold/calculation evidence. A price, width, or karat in one item’s file cannot support another item. Shared category files are retained only as inherited audit history and are not authoritative inputs.</p>
+<h2>4. Current limitations</h2><ul class="clean"><li><a href="flags.html#f-007">F-007</a> — Brilliant Earth currency locale changed between observations</li><li><a href="flags.html#f-008">F-008</a> — VRAI price is absent from the retrieved product text</li><li><a href="flags.html#f-013">F-013</a> — LBMA tabulated prices require licensed portal access</li><li><a href="flags.html#f-018">F-018</a> — Two Zales pages render unlabeled price amounts</li><li><a href="flags.html#f-021">F-021</a> — Written permission for independent testing was not captured</li><li><a href="flags.html#f-022">F-022</a> — VRAI candidate BBB profile is not identity-confirmed</li><li><a href="flags.html#f-023">F-023</a> — Zales BBB metrics are combined Signet metrics</li><li><a href="flags.html#f-024">F-024</a> — No physical inspection, XRF assay, or scale verification was performed</li></ul>
 <h2>5. Automated checks after every review</h2><p>Run <code>python3 tools/build_site.py</code>, <code>python3 tools/qa.py</code>, <code>node tools/test_calculator.js</code>, and <code>python3 reviews/independent_snapshot_audit.py .</code>. The audits check schema, field-level quote backing, numeric/currency consistency, null-to-flag coverage, two-way flag references, official product domains, calculator arithmetic, built-row/source identity, internal links and fragments, CSP/script constraints, small-text contrast, stale generated values, and independent cross-schema contradictions.</p>
 <pre class="qa">RESULT: PASS — 10 checks, 0 failures, 3 warnings
 Full timestamped log: reports/qa-report.md</pre>
@@ -37,9 +37,9 @@ Full timestamped log: reports/qa-report.md</pre>
 <div class="note"><strong>Recommendation:</strong> look for hallucinations again after every review and after any generator change. Automated checks reduce risk; they cannot prove a retailer’s claim or replace physical testing.</div>
 <h2>6. Earlier pass preserved</h2><p>The <code>site/</code> folder holds the earlier two-listing dashboard with its own audit and calculator tests: <a href="site/index.html">open the earlier dashboard</a>. Its two Blue Nile settings were re-fetched in this integration and appear as <code>BN-195402</code> and <code>BN-302868</code> on the <a href="halo-pave.html">Halo &amp; Pavé</a> page.</p>
 <h2>7. Data provenance summary</h2><dl class="kv">
-<dt>Items</dt><dd>20</dd><dt>Flags</dt><dd>30</dd><dt>Field-scoped quotes</dt><dd>362</dd>
-<dt>Gold quote</dt><dd>$4,028.53/oz · unconfirmed — F-026 · <a href="https://www.gold.org/goldhub/data/gold-prices" target="_blank" rel="noopener noreferrer">World Gold Council&nbsp;↗</a></dd>
-<dt>Retrieval dates</dt><dd>2026-10-22 (UTC)</dd><dt>Repository</dt><dd><a href="https://github.com/karagemop466-tech/GOLD2" target="_blank" rel="noopener noreferrer">karagemop466-tech/GOLD2&nbsp;↗</a></dd></dl>
+<dt>Items</dt><dd>20</dd><dt>Flags</dt><dd>30</dd><dt>Field-scoped quotes</dt><dd>363</dd>
+<dt>Gold quote</dt><dd>$4,024.45/oz · unconfirmed — F-026 · <a href="https://www.gold.org/goldhub/data/gold-prices" target="_blank" rel="noopener noreferrer">World Gold Council&nbsp;↗</a></dd>
+<dt>Retrieval dates</dt><dd>2026-10-22, 2026-10-23 (UTC)</dd><dt>Repository</dt><dd><a href="https://github.com/karagemop466-tech/GOLD2" target="_blank" rel="noopener noreferrer">karagemop466-tech/GOLD2&nbsp;↗</a></dd></dl>
 <h2>8. What to do with a flagged row</h2><ol class="clean">
 <li>Open the official source and item evidence; re-read the exact field and price basis.</li>
 <li>Ask the seller in writing about solid-gold construction, metal-only gram weight, physical hallmark/maker’s mark, and independent non-destructive testing permission.</li>
@@ -49,7 +49,7 @@ Full timestamped log: reports/qa-report.md</pre>
 
 </div></main>
 <footer><div class="wrap row">
-  <div><strong>GOLD2</strong> · remote document research · retrieved 2026-10-22 (UTC)</div>
+  <div><strong>GOLD2</strong> · remote document research · retrieved 2026-10-22, 2026-10-23 (UTC)</div>
   <div>Blank means unverified, never zero or estimated. No physical assay was performed.</div>
 </div></footer>
 </body>

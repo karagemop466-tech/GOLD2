@@ -13,10 +13,10 @@ GitHub Pages is configured as legacy publishing from **`main` / repository root*
 
 ## What the research establishes
 
-Research observations were collected on **22 October 2026 UTC**. The combined register contains **32 unique product URLs, nine sellers, 60 structured publisher records and 20 findings**. The initial 18-page product batch and the original 16-entry register share two Blue Nile settings; deduplication retains each product URL exactly once.
+Research observations were collected on **22 October 2026 UTC** and re-verified on **23 October 2026 UTC**. The combined register contains **32 unique product URLs, nine sellers, 60 structured publisher records and 22 findings**. The initial 18-page product batch and the original 16-entry register share two Blue Nile settings; deduplication retains each product URL exactly once.
 
-- **10 native-currency price observations:** nine USD displays and one EUR setting price. These are dated page observations, not live prices, exact-size checkout quotes or purchase recommendations.
-- **22 unconfirmed numeric prices remain blank.** A dollar sign does not by itself establish ISO USD. Raw display observations are retained in evidence, not converted into verified prices.
+- **10 native-currency price observations:** all ten are now dated USD displays after the 2026-10-23 re-observation (Brilliant Earth's setting re-rendered in a USD locale as $890 Setting Only; the earlier EUR 990 locale render is kept only as superseded history). These are dated page observations, not live prices, exact-size checkout quotes or purchase recommendations.
+- **22 unconfirmed numeric prices remain blank** (including pages that now render a dollar amount without an ISO currency). A dollar sign does not by itself establish ISO USD. Raw display observations are retained in evidence, not converted into verified prices.
 - Seven approximate Automic **item weights**, two undefined Auvere **“Fine Weight”** ranges and VRAI’s **2.86g metal-weight claim for size 6** are preserved with their distinct bases. None is independently verified net gold.
 - **Zero independently verified ring fine-gold weights; zero approved purchases.** No physical ring, stamp, purity or scale test was performed. Seller contact details were recorded, not tested by calls or emails.
 - Categories distinguish natural/lab-grown accent or stone wording, gemstones, alternatives, bare settings/unselected centers, and diamond origin unconfirmed. They do not infer an unselected center or missing gemological facts.
@@ -39,6 +39,7 @@ The root register preserves an earlier WGC header observation. Its **quote-as-of
 | `scripts/{verify,check-links,security,browser-tests,source-monitor}.mjs` | Evidence consistency, links, risk checks, real Chromium/axe and non-updating source signals |
 | `tests/*.test.mjs` | Mutation, null, numeric, integration, deterministic-build and preview-server controls |
 | `data/solid-gold-verified.json`, `data/listings/*.json`, `data/retailers.json`, `data/flags.json` | Root category register (`20` entries across `6` categories, `6` official retailers + BBB profiles, and `30` bidirectional flags `F-001`–`F-031`) |
+| `audit/062f314f/**` | 2026-10-23 live re-verification log: sources fetched, observed amounts, and exactly which rows were not re-fetched |
 | `audit/8c810c15/**` | Independent live line-by-line verification log, NIST `g`/`dwt`/`ozt` calculator edge-case tests, and security/WCAG/hallucination scanner |
 | `evidence/**`, `tools/**`, root HTML/`assets/**` | Peer research and original dashboard, preserved with documented safety corrections |
 | `site/`, `scripts/{build.py,audit.py,test.js}` | Initial two-setting implementation, still reproducible |

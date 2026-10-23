@@ -110,21 +110,22 @@
       "publisher": "JM Bullion",
       "kind": "dealer-reference",
       "url": "https://www.jmbullion.com/charts/gold-price/",
-      "observedAt": "2026-10-22T23:16:03Z",
-      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "observedAt": "2026-10-23T10:00:00Z",
+      "method": "fetch_page; short excerpts transcribed and rechecked 2026-10-23 by session S-062F314F",
       "access": "fetched",
-      "note": "Dealer body/table ask snapshot only, NOT an LBMA benchmark or a live site feed. Header showed a different value; that panel discrepancy is flagged. The body quote is explicitly identified, not silently reconciled.",
+      "note": "Dealer page header/table on 2026-10-23 05:56 EDT displayed $4,035.54 USD ask, bid $4,021.04, with the page stating \"As of Oct 23, 2026 at 5:56 AM EDT\". Earlier 2026-10-22 observation was $4,039.76. This is a dealer reference, not an LBMA benchmark or live feed.",
       "quotes": {
-        "quote": "As of Oct 22, 2026 at 7:09 PM EDT, the live Gold spot price for 1 ounce of Gold in U.S. dollars (USD) is $4,039.76, 1 gram of Gold is $129.88 and 1 kilogram of Gold is $129,881.14.",
+        "quote": "$4,035.54 USD",
         "units": "A troy ounce of gold is the standard unit of weight equal to 31.1034768 grams",
-        "ask": "Bid: $4,025.26   Ask: $4,039.76",
+        "ask": "Bid: $4,021.04   Ask: $4,035.54",
         "header": "Gold Ask",
-        "header-value": "$4,040.05"
+        "header-value": "$4,035.67"
       },
       "relevantChunks": [
         0,
         1
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T10:00:00Z"
     },
     {
       "id": "automic-currency",
@@ -386,69 +387,77 @@
       "publisher": "Catbird",
       "kind": "product",
       "url": "https://www.catbirdnyc.com/odile-the-swan-black-diamond-ring.html",
-      "observedAt": "2026-10-22T23:16:03Z",
+      "observedAt": "2026-10-23T10:00:00Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
-      "access": "partial",
-      "note": "Fetched product body did not expose metal specifications, gold mass, or a selected price/metal/size binding. Search excerpts are discovery leads only. All unsupported specifications and numeric prices remain null.",
+      "access": "fetched",
+      "note": "2026-10-23 fetch rendered \"from$1,600.00\" and a sold-out/waitlist badge on the page. Currency ISO code is not displayed in the retrieved text, so no structured price is assigned. Access status remains partial: full specification fields were not all present in the retrieved text.",
       "quotes": {
         "name": "Odile the Swan Black Diamond Ring",
-        "header-price": "from$1,600.00"
+        "header-price": "from$1,600.00",
+        "price_display": "from$1,600.00"
       },
       "relevantChunks": [
         0
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T10:00:00Z",
+      "price_display": "from$1,600.00"
     },
     {
       "id": "cb-sonnet",
       "publisher": "Catbird",
       "kind": "product",
       "url": "https://www.catbirdnyc.com/sonnet-lab-grown-diamond-ring.html",
-      "observedAt": "2026-10-22T23:16:03Z",
+      "observedAt": "2026-10-23T10:00:00Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
-      "access": "partial",
-      "note": "Fetched product body did not expose metal specifications, gold mass, or a selected price/metal/size binding. Search excerpts are discovery leads only. All unsupported specifications and numeric prices remain null.",
+      "access": "fetched",
+      "note": "2026-10-23 fetch rendered $2,800.00 with an Add to Bag control and a sold-out/waitlist badge; Catbird's site asks visitors to select shipping country and currency, so no ISO currency is asserted and no structured price is assigned.",
       "quotes": {
         "name": "Sonnet Lab-Grown Diamond Ring",
-        "header-price": "$2,800.00"
+        "header-price": "$2,800.00",
+        "price_display": "$2,800.00"
       },
       "relevantChunks": [
         0
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T10:00:00Z"
     },
     {
       "id": "cb-ballet",
       "publisher": "Catbird",
       "kind": "product",
       "url": "https://www.catbirdnyc.com/night-at-the-ballet-diamond-ring-emerald-cut.html",
-      "observedAt": "2026-10-22T23:16:03Z",
+      "observedAt": "2026-10-23T10:00:00Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
-      "access": "partial",
-      "note": "Fetched product body did not expose metal specifications, gold mass, or a selected price/metal/size binding. Search excerpts are discovery leads only. All unsupported specifications and numeric prices remain null.",
+      "access": "fetched",
+      "note": "2026-10-23 fetch rendered \"from$5,300.00\"; carat/metal variants change the amount, and the site asks visitors to select shipping country and currency, so no ISO currency is asserted and no structured price is assigned.",
       "quotes": {
         "name": "Night at the Ballet Diamond Ring, Emerald Cut",
-        "header-price": "from$5,300.00"
+        "header-price": "from$5,300.00",
+        "price_display": "from$5,300.00"
       },
       "relevantChunks": [
         0
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T10:00:00Z"
     },
     {
       "id": "cb-pointelle",
       "publisher": "Catbird",
       "kind": "product",
       "url": "https://www.catbirdnyc.com/pointelle-diamond-ring.html",
-      "observedAt": "2026-10-22T23:16:03Z",
+      "observedAt": "2026-10-23T10:00:00Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
-      "access": "partial",
-      "note": "Fetched product body did not expose metal specifications, gold mass, or a selected price/metal/size binding. Search excerpts are discovery leads only. All unsupported specifications and numeric prices remain null.",
+      "access": "fetched",
+      "note": "2026-10-23 fetch rendered $578.00 with an Add to Bag control; Catbird's site asks visitors to select shipping country and currency, so no ISO currency is asserted and no structured price is assigned.",
       "quotes": {
         "name": "Pointelle Diamond Ring",
-        "header-price": "$578.00"
+        "header-price": "$578.00",
+        "price_display": "$578.00"
       },
       "relevantChunks": [
         0
       ],
-      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+      "lastRecheckedAt": "2026-10-23T10:00:00Z"
     },
     {
       "id": "catbird-returns",
@@ -629,13 +638,13 @@
       "publisher": "Menē",
       "kind": "product",
       "url": "https://mene.com/products/rose-ring-gold",
-      "observedAt": "2026-10-22T23:16:03Z",
+      "observedAt": "2026-10-23T10:00:00Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Gold-page displayed snapshot, not a confirmed size-specific order quote. No primary-product grams exposed. Related-product weights/prices are never assigned to this item. No explicit solid/non-hollow wording in the reviewed product text.",
+      "note": "Direct official-product fetch on 2026-10-23 rendered $1,336 USD. The 2026-10-22 observation was $1,346; Menē prices these Crafted-on-Demand pieces from metal value, so the earlier amount is superseded, not additive.",
       "quotes": {
         "name": "Rose Ring",
-        "price": "$1,346",
+        "price": "$1,336",
         "currency": "USD",
         "karat": "24k Gold",
         "cod": "This is a Crafted-on-Demand item."
@@ -644,20 +653,20 @@
         0,
         2
       ],
-      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+      "lastRecheckedAt": "2026-10-23T10:00:00Z"
     },
     {
       "id": "mene-knot",
       "publisher": "Menē",
       "kind": "product",
       "url": "https://mene.com/products/knot-ring-gold",
-      "observedAt": "2026-10-22T23:16:03Z",
+      "observedAt": "2026-10-23T10:00:00Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Gold-page displayed snapshot, not a confirmed size-specific order quote. No primary-product grams exposed. Related-product weights/prices are never assigned to this item. No explicit solid/non-hollow wording in the reviewed product text.",
+      "note": "Direct official-product fetch on 2026-10-23 rendered $1,454 USD. The 2026-10-22 observation was $1,465; the earlier amount is superseded by the dated re-observation.",
       "quotes": {
         "name": "Knot Ring",
-        "price": "$1,465",
+        "price": "$1,454",
         "currency": "USD",
         "karat": "24k Gold",
         "cod": "This is a Crafted-on-Demand item."
@@ -666,7 +675,7 @@
         0,
         2
       ],
-      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+      "lastRecheckedAt": "2026-10-23T10:00:00Z"
     },
     {
       "id": "mene-terms",
@@ -927,20 +936,22 @@
       "publisher": "Zales",
       "kind": "product",
       "url": "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
-      "observedAt": "2026-10-22T23:44:35Z",
+      "observedAt": "2026-10-23T10:00:00Z",
       "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "2026-10-23 fetch rendered a labeled \"Discounted Price $899.00\" (no original price shown in the retrieved text). The amount is preserved as a display observation; the ISO currency and exact configuration are not confirmed, so the structured price stays blank.",
       "quotes": {
         "name": "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
         "material": "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
         "display": "Discounted Price $899.00",
         "returns": "Free and easy 30-day returns",
-        "contact-gap": "Contact details not exposed in the fetched product excerpt."
-      }
+        "contact-gap": "Contact details not exposed in the fetched product excerpt.",
+        "price_display": "Discounted Price $899.00"
+      },
+      "lastRecheckedAt": "2026-10-23T10:00:00Z"
     },
     {
       "id": "ext-z-20046552",
@@ -1074,22 +1085,30 @@
       "publisher": "Brilliant Earth",
       "kind": "product",
       "url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
-      "observedAt": "2026-10-22T23:44:35Z",
+      "observedAt": "2026-10-23T10:00:00Z",
       "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
       "access": "fetched",
       "relevantChunks": [
         0,
         4
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "2026-10-23 fetch: site locale USD, main product amount $890 (Setting Only). 2026-10-22 fetch rendered the same URL in a EUR locale as EUR 990.00 (Setting Only). Both are locale-dependent display observations; no exchange conversion is applied. Center diamond and ring size are not selected, so this is a setting-only amount.",
       "quotes": {
         "name": "Classic Six-Prong Solitaire Ring in 14K Yellow Gold",
         "material": "14K Yellow Gold",
-        "price": "€990.00(Setting Only)",
-        "currency": "EUR in locale selector; main-product amount displayed with €",
+        "price": "$890(Setting Only)",
+        "currency": "USD (site locale selector) displayed with the main product amount as $(Setting Only)",
         "stone": "Diamond Origin: Natural",
         "prongs": "Prong metal: 14K White Gold",
         "phone": "1.415.426.2781"
+      },
+      "lastRecheckedAt": "2026-10-23T10:00:00Z",
+      "supersededDisplay": {
+        "amount": 990,
+        "currency": "EUR",
+        "observedAt": "2026-10-22T23:44:35Z",
+        "text": "€990.00(Setting Only)",
+        "reason": "EUR-locale rendering of the same setting; superseded as the current price by the 2026-10-23 USD-locale observation."
       }
     },
     {
@@ -1194,18 +1213,20 @@
       "publisher": "World Gold Council",
       "kind": "market-context",
       "url": "https://www.gold.org/goldhub/data/gold-prices",
-      "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "observedAt": "2026-10-23T10:00:00Z",
+      "method": "fetch_page; directly rechecked 2026-10-23 by session S-062F314F, short factual transcriptions only",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Current moving header differed from earlier session header observations. Chart as-of metadata does not establish the moving header quote timestamp. No WGC value is imported as the primary calculator reference; no header/date panel is silently combined.",
+      "note": "Moving header read 4,024.45 USD/oz on 2026-10-23; the page's data blocks were dated 22 October, 2026. The header carries no quote-as-of timestamp, so chart metadata is stored separately and not bound to the header.",
       "quotes": {
-        "header": "Gold Spot price USD /oz 4,025.54",
-        "chart-as-of": "Data as of 21 October, 2026",
-        "units": "Prices are quoted in currency unit per troy ounce unless otherwise stated."
-      }
+        "header": "Gold Spot price USD /oz - 4,024.45",
+        "chart-as-of": "Data as of 22 October, 2026",
+        "units": "Prices are quoted in currency unit per troy ounce unless otherwise stated.",
+        "quote": "4,024.45"
+      },
+      "lastRecheckedAt": "2026-10-23T10:00:00Z"
     }
   ]
 }

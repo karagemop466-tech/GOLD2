@@ -89,7 +89,7 @@ $1,045(Setting Price)
 **URL:** https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/
 
 ```
-990.00(Setting Only)
+$890(Setting Only)
 ```
 
 ```
@@ -110,7 +110,7 @@ BE121H6-14KY
 Free 1-Year Resizing
 ```
 
-Currency note: rendered as `€ 990.00` — EUR, not USD (flag F-007).
+Currency note: the 2026-10-23 fetch rendered the USD locale, $890 (Setting Only). An earlier 2026-10-22 fetch rendered EUR 990.00 (Setting Only) in a EUR locale; that amount is superseded as a current price and kept only as a dated locale observation (flag F-007).
 Absence check: no `solid gold`, no hallmark, no gram weight in the retrieved text.
 
 ---

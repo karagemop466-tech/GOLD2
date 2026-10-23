@@ -244,6 +244,34 @@
       ],
       "finding": "The fetched selected configuration says Plain band but also displays Pavé carat weight:0.18 ctw. The correspondence of this field to the selected variant is unconfirmed. No pavé weight or diamond mass is used in any ring-gold calculation.",
       "action": "Have the seller confirm the exact plain/pavé configuration, size-specific metal-only weight, chosen center and all-in native-currency quote in writing."
+    },
+    {
+      "id": "reobservation-2026-10-23",
+      "title": "Re-observation on 2026-10-23 changed several displayed values",
+      "scope": "Menē Rose Ring · Menē Knot Ring · Brilliant Earth Classic Six-Prong · dealer gold reference",
+      "sources": [
+        "mene-rose",
+        "mene-knot",
+        "ext-be-121h6",
+        "jm-gold",
+        "wgc-panel-review"
+      ],
+      "finding": "Direct official-page fetches on 2026-10-23 replaced earlier dated observations: Menē Rose Ring $1,346 → $1,336 and Menē Knot Ring $1,465 → $1,454 (both USD, Crafted-on-Demand); Brilliant Earth's Classic Six-Prong setting rendered in a USD locale as $890 (Setting Only) instead of the 2026-10-22 EUR-locale €990.00; the JM Bullion dealer reference moved from $4,039.76 to $4,035.54 and the World Gold Council moving header read 4,024.45 in USD/oz. Each figure is a dated display observation, not a fixed price; nothing was converted between currencies or averaged.",
+      "action": "Re-open each official page and the cart for the exact configuration before deciding. Treat every amount here as dated, record the observation date with any comparison, and never treat a locale change as an exchange-rate conversion."
+    },
+    {
+      "id": "newly-rendered-amounts",
+      "title": "Labeled amounts now render where the register previously recorded none",
+      "scope": "Zales 1/5 CT. Diamond Solitaire · Catbird Odile the Swan · Sonnet · Night at the Ballet (Emerald Cut) · Pointelle",
+      "sources": [
+        "ext-z-19957449",
+        "cb-odile",
+        "cb-sonnet",
+        "cb-ballet",
+        "cb-pointelle"
+      ],
+      "finding": "The 2026-10-23 fetches showed amounts where earlier captures recorded none or unlabelled text: Zales V-19957449 \"Discounted Price $899.00\"; Catbird Odile the Swan \"from$1,600.00\", Sonnet $2,800.00, Night at the Ballet Emerald Cut \"from$5,300.00\" and Pointelle $578.00. Catbird's own site asks visitors to choose a shipping country and currency, and Zales shows no ISO code in the retrieved text, so the structured price and currency fields remain blank and the raw displays are preserved only as dated observations.",
+      "action": "Confirm the currency, chosen size/finish/carat and the all-in cart total on the official page before any comparison. A displayed dollar sign is not treated as a verified USD total, and variant-dependent 'from' amounts are not minimum prices for a chosen configuration."
     }
   ]
 }
