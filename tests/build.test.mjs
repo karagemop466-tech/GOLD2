@@ -18,6 +18,8 @@ test('static build is deterministic and does not renew observation timestamps',a
 test('catalog distinguishes a supported native-currency setting display from unconfirmed prices',async()=>{
  const html=await readFile(path.join(ROOT,'explore/catalog/index.html'),'utf8');
  assert.match(html,/Setting-only amounts exclude the center diamond/);
- assert.match(html,/€990\.00/);
+ // 2026-10-23 re-observation: the USD locale rendered $890 (Setting Only) for the same style and URL.
+ assert.match(html,/\$890\.00/);
+ assert.doesNotMatch(html,/€990\.00/);
  assert.doesNotMatch(html,/Setting-only displays and unbound currency\/configurations are withheld/);
 });

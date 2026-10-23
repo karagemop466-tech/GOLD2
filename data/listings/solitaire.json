@@ -308,8 +308,7 @@
         "F-016",
         "F-019",
         "F-021",
-        "F-024",
-        "F-032"
+        "F-024"
       ],
       "notes": "Served currency changed between retrievals (EUR €990 on 2026-10-22; USD $890 on 2026-10-23 with a USD selector). Setting-only price; centre stone excluded.",
       "depth_mm": null,

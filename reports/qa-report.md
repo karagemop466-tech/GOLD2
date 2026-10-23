@@ -1,7 +1,7 @@
 # QA / hallucination and integration audit
 
-- Generated: 2026-10-23 10:06:45 UTC
-- Items audited: 20 · retailers: 6 · flags: 32 · field-scoped quotes: 369
+- Generated: 2026-10-23 10:08:44 UTC
+- Items audited: 20 · retailers: 6 · flags: 31 · field-scoped quotes: 369
 - **RESULT: PASS** — 11 checks, 0 failures, 3 warnings
 
 ## Checks
@@ -16,7 +16,7 @@
 | 6 | Blank states are flagged and item/retailer flag references are bidirectional | ✅ PASS | 0 |
 | 7 | Rejected snippets and superseded gold quotes are not current values | ✅ PASS | 0 |
 | 8 | Nominal fine-gold and melt calculations use current constants | ✅ PASS | 0 |
-| 9 | Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure (1101 link occurrences, 306 external). External retrieval is documented separately; future availability is not guaranteed. | ✅ PASS | 0 |
+| 9 | Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure (1106 link occurrences, 308 external). External retrieval is documented separately; future availability is not guaranteed. | ✅ PASS | 0 |
 | 10 | Coverage limitations remain visible | ✅ PASS | 0 |
 | 11 | Dated verification log, analysis arithmetic, and derived shell counts (29 logged records) | ✅ PASS | 0 |
 

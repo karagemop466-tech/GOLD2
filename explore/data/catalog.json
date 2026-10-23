@@ -2,30 +2,30 @@
   "meta": {
     "schemaVersion": 1,
     "title": "GOLD",
-    "reviewedAt": "2026-10-22T23:44:35Z",
-    "reviewSession": "arena-24aeb4a8",
+    "reviewedAt": "2026-10-23T10:00:00Z",
+    "reviewSession": "arena-062f314f",
     "scope": "32 unique named product pages across nine retailers: 16 researched in this session plus all 16 previously published root-register entries, deduplicating the two shared Blue Nile settings. Product pages were directly rechecked; the complete reviewed set is not an exhaustive market inventory. Unselected settings and unconfirmed diamond origin have separate categories.",
     "pricePolicy": "No hallucinations: never invent prices, specifications, or verification. Null means unverified. Prices are dated observations, not live quotes or checkout totals. Source claims are not independent authentication.",
     "freshnessHours": 24,
     "sourceReviewDays": 30,
     "observationWindow": {
-      "start": "2026-10-22T23:08:10Z",
-      "end": "2026-10-22T23:44:35Z"
+      "start": "2026-10-23T09:56:00Z",
+      "end": "2026-10-23T10:00:00Z"
     },
     "benchmark": {
       "amount": null,
       "source": "lbma-prices"
     },
     "marketReference": {
-      "amount": 4039.76,
+      "amount": 4035.54,
       "currency": "USD",
       "unit": "troy ounce",
       "side": "dealer body/table ask",
-      "publishedAt": "2026-10-22T23:09:00Z",
-      "observedAt": "2026-10-22T23:16:03Z",
+      "publishedAt": "2026-10-23T09:56:00Z",
+      "observedAt": "2026-10-23T10:00:00Z",
       "source": "jm-gold",
       "quote": "quote",
-      "caveat": "Dated dealer reference, not LBMA and not a live feed. Header panel differed. Calculations are conditional illustrations only."
+      "caveat": "Dated dealer reference, not LBMA and not a live feed. The page's own timestamp is 2026-10-23 05:56 EDT. Calculations are conditional illustrations only."
     }
   },
   "sellers": [
@@ -970,7 +970,7 @@
       "seller": "mene",
       "category": "bands",
       "source": "mene-rose",
-      "observedAt": "2026-10-22T23:16:03Z",
+      "observedAt": "2026-10-23T10:00:00Z",
       "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
       "facts": {
         "karat": {
@@ -990,10 +990,10 @@
         "fineGoldWeightG": null
       },
       "price": {
-        "amount": 1346,
+        "amount": 1336,
         "currency": "USD",
         "kind": "unbound-display",
-        "observedAt": "2026-10-22T23:16:03Z",
+        "observedAt": "2026-10-23T10:00:00Z",
         "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
         "evidence": [
           {
@@ -1010,6 +1010,7 @@
       "flags": [
         "crafted-on-demand",
         "exact-size-unconfirmed",
+        "price-reobserved",
         "solid-wording-missing"
       ]
     },
@@ -1023,7 +1024,7 @@
       "seller": "mene",
       "category": "bands",
       "source": "mene-knot",
-      "observedAt": "2026-10-22T23:16:03Z",
+      "observedAt": "2026-10-23T10:00:00Z",
       "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
       "facts": {
         "karat": {
@@ -1043,10 +1044,10 @@
         "fineGoldWeightG": null
       },
       "price": {
-        "amount": 1465,
+        "amount": 1454,
         "currency": "USD",
         "kind": "unbound-display",
-        "observedAt": "2026-10-22T23:16:03Z",
+        "observedAt": "2026-10-23T10:00:00Z",
         "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
         "evidence": [
           {
@@ -1063,6 +1064,7 @@
       "flags": [
         "crafted-on-demand",
         "exact-size-unconfirmed",
+        "price-reobserved",
         "solid-wording-missing"
       ]
     },
@@ -1612,7 +1614,7 @@
       "seller": "brilliant-earth",
       "category": "settings",
       "source": "ext-be-121h6",
-      "observedAt": "2026-10-22T23:44:35Z",
+      "observedAt": "2026-10-23T10:00:00Z",
       "scope": "14K Yellow Gold · 14K White Gold prongs · Natural origin selected · setting only; center diamond and size not selected · EUR locale",
       "facts": {
         "karat": {
@@ -1636,11 +1638,11 @@
         "fineGoldWeightG": null
       },
       "price": {
-        "amount": 990,
-        "currency": "EUR",
+        "amount": 890,
+        "currency": "USD",
         "kind": "setting-only",
-        "observedAt": "2026-10-22T23:44:35Z",
-        "scope": "14K Yellow Gold · 14K White Gold prongs · Natural origin selected · setting only; center diamond and size not selected · EUR locale",
+        "observedAt": "2026-10-23T10:00:00Z",
+        "scope": "USD locale · 14K Yellow Gold with 14K White Gold prongs · Center diamond and ring size not selected (Setting Only)",
         "evidence": [
           {
             "source": "ext-be-121h6",
@@ -1654,10 +1656,10 @@
       },
       "reportedWeight": null,
       "flags": [
-        "inherited-rechecked",
         "exact-size-unconfirmed",
+        "inherited-rechecked",
+        "localized-usd",
         "setting-only",
-        "localized-eur",
         "two-tone-prongs"
       ],
       "inheritedFrom": {

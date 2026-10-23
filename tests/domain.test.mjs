@@ -18,12 +18,12 @@ test('conditional calculations require explicit acknowledgement',()=> {
 test('documented conditional preset uses unrounded inputs and has no automatic catalog effect',()=> {
   const result=calculateScenario({weight:11,fineness:0.9999,spotPerOz:catalog.meta.marketReference.amount,retail:3520,acknowledged:true});
   assert.equal(result.ok,true);assert.equal(result.fineGrams,11*0.9999);
-  assert.equal(result.metalValue,11*0.9999*(4039.76/31.1034768));
+  assert.equal(result.metalValue,11*0.9999*(catalog.meta.marketReference.amount/31.1034768));
   assert.equal(result.ratio,3520/result.metalValue);
   assert.match(result.classification,/Conditional/);
 });
 test('invalid or excessive numbers never produce gold values',()=> {
-  const valid={weight:11,fineness:0.9999,spotPerOz:4039.76,acknowledged:true};
+  const valid={weight:11,fineness:0.9999,spotPerOz:catalog.meta.marketReference.amount,acknowledged:true};
   for (const field of ['weight','fineness','spotPerOz']) for (const v of [0,-1,NaN,Infinity,-Infinity,'1',null,undefined]) assert.equal(calculateScenario({...valid,[field]:v}).ok,false,field+' '+v);
   assert.equal(calculateScenario({...valid,fineness:1.01}).ok,false);
   assert.equal(calculateScenario({...valid,weight:100001}).ok,false);

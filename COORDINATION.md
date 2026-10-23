@@ -432,3 +432,61 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - 2026-10-23 — Audit rule for this session: a value is only reused if the official page renders it
   again today. Anything that cannot be re-read stays at its original dated observation and is
   marked `not re-read this pass`, never silently refreshed.
+
+---
+
+# Session S-062F314F — task board & verification log
+
+- **Session ID:** `S-062F314F` (`062f314f`)
+- **Platform-fixed branch:** `arena/062f314f-gold2` (Arena binds this session to its assigned branch; no other branch/worktree may be created or pushed. Strict non-overlapping file scopes enforce isolation until final integration.)
+- **Base observed at claim:** `main` @ `22d9f85` (PR #21 merged). No other session has an open claim on this board; all earlier tasks are `done`.
+- **Baseline before edits:** `python3 tools/qa.py` → PASS, 10 checks, 0 failures, 3 coverage warnings; `node scripts/verify.mjs` → PASS (32 products, 60 sources, 20 findings, 0 purchase approvals); `node --test tests/*.test.mjs` → 23/23 pass.
+
+| ID | Task | Status | Owner | File scope (exclusive before integration) |
+|----|------|--------|-------|-------------------------------------------|
+| T16 | Live line-by-line re-verification of all 32 product rows, the gold reference quote, and retailer policy/reputation records against official sources | in progress | S-062F314F | `data/catalog.json`, `data/gold-price.json`, `research/evidence.json`, `evidence/**`, `audit/062f314f/**` |
+| T17 | Hallucination/security re-scan, independent audit, and fixes | in progress | S-062F314F | `tools/**`, `scripts/**`, `reports/**`, `reviews/062f314f*` |
+| T18 | Site build, link, accessibility, and dashboard review (root pages + `explore/` + `site/`) | unclaimed | — | `explore/**`, root `*.html`, `assets/**`, `site/**` |
+| T19 | Final integration, PR to `main`, merge, and GitHub Pages deployment verification | unclaimed | — | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
+
+No manual user input is required; this session works autonomously. Findings will be published on the Flagged for Review pages, never silently filled in.
+
+## S-062F314F working log
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T16 | Live line-by-line re-verification of product rows, gold reference, and retailer policy records | done (see coverage note) | S-062F314F | `data/catalog.json`, `data/gold-price.json`, `research/evidence.json`, `evidence/**`, `audit/062f314f/**` |
+| T17 | Hallucination/security re-scan, independent audit, and fixes | done | S-062F314F | `tools/**`, `scripts/**`, `reports/**`, `reviews/062f314f*` |
+| T18 | Site build, link, accessibility, and dashboard review | in progress | S-062F314F | `explore/**`, root `*.html`, `assets/**`, `site/**` |
+| T19 | Final integration, PR to `main`, merge, and GitHub Pages deployment verification | in progress | S-062F314F | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
+
+- **2026-10-23 — Gold reference corrected.** Live WGC page displayed `4,024.45` USD/oz with page data blocks dated `22 October, 2026`. The stored 4,028.53 (from 2026-10-22) is moved to `superseded_observations`; `quote_date` stays null because the moving header carries no timestamp (F-026). JM Bullion dealer reference updated 4,039.76 → **4,035.54** using the page's own `Oct 23, 2026 at 5:56 AM EDT` timestamp.
+- **2026-10-23 — Price drift found and corrected (not silent).** Menē Rose Ring `$1,346 → $1,336`; Menē Knot Ring `$1,465 → $1,454` (both official product pages, USD). Brilliant Earth's Classic Six-Prong setting re-rendered in a **USD locale at `$890 (Setting Only)`**; the 2026-10-22 `EUR 990` capture is preserved as a superseded locale observation, with no exchange conversion. Root item `BE-121H6` now carries USD 890 with field-scoped evidence; flag F-007 was re-scoped from "rendered EUR" to the locale-change finding and linked to the Brilliant Earth retailer record.
+- **2026-10-23 — New display observations, deliberately not converted into prices.** Catbird Odile `from$1,600.00`, Sonnet `$2,800.00`, Night at the Ballet Emerald Cut `from$5,300.00`, Pointelle `$578.00`, and Zales V-19957449 `Discounted Price $899.00`. Catbird's own page asks visitors to choose a shipping country and currency and Zales shows no ISO code in the retrieved text, so structured price/currency stay **blank** and the raw displays are recorded as dated observations only. No inference, averaging, or FX conversion was applied.
+- **2026-10-23 — Re-checked and unchanged:** all seven Automic Gold prices, Blue Nile `BN-203348` (`$1,145 Setting Price`, stock `502120y14`, 2.40 mm), VRAI configurator (still no price string; F-008 stands). Coverage limitation published in `audit/062f314f/verification-log.md`: 14 of 32 rows were re-fetched today; the rest keep their dated 2026-10-22 observations and are not presented as re-verified.
+- **2026-10-23 — Two findings added** to `data/review.json` (`reobservation-2026-10-23`, `newly-rendered-amounts`), 20 → **22 findings**; both published on the Flagged for Review page.
+- **2026-10-23 — Tests/data coupling fixed without weakening checks.** `tests/domain.test.mjs` no longer hardcodes the dealer reference (it reads `catalog.meta.marketReference.amount`); `tests/build.test.mjs` now asserts the USD setting display `$890.00` and asserts the superseded `€990.00` is **not** rendered. Full local suite passes: `tools/qa.py` (10 checks, 0 failures), `node --test` 23/23, `scripts/verify.mjs`, `scripts/check-links.mjs` (30 pages), `scripts/security.mjs`, `reviews/independent_snapshot_audit.py`, `scripts/audit.py`, `scripts/test.js`, `audit/8c810c15/security_and_hallucination_scanner.py` (0 findings, 117 controls), `audit/8c810c15/test_calculator_and_scanner.py` 6/6, `tools/test_calculator.js`.
+- **Hallucination-risk note for the next session:** the recurring failure mode here is *locale and variant drift*, not only invented numbers. Re-open each official page, record the currency the page itself shows, and never carry a previous amount forward as current.
+
+---
+
+# Integration record — 2026-10-23
+
+## Merge of `origin/main` (`693e472`, PR #22, session S-062F314F) into `arena/8b9e189a-gold2`
+
+Both sessions independently re-verified overlapping data on the same day. The merge was resolved by file
+and every conflict is recorded here rather than silently choosing a side.
+
+| File | Conflict | Resolution |
+|---|---|---|
+| `data/flags.json` | S-062F314F re-scoped `F-007` to the Brilliant Earth locale change and broadened `F-018` to two Zales rows; this session had added `F-032` (same locale finding) and scoped `F-018` to one row | Kept the S-062F314F `F-007` wording, **dropped the duplicate `F-032`** (its reference on the Brilliant Earth retailer record and on `BE-121H6` now points at `F-007`), and broadened `F-018` to **all four** Zales rows because label presence differed between the two sessions' same-day renders |
+| `data/listings/budget.json`, `data/listings/three-stone-vintage.json` | Each session saw a different Zales render | Both renders are preserved per row in `render_history` (labelled and unlabeled variants, each dated 2026-10-23 with the observing session). No amount is assigned a currency or ordered by position |
+| `data/gold-price.json` | Both sessions recorded 4,024.45 USD/oz as current but kept a different superseded observation | **Union**: 4,028.53 (2026-10-22, this session) and 4,024.36 (2026-10-21, S-062F314F) are both kept; `quote_date` stays `null` (F-026) |
+| `data/catalog.json`, `data/review.json`, `research/evidence.json`, `explore/**` | Not edited by this session | **Taken from `origin/main` unchanged** (Menē price corrections, Catbird render observations, 22 findings, new dealer reference 4,035.54) |
+| `evidence/gold-price.md`, `evidence/listings/be-121h6.md` | Both sessions appended quotes | This session's version kept; every S-062F314F value that survives in data is still quoted there (the USD `$890` render and the USD selector) |
+| `COORDINATION.md`, `README.md` | Both sessions appended to the same sections | S-062F314F's section is preserved verbatim at the end of this file; README states the combined-register facts from `origin/main` and the root-register facts from this session separately |
+| `tools/build_site.py`, `tools/qa.py`, generated root `*.html` | Only this session changed the generator | Generator kept from this session, then every root page was regenerated from the merged data. No generated HTML was hand-edited |
+| `reports/qa-report.md` | Both regenerated it | Regenerated from the merged data |
+
+**Post-merge verification:** `python3 tools/build_site.py` → 13 pages; `python3 tools/qa.py` → **PASS, 11 checks, 0 failures, 3 coverage warnings**; `reviews/independent_snapshot_audit.py` → 0 findings; `audit/8c810c15/security_and_hallucination_scanner.py` → 0 findings, 154 controls.
+
