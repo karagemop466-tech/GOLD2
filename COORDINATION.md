@@ -1070,3 +1070,42 @@ Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero 
 ### S-1B04074F working log
 
 - 2026-10-23 — Board read in full before editing. Claim written and pushed before any data, evidence, page or script edit.
+
+### S-1B04074F working log (continued)
+
+- 2026-10-23 — **T-1B0-03 done — gold reference re-read, one value changed.** Direct fetch of the WGC page returned
+  **3,995.47 USD/oz** (stored: 3,996.31) with the chart still reading *Data as of 22 October, 2026* and no header
+  timestamp. `data/gold-price.json`, `evidence/gold-price.md`, `research/evidence.json` (`wgc-panel-review`),
+  `dashboard/data/gold-reference.json` and the dashboard `SPOT_USD` constant were updated; 3,996.31 moved to
+  `superseded_observations` (not rendered). Derived figures were recomputed from the stored quote and NIST
+  31.1034768 g/ozt — `usd_per_fine_gram` 128.45734, SAR-144773 melt $1,004.11 / 73.72 %, FDJ net-0.976 g $73.14 —
+  and the calculator tests were re-pinned to those values.
+- 2026-10-23 — **Two stale renders were caught, not papered over.** `tools/qa.py` failed the first rebuild
+  (`verification.html exposes superseded gold quote 3,996.31`) because a log *note* repeated the old figure; the note
+  was rewritten rather than the check weakened. Sibling scanner `audit/e0d6dd62` then failed
+  `explore/sources/index.html` for the same figure in a second evidence record (`wgc-panel-review`), which was
+  updated. Both scanners are green now and no page renders a superseded quote.
+- 2026-10-23 — **T-1B0-02 partial, coverage stated.** Eight official URLs were retrieved in this pass: WGC;
+  Automic Coffin JSON, 24k Band JSON, Cushion Signet JSON, Moissanite JSON; Sarraf SAR-147370 and SAR-144773; Factory
+  Direct Jewelry GR0001. Every stored value matched live text (including the 1,910–2,233 and 2,758/2,408 variant
+  ranges and Sarraf's `Was:` priors 3,513 / 1,593). Brilliant Earth's page was retrieved but chunk 0 was navigation
+  only, so its $890 was **not** re-verified and is logged as a dead end. 28 of 30 root rows and 36 of 44 combined
+  products were **not** re-read; their earlier dates still stand. Detail: `audit/1b04074f/live_verification_2026-10-23.md`.
+- 2026-10-23 — **T-1B0-04 done — independent scanner with mutation controls.**
+  `audit/1b04074f/hallucination_scanner.py` re-derives 14 control families (URL coverage, price→evidence quoting,
+  flag integrity, rendered-vs-stored gold quote, superseded-value leakage, cross-register spot agreement, fine-gold
+  bounds, NIST arithmetic, source resolution, price-quote keys, policy presence on every page, zero purchase
+  approvals, README counts, root→combined URL coverage) **without importing** `tools/qa.py` or `scripts/verify.mjs`.
+  Result on the merged tree: **PASS, 0 failures, 2 advisory warnings** (both benign: `flags.html` discusses the
+  moving spot without restating it, and the Explore calculator's spot input is empty by design).
+  `audit/1b04074f/test_scanner.py` shows **9/9** injected defects caught (clean copy exit 0).
+- 2026-10-23 — **Full local suite green before the PR:** `tools/build_site.py` 13 pages · `tools/qa.py` **PASS 12 /
+  0 / 3** · `scripts/build.mjs` 44 rows / 85 sources · `scripts/verify.mjs` PASS · `node --test` 23/23 ·
+  `check-links` PASS 46 pages / 179 external · `security` PASS + `npm audit` 0 · dashboard 14 pages +
+  `verify --check-build` 8/8 + `calc-test` PASS · `tools/test_calculator.js` PASS · snapshot audit PASS · legacy
+  build/audit/test PASS · sibling scanners `a87a02a5` / `e0d6dd62` / `9b875c81` PASS · Chromium + axe PASS
+  (13 expanded + 33 companion pages). Rebuild is byte-reproducible (`index.html` md5 unchanged).
+- 2026-10-23 — **Not claimed, not verified, still open:** zero physical / hallmark / XRF / scale verification on every
+  row; zero purchase approvals; F-026 (no header timestamp) open; F-041/F-042 (BN-316238 serves a different product)
+  open; 20 of 30 root rows without an assigned price and 23 of 30 without a metal weight. **Look for hallucinations
+  again on the next pass — this pass is one review, not a certificate.**

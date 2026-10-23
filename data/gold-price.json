@@ -1,14 +1,14 @@
 {
   "quote_date": null,
   "retrieved_at": "2026-10-23",
-  "usd_per_troy_oz": 3996.31,
+  "usd_per_troy_oz": 3995.47,
   "currency": "USD",
   "quote_type": "gold_spot",
   "source_name": "World Gold Council - Gold spot price (Market Data: ICE Data Services)",
   "source_url": "https://www.gold.org/goldhub/data/gold-prices",
   "evidence_file": "evidence/gold-price.md",
   "evidence_quotes": [
-    "3,996.31",
+    "3,995.47",
     "Data as of 22 October, 2026"
   ],
   "grams_per_troy_ounce": 31.1034768,
@@ -20,7 +20,7 @@
   "karat_basis": "Nominal karat/24 arithmetic for a documented gold-alloy weight. A listed karat is not an assay result; eCFR distinguishes fine 24-karat gold, alloys, and surface coatings.",
   "field_evidence": {
     "usd_per_troy_oz": [
-      "USD\n\n/oz\n\n-\n\n3,996.31"
+      "USD\n\n/oz\n\n-\n\n3,995.47"
     ],
     "source_name": [
       "Market Data: Provided by ICE Data Services."
@@ -62,6 +62,15 @@
       "chart_as_of_date": "2026-10-22",
       "status": "superseded_moving_header",
       "reason": "Header value observed earlier the same day (2026-10-23). The moving header is not a fixed benchmark; only the latest 2026-10-23 observation (3,996.31) is used in calculations."
+    },
+    {
+      "value": 3996.31,
+      "currency": "USD",
+      "quote_date": null,
+      "retrieved_at": "2026-10-23",
+      "chart_as_of_date": "2026-10-22",
+      "status": "superseded_moving_header",
+      "reason": "Header value observed earlier the same day (2026-10-23). The moving header is not a fixed benchmark; only the latest 2026-10-23 observation (3,995.47) is used in calculations."
     }
   ],
   "limitations": [
@@ -72,6 +81,6 @@
     "F-026: exact header quote-as-of timestamp unconfirmed. The chart date is stored separately; observed/retrieval dates do not establish quote time."
   ],
   "chart_as_of_date": "2026-10-22",
-  "quote_scope": "Moving-header observation retrieved 2026-10-23T20:xxZ; exact quote-as-of timestamp is unconfirmed (F-026). The chart's stated date (22 October 2026) is stored separately and is not assigned to the header.",
+  "quote_scope": "Moving-header observation retrieved 2026-10-23T23:4xZ; exact quote-as-of timestamp is unconfirmed (F-026). The chart's stated date (22 October 2026) is stored separately and is not assigned to the header.",
   "limits_note": ""
 }

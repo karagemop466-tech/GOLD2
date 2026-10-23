@@ -18,11 +18,11 @@
         "karat": "The total of pure gold and other metal adds up to 24 parts.",
         "14k": "A piece marked 14K gold is 14 parts gold mixed with 10 parts of another metal.",
         "18k": "A piece of jewelry marked 18K gold is 18 parts gold mixed with six parts of another metal.",
-        "solid": "The phrase “solid gold” means the gold item isn’t hollow.",
+        "solid": "The phrase \u201csolid gold\u201d means the gold item isn\u2019t hollow.",
         "maker": "Near the karat quality mark, look for the name or the U.S. registered trademark of the company that will stand behind the mark.",
         "vermeil": "Vermeil is a special type of gold-plated product with a base of sterling silver coated or plated with gold.",
-        "research": "Find out what others say about a seller. Type its name and the words “complaint” or “review” into a search engine.",
-        "returns": "Find the store’s refund and return policies — and get them in writing."
+        "research": "Find out what others say about a seller. Type its name and the words \u201ccomplaint\u201d or \u201creview\u201d into a search engine.",
+        "returns": "Find the store\u2019s refund and return policies \u2014 and get them in writing."
       },
       "relevantChunks": [
         0,
@@ -41,8 +41,8 @@
       "note": "",
       "quotes": {
         "card": "Paying by credit card best protects you and your money in case of a scam, or if something else goes wrong.",
-        "reviews": "And don’t rely on star ratings alone because some reviews and ratings are fake or misleading.",
-        "records": "Before you buy something online, shop around and check out sellers and products. Also, keep records of purchases, like receipts and emails, to make sure you’re able to hold a seller to its promises.",
+        "reviews": "And don\u2019t rely on star ratings alone because some reviews and ratings are fake or misleading.",
+        "records": "Before you buy something online, shop around and check out sellers and products. Also, keep records of purchases, like receipts and emails, to make sure you\u2019re able to hold a seller to its promises.",
         "total": "Learn the total cost of the product, including shipping, handling, delivery, taxes, or other fees.",
         "irreversible": "Never buy anything from online sellers that insist you can only pay with gift cards, by wire transfers through companies like Western Union or MoneyGram, with a payment app, or with cryptocurrency."
       },
@@ -81,7 +81,7 @@
       "quotes": {
         "conversion": "1 troy ounce | 1 | 20 | 480 | 31.103 476 8 | 31 103.476 8",
         "formula": "Divide the price per troy ounce by 31.103 476 8",
-        "caution": "The prices offered by buyers or sellers usually reflect reductions based on an item's gold “karat” content and deductions for other factors."
+        "caution": "The prices offered by buyers or sellers usually reflect reductions based on an item's gold \u201ckarat\u201d content and deductions for other factors."
       },
       "relevantChunks": [
         0
@@ -297,7 +297,7 @@
         "weight": "Approximate item weight: 11g",
         "weight-heading": "Item Weight",
         "purity": "Please note that because this ring is 99.99% pure gold it only comes in yellow.",
-        "care": "It can bend, warp, or scratch easily so it’s best to wear your pieces with a little extra care.",
+        "care": "It can bend, warp, or scratch easily so it\u2019s best to wear your pieces with a little extra care.",
         "engraved": "All engraved items are final sale."
       },
       "relevantChunks": [
@@ -356,7 +356,7 @@
       "access": "fetched",
       "note": "Source includes other advice not imported. A warranty is not a return policy and does not verify gold purity.",
       "quotes": {
-        "modified": "Just keep in mind that modified jewelry can’t be returned or exchanged.",
+        "modified": "Just keep in mind that modified jewelry can\u2019t be returned or exchanged.",
         "cards": "All major credit & debit cards, PayPal, Shop Pay, Affirm, AfterPay, Google Pay, and Apple Pay.",
         "daily": "higher gold purities are much easier to deform, which is why we advise 14k gold for daily wear"
       },
@@ -635,13 +635,13 @@
     },
     {
       "id": "mene-rose",
-      "publisher": "Menē",
+      "publisher": "Men\u0113",
       "kind": "product",
       "url": "https://mene.com/products/rose-ring-gold",
       "observedAt": "2026-10-23T10:00:00Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Direct official-product fetch on 2026-10-23 rendered $1,336 USD. The 2026-10-22 observation was $1,346; Menē prices these Crafted-on-Demand pieces from metal value, so the earlier amount is superseded, not additive.",
+      "note": "Direct official-product fetch on 2026-10-23 rendered $1,336 USD. The 2026-10-22 observation was $1,346; Men\u0113 prices these Crafted-on-Demand pieces from metal value, so the earlier amount is superseded, not additive.",
       "quotes": {
         "name": "Rose Ring",
         "price": "$1,336",
@@ -657,7 +657,7 @@
     },
     {
       "id": "mene-knot",
-      "publisher": "Menē",
+      "publisher": "Men\u0113",
       "kind": "product",
       "url": "https://mene.com/products/knot-ring-gold",
       "observedAt": "2026-10-23T10:00:00Z",
@@ -679,7 +679,7 @@
     },
     {
       "id": "mene-terms",
-      "publisher": "Menē",
+      "publisher": "Men\u0113",
       "kind": "policy",
       "url": "https://mene.com/terms-of-service",
       "observedAt": "2026-10-22T23:16:03Z",
@@ -778,7 +778,7 @@
       "access": "fetched",
       "note": "Review/complaint channel fetched. Statements in customer reviews are allegations or opinions, not established product facts. No rating, complaint count, or trustworthiness score imported.",
       "quotes": {
-        "name": "Menē",
+        "name": "Men\u0113",
         "caution": "We use technology to protect platform integrity, but we don't fact-check reviews"
       },
       "relevantChunks": [
@@ -815,7 +815,7 @@
         0
       ],
       "quotes": {
-        "name": "Petite Micropavé Diamond Engagement Ring",
+        "name": "Petite Micropav\u00e9 Diamond Engagement Ring",
         "stock": "501480w14",
         "price": "$1,300(Setting Price)",
         "material": "14K White Gold",
@@ -837,7 +837,7 @@
         0
       ],
       "quotes": {
-        "name": "Petite Micropavé Lab-Grown Diamond Engagement Ring",
+        "name": "Petite Micropav\u00e9 Lab-Grown Diamond Engagement Ring",
         "stock": "501480w14l",
         "price": "$1,050(Setting Price)",
         "material": "14K White Gold",
@@ -860,7 +860,7 @@
       "note": "Window runs from SHIPMENT, not delivery. Two complimentary returns per customer/year; RMA required. No independent testing permission established.",
       "quotes": {
         "window": "you may return eligible items in their original, unworn condition within 30 days from the shipment date for a full refund or exchange.",
-        "exclusions": "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and “Final Sale” items are not eligible for return or exchange.",
+        "exclusions": "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and \u201cFinal Sale\u201d items are not eligible for return or exchange.",
         "limit": "Two complimentary returns are allowed per customer, per year. A Return Merchandise Authorization (RMA) number is required for all returns.",
         "email": "service@bluenile.com",
         "phone": "+1-800-242-2728"
@@ -928,7 +928,7 @@
         "weight": "Metal weight:2.86g (Ring size 6)",
         "stone-context": "We grow our own diamonds",
         "size-context": "Band width:Standard; Band:Plain band",
-        "pave-context": "Pavé carat weight:0.18 ctw; selected Band:Plain band"
+        "pave-context": "Pav\u00e9 carat weight:0.18 ctw; selected Band:Plain band"
       }
     },
     {
@@ -1008,7 +1008,7 @@
       ],
       "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
       "quotes": {
-        "name": "Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen",
+        "name": "Pav\u00e9 Contour Diamond Engagement Ring In 14K White Gold By James Allen",
         "material": "14K White Gold",
         "display": "$2,210(Setting Price)",
         "stock": "505094w14",
@@ -1107,7 +1107,7 @@
         "amount": 990,
         "currency": "EUR",
         "observedAt": "2026-10-22T23:44:35Z",
-        "text": "€990.00(Setting Only)",
+        "text": "\u20ac990.00(Setting Only)",
         "reason": "EUR-locale rendering of the same setting; superseded as the current price by the 2026-10-23 USD-locale observation."
       }
     },
@@ -1213,18 +1213,18 @@
       "publisher": "World Gold Council",
       "kind": "market-context",
       "url": "https://www.gold.org/goldhub/data/gold-prices",
-      "observedAt": "2026-10-23T20:00:00Z",
+      "observedAt": "2026-10-23T23:45:00Z",
       "method": "fetch_page; directly rechecked 2026-10-23 (evening) by session S-1EB9F828, short factual transcriptions only",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Moving header read 3,996.31 USD/oz on the evening re-read of 2026-10-23; an earlier same-day read showed a different value, retained only as superseded history in data/gold-price.json. The page's data blocks were dated 22 October, 2026. The header carries no quote-as-of timestamp, so chart metadata is stored separately and not bound to the header.",
+      "note": "Moving header read 3,995.47 USD/oz on the late-evening re-read of 2026-10-23 (session S-1B04074F); earlier same-day reads showed different values and are retained only as superseded history in data/gold-price.json, never rendered. The page's data blocks were dated 22 October, 2026. The header carries no quote-as-of timestamp, so chart metadata is stored separately and not bound to the header.",
       "quotes": {
-        "header": "Gold Spot price USD /oz - 3,996.31",
+        "header": "Gold Spot price USD /oz - 3,995.47",
         "chart-as-of": "Data as of 22 October, 2026",
         "units": "Prices are quoted in currency unit per troy ounce unless otherwise stated.",
-        "quote": "3,996.31"
+        "quote": "3,995.47"
       },
       "lastRecheckedAt": "2026-10-23T20:00:00Z"
     },
@@ -1344,7 +1344,7 @@
       "access": "fetched",
       "note": "Preserved from S-70B76800.",
       "quotes": {
-        "name": "Petite Micropavé Engagement Ring in 14k White Gold",
+        "name": "Petite Micropav\u00e9 Engagement Ring in 14k White Gold",
         "material": "14k White Gold",
         "price": "$1,240(Setting Price)"
       }
@@ -1424,7 +1424,7 @@
       "observedAt": "2026-10-23T09:58:00Z",
       "method": "fetch_page live primary verification by S-9B875C81",
       "access": "fetched",
-      "note": "1.25g displayed weight w/ 1.37cts lab diamonds — ultra-thin risk.",
+      "note": "1.25g displayed weight w/ 1.37cts lab diamonds \u2014 ultra-thin risk.",
       "quotes": {
         "name": "Lab Grown Diamond Halo Engagement Ring in 14K Gold",
         "material": "14K Solid Gold",
@@ -1505,7 +1505,7 @@
       "observedAt": "2026-10-23T20:00:00Z",
       "method": "fetch_page; product page and product JSON directly retrieved by session S-1EB9F828 on 2026-10-23",
       "access": "fetched",
-      "note": "The stored amount is the 14k Yellow Gold / Salt and Pepper Diamond variant; the JSON shows $2,408–$3,253 (F-039). The 5.5 g is a gross item weight including the stone.",
+      "note": "The stored amount is the 14k Yellow Gold / Salt and Pepper Diamond variant; the JSON shows $2,408\u2013$3,253 (F-039). The 5.5 g is a gross item weight including the stone.",
       "quotes": {
         "name": "Cushion Diamond Signet Ring",
         "price": "$2,758",
@@ -1544,7 +1544,7 @@
       "observedAt": "2026-10-23T20:00:00Z",
       "method": "fetch_page; official FAQ directly retrieved by session S-1EB9F828 on 2026-10-23",
       "access": "fetched",
-      "note": "Country-specific return table: US/Canada/UK/Australia/Germany free; EU €20; Rest of World $30.",
+      "note": "Country-specific return table: US/Canada/UK/Australia/Germany free; EU \u20ac20; Rest of World $30.",
       "quotes": {
         "window": "We offer free 30-day returns for customers in the US, Canada, UK, Australia, and Germany, starting from the day the shipment is delivered or picked up in-store.",
         "exclusions": "Engraved and monogrammed products",

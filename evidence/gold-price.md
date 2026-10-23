@@ -14,7 +14,8 @@
 
 **URL:** https://www.gold.org/goldhub/data/gold-prices
 
-**Retrieved:** 2026-10-23 (UTC). This is the later of two direct fetches of the same page on that day.
+**Retrieved:** 2026-10-23 (UTC). This is the latest of several direct fetches of the same page on that day;
+each later read is recorded below and every earlier value is kept only as superseded history.
 
 ### `usd_per_troy_oz`
 
@@ -25,7 +26,7 @@ USD
 
 -
 
-3,996.31
+3,995.47
 Last Updated
 ```
 
@@ -57,6 +58,7 @@ that retrieval are recorded. This is F-026.
 
 | Value (USD/oz) | Retrieved | Chart date on that page | Status | Why it is not current |
 | --- | --- | --- | --- | --- |
+| 3,996.31 | 2026-10-23 | 2026-10-22 | `superseded_moving_header` | Earlier same-day fetch of the same moving header; a later read displayed 3,995.47 with the same chart date. |
 | 4,024.45 | 2026-10-23 | 2026-10-22 | `superseded_intraday` | Earlier same-day fetch of the same moving header. A later fetch displayed a different value with the same chart date. |
 | 4,028.53 | 2026-10-22 | 2026-10-21 | `superseded_moving_header` | Prior-day moving-header observation. |
 | 4,024.36 | 2026-10-22 | 2026-10-21 | `superseded_intraday` | Earlier same-day capture on 2026-10-22. |
@@ -120,6 +122,14 @@ No free LBMA fix is claimed. This limitation is recorded as F-013.
 - The result is not an appraisal, resale quote, refiner payout, or fair-retail estimate.
 - The reference moves intraday. Any figure computed from it is a conditional illustration stamped with the
   observation date, never a current retail or scrap price.
+
+## Revision note — 2026-10-23 (S-1B04074F)
+
+Session S-1B04074F re-read the official page and the moving header displayed **3,995.47 USD/oz** with the same
+chart date, *Data as of 22 October, 2026*. The stored current observation was updated to 3,995.47 and the previous
+3,996.31 moved into the history table above. Derived figures on the site are recomputed from the stored spot and
+the NIST constant; nothing is typed by hand. `quote_date` stays `null` (F-026) because the header still renders no
+quote-as-of timestamp.
 
 ## Revision note — 2026-10-23
 
