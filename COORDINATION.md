@@ -2,6 +2,58 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Claim — Session S-E0D6DD62 (2026-10-23 20:17Z UTC) — integration, reconciled with S-1EB9F828
+
+Platform constraint: this session is bound to `arena/e0d6dd62-gold2`; no other branch or worktree may be created
+or pushed. The claim was written to this board and pushed as `717b95f` before any data edit.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T-E0-01 | Claim the board and record the integration plan | done | S-E0D6DD62 | `COORDINATION.md` |
+| T-E0-02 | Live line-by-line re-verification of published rows, gold reference and evidence trail | done | S-E0D6DD62 | `audit/e0d6dd62/**` |
+| T-E0-03 | Close REQ-A87A-01…05 | done — **landed by S-1EB9F828 in PR #39, adopted here rather than re-applied** | S-E0D6DD62 | `data/**`, `evidence/**`, `README.md` |
+| T-E0-04 | Independent hallucination/count scanner with mutation controls | done | S-E0D6DD62 | `audit/e0d6dd62/**` |
+| T-E0-05 | Site build, broken-link sweep, PR, merge, Pages verification | in progress | S-E0D6DD62 | `COORDINATION.md` |
+
+### S-E0D6DD62 working log
+
+- 2026-10-23 20:17Z — Board read; `origin/main` was `7fb0334`, Pages `built`, build type `legacy`, `https_enforced`.
+  Baseline measured before editing: build 13 pages, `tools/qa.py` **PASS 11 / 0 failures / 3 warnings**.
+- 2026-10-23 20:20–20:35Z — Seven live official reads (Automic Coffin page + JSON, Cushion Signet page + JSON,
+  24k Band JSON, Mejuri product page, WGC gold page). One dead end recorded as a dead end
+  (`/products/cushion-signet-ring.js` returned an empty document). Values re-rendered exactly: `$1,910`,
+  `$3,520`, `$2,758`, `From$2,900`, WGC `3,996.31`. Detail: `audit/e0d6dd62/live_verification_2026-10-23.md`.
+- 2026-10-23 20:20–20:55Z — On its own branch this session independently produced the same integration that PR #39
+  later merged: 3 restored products (41→44), 13 sellers, the Cushion/Coffin price ranges, flag **F-039**, the
+  `3,996.31` refresh, re-derived README counts, and the fenced-quote conversion of ten evidence files. The two
+  implementations agreed on every number.
+- 2026-10-23 20:5xZ — **Duplicate work, reconciled rather than doubled.** PR #39 (`S-1EB9F828`) merged an equivalent
+  implementation to `main` while this branch's PR #38 was in CI, and `main` also took PR #37's coverage-disclosure
+  work. Re-applying this session's duplicate edits would have created a third variant of the same data, so this
+  branch was reset onto `main` and keeps the merged implementation as the single source of truth. **No peer work was
+  discarded, reverted or overwritten.** What this session kept is additive only: `audit/e0d6dd62/**`, this board
+  block, and the `evidence/gold-price.md` fix below.
+- 2026-10-23 21:0xZ — **Independent cross-check of the merged tree.** `audit/e0d6dd62/hallucination_and_count_scanner.py`
+  was written against the JSON and the built HTML without importing `tools/qa.py` or `scripts/verify.mjs`. Against
+  `main` it passes **12 check families / 0 failures / 0 warnings**, and `test_scanner.py` shows **8/8** injected
+  defects are caught. This is an independent confirmation of another session's integration, not a restatement of it.
+- 2026-10-23 21:0xZ — **One defect `main` still carried, fixed here.** `evidence/gold-price.md` had accumulated
+  three stacked "current observation" blocks (4,028.53 at the top → 4,024.45 → 3,996.31 at the bottom), so the value
+  a reader meets first was two observations stale while `data/gold-price.json` held the current one. The file is now
+  ordered newest-first with a single current block and one dated history table; no quoted text, URL or stored value
+  changed. The same file also claimed a `4,025.54` header reading was "recorded separately in
+  `research/evidence.json`" — no such figure exists in any data file — so that pointer was removed rather than
+  restated, and a new scanner check (C12) fails any gold figure in the evidence file that is not a recorded
+  observation.
+- 2026-10-23 21:0xZ — Post-reconciliation pass: `tools/build_site.py` 13 pages; `tools/qa.py` **PASS 12 / 0 / 3**;
+  `npm run verify` PASS **44 products / 85 sources / 26 findings / 0 approvals**; `node --test` 23/23;
+  `check-links` PASS (46 pages / 102 local targets / 179 external); `security` PASS + `npm audit` 0; dashboard build
+  + `verify --check-build` + `calc-test` PASS; Chromium + axe PASS (44 gates); `audit/e0d6dd62` PASS 12/0/0 with
+  8/8 mutation controls; rebuild is byte-reproducible.
+- 2026-10-23 21:0xZ — **Open, published, not blocking:** F-026 quote time unconfirmed; 20 of 30 root rows without an
+  assigned price and 23 of 30 without a metal weight; the not-re-read list in
+  `audit/e0d6dd62/live_verification_2026-10-23.md` §2; and zero physical/XRF/scale verification.
+
 ## Claim — Session S-1EB9F828 (2026-10-23 20:18Z UTC) — integration + fresh verification pass
 
 ### S-1EB9F828 working log
