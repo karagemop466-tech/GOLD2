@@ -62,11 +62,13 @@
       "verification_status": "official_policies_partial",
       "flags": [
         "F-010",
-        "F-021"
+        "F-021",
+        "F-039",
+        "F-040"
       ],
       "field_evidence": {
         "contact_phone": [
-          "+1\u2011800\u2011242\u20112728"
+          "+1‑800‑242‑2728"
         ],
         "contact_email": [
           "service@bluenile.com"
@@ -99,19 +101,19 @@
           "custom orders"
         ],
         "return_exclusions_detail": [
-          "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and \u201cFinal Sale\u201d items are not eligible for return or exchange."
+          "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and “Final Sale” items are not eligible for return or exchange."
         ],
         "resize_policy": [
           "Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase if the design permits."
         ],
         "payment_methods_verified": [
-          "Credit cards: We accept major credit cards, including Visa\u00ae, Mastercard\u00ae, American Express\u00ae, and Discover\u00ae",
-          "We accept payment through PayPal\u00ae for orders totaling up to $50,000",
+          "Credit cards: We accept major credit cards, including Visa®, Mastercard®, American Express®, and Discover®",
+          "We accept payment through PayPal® for orders totaling up to $50,000",
           "We accept secure wire transfers from most banking institutions",
           "We offer financing options through Affirm and Splitit"
         ],
         "payment_note": [
-          "Blue Nile U.S. payment methods include only Visa\u00ae Debit and Mastercard\u00ae Debit cards. No other debit cards are accepted.",
+          "Blue Nile U.S. payment methods include only Visa® Debit and Mastercard® Debit cards. No other debit cards are accepted.",
           "this option is currently unavailable for purchases totaling $50,000 or more"
         ],
         "reputation_accreditation": [
@@ -339,7 +341,7 @@
         ],
         "return_window_days": [
           "Eligible items below $15,000 can be returned within 30 days",
-          "VRAI\u2019s standard 30-day return window from delivery"
+          "VRAI’s standard 30-day return window from delivery"
         ],
         "return_window_basis": [
           "Eligible items below $15,000 can be returned within 30 days for full credit to store or refund minus recycling fee to the original payment method. Eligible items above $15,000 can be returned within 30 days for full credit to store."
@@ -538,7 +540,7 @@
       "return_excludes_resized": true,
       "return_excludes_custom": true,
       "return_exclusions_detail": "Engraved items, custom items, and modified items are final sale.",
-      "resize_policy": "Paid resizing starting at $50\u2013$60; modified items become final sale.",
+      "resize_policy": "Paid resizing starting at $50–$60; modified items become final sale.",
       "payment_methods_verified": [
         "credit",
         "debit",
@@ -607,7 +609,7 @@
           "Modified Items"
         ],
         "resize_policy": [
-          "paid resizing starting at $50\u2013$60"
+          "paid resizing starting at $50–$60"
         ],
         "payment_methods_verified": [
           "All major credit & debit cards, PayPal, Shop Pay, Affirm, AfterPay, Google Pay, and Apple Pay."
@@ -888,7 +890,7 @@
         "Affirm"
       ],
       "payment_source_url": "https://www.factorydirectjewelry.com/return-policy",
-      "payment_note": "Major credit cards accepted; BBB review history includes disputed post-chargeback billing \u2014 monitor credit card statements closely (F-035).",
+      "payment_note": "Major credit cards accepted; BBB review history includes disputed post-chargeback billing — monitor credit card statements closely (F-035).",
       "independent_test_permission": null,
       "independent_reputation": {
         "platform": "Better Business Bureau",
