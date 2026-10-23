@@ -1,0 +1,3 @@
+PASS: 2 records, 6 pages; official row links, evidence consistency, blank unknowns, local links, static security checks.
+OPEN: missing product evidence and gold quote. Automated audit cannot establish truth; recheck hallucinations after every review.
+exit=0

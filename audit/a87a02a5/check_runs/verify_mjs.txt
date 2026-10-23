@@ -1,0 +1,3 @@
+PASS evidence consistency: 41 products, 77 source records, 25 findings; 0 purchase approvals.
+69 non-blocking review warnings recorded in test-results/evidence-audit.json. Unknowns stay blank; automated tests cannot certify truth.
+exit=0
