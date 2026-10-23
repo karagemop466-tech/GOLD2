@@ -428,8 +428,8 @@ No manual user input is required; this session works autonomously. Findings will
 |----|------|--------|-------|------------|
 | T16 | Live line-by-line re-verification of product rows, gold reference, and retailer policy records | done (see coverage note) | S-062F314F | `data/catalog.json`, `data/gold-price.json`, `research/evidence.json`, `evidence/**`, `audit/062f314f/**` |
 | T17 | Hallucination/security re-scan, independent audit, and fixes | done | S-062F314F | `tools/**`, `scripts/**`, `reports/**`, `reviews/062f314f*` |
-| T18 | Site build, link, accessibility, and dashboard review | in progress | S-062F314F | `explore/**`, root `*.html`, `assets/**`, `site/**` |
-| T19 | Final integration, PR to `main`, merge, and GitHub Pages deployment verification | in progress | S-062F314F | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
+| T18 | Site build, link, accessibility, and dashboard review | done | S-062F314F | `explore/**`, root `*.html`, `assets/**`, `site/**` |
+| T19 | Final integration, PR to `main`, merge, and GitHub Pages deployment verification | done | S-062F314F | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
 
 - **2026-10-23 — Gold reference corrected.** Live WGC page displayed `4,024.45` USD/oz with page data blocks dated `22 October, 2026`. The stored 4,028.53 (from 2026-10-22) is moved to `superseded_observations`; `quote_date` stays null because the moving header carries no timestamp (F-026). JM Bullion dealer reference updated 4,039.76 → **4,035.54** using the page's own `Oct 23, 2026 at 5:56 AM EDT` timestamp.
 - **2026-10-23 — Price drift found and corrected (not silent).** Menē Rose Ring `$1,346 → $1,336`; Menē Knot Ring `$1,465 → $1,454` (both official product pages, USD). Brilliant Earth's Classic Six-Prong setting re-rendered in a **USD locale at `$890 (Setting Only)`**; the 2026-10-22 `EUR 990` capture is preserved as a superseded locale observation, with no exchange conversion. Root item `BE-121H6` now carries USD 890 with field-scoped evidence; flag F-007 was re-scoped from "rendered EUR" to the locale-change finding and linked to the Brilliant Earth retailer record.
@@ -438,3 +438,24 @@ No manual user input is required; this session works autonomously. Findings will
 - **2026-10-23 — Two findings added** to `data/review.json` (`reobservation-2026-10-23`, `newly-rendered-amounts`), 20 → **22 findings**; both published on the Flagged for Review page.
 - **2026-10-23 — Tests/data coupling fixed without weakening checks.** `tests/domain.test.mjs` no longer hardcodes the dealer reference (it reads `catalog.meta.marketReference.amount`); `tests/build.test.mjs` now asserts the USD setting display `$890.00` and asserts the superseded `€990.00` is **not** rendered. Full local suite passes: `tools/qa.py` (10 checks, 0 failures), `node --test` 23/23, `scripts/verify.mjs`, `scripts/check-links.mjs` (30 pages), `scripts/security.mjs`, `reviews/independent_snapshot_audit.py`, `scripts/audit.py`, `scripts/test.js`, `audit/8c810c15/security_and_hallucination_scanner.py` (0 findings, 117 controls), `audit/8c810c15/test_calculator_and_scanner.py` 6/6, `tools/test_calculator.js`.
 - **Hallucination-risk note for the next session:** the recurring failure mode here is *locale and variant drift*, not only invented numbers. Re-open each official page, record the currency the page itself shows, and never carry a previous amount forward as current.
+
+## S-062F314F integration record
+
+| Record | Verified result |
+|---|---|
+| Integration PR | [#22](https://github.com/karagemop466-tech/GOLD2/pull/22) — `MERGED` 2026-10-23T10:05:59Z |
+| Merge commit | `693e472cf329bc1fd0c72f65b9c478b216ba7789` |
+| Pre-merge PR checks | `GOLD2 verify` run `39936382818` pass · `Legacy dashboard verify` run `39936382662` pass · `Evidence dashboard` run `39936382687` pass |
+| Post-merge `main` checks | `GOLD2 verify` run `39936670095` success · `Legacy dashboard verify` run `39936670146` success · `Evidence dashboard` run `39936670101` success |
+| Pages deployment | `pages-build-deployment` run `39936669544` success; Pages build latest `built` for commit `693e472` at 2026-10-23T10:06:21Z |
+| Live URL | https://karagemop466-tech.github.io/GOLD2/ |
+| Live re-read | Root page returned `$4,024.45 / troy oz`, `quote date unconfirmed — F-026 · retrieved 2026-10-23`, `5` assigned root prices with Brilliant Earth `USD $890.00` in the Solitaire category; `explore/` returned `THE EVIDENCE EDIT / 23 OCT 2026`, 32 entries, 10 price observations, 0 purchase-ready |
+| Local suite before merge | `tools/qa.py` PASS 10/0/3 · `node --test` 23/23 · `verify.mjs` PASS · `check-links.mjs` 30 pages · `security.mjs` PASS · `npm audit` 0 vulnerabilities · Playwright+axe 29 pages desktop/mobile, no A/AA violations · `independent_snapshot_audit.py` 0 findings / 6 controls · `security_and_hallucination_scanner.py` 0 findings / 117 controls · calculator suites PASS |
+
+### What the CI caught that the local pass first missed
+
+The first PR run failed at **step 9, the independent cross-schema review**. Locally that script had been skimmed with `tail`, which hid a real finding: its `REVIEW-PRICE-MISMATCH` control reads the 2026-10-22 review table, which still asserted only `€990` for Brilliant Earth. Fixed by adding a **dated errata note** to that historical row (`reviews/2026-10-22-6ca03571.md`) that keeps the original claim and records the 2026-10-23 USD-locale `$890.00` observation — not by relaxing the check. Lesson recorded: never judge a control by `tail`; check its exit code.
+
+### Completion boundary
+
+T16 coverage: **14 of 32 product rows were re-fetched on 2026-10-23** (all ten priced rows plus Blue Nile `BN-203348`, VRAI, Auvere and the four Catbird pages). The other 18 keep dated 2026-10-22 observations and are not described as re-verified. No physical inspection, hallmark check, XRF assay, scale weighing or purchase occurred. Flagged irregularities (F-007 locale drift, F-025 unconfirmed currency, F-026 unconfirmed header timestamp, plus findings `reobservation-2026-10-23` and `newly-rendered-amounts`) are published on the Flagged for Review pages and block nothing. **Continue to look for hallucinations after every review.**
