@@ -511,6 +511,14 @@ and every conflict is recorded here rather than silently choosing a side.
 
 **Post-merge verification:** `python3 tools/build_site.py` → 13 pages; `python3 tools/qa.py` → **PASS, 11 checks, 0 failures, 3 coverage warnings**; `reviews/independent_snapshot_audit.py` → 0 findings; `audit/8c810c15/security_and_hallucination_scanner.py` → 0 findings, 154 controls.
 
+
+### S-062F314F final publication record
+
+- **PR [#24](https://github.com/karagemop466-tech/GOLD2/pull/24) merged** 2026-10-23T10:12:33Z, merge commit `9327379acab47820700476fa0e5704becd535347`. Pre-merge checks: `GOLD2 verify` `39937253953`, `Legacy dashboard verify` `39937253945`, `Evidence dashboard` `39937253950` — all pass.
+- **Concurrency encountered and resolved:** session `S-8B9E189A` merged PR #23 (then PR #26) while this branch was open. `origin/main` was merged into `arena/062f314f-gold2`; the only conflict was `COORDINATION.md`, where **both** records were kept. Their merged data files were taken as-is (this session's PR #22 values — `$4,024.45`, Menē `$1,336`/`$1,454`, Brilliant Earth `$890` USD, 22 findings — are all still present in `main`). No other session's work was discarded, and the merged state re-ran clean locally: `tools/qa.py` PASS 11/0/3, `node --test` 23/23, `verify.mjs`, `check-links.mjs` (30 pages / 71 targets), `security.mjs`, and both auditor suites.
+- **Pages deployment after merge:** `pages-build-deployment` run `39937501830` success; Pages build `built` for `120230f` at 2026-10-23T10:13:14Z. Live re-read of https://karagemop466-tech.github.io/GOLD2/ returned `$4,024.45 / troy oz`, `retrieved 2026-10-23`, `USD $890.00` in the Solitaire category, 20 entries / 6 retailers / 30 flags, and the no-hallucination rule at the top of the page.
+- **Hallucination check remains continuous:** the next reviewer should re-open every official page, because the failure mode observed today was locale/variant drift (Brilliant Earth currency switch, Menē metal-price movement, Catbird/Zales currency ambiguity), not only invented numbers.
+
 ## Publication record — S-8B9E189A (2026-10-23)
 
 - **PR #23 — merged:** https://github.com/karagemop466-tech/GOLD2/pull/23
