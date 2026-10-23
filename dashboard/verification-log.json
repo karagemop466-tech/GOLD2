@@ -1,0 +1,23 @@
+{
+  "verified_date": "2026-10-23",
+  "session": "S-9B875C81",
+  "spot_usd_per_troy_oz": 4024.45,
+  "counts": {
+    "html_pages": 14,
+    "rings": 26,
+    "retailers": 11,
+    "flags": 7
+  },
+  "passes": {
+    "P1-sources": "PASS",
+    "P2-prices": "PASS",
+    "P3-blanks": "PASS",
+    "P4-cross-refs": "PASS",
+    "P5-retailers": "PASS",
+    "P8-evidence-quotes": "PASS",
+    "P6-data-site-sync": "PASS",
+    "P7-link-integrity": "PASS"
+  },
+  "status": "PASS",
+  "failures": []
+}
