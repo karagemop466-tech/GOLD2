@@ -9,6 +9,9 @@ from __future__ import annotations
 
 import html
 import json
+import re
+import hashlib
+INLINE_STYLES = {}
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -16,12 +19,12 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 SITE = ROOT  # Pages is configured as legacy main /.
 CATEGORY_FILES = [
-    ("solitaire", "solitaire.json"),
-    ("halo-pave", "halo-pave.json"),
-    ("three-stone-vintage", "three-stone-vintage.json"),
-    ("18k", "18k.json"),
-    ("budget", "budget.json"),
-    ("solid-gold", "solid-gold.json"),
+    ("solid-gold", DATA / "solid-gold-verified.json"),
+    ("solitaire", DATA / "listings" / "solitaire.json"),
+    ("halo-pave", DATA / "listings" / "halo-pave.json"),
+    ("three-stone-vintage", DATA / "listings" / "three-stone-vintage.json"),
+    ("18k", DATA / "listings" / "18k.json"),
+    ("budget", DATA / "listings" / "budget.json"),
 ]
 DASH = "&mdash;"
 
@@ -34,7 +37,7 @@ CSS = r"""
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-a{color:var(--info);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:3px solid #c4932d;outline-offset:3px}
+a{color:var(--info);text-decoration:none}p a,li a,.note a,dd a,td a{text-decoration:underline;text-underline-offset:2px}a:hover{text-decoration:underline}a:focus-visible{outline:3px solid #c4932d;outline-offset:3px}
 .wrap{max-width:1220px;margin:0 auto;padding:0 20px}.skip-link{position:absolute;left:-9999px;top:0;background:#fff;padding:10px;z-index:100}.skip-link:focus{left:10px}
 header.top{position:sticky;top:0;z-index:30;background:rgba(251,250,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .topbar{display:flex;align-items:center;gap:18px;min-height:62px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px;color:var(--ink)}
@@ -47,7 +50,7 @@ main{padding:26px 0 60px}h1{font-size:31px;line-height:1.18;margin:6px 0 10px;le
 .tablewrap{overflow:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);box-shadow:var(--shadow)}table{border-collapse:collapse;width:100%;font-size:13.2px;min-width:960px}th,td{text-align:left;padding:11px 13px;border-bottom:1px solid #f0ece2;vertical-align:top}th{background:#faf8f2;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);white-space:nowrap;border-bottom:1px solid var(--line)}tbody tr:hover{background:#fffdf8}tbody tr:last-child td{border-bottom:none}td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td.blank,.blank{color:#6d685f}.itemname{font-weight:650;line-height:1.35}.sub{color:var(--muted);font-size:12.1px;margin-top:3px;overflow-wrap:anywhere}.src{font-size:12.2px}.chip{display:inline-block;background:#f4f1e9;border:1px solid var(--line);border-radius:7px;padding:1px 6px;font-size:11.5px;color:var(--muted);margin-right:4px}
 .catgrid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.catlink{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);color:inherit}.catlink:hover{border-color:#d9c99b;text-decoration:none;transform:translateY(-1px)}.catlink .c{font-size:12px;color:var(--gold);font-weight:700;letter-spacing:.08em;text-transform:uppercase}.catlink .t{font-size:17px;font-weight:700;margin:6px 0 3px}.catlink .d{font-size:12.7px;color:var(--muted)}
 ul.clean{margin:8px 0 0;padding-left:18px;color:#333a44}ul.clean li{margin:4px 0}.checklist{list-style:none;margin:0;padding:0}.checklist li{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed #efeade;font-size:13.8px}.checklist li:last-child{border-bottom:none}.checklist .k{flex:0 0 22px;font-weight:800;color:var(--gold)}.note{background:#faf8f2;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:12px 14px;font-size:13.4px;color:#4a5260}.flag{padding:18px;border-radius:var(--radius);border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow)}.flag.high{border-left:4px solid var(--bad)}.flag.medium{border-left:4px solid #c98b12}.flag.low{border-left:4px solid #8a95a6}.flag h3{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:6px}.flag p{margin:6px 0;color:#3d4552;font-size:13.6px}.flag .meta{font-size:12.2px;color:var(--muted);margin-top:8px}.flag details{margin-top:8px}.flag summary{cursor:pointer;color:var(--info);font-size:12.5px;font-weight:650}
-label.f{display:block;font-size:12.3px;font-weight:700;color:var(--muted);margin:0 0 4px;letter-spacing:.03em}input,select{width:100%;padding:10px 11px;border:1px solid #ddd6c6;border-radius:9px;font-size:14px;background:#fff;color:var(--ink);font-variant-numeric:tabular-nums}input:focus,select:focus{outline:2px solid #e6cf95;outline-offset:1px;border-color:#cbb271}.calcgrid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}.out{margin-top:16px;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}.out .box{background:#fbf7ec;border:1px solid #ecdfbd;border-radius:10px;padding:13px 15px}.out .box .l{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:#7a6a44;font-weight:700}.out .box .v{font-size:21px;font-weight:750;letter-spacing:-.4px;margin-top:3px}.out .box .s{font-size:11.8px;color:#7a6a44;margin-top:2px}pre.qa{background:#1c1f24;color:#e8e6df;padding:16px;border-radius:12px;overflow:auto;font-size:12.3px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:12.6px}footer .row{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:13.4px}.kv dt{color:var(--muted)}.kv dd{margin:0;font-weight:600;overflow-wrap:anywhere}.goldref{display:flex;gap:28px;flex-wrap:wrap;align-items:baseline;margin-top:6px}.goldref .quote{font-size:27px;font-weight:750}.goldref .unit{font-size:14px;color:var(--muted)}.mt16{margin-top:16px}.mt18{margin-top:18px}.small{font-size:12.5px}.nowrap{white-space:nowrap}
+label.f{display:block;font-size:12.3px;font-weight:700;color:var(--muted);margin:0 0 4px;letter-spacing:.03em}input,select{width:100%;padding:10px 11px;border:1px solid #ddd6c6;border-radius:9px;font-size:14px;background:#fff;color:var(--ink);font-variant-numeric:tabular-nums}input[type=checkbox]{width:auto;margin:8px 8px 16px 0}input:focus,select:focus{outline:2px solid #e6cf95;outline-offset:1px;border-color:#cbb271}.calcgrid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}.out{margin-top:16px;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}.out .box{background:#fbf7ec;border:1px solid #ecdfbd;border-radius:10px;padding:13px 15px}.out .box .l{font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:#7a6a44;font-weight:700}.out .box .v{font-size:21px;font-weight:750;letter-spacing:-.4px;margin-top:3px}.out .box .s{font-size:11.8px;color:#7a6a44;margin-top:2px}pre.qa{background:#1c1f24;color:#e8e6df;padding:16px;border-radius:12px;overflow:auto;font-size:12.3px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:12.6px}footer .row{display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:13.4px}.kv dt{color:var(--muted)}.kv dd{margin:0;font-weight:600;overflow-wrap:anywhere}.goldref{display:flex;gap:28px;flex-wrap:wrap;align-items:baseline;margin-top:6px}.goldref .quote{font-size:27px;font-weight:750}.goldref .unit{font-size:14px;color:var(--muted)}.mt16{margin-top:16px}.mt18{margin-top:18px}.small{font-size:12.5px}.nowrap{white-space:nowrap}
 @media(max-width:640px){h1{font-size:25px}.topbar{min-height:auto;padding:10px 0}nav.main{margin-left:0}.wrap{padding:0 14px}.banner,.card{padding:17px}.kv{grid-template-columns:1fr}}
 """
 
@@ -96,6 +99,10 @@ def basis_badge(basis: str) -> str:
 
 
 def status_badge(status: str) -> str:
+    if status == "verified_solid_gold_and_weight":
+        return '<span class="badge b-ok">Solid 14k + weight</span>'
+    if status.startswith("verified_solid_gold"):
+        return '<span class="badge b-ok">Explicit Solid 14k</span>'
     labels = {
         "partial_official_fields": "official fields · gaps flagged",
         "partial_eur_price": "EUR official price · gaps flagged",
@@ -111,8 +118,8 @@ def external_link(url: str, label: str) -> str:
 
 def all_items() -> list[dict]:
     items = []
-    for _, fname in CATEGORY_FILES:
-        payload = load(DATA / "listings" / fname)
+    for _, lpath in CATEGORY_FILES:
+        payload = load(lpath)
         for item in payload["items"]:
             item["_category_id"] = payload["category_id"]
             item["_category_label"] = payload["category_label"]
@@ -121,7 +128,7 @@ def all_items() -> list[dict]:
 
 
 def category_payloads() -> list[dict]:
-    return [load(DATA / "listings" / fname) for _, fname in CATEGORY_FILES]
+    return [load(lpath) for _, lpath in CATEGORY_FILES]
 
 
 def retrieval_dates(items: list[dict]) -> list[str]:
@@ -131,12 +138,12 @@ def retrieval_dates(items: list[dict]) -> list[str]:
 def page(title: str, active: str, body: str, retrieved: str, include_calculator: bool = False) -> str:
     nav_items = [
         ("index.html", "Dashboard", "dashboard"),
+        ("solid-gold.html", "Solid Gold", "solid-gold"),
         ("solitaire.html", "Solitaire", "solitaire"),
         ("halo-pave.html", "Halo & Pavé", "halo-pave"),
         ("three-stone-vintage.html", "Three-Stone", "three-stone-vintage"),
         ("18k.html", "18K", "18k"),
         ("budget.html", "10K", "budget"),
-        ("solid-gold.html", "Solid gold", "solid-gold"),
         ("retailers.html", "Retailers", "retailers"),
         ("prices.html", "Calculator", "prices"),
         ("flags.html", "Flagged", "flags"),
@@ -148,7 +155,7 @@ def page(title: str, active: str, body: str, retrieved: str, include_calculator:
 
     links = "".join(nav_link(href, label, key) for href, label, key in nav_items)
     script = '<script src="assets/calculator.js" defer></script>' if include_calculator else ""
-    return f"""<!doctype html>
+    result = f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -156,7 +163,7 @@ def page(title: str, active: str, body: str, retrieved: str, include_calculator:
 <title>{esc(title)} · GOLD2</title>
 <meta name="description" content="Source-backed gold engagement-ring research with dated prices, official links, explicit gaps, and a nominal fine-gold calculator.">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <link rel="stylesheet" href="assets/style.css">
 {script}
 </head>
@@ -167,6 +174,7 @@ def page(title: str, active: str, body: str, retrieved: str, include_calculator:
   <nav class="main" aria-label="Main navigation">{links}</nav>
 </div></header>
 <main id="main-content"><div class="wrap">
+<section class="note"><strong>No hallucinations. No invented prices.</strong> Root register covers 20 source-checked entries across six official sellers (including <a href="solid-gold.html"><strong>Solid Gold</strong></a>). <a href="explore/"><strong>Open all 32 researched entries across nine sellers →</strong></a> or <a href="flags.html">Flagged for Review</a>. Seller statements and automated checks do not independently prove truth or purity.</section>
 {body}
 </div></main>
 <footer><div class="wrap row">
@@ -176,6 +184,20 @@ def page(title: str, active: str, body: str, retrieved: str, include_calculator:
 </body>
 </html>
 """
+
+
+    def externalize(match):
+        tag = match.group(0)
+        style = match.group(1)
+        key = 'legacy-' + hashlib.sha256(style.encode()).hexdigest()[:12]
+        INLINE_STYLES[key] = style
+        tag = re.sub(r'\sstyle="[^"]*"', '', tag)
+        if 'class="' in tag:
+            tag = tag.replace('class="', 'class="' + key + ' ', 1)
+        else:
+            tag = tag[:-1] + ' class="' + key + '">'
+        return tag
+    return re.sub(r'<[^>]+\sstyle="([^"]*)"[^>]*>', externalize, result)
 
 
 def listing_table(items: list[dict]) -> str:
@@ -211,7 +233,11 @@ def listing_table(items: list[dict]) -> str:
         elif item.get("price") is None:
             price += '<div class="sub">no price assigned; see flag</div>'
 
-        stone_scope = "centre stone not included" if item.get("center_stone_included") is False else "diamond ring as listed"
+        stone_scope = (
+            "all-metal solid gold ring (no stones)"
+            if item.get("all_metal_design")
+            else ("centre stone not included" if item.get("center_stone_included") is False else "complete ring as listed")
+        )
         source = external_link(item["source_url"], "official listing")
         source += f'<div class="sub">retrieved {esc(item["retrieved_at"])}</div>'
         source += f'<div class="sub"><a href="{esc(item["evidence_file"])}">field evidence</a></div>'
@@ -271,7 +297,7 @@ def build_index(items, payloads, flags, gold, qa_summary, retrieved):
         ("Purity", "Karat is quoted only where the retailer states it. It is a seller claim, not an XRF result."),
         ("Solid gold", f"{solid_missing} of {len(items)} item-specific captures do not state the required phrase; all remain flagged (F-001)."),
         ("Hallmark", f"{hallmark_missing} of {len(items)} rows lack documented physical karat/maker’s marks; stock and source IDs are not hallmarks (F-002)."),
-        ("Weight", f"Metal-only grams are published for {weights} of {len(items)} rows; every other weight is blank (F-003)."),
+        ("Weight", f"A size-specific seller metal-weight claim is published for {weights} of {len(items)} rows; every other weight is blank (F-003)."),
         ("Seller", "Official contact, payment, and return policies are separated from scoped independent BBB profile data. Neither is an endorsement."),
         ("Price", f"{priced} rows have explicitly assigned prices; {len(items)-priced} are blank, including {ambiguous} unlabeled Zales displays. {rejected} cached-price discrepancies are logged as rejected evidence."),
         ("Returns", "Resized/custom exclusions, VRAI fees, Brilliant Earth engraving terms, and Zales resizing-channel rules are shown per retailer."),
@@ -299,7 +325,7 @@ def build_index(items, payloads, flags, gold, qa_summary, retrieved):
 </section>
 
 <h1>Gold engagement-ring research dashboard</h1>
-<p class="lead">{len(items)} researched listings from {len({item['retailer_id'] for item in items})} retailers, organized into {len(payloads)} categories. Official page claims are not physical verification: item-specific “solid gold” wording is missing on {solid_missing} of {len(items)} rows and hallmark/maker’s-mark documentation on {hallmark_missing}, while only {weights} row publishes a metal weight.</p>
+<p class="lead">{len(items)} researched listings from {len({item['retailer_id'] for item in items})} official retailers, organized into {len(payloads)} categories (including {len(items)-solid_missing} explicit <em>Solid 14k Gold</em> rings). Official page claims are not physical verification: physical hallmark/maker’s-mark stamps remain unverified on all {len(items)} pages, while {weights} rows publish stone-free metal weights.</p>
 
 <div class="grid g4 mt18">
   <div class="card stat"><div class="n">{len(items)}</div><div class="l">researched listings</div></div>
@@ -311,7 +337,7 @@ def build_index(items, payloads, flags, gold, qa_summary, retrieved):
 <div class="card mt16">
   <div class="eyebrow">Dated gold reference used by the calculator</div>
   <div class="goldref"><div class="quote">${gold['usd_per_troy_oz']:,.2f}<span class="unit"> / troy oz</span></div>
-    <div class="sub">quote date {esc(gold['quote_date'])} · retrieved {esc(gold['retrieved_at'])}<br>{external_link(gold['source_url'], gold['source_name'])}</div>
+    <div class="sub">quote date {esc(gold['quote_date'] or 'unconfirmed — F-026')} · retrieved {esc(gold['retrieved_at'])}<br>{external_link(gold['source_url'], gold['source_name'])}</div>
     <a class="badge b-info" href="prices.html">Open nominal melt calculator →</a></div>
 </div>
 
@@ -333,7 +359,7 @@ def build_category(payload, flags, retrieved):
         for flag in flag_defs
     )
     body = f"""
-<div class="eyebrow">{esc(payload['category_label'])}</div><h1>{esc(payload.get('category_title') or payload['category_label'] + ' gold engagement rings')}</h1>
+<div class="eyebrow">{esc(payload['category_label'])}</div><h1>{esc(payload['category_label'])} gold engagement rings</h1>
 <p class="lead">{len(items)} researched listing(s). {esc(price_summary(items))}. Blank cells are unconfirmed values, not zero or estimates.</p>
 <div class="note" style="margin-bottom:16px"><strong>Read price basis before comparing.</strong> Setting/configurator prices exclude the centre stone; complete-ring rows list diamond rings. No cross-basis ranking or currency conversion is applied.</div>
 {listing_table(items)}
@@ -374,7 +400,7 @@ def build_retailers(retailers, items, retrieved):
         )
         detail_cards.append(
             f'<div class="card"><h3>{esc(retailer["name"])}</h3><p class="small"><strong>Return exclusions:</strong> {esc(retailer["return_exclusions_detail"])}</p>'
-            f'<p class="small"><strong>Resize terms:</strong> {esc(retailer["resize_policy"]) if retailer.get("resize_policy") else blank("Not stated in retrieved policy text")}</p>'
+            f'<p class="small"><strong>Resize terms:</strong> {esc(retailer["resize_policy"])}</p>'
             f'<p class="small"><strong>Return shipping:</strong> {esc(retailer["return_free_shipping_basis"])}</p>'
             f'<p class="small"><strong>Payment scope:</strong> {esc(retailer["payment_note"])}</p>'
             f'<a href="{esc(retailer["evidence_file"])}">Read field-scoped policy evidence</a></div>'
@@ -382,8 +408,6 @@ def build_retailers(retailers, items, retrieved):
         reputation = retailer["independent_reputation"]
         if reputation.get("bbb_rating") is not None:
             bbb_status = f'{esc(reputation["bbb_rating"])} · ' + ("accredited" if reputation.get("bbb_accredited") else "not accredited")
-        elif reputation.get("identity_status") == "not_assessed":
-            bbb_status = blank("Independent reputation not assessed in this pass")
         else:
             bbb_status = blank("Metrics withheld; identity not confirmed")
         if reputation.get("review_average_out_of_5") is not None:
@@ -396,13 +420,12 @@ def build_retailers(retailers, items, retrieved):
             complaints = blank("Not assigned")
         profile_url = reputation.get("profile_url") or reputation.get("candidate_profile_url")
         profile_label = "BBB profile" if reputation.get("profile_url") else "candidate BBB profile"
-        rep_sources = external_link(profile_url, profile_label) if profile_url else blank("No BBB profile captured in this pass")
+        rep_sources = external_link(profile_url, profile_label)
         if reputation.get("reviews_url"):
             rep_sources += f'<div class="sub">{external_link(reputation["reviews_url"], "reviews")} · {external_link(reputation["complaints_url"], "complaints")}</div>'
-        if reputation.get("retrieved_at"):
-            rep_sources += f'<div class="sub">retrieved {esc(reputation["retrieved_at"])}</div>'
+        rep_sources += f'<div class="sub">retrieved {esc(reputation["retrieved_at"])}</div>'
         reputation_rows.append(
-            f'<tr><td><strong>{esc(retailer["name"])}</strong><div class="sub">{esc(reputation["profile_scope"] or "No identity-confirmed BBB profile captured in this pass")}</div></td>'
+            f'<tr><td><strong>{esc(retailer["name"])}</strong><div class="sub">{esc(reputation["profile_scope"])}</div></td>'
             f'<td>{bbb_status}</td><td>{reviews}</td><td>{complaints}</td><td>{rep_sources}</td></tr>'
         )
     body = f"""
@@ -415,7 +438,7 @@ def build_retailers(retailers, items, retrieved):
 <h2>Independent BBB profile data</h2>
 <p class="lead">Dated profile metrics are not a seller scorecard or endorsement. Complaint narratives contain third-party allegations, not established facts. Scopes differ, so no cross-retailer ranking is made.</p>
 <div class="tablewrap"><table><thead><tr><th>Retailer / profile scope</th><th>BBB label</th><th>Customer reviews</th><th>Complaints</th><th>Independent sources</th></tr></thead><tbody>{''.join(reputation_rows)}</tbody></table></div>
-<div class="note mt16">VRAI’s candidate metrics are withheld because identity is not confirmed (F-022). Zales figures belong to a combined Signet profile covering other brands (F-023). Stone and Strand has no BBB profile captured in this pass; its reputation cells stay blank rather than inferred. BBB states that it does not endorse businesses and does not guarantee third-party information.</div>
+<div class="note mt16">VRAI’s candidate metrics are withheld because identity is not confirmed (F-022). Zales figures belong to a combined Signet profile covering other brands (F-023). BBB states that it does not endorse businesses and does not guarantee third-party information.</div>
 <h2>Marketplace note</h2><div class="note"><strong>James Allen:</strong> the captured item-41515 URL redirected to a sold-out Blue Nile page. Included James Allen designs are sold through Blue Nile, so seller policies and contacts are Blue Nile’s. See <a href="flags.html#f-009">F-009</a>.</div>
 """
     return page("Retailers", "retailers", body, retrieved)
@@ -464,7 +487,7 @@ def build_prices(gold, items, retrieved):
         melt6 = fine6 / grams_oz * spot
         ref_rows.append(
             f'<tr><td class="num">{karat}K</td><td class="num">{karat/24*100:.2f}%</td><td class="num">{fine2:.3f} g</td>'
-            f'<td class="num">{fine4:.3f} g</td><td class="num">{fine6:.3f} g</td><td class="num">${melt6:,.2f}</td></tr>'
+            f'<td class="num">{fine4:.3f} g</td><td class="num">{fine6:.3f} g</td><td class="num">${melt6:,.2f}</td><td>{external_link(gold["conversion_source_url"], "NIST units")} · {external_link(gold["karat_source_url"], "Karat context")} · {external_link(gold["source_url"], "Recorded input")}</td></tr>'
         )
     known_rows = "".join(
         f'<tr><td>{external_link(item["source_url"], item["name"])}</td><td class="num">{item["karat"]}K</td>'
@@ -474,10 +497,13 @@ def build_prices(gold, items, retrieved):
     )
     body = f"""
 <div class="eyebrow">Nominal gold arithmetic, not appraisal</div><h1>Gold weight &amp; theoretical melt calculator</h1>
-<p class="lead">Enter a documented <strong>metal-only</strong> weight, excluding stones and non-gold components. The calculator applies nominal karat/24 and the dated quote. It does not measure purity or estimate resale, refiner payout, or fair retail price.</p>
+<p class="lead">Enter a documented <strong>metal-only</strong> weight, excluding stones and non-gold components. The calculator applies nominal karat/24 and an earlier recorded WGC input whose exact quote-as-of time is unconfirmed (F-026). These are conditional assumptions, not verified product values. It does not measure purity or estimate resale, refiner payout, or fair retail price.</p>
 <div class="card">
+  <p><a href="explore/calculator/">Expanded evidence-gated calculator →</a></p>
+  <label><input id="root-scenario-ack" type="checkbox"> I acknowledge this is a conditional USD scenario, not verified ring weight, purity or value.</label>
   <div class="calcgrid">
-    <div><label class="f" for="w">Metal-only weight (g)</label><input id="w" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Documented grams"></div>
+    <div><label class="f" for="w">Metal-only weight (g / unit)</label><input id="w" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Documented mass"></div>
+    <div><label class="f" for="unit">Unit (NIST)</label><select id="unit"><option value="g" selected>Grams (g)</option><option value="dwt">Pennyweights (dwt)</option><option value="ozt">Troy ounces (ozt)</option></select></div>
     <div><label class="f" for="k">Listed karat</label><select id="k"><option value="10">10K</option><option value="14" selected>14K</option><option value="18">18K</option><option value="22">22K</option><option value="24">24K</option></select></div>
     <div><label class="f" for="spot">Gold spot (USD / troy oz)</label><input id="spot" type="number" min="0" step="0.01" inputmode="decimal" value="{spot:.2f}"></div>
     <div><label class="f" for="ask">Asking price (optional, USD)</label><input id="ask" type="number" min="0" step="0.01" inputmode="decimal" placeholder="USD only"></div>
@@ -488,15 +514,15 @@ def build_prices(gold, items, retrieved):
     <div class="box"><div class="l">Asking ÷ melt</div><div class="v" id="ratio">—</div><div class="s">arithmetic only, not a fair-price score</div></div>
     <div class="box"><div class="l">Asking − melt</div><div class="v" id="over">—</div><div class="s">not a workmanship or stone valuation</div></div>
   </div>
-  <p class="sub mt16">Prefilled quote: <strong>${spot:,.2f}/oz, {esc(gold['quote_date'])}</strong> — {external_link(gold['source_url'], gold['source_name'])}. Changing the spot field uses your input, not a newly verified quote. Do not enter a EUR asking price in the USD field.</p>
+  <p class="sub mt16">Earlier recorded input, not live: <strong>${spot:,.2f}/oz, {esc(gold['quote_date'] or 'unconfirmed — F-026')}</strong> — {external_link(gold['source_url'], gold['source_name'])}. Changing the spot field uses your input, not a newly verified quote. Do not enter a EUR asking price in the USD field.</p>
 </div>
 <div class="note mt16"><strong>Constants and boundaries:</strong> 1 troy ounce = {grams_oz} g from the {external_link(gold['conversion_source_url'], 'NIST conversion chart')}. Karat labeling context comes from {external_link(gold['karat_source_url'], '16 CFR 23.3 (eCFR)')}. Nominal karat arithmetic is not an assay.</div>
 <h2>Hypothetical quick reference — not listing data</h2>
-<div class="tablewrap"><table><thead><tr><th>Karat</th><th>Nominal purity</th><th>2 g metal</th><th>4 g metal</th><th>6 g metal</th><th>Theoretical melt of 6 g</th></tr></thead><tbody>{''.join(ref_rows)}</tbody></table></div>
+<div class="tablewrap"><table><thead><tr><th>Karat</th><th>Nominal purity</th><th>2 g metal</th><th>4 g metal</th><th>6 g metal</th><th>Conditional theoretical value of 6 g</th><th>Official input / method</th></tr></thead><tbody>{''.join(ref_rows)}</tbody></table></div>
 <p class="sub">These are hypothetical calculations at the quote above. They are not retailer claims, product weights, or appraisals.</p>
 <h2>Rows with a published metal-only weight</h2>
-<div class="tablewrap"><table><thead><tr><th>Item</th><th>Karat</th><th>Published metal weight</th><th>Nominal fine gold</th><th>Theoretical melt</th><th>Assigned price</th></tr></thead><tbody>{known_rows or '<tr><td colspan="6" class="blank">No row has a published metal weight.</td></tr>'}</tbody></table></div>
-<p class="sub">{len(known)} of {len(items)} rows publish a metal weight. No melt result is fabricated for the others; blank is not zero.</p>
+<div class="tablewrap"><table><thead><tr><th>Item</th><th>Karat</th><th>Published metal weight</th><th>Conditional nominal fine gold</th><th>Conditional theoretical value</th><th>Assigned price</th></tr></thead><tbody>{known_rows or '<tr><td colspan="6" class="blank">No row has a published metal weight.</td></tr>'}</tbody></table></div>
+<p class="sub">{len(known)} of {len(items)} rows publish a metal weight. This is a conditional calculation using a size-6 seller claim and nominal listed karat, not independently tested weight/purity. Verified product fine-gold values remain blank; blank is not zero.</p>
 <h2>How to use this honestly</h2><ul class="clean">
 <li>Do not use gross ring weight if it includes diamonds, gemstones, platinum prongs, or other non-gold components.</li>
 <li>Keep setting/configurator and complete-ring prices separate. A price-to-melt ratio does not appraise craftsmanship, stones, brand, duties, fees, or resale spread.</li>
@@ -510,7 +536,7 @@ def build_methods(qa_summary, gold, items, flags, retailers, retrieved):
     quote_count = sum(len(quotes) for item in items for quotes in item.get("field_evidence", {}).values())
     quote_count += sum(len(quotes) for retailer in retailers for quotes in retailer.get("field_evidence", {}).values())
     quote_count += sum(len(quotes) for quotes in gold.get("field_evidence", {}).values())
-    limitation_ids = [fid for fid in ("F-007", "F-008", "F-013", "F-018", "F-021", "F-022", "F-023", "F-024", "F-025", "F-027") if any(flag["id"] == fid for flag in flags)]
+    limitation_ids = [fid for fid in ("F-007", "F-008", "F-013", "F-018", "F-021", "F-022", "F-023", "F-024") if any(flag["id"] == fid for flag in flags)]
     limitations = "".join(
         f'<li><a href="flags.html#{fid.lower()}">{fid}</a> — {esc(next(flag["title"] for flag in flags if flag["id"] == fid))}</li>'
         for fid in limitation_ids
@@ -525,7 +551,7 @@ def build_methods(qa_summary, gold, items, flags, retailers, retrieved):
 <li><strong>Gold reference:</strong> World Gold Council spot page with quote date and ICE Data Services attribution.</li>
 <li><strong>Calculation constants/context:</strong> NIST troy-ounce conversion chart and eCFR gold-labeling guidance.</li>
 <li><strong>Rejected as product evidence:</strong> search snippets, aggregators, blogs, coupon pages, unrelated page text, and values from other items in the same category.</li></ul>
-<h2>3. Field-scoped evidence</h2><p>The current audit resolves <strong>{quote_count}</strong> field-specific quotes across {len(items)} item files, {len(retailers)} retailer files, and the gold/calculation evidence. A price, width, or karat in one item’s file cannot support another item. Shared category files are retained only as inherited audit history and are not authoritative inputs.</p>
+<h2>3. Field-scoped evidence</h2><p>The current audit resolves <strong>{quote_count}</strong> field-specific quotes across 16 item files, four retailer files, and the gold/calculation evidence. A price, width, or karat in one item’s file cannot support another item. Shared category files are retained only as inherited audit history and are not authoritative inputs.</p>
 <h2>4. Current limitations</h2><ul class="clean">{limitations}</ul>
 <h2>5. Automated checks after every review</h2><p>Run <code>python3 tools/build_site.py</code>, <code>python3 tools/qa.py</code>, <code>node tools/test_calculator.js</code>, and <code>python3 reviews/independent_snapshot_audit.py .</code>. The audits check schema, field-level quote backing, numeric/currency consistency, null-to-flag coverage, two-way flag references, official product domains, calculator arithmetic, built-row/source identity, internal links and fragments, CSP/script constraints, small-text contrast, stale generated values, and independent cross-schema contradictions.</p>
 <pre class="qa">RESULT: {esc(qa_summary)}
@@ -535,7 +561,7 @@ Full timestamped log: reports/qa-report.md</pre>
 <h2>6. Earlier pass preserved</h2><p>The <code>site/</code> folder holds the earlier two-listing dashboard with its own audit and calculator tests: <a href="site/index.html">open the earlier dashboard</a>. Its two Blue Nile settings were re-fetched in this integration and appear as <code>BN-195402</code> and <code>BN-302868</code> on the <a href="halo-pave.html">Halo &amp; Pavé</a> page.</p>
 <h2>7. Data provenance summary</h2><dl class="kv">
 <dt>Items</dt><dd>{len(items)}</dd><dt>Flags</dt><dd>{len(flags)}</dd><dt>Field-scoped quotes</dt><dd>{quote_count}</dd>
-<dt>Gold quote</dt><dd>${gold['usd_per_troy_oz']:,.2f}/oz · {esc(gold['quote_date'])} · {external_link(gold['source_url'], 'World Gold Council')}</dd>
+<dt>Gold quote</dt><dd>${gold['usd_per_troy_oz']:,.2f}/oz · {esc(gold['quote_date'] or 'unconfirmed — F-026')} · {external_link(gold['source_url'], 'World Gold Council')}</dd>
 <dt>Retrieval dates</dt><dd>{esc(retrieved)} (UTC)</dd><dt>Repository</dt><dd>{external_link('https://github.com/karagemop466-tech/GOLD2', 'karagemop466-tech/GOLD2')}</dd></dl>
 <h2>8. What to do with a flagged row</h2><ol class="clean">
 <li>Open the official source and item evidence; re-read the exact field and price basis.</li>
@@ -575,6 +601,7 @@ def main():
     pages["methods.html"] = build_methods(qa_summary, gold, items, flags, retailers, retrieved)
     for name, content in pages.items():
         (SITE / name).write_text(content, encoding="utf-8")
+    (SITE / "assets" / "style.css").write_text(CSS + "\n" + "\n".join("." + k + "{" + v + "}" for k,v in sorted(INLINE_STYLES.items())), encoding="utf-8")
     print(f"built {len(pages)} pages into {SITE}")
 
 

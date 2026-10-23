@@ -1,0 +1,1211 @@
+{
+  "meta": {
+    "recordedAt": "2026-10-22T23:16:03Z",
+    "format": "Short excerpts and normalized researcher transcriptions of directly retrieved pages, not full archives. Some entries summarize a source passage rather than quote it verbatim; wording/format may be normalized. Numbers are never synthesized.",
+    "limits": "Evidence consistency tests cannot certify that an external claim is true or detect every hallucination."
+  },
+  "sources": [
+    {
+      "id": "ftc-jewelry",
+      "publisher": "Federal Trade Commission",
+      "kind": "government",
+      "url": "https://consumer.ftc.gov/articles/buying-platinum-gold-and-silver-jewelry",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Consumer article dated November 2024. This project applies stricter purchasing requirements; they are not universal legal requirements.",
+      "quotes": {
+        "karat": "The total of pure gold and other metal adds up to 24 parts.",
+        "14k": "A piece marked 14K gold is 14 parts gold mixed with 10 parts of another metal.",
+        "18k": "A piece of jewelry marked 18K gold is 18 parts gold mixed with six parts of another metal.",
+        "solid": "The phrase “solid gold” means the gold item isn’t hollow.",
+        "maker": "Near the karat quality mark, look for the name or the U.S. registered trademark of the company that will stand behind the mark.",
+        "vermeil": "Vermeil is a special type of gold-plated product with a base of sterling silver coated or plated with gold.",
+        "research": "Find out what others say about a seller. Type its name and the words “complaint” or “review” into a search engine.",
+        "returns": "Find the store’s refund and return policies — and get them in writing."
+      },
+      "relevantChunks": [
+        0,
+        1
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "ftc-shopping",
+      "publisher": "Federal Trade Commission",
+      "kind": "government",
+      "url": "https://consumer.ftc.gov/articles/online-shopping",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "",
+      "quotes": {
+        "card": "Paying by credit card best protects you and your money in case of a scam, or if something else goes wrong.",
+        "reviews": "And don’t rely on star ratings alone because some reviews and ratings are fake or misleading.",
+        "records": "Before you buy something online, shop around and check out sellers and products. Also, keep records of purchases, like receipts and emails, to make sure you’re able to hold a seller to its promises.",
+        "total": "Learn the total cost of the product, including shipping, handling, delivery, taxes, or other fees.",
+        "irreversible": "Never buy anything from online sellers that insist you can only pay with gift cards, by wire transfers through companies like Western Union or MoneyGram, with a payment app, or with cryptocurrency."
+      },
+      "relevantChunks": [
+        0
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "gia-testing",
+      "publisher": "Gemological Institute of America",
+      "kind": "laboratory",
+      "url": "https://www.gia.edu/gems-gemology/summer-2025-lab-notes-gold-plated-gold",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Carlos Bautista, Gold-Plated Gold, Gems & Gemology, Summer 2025. Corrected a search-index URL that returned a not-found page.",
+      "quotes": {
+        "xrf": "Adding a layer of gold plating to a gold alloy affects the X-ray fluorescence (XRF) results, and depending on the thickness of the plating, false results can be obtained.",
+        "limits": "This method is unreliable, however, when a piece of metal is coated with the same element; therefore, visual observation under a microscope is essential to check for metal discoloration, plating damage, or previous destructive testing that exposes the base material."
+      },
+      "relevantChunks": [
+        0
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "nist-units",
+      "publisher": "National Institute of Standards and Technology",
+      "kind": "government",
+      "url": "https://www.nist.gov/system/files/documents/2017/05/09/Precious-Metals-Conversion-Information-march2015.pdf",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "March 2015 conversion sheet; historical example prices in this PDF are NOT current gold prices and are never imported.",
+      "quotes": {
+        "conversion": "1 troy ounce | 1 | 20 | 480 | 31.103 476 8 | 31 103.476 8",
+        "formula": "Divide the price per troy ounce by 31.103 476 8",
+        "caution": "The prices offered by buyers or sellers usually reflect reductions based on an item's gold “karat” content and deductions for other factors."
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "lbma-prices",
+      "publisher": "London Bullion Market Association",
+      "kind": "benchmark",
+      "url": "https://www.lbma.org.uk/prices-and-data/lbma-precious-metal-prices",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "No numeric benchmark was available in fetched content. LBMA benchmark value remains null. No access controls or licensing restrictions bypassed.",
+      "quotes": {
+        "no-data": "Tables have moved to the MyLBMA Portal",
+        "licence": "A licence from IBA is required in order to obtain, use or redistribute real-time or historical benchmark data from that date, including for pricing and valuation activities and in transactions and financial products.",
+        "timing": "The LBMA Gold Price is set twice daily in auctions independently operated and administered by ICE Benchmark Administration Limited (IBA) and commencing at 10:30 and 15:00 London time."
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "jm-gold",
+      "publisher": "JM Bullion",
+      "kind": "dealer-reference",
+      "url": "https://www.jmbullion.com/charts/gold-price/",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Dealer body/table ask snapshot only, NOT an LBMA benchmark or a live site feed. Header showed a different value; that panel discrepancy is flagged. The body quote is explicitly identified, not silently reconciled.",
+      "quotes": {
+        "quote": "As of Oct 22, 2026 at 7:09 PM EDT, the live Gold spot price for 1 ounce of Gold in U.S. dollars (USD) is $4,039.76, 1 gram of Gold is $129.88 and 1 kilogram of Gold is $129,881.14.",
+        "units": "A troy ounce of gold is the standard unit of weight equal to 31.1034768 grams",
+        "ask": "Bid: $4,025.26   Ask: $4,039.76",
+        "header": "Gold Ask",
+        "header-value": "$4,040.05"
+      },
+      "relevantChunks": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "automic-currency",
+      "publisher": "Automic Gold",
+      "kind": "retailer-context",
+      "url": "https://www.automicgold.com/cart.js",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Public empty-cart currency context; GET only, no cart changes. Transcribed only the currency field; ephemeral cart identifiers intentionally not retained.",
+      "quotes": {
+        "usd": "\"currency\":\"USD\""
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "ag-natural",
+      "publisher": "Automic Gold",
+      "kind": "product",
+      "url": "https://www.automicgold.com/products/diamond-ring",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "quotes": {
+        "name": "Natural Diamond Ring",
+        "price": "$726",
+        "material": "950 platinum and/or Solid 14k gold",
+        "selected": "14k Yellow Gold",
+        "weight": "Approximately 1.2g (gold) or 1.8g (platinum)",
+        "weight-heading": "Item Weight",
+        "stone": "Reclaimed natural diamond"
+      },
+      "relevantChunks": [
+        4
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "ag-cluster",
+      "publisher": "Automic Gold",
+      "kind": "product",
+      "url": "https://www.automicgold.com/products/diamond-cluster-ring",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "quotes": {
+        "name": "Diamond Cluster Ring",
+        "price": "$2,862",
+        "material": "950 platinum and/or Solid 14k gold",
+        "selected": "14k Yellow Gold",
+        "weight": "Approximately 3.1g (gold) or 4.7g (platinum)",
+        "weight-heading": "Item Weight",
+        "stone": "Reclaimed natural diamond or Lab-created diamond",
+        "gem-selected": "Natural Diamond"
+      },
+      "relevantChunks": [
+        4
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "ag-petal",
+      "publisher": "Automic Gold",
+      "kind": "product",
+      "url": "https://www.automicgold.com/products/diamond-petal-ring",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "quotes": {
+        "name": "0.6ct Round Diamond Petal Ring",
+        "price": "$1,774",
+        "material": "950 platinum and/or Solid 14k gold",
+        "selected": "14k Yellow Gold",
+        "weight": "Approximately 2.7g (gold) or 4.1g (platinum)",
+        "weight-heading": "Item Weight",
+        "stone": "Reclaimed natural diamond or Lab created diamond",
+        "gem-selected": "Lab Created Diamond"
+      },
+      "relevantChunks": [
+        4
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "ag-ruby",
+      "publisher": "Automic Gold",
+      "kind": "product",
+      "url": "https://www.automicgold.com/products/ruby-ring",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "quotes": {
+        "name": "Ruby Ring",
+        "price": "$526",
+        "material": "950 platinum and/or Solid 14k gold",
+        "selected": "14k Yellow Gold",
+        "weight": "Approximately 1.2g (gold) or 1.8g (platinum)",
+        "weight-heading": "Item Weight",
+        "stone": "Natural ruby. Natural stones may vary in color"
+      },
+      "relevantChunks": [
+        4
+      ]
+    },
+    {
+      "id": "ag-sapphire",
+      "publisher": "Automic Gold",
+      "kind": "product",
+      "url": "https://www.automicgold.com/products/sapphire-ring",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "quotes": {
+        "name": "Sapphire Ring",
+        "price": "$526",
+        "material": "950 platinum and/or Solid 14k gold",
+        "selected": "14k Yellow Gold",
+        "weight": "Approximately 1.2g (gold) or 1.8g (platinum)",
+        "weight-heading": "Item Weight",
+        "stone": "Natural sapphire. Natural stones may vary in color"
+      },
+      "relevantChunks": [
+        4
+      ]
+    },
+    {
+      "id": "ag-moissanite",
+      "publisher": "Automic Gold",
+      "kind": "product",
+      "url": "https://www.automicgold.com/collections/engagement/products/moissanite-ring",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "quotes": {
+        "name": "Moissanite Ring",
+        "price": "$420",
+        "material": "950 platinum and/or Solid 14k gold",
+        "selected": "14k Yellow Gold",
+        "weight": "Approximately 1.2g (gold) or 1.8g (platinum)",
+        "weight-heading": "Item Weight",
+        "stone": "Lab-created moissanite"
+      },
+      "relevantChunks": [
+        4
+      ]
+    },
+    {
+      "id": "ag-24k",
+      "publisher": "Automic Gold",
+      "kind": "product",
+      "url": "https://www.automicgold.com/products/24k-band",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "quotes": {
+        "name": "24k Band",
+        "price": "$3,520",
+        "material": "Solid 24k gold",
+        "selected": "Solid 24k Gold",
+        "weight": "Approximate item weight: 11g",
+        "weight-heading": "Item Weight",
+        "purity": "Please note that because this ring is 99.99% pure gold it only comes in yellow.",
+        "care": "It can bend, warp, or scratch easily so it’s best to wear your pieces with a little extra care.",
+        "engraved": "All engraved items are final sale."
+      },
+      "relevantChunks": [
+        4,
+        5
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "ag-natural-json",
+      "publisher": "Automic Gold",
+      "kind": "product-api",
+      "url": "https://www.automicgold.com/products/diamond-ring.js",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Cross-check of default metal/price in public product JSON. Integer price is minor units as corroborated by the displayed $726. API weight is shipping metadata (including zero) and is NOT imported as ring mass.",
+      "quotes": {
+        "variant": "\"title\":\"14k Yellow Gold\"",
+        "price": "\"price\":72600",
+        "ship-weight": "\"weight\":0"
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "automic-returns",
+      "publisher": "Automic Gold",
+      "kind": "policy",
+      "url": "https://www.automicgold.com/pages/returns-exchange-policy",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "The 14-day fee language is more restrictive than a simple 30-day free-return summary. The displayed care@automicgold.com mailto points to a .om address in this page; use the checked Contact page instead.",
+      "quotes": {
+        "window": "Automic Gold offers free returns within 30 days of the delivery date for customers who reside in the U.S.",
+        "fee": "To avoid a recycling fee, please mail your items within 14 days.",
+        "condition": "Items must be in their original, unworn condition to receive a refund to the original form of payment.",
+        "final": "Gift Cards\n\nEngraved items\n\nCustom items\n\nModified Items",
+        "link-typo": "care@automicgold.om"
+      },
+      "relevantChunks": [
+        3,
+        4
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "automic-faq",
+      "publisher": "Automic Gold",
+      "kind": "policy",
+      "url": "https://www.automicgold.com/pages/faq-general",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Source includes other advice not imported. A warranty is not a return policy and does not verify gold purity.",
+      "quotes": {
+        "modified": "Just keep in mind that modified jewelry can’t be returned or exchanged.",
+        "cards": "All major credit & debit cards, PayPal, Shop Pay, Affirm, AfterPay, Google Pay, and Apple Pay.",
+        "daily": "higher gold purities are much easier to deform, which is why we advise 14k gold for daily wear"
+      },
+      "relevantChunks": [
+        4
+      ]
+    },
+    {
+      "id": "automic-contact",
+      "publisher": "Automic Gold",
+      "kind": "contact",
+      "url": "https://www.automicgold.com/pages/contact",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Contact details are published; no call or email was made. Physical business existence is not certified.",
+      "quotes": {
+        "email": "care@automicgold.com",
+        "phone": "(1)888-992-8866"
+      },
+      "relevantChunks": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "cb-odile",
+      "publisher": "Catbird",
+      "kind": "product",
+      "url": "https://www.catbirdnyc.com/odile-the-swan-black-diamond-ring.html",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "partial",
+      "note": "Fetched product body did not expose metal specifications, gold mass, or a selected price/metal/size binding. Search excerpts are discovery leads only. All unsupported specifications and numeric prices remain null.",
+      "quotes": {
+        "name": "Odile the Swan Black Diamond Ring",
+        "header-price": "from$1,600.00"
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "cb-sonnet",
+      "publisher": "Catbird",
+      "kind": "product",
+      "url": "https://www.catbirdnyc.com/sonnet-lab-grown-diamond-ring.html",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "partial",
+      "note": "Fetched product body did not expose metal specifications, gold mass, or a selected price/metal/size binding. Search excerpts are discovery leads only. All unsupported specifications and numeric prices remain null.",
+      "quotes": {
+        "name": "Sonnet Lab-Grown Diamond Ring",
+        "header-price": "$2,800.00"
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "cb-ballet",
+      "publisher": "Catbird",
+      "kind": "product",
+      "url": "https://www.catbirdnyc.com/night-at-the-ballet-diamond-ring-emerald-cut.html",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "partial",
+      "note": "Fetched product body did not expose metal specifications, gold mass, or a selected price/metal/size binding. Search excerpts are discovery leads only. All unsupported specifications and numeric prices remain null.",
+      "quotes": {
+        "name": "Night at the Ballet Diamond Ring, Emerald Cut",
+        "header-price": "from$5,300.00"
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "cb-pointelle",
+      "publisher": "Catbird",
+      "kind": "product",
+      "url": "https://www.catbirdnyc.com/pointelle-diamond-ring.html",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "partial",
+      "note": "Fetched product body did not expose metal specifications, gold mass, or a selected price/metal/size binding. Search excerpts are discovery leads only. All unsupported specifications and numeric prices remain null.",
+      "quotes": {
+        "name": "Pointelle Diamond Ring",
+        "header-price": "$578.00"
+      },
+      "relevantChunks": [
+        0
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "catbird-returns",
+      "publisher": "Catbird",
+      "kind": "policy",
+      "url": "https://www.catbirdnyc.com/returns",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Domestic online policy only. Exact special-order/resized-ring eligibility and independent inspection permission are not confirmed.",
+      "quotes": {
+        "window": "you can send it back to us for a refund or credit within 20 days of the date your package was delivered.",
+        "fee": "An $9 charge for return shipping will be deducted from your refund.",
+        "final": "Special orders, engraved items, Forever jewelry, earrings from piercing events, home & beauty items, and comestibles are final sale and cannot be returned.",
+        "condition": "To be eligible for a return, the item must be unused and sent back in its original packaging. All returns must be authorized by Catbird.",
+        "international": "All international sales are final."
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "catbird-contact",
+      "publisher": "Catbird",
+      "kind": "contact",
+      "url": "https://www.catbirdnyc.com/contact-us",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Published mailing address and email only; not independently contacted.",
+      "quotes": {
+        "email": "customerservice@catbirdnyc.com",
+        "address": "141 Flushing Avenue, Suite 903\n\nBrooklyn, NY 11205"
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "av-bridge",
+      "publisher": "Auvere",
+      "kind": "product",
+      "url": "https://auvere.com/product/diamond-bridge-ring-tall/",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Current body labels the range Approximate Fine Weight, whereas indexed excerpts called it Gold Weight. Definition and exact-size mapping are unconfirmed. Main product price not exposed in fetched body; recommended-product prices are not used.",
+      "quotes": {
+        "name": "Diamond Bridge Ring Tall",
+        "material": "is handcrafted from solid 22 karat gold",
+        "weight": "5 to 6.1 grams depending on size",
+        "weight-heading": "Approximate Fine Weight",
+        "stone": "four round cut natural diamonds"
+      },
+      "relevantChunks": [
+        1
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "av-clean",
+      "publisher": "Auvere",
+      "kind": "product",
+      "url": "https://auvere.com/product/clean-cut-stack-ring-polished/",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Current body labels the range Approximate Fine Weight, whereas indexed excerpts called it Gold Weight. Definition and exact-size mapping are unconfirmed. Main product price not exposed in fetched body; recommended-product prices are not used.",
+      "quotes": {
+        "name": "Clean Cut Stack Ring Polished",
+        "material": "Handcrafted from solid 22 karat gold",
+        "weight": "2.8 to 3.7 grams depending on size",
+        "weight-heading": "Approximate Fine Weight"
+      },
+      "relevantChunks": [
+        1
+      ]
+    },
+    {
+      "id": "auvere-returns",
+      "publisher": "Auvere",
+      "kind": "policy",
+      "url": "https://auvere.com/product/diamond-bridge-ring-tall/",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Embedded Returns & Exchanges policy in the official product page. The 15-day sentence crosses fetch chunks 0 and 1; joined here without changing its wording.",
+      "quotes": {
+        "window": "You have 15 days from the day a piece is delivered to begin a return or exchange.",
+        "dispatch": "must be properly packaged and dropped with the carrier named in that email within 10 days of its date.",
+        "condition": "Each piece must come back in its original, unaltered condition, with no sign of wear or damage.",
+        "sale": "Sale pieces and those from the Rare Collection cannot be returned or exchanged."
+      },
+      "relevantChunks": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "auvere-contact",
+      "publisher": "Auvere",
+      "kind": "contact",
+      "url": "https://auvere.com/help/auvere-concierge/",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "The older customer-support URL redirects here. Contact published, not independently reached.",
+      "quotes": {
+        "email": "concierge@auvere.com",
+        "phone": "+1 866-317-7779",
+        "address": "485 Lexington Avenue Suite 304 New York, NY 10017"
+      },
+      "relevantChunks": [
+        1
+      ]
+    },
+    {
+      "id": "quince-oval",
+      "publisher": "Quince",
+      "kind": "product",
+      "url": "https://www.quince.com/women/oval-lab-grown-diamond-petite-classic-engagement-ring---1ct",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Mixed-metal construction. The displayed $900.00 is not bound to a selected size and a confirmed USD context in fetched content; numeric price is withheld. No explicit solid-gold statement or grams in the fetched body.",
+      "quotes": {
+        "name": "Lab Grown Diamond Oval Petite Classic Engagement Ring - 1ct",
+        "price": "$900.00",
+        "selected": "Color: Yellow Gold",
+        "metal": "Offered in a 14k gold band with a platinum head or all platinum",
+        "size": "Size: not selected"
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "quince-returns",
+      "publisher": "Quince",
+      "kind": "policy",
+      "url": "https://www.quince.com/shipping-returns",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Engagement-ring exception overrides the generic 365-day banner. 60 days runs from PURCHASE, not delivery. Resizing and independent-testing return permission unconfirmed.",
+      "quotes": {
+        "window": "Engagement rings must be returned within 60 days of purchase. No exceptions after 60 days.",
+        "fee": "Made-to-order jewelry is subject to a $35 restocking fee.",
+        "condition": "Items must be in original condition with no signs of wear and include all original packaging and certifications (if applicable).",
+        "general": "Most items can be returned for free for a full refund or exchange within 365 days of delivery date.",
+        "final": "Final sale promotions, customized items, limited edition items, and logo/private label items are not eligible for returns, refunds, exchanges, or replacements."
+      },
+      "relevantChunks": [
+        0,
+        1,
+        2
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "quince-contact",
+      "publisher": "Quince",
+      "kind": "contact",
+      "url": "https://www.quince.com/contact-us",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Published phone number; no call was placed.",
+      "quotes": {
+        "phone": "+1 888-618-9322"
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "mene-rose",
+      "publisher": "Menē",
+      "kind": "product",
+      "url": "https://mene.com/products/rose-ring-gold",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Gold-page displayed snapshot, not a confirmed size-specific order quote. No primary-product grams exposed. Related-product weights/prices are never assigned to this item. No explicit solid/non-hollow wording in the reviewed product text.",
+      "quotes": {
+        "name": "Rose Ring",
+        "price": "$1,346",
+        "currency": "USD",
+        "karat": "24k Gold",
+        "cod": "This is a Crafted-on-Demand item."
+      },
+      "relevantChunks": [
+        0,
+        2
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "mene-knot",
+      "publisher": "Menē",
+      "kind": "product",
+      "url": "https://mene.com/products/knot-ring-gold",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Gold-page displayed snapshot, not a confirmed size-specific order quote. No primary-product grams exposed. Related-product weights/prices are never assigned to this item. No explicit solid/non-hollow wording in the reviewed product text.",
+      "quotes": {
+        "name": "Knot Ring",
+        "price": "$1,465",
+        "currency": "USD",
+        "karat": "24k Gold",
+        "cod": "This is a Crafted-on-Demand item."
+      },
+      "relevantChunks": [
+        0,
+        2
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "mene-terms",
+      "publisher": "Menē",
+      "kind": "policy",
+      "url": "https://mene.com/terms-of-service",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Relevant Terms of Purchase clauses reviewed through chunk 2 of 7. Full terms not yet captured. Return window unconfirmed in captured excerpts; buyback is not a return policy.",
+      "quotes": {
+        "weight": "Investment Jewelry is individually crafted and may vary in weight by up to 0.5 grams for in-stock Products and up to 1 gram for Crafted-on-Demand Products. The final price of Crafted-on-Demand Investment Jewelry may be adjusted to reflect its final weight.",
+        "contact": "1-833-MENE-24K",
+        "card": "For payment by card, all credit and debit cardholders may be subject to authorization and authentication.",
+        "buyback": "The Lifetime Buyback Guarantee does not guarantee recovery of the original purchase price or any appreciation in value.",
+        "cancellation": "A restocking fee of up to 10% will be deducted for orders cancelled after they have shipped or more than 24 hours after they were placed."
+      },
+      "relevantChunks": [
+        0,
+        1,
+        2
+      ],
+      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+    },
+    {
+      "id": "bbb-automic",
+      "publisher": "Better Business Bureau",
+      "kind": "independent-platform",
+      "url": "https://www.bbb.org/us/ny/new-york/profile/jewelry-stores/automic-gold-0121-87147097",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Review/complaint channel fetched. Statements in customer reviews are allegations or opinions, not established product facts. No rating, complaint count, or trustworthiness score imported.",
+      "quotes": {
+        "name": "Automic Gold",
+        "caution": "BBB does not verify the accuracy of information provided by third parties, and does not guarantee the accuracy of any information in Business Profiles."
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "bbb-catbird",
+      "publisher": "Better Business Bureau",
+      "kind": "independent-platform",
+      "url": "https://www.bbb.org/us/ny/brooklyn/profile/retail-stores/catbird-0121-87171007",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Review/complaint channel fetched. Statements in customer reviews are allegations or opinions, not established product facts. No rating, complaint count, or trustworthiness score imported.",
+      "quotes": {
+        "name": "Catbird",
+        "caution": "As a matter of policy, BBB does not endorse any product, service, or business."
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "bbb-auvere",
+      "publisher": "Better Business Bureau",
+      "kind": "independent-platform",
+      "url": "https://www.bbb.org/us/ny/new-york/profile/online-retailer/auvere-llc-0121-87168132",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Review/complaint channel fetched. Statements in customer reviews are allegations or opinions, not established product facts. No rating, complaint count, or trustworthiness score imported.",
+      "quotes": {
+        "name": "Auvere LLC",
+        "caution": "BBB does not verify the accuracy of information provided by third parties, and does not guarantee the accuracy of any information in Business Profiles."
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "bbb-quince",
+      "publisher": "Better Business Bureau",
+      "kind": "independent-platform",
+      "url": "https://www.bbb.org/us/ca/san-francisco/profile/online-retailer/quincecom-1116-925341/complaints",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Review/complaint channel fetched. Statements in customer reviews are allegations or opinions, not established product facts. No rating, complaint count, or trustworthiness score imported.",
+      "quotes": {
+        "name": "Quince.com",
+        "caution": "The complaint text that is displayed might not represent all complaints filed with BBB."
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "tp-mene",
+      "publisher": "Trustpilot",
+      "kind": "independent-platform",
+      "url": "https://www.trustpilot.com/review/www.mene.com",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "fetched",
+      "note": "Review/complaint channel fetched. Statements in customer reviews are allegations or opinions, not established product facts. No rating, complaint count, or trustworthiness score imported.",
+      "quotes": {
+        "name": "Menē",
+        "caution": "We use technology to protect platform integrity, but we don't fact-check reviews"
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "av-maze-unavailable",
+      "publisher": "Auvere",
+      "kind": "unavailable-lead",
+      "url": "https://auvere.com/product/maze-ring-satin/",
+      "observedAt": "2026-10-22T23:16:03Z",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "access": "unavailable",
+      "note": "Discovery result pointed to a missing product. Excluded from the candidate list. Old indexed prices and weights were NOT imported.",
+      "quotes": {
+        "unavailable": "The page you are looking for might have been removed"
+      },
+      "relevantChunks": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "bn-501480w14",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
+      "observedAt": "2026-10-22T23:19:45Z",
+      "method": "fetch_page; rechecked after importing existing session 39da17c8 records",
+      "access": "fetched",
+      "note": "Setting only, center diamond sold separately. Direct page displayed the dollar symbol but did not establish an ISO currency context; USD price is withheld in the integrated catalog. Exact ring size unselected. Rhodium-finished white gold is disclosed; this is not evidence of gold plating over base metal.",
+      "relevantChunks": [
+        0
+      ],
+      "quotes": {
+        "name": "Petite Micropavé Diamond Engagement Ring",
+        "stock": "501480w14",
+        "price": "$1,300(Setting Price)",
+        "material": "14K White Gold",
+        "size": "Ring Size: Select",
+        "finish": "Rhodium Finish: Yes",
+        "stone": "Natural Diamond Information"
+      }
+    },
+    {
+      "id": "bn-501480w14l",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
+      "observedAt": "2026-10-22T23:19:45Z",
+      "method": "fetch_page; rechecked after importing existing session 39da17c8 records",
+      "access": "fetched",
+      "note": "Setting only, center diamond sold separately. Direct page displayed the dollar symbol but did not establish an ISO currency context; USD price is withheld in the integrated catalog. Exact ring size unselected. Rhodium-finished white gold is disclosed; this is not evidence of gold plating over base metal.",
+      "relevantChunks": [
+        0
+      ],
+      "quotes": {
+        "name": "Petite Micropavé Lab-Grown Diamond Engagement Ring",
+        "stock": "501480w14l",
+        "price": "$1,050(Setting Price)",
+        "material": "14K White Gold",
+        "size": "Ring Size: Select",
+        "finish": "Rhodium Finish: Yes",
+        "stone": "Lab-Grown Diamond Information"
+      }
+    },
+    {
+      "id": "bn-returns",
+      "publisher": "Blue Nile",
+      "kind": "policy",
+      "url": "https://www.bluenile.com/policies/returns",
+      "observedAt": "2026-10-22T23:19:45Z",
+      "method": "fetch_page; relevant excerpt transcribed",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Window runs from SHIPMENT, not delivery. Two complimentary returns per customer/year; RMA required. No independent testing permission established.",
+      "quotes": {
+        "window": "you may return eligible items in their original, unworn condition within 30 days from the shipment date for a full refund or exchange.",
+        "exclusions": "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and “Final Sale” items are not eligible for return or exchange.",
+        "limit": "Two complimentary returns are allowed per customer, per year. A Return Merchandise Authorization (RMA) number is required for all returns.",
+        "email": "service@bluenile.com",
+        "phone": "+1-800-242-2728"
+      }
+    },
+    {
+      "id": "ext-bn-194158",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold",
+        "material": "18K Yellow Gold",
+        "display": "$1,125(Setting Price)",
+        "stock": "500000y",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,125(Setting Price)",
+        "mixed": "18k yellow gold four-prong solitaire engagement ring with platinum prongs"
+      }
+    },
+    {
+      "id": "ext-bn-195269",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Petite Solitaire Engagement Ring in 18k Yellow Gold",
+        "material": "18K Yellow Gold",
+        "display": "$1,155(Setting Price)",
+        "stock": "501130y",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,155(Setting Price)"
+      }
+    },
+    {
+      "id": "ext-vrai-classic-4p",
+      "publisher": "VRAI",
+      "kind": "product",
+      "url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0,
+        1
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Classic Round Brilliant Engagement Ring",
+        "material": "18k Yellow Gold",
+        "weight": "Metal weight:2.86g (Ring size 6)",
+        "stone-context": "We grow our own diamonds",
+        "size-context": "Band width:Standard; Band:Plain band",
+        "pave-context": "Pavé carat weight:0.18 ctw; selected Band:Plain band"
+      }
+    },
+    {
+      "id": "ext-z-19957449",
+      "publisher": "Zales",
+      "kind": "product",
+      "url": "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
+        "material": "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
+        "display": "Discounted Price $899.00",
+        "returns": "Free and easy 30-day returns",
+        "contact-gap": "Contact details not exposed in the fetched product excerpt."
+      }
+    },
+    {
+      "id": "ext-z-20046552",
+      "publisher": "Zales",
+      "kind": "product",
+      "url": "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold",
+        "material": "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold",
+        "display": "Discounted Price $909.30",
+        "returns": "Free and easy 30-day returns",
+        "contact-gap": "Contact details not exposed in the fetched product excerpt."
+      }
+    },
+    {
+      "id": "ext-bn-192506",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-hidden-halo-solitaire-plus-diamond-engagement-ring-in-14k-yellow-gold-item-192506",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Petite Hidden Halo Solitaire Plus Diamond Engagement Ring in 14k Yellow Gold",
+        "material": "14K Yellow Gold",
+        "display": "$1,255(Setting Price)",
+        "stock": "502250y14",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,255(Setting Price)",
+        "stone": "Natural Diamond Information"
+      }
+    },
+    {
+      "id": "ext-bn-315661",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen",
+        "material": "14K White Gold",
+        "display": "$2,210(Setting Price)",
+        "stock": "505094w14",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$2,210(Setting Price)",
+        "stone": "Natural Diamond Information"
+      }
+    },
+    {
+      "id": "ext-bn-203348",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Classic Simple Solitaire Engagement Ring in 14K Yellow Gold",
+        "material": "14K Yellow Gold",
+        "display": "$1,145(Setting Price)",
+        "stock": "502120y14",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,145(Setting Price)"
+      }
+    },
+    {
+      "id": "ext-bn-195639",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Petite Solitaire Engagement Ring in 14k Yellow Gold",
+        "material": "14K Yellow Gold",
+        "display": "$1,000(Setting Price)",
+        "stock": "501130y14",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,000(Setting Price)"
+      }
+    },
+    {
+      "id": "ext-bn-194548",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/solitaire-compass-set-engagement-ring-in-14k-white-gold-item-194548",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Solitaire Compass Set Engagement Ring in 14k White Gold",
+        "material": "14K White Gold",
+        "display": "$1,045(Setting Price)",
+        "stock": "501290w14",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,045(Setting Price)"
+      }
+    },
+    {
+      "id": "ext-be-121h6",
+      "publisher": "Brilliant Earth",
+      "kind": "product",
+      "url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0,
+        4
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Classic Six-Prong Solitaire Ring in 14K Yellow Gold",
+        "material": "14K Yellow Gold",
+        "price": "€990.00(Setting Only)",
+        "currency": "EUR in locale selector; main-product amount displayed with €",
+        "stone": "Diamond Origin: Natural",
+        "prongs": "Prong metal: 14K White Gold",
+        "phone": "1.415.426.2781"
+      }
+    },
+    {
+      "id": "ext-bn-193625",
+      "publisher": "Blue Nile",
+      "kind": "product",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-three-stone-diamond-engagement-ring-in-14k-yellow-gold-item-193625",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "Petite Three-Stone Diamond Engagement Ring in 14k Yellow Gold",
+        "material": "14K Yellow Gold",
+        "display": "$1,950(Setting Price)",
+        "stock": "502350y14",
+        "card": "with the Blue Nile Credit Card",
+        "price": "$1,950(Setting Price)",
+        "stone": "Natural Diamond Information"
+      }
+    },
+    {
+      "id": "ext-z-20303279",
+      "publisher": "Zales",
+      "kind": "product",
+      "url": "https://www.zales.com/12-ct-tw-diamond-frame-vintagestyle-twist-shank-engagement-ring-10k-gold/p/V-20303279",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold",
+        "material": "1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold",
+        "display": "Discounted Price $979.30",
+        "returns": "Free and easy 30-day returns",
+        "contact-gap": "Contact details not exposed in the fetched product excerpt."
+      }
+    },
+    {
+      "id": "ext-z-20301172",
+      "publisher": "Zales",
+      "kind": "product",
+      "url": "https://www.zales.com/13-ct-tw-diamond-three-stone-engagement-ring-10k-gold/p/V-20301172",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "quotes": {
+        "name": "1/3 CT. T.W. Diamond Three Stone Engagement Ring in 10K Gold",
+        "material": "1/3 CT. T.W. Diamond Three Stone Engagement Ring in 10K Gold",
+        "display": "Discounted Price $769.30",
+        "returns": "Free and easy 30-day returns",
+        "contact-gap": "Contact details not exposed in the fetched product excerpt."
+      }
+    },
+    {
+      "id": "vrai-returns",
+      "publisher": "VRAI",
+      "kind": "policy",
+      "url": "https://www.vrai.com/returns-exchanges",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Fee waived for store credit; items above $15,000 eligible for store credit rather than the stated original-payment refund. Specific order/testing permission unconfirmed. Contact email appears for withdrawal submissions, not independently contacted.",
+      "quotes": {
+        "window": "Eligible items below $15,000 can be returned within 30 days for full credit to store or refund minus recycling fee to the original payment method.",
+        "fee": "Engagement ring: A $300 recycling fee will apply.",
+        "exclusions": "Modified or resized rings; Items altered by a third-party; Custom-designed items",
+        "email": "help@vrai.com"
+      }
+    },
+    {
+      "id": "be-context",
+      "publisher": "Brilliant Earth",
+      "kind": "policy",
+      "url": "https://www.brilliantearth.com/weve-got-you-covered/",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "partial",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Only contact header captured in this recheck; do not infer a full return policy from the URL or promotional header.",
+      "quotes": {
+        "phone": "800.691.0952"
+      }
+    },
+    {
+      "id": "wgc-panel-review",
+      "publisher": "World Gold Council",
+      "kind": "market-context",
+      "url": "https://www.gold.org/goldhub/data/gold-prices",
+      "observedAt": "2026-10-22T23:44:35Z",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "access": "fetched",
+      "relevantChunks": [
+        0
+      ],
+      "note": "Current moving header differed from earlier session header observations. Chart as-of metadata does not establish the moving header quote timestamp. No WGC value is imported as the primary calculator reference; no header/date panel is silently combined.",
+      "quotes": {
+        "header": "Gold Spot price USD /oz 4,025.54",
+        "chart-as-of": "Data as of 21 October, 2026",
+        "units": "Prices are quoted in currency unit per troy ounce unless otherwise stated."
+      }
+    }
+  ]
+}

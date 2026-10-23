@@ -1,5 +1,5 @@
 {
-  "quote_date": "2026-10-21",
+  "quote_date": null,
   "retrieved_at": "2026-10-22",
   "usd_per_troy_oz": 4028.53,
   "currency": "USD",
@@ -7,7 +7,10 @@
   "source_name": "World Gold Council - Gold spot price (Market Data: ICE Data Services)",
   "source_url": "https://www.gold.org/goldhub/data/gold-prices",
   "evidence_file": "evidence/gold-price.md",
-  "evidence_quotes": ["4,028.53", "Data as of 21 October, 2026"],
+  "evidence_quotes": [
+    "4,028.53",
+    "Data as of 21 October, 2026"
+  ],
   "grams_per_troy_ounce": 31.1034768,
   "conversion_source_name": "NIST - Conversion Factors for Precious Metal Sales",
   "conversion_source_url": "https://www.nist.gov/system/files/documents/2017/05/09/Precious-Metals-Conversion-Information-march2015.pdf",
@@ -19,9 +22,6 @@
     "usd_per_troy_oz": [
       "USD\n\n/oz\n\n-\n\n4,028.53"
     ],
-    "quote_date": [
-      "Data as of 21 October, 2026"
-    ],
     "source_name": [
       "Market Data: Provided by ICE Data Services."
     ],
@@ -31,6 +31,9 @@
     "karat_basis": [
       "fine (24 karat) gold",
       "an item marked 18 k is made of 75 % gold"
+    ],
+    "chart_as_of_date": [
+      "Data as of 21 October, 2026"
     ]
   },
   "superseded_observations": [
@@ -47,6 +50,9 @@
     "LBMA tabulated historical prices require licensed MyLBMA portal access; no unlicensed LBMA fix is presented as retrieved.",
     "Spot quotes move. Calculations on this site use only the dated quote above unless a user deliberately enters a different value.",
     "Use metal-only weight, excluding stones and non-gold components. Nominal karat/24 is not a physical assay.",
-    "Theoretical melt value is not an appraisal, fair-retail estimate, resale offer, or refiner payout; workmanship, stones, brand, taxes, fees, and spreads are excluded."
-  ]
+    "Theoretical melt value is not an appraisal, fair-retail estimate, resale offer, or refiner payout; workmanship, stones, brand, taxes, fees, and spreads are excluded.",
+    "F-026: exact header quote-as-of timestamp unconfirmed. An earlier correction to 21 October bound unrelated chart metadata to the moving header; this is not justified. Observed/retrieved dates do not establish quote time."
+  ],
+  "chart_as_of_date": "2026-10-21",
+  "quote_scope": "Earlier moving-header observation; exact quote-as-of timestamp unconfirmed. Chart metadata is separate."
 }

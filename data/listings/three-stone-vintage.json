@@ -15,8 +15,8 @@
       "color": "Yellow",
       "width_mm": 1.8,
       "weight_g": null,
-      "price": 1950.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
@@ -27,7 +27,7 @@
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "partial_official_fields",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [
         {
           "value": 1845.0,
@@ -44,7 +44,8 @@
         "F-015",
         "F-016",
         "F-021",
-        "F-024"
+        "F-024",
+        "F-025"
       ],
       "notes": "The page lists two round side stones totaling 1/4 ct.; the current page price is recorded and the cached snippet is rejected.",
       "depth_mm": null,
@@ -87,7 +88,16 @@
         "center_stone_included": [
           "$1,950(Setting Price)"
         ]
-      }
+      },
+      "superseded_normalization": {
+        "price": 1950.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "$1,950(Setting Price)"
+      ]
     },
     {
       "id": "Z-20303279",

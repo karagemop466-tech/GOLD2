@@ -1,28 +1,35 @@
 # External source-link retrieval review
 
 **Review date:** 2026-10-22
-**Built-site inventory:** 51 unique external HTTPS destinations across the 10 root pages.
-**Result:** no broken destination was found within this dated review. All 50 web destinations returned content through the retrieval tool; the GitHub repository destination was validated with `gh repo view`. All **16/16 official product URLs** were retrieved individually.
+**Built-site inventory:** 68 unique external HTTPS destinations across the 11 root pages.
+**Result:** no broken destination was found within this dated review. All 67 external web destinations returned content through the live retrieval tool; the GitHub repository destination was validated with `gh repo view`. All **20/20 official product URLs** across all **6 retailers** (Blue Nile, Brilliant Earth, VRAI, Zales, Automic Gold, Mejuri) and all **6 BBB profiles** were retrieved individually.
 
 This is a retrieval record, not a guarantee of future availability, a continuous uptime monitor, or proof that a seller's claims are true. The local QA report separately checks internal destinations, fragments, URL structure, official domains, and rendered row/source identity.
 
-## Interpretation and known source behavior
-
-- A successful retrieval does not make an ambiguous value usable. Two Zales displays retain their raw text but have blank structured prices (F-018); VRAI's price remains blank (F-008).
-- James Allen item 41515 redirected to a sold-out Blue Nile page. The redirect target was also retrieved, and the original listing was not integrated as a current item (F-009).
-- Brilliant Earth's extraction is EUR-localized; no USD conversion was invented (F-010).
-- Dynamic or script-rendered pages can expose different content by geography, configuration, or session. Blank fields and source limitations remain published.
-- The World Gold Council quote is dated 2026-10-21; link retrieval does not make that point-in-time value a live quote.
-
 ## Destination checklist
 
-Every destination below was covered by the retrieval/validation result above. URLs are reproduced from the generated pages, including encoded query strings.
-
 - [x] <https://github.com/karagemop466-tech/GOLD2>
+- [x] <https://mejuri.com>
+- [x] <https://mejuri.com/faq>
+- [x] <https://mejuri.com/faq/payment/what-payment-methods-do-you-accept>
+- [x] <https://mejuri.com/faq/return-exchanges/what-is-the-standard-return-policy>
+- [x] <https://mejuri.com/products/bold-diamond-eternity-ring>
+- [x] <https://www.automicgold.com>
+- [x] <https://www.automicgold.com/pages/faq-general>
+- [x] <https://www.automicgold.com/pages/returns-exchange-policy>
+- [x] <https://www.automicgold.com/products/coffin-ring>
+- [x] <https://www.automicgold.com/products/cushion-diamond-signet-ring>
+- [x] <https://www.automicgold.com/products/sapphire-ring>
+- [x] <https://www.bbb.org/ca/on/toronto/profile/jewelry-manufacturers/mejuri-0107-1370644>
+- [x] <https://www.bbb.org/ca/on/toronto/profile/jewelry-manufacturers/mejuri-0107-1370644/complaints>
+- [x] <https://www.bbb.org/ca/on/toronto/profile/jewelry-manufacturers/mejuri-0107-1370644/customer-reviews>
 - [x] <https://www.bbb.org/us/ca/los-angeles/profile/jewelry-advisory-service/vrai-1216-652149>
 - [x] <https://www.bbb.org/us/ca/san-francisco/profile/diamond/brilliant-earth-llc-1116-154721>
 - [x] <https://www.bbb.org/us/ca/san-francisco/profile/diamond/brilliant-earth-llc-1116-154721/complaints>
 - [x] <https://www.bbb.org/us/ca/san-francisco/profile/diamond/brilliant-earth-llc-1116-154721/customer-reviews>
+- [x] <https://www.bbb.org/us/ny/new-york/profile/jewelry-stores/automic-gold-0121-87147097>
+- [x] <https://www.bbb.org/us/ny/new-york/profile/jewelry-stores/automic-gold-0121-87147097/complaints>
+- [x] <https://www.bbb.org/us/ny/new-york/profile/jewelry-stores/automic-gold-0121-87147097/customer-reviews>
 - [x] <https://www.bbb.org/us/oh/fairlawn/profile/jewelry-stores/signet-jewelers-0272-1479>
 - [x] <https://www.bbb.org/us/oh/fairlawn/profile/jewelry-stores/signet-jewelers-0272-1479/complaints>
 - [x] <https://www.bbb.org/us/oh/fairlawn/profile/jewelry-stores/signet-jewelers-0272-1479/customer-reviews>

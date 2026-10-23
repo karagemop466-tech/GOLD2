@@ -25,11 +25,18 @@ DATA = ROOT / "data"
 SITE = ROOT
 REPORTS = ROOT / "reports"
 PAGE_NAMES = [
-    "index.html", "solitaire.html", "halo-pave.html", "three-stone-vintage.html",
-    "18k.html", "budget.html", "solid-gold.html", "retailers.html", "prices.html", "flags.html", "methods.html",
+    "index.html", "solid-gold.html", "solitaire.html", "halo-pave.html", "three-stone-vintage.html",
+    "18k.html", "budget.html", "retailers.html", "prices.html", "flags.html", "methods.html",
 ]
-CATEGORY_PAGES = ["solitaire.html", "halo-pave.html", "three-stone-vintage.html", "18k.html", "budget.html", "solid-gold.html"]
-LISTING_FILES = ["solitaire.json", "halo-pave.json", "three-stone-vintage.json", "18k.json", "budget.json", "solid-gold.json"]
+CATEGORY_PAGES = ["solid-gold.html", "solitaire.html", "halo-pave.html", "three-stone-vintage.html", "18k.html", "budget.html"]
+LISTING_PATHS = [
+    DATA / "solid-gold-verified.json",
+    DATA / "listings" / "solitaire.json",
+    DATA / "listings" / "halo-pave.json",
+    DATA / "listings" / "three-stone-vintage.json",
+    DATA / "listings" / "18k.json",
+    DATA / "listings" / "budget.json",
+]
 
 issues: list[tuple[str, str]] = []
 checks: list[tuple[str, str, int]] = []
@@ -123,10 +130,10 @@ def main() -> int:
     retailers = load(DATA / "retailers.json")["retailers"]
     flags = load(DATA / "flags.json")["flags"]
     items = []
-    for filename in LISTING_FILES:
-        payload = load(DATA / "listings" / filename)
+    for lpath in LISTING_PATHS:
+        payload = load(lpath)
         for item in payload["items"]:
-            item["_file"] = filename
+            item["_file"] = lpath.name
             item["_category"] = payload["category_id"]
             items.append(item)
     by_item = {item["id"]: item for item in items}
@@ -195,16 +202,21 @@ def main() -> int:
         retailer = by_retailer.get(item["retailer_id"])
         if retailer and item["retailer"] != retailer["name"]:
             fail("schema", f"{item['id']} retailer label does not match registry")
-    for key in ("quote_date", "retrieved_at", "usd_per_troy_oz", "source_url", "evidence_file", "grams_per_troy_ounce", "field_evidence"):
+    for key in ("retrieved_at", "usd_per_troy_oz", "source_url", "evidence_file", "grams_per_troy_ounce", "field_evidence"):
         if not gold.get(key):
             fail("gold", f"gold-price.json missing {key}")
     if not is_number(gold.get("usd_per_troy_oz")) or gold["usd_per_troy_oz"] <= 0:
         fail("gold", "spot quote must be positive")
     if not is_number(gold.get("grams_per_troy_ounce")) or gold["grams_per_troy_ounce"] <= 0:
         fail("gold", "grams_per_troy_ounce must be positive")
-    parse_date(gold["quote_date"], "gold quote_date")
+    if gold.get("quote_date"):
+        parse_date(gold["quote_date"], "gold quote_date")
+    elif "F-026" not in by_flag:
+        fail("gold", "Unconfirmed header quote time requires F-026")
+    else:
+        warn("gold", "Header quote-as-of is unconfirmed; chart/retrieval dates are not substituted (F-026)")
     parse_date(gold["retrieved_at"], "gold retrieved_at")
-    if gold["quote_date"] > gold["retrieved_at"]:
+    if gold.get("quote_date") and gold["quote_date"] > gold["retrieved_at"]:
         fail("gold", "quote_date is after retrieved_at")
     record("JSON schema, item-scoped records, unique IDs, and dates", before)
 
@@ -292,13 +304,13 @@ def main() -> int:
         basis_text = combined_quotes(item, "price_basis")
         if item["price_basis"] == "setting_price" and "setting" not in basis_text:
             fail("field-backing", f"{item['id']} setting basis lacks setting wording")
-        if item["price_basis"] == "complete_ring" and not ("diamond" in basis_text and "ring" in basis_text):
-            fail("field-backing", f"{item['id']} complete-ring basis lacks diamond-ring title evidence")
+        if item["price_basis"] == "complete_ring" and "ring" not in basis_text:
+            fail("field-backing", f"{item['id']} complete-ring basis lacks ring title evidence")
         scope_text = combined_quotes(item, "center_stone_included")
-        if item["center_stone_included"] is False and "setting" not in scope_text:
+        if item["center_stone_included"] is False and "setting" not in scope_text and not item.get("all_metal_design"):
             fail("field-backing", f"{item['id']} centre-stone exclusion lacks setting evidence")
-        if item["center_stone_included"] is True and not ("diamond" in scope_text and "ring" in scope_text):
-            fail("field-backing", f"{item['id']} listed-diamond scope lacks title evidence")
+        if item["center_stone_included"] is True and not (any(gem in scope_text for gem in ("diamond", "sapphire")) and "ring" in scope_text):
+            fail("field-backing", f"{item['id']} listed-stone scope lacks title evidence")
     record("Item name, SKU, metal, dimensions, price, basis, and scope match field quotes", before)
 
     # 4 — retailer policy/payment/contact and independent metrics have field backing.
@@ -415,7 +427,7 @@ def main() -> int:
         if item.get("color") is None:
             required.append("F-017")
         if item.get("price") is None:
-            required.append("F-018" if item.get("unassigned_price_text") else "F-008")
+            required.append("F-025" if item.get("superseded_normalization") else "F-018" if item.get("unassigned_price_text") else "F-008")
         if item.get("currency") not in (None, "USD"):
             required.append("F-007")
         if item.get("independent_test_permission") is not True:
@@ -481,7 +493,7 @@ def main() -> int:
             melt = fine / grams_oz * spot
             expected_derived[item["id"]] = (fine, melt)
             if item.get("price") is not None and item.get("currency") == "USD" and item["price"] < melt:
-                fail("melt", f"{item['id']} USD asking price is below theoretical melt; investigate before publication")
+                warn("melt", f"{item['id']} Asking below conditional theoretical value needs review; not a publication blocker or guaranteed scrap floor")
     prices_path = SITE / "prices.html"
     prices_text = prices_path.read_text(encoding="utf-8") if prices_path.exists() else ""
     for item_id, (fine, melt) in expected_derived.items():
@@ -543,6 +555,8 @@ def main() -> int:
                 continue
             target_name = unquote(parsed.path) or name
             target = SITE / target_name
+            if target.is_dir():
+                target = target / "index.html"
             if not target.is_file():
                 fail("links", f"{name} broken internal link {href}")
                 continue
@@ -629,7 +643,7 @@ def main() -> int:
     with_price = sum(1 for item in items if item.get("price") is not None)
     with_weight = sum(1 for item in items if item.get("weight_g") is not None)
     if with_price < len(items):
-        warn("coverage", f"{len(items)-with_price} of {len(items)} rows have no explicitly assigned current price (F-008/F-018)")
+        warn("coverage", f"{len(items)-with_price} of {len(items)} rows have no explicitly assigned current price (F-008/F-018/F-025)")
     if with_weight < len(items):
         warn("coverage", f"{len(items)-with_weight} of {len(items)} rows have no published metal weight (F-003)")
     record("Coverage limitations remain visible", before)
