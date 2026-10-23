@@ -583,6 +583,56 @@
         "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552"
       ],
       "recommended_action": "Before wearing or resizing, use an independent jeweller for non-destructive XRF, hallmark/maker’s-mark inspection, and metal-only weight verification, subject to the seller’s written return terms."
+    },
+    {
+      "id": "F-025",
+      "severity": "medium",
+      "type": "unverified_currency",
+      "title": "Dollar-sign observations lack confirmed ISO currency",
+      "detail": "The official excerpts establish displayed dollar-sign amounts, but not the ISO currency of the selected configuration. Prior USD normalizations are retained only as explicitly superseded research history; normalized price/original-price/currency cells are now blank. No exchange conversion is inferred.",
+      "affected_items": [
+        "BN-194158",
+        "BN-195269",
+        "Z-19957449",
+        "Z-20046552",
+        "BN-192506",
+        "BN-315661",
+        "BN-195402",
+        "BN-302868",
+        "BN-203348",
+        "BN-195639",
+        "BN-194548",
+        "BN-193625"
+      ],
+      "affected_retailers": [],
+      "sources": [
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
+        "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
+        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-hidden-halo-solitaire-plus-diamond-engagement-ring-in-14k-yellow-gold-item-192506",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/solitaire-compass-set-engagement-ring-in-14k-white-gold-item-194548",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-three-stone-diamond-engagement-ring-in-14k-yellow-gold-item-193625"
+      ],
+      "recommended_action": "Confirm native ISO currency and exact size/configuration at checkout before using a price or comparing it with a USD gold reference."
+    },
+    {
+      "id": "F-026",
+      "severity": "medium",
+      "type": "source_scope",
+      "title": "Chart metadata does not date the moving WGC header quote",
+      "detail": "The earlier 4,028.53 USD/oz header observation has an unconfirmed quote-as-of timestamp. Chart metadata states 21 October 2026, which is retained as chart_as_of_date, not silently assigned to the header. quote_date is null; retrieval remains 22 October 2026. Later header observations differ. Static illustrations are conditional, not current valuations.",
+      "affected_items": [],
+      "affected_retailers": [],
+      "sources": [
+        "https://www.gold.org/goldhub/data/gold-prices"
+      ],
+      "recommended_action": "Obtain a timestamp directly bound to the quote; never substitute chart date or retrieval date. See the expanded calculator for a separately dated body/table reference."
     }
   ]
 }

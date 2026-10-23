@@ -15,8 +15,8 @@
       "color": null,
       "width_mm": null,
       "weight_g": null,
-      "price": 899.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "complete_ring",
       "center_stone_included": true,
       "original_price": null,
@@ -27,7 +27,7 @@
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE",
-      "verification_status": "partial_official_fields",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [
         {
           "value": 719.2,
@@ -46,7 +46,8 @@
         "F-017",
         "F-021",
         "F-023",
-        "F-024"
+        "F-024",
+        "F-025"
       ],
       "notes": "The current page labels Discounted Price $899.00. The earlier search-snippet price is retained only as rejected audit evidence.",
       "depth_mm": null,
@@ -83,7 +84,16 @@
         "currency": [
           "Discounted Price $899.00"
         ]
-      }
+      },
+      "superseded_normalization": {
+        "price": 899.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "Discounted Price $899.00"
+      ]
     },
     {
       "id": "Z-20046552",
@@ -97,11 +107,11 @@
       "color": null,
       "width_mm": null,
       "weight_g": null,
-      "price": 909.3,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "complete_ring",
       "center_stone_included": true,
-      "original_price": 1299.0,
+      "original_price": null,
       "source_url": "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
       "retrieved_at": "2026-10-22",
       "evidence_file": "evidence/listings/z-20046552.md",
@@ -109,7 +119,7 @@
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE",
-      "verification_status": "partial_official_fields",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
@@ -121,7 +131,8 @@
         "F-017",
         "F-021",
         "F-023",
-        "F-024"
+        "F-024",
+        "F-025"
       ],
       "notes": "The current page explicitly labels discounted and original prices and shows 30% Off.",
       "depth_mm": null,
@@ -161,7 +172,16 @@
         "original_price": [
           "Original Price was $1,299.00"
         ]
-      }
+      },
+      "superseded_normalization": {
+        "price": 909.3,
+        "original_price": 1299.0,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "Discounted Price $909.30"
+      ]
     }
   ]
 }

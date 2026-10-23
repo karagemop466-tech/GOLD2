@@ -149,3 +149,9 @@ This Privacy Policy explains what information Vrai & Oro, LLC ("VRAI", "we", "ou
 - BBB states that it does not endorse any product, service, or business and does not guarantee the accuracy of third-party information.
 
 - The candidate BBB complaints page displayed 3 complaints in 3 years / 2 in 12 months, all unanswered, and the candidate reviews page displayed 1/5 from 1 review. Those metrics are deliberately not assigned to VRAI because the profile does not link vrai.com and identity remains unconfirmed (F-022).
+
+## Direct recheck — 2026-10-22
+Source: https://www.vrai.com/returns-exchanges
+“Engagement ring: A $300 recycling fee will apply.” Eligible below-$15,000 items: 30 days, original-payment refund minus recycling fee or store credit. Modified/resized, third-party-altered and custom items excluded. Fee waived for store credit. Exact order/testing permission remains unconfirmed.
+
+Published email help@vrai.com appears in the withdrawal-submission policy context. It was not contacted.

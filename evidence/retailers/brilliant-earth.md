@@ -176,3 +176,7 @@ This profile includes complaints for Brilliant Earth, LLC's headquarters and its
 ```
 Need assistance? Drop us a line and we'll make sure you're taken care of.
 ```
+
+## Contact citation correction — 2026-10-22
+Source: https://www.brilliantearth.com/weve-got-you-covered/
+Published header phone: 800.691.0952. The localized EUR product page displayed 1.415.426.2781, a different source/region context; it is not attributed to the contact page. No call was placed.

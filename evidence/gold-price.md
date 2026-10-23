@@ -92,3 +92,6 @@ No free LBMA fix is claimed. This limitation is recorded as F-013.
 - `theoretical melt USD = nominal fine-gold grams ÷ 31.1034768 × dated USD per troy ounce`
 - Do not use gross ring weight when it includes stones or non-gold components.
 - The result is not an appraisal, resale quote, refiner payout, or fair-retail estimate.
+
+## Integration correction — 2026-10-22
+The stored 4,028.53 was a prior moving-header observation. Its exact source quote timestamp is unconfirmed; quote_date is now null. Chart text “Data as of 21 October, 2026” must not be silently bound to the header. A later re-fetch displayed 4,025.54 in the header; this is recorded separately in research/evidence.json, not used to make the old observation live.

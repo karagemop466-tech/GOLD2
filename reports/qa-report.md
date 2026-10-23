@@ -1,8 +1,8 @@
 # QA / hallucination and integration audit
 
-- Generated: 2026-10-22 23:50:28 UTC
-- Items audited: 16 · retailers: 4 · flags: 23 · field-scoped quotes: 277
-- **RESULT: PASS** — 10 checks, 0 failures, 2 warnings
+- Generated: 2026-10-23 00:01:31 UTC
+- Items audited: 16 · retailers: 4 · flags: 25 · field-scoped quotes: 277
+- **RESULT: PASS** — 10 checks, 0 failures, 3 warnings
 
 ## Checks
 
@@ -16,7 +16,7 @@
 | 6 | Blank states are flagged and item/retailer flag references are bidirectional | ✅ PASS | 0 |
 | 7 | Rejected snippets and superseded gold quotes are not current values | ✅ PASS | 0 |
 | 8 | Nominal fine-gold and melt calculations use current constants | ✅ PASS | 0 |
-| 9 | Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure (691 link occurrences, 173 external). External retrieval is documented separately; future availability is not guaranteed. | ✅ PASS | 0 |
+| 9 | Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure (769 link occurrences, 201 external). External retrieval is documented separately; future availability is not guaranteed. | ✅ PASS | 0 |
 | 10 | Coverage limitations remain visible | ✅ PASS | 0 |
 
 ## Failures
@@ -25,7 +25,8 @@
 
 ## Warnings
 
-- [coverage] 3 of 16 rows have no explicitly assigned current price (F-008/F-018)
+- [gold] Header quote-as-of is unconfirmed; chart/retrieval dates are not substituted (F-026)
+- [coverage] 15 of 16 rows have no explicitly assigned current price (F-008/F-018/F-025)
 - [coverage] 15 of 16 rows have no published metal weight (F-003)
 
 ## What this audit proves, and what it does not

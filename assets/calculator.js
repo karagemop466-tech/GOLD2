@@ -38,6 +38,7 @@
 
     const fineGoldGrams = metalWeight * listedKarat / 24;
     const meltUsd = fineGoldGrams / GRAMS_PER_TROY_OUNCE * goldSpot;
+    if (!Number.isFinite(fineGoldGrams) || !Number.isFinite(meltUsd) || meltUsd <= 0) return empty;
     const result = {
       fineGoldGrams: fineGoldGrams,
       meltUsd: meltUsd,
@@ -48,7 +49,7 @@
     if (askingPrice !== null && askingPrice !== "") {
       const asking = positiveNumber(askingPrice);
       if (asking !== null) {
-        result.askingToMeltRatio = asking / meltUsd;
+        result.askingToMeltRatio = Number.isFinite(asking / meltUsd) ? asking / meltUsd : null;
         result.askingMinusMeltUsd = asking - meltUsd;
       }
     }
@@ -77,8 +78,9 @@
       return false;
     }
 
+    const acknowledgement = doc.getElementById("root-scenario-ack");
     function run() {
-      const result = calculate(weight.value, karat.value, spot.value, asking.value);
+      const result = acknowledgement && acknowledgement.checked ? calculate(weight.value, karat.value, spot.value, asking.value) : calculate(null, null, null, null);
       fine.textContent = result.fineGoldGrams === null ? EMPTY : result.fineGoldGrams.toFixed(3) + " g";
       melt.textContent = money(result.meltUsd);
       ratio.textContent = result.askingToMeltRatio === null ? EMPTY : result.askingToMeltRatio.toFixed(2) + "×";
@@ -89,6 +91,7 @@
       element.addEventListener("input", run);
       element.addEventListener("change", run);
     });
+    if (acknowledgement) acknowledgement.addEventListener("change", run);
     run();
     return true;
   }

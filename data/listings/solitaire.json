@@ -15,8 +15,8 @@
       "color": "Yellow",
       "width_mm": 2.4,
       "weight_g": null,
-      "price": 1145.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
@@ -27,7 +27,7 @@
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "partial_official_fields",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
@@ -37,7 +37,8 @@
         "F-015",
         "F-016",
         "F-021",
-        "F-024"
+        "F-024",
+        "F-025"
       ],
       "notes": "The official price is labeled Setting Price.",
       "depth_mm": null,
@@ -80,7 +81,16 @@
         "center_stone_included": [
           "$1,145(Setting Price)"
         ]
-      }
+      },
+      "superseded_normalization": {
+        "price": 1145.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "$1,145(Setting Price)"
+      ]
     },
     {
       "id": "BN-195639",
@@ -94,8 +104,8 @@
       "color": "Yellow",
       "width_mm": 1.8,
       "weight_g": null,
-      "price": 1000.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
@@ -106,7 +116,7 @@
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "partial_official_fields",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
@@ -116,7 +126,8 @@
         "F-015",
         "F-016",
         "F-021",
-        "F-024"
+        "F-024",
+        "F-025"
       ],
       "notes": "The official price is labeled Setting Price.",
       "depth_mm": null,
@@ -159,7 +170,16 @@
         "center_stone_included": [
           "$1,000(Setting Price)"
         ]
-      }
+      },
+      "superseded_normalization": {
+        "price": 1000.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "$1,000(Setting Price)"
+      ]
     },
     {
       "id": "BN-194548",
@@ -173,8 +193,8 @@
       "color": "White",
       "width_mm": 2.0,
       "weight_g": null,
-      "price": 1045.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
@@ -185,7 +205,7 @@
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "partial_official_fields",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
@@ -195,7 +215,8 @@
         "F-015",
         "F-016",
         "F-021",
-        "F-024"
+        "F-024",
+        "F-025"
       ],
       "notes": "The page states 14K White Gold and Rhodium Finish: Yes. It does not state the words solid gold; no underlying-construction claim is inferred from the finish.",
       "depth_mm": null,
@@ -241,7 +262,16 @@
         "surface_finish": [
           "Rhodium Finish\n\nYes"
         ]
-      }
+      },
+      "superseded_normalization": {
+        "price": 1045.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "$1,045(Setting Price)"
+      ]
     },
     {
       "id": "BE-121H6",

@@ -6,7 +6,7 @@
     "karat": 14,
     "metal": "14K White Gold",
     "price": 1300,
-    "currency": "USD",
+    "currency": null,
     "priceScope": "Setting only; center diamond selected separately",
     "source": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
     "evidence": {
@@ -31,7 +31,7 @@
     "karat": 14,
     "metal": "14K White Gold",
     "price": 1050,
-    "currency": "USD",
+    "currency": null,
     "priceScope": "Setting only; center diamond selected separately",
     "source": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
     "evidence": {

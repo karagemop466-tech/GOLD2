@@ -15,8 +15,8 @@
       "color": "Yellow",
       "width_mm": 1.9,
       "weight_g": null,
-      "price": 1125.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
@@ -27,7 +27,7 @@
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "partial_official_fields",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
@@ -37,7 +37,8 @@
         "F-015",
         "F-016",
         "F-021",
-        "F-024"
+        "F-024",
+        "F-025"
       ],
       "notes": "The description states platinum prongs; the 18K yellow-gold description is not applied to that separate component.",
       "depth_mm": null,
@@ -83,7 +84,16 @@
         "prong_metal": [
           "18k yellow gold four-prong solitaire engagement ring with platinum prongs"
         ]
-      }
+      },
+      "superseded_normalization": {
+        "price": 1125.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "$1,125(Setting Price)"
+      ]
     },
     {
       "id": "BN-195269",
@@ -97,8 +107,8 @@
       "color": "Yellow",
       "width_mm": 1.8,
       "weight_g": null,
-      "price": 1155.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
@@ -109,7 +119,7 @@
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.bluenile.com/policies/returns",
-      "verification_status": "partial_official_fields",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
@@ -119,7 +129,8 @@
         "F-015",
         "F-016",
         "F-021",
-        "F-024"
+        "F-024",
+        "F-025"
       ],
       "notes": "The official price is labeled Setting Price.",
       "depth_mm": null,
@@ -162,7 +173,16 @@
         "center_stone_included": [
           "$1,155(Setting Price)"
         ]
-      }
+      },
+      "superseded_normalization": {
+        "price": 1155.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      },
+      "observed_native_display": [
+        "$1,155(Setting Price)"
+      ]
     },
     {
       "id": "VRAI-CLASSIC-4P",

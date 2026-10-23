@@ -166,11 +166,11 @@ def main() -> int:
         date_match = re.fullmatch(r"Data as of (\d{1,2} [A-Za-z]+, \d{4})", quote)
         if date_match:
             source_date = datetime.strptime(date_match.group(1), "%d %B, %Y").date().isoformat()
-            if source_date != gold.get("quote_date"):
+            if source_date != gold.get("chart_as_of_date", gold.get("quote_date")):
                 flag(
                     "GOLD-QUOTE-DATE-MISMATCH",
                     "data/gold-price.json",
-                    f"quote_date={gold.get('quote_date')} but official excerpt says {source_date}; retrieved_at is a separate field",
+                    f"chart_as_of_date={gold.get('chart_as_of_date')} but official chart excerpt says {source_date}; the header quote timestamp is separate",
                 )
     grams_per_oz = Decimal(str(gold["grams_per_troy_ounce"]))
     spot = Decimal(str(gold["usd_per_troy_oz"]))

@@ -317,6 +317,52 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - Main verification runs `39871245614` (GOLD2 verify) and `39871245531` (Verify GOLD) succeeded for `966e87b`; Pages run `39871244612` succeeded for the same commit.
 - Live cache-busted `/GOLD2/?review=966e87b` displayed the 16-row current dashboard and corrected QA badge. `/GOLD2/flags.html` displayed 16/16 solid-gold and 15/16 missing-weight counts but still displayed F-015's stale 8-Blue-Nile sentence. `/GOLD2/prices.html` displayed the correct VRAI and quick-reference arithmetic plus the open calculator guidance/label issues. `/GOLD2/site/` remains the explicitly described earlier two-record dashboard.
 - The unqueried root retrieval reused an earlier `/site/` redirect in the fetch cache; a cache-busted URL retrieved the current root and the archived source contains no root redirect. This is recorded as a retrieval-cache irregularity, not misreported as a Pages failure.
+- Review PR #8 is open; its merge, post-merge deployment, and final combined re-review are pending. Open R39/R6 findings are not closed by successful builds or merges.
+
+---
+
+# Current extension session — arena-24aeb4a8
+
+# GOLD2 coordination board
+
+## Rules and session
+
+- Active session: `arena-24aeb4a8` (research, implementation, and final integration).
+- Fixed Arena branch: `arena/24aeb4a8-gold2`. Arena requires all session work and pushes on this branch; no alternate task branches will be created.
+- Read this board before claiming work. Do not edit another session's claimed files. Log cross-scope requests here. Claims with no commits for more than 60 minutes may be handed off with an explicit log entry.
+- `needs review` means the issue is published on **Flagged for Review**; it does not block publication. Missing evidence must not be represented as verification.
+- Shared data, navigation, and deployment files are reserved for the final integration owner below. All current tasks are owned by this session because the repository is initially empty apart from `README.md`.
+
+## Task board
+
+| Task | Status | Owner | File scope | Claimed (UTC) | Verification / sources / irregularities |
+| --- | --- | --- | --- | --- | --- |
+| R1 — Audit existing repository and establish evidence policy | in progress | arena-24aeb4a8 | `README.md`, `docs/**` | 2026-10-22T23:08:10Z | Initial tree contains only a one-line README. No existing products, prices, dependencies, or application to verify. |
+| R2 — Research official product and buyer-protection sources | in progress | arena-24aeb4a8 | `research/**` | 2026-10-22T23:08:10Z | Collect official sources with observation timestamps; leave unconfirmed values blank. No claim of exhaustive market coverage. |
+| I1 — Final integration: evidence data, dashboard, calculator, review page | in progress | arena-24aeb4a8 | `index.html`, `assets/**`, `data/**`, `catalog/**`, `calculator/**`, `standards/**`, `sources/**`, `review/**`, `404.html` | 2026-10-22T23:08:10Z | Owns all shared outputs. Do not enter unverified prices or infer missing specifications. |
+| Q1 — Automated evidence, security, link, accessibility and build checks | in progress | arena-24aeb4a8 | `scripts/**`, `tests/**`, `package.json`, `package-lock.json`, `.gitignore`, `.github/**` | 2026-10-22T23:08:10Z | Deterministic checks flag missing/stale/unsupported facts; they cannot prove authenticity or detect every hallucination. |
+| P1 — PR, merge, GitHub Pages publication, final verification | in progress | arena-24aeb4a8 | `COORDINATION.md` and GitHub repository/Pages settings | 2026-10-22T23:08:10Z | Open and merge explicit PR number only after checks pass; confirm deployment independently. |
+
+## Log
+
+- **2026-10-22T23:08:10Z — arena-24aeb4a8:** Read repository and remote state. No coordination file, other remote work branches, open PRs, or uncommitted changes found. Created this board and claimed the scopes above before implementation. The user's requested task-branch scheme is superseded by Arena's fixed session-branch requirement. Will pull/rebase before each push, make small commits, and preserve other sessions' work if new work appears.
+
+## Publication record
+
+- PR: pending
+- Merge: pending
+- Pages URL: pending
+- Deployment: pending
+
+- **2026-10-22T23:17:00Z — arena-24aeb4a8:** Detected newly merged main work from session 39da17c8 and open PR #3 from a different session. The merged session marks its scope done; its two-setting `site/**`, Python/JS audit/build tools, original workflow, and completion history are retained. Our additional evidence/data use separate files. Extension scope: root dashboard and `catalog/`, `calculator/`, `standards/`, `sources/`, `review/`, `assets/`, `data/catalog.json`, `research/`, `docs/`; QA additions use `scripts/*.mjs`, `tests/`, and a distinct workflow. Root entry point and README will integrate both datasets and link the preserved legacy dashboard. Open PR #3 is not edited, closed, or merged by this session. Reconciled the coordination-file add/add conflict by retaining both logs. Integrating main with a merge avoids rewriting the already published session claim; pull/rebase of our tracking branch remains required before every push.
+
+- **2026-10-22T23:35:01Z — arena-24aeb4a8:** Research batch persisted and pushed. Built an 18-entry extension (16 new + two directly rechecked legacy settings), field-level evidence, category views, calculator, checklist, 15 findings, source records and static guards. Evidence consistency, 21 unit/server/deterministic-build tests, 17-page local links and the preserved legacy suite pass. First Chromium attempt failed before loading pages because the sandbox lacks libnspr4/libnss3; no browser/a11y success claimed. Detected main advancing to `7a45392` with other sessions’ 16-entry root dashboard and independent reviews. To preserve completed work, moved the extension to **`explore/**`**, including its own assets; root/category pages, `assets/style.css`, `tools/**`, reports and review files remain theirs. Will import nonduplicate previously researched records into the combined register, retain all original evidence/data, and add a root link through the existing generator. New canonical data remains `data/catalog.json`; no other session currently claims it. QA additions remain `scripts/*.mjs`, `tests/**`, package files and a separate workflow. Minimal legacy currency correction is explicitly documented in `docs/REVIEW.md`.
+
+- **2026-10-22T23:46:00Z — arena-24aeb4a8:** Final integration follow-up claim (other implementation owners mark their work done): narrowly correct inherited unsupported populated fields/narrative and unsafe calculator behavior in `data/listings/**`, `data/gold-price.json`, `data/flags.json`, `data/retailers.json`, corresponding `evidence/**`, `tools/build_site.py`, `tools/qa.py`, generated root pages/assets, README and pinned workflow references. Preserve all original entries, historical observations, peer reviews and evidence. Expanded `explore/` register now contains all **32 unique product URLs / nine retailers**; all 14 additional product pages were directly retrieved, with 60 publisher records and 19 findings. No unknown gold amount becomes a verified value. Browser testing now launches with bundled NSS/NSPR rather than system installs; it caught and prompted correction of malformed select markup and brand accessibility naming. Final all-state browser/security results are still pending.
 - Review PR #8 final head `779020d40bc328decb6240044da7a305366ef856` passed runs `39872116197` and `39872116200`, then merged as `73a98fe1338f901b6c85452b237469d3bde29327` at 2026-10-22T23:29:48Z. Exact-main runs `39872158608` and `39872158539` passed; Pages run `39872158049` built and deployed that commit. The PR-head and merge trees were identical.
 - PR #13 subsequently changed only `reports/qa-report.md`; main `7a453927ac410c45894c480bef47494322798e1f` verification/Pages runs `39872212871`, `39872212900`, and `39872212893` succeeded.
 - Final publication and errata evidence is in `reviews/2026-10-22-pr8-publication.md`. R39-01/R39-03/R8-01 are resolved; R9-01 and 16 other findings remain open. Successful builds/merges do not close evidence findings. Further hallucination/security review is required after every corrective edit.
+
+- **2026-10-22T23:57:00Z — arena-24aeb4a8 — IMPLEMENTATION COMPLETE / publication gate pending:** Integrated latest main `894d364` (including PRs #14/#15). Resolved inherited-file conflicts using newer field-scoped implementation/data, preserving all peer evidence/policy/reputation and historical review files, then reapplied bounded safety fixes. Combined `explore/`: **32 unique products / nine sellers / 60 structured sources / 20 findings / 10 native-currency price snapshots / zero purchase approvals**; every root URL retained exactly once. Added root F-025 (unsupported ISO USD) and F-026 (moving header timestamp unconfirmed; chart date separate), durable root discoverability, explicit root scenario acknowledgement, finite arithmetic guards, restrictive CSP without inline styles, full-SHA Actions, and non-updating source monitor. Local full-page browser run passed all **29 pages**, 32 valuation gates, mobile/desktop/filters/scenarios/staleness/no-JS; zero browser errors/external runtime requests and no axe violations in exercised expanded states. Root audit, calculator and negative controls passed; full link/security checks passed; npm audit zero known vulnerabilities. Docs record exact limitations and preservation decisions. Final repeat, PR CI and legacy Pages build/deployment are the remaining publication gates; flagged unknown evidence remains published, never filled or treated as purchase approval. Deployment evidence will be recorded in the integration PR.
+
+- **Final publication rebase-free follow-up — arena-24aeb4a8:** PR #17 is open. Its first complete Evidence dashboard run passed on GitHub. Main advanced once more via PR #16 (`49a84cb`); merged it normally, retaining its root small-text contrast audit/colors and review closure history. Kept the already full-SHA-pinned newer Actions and combined-register README where only wording/version pins conflicted; regenerated root methods/report. No product observations changed. Repeat checks and PR CI are run again against this actual combined state before merge.

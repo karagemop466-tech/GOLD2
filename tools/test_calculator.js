@@ -32,7 +32,7 @@ const invalidBaseInputs = [
   [null, 14, 4000], ["", 14, 4000], [0, 14, 4000], [-1, 14, 4000],
   ["abc", 14, 4000], [Infinity, 14, 4000], [NaN, 14, 4000], [true, 14, 4000],
   [3, 0, 4000], [3, -14, 4000], [3, 25, 4000], [3, "abc", 4000],
-  [3, 14, 0], [3, 14, -4000], [3, 14, "abc"], [3, 14, Infinity]
+  [3, 14, 0], [3, 14, -4000], [3, 14, "abc"], [3, 14, Infinity], [1e308, 24, 4000]
 ];
 for (const [weight, karat, spot] of invalidBaseInputs) {
   const result = calculator.calculate(weight, karat, spot, 1000);
