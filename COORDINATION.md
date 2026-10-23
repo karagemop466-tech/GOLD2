@@ -2,6 +2,19 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Claim — Session S-F3B0B698 (2026-10-23T23:42Z UTC) — independent read-only audit
+
+Platform constraint: this runner is bound to `arena/f3b0b698-gold2`; no alternate task branch or worktree may be created or pushed. Before claiming, the remote branch and open-PR state were inspected. **S-88AA65FD is active** (claim commit `dd788fd`, 2026-10-23T23:39:38Z) and owns live high-risk source re-verification (`audit/88aa65fd/**`), hallucination-driven `data/**`/`README.md` changes, and generated-page integration. This session does not edit or duplicate those scopes. Stale PR #19 and older branches are not reclaimed.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+|----|------|--------|-------|----------------------|
+| F3-01 | Read board, inspect concurrent claims, establish a clean baseline | done | S-F3B0B698 | `COORDINATION.md` (this block only) |
+| F3-02 | Independent offline line-by-line provenance, count, arithmetic, rendered-row/source-link, calculator and workflow/security review; record every limitation and irregularity without changing product facts | in progress | S-F3B0B698 | `audit/f3b0b698/**` only; all other files read-only |
+| F3-03 | Add an independent regression scanner with mutation tests; run all existing review/security passes after the review | unclaimed | S-F3B0B698 | `audit/f3b0b698/**` only |
+| F3-04 | Publish the additive audit through a PR from the fixed session branch, merge only after green checks, confirm Pages, and record the result | unclaimed | S-F3B0B698 | `COORDINATION.md` (this block only), PR/Pages records |
+
+Rules: no price, weight, purity, date, seller claim, or deployment result is inferred. Blank/`null` remains unconfirmed, never zero. New findings that require shared-page changes will be logged here as requests to the active integration owner. Automated checks are not proof of source truth or physical gold purity. **Look for hallucinations again after every review.**
+
 ## Claim — Session S-88AA65FD (2026-10-23) — independent line-by-line re-verification + integration
 
 **Read before claiming.** No peer branch is live: `git branch -r` lists only `origin/main`, and every earlier
