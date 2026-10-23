@@ -638,13 +638,13 @@
       "publisher": "Men\u0113",
       "kind": "product",
       "url": "https://mene.com/products/rose-ring-gold",
-      "observedAt": "2026-10-23T10:00:00Z",
+      "observedAt": "2026-10-23T23:46:00Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Direct official-product fetch on 2026-10-23 rendered $1,336 USD. The 2026-10-22 observation was $1,346; Men\u0113 prices these Crafted-on-Demand pieces from metal value, so the earlier amount is superseded, not additive.",
+      "note": "Direct official-product fetch on 2026-10-23T23:46:00Z rendered $1,325 USD on the page's default size display; the 2026-10-23T10:00Z observation was $1,336. Men\u0113 prices these Crafted-on-Demand pieces from metal value, so the earlier amount is superseded, not additive. Sizes are sold by weight; no gram weight is published for this piece.",
       "quotes": {
         "name": "Rose Ring",
-        "price": "$1,336",
+        "price": "$1,325",
         "currency": "USD",
         "karat": "24k Gold",
         "cod": "This is a Crafted-on-Demand item."
@@ -653,20 +653,26 @@
         0,
         2
       ],
-      "lastRecheckedAt": "2026-10-23T10:00:00Z"
+      "lastRecheckedAt": "2026-10-23T23:46:00Z",
+      "supersededDisplay": {
+        "amount": 1336,
+        "currency": "USD",
+        "observedAt": "2026-10-23T10:00:00Z",
+        "reason": "Earlier same-day observation of the same official page. The page is repriced from metal value, so only the later observation is current; the earlier amount is kept as dated history and is never averaged with the new one."
+      }
     },
     {
       "id": "mene-knot",
       "publisher": "Men\u0113",
       "kind": "product",
       "url": "https://mene.com/products/knot-ring-gold",
-      "observedAt": "2026-10-23T10:00:00Z",
+      "observedAt": "2026-10-23T23:47:00Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Direct official-product fetch on 2026-10-23 rendered $1,454 USD. The 2026-10-22 observation was $1,465; the earlier amount is superseded by the dated re-observation.",
+      "note": "Direct official-product fetch on 2026-10-23T23:47:00Z rendered $1,442 USD on the page's default size display; the 2026-10-23T10:00Z observation was $1,454. Men\u0113 prices these Crafted-on-Demand pieces from metal value, so the earlier amount is superseded, not additive. Sizes are sold by weight; no gram weight is published for this piece.",
       "quotes": {
         "name": "Knot Ring",
-        "price": "$1,454",
+        "price": "$1,442",
         "currency": "USD",
         "karat": "24k Gold",
         "cod": "This is a Crafted-on-Demand item."
@@ -675,7 +681,13 @@
         0,
         2
       ],
-      "lastRecheckedAt": "2026-10-23T10:00:00Z"
+      "lastRecheckedAt": "2026-10-23T23:47:00Z",
+      "supersededDisplay": {
+        "amount": 1454,
+        "currency": "USD",
+        "observedAt": "2026-10-23T10:00:00Z",
+        "reason": "Earlier same-day observation of the same official page. The page is repriced from metal value, so only the later observation is current; the earlier amount is kept as dated history and is never averaged with the new one."
+      }
     },
     {
       "id": "mene-terms",
@@ -1219,14 +1231,14 @@
       "relevantChunks": [
         0
       ],
-      "note": "Moving header read 3,995.47 USD/oz on the late-evening re-read of 2026-10-23 (session S-1B04074F); earlier same-day reads showed different values and are retained only as superseded history in data/gold-price.json, never rendered. The page's data blocks were dated 22 October, 2026. The header carries no quote-as-of timestamp, so chart metadata is stored separately and not bound to the header.",
+      "note": "Moving header read 3,995.47 USD/oz on the 2026-10-23T23:4xZ re-read by sessions S-88AA65FD and S-1B04074F, which observed the identical value independently. Earlier same-day readings are retained only inside data/gold-price.json as superseded observations and are not rendered as current values anywhere. The page's data blocks were dated 22 October, 2026. The header carries no quote-as-of timestamp, so chart metadata is stored separately and not bound to the header.",
       "quotes": {
         "header": "Gold Spot price USD /oz - 3,995.47",
         "chart-as-of": "Data as of 22 October, 2026",
         "units": "Prices are quoted in currency unit per troy ounce unless otherwise stated.",
         "quote": "3,995.47"
       },
-      "lastRecheckedAt": "2026-10-23T20:00:00Z"
+      "lastRecheckedAt": "2026-10-23T23:41:00Z"
     },
     {
       "id": "sarraf-contact",
@@ -1616,6 +1628,23 @@
       "relevantChunks": [
         0
       ]
+    },
+    {
+      "id": "ecfr-23-3",
+      "publisher": "Federal Trade Commission \u2014 16 CFR Part 23 (eCFR, Office of the Federal Register)",
+      "kind": "government",
+      "url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3",
+      "observedAt": "2026-10-23T23:48:00Z",
+      "method": "fetch_page; section text read in full on 2026-10-23 by session S-88AA65FD",
+      "access": "fetched",
+      "note": "Page banner on retrieval: 'up to date as of 10/21/2026'; 'Title 16 was last amended 10/19/2026'. Section 23.3(a)-(d) and its footnotes were read. The sentence previously stored in data/gold-price.json as a quotation of this section \u2014 'an item marked 18 k is made of 75 % gold' \u2014 does not appear here; the omission is published as F-044.",
+      "quotes": {
+        "unfair": "It is unfair or deceptive to misrepresent the presence of gold or gold alloy in an industry product",
+        "fine-24k": "fine (24 karat) gold",
+        "alloy": "composed throughout of an alloy of gold (i.e., gold that is less than 24 karats)",
+        "solid-hollow": "Such products should not be marked or described as \"solid\" or as being solidly of gold or of a gold alloy.",
+        "tolerance": "articles or parts made of gold or of gold alloy that contain no solder have a permissible tolerance of three parts per thousand"
+      }
     }
   ]
 }

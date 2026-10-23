@@ -67,3 +67,41 @@ output and in `audit/88aa65fd/scan_results.txt`.
 
 **This pass is one review, not a certificate.** Re-open the official sources and look for hallucinations
 again after every review.
+
+## 6. Rebase reconciliation with session S-1B04074F (PR #45, merged while this pass ran)
+
+`origin/main` advanced to `e34d10c` during this pass. The peer session independently re-read the same World
+Gold Council page and recorded **the same 3,995.47** value at 23:45Z, and independently recomputed the same
+calculator expectations (SAR 13.40 g 14K melt 1004.108234 / 73.7231 %, FDJ 0.976 g net → 73.1350). That is
+independent corroboration, not duplication: two sessions, two fetches, one number.
+
+Resolutions, none of which discard peer work:
+
+- `research/evidence.json` — the peer's later `observedAt` (23:45Z) kept for the WGC record, with one merged
+  note crediting both sessions; this pass's Menē notes kept because they carry the superseded amounts.
+- `data/gold-price.json` — both sessions agreed on the value and superseded chain; this pass's explicit
+  `23:41Z` timestamps kept, peer's four-entry superseded list preserved.
+- `data/verification-log.json` — the peer's richer F-039/F-028 notes kept and extended with this pass's
+  confirmation and re-read timestamps; `GOLD-QUOTE` credits both reads.
+- `README.md`, generated pages, `reports/qa-report.md` — peer text kept where it already stated the late-evening
+  read; every generated artifact rebuilt from the merged sources rather than hand-merged.
+- `dashboard/scripts/calc-test.js` — this pass's labels and tighter tolerance kept; the numeric expectations are
+  identical in both versions.
+
+Two warnings remain from the peer's scanner and are **explained, not suppressed**: `flags.html` and
+`explore/calculator/index.html` mention a gold spot without printing the current figure. That is deliberate —
+flag prose must not restate a moving header value, and the explore calculator ships no invented default spot
+("No invented fallback price"). Neither page displays a stale number; both simply display none.
+
+## 7. Final gate results on the rebased tree
+
+`tools/qa.py` **PASS 12 / 0 / 3** · `verify` **44 products / 86 sources / 27 findings / 0 approvals** ·
+`node --test` 23/23 · `check-links` PASS (46 pages / 102 local / 179 external, status not certified) ·
+`security` PASS + `npm audit` 0 · dashboard build + `verify --check-build` PASS · `calc-test` PASS ·
+`tools/test_calculator.js` PASS · Chromium + axe PASS · nine independent scanners PASS ·
+this pass's scanner **10 checks / 0 failures / 6-of-6 mutation controls** · three generators run twice →
+byte-identical tree.
+
+**Open and published, not blocking:** F-026 (header quote time unconfirmed), F-043, F-044, 20 of 30 root rows
+without an assigned price, 23 of 30 without a metal weight, 35 combined rows and 26 root rows not re-read in
+this pass, and zero physical/XRF/scale verification or purchase approvals.

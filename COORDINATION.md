@@ -56,6 +56,15 @@ and pushed **before** any data or page edit.
   **44 / 86 / 27 / 0**; `node --test` 23/23; `npm run check` PASS end to end (links 46/102/179, security, axe,
   44 gates); all six inherited scanners PASS; new scanner PASS with 6/6 controls; three generators run twice
   produce a byte-identical tree.
+- **Concurrent work reconciled, nothing discarded.** `origin/main` advanced to `e34d10c` (PR #45, session
+  S-1B04074F) mid-pass. That session independently re-read the same WGC page and recorded the **same 3,995.47**,
+  and independently recomputed the same calculator expectations (SAR 1004.108234 / 73.7231 %, FDJ 73.1350) —
+  independent corroboration rather than a conflict. The rebase kept the peer's richer verification-log notes,
+  its later WGC `observedAt`, and its README sentence, and kept this pass's Menē records, karat-quote correction
+  and `F-043`/`F-044`; every generated artifact was rebuilt from the merged sources. Twelve conflicted paths were
+  resolved by hand; no peer edit was reverted. Their scanner's two remaining warnings (`flags.html` and
+  `explore/calculator/index.html` mention a gold spot without printing it) are deliberate and recorded as
+  explained warnings, not suppressed.
 - **Not re-read, stated on the page and here:** 35 of 44 combined rows, 26 of 30 root rows, and 76 of 86 evidence
   records were **not** re-fetched in this pass; their earlier dates stand. Zero physical, scale or XRF checks;
   zero purchase approvals. **Look for hallucinations again after every review — this is one pass, not a seal.**
