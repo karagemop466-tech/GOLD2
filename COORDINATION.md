@@ -25,6 +25,32 @@ Platform constraint: this session is bound to `arena/d4c0a507-gold2`; no other b
 - 2026-10-23 — **Rebase conflict with a concurrent session — resolved without discarding work.** `git pull --rebase origin main` found `main` advanced to `fee89f0` (PR #23, session `S-8B9E189A`), which had independently re-read the same official pages and corrected the same items: gold reference 4,028.53→4,024.45, the Zales label-instability finding, the Brilliant Earth USD correction, and a single currency rule for every row (F-033). Conflicts in `data/gold-price.json`, `data/flags.json`, `evidence/gold-price.md`, `flags.html`, `methods.html`, `three-stone-vintage.html`, and `reports/qa-report.md` were resolved by taking the **merged PR #23 content** (it is newer and CI-verified) and keeping this session's independent audit record in `audit/d4c0a507/`. No prior session's data, evidence, review, or coordination record was deleted.
 - 2026-10-23 — Re-verified the integrated tree after the rebase: root QA **PASS — 11 checks, 0 failures, 3 warnings**; calculator PASS; independent snapshot audit PASS (6 arithmetic controls); `node --test` 23/23; `check-links` PASS (71 local targets, 102 external publisher URLs); `audit.py` PASS. Remaining warnings are coverage gaps, not verification failures: 16 of 20 rows have no assigned price, 18 of 20 publish no metal weight, and the WGC header quote time stays unconfirmed (F-026).
 
+### S-D4C0A507 — completion record and publication proof
+
+| Record | Verified result |
+|---|---|
+| Integration PR | [#28](https://github.com/karagemop466-tech/GOLD2/pull/28), merged 2026-10-23T10:33:43Z |
+| Merge commit | `a84c1535dc6ec5b8186525a00d1d1171a9ffb77b` |
+| Post-merge main checks | `GOLD2 verify` run `39939984517` SUCCESS; `Legacy dashboard verify` run `39939984495` SUCCESS; `Evidence dashboard` run `39939984439` SUCCESS |
+| Pages | `pages build and deployment` run `39939983939` SUCCESS (legacy `main` `/`) |
+| Live re-read | Root and `flags.html` returned the no-hallucinations rule, **PASS — 11 checks, 0 failures, 3 warnings**, gold reference **$4,024.45/oz retrieved 2026-10-23** (F-026), 20 rows, 4 assigned prices, 2 published metal weights, 31 flags (7 high) |
+| Local verification | Root QA 11 checks / 0 failures / 3 warnings; calculator tests PASS; independent snapshot audit 0 findings / 6 arithmetic controls; `node --test` 23/23; `verify` PASS; `build.mjs` 13 pages; `check-links` PASS (102 external publisher URLs); `security.mjs` + `npm audit` 0 vulnerabilities; generator reproducible |
+
+**Merge note:** the first merge attempt was rejected ("the merge commit cannot be cleanly created") because `main`
+had advanced to `39c81db` (PR #27) while this branch sat on `fee89f0`. The branch was rebased onto `39c81db`, the
+one `reports/qa-report.md` conflict was resolved by taking the newer merged content, the full local suite was
+re-run (PASS), and the PR was merged. No session's work was discarded.
+
+**Second concurrent-session interaction:** PR #23 (`S-8B9E189A`) had independently re-read the same official pages
+and corrected the same items (gold reference, Zales label instability, Brilliant Earth USD, and a single currency
+rule for every row, F-033). Where its merged wording was more complete, its wording stands and this session's audit
+report points at it rather than duplicating it.
+
+**Completion boundary:** implementation, evidence organization, source-link review, PR merge, and Pages deployment
+are complete. The flags are not hidden or treated as resolved facts: 16 of 20 rows have no assigned price, 18 of 20
+publish no metal weight, and no physical inspection, hallmark verification, XRF assay, or scale verification was
+performed. Continue to look for hallucinations after every review.
+
 ## Claim — Session S-CA4C9D8A (completed 2026-10-22 UTC)
 
 Platform constraint: this session is bound to `arena/ca4c9d8a-gold2`; no other branch or worktree may be created or pushed. File scopes below are exclusive to this session while active.
