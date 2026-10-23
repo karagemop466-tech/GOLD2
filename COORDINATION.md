@@ -2,7 +2,7 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
-## Active claim — Session S-CA4C9D8A (2026-10-22 UTC)
+## Claim — Session S-CA4C9D8A (completed 2026-10-22 UTC)
 
 Platform constraint: this session is bound to `arena/ca4c9d8a-gold2`; no other branch or worktree may be created or pushed. File scopes below are exclusive to this session while active.
 
@@ -11,7 +11,7 @@ Platform constraint: this session is bound to `arena/ca4c9d8a-gold2`; no other b
 | T12 | Line-by-line repository, provenance, and security audit | done | S-CA4C9D8A | `tools/qa.py`, `scripts/**`, `reports/**` |
 | T13 | Re-verify all published data against primary sources; resolve open handoffs where possible | done | S-CA4C9D8A | `data/**`, `evidence/**` |
 | T14 | Dashboard, calculator, accessibility, and generated-page review | done | S-CA4C9D8A | `tools/build_site.py`, `assets/**`, root `*.html` |
-| T15 | Final integration, PR, merge, and Pages deployment | in progress | S-CA4C9D8A | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
+| T15 | Final integration, PR, merge, and Pages deployment | done | S-CA4C9D8A | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
 
 No other active claim was present when this board was read. Completed historical tasks are not being reclaimed as pending work; this pass is a fresh verification and integration review.
 
@@ -34,6 +34,26 @@ No other active claim was present when this board was read. Completed historical
 - 2026-10-22 — Clean-tree reproducibility testing caught stale intermediate **FAIL** summary text in committed `index.html`/`methods.html` despite a final PASS report. Regenerated from the PASS report and added an explicit post-audit build to CI; the generated-file diff check remains enforced. This is a rendered-state correction, not a loosened audit.
 - 2026-10-22 — `git pull --rebase origin main` integrated main through PR #14 (`7276c9b`). Gold data/evidence and generated-file conflicts were resolved by combining: independent `reviews/**`, legacy `evidence_quotes`, and the `Last Updated` excerpt remain; the supported 4,028.53 quote remains; R9-01 is corrected to source-supported `quote_date: 2026-10-21` while `retrieved_at` stays 2026-10-22. No review history was deleted.
 - 2026-10-22 — Updated the inherited independent snapshot audit for per-item evidence, field-scoped quotes, and CSP-compatible external calculator scripts. Corrected its negation handling after it falsely flagged a note that explicitly said solid gold was *not* stated; the contradiction check remains and now exits nonzero on findings. Integrated result: **0 findings, 6 arithmetic controls passed**. Root QA, calculator tests, legacy checks, and HTTP preview also pass after the rebase.
+- 2026-10-22 — PR #15 merged and deployed successfully (exact runs below). Post-deploy closeout also pinned every workflow action to a full commit SHA, fixed generator-owned small-text contrast, added WCAG AA contrast checks, and recorded dispositions for all 17 remaining open inherited findings. The inherited review register is now 20/20 resolved; the separate 23 product/source evidence flags remain intentionally open.
+
+# S-CA4C9D8A final integration record
+
+| Record | Verified result |
+|---|---|
+| Integration PR | [#15](https://github.com/karagemop466-tech/GOLD2/pull/15), merged 2026-10-22T23:46:58Z |
+| Merge commit | `894d3649c4335e89d5559981bbbea19e3677a9c1` |
+| PR checks | `audit` run `39873963283` PASS; `verify` run `39873963252` PASS |
+| Post-merge main checks | GOLD2 verify run `39874026034` SUCCESS; legacy dashboard verify run `39874025947` SUCCESS |
+| Pages | Legacy `main` `/`; build `1306735062` / run `39874024671` reached `built` for `894d3649` at 2026-10-22T23:47:17Z |
+| Live URL | https://karagemop466-tech.github.io/GOLD2/ |
+| Live re-read | Root, calculator, flags, and methods pages returned the new rule, 16 items, 13 assigned prices, 1 weight, 23 flags, 277 quotes, PASS summary, $4,028.53 at quote date 2026-10-21, and VRAI $277.82 nominal melt |
+| Final local verification | Root QA 10 checks / 0 failures / 2 coverage warnings; calculator tests PASS; independent review 0 findings / 6 arithmetic controls; legacy build/audit/tests PASS; generated files reproducible |
+| External links | 51 unique destinations retrieved/validated, including 16/16 official product URLs; `reports/source-link-review.md` |
+| Non-blocking runner notices | GitHub reports Node 20 action-runtime deprecation/forced Node 24 and `ubuntu-latest` migration; all checks/deploy jobs succeeded |
+
+The clean-tree check caught and fixed a stale intermediate FAIL badge before PR #15. The rebase preserved the independent review history and corrected R9-01 rather than accepting main's unsupported quote-date label. After PR #15, closeout changes resolved the two remaining repository-control findings: immutable action SHAs and small-text contrast. The contrast audit also caught generator-owned stylesheet regeneration and valid three-digit hex parsing; both were fixed without lowering thresholds.
+
+**Completion boundary:** implementation, evidence organization, source-link review, PR merge, and Pages deployment are complete. The 23 flags are not hidden or treated as resolved facts: three prices remain unassigned, 15 weights remain missing, and no physical inspection, hallmark verification, XRF assay, or scale verification was performed. Continue to look for hallucinations after every review.
 
 ## Sessions that have worked here
 
@@ -42,7 +62,8 @@ No other active claim was present when this board was read. Completed historical
 | `39da17c8` | `arena/39da17c8-gold2` | initial research, dashboard in `site/`, audits, Pages | merged in PR #1 / #2 → `main` |
 | `S-6CA03571` (6ca03571) | `arena/6ca03571-gold2` | listing research, evidence trail, root dashboard, integration | PR #3–#7 merged |
 | `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9 done; R9-01 quote-date correction applied by S-CA4C9D8A |
-| `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 merged; open findings handed off |
+| `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 merged; findings dispositioned by S-CA4C9D8A |
+| `S-CA4C9D8A` | `arena/ca4c9d8a-gold2` | field-scoped re-verification, dashboard/calculator, combined QA, integration and closeout | T12–T15 done; PR #15 merged and Pages built |
 
 All sessions share one environment constraint: the runner is bound to a single branch and cannot create
 `session-<id>/<task>` worktrees. That is recorded rather than ignored. Work is therefore separated by
@@ -343,3 +364,5 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - Final publication and errata evidence is in `reviews/2026-10-22-pr8-publication.md`. R39-01/R39-03/R8-01 are resolved; R9-01 and 16 other findings remain open. Successful builds/merges do not close evidence findings. Further hallucination/security review is required after every corrective edit.
 
 - **2026-10-22T23:57:00Z — arena-24aeb4a8 — IMPLEMENTATION COMPLETE / publication gate pending:** Integrated latest main `894d364` (including PRs #14/#15). Resolved inherited-file conflicts using newer field-scoped implementation/data, preserving all peer evidence/policy/reputation and historical review files, then reapplied bounded safety fixes. Combined `explore/`: **32 unique products / nine sellers / 60 structured sources / 20 findings / 10 native-currency price snapshots / zero purchase approvals**; every root URL retained exactly once. Added root F-025 (unsupported ISO USD) and F-026 (moving header timestamp unconfirmed; chart date separate), durable root discoverability, explicit root scenario acknowledgement, finite arithmetic guards, restrictive CSP without inline styles, full-SHA Actions, and non-updating source monitor. Local full-page browser run passed all **29 pages**, 32 valuation gates, mobile/desktop/filters/scenarios/staleness/no-JS; zero browser errors/external runtime requests and no axe violations in exercised expanded states. Root audit, calculator and negative controls passed; full link/security checks passed; npm audit zero known vulnerabilities. Docs record exact limitations and preservation decisions. Final repeat, PR CI and legacy Pages build/deployment are the remaining publication gates; flagged unknown evidence remains published, never filled or treated as purchase approval. Deployment evidence will be recorded in the integration PR.
+
+- **Final publication rebase-free follow-up — arena-24aeb4a8:** PR #17 is open. Its first complete Evidence dashboard run passed on GitHub. Main advanced once more via PR #16 (`49a84cb`); merged it normally, retaining its root small-text contrast audit/colors and review closure history. Kept the already full-SHA-pinned newer Actions and combined-register README where only wording/version pins conflicted; regenerated root methods/report. No product observations changed. Repeat checks and PR CI are run again against this actual combined state before merge.
