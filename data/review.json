@@ -3,7 +3,7 @@
     {
       "id": "weight-basis",
       "title": "Item grams are not net gold grams",
-      "scope": "Automic Gold \u00b7 seven entries",
+      "scope": "Automic Gold \u00b7 nine entries",
       "sources": [
         "ag-natural",
         "ag-cluster",
@@ -11,7 +11,9 @@
         "ag-ruby",
         "ag-sapphire",
         "ag-moissanite",
-        "ag-24k"
+        "ag-24k",
+        "ag-coffin",
+        "ag-cushion"
       ],
       "finding": "The seller labels these approximate figures Item Weight. No exact-size, metal-only basis is established. The catalog preserves the stated item grams but leaves net-alloy and fine-gold grams blank.",
       "action": "Obtain exact-size total weight and a separate gold-alloy-only weight, excluding stones and other materials. Have an independent jeweler check them before wear or resizing."
@@ -123,7 +125,7 @@
     {
       "id": "marks-and-tests",
       "title": "No candidate has verified paired marks or a physical test",
-      "scope": "All 32 entries",
+      "scope": "All 44 entries",
       "sources": [
         "ftc-jewelry",
         "gia-testing"
@@ -141,7 +143,8 @@
         "auvere-returns",
         "quince-returns",
         "mene-terms",
-        "bn-returns"
+        "bn-returns",
+        "mejuri-returns"
       ],
       "finding": "Published generic return windows do not establish that a particular order remains returnable after professional testing, resizing or customization. No seller was contacted for written permission during this review.",
       "action": "Do not buy under this project\u2019s rules if independent verification and an eligible return are not both allowed. Do not perform destructive tests without authorization."
@@ -159,7 +162,7 @@
         "ftc-shopping",
         "bn-501480w14"
       ],
-      "finding": "BBB profiles/complaints and Men\u0113\u2019s Trustpilot channel were read. These contain opinions or allegations, not independently established assay findings. Non-accreditation alone is not wrongdoing. Scores and complaint counts were not imported as purchase ratings. No independent Blue Nile reputation review was completed in this extension. Independent reputation also remains unassessed for VRAI, Brilliant Earth and Zales.",
+      "finding": "BBB profiles/complaints and Men\u0113\u2019s Trustpilot channel were read. These contain opinions or allegations, not independently established assay findings. Non-accreditation alone is not wrongdoing. Scores and complaint counts were not imported as purchase ratings. No independent Blue Nile reputation review was completed in this extension. Independent reputation also remains unassessed for VRAI, Brilliant Earth, Zales and Mejuri.",
       "action": "Read multiple independent sources, assess seller responses and validate contact details. A published phone/email does not prove a working business; no calls or emails were made."
     },
     {
@@ -187,7 +190,7 @@
     {
       "id": "parallel-integration",
       "title": "All concurrent-session listings retained without filling gaps",
-      "scope": "32-entry combined register",
+      "scope": "44-entry combined register",
       "sources": [
         "ext-bn-203348",
         "ext-z-19957449",
@@ -252,11 +255,9 @@
       "sources": [
         "mene-rose",
         "mene-knot",
-        "ext-be-121h6",
-        "jm-gold",
-        "wgc-panel-review"
+        "ext-be-121h6"
       ],
-      "finding": "Direct official-page fetches on 2026-10-23 replaced earlier dated observations: Men\u0113 Rose Ring $1,346 \u2192 $1,336 and Men\u0113 Knot Ring $1,465 \u2192 $1,454 (both USD, Crafted-on-Demand); Brilliant Earth's Classic Six-Prong setting rendered in a USD locale as $890 (Setting Only) instead of the 2026-10-22 EUR-locale \u20ac990.00; the JM Bullion dealer reference moved from $4,039.76 to $4,035.54 and the World Gold Council moving header read 4,024.45 in USD/oz. Each figure is a dated display observation, not a fixed price; nothing was converted between currencies or averaged.",
+      "finding": "Direct official-page re-reads during final integration replaced earlier same-day observations: Men\u0113 Rose Ring $1,336 \u2192 $1,325 and Men\u0113 Knot Ring $1,454 \u2192 $1,442 (both explicitly USD, Crafted-on-Demand). Brilliant Earth remained $890 (Setting Only) with USD context. Each figure is a dated display observation, not a fixed price; nothing was converted between currencies or averaged.",
       "action": "Re-open each official page and the cart for the exact configuration before deciding. Treat every amount here as dated, record the observation date with any comparison, and never treat a locale change as an exchange-rate conversion."
     },
     {
@@ -287,10 +288,10 @@
     },
     {
       "id": "fdj-thin-band-bbb",
-      "title": "Factory Direct Jewelry FDJ-GR0001: 1.25g displayed mass w/ 1.37ctw diamonds & 1.8/5 BBB score",
+      "title": "FDJ-GR0001: configuration-dependent 1.25 g item weight; no net-gold inference",
       "scope": "fdj-gr0001",
-      "finding": "Despite '14K Solid Gold' and 'Karat stamped inside the band.', default weight reads 'Weight:1.25 Grams' alongside 1.37cts of diamonds (0.976g net metal if gross) and LA BBB shows Not Accredited, 1.8/5 reviews, and 11 complaints.",
-      "action": "Do not treat solid-gold wording alone as durability proof; reject ultra-light settings and verify independent complaint records.",
+      "finding": "The page separately states '14K Solid Gold', 'Karat stamped inside the band.', 'Weight:1.25 Grams', and 1.37 ctw lab diamonds, and instructs shoppers to customize options for accurate weight. Because the weight basis and selected configuration are not sufficient to establish metal-only mass, no diamond mass is subtracted and no net gold or melt value is derived. BBB review/complaint data remains opinion/allegation context, not an assay.",
+      "action": "Keep net-metal and fine-gold cells blank. Obtain the exact selected-configuration casting weight and an independent assessment before wear or resizing; review the official return policy and complaint record separately.",
       "sources": [
         "fdj-gr0001",
         "fdj-returns",
@@ -310,16 +311,50 @@
       ]
     },
     {
-      "id": "root-only-products-not-in-combined-register",
-      "title": "Three root-register product pages are absent from the combined 41-product catalog",
-      "scope": "AG-COFFIN-RING, AG-CUSHION-SIGNET, MJ-BOLD-ETERNITY",
-      "finding": "A provenance scan found these three source-checked product URLs in the root register but not in the combined explore catalog. This is a completeness gap in project organization, not a product-quality finding. Their official product pages are linked here. The combined register is therefore not exhaustive; the separate root dashboard retains the listings. No price or physical gold claim is established by this finding.",
-      "action": "Keep the combined catalog labelled non-exhaustive until each product is integrated with its own dated field evidence and tests. Recheck for hallucinations after any integration; do not copy values without re-verifying the official field source.",
+      "id": "mejuri-metal-conflict",
+      "title": "Mejuri selected white gold conflicts with its yellow-gold specification panel",
+      "scope": "Mejuri Bold Diamond Eternity Ring",
       "sources": [
-        "root-ag-coffin",
-        "root-ag-cushion",
-        "root-mj-bold"
-      ]
+        "mj-bold-eternity",
+        "mejuri-returns"
+      ],
+      "finding": "The selected option reads Solid White Gold (14k), Natural Diamond, while the same product page specification panel reads Solid Yellow Gold (14k). The page also displays From$2,900 without an ISO currency token in retrieved text. Optional engraving is non-returnable.",
+      "action": "Do not silently choose a metal color or assign USD. Obtain written configuration and native-currency confirmation, then preserve the exact cart and return eligibility before any purchase."
+    },
+    {
+      "id": "automic-variant-ranges",
+      "title": "Automic default prices and observed variant ranges are different scopes",
+      "scope": "Automic Coffin Ring and Cushion Diamond Signet Ring",
+      "sources": [
+        "ag-coffin",
+        "ag-coffin-json",
+        "ag-coffin-platinum",
+        "ag-cushion",
+        "ag-cushion-json",
+        "ag-cushion-clear",
+        "ag-cushion-platinum"
+      ],
+      "finding": "Coffin defaults to 14k Yellow Gold at $1,910; examined variants display $1,910\u2013$2,233. Cushion defaults to 14k Yellow Gold / Salt and Pepper at $2,758; examined variants display $2,408\u2013$3,253. Official product JSON has price_varies true and cent-denominated endpoints; HTML variant pages establish the actual displays. The Cushion JSON product-level price is the range minimum, not its default.",
+      "action": "Keep the default and range visibly separate. Select the exact metal, stone, size and engraving before checkout; do not treat the observed range as a guarantee for every configuration."
+    },
+    {
+      "id": "canonical-register-reconciliation",
+      "title": "Canonical item IDs resolved companion title and URL drift",
+      "scope": "Nine companion records plus Blue Nile item 316238",
+      "sources": [
+        "ext-bn-194158",
+        "ext-bn-195269",
+        "ext-bn-315661",
+        "ext-bn-203348",
+        "ext-z-20303279",
+        "ext-z-20046552",
+        "ag-cushion",
+        "mj-bold-eternity",
+        "ext-vrai-classic-4p",
+        "ext-bn-316238"
+      ],
+      "finding": "Official item-ID routes resolved several wrong companion slugs to different canonical titles. Alternate Automic Cushion, Mejuri Bold and VRAI URLs returned official not-found content. Blue Nile item 316238 now resolves to Comfort Fit Solitaire despite its stale petite-micropave slug. The corrected registers use canonical resolved identities and working official URLs; rejected aliases remain documented in the final integration audit.",
+      "action": "Run the cross-register consistency gate on every build. Never use a URL slug as stronger identity evidence than the resolved official product title and item ID."
     }
   ]
 }

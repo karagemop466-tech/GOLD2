@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedFromReview": "2026-10-23T10:00:00Z",
+  "generatedFromReview": "2026-10-23T20:27:21Z",
   "pages": [
     "explore/index.html",
     "explore/catalog/index.html",
@@ -16,6 +16,6 @@
     "explore/sources/index.html",
     "explore/404.html"
   ],
-  "productCount": 41,
-  "sourceCount": 80
+  "productCount": 44,
+  "sourceCount": 87
 }

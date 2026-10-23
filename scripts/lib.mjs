@@ -71,7 +71,7 @@ export function validateResearch({catalog, evidence, review}, now = Date.now()) 
       if (!proof) continue;
       if (proof.source.kind === 'independent-platform') addError(p.id, `review platforms cannot prove product field ${key}`);
       if (key === 'karat' && (!finitePositive(f.value) || f.value > 24 || !new RegExp(`${f.value}\\s*(?:k\\b|karat)`, 'i').test(proof.text))) addError(p.id, 'karat unsupported by passage');
-      if (key === 'solidGold' && (f.value !== true || !/(?:(?:\d+\s*(?:k|karat)\s+)?solid\s+gold|solid\s+\d+\s*(?:k|karat)\s+(?:yellow\s+|white\s+|rose\s+)?gold)/i.test(proof.text))) addError(p.id, 'explicit solid-gold wording missing');
+      if (key === 'solidGold' && (f.value !== true || !/(?:(?:\d+\s*(?:k|karat)\s+)?solid\s+gold|solid\s+\d+\s*(?:k|karat)\s+(?:yellow\s+|white\s+|rose\s+)?gold|solid\s+(?:yellow|white|rose)\s+gold(?:\s*\(\d+\s*k\))?)/i.test(proof.text))) addError(p.id, 'explicit solid-gold wording missing');
       if (['itemWeightG','netMetalWeightG','fineGoldWeightG'].includes(key) && (!finitePositive(f.value) || !hasNumber(proof.text, f.value))) addError(p.id, `${key} numeric evidence mismatch`);
       if (key === 'declaredPurity' && (!finitePositive(f.value) || f.value > 1 || !hasNumber(proof.text, Number((f.value * 100).toFixed(8))))) addError(p.id, 'declared purity must have explicit percentage evidence');
       if (key === 'stone' && (typeof f.value !== 'string' || !proof.text.includes(f.value))) addError(p.id, 'stone description differs from passage');
@@ -88,6 +88,34 @@ export function validateResearch({catalog, evidence, review}, now = Date.now()) 
       if (['future-dated','unverified'].includes(freshness(price.observedAt, now))) addError(p.id, 'price timestamp invalid');
       if (freshness(price.observedAt, now, catalog.meta.freshnessHours) === 'stale') warnings.push(`${p.id}: price older than ${catalog.meta.freshnessHours}h; manual refresh required`);
     } else warnings.push(`${p.id}: USD/configured price unverified; blank`);
+    if (p.observedNativeDisplay != null) {
+      const d = p.observedNativeDisplay;
+      if (p.price !== null) addError(p.id, 'raw native display requires structured price to remain null');
+      if (!d.text || d.currency !== null || !d.scope || ['future-dated','unverified'].includes(freshness(d.observedAt, now))) addError(p.id, 'invalid raw native display/scope/timestamp');
+      const proof = resolve(d.evidence, p.id + '.observedNativeDisplay');
+      if (proof && proof.text !== d.text) addError(p.id, 'raw native display differs from cited passage');
+      if (proof && (proof.source.kind === 'independent-platform' || proof.source.access === 'unavailable')) addError(p.id, 'raw display cannot come from a review or unavailable source');
+    }
+    if (p.observedVariantPriceRange != null) {
+      const range = p.observedVariantPriceRange;
+      if (!finitePositive(range.min) || !finitePositive(range.max) || range.max < range.min || range.currency !== 'USD' || !range.scope || ['future-dated','unverified'].includes(freshness(range.observedAt, now))) addError(p.id, 'invalid observed variant range');
+      const rangeProof = resolve(range.rangeEvidence, p.id + '.observedVariantPriceRange');
+      const currencyProof = resolve(range.currencyEvidence, p.id + '.observedVariantPriceRange.currency');
+      if (rangeProof && (!/price_varies["']?\s*:\s*true/i.test(rangeProof.text) || !hasNumber(rangeProof.text, range.min * 100) || !hasNumber(rangeProof.text, range.max * 100))) addError(p.id, 'variant JSON does not prove price_varies and cent-denominated endpoints');
+      if (currencyProof && !/(?:\bUSD\b|US\$)/.test(currencyProof.text)) addError(p.id, 'variant range lacks explicit USD evidence');
+      if (!Array.isArray(range.endpoints) || range.endpoints.length < 2) addError(p.id, 'variant range needs at least two HTML endpoints');
+      const endpointAmounts = new Set();
+      for (const endpoint of range.endpoints ?? []) {
+        if (!finitePositive(endpoint.amount) || endpoint.amount < range.min || endpoint.amount > range.max || !endpoint.configuration) addError(p.id, 'invalid variant endpoint/configuration');
+        const amountProof = resolve(endpoint.evidence, p.id + '.observedVariantPriceRange.endpoint');
+        const configurationProof = resolve(endpoint.configurationEvidence, p.id + '.observedVariantPriceRange.configuration');
+        if (amountProof && !hasNumber(amountProof.text, endpoint.amount)) addError(p.id, 'variant endpoint amount absent from official HTML passage');
+        if (configurationProof && !configurationProof.text.toLowerCase().includes(endpoint.configuration.toLowerCase())) addError(p.id, 'variant endpoint configuration differs from passage');
+        endpointAmounts.add(endpoint.amount);
+      }
+      if (!endpointAmounts.has(range.min) || !endpointAmounts.has(range.max)) addError(p.id, 'observed range minimum/maximum lack HTML endpoint proof');
+      if (p.price && (p.price.amount < range.min || p.price.amount > range.max)) addError(p.id, 'default price falls outside observed variant range');
+    }
     if (p.reportedWeight !== null) {
       const w = p.reportedWeight, proof = resolve(w.evidence, p.id + '.reportedWeight');
       if (!finitePositive(w.min) || !finitePositive(w.max) || w.max < w.min || w.unit !== 'g' || typeof w.approximate !== 'boolean' || !['item','fine-undefined','seller-metal'].includes(w.basis)) addError(p.id, 'invalid reported weight range/basis');

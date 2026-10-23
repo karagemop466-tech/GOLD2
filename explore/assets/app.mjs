@@ -38,6 +38,10 @@ if (choice) {
   const byId = id => document.getElementById(id);
   const money = n => new Intl.NumberFormat('en-US', {style:'currency', currency:'USD'}).format(n);
   const decimal = n => new Intl.NumberFormat('en-US', {maximumFractionDigits:6}).format(n);
+  const referenceLabel = () => {
+    const ref = catalog.meta.marketReference;
+    return `${ref.side}; source timestamp ${ref.publishedAt}; observed ${ref.observedAt}. ${ref.caveat}`;
+  };
   const allowedProducts = new Set(['www.automicgold.com','mejuri.com','www.catbirdnyc.com','auvere.com','www.quince.com','mene.com','www.bluenile.com','www.zales.com','www.vrai.com','www.brilliantearth.com','www.sarraf.com','www.factorydirectjewelry.com','www.stoneandstrand.com']);
   const toggleMode = isScenario => {
     byId('automatic-panel').hidden = isScenario;
@@ -88,13 +92,13 @@ if (choice) {
     byId('scenario-retail').value = String(p.price.amount);
     byId('scenario-ack').checked = false;
     updateBasis();
-    byId('scenario-provenance').textContent = `Conditional preset: assumes all of Automic Gold’s approximately ${factValue(p,'itemWeightG')}g ITEM weight is gold alloy. This NET basis is NOT established. Seller-declared ${(factValue(p,'declaredPurity')*100).toFixed(2)}% purity is not an assay. Retail is a dated default display. Reference: JM Bullion body/table ask, 22 Oct 2026 23:09 UTC; conflicting header flagged. Acknowledge the assumptions before calculating.`;
+    byId('scenario-provenance').textContent = `Conditional preset: assumes all of Automic Gold’s approximately ${factValue(p,'itemWeightG')}g ITEM weight is gold alloy. This NET basis is NOT established. Seller-declared ${(factValue(p,'declaredPurity')*100).toFixed(2)}% purity is not an assay. Retail is a dated default display. Reference: ${referenceLabel()} Acknowledge the assumptions before calculating.`;
   });
   byId('use-reference').addEventListener('click', () => {
     if (!catalog) return;
     byId('scenario-spot').value = String(catalog.meta.marketReference.amount);
     resetOutput();
-    byId('scenario-provenance').textContent = 'Loaded the dated JM Bullion body/table ask: 22 Oct 2026, 23:09 UTC. Header conflict is flagged. This is not live or an LBMA benchmark. Other inputs remain explicit assumptions.';
+    byId('scenario-provenance').textContent = `Loaded ${referenceLabel()} This is not live or an LBMA benchmark. Other inputs remain explicit assumptions.`;
   });
   form.addEventListener('submit', event => {
     event.preventDefault(); resetOutput();
