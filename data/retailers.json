@@ -66,7 +66,7 @@
       ],
       "field_evidence": {
         "contact_phone": [
-          "+1\u2011800\u2011242\u20112728"
+          "+1‑800‑242‑2728"
         ],
         "contact_email": [
           "service@bluenile.com"
@@ -99,19 +99,19 @@
           "custom orders"
         ],
         "return_exclusions_detail": [
-          "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and \u201cFinal Sale\u201d items are not eligible for return or exchange."
+          "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and “Final Sale” items are not eligible for return or exchange."
         ],
         "resize_policy": [
           "Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase if the design permits."
         ],
         "payment_methods_verified": [
-          "Credit cards: We accept major credit cards, including Visa\u00ae, Mastercard\u00ae, American Express\u00ae, and Discover\u00ae",
-          "We accept payment through PayPal\u00ae for orders totaling up to $50,000",
+          "Credit cards: We accept major credit cards, including Visa®, Mastercard®, American Express®, and Discover®",
+          "We accept payment through PayPal® for orders totaling up to $50,000",
           "We accept secure wire transfers from most banking institutions",
           "We offer financing options through Affirm and Splitit"
         ],
         "payment_note": [
-          "Blue Nile U.S. payment methods include only Visa\u00ae Debit and Mastercard\u00ae Debit cards. No other debit cards are accepted.",
+          "Blue Nile U.S. payment methods include only Visa® Debit and Mastercard® Debit cards. No other debit cards are accepted.",
           "this option is currently unavailable for purchases totaling $50,000 or more"
         ],
         "reputation_accreditation": [
@@ -339,7 +339,7 @@
         ],
         "return_window_days": [
           "Eligible items below $15,000 can be returned within 30 days",
-          "VRAI\u2019s standard 30-day return window from delivery"
+          "VRAI’s standard 30-day return window from delivery"
         ],
         "return_window_basis": [
           "Eligible items below $15,000 can be returned within 30 days for full credit to store or refund minus recycling fee to the original payment method. Eligible items above $15,000 can be returned within 30 days for full credit to store."
@@ -537,7 +537,7 @@
       "return_excludes_resized": true,
       "return_excludes_custom": true,
       "return_exclusions_detail": "Engraved items, custom items, and modified items are final sale.",
-      "resize_policy": "Paid resizing starting at $50\u2013$60; modified items become final sale.",
+      "resize_policy": "Paid resizing starting at $50–$60; modified items become final sale.",
       "payment_methods_verified": [
         "credit",
         "debit",
@@ -606,7 +606,7 @@
           "Modified Items"
         ],
         "resize_policy": [
-          "paid resizing starting at $50\u2013$60"
+          "paid resizing starting at $50–$60"
         ],
         "payment_methods_verified": [
           "All major credit & debit cards, PayPal, Shop Pay, Affirm, AfterPay, Google Pay, and Apple Pay."
@@ -726,6 +726,91 @@
         "reputation_complaints": [
           "35 complaintsin the last 3 years.",
           "4 complaintsin the last 12 months."
+        ]
+      }
+    },
+    {
+      "id": "stone-and-strand",
+      "name": "Stone and Strand",
+      "website": "https://www.stoneandstrand.com",
+      "domains": [
+        "www.stoneandstrand.com",
+        "stoneandstrand.com"
+      ],
+      "contact_phone": null,
+      "contact_email": "care@stoneandstrand.com",
+      "contact_channels": [
+        "email"
+      ],
+      "contact_source_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "contact_verified": true,
+      "return_window_days": 100,
+      "return_window_basis": "100 days from the date the order arrives (U.S. customers only)",
+      "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "return_free_shipping": false,
+      "return_free_shipping_basis": "$12.50 return fee for refunds to the original payment method; $5 for store credit",
+      "return_free_shipments_per_year": null,
+      "return_excludes_resized": null,
+      "return_excludes_custom": true,
+      "return_exclusions_detail": "Final-sale items (marked on the product page or discounted 50% or more), personalized (custom/engraved/monogrammed) and made-to-order pieces cannot be returned; no returns/exchanges shipped from outside the U.S. All three captured engagement rings are marked final sale (F-032).",
+      "resize_policy": null,
+      "payment_methods_verified": null,
+      "payment_source_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "payment_note": "The returns page refers to refunds to the original payment method and to 'your credit card provider'; accepted card networks are not named on the retrieved page.",
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": null,
+        "candidate_profile_url": null,
+        "complaints_url": null,
+        "reviews_url": null,
+        "identity_status": "not_assessed",
+        "profile_scope": null,
+        "bbb_accredited": null,
+        "bbb_rating": null,
+        "review_average_out_of_5": null,
+        "review_count": null,
+        "complaints_last_3_years": null,
+        "complaints_last_12_months": null,
+        "retrieved_at": null
+      },
+      "evidence_file": "evidence/retailers/stone-and-strand.md",
+      "verification_status": "official_policies_partial",
+      "flags": [
+        "F-021",
+        "F-032"
+      ],
+      "field_evidence": {
+        "contact_email": [
+          "If your question isn't here, please email care@stoneandstrand.com and we'll reply within 48 hours."
+        ],
+        "contact_channels": [
+          "If your question isn't here, please email care@stoneandstrand.com and we'll reply within 48 hours."
+        ],
+        "return_window_days": [
+          "From the date your order arrives at your door, we offer 100 days to receive a return."
+        ],
+        "return_window_basis": [
+          "From the date your order arrives at your door, we offer 100 days to receive a return."
+        ],
+        "return_free_shipping": [
+          "There is a $12.50 return fee for refunds to the original payment method."
+        ],
+        "return_free_shipping_basis": [
+          "There is a $12.50 return fee for refunds to the original payment method. If you choose to receive a STONE AND STRAND shopping credit, the return fee is reduced to $5."
+        ],
+        "return_excludes_custom": [
+          "Personalized Jewelry: This includes custom, engraved, or monogrammed pieces",
+          "Made-to-Order Jewelry: Custom or made-to-order pieces are final sale"
+        ],
+        "return_exclusions_detail": [
+          "Final Sale Items: Any piece marked as final sale on the product page or purchased at a discount of 50% or greater",
+          "Personalized Jewelry: This includes custom, engraved, or monogrammed pieces",
+          "Made-to-Order Jewelry: Custom or made-to-order pieces are final sale",
+          "International customers: We cannot offer any returns or exchanges initiated and shipped from outside of the U.S."
+        ],
+        "payment_note": [
+          "Depending on your credit card provider, it may take an additional 5 to 10 business days for the refund to appear on your statement."
         ]
       }
     }

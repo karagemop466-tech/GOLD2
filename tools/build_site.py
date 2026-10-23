@@ -174,7 +174,7 @@ def page(title: str, active: str, body: str, retrieved: str, include_calculator:
   <nav class="main" aria-label="Main navigation">{links}</nav>
 </div></header>
 <main id="main-content"><div class="wrap">
-<section class="note"><strong>No hallucinations. No invented prices.</strong> Root register covers 20 source-checked entries across six official sellers (including <a href="solid-gold.html"><strong>Solid Gold</strong></a>). <a href="explore/"><strong>Open all 32 researched entries across nine sellers →</strong></a> or <a href="flags.html">Flagged for Review</a>. Seller statements and automated checks do not independently prove truth or purity.</section>
+<section class="note"><strong>No hallucinations. No invented prices.</strong> Root register covers 23 source-checked entries across seven official sellers (including <a href="solid-gold.html"><strong>Solid Gold</strong></a>). <a href="explore/"><strong>Open all 32 researched entries across nine sellers →</strong></a> or <a href="flags.html">Flagged for Review</a>. Seller statements and automated checks do not independently prove truth or purity.</section>
 {body}
 </div></main>
 <footer><div class="wrap row">
@@ -400,7 +400,7 @@ def build_retailers(retailers, items, retrieved):
         )
         detail_cards.append(
             f'<div class="card"><h3>{esc(retailer["name"])}</h3><p class="small"><strong>Return exclusions:</strong> {esc(retailer["return_exclusions_detail"])}</p>'
-            f'<p class="small"><strong>Resize terms:</strong> {esc(retailer["resize_policy"])}</p>'
+            f'<p class="small"><strong>Resize terms:</strong> {esc(retailer["resize_policy"]) if retailer.get("resize_policy") else blank("Not stated in retrieved policy text")}</p>'
             f'<p class="small"><strong>Return shipping:</strong> {esc(retailer["return_free_shipping_basis"])}</p>'
             f'<p class="small"><strong>Payment scope:</strong> {esc(retailer["payment_note"])}</p>'
             f'<a href="{esc(retailer["evidence_file"])}">Read field-scoped policy evidence</a></div>'
@@ -408,6 +408,8 @@ def build_retailers(retailers, items, retrieved):
         reputation = retailer["independent_reputation"]
         if reputation.get("bbb_rating") is not None:
             bbb_status = f'{esc(reputation["bbb_rating"])} · ' + ("accredited" if reputation.get("bbb_accredited") else "not accredited")
+        elif reputation.get("identity_status") == "not_assessed":
+            bbb_status = blank("Independent reputation not assessed in this pass")
         else:
             bbb_status = blank("Metrics withheld; identity not confirmed")
         if reputation.get("review_average_out_of_5") is not None:
@@ -420,12 +422,16 @@ def build_retailers(retailers, items, retrieved):
             complaints = blank("Not assigned")
         profile_url = reputation.get("profile_url") or reputation.get("candidate_profile_url")
         profile_label = "BBB profile" if reputation.get("profile_url") else "candidate BBB profile"
-        rep_sources = external_link(profile_url, profile_label)
+        rep_sources = external_link(profile_url, profile_label) if profile_url else blank("No BBB profile captured in this pass")
         if reputation.get("reviews_url"):
             rep_sources += f'<div class="sub">{external_link(reputation["reviews_url"], "reviews")} · {external_link(reputation["complaints_url"], "complaints")}</div>'
-        rep_sources += f'<div class="sub">retrieved {esc(reputation["retrieved_at"])}</div>'
+        if reputation.get("retrieved_at"):
+            rep_sources += f'<div class="sub">retrieved {esc(reputation["retrieved_at"])}</div>'
+        scope_html = esc(reputation["profile_scope"] or "No identity-confirmed BBB profile captured in this pass")
+        if not profile_url:
+            scope_html += f'<br>{external_link(retailer["website"], "retailer site")}'
         reputation_rows.append(
-            f'<tr><td><strong>{esc(retailer["name"])}</strong><div class="sub">{esc(reputation["profile_scope"])}</div></td>'
+            f'<tr><td><strong>{esc(retailer["name"])}</strong><div class="sub">{scope_html}</div></td>'
             f'<td>{bbb_status}</td><td>{reviews}</td><td>{complaints}</td><td>{rep_sources}</td></tr>'
         )
     body = f"""
@@ -438,7 +444,7 @@ def build_retailers(retailers, items, retrieved):
 <h2>Independent BBB profile data</h2>
 <p class="lead">Dated profile metrics are not a seller scorecard or endorsement. Complaint narratives contain third-party allegations, not established facts. Scopes differ, so no cross-retailer ranking is made.</p>
 <div class="tablewrap"><table><thead><tr><th>Retailer / profile scope</th><th>BBB label</th><th>Customer reviews</th><th>Complaints</th><th>Independent sources</th></tr></thead><tbody>{''.join(reputation_rows)}</tbody></table></div>
-<div class="note mt16">VRAI’s candidate metrics are withheld because identity is not confirmed (F-022). Zales figures belong to a combined Signet profile covering other brands (F-023). BBB states that it does not endorse businesses and does not guarantee third-party information.</div>
+<div class="note mt16">VRAI’s candidate metrics are withheld because identity is not confirmed (F-022). Zales figures belong to a combined Signet profile covering other brands (F-023). Stone and Strand has no BBB profile captured in this pass; its reputation cells stay blank rather than inferred. BBB states that it does not endorse businesses and does not guarantee third-party information.</div>
 <h2>Marketplace note</h2><div class="note"><strong>James Allen:</strong> the captured item-41515 URL redirected to a sold-out Blue Nile page. Included James Allen designs are sold through Blue Nile, so seller policies and contacts are Blue Nile’s. See <a href="flags.html#f-009">F-009</a>.</div>
 """
     return page("Retailers", "retailers", body, retrieved)
@@ -536,7 +542,7 @@ def build_methods(qa_summary, gold, items, flags, retailers, retrieved):
     quote_count = sum(len(quotes) for item in items for quotes in item.get("field_evidence", {}).values())
     quote_count += sum(len(quotes) for retailer in retailers for quotes in retailer.get("field_evidence", {}).values())
     quote_count += sum(len(quotes) for quotes in gold.get("field_evidence", {}).values())
-    limitation_ids = [fid for fid in ("F-007", "F-008", "F-013", "F-018", "F-021", "F-022", "F-023", "F-024") if any(flag["id"] == fid for flag in flags)]
+    limitation_ids = [fid for fid in ("F-007", "F-008", "F-013", "F-018", "F-021", "F-022", "F-023", "F-024", "F-032", "F-034") if any(flag["id"] == fid for flag in flags)]
     limitations = "".join(
         f'<li><a href="flags.html#{fid.lower()}">{fid}</a> — {esc(next(flag["title"] for flag in flags if flag["id"] == fid))}</li>'
         for fid in limitation_ids
@@ -551,7 +557,7 @@ def build_methods(qa_summary, gold, items, flags, retailers, retrieved):
 <li><strong>Gold reference:</strong> World Gold Council spot page with quote date and ICE Data Services attribution.</li>
 <li><strong>Calculation constants/context:</strong> NIST troy-ounce conversion chart and eCFR gold-labeling guidance.</li>
 <li><strong>Rejected as product evidence:</strong> search snippets, aggregators, blogs, coupon pages, unrelated page text, and values from other items in the same category.</li></ul>
-<h2>3. Field-scoped evidence</h2><p>The current audit resolves <strong>{quote_count}</strong> field-specific quotes across 16 item files, four retailer files, and the gold/calculation evidence. A price, width, or karat in one item’s file cannot support another item. Shared category files are retained only as inherited audit history and are not authoritative inputs.</p>
+<h2>3. Field-scoped evidence</h2><p>The current audit resolves <strong>{quote_count}</strong> field-specific quotes across {len(items)} item files, {len(retailers)} retailer files, and the gold/calculation evidence. A price, width, or karat in one item’s file cannot support another item. Shared category files are retained only as inherited audit history and are not authoritative inputs.</p>
 <h2>4. Current limitations</h2><ul class="clean">{limitations}</ul>
 <h2>5. Automated checks after every review</h2><p>Run <code>python3 tools/build_site.py</code>, <code>python3 tools/qa.py</code>, <code>node tools/test_calculator.js</code>, and <code>python3 reviews/independent_snapshot_audit.py .</code>. The audits check schema, field-level quote backing, numeric/currency consistency, null-to-flag coverage, two-way flag references, official product domains, calculator arithmetic, built-row/source identity, internal links and fragments, CSP/script constraints, small-text contrast, stale generated values, and independent cross-schema contradictions.</p>
 <pre class="qa">RESULT: {esc(qa_summary)}

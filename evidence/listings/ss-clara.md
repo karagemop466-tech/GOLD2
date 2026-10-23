@@ -52,6 +52,8 @@ Band Width: 1.65mm
 $2,200
 ```
 
+Currency note (F-025): the retrieved text shows dollar-sign amounts only; the ISO currency is not confirmed, so the dataset keeps the normalized price blank and retains the observed amounts under `superseded_normalization`.
+
 ### `price_basis` / `center_stone_included`
 
 ```
@@ -73,7 +75,7 @@ The buy-box badge list also includes "Solid Gold".
 
 ## Absences and limitations
 
-- **Final sale (F-025):** the retrieved buy-box text shows "Final Sale — This product is non-returnable" on the same page that advertises "100 Day Returns". The retailer returns policy confirms final-sale items cannot be returned or exchanged (`evidence/retailers/stone-and-strand.md`).
+- **Final sale (F-032):** the retrieved buy-box text shows "Final Sale — This product is non-returnable" on the same page that advertises "100 Day Returns". The retailer returns policy confirms final-sale items cannot be returned or exchanged (`evidence/retailers/stone-and-strand.md`).
 - **Rhodium finish stated:** the spec table also states "Rhodium Plating: Yes: Diamond area" — recorded verbatim in the item notes; it describes a finish over the diamond area and is separate from the solid-gold metal claim.
 - **Contradictory page states (not resolved):** the retrieved text contains both "In stock. Ships out in 3-5 days." and a "Sold out" button state. Availability is not recorded in the dataset.
 - **Rejected cached value:** a search-engine snippet for this product showed `$2,000`. The live page on 2026-10-22 showed `$2,200` with no discount. The snippet value is stored in `rejected_values` and never published as the price.

@@ -188,4 +188,4 @@ This file is the original session capture log for the three Stone and Strand ite
 the excerpts above were ported verbatim into per-item field-scoped evidence files —
 `ss-Clara.md`, `ss-Rita.md`, `ss-mia.md` — which are the authoritative inputs for
 `data/listings/solid-gold.json`; this file is retained as capture history. Flag references above
-use S-75094819's original numbering: F-016 (final sale) → **F-025**, F-017 (Mia karat conflict) → **F-026**.
+use S-75094819's original numbering: F-016 (final sale) → **F-032**, F-017 (Mia karat conflict) → **F-033** (F-025/F-026 on main are the ISO-currency rule and the WGC quote-date flag; the F-025 rule is applied to these rows' dollar-sign prices).

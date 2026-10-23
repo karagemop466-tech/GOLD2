@@ -65,6 +65,7 @@ The clean-tree check caught and fixed a stale intermediate FAIL badge before PR 
 | `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 & #14 merged; findings dispositioned by S-CA4C9D8A |
 | `S-CA4C9D8A` | `arena/ca4c9d8a-gold2` | field-scoped re-verification, dashboard/calculator, combined QA, integration and closeout | T12–T15 done; PR #15 & #16 merged and Pages built |
 | `S-8C810C15` (8c810c15) | `arena/8c810c15-gold2` | independent live line-by-line audit, explicit `"Solid 14k Gold"` catalog expansion (`Automic Gold` + `Mejuri`), security/hallucination/WCAG scanner (`audit/8c810c15/**`), and final additive integration | in progress |
+| `S-75094819` | `arena/75094819-gold2` | gold/Zales refresh, Stone and Strand solid-gold rows, Catbird gap note, triple-merge integration | see S-75094819 final record at the end of this file |
 
 All sessions share one environment constraint: the runner is bound to a single branch and cannot create
 `session-<id>/<task>` worktrees. That is recorded rather than ignored. Work is therefore separated by
@@ -398,3 +399,77 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - **REQ-8C8-02 (`data/listings/budget.json`, `data/listings/three-stone-vintage.json`):** Four Zales rows (`Z-19957449`, `Z-20046552`, `Z-20303279`, `Z-20301172`) record `"metal": "10K Yellow Gold"` and `"color": "Yellow"` without `"Yellow"` in the stored evidence excerpts. Will verify live Zales product pages and blank + flag if unconfirmed.
 - **REQ-8C8-03 (`data/listings/18k.json`, `tools/build_site.py`):** `VRAI-CLASSIC-4P` title says `Plain Band` while the stored excerpt includes `Pavé carat weight:0.18ctw`, and `weight_basis` (`2.86 g at size 6`) is omitted from rendered tables. Will verify live VRAI page and display exact weight basis.
 - **REQ-8C8-04 (`data/retailers.json`, `data/flags.json`, `data/listings/*.json`):** Retrieve Zales standalone return/contact pages (`F-011`), check official payment/card disclosures (`F-012`), fix `F-010` missing `BN-195402`/`BN-302868` plus missing `item.flags` links, fix `F-015` stale `"8 Blue Nile rows"` count (10 rows), add explicit width/color/reputation flags, and ensure every `<tr>` across all pages links to an official `https://` source.
+
+---
+
+# Session S-75094819 — final record (branch `arena/75094819-gold2`, 2026-10-22)
+
+Parallel session that integrated last, through **three merges of `origin/main`** (never rebased —
+the branch contains merge commits; nothing from any session was discarded). Early work (gold
+refresh, Zales policy capture, review-finding dispositions R9-01/R6-01…R6-10) was independently
+reached or exceeded by S-CA4C9D8A, `arena-24aeb4a8`, and S-8C810C15 on `main`; those sessions'
+versions are authoritative and are **not** double-claimed here. This session's unique surviving
+contribution is the **Stone and Strand** dataset (first captured listings whose pages say
+"solid gold", retrieved before S-8C810C15's Automic Gold/Mejuri additions) plus the Catbird
+capture-gap note.
+
+| ID | Task | Status |
+|----|------|--------|
+| S750-T01 | Gold re-verification from WGC ($4,028.53, data dated 2026-10-21) | done — converged with S-CA4C9D8A/S-8C810C15 |
+| S750-T02 | Zales official returns/payment capture | done — superseded by richer captures on `main` |
+| S750-T03 | New-retailer discovery: Catbird (details not quotable → F-034), Stone and Strand (3 rings + policies) | done |
+| S750-T04 | Solid-gold category + flags | done — delivered into `data/solid-gold-verified.json` (see below) |
+| S750-T05 | Spot re-verification BN-203348 / Z-19957449 / VRAI (10/10 fields matched) | done |
+| S750-T06 | Integration: 3 merges, port, full checks, PR, Pages | done (PR link added in closeout) |
+
+## What the final port does
+
+- `SS-CLARA`, `SS-RITA`, `SS-MIA` now live in **`data/solid-gold-verified.json`** ("Explicit Solid Gold")
+  alongside the Automic Gold/Mejuri rows; the short-lived `data/listings/solid-gold.json` from this
+  branch was removed. Per-item evidence: `evidence/listings/ss-Clara.md`, `ss-Rita.md`, `ss-mia.md`;
+  session capture log retained as `evidence/listings/solid-gold.md`. Stone and Strand retailer added
+  (100-day returns, $12.50 fee, custom excluded, verified email; payment networks unnamed → blank;
+  **BBB not assessed → reputation blank, never inferred**; evidence `evidence/retailers/stone-and-strand.md`).
+- Prices follow main's **F-025** rule: dollar-sign-only observations are not ISO-verified. The observed
+  amounts ($2,200; $780/$1,950; $925/$1,850) are retained only in `superseded_normalization` and verbatim
+  evidence quotes; normalized `price`/`original_price`/`currency` are blank (`partial_price_unverified`).
+  A rejected $2,000 snippet price for Clara stays in `rejected_values`.
+- Flags added after the S-8C810C15 register: **F-032** (high — all three rings final sale/non-returnable on
+  pages advertising "100 Day Returns"; receive → XRF → return impossible), **F-033** (Mia page contradicts
+  itself: spec "Gold Karat: 14K" vs image alt text "10K"; published karat from spec, marked contested),
+  **F-034** (Catbird details not quotable in this register; the separate 32-product catalog lists a Catbird
+  ring under its own schema). SS rows joined F-002/F-003/F-015/F-016/F-021/F-024/F-025.
+- Generator: null-guards for the first no-BBB-profile retailer (`resize_policy`, reputation cells, and an
+  official-site link in the reputation row so every table row keeps an https source), derived item/retailer
+  counts in methods, banner updated to 23 entries / seven sellers. `scripts/lib.mjs` `SOURCE_HOSTS` gained
+  `stoneandstrand.com` for the link checker.
+- **Integration corrections to inherited flag texts** (stale after the Automic Gold/Mejuri additions; fixed
+  to data-computed values, no other wording changed): F-001 scope ("these 16"), F-002 "23 captured product
+  pages", F-003 title/detail (21 of 23; VRAI + AG Coffin Ring weights), F-015 composition (12 setting /
+  11 complete), F-016 (6 width-missing / 21 depth-missing; VRAI + AG Sapphire depths).
+
+## Sources (official pages, retrieved 2026-10-22 UTC)
+
+WGC gold prices page; Stone and Strand product pages for The Clara/The Rita/The Mia Ring and
+`pages/returns-exchanges`; Catbird product pages (Night at the Ballet, Odile) fetched in full — names and
+starting prices only, hence no rows. Search snippets used for discovery only, never as evidence.
+
+## Verification after final integration (2026-10-22)
+
+- `tools/build_site.py` → 11 pages; `tools/qa.py` **PASS — 10 checks, 0 failures, 3 warnings** (23 items).
+- `tools/test_calculator.js` PASS; `reviews/independent_snapshot_audit.py .` **0 findings** (note: its
+  `data/listings/*.json` glob does not cover `data/solid-gold-verified.json` — a pre-existing gap affecting
+  the AG/MJ rows too, left as a handoff below rather than changed in this PR).
+- `audit/8c810c15/security_and_hallucination_scanner.py .` **0 findings**; its 6 tests OK.
+- Preserved `site/` suite PASS and reproducible; `npm run check` equivalent run locally: verify PASS,
+  23/23 unit tests, explore build reproducible, link check PASS (30 pages, 107 external URLs), security
+  PASS + `npm audit` 0 vulnerabilities, Playwright/axe browser tests PASS (0 WCAG A/AA violations).
+- Rendered pages re-read (SS rows with blank prices + flag chips, retailer row with blank BBB/payment
+  cells, derived counts). Automated PASS results are not proof of physical truth.
+
+## Handoffs
+
+- Independent reviewer: `SS-CLARA`/`SS-RITA`/`SS-MIA` have no rows in `reviews/2026-10-22-6ca03571.md`
+  (this session does not write review rows for its own data), Stone and Strand's BBB reputation is
+  unassessed, and the independent audit's listings glob skips `data/solid-gold-verified.json`.
+- PR to `main`, check results, merge commit, and Pages verification: recorded in the closeout commit.

@@ -50,18 +50,44 @@
       "independent_test_permission": null,
       "notes": "Explicitly discloses 'Solid 14k Gold' and 'Approximately 6.1g (gold)' on a stone-free all-metal engagement/promise ring (3.0 mm band). Reference size for 6.1 g and physical interior stamp remain unstated.",
       "field_evidence": {
-        "name": ["Coffin Ring"],
-        "sku": ["coffin-ring"],
-        "metal": ["Solid 14k Gold and 950 Platinum"],
-        "karat": ["Solid 14k Gold"],
-        "color": ["14k Yellow Gold"],
-        "width_mm": ["Band is 3mm"],
-        "weight_g": ["Approximately 6.1g (gold) or 9.2g (platinum)"],
-        "weight_basis": ["Approximately 6.1g (gold) or 9.2g (platinum)"],
-        "price": ["$1,910"],
-        "currency": ["$1,910"],
-        "price_basis": ["Coffin Ring", "giving it to the one you love as a unique engagement or promise ring"],
-        "center_stone_included": ["Coffin Ring", "Solid 14k Gold"]
+        "name": [
+          "Coffin Ring"
+        ],
+        "sku": [
+          "coffin-ring"
+        ],
+        "metal": [
+          "Solid 14k Gold and 950 Platinum"
+        ],
+        "karat": [
+          "Solid 14k Gold"
+        ],
+        "color": [
+          "14k Yellow Gold"
+        ],
+        "width_mm": [
+          "Band is 3mm"
+        ],
+        "weight_g": [
+          "Approximately 6.1g (gold) or 9.2g (platinum)"
+        ],
+        "weight_basis": [
+          "Approximately 6.1g (gold) or 9.2g (platinum)"
+        ],
+        "price": [
+          "$1,910"
+        ],
+        "currency": [
+          "$1,910"
+        ],
+        "price_basis": [
+          "Coffin Ring",
+          "giving it to the one you love as a unique engagement or promise ring"
+        ],
+        "center_stone_included": [
+          "Coffin Ring",
+          "Solid 14k Gold"
+        ]
       }
     },
     {
@@ -113,16 +139,36 @@
       "independent_test_permission": null,
       "notes": "Explicitly discloses 'Solid 14k Gold'. Published 5.5 g item weight includes the ~0.65 ct diamond so metal-only weight_g stays strictly null (F-028); tapered 8.5mm - 2.5mm width stays un-averaged (F-016).",
       "field_evidence": {
-        "name": ["Cushion Diamond Signet Ring"],
-        "sku": ["cushion-diamond-signet-ring"],
-        "metal": ["Solid 14k Gold and 950 Platinum"],
-        "karat": ["Solid 14k Gold"],
-        "color": ["14k Yellow Gold"],
-        "band_width_text": ["Band width is tapered from 8.5mm - 2.5mm"],
-        "price": ["$2,758"],
-        "currency": ["$2,758"],
-        "price_basis": ["Cushion Diamond Signet Ring"],
-        "center_stone_included": ["Cushion Diamond Signet Ring"]
+        "name": [
+          "Cushion Diamond Signet Ring"
+        ],
+        "sku": [
+          "cushion-diamond-signet-ring"
+        ],
+        "metal": [
+          "Solid 14k Gold and 950 Platinum"
+        ],
+        "karat": [
+          "Solid 14k Gold"
+        ],
+        "color": [
+          "14k Yellow Gold"
+        ],
+        "band_width_text": [
+          "Band width is tapered from 8.5mm - 2.5mm"
+        ],
+        "price": [
+          "$2,758"
+        ],
+        "currency": [
+          "$2,758"
+        ],
+        "price_basis": [
+          "Cushion Diamond Signet Ring"
+        ],
+        "center_stone_included": [
+          "Cushion Diamond Signet Ring"
+        ]
       }
     },
     {
@@ -174,17 +220,41 @@
       "independent_test_permission": null,
       "notes": "Explicitly discloses 'Solid 14k Gold' at $526 complete-ring price. Published 1.2 g gross item weight includes the 3 mm natural sapphire (weight_g kept null, F-028) and ultra-thin 1.1 mm band is flagged for daily-wear bending risk (F-029).",
       "field_evidence": {
-        "name": ["Sapphire Ring"],
-        "sku": ["sapphire-ring"],
-        "metal": ["Solid 14k Gold and 950 Platinum"],
-        "karat": ["Solid 14k Gold"],
-        "color": ["14k Yellow Gold"],
-        "width_mm": ["Band is 1.1mm"],
-        "depth_mm": ["Approximately 1.1mm"],
-        "price": ["$526"],
-        "currency": ["$526"],
-        "price_basis": ["Sapphire Ring", "Natural sapphire"],
-        "center_stone_included": ["Sapphire Ring", "Natural sapphire"]
+        "name": [
+          "Sapphire Ring"
+        ],
+        "sku": [
+          "sapphire-ring"
+        ],
+        "metal": [
+          "Solid 14k Gold and 950 Platinum"
+        ],
+        "karat": [
+          "Solid 14k Gold"
+        ],
+        "color": [
+          "14k Yellow Gold"
+        ],
+        "width_mm": [
+          "Band is 1.1mm"
+        ],
+        "depth_mm": [
+          "Approximately 1.1mm"
+        ],
+        "price": [
+          "$526"
+        ],
+        "currency": [
+          "$526"
+        ],
+        "price_basis": [
+          "Sapphire Ring",
+          "Natural sapphire"
+        ],
+        "center_stone_included": [
+          "Sapphire Ring",
+          "Natural sapphire"
+        ]
       }
     },
     {
@@ -234,17 +304,331 @@
       "independent_test_permission": null,
       "notes": "Explicitly discloses 'Solid White Gold (14k)' and 'handcrafted in 14k solid gold' with 2.6 mm band width and rhodium finish. Gram weight and depth are omitted (left null), and price starts 'From$2,900' by size (F-030).",
       "field_evidence": {
-        "name": ["Bold Diamond Eternity Ring"],
-        "sku": ["bold-diamond-eternity-ring"],
-        "metal": ["Solid White Gold (14k), Natural Diamond"],
-        "karat": ["Solid White Gold (14k), Natural Diamond"],
-        "color": ["Solid White Gold (14k), Natural Diamond"],
-        "surface_finish": ["14k solid white gold pieces are finished with rhodium plating"],
-        "width_mm": ["Band Width: 2.6 mm"],
-        "price": ["From$2,900"],
-        "currency": ["From$2,900"],
-        "price_basis": ["Bold Diamond Eternity Ring"],
-        "center_stone_included": ["Bold Diamond Eternity Ring"]
+        "name": [
+          "Bold Diamond Eternity Ring"
+        ],
+        "sku": [
+          "bold-diamond-eternity-ring"
+        ],
+        "metal": [
+          "Solid White Gold (14k), Natural Diamond"
+        ],
+        "karat": [
+          "Solid White Gold (14k), Natural Diamond"
+        ],
+        "color": [
+          "Solid White Gold (14k), Natural Diamond"
+        ],
+        "surface_finish": [
+          "14k solid white gold pieces are finished with rhodium plating"
+        ],
+        "width_mm": [
+          "Band Width: 2.6 mm"
+        ],
+        "price": [
+          "From$2,900"
+        ],
+        "currency": [
+          "From$2,900"
+        ],
+        "price_basis": [
+          "Bold Diamond Eternity Ring"
+        ],
+        "center_stone_included": [
+          "Bold Diamond Eternity Ring"
+        ]
+      }
+    },
+    {
+      "id": "SS-CLARA",
+      "retailer_id": "stone-and-strand",
+      "retailer": "Stone and Strand",
+      "brand": "Stone and Strand",
+      "name": "The Clara Ring",
+      "sku": "the-clara-ring",
+      "metal": "Yellow Gold",
+      "karat": 14,
+      "color": "Yellow",
+      "width_mm": 1.65,
+      "weight_g": null,
+      "price": null,
+      "currency": null,
+      "price_basis": "complete_ring",
+      "center_stone_included": true,
+      "original_price": null,
+      "source_url": "https://www.stoneandstrand.com/products/the-clara-ring",
+      "retrieved_at": "2026-10-22",
+      "evidence_file": "evidence/listings/ss-clara.md",
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "verification_status": "partial_price_unverified",
+      "rejected_values": [
+        {
+          "value": 2000.0,
+          "source": "search-engine snippet for this product ('$2,000')",
+          "reason": "The live page on 2026-10-22 showed $2,200 with no discount. The snippet value was not reproducible and is rejected."
+        }
+      ],
+      "flags": [
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-025",
+        "F-032"
+      ],
+      "notes": "First listing in this dataset whose product page uses the words 'solid gold' ('Solid Gold' badge; 'set in 14K solid gold or platinum'). Spec table also states 'Rhodium Plating: Yes: Diamond area' — a rhodium finish over the diamond area, recorded verbatim and separate from the solid-gold metal claim. Page shows both 'In stock. Ships out in 3-5 days.' and a 'Sold out' state; availability is not resolved from the text. Buy-box marks 'Final Sale — This product is non-returnable' while advertising '100 Day Returns' (F-032), so the receive-test-return sequence cannot be followed for this ring as listed. 0.620 CTW total / 0.50 CTW center per spec table.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": "High Polish",
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Product handle in the official source URL; no SKU is stated in the retrieved page text",
+      "field_evidence": {
+        "name": [
+          "The Clara Ring"
+        ],
+        "sku": [
+          "https://www.stoneandstrand.com/products/the-clara-ring"
+        ],
+        "metal": [
+          "Metal Color: Yellow Gold"
+        ],
+        "karat": [
+          "Gold Karat: 14K"
+        ],
+        "color": [
+          "Metal Color: Yellow Gold"
+        ],
+        "width_mm": [
+          "Band Width: 1.65mm"
+        ],
+        "price": [
+          "$2,200"
+        ],
+        "currency": [
+          "$2,200"
+        ],
+        "price_basis": [
+          "Each ring is crafted with conflict-free diamonds and set in 14K solid gold or platinum.",
+          "Center Stone: 0.50CTW"
+        ],
+        "center_stone_included": [
+          "Each ring is crafted with conflict-free diamonds and set in 14K solid gold or platinum.",
+          "Center Stone: 0.50CTW"
+        ],
+        "solid_gold_explicit": [
+          "Each ring is crafted with conflict-free diamonds and set in 14K solid gold or platinum."
+        ],
+        "surface_finish": [
+          "Metal Finish: High Polish"
+        ]
+      },
+      "superseded_normalization": {
+        "price": 2200.0,
+        "original_price": null,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      }
+    },
+    {
+      "id": "SS-RITA",
+      "retailer_id": "stone-and-strand",
+      "retailer": "Stone and Strand",
+      "brand": "Stone and Strand",
+      "name": "The Rita Ring",
+      "sku": "the-rita-ring",
+      "metal": "Yellow Gold",
+      "karat": 14,
+      "color": "Yellow",
+      "width_mm": 1.7,
+      "weight_g": null,
+      "price": null,
+      "currency": null,
+      "price_basis": "complete_ring",
+      "center_stone_included": true,
+      "original_price": null,
+      "source_url": "https://www.stoneandstrand.com/products/the-rita-ring",
+      "retrieved_at": "2026-10-22",
+      "evidence_file": "evidence/listings/ss-rita.md",
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "verification_status": "partial_price_unverified",
+      "rejected_values": [],
+      "flags": [
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-025",
+        "F-032"
+      ],
+      "notes": "Product page says 'solid gold' ('Solid Gold' badge; 'set in 14K solid gold or platinum'). Spec table states 'Rhodium Plating: Yes: Diamond area'. Product Description bullets state 'Final sale and non-returnable'; at 60% off the ring is also non-returnable under the retailer's own 'discount of 50% or greater' rule (F-032), so independent-verify-then-return is impossible at this price. 0.42 CTW total / 0.20 CTW center per spec table.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": "High Polish",
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Product handle in the official source URL; no SKU is stated in the retrieved page text",
+      "field_evidence": {
+        "name": [
+          "The Rita Ring"
+        ],
+        "sku": [
+          "https://www.stoneandstrand.com/products/the-rita-ring"
+        ],
+        "metal": [
+          "Metal Color: Yellow Gold"
+        ],
+        "karat": [
+          "Gold Karat: 14K"
+        ],
+        "color": [
+          "Metal Color: Yellow Gold"
+        ],
+        "width_mm": [
+          "Band Width: 1.70mm"
+        ],
+        "price": [
+          "$780 (60% off)"
+        ],
+        "currency": [
+          "$780 (60% off)"
+        ],
+        "original_price": [
+          "$1,950"
+        ],
+        "price_basis": [
+          "Each ring is crafted with conflict-free diamonds and set in 14K solid gold or platinum.",
+          "Center Stone: 0.20CTW"
+        ],
+        "center_stone_included": [
+          "Each ring is crafted with conflict-free diamonds and set in 14K solid gold or platinum.",
+          "Center Stone: 0.20CTW"
+        ],
+        "solid_gold_explicit": [
+          "Each ring is crafted with conflict-free diamonds and set in 14K solid gold or platinum."
+        ],
+        "surface_finish": [
+          "Metal Finish: High Polish"
+        ]
+      },
+      "superseded_normalization": {
+        "price": 780.0,
+        "original_price": 1950.0,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
+      }
+    },
+    {
+      "id": "SS-MIA",
+      "retailer_id": "stone-and-strand",
+      "retailer": "Stone and Strand",
+      "brand": "Stone and Strand",
+      "name": "The Mia Ring in Yellow Gold",
+      "sku": "the-mia-ring",
+      "metal": "Yellow Gold",
+      "karat": 14,
+      "color": "Yellow",
+      "width_mm": 1.5,
+      "weight_g": null,
+      "price": null,
+      "currency": null,
+      "price_basis": "complete_ring",
+      "center_stone_included": true,
+      "original_price": null,
+      "source_url": "https://www.stoneandstrand.com/products/the-mia-ring",
+      "retrieved_at": "2026-10-22",
+      "evidence_file": "evidence/listings/ss-mia.md",
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "verification_status": "partial_price_unverified",
+      "rejected_values": [],
+      "flags": [
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-025",
+        "F-032",
+        "F-033"
+      ],
+      "notes": "CONTESTED KARAT (F-033): the Metals spec table says 'Gold Karat: 14K' (the value published here), but the same page's product-image alt text repeatedly says '10K Yellow Gold The Mia Diamond Ring'. Both are quoted in evidence. Do not rely on 14K until the seller confirms in writing or an XRF test is done. Page also states 'Rhodium Plating: Yes: Diamond area', 'Final sale and non-returnable', and at 50% off the ring is non-returnable under the retailer's own discount rule (F-032). 0.5 CTW total / 0.200 CTW center per spec table.",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": "High Polish",
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Product handle in the official source URL; no SKU is stated in the retrieved page text",
+      "field_evidence": {
+        "name": [
+          "The Mia Ring in Yellow Gold"
+        ],
+        "sku": [
+          "https://www.stoneandstrand.com/products/the-mia-ring"
+        ],
+        "metal": [
+          "Metal Color: Yellow Gold"
+        ],
+        "karat": [
+          "Gold Karat: 14K"
+        ],
+        "color": [
+          "Metal Color: Yellow Gold"
+        ],
+        "width_mm": [
+          "Band Width: 1.5mm"
+        ],
+        "price": [
+          "$925 (50% off)"
+        ],
+        "currency": [
+          "$925 (50% off)"
+        ],
+        "original_price": [
+          "$1,850"
+        ],
+        "price_basis": [
+          "Each ring is crafted with conflict-free diamonds and set in 14K solid gold or platinum.",
+          "Center Stone: 0.200CTW"
+        ],
+        "center_stone_included": [
+          "Each ring is crafted with conflict-free diamonds and set in 14K solid gold or platinum.",
+          "Center Stone: 0.200CTW"
+        ],
+        "solid_gold_explicit": [
+          "Each ring is crafted with conflict-free diamonds and set in 14K solid gold or platinum."
+        ],
+        "surface_finish": [
+          "Metal Finish: High Polish"
+        ]
+      },
+      "superseded_normalization": {
+        "price": 925.0,
+        "original_price": 1850.0,
+        "currency": "USD",
+        "status": "Unsupported ISO inference; historical normalization only, not a verified price"
       }
     }
   ]

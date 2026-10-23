@@ -102,6 +102,6 @@ Depending on your credit card provider, it may take an additional 5 to 10 busine
 
 This evidence was captured by session S-75094819 and ported into the S-CA4C9D8A field-scoped
 framework at merge time. Flag references above written during capture use S-75094819's original
-numbering: F-016 (final sale) is now **F-025** and F-017 (Mia karat conflict) is now **F-026**.
+numbering: F-016 (final sale) is now **F-032** and F-017 (Mia karat conflict) is now **F-033** (F-025/F-026 on main are the ISO-currency rule and the WGC quote-date flag; the F-025 rule is applied to these rows' dollar-sign prices).
 No retailer claim in this file was re-fetched during the merge; every quote is from the
 2026-10-22 capture. Independent reputation (BBB) was not assessed for this retailer in this pass.

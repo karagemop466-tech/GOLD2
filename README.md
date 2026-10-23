@@ -7,7 +7,7 @@
 - **[Combined 32-entry dashboard](https://karagemop466-tech.github.io/GOLD2/explore/)** — nine retailers, six evidence-aware categories, searchable tables, analysis and official product links.
 - **[All researched entries](https://karagemop466-tech.github.io/GOLD2/explore/catalog/)** · **[Flagged for Review](https://karagemop466-tech.github.io/GOLD2/explore/review/)**
 - **[Buying checklist](https://karagemop466-tech.github.io/GOLD2/explore/standards/)** · **[Conditional calculator](https://karagemop466-tech.github.io/GOLD2/explore/calculator/)** · **[Source records](https://karagemop466-tech.github.io/GOLD2/explore/sources/)**
-- **[Root category dashboard (`20` entries across `6` categories)](https://karagemop466-tech.github.io/GOLD2/)**, **[Explicit Solid 14k Gold rings (`solid-gold.html`)](https://karagemop466-tech.github.io/GOLD2/solid-gold.html)**, **[Root Flagged for Review (`30` flags)](https://karagemop466-tech.github.io/GOLD2/flags.html)**, **[Gold weight & melt calculator (`g`/`dwt`/`ozt`)](https://karagemop466-tech.github.io/GOLD2/prices.html)**, and [initial two-setting dashboard](https://karagemop466-tech.github.io/GOLD2/site/) remain available. Every root page links to the combined `explore/` dashboard and official sources.
+- **[Root category dashboard (`23` entries across `6` categories)](https://karagemop466-tech.github.io/GOLD2/)**, **[Explicit Solid 14k Gold rings (`solid-gold.html`)](https://karagemop466-tech.github.io/GOLD2/solid-gold.html)**, **[Root Flagged for Review (`33` flags)](https://karagemop466-tech.github.io/GOLD2/flags.html)**, **[Gold weight & melt calculator (`g`/`dwt`/`ozt`)](https://karagemop466-tech.github.io/GOLD2/prices.html)**, and [initial two-setting dashboard](https://karagemop466-tech.github.io/GOLD2/site/) remain available. Every root page links to the combined `explore/` dashboard and official sources.
 
 GitHub Pages is configured as legacy publishing from **`main` / repository root**, with HTTPS enforced. The verification workflows do not replace that deployment mechanism.
 
@@ -38,7 +38,7 @@ The root register preserves an earlier WGC header observation. Its **quote-as-of
 | `scripts/build.mjs`, `explore/assets/{domain,app}.mjs` | Deterministic generator, evidence-gated arithmetic, filters and progressive enhancement |
 | `scripts/{verify,check-links,security,browser-tests,source-monitor}.mjs` | Evidence consistency, links, risk checks, real Chromium/axe and non-updating source signals |
 | `tests/*.test.mjs` | Mutation, null, numeric, integration, deterministic-build and preview-server controls |
-| `data/solid-gold-verified.json`, `data/listings/*.json`, `data/retailers.json`, `data/flags.json` | Root category register (`20` entries across `6` categories, `6` official retailers + BBB profiles, and `30` bidirectional flags `F-001`–`F-031`) |
+| `data/solid-gold-verified.json`, `data/listings/*.json`, `data/retailers.json`, `data/flags.json` | Root category register (`23` entries across `6` categories, `7` official retailers + BBB profiles, and `33` bidirectional flags `F-001`–`F-034`) |
 | `audit/8c810c15/**` | Independent live line-by-line verification log, NIST `g`/`dwt`/`ozt` calculator edge-case tests, and security/WCAG/hallucination scanner |
 | `evidence/**`, `tools/**`, root HTML/`assets/**` | Peer research and original dashboard, preserved with documented safety corrections |
 | `site/`, `scripts/{build.py,audit.py,test.js}` | Initial two-setting implementation, still reproducible |

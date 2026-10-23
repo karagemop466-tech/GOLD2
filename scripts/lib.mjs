@@ -16,7 +16,7 @@ export const PRODUCT_HOSTS = Object.freeze({
 });
 export const SOURCE_HOSTS = new Set([
   ...Object.values(PRODUCT_HOSTS).flat(), 'consumer.ftc.gov', 'www.gia.edu', 'www.nist.gov',
-  'www.lbma.org.uk', 'www.gold.org', 'www.jmbullion.com', 'www.bbb.org', 'www.trustpilot.com'
+  'www.lbma.org.uk', 'www.gold.org', 'www.jmbullion.com', 'www.bbb.org', 'www.trustpilot.com', 'www.stoneandstrand.com', 'stoneandstrand.com'
 ]);
 export function safeSourceURL(value) {
   try {const url = new URL(value); return url.protocol === 'https:' && !url.username && !url.password && (!url.port || url.port === '443') && SOURCE_HOSTS.has(url.hostname);}

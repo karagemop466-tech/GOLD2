@@ -52,6 +52,8 @@ Band Width: 1.70mm
 $780 (60% off)
 ```
 
+Currency note (F-025): the retrieved text shows dollar-sign amounts only; the ISO currency is not confirmed, so the dataset keeps the normalized price blank and retains the observed amounts under `superseded_normalization`.
+
 ### `original_price`
 
 ```
@@ -79,6 +81,6 @@ The buy-box badge list also includes "Solid Gold".
 
 ## Absences and limitations
 
-- **Final sale (F-025):** the buy-box shows "Final Sale — This product is non-returnable" and the Product Description bullets state "Final sale and non-returnable". At 60% off, the ring is also non-returnable under the retailer's own "purchased at a discount of 50% or greater" rule (`evidence/retailers/stone-and-strand.md`), on the same page that advertises "100 Day Returns".
+- **Final sale (F-032):** the buy-box shows "Final Sale — This product is non-returnable" and the Product Description bullets state "Final sale and non-returnable". At 60% off, the ring is also non-returnable under the retailer's own "purchased at a discount of 50% or greater" rule (`evidence/retailers/stone-and-strand.md`), on the same page that advertises "100 Day Returns".
 - **Rhodium finish stated:** the spec table also states "Rhodium Plating: Yes: Diamond area" — recorded verbatim in the item notes; it describes a finish over the diamond area and is separate from the solid-gold metal claim.
 - **Not on the page:** gram weight (F-003), hallmark / maker's mark (F-002), band depth (F-016), SKU.
