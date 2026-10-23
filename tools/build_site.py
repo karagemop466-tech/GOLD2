@@ -112,6 +112,7 @@ def status_badge(status: str, karat: int = 14) -> str:
         "partial_eur_price": "EUR official price · gaps flagged",
         "partial_price_unverified": "price blank · gaps flagged",
         "partial_price_unassigned": "price unassigned · review",
+        "partial_identity_mismatch": "identity mismatch · review",
     }
     return f'<span class="badge b-part">{esc(labels.get(status, status.replace("_", " ")))}</span>'
 
@@ -290,6 +291,50 @@ def price_summary(items: list[dict]) -> str:
     return " · ".join(parts) if parts else "No assigned current price"
 
 
+
+def register_relationship(items):
+    """Derive how the root register relates to the companion explorer register.
+
+    Counts come from the data files, never from prose. If the companion files are
+    missing, the note is omitted instead of being guessed.
+    """
+    try:
+        catalog = load(DATA / "catalog.json")
+        evidence = json.loads((ROOT / "research" / "evidence.json").read_text(encoding="utf-8"))
+    except Exception:
+        return ""
+    urls = {source["id"]: (source.get("url") or "").rstrip("/") for source in evidence.get("sources", [])}
+    companion = set()
+
+    def walk(node):
+        if isinstance(node, dict):
+            for key, value in node.items():
+                if key == "source" and isinstance(value, str) and value in urls and urls[value]:
+                    companion.add(urls[value])
+                else:
+                    walk(value)
+        elif isinstance(node, list):
+            for value in node:
+                walk(value)
+
+    for product in catalog.get("products", []):
+        walk(product)
+    root = {item.get("source_url", "").rstrip("/") for item in items}
+    only_root = sorted(item["id"] for item in items if item.get("source_url", "").rstrip("/") not in companion)
+    if not companion or not root:
+        return ""
+    shared = len(root & companion)
+    union = len(root | companion)
+    names = ", ".join(only_root) if only_root else "none"
+    return (
+        f'<div class="note mt16"><strong>Two registers, not one.</strong> This page registers {len(items)} listings. '
+        f'The companion <a href="explore/index.html">Evidence Explorer</a> is a separate register of '
+        f'{len(catalog.get("products", []))} entries. {shared} official product URLs appear in both; '
+        f'{len(only_root)} root rows are recorded only here ({names}). Across both registers {union} distinct official '
+        f'product URLs were researched. Counts are not transferable between the two registers, and neither register is '
+        f'a market-wide list.</div>'
+    )
+
 def build_index(items, payloads, flags, gold, qa_summary, retrieved):
     priced = sum(1 for item in items if item.get("price") is not None)
     weights = sum(1 for item in items if item.get("weight_g") is not None)
@@ -356,6 +401,7 @@ def build_index(items, payloads, flags, gold, qa_summary, retrieved):
 </div>
 
 <h2>Browse by category</h2><div class="catgrid">{cat_cards}</div>
+{register_relationship(items)}
 <h2>What this project checks</h2><div class="card"><ul class="checklist">{check_html}</ul>
 <div class="note mt16">A karat description or stamp alone does not prove purity. Seller documentation, correct markings, and independent physical testing answer different questions; none is silently substituted for another.</div></div>
 <h2>Priority flags</h2><div class="grid g2">{flag_cards}</div>

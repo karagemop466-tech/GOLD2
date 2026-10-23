@@ -1,7 +1,7 @@
 # QA / hallucination and integration audit
 
-- Generated: 2026-10-23 20:34:41 UTC
-- Items audited: 30 · retailers: 10 · flags: 37 · field-scoped quotes: 583
+- Generated: 2026-10-23 20:40:16 UTC
+- Items audited: 30 · retailers: 10 · flags: 39 · field-scoped quotes: 586
 - **RESULT: PASS** — 12 checks, 0 failures, 3 warnings
 
 ## Checks
@@ -9,14 +9,14 @@
 | # | Check | Result | Findings |
 |---|-------|--------|----------|
 | 1 | JSON schema, item-scoped records, unique IDs, and dates | ✅ PASS | 0 |
-| 2 | Field-scoped verbatim quotes resolve in their own files (583 quotes) | ✅ PASS | 0 |
+| 2 | Field-scoped verbatim quotes resolve in their own files (586 quotes) | ✅ PASS | 0 |
 | 3 | Item name, SKU, metal, dimensions, price, basis, and scope match field quotes | ✅ PASS | 0 |
 | 4 | Retailer policy, payment, contact, and independent metrics are field-backed | ✅ PASS | 0 |
 | 5 | Official product/policy domains and independent-source URLs are constrained | ✅ PASS | 0 |
 | 6 | Blank states are flagged and item/retailer flag references are bidirectional | ✅ PASS | 0 |
 | 7 | Rejected snippets and superseded gold quotes are not current values | ✅ PASS | 0 |
 | 8 | Nominal fine-gold and melt calculations use current constants | ✅ PASS | 0 |
-| 9 | Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure (1509 link occurrences, 509 external). External retrieval is documented separately; future availability is not guaranteed. | ✅ PASS | 0 |
+| 9 | Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure (1518 link occurrences, 511 external). External retrieval is documented separately; future availability is not guaranteed. | ✅ PASS | 0 |
 | 10 | Coverage limitations remain visible | ✅ PASS | 0 |
 | 11 | Dated verification log, analysis arithmetic, and derived shell counts (39 logged records) | ✅ PASS | 0 |
 | 12 | Combined register covers every root URL, shell claims are derived, and flag counts/derived melt values are controlled | ✅ PASS | 0 |

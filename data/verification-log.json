@@ -602,13 +602,15 @@
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238",
       "checked_at": "2026-10-23",
-      "status": "verified_match",
+      "status": "verified_correction",
       "observed": [
-        "14k White Gold",
+        "Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen",
+        "Stock Number 505097w14",
         "Width: 1.50mm",
         "$1,240(Setting Price)"
       ],
-      "note": "Preserved from S-70B76800 & re-verified live 2026-10-23: $1,240 setting display without ISO currency code."
+      "note": "Live page no longer matches the stored Petite Micropavé record. The amount is recorded as what the page shows, NOT as this row's price; the row's price stays blank and the discrepancy is published as F-041/F-042.",
+      "session": "S-305FDD02"
     }
   ]
 }

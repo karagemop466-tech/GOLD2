@@ -143,7 +143,7 @@
       "depth_mm": null,
       "band_width_text": null,
       "weight_basis": null,
-      "unassigned_price_text": null,
+      "unassigned_price_text": "Discounted Price $979.30  Original Price was $1,399.00 30% Off",
       "prong_metal": null,
       "surface_finish": null,
       "physical_test_status": "not_tested",
@@ -173,6 +173,9 @@
         ],
         "currency": [
           "Discounted Price $979.30  Original Price was $1,399.00 30% Off"
+        ],
+        "unassigned_price_text": [
+          "Discounted Price $979.30  Original Price was $1,399.00 30% Off"
         ]
       },
       "observed_native_display": [
@@ -187,6 +190,15 @@
           ],
           "note": "A same-day retrieval by the parallel verification session (S-062F314F) rendered these amounts with no Discounted/Original labels; the labels reappeared on this session's render. Both renders are kept; neither is assigned a currency or ordered by position.",
           "session": "S-062F314F"
+        },
+        {
+          "retrieved_at": "2026-10-23",
+          "session": "S-305FDD02",
+          "render_variant": "labeled",
+          "rendered": [
+            "Discounted Price $979.30  Original Price was $1,399.00 30% Off"
+          ],
+          "note": "This session's render of the same URL displayed the Discounted/Original labels. Every render is kept verbatim; no amount is assigned a currency or ordered by position (F-018, F-025)."
         }
       ]
     },
@@ -234,7 +246,7 @@
       "depth_mm": null,
       "band_width_text": null,
       "weight_basis": null,
-      "unassigned_price_text": null,
+      "unassigned_price_text": "Discounted Price $769.30  Original Price was $1,099.00 30% Off",
       "prong_metal": null,
       "surface_finish": null,
       "physical_test_status": "not_tested",
@@ -264,6 +276,9 @@
         ],
         "currency": [
           "Discounted Price $769.30  Original Price was $1,099.00 30% Off"
+        ],
+        "unassigned_price_text": [
+          "Discounted Price $769.30  Original Price was $1,099.00 30% Off"
         ]
       },
       "observed_native_display": [
@@ -278,6 +293,15 @@
           ],
           "note": "A same-day retrieval by the parallel verification session (S-062F314F) rendered these amounts with no Discounted/Original labels; the labels reappeared on this session's render. Both renders are kept; neither is assigned a currency or ordered by position.",
           "session": "S-062F314F"
+        },
+        {
+          "retrieved_at": "2026-10-23",
+          "session": "S-305FDD02",
+          "render_variant": "labeled",
+          "rendered": [
+            "Discounted Price $769.30  Original Price was $1,099.00 30% Off"
+          ],
+          "note": "This session's render of the same URL displayed the Discounted/Original labels. Every render is kept verbatim; no amount is assigned a currency or ordered by position (F-018, F-025)."
         }
       ]
     }
