@@ -36,6 +36,7 @@ CATEGORY_PAGES = [
 ]
 ALL_PAGES = CATEGORY_PAGES + [
     "index.html", "retailers.html", "prices.html", "flags.html", "methods.html",
+    "verification.html", "analysis.html",
 ]
 PUBLISHED_NUMERIC = ("price", "original_price", "width_mm", "depth_mm", "weight_g")
 CURRENCY_SYMBOL = {"USD": "$", "EUR": "€"}
@@ -56,6 +57,40 @@ def number_variants(value: float) -> set[str]:
 def quote_contains_number(value: float, quote_text: str) -> bool:
     compact = quote_text.replace(" ", "")
     return any(v in quote_text or v.replace(" ", "") in compact for v in number_variants(value))
+
+
+def required_item_flags(item: dict) -> list:
+    """Flags an item must carry for its blank/unconfirmed state.
+
+    Mirrors the authoritative rule in tools/qa.py (2026-10-23 one-currency
+    model): unassigned price text -> F-018; native display without an ISO
+    currency statement -> F-025; no price string at all -> F-008.
+    """
+    required = []
+    if item.get("solid_gold_explicit") is not True:
+        required.append("F-001")
+    if item.get("hallmark_stated") is not True or item.get("makers_mark_stated") is not True:
+        required.append("F-002")
+    if item.get("weight_g") is None:
+        required.append("F-003")
+    if item.get("width_mm") is None or item.get("depth_mm") is None:
+        required.append("F-016")
+    if item.get("color") is None:
+        required.append("F-017")
+    if item.get("price") is None:
+        if item.get("unassigned_price_text"):
+            required.append("F-018")
+        elif item.get("observed_native_display"):
+            required.append("F-025")
+        else:
+            required.append("F-008")
+    if item.get("currency") not in (None, "USD"):
+        required.append("F-007")
+    if item.get("independent_test_permission") is not True:
+        required.append("F-021")
+    if item.get("physical_test_status") == "not_tested":
+        required.append("F-024")
+    return required
 
 
 def host_of(url: str) -> str:
@@ -200,21 +235,18 @@ class Scanner:
             for flag_id in applied:
                 self.check(flag_id in by_flag and item["id"] in by_flag[flag_id]["affected_items"],
                            "C4-flags", f"{item['id']} -> {flag_id} is not bidirectional")
-            required = []
-            if item.get("solid_gold_explicit") is not True:
-                required.append("F-001")
-            if item.get("hallmark_stated") is not True or item.get("makers_mark_stated") is not True:
-                required.append("F-002")
-            if item.get("weight_g") is None:
-                required.append("F-003")
-            if item.get("price") is None:
-                required.append("F-025" if item.get("superseded_normalization")
-                                else "F-018" if item.get("unassigned_price_text") else "F-008")
-            if item.get("currency") not in (None, "USD"):
-                required.append("F-007")
+            required = required_item_flags(item)
             for flag_id in required:
                 self.check(flag_id in applied, "C4-flags",
                            f"{item['id']} missing required {flag_id} for its blank state")
+            if item.get("price") is not None and not item.get("currency"):
+                self.check(False, "C4-flags",
+                           f"{item['id']} assigned price lacks a currency")
+            if item.get("price") is not None and item.get("currency"):
+                currency_quotes = " ".join(item.get("field_evidence", {}).get("currency", []))
+                if item["currency"].lower() not in currency_quotes.lower() and not item.get("currency_source_url"):
+                    self.check(False, "C4-flags",
+                               f"{item['id']} currency lacks an official quote or source URL")
         for flag in flags:
             self.check(flag.get("sources") and all(urlsplit(u).scheme == "https" for u in flag["sources"]),
                        "C4-flags", f"{flag['id']} lacks https sources")

@@ -6,6 +6,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from hallucination_security_scanner import (  # noqa: E402
     norm, number_variants, quote_contains_number, host_of, Scanner,
+    required_item_flags,
 )
 
 GRAMS_PER_TROY_OZ = 31.1034768
@@ -57,5 +58,36 @@ scanner.check(False, "unit", "synthetic failure")
 scanner.check(True, "unit", "synthetic pass")
 check(any(level == "FAIL" for level, _ in scanner.findings), "fail recorded")
 check(scanner.control_count == 2, "control count")
+
+# C4 required-flag rule (independent mirror of tools/qa.py one-currency model).
+blank_item = {"id": "UNIT-BLANK", "flags": [], "physical_test_status": "not_tested"}
+blank_flags = required_item_flags(blank_item)
+check("F-008" in blank_flags, "no price string -> F-008")
+check("F-018" not in blank_flags and "F-025" not in blank_flags,
+      "blank item gets neither F-018 nor F-025")
+check({"F-001", "F-002", "F-003", "F-016", "F-017", "F-021", "F-024"} <= set(blank_flags),
+      "blank item carries baseline blank-state flags")
+
+native_item = {"id": "UNIT-NATIVE", "flags": [],
+               "observed_native_display": ["$909.30  $1,299.00 30% Off"]}
+native_flags = required_item_flags(native_item)
+check("F-025" in native_flags and "F-008" not in native_flags and "F-018" not in native_flags,
+      "native display without ISO currency -> F-025")
+
+unassigned_item = {"id": "UNIT-UNASSIGNED", "flags": [],
+                   "unassigned_price_text": "$909.30  $1,299.00 30% Off"}
+unassigned_flags = required_item_flags(unassigned_item)
+check("F-018" in unassigned_flags and "F-008" not in unassigned_flags,
+      "unassigned price text -> F-018")
+
+priced_item = {
+    "id": "UNIT-PRICED", "flags": [], "price": 890.0, "currency": "USD",
+    "solid_gold_explicit": True, "hallmark_stated": True, "makers_mark_stated": True,
+    "weight_g": 5.0, "width_mm": 2.0, "depth_mm": 1.5, "color": "yellow",
+    "independent_test_permission": True, "physical_test_status": "tested",
+}
+check(required_item_flags(priced_item) == [], "fully confirmed USD item needs no flags")
+eur_item = dict(priced_item, currency="EUR")
+check("F-007" in required_item_flags(eur_item), "non-USD currency -> F-007")
 
 print(f"OK — {passed} scanner helper/arithmetic controls passed")

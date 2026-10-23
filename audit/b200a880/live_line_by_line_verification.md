@@ -5,6 +5,37 @@
 - **Machine-readable record:** `audit/b200a880/live_verification_2026-10-23.json`
 - **No-hallucination rule applied:** a row is "matched" only when the exact stored quote appears in the page retrieved today. Changed pages are quoted verbatim and routed through dated evidence. Client-rendered shells are recorded as limitations; nothing is filled in from memory, position, arithmetic, snippets, or a currency symbol alone.
 
+## 0. Integration outcome after rebasing onto `main` (2026-10-23)
+
+This branch's data-refresh commit was prepared against the pre-merge tree, then rebased onto
+`main` `39c81db` (PRs #22–#27, sessions `S-062F314F` and `S-8B9E189A`). The rebase showed that
+**every data change this pass had independently reached had already been integrated on `main`
+from the parallel sessions' own live fetches**, in several cases under a stricter evidence model.
+Rather than overwrite their work, this branch keeps only its unique artifacts — this audit folder,
+the scanner (`3,056` controls) and its unit tests — and accepts the integrated register:
+
+| This session's independent finding (2026-10-23) | State on `main` after PRs #22–#27 |
+|---|---|
+| WGC header **4,024.45 USD/oz**, chart "Data as of 22 October, 2026", `quote_date` null; 4,028.53/4,024.36 only as superseded observations | Integrated identically in `data/gold-price.json` and on `verification.html` (`check-gold-quote`); F-026 wording matches |
+| BE-121H6 renders **`$890(Setting Only)`** with a page-level USD selector; EUR €990 retained only as dated history; no FX conversion | Integrated identically; modeled as `partial_official_fields` with F-007 kept on the item and the duplicate currency finding merged back into F-007 (no F-032) |
+| Z-20303279 / Z-20301172 now show **labeled** Discounted/Original texts with unchanged amounts | Same verbatim strings captured independently; stored in `observed_native_display` + field evidence, structured price stays `null` under F-025 |
+| Z-20046552 unlabeled `$909.30  $1,299.00 30% Off` render | Same render captured independently; row stays `partial_price_unassigned` (F-018) |
+| 16 further rows exact matches | Same matches recorded entry-by-entry on `verification.html` |
+| Builder hardcoded "16 item files" count (B200-F4) | Independently fixed on `main`: `tools/build_site.py` now derives all counts (`len(items)`/`len(retailers)`); corroborated, no edit from this branch needed |
+
+Modeling decision accepted from `main`: the **one-currency rule (F-033)** — an amount is assigned
+to a currency only when the retailer itself states the ISO currency. The register therefore holds
+**4 assigned prices** (three Automic Gold rows backed by the public cart endpoint, plus BE-121H6
+backed by its rendered USD selector); 16 displayed amounts remain verbatim-but-unassigned,
+including Blue Nile setting prices and the Mejuri "From $2,900" display that this pass re-read
+verbatim. That is stricter than, and not in conflict with, the observations recorded below.
+
+**Unique contribution of this pass:** `AG-CUSHION-SIGNET` is marked "not re-read this pass" on
+`main`'s verification log (stored observation dated 2026-10-22). This session re-fetched
+<https://www.automicgold.com/products/cushion-diamond-signet> on 2026-10-23 and re-read
+`$2,758`, solid 14k gold, and the stone-inclusive ~5.5 g item weight exactly as stored — an
+additional independent dated observation for that one row, recorded in the machine-readable JSON.
+
 ## 1. Gold reference — verified change
 
 Re-fetch of <https://www.gold.org/goldhub/data/gold-prices> on 2026-10-23 returned:
@@ -53,12 +84,12 @@ All four explicitly assigned solid-gold prices ($1,910 / $2,758 / $526 / From $2
 
 ### Dated evidence updates (4 rows)
 
-1. **BE-121H6 — currency and amount changed on the official page.** On 2026-10-22 the page rendered `€ 990.00(Setting Only)`. On 2026-10-23 it renders `$890(Setting Only)`, the site currency selector reads `USD`, and the configurator breadcrumb reads `classic six-prong solitaire-$890`. Style `BE121H6-14KY`, 14K Yellow Gold, 2.5mm, and 14K white-gold prongs are unchanged. The row is updated to **890.00 USD** backed by two field-scoped quotes (`$890(Setting Only)` and the page-level `USD` label); the EUR 990 observation becomes a dated superseded record. F-007 is rewritten as a historical currency-change record with no affected rows; no exchange-rate conversion is performed anywhere.
+1. **BE-121H6 — currency and amount changed on the official page.** On 2026-10-22 the page rendered `€ 990.00(Setting Only)`. On 2026-10-23 it renders `$890(Setting Only)`, the site currency selector reads `USD`, and the configurator breadcrumb reads `classic six-prong solitaire-$890`. Style `BE121H6-14KY`, 14K Yellow Gold, 2.5mm, and 14K white-gold prongs are unchanged. The row carries **890.00 USD** backed by two field-scoped quotes (`$890(Setting Only)` and the page-level `USD` label); the EUR 990 observation is retained only as dated superseded history. On integrated `main`, F-007 remains applied to the item as a historical currency-change record (the parallel sessions' duplicate F-032 finding was merged into F-007); no exchange-rate conversion is performed anywhere.
 2. **Z-20303279 — labels now present.** 2026-10-22 showed `$979.30  $1,399.00 30% Off` without labels; today the official page shows `Discounted Price $979.30  Original Price was $1,399.00 30% Off`. Amounts are unchanged. Structured price fields stay `null` under F-025 (a dollar sign does not establish ISO currency); only the verbatim unassigned text and evidence are refreshed.
 3. **Z-20301172 — labels now present.** Same pattern: today `Discounted Price $769.30  Original Price was $1,099.00 30% Off`; amounts unchanged; structured fields stay `null`.
 4. **Z-20046552 — label rendering varies.** Today's fetch shows `$909.30  $1,299.00 30% Off` without labels; the 2026-10-22 capture was labeled `Discounted Price $909.30` / `Original Price was $1,299.00`. Both exact texts are retained as dated observations; amounts are unchanged; structured fields stay `null`.
 
-F-018 is reworded to state the current reality (labels present on both pages as of 2026-10-23; values remain deliberately unassigned under the F-025 ISO-currency rule) rather than leaving the stale "unlabeled" claim.
+F-018 on integrated `main` states the same reality (label presence is unstable between renders; values remain deliberately unassigned under the F-025 ISO-currency rule). The item notes on `main` still contain an older "without labels" sentence for Z-20303279/Z-20301172 even though the captured evidence quote itself is labeled; this is wording drift inside an open flag, not a wrong value, and is noted for a future wording pass rather than edited from this audit-only scope.
 
 ## 3. Retailer policy re-checks
 
@@ -73,10 +104,10 @@ F-018 is reworded to state the current reality (labels present on both pages as 
 
 ## 4. Irregularities flagged for review (non-blocking)
 
-- **B200-F1 (medium):** Zales policy body is not present in static retrievals; the 2026-10-22 policy quotes remain dated evidence and could not be independently re-read today.
-- **B200-F2 (low):** Zales price-label rendering differs between fetches for the same URLs (labeled vs unlabeled). Both variants are now preserved with dates; never assign by position.
+- **B200-F1 (medium, disposition updated post-rebase):** this session's static retrieval of the Zales policy page returned only a client-rendered shell, so the 2026-10-22 policy quotes could not be re-read through this tool path. The parallel `S-062F314F` pass retrieved the same URL successfully on 2026-10-23 and re-confirmed "Returns are allowed within 30 days from the purchase (shipment) date and exchanges within 60 days" plus the sized-to-order refund wording (see `verification.html`, `check-zales-returns`). The policy is therefore re-verified on `main`; the shell limitation remains true for this session's fetch path.
+- **B200-F2 (low):** Zales price-label rendering differs between fetches for the same URLs (labeled vs unlabeled). Both variants are preserved with dates on `main` (`observed_native_display`, F-018); never assign by position.
 - **B200-F3 (low):** VRAI's Plain Band title alongside a `Pavé carat weight:0.18ctw` spec remains an unresolved seller-side inconsistency (already covered by the register's notes/flags).
-- **B200-F4 (process):** `tools/build_site.py` contained a hardcoded "16 item files, four retailer files" sentence on the Method page although the register holds 20 items and 6 retailers. Corrected to derived counts in this pass — the exact class of stale-number risk this project exists to catch.
+- **B200-F4 (process, resolved on `main`):** `tools/build_site.py` previously hardcoded an "item files / retailer files" sentence that could drift from the register. The parallel sessions independently replaced every typed count with data-derived counts (`len(items)` / `len(retailers)`), which is also the fix this session had implemented; the rebase confirmed it in the integrated builder — the exact class of stale-number risk this project exists to catch.
 
 ## 5. What this pass does not establish
 
