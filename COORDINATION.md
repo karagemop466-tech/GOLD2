@@ -882,3 +882,13 @@ None. This session performed read-only verification and created only audit docum
 | T-400-02 | Final verification/PR and closeout record for this audit-only change | in progress | S-400227D3 | `COORDINATION.md`, PR/merge record |
 
 **Scope boundary:** the only planned repository edits are this session's audit folder and this session's own coordination block. Do not edit shared `data/**`, `evidence/**`, generators, workflows, dashboard pages, README, or existing reports; log any required cross-scope correction as a request instead. Every item judged verified must cite its official source and the dated evidence record; values that cannot be re-confirmed remain flagged, never inferred.
+
+## S-400227D3 — final-integration handoff claim (2026-10-23 UTC)
+
+The baseline pass found published, actionable cross-scope requests in `audit/a87a02a5/FINDINGS.md` and `COORDINATION.md` REQ-A87A-01…05. Their owner session’s PR #33/#34 is merged; the requests are older than 60 minutes and no active owner/PR is working on these corrections. The repository’s latest merged tree is `7fb033442ac629b0de297f2eb6047f39dc91ea32`. This session takes over the final-integration fixes below without rewriting the historical audit record.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+|----|------|--------|-------|----------------------|
+| T-400-03 | Final integration of stale A87 handoffs: include all already-researched solid-gold products in the combined catalog; make variable option prices and hypothetical weight calculations unambiguous; repair field-level provenance and stale README counts; rebuild and re-run verification | in progress | S-400227D3 | `README.md`, `data/catalog.json`, `data/solid-gold-verified.json`, `data/flags.json`, `data/site-manifest.json`, `research/evidence.json`, `explore/**`, `evidence/listings/**`, root generated `*.html`, `dashboard/**`, `tools/qa.py`, `tools/build_site.py`, `scripts/**`, `tests/**`, `reviews/independent_snapshot_audit.py`, `.github/workflows/gold2-verify.yml` |
+
+**Baseline before this handoff:** all twelve pre-existing test/audit families passed in a clean scratch snapshot. The independent provenance scanner also passed, but reported 13 warnings: three missing products from the advertised combined register; six missing JSON field-evidence links for three published gross-item weights; four appropriately unassigned Zales price displays; and no live external-page status guarantee. Separate documented defects are the configuration scope/range for two Automic Gold prices, a conditional FDJ melt calculation rendered as product prose, and stale README counts. None of the four unassigned Zales displays will be converted to a price without an official source that resolves currency and labels.
