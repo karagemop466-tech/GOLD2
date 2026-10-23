@@ -1109,3 +1109,16 @@ Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero 
   row; zero purchase approvals; F-026 (no header timestamp) open; F-041/F-042 (BN-316238 serves a different product)
   open; 20 of 30 root rows without an assigned price and 23 of 30 without a metal weight. **Look for hallucinations
   again on the next pass — this pass is one review, not a certificate.**
+
+## Claim — Session S-A182C7CC (2026-10-23T23:40:29Z UTC) — independent repository review
+
+Platform constraint: this runner is bound to `arena/a182c7cc-gold2`; no other branch or worktree will be created or pushed. The board and audit scope are exclusive to this session; shared catalog, website pages, generators, and workflows are not claimed or edited.
+
+| ID | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| A182-01 | Independent repository review, line-by-line provenance / hallucination scan, and documented findings | in progress | S-A182C7CC | `audit/a182c7cc/**` |
+| A182-02 | Run security, evidence, build, link, calculator, and browser checks; record exact results and limitations | in progress | S-A182C7CC | `audit/a182c7cc/**` |
+
+### S-A182C7CC working log
+
+- 2026-10-23T23:40:29Z — Read the existing board before editing. All implementation/data scopes remain untouched; this session claims only `audit/a182c7cc/**` plus this append-only board block. Existing product-price observations are dated; no current price or physical purity will be claimed without direct official-source evidence. Will run the repository's checks and independently test them, record unresolved or unverified items as flagged, and recommend another hallucination pass after review.
