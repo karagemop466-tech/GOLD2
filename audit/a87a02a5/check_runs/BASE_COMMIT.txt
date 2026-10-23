@@ -10,5 +10,11 @@ Run date: 2026-10-23, between 10:03Z and 11:15Z (UTC).
 Note on scope discipline: tools/qa.py rewrites reports/qa-report.md (a timestamp line) as a
 side effect. reports/** is claimed by peer sessions S-062F314F, S-8B9E189A and S-B200A880,
 so every suite that writes files was run in a scratch copy at /tmp, never in the working
-tree. The one accidental in-tree rewrite was reverted with `git checkout -- reports/`; the
-regenerated copy is kept here as qa-report-regenerated-by-this-run.txt for transparency.
+tree. The one accidental in-tree rewrite was reverted with `git checkout -- reports/`.
+
+Full disclosure of that incident: the only change was the report's own timestamp line
+(2026-10-23 00:17:34 UTC -> 2026-10-23 10:03:21 UTC); no audited value changed. A copy was
+briefly saved into this directory and then lost when check_runs/ was rebuilt for the final
+main @ 161dbe1 run, so it is NOT archived here. This note is recorded instead of implying
+an artefact exists. The authoritative post-revert state is `git status` showing no change
+to reports/qa-report.md, and the final archived run is qa_root.txt below.
