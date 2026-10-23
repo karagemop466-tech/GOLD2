@@ -312,6 +312,35 @@ def scan_workspace(root: Path) -> dict:
                     controls[0] += 1
             controls[0] += 1
 
+    # 1b. Dynamic F-001 / F-002 / F-003 prose count invariants against data/listings/*.json
+    flags_file = root / "data" / "flags.json"
+    listings_dir = root / "data" / "listings"
+    if flags_file.is_file() and listings_dir.is_dir():
+        listing_files = [
+            *sorted(listings_dir.glob("*.json")),
+            *([root / "data" / "solid-gold-verified.json"] if (root / "data" / "solid-gold-verified.json").is_file() else []),
+        ]
+        all_rows = [
+            it
+            for lf in listing_files
+            for it in json.loads(lf.read_text(encoding="utf-8")).get("items", [])
+        ]
+        fmap = {f["id"]: f for f in json.loads(flags_file.read_text(encoding="utf-8")).get("flags", [])}
+        n_total = len(all_rows)
+        n_no_solid = sum(1 for it in all_rows if it.get("solid_gold_explicit") is not True)
+        n_no_hm = sum(1 for it in all_rows if it.get("hallmark_stated") is not True or it.get("makers_mark_stated") is not True)
+        n_no_wt = sum(1 for it in all_rows if it.get("weight_g") is None)
+        for fid, expected_substr in (
+            ("F-001", f"{n_no_solid} of {n_total}"),
+            ("F-002", f"None of the {n_no_hm} captured product pages"),
+            ("F-003", f"Only {n_total - n_no_wt} of {n_total} rows publish"),
+        ):
+            txt = (fmap.get(fid, {}).get("title", "") + " " + fmap.get(fid, {}).get("detail", ""))
+            if expected_substr not in txt:
+                add_finding("STALE-FLAG-PROSE-COUNT", fid, f"Expected '{expected_substr}' in {fid} title/detail")
+            else:
+                controls[0] += 1
+
     # 2. Audit HTML surfaces (root, site/, dashboard/)
     audit_html_directory(root, root, add_finding, controls, require_row_https=True)
     audit_html_directory(root / "site", root, add_finding, controls, require_row_https=True)

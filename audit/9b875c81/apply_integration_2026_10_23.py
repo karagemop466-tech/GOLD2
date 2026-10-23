@@ -1117,7 +1117,6 @@ def update_flags_and_verification_log() -> None:
             flags_doc["flags"].append(f)
 
     by_id = {f["id"]: f for f in flags_doc["flags"]}
-    by_id["F-003"]["title"] = f"Metal weight in grams is unpublished on {missing_w} of {total_n} product pages"
     for item in all_items:
         for fid in item.get("flags", []):
             if fid in by_id:
@@ -1125,6 +1124,34 @@ def update_flags_and_verification_log() -> None:
                     by_id[fid]["affected_items"].append(item["id"])
                 if item["source_url"] not in by_id[fid]["sources"]:
                     by_id[fid]["sources"].append(item["source_url"])
+    missing_solid = len(by_id["F-001"]["affected_items"])
+    missing_hm = len(by_id["F-002"]["affected_items"])
+    missing_w = len(by_id["F-003"]["affected_items"])
+    by_id["F-001"]["title"] = f"Item-specific \u201csolid gold\u201d wording is not stated on {missing_solid} of {total_n} items"
+    by_id["F-001"]["detail"] = (
+        f"No item-specific title or specification explicitly describes {missing_solid} of the {total_n} listed settings/rings as \u201csolid gold\u201d "
+        f"(the {total_n - missing_solid} rows on Explicit Solid Gold do state explicit solid 14K\u201324K gold). Karat wording alone is not substituted for that checklist requirement. "
+        "A page-wide \u201csolid gold\u201d phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. "
+        "This is a documentation gap, not proof that any item is plated or filled."
+    )
+    by_id["F-002"]["detail"] = (
+        f"None of the {missing_hm} captured product pages documents both a physical karat stamp inside the band and a registered maker\u2019s/manufacturer\u2019s mark "
+        "(FDJ-GR0001 states \u201cKarat stamped inside the band.\u201d without a maker\u2019s mark; the other 29 omit both). "
+        "Stock numbers, styles, and URL identifiers are not physical hallmarks."
+    )
+    by_id["F-003"]["title"] = f"Metal weight in grams is unpublished on {missing_w} of {total_n} product pages"
+    by_id["F-003"]["detail"] = (
+        f"Only {total_n - missing_w} of {total_n} rows publish seller metal weights in grams (Automic Gold AG-COFFIN-RING 6.10 g and AG-24K 11.00 g, "
+        "VRAI Classic 4-Prong Dome 2.86 g at size 6, and Sarraf SAR-147370 3.80 g, SAR-145362 10.00 g, SAR-145364 8.00 g, and SAR-144773 13.40 g at size 10). "
+        f"The other {missing_w} weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows."
+    )
+    by_id["F-025"]["detail"] = (
+        "The official excerpts establish displayed dollar-sign amounts, but not the ISO currency of the selected configuration. "
+        "Those amounts are shown verbatim in the register and are **not** copied into the assigned price/currency cells. "
+        "Four exceptions are recorded only because the retailer publishes its own currency statement: Automic Gold\u2019s public cart endpoint reports \"currency\":\"USD\", "
+        "Brilliant Earth renders a USD selector next to the price, Sarraf prints an explicit US$ prefix on every item price, and Factory Direct Jewelry prints \"$1,299.99 USD\". "
+        "Mejuri, Stone and Strand, Blue Nile, and Zales omit an explicit ISO currency token on these captures, so their amounts are displayed verbatim and left unassigned."
+    )
     all_retailers = json.loads((DATA / "retailers.json").read_text(encoding="utf-8"))["retailers"]
     for ret in all_retailers:
         for fid in ret.get("flags", []):
