@@ -4,15 +4,28 @@ Shared task board for parallel agent sessions. **Read this before editing anythi
 
 ## Claim — Session S-1EB9F828 (2026-10-23 20:18Z UTC) — integration + fresh verification pass
 
+### S-1EB9F828 working log
+
+- 2026-10-23 20:18Z — Board read; no live peer claim. `S-D4C0A507`'s T-D4-04 had no commits since 10:33Z (PR #28 merged), so it was taken over under the 60-minute rule. Claim committed as `a594f0b` and pushed before any other edit.
+- 2026-10-23 20:20Z — Clean-tree baseline: `tools/build_site.py` 13 pages; `tools/qa.py` **PASS 11 checks / 0 failures / 3 warnings**; 23/23 Node tests; `scripts/verify.mjs` PASS (41 products / 77 sources / 25 findings / 0 purchase approvals); calculator, snapshot audit, `check-links`, `security` and `npm audit` PASS.
+- 2026-10-23 20:20–20:35Z — Live `fetch_page` re-verification of nine official URLs (WGC; Automic Coffin page/JSON, Cushion page/JSON and cart; Mejuri product, returns FAQ and BBB profile). Exact values, the not-re-read list and five irregularities are in `audit/1eb9f828/live_verification_2026-10-23.md` + `verification.json`.
+- 2026-10-23 20:30Z — **Gold freshness update.** The moving WGC header read **3,996.31 USD/oz** (chart still dated 22 October 2026) against the stored **4,024.45**. Updated `data/gold-price.json`, `evidence/gold-price.md`, the WGC evidence record, and `dashboard/scripts/build.py` (`SPOT_USD`, quoted references). 4,024.45 moved to `superseded_observations`; the QA stale-value guard then **failed two pages** for still rendering it, which was fixed by removing superseded figures from F-026/GOLD-QUOTE prose. No derived melt dollar figure remains in flag prose or item notes.
+- 2026-10-23 20:32Z — **REQ-A87A-01/02 closed.** Added `ag-coffin-ring`, `ag-cushion-signet` and `mj-bold-eternity` to `data/catalog.json` with five new dated evidence sources and a `mejuri` seller record → **44 products / 13 sellers / 82 sources**. Added `observed_price_range` to both Automic root rows and new **F-039** recording `$1,910–$2,233` and `$2,408–$3,253`; ranges are recorded and never averaged; the unnamed `$2,233` variant is explicitly not attributed.
+- 2026-10-23 20:33Z — **REQ-A87A-03/05 closed.** Removed the derived `0.976 g → $73.67` and `$1,011.39 / 74.3%` prose from F-035/F-036 and from five item notes; it now exists only as generated arithmetic. Converted `evidence/listings/fdj-gr0001.md` to fenced field-scoped blocks and added `weight_g`/`gross_ring_weight_g` quotes for AG-CUSHION-SIGNET, AG-SAPPHIRE-RING and FDJ-GR0001.
+- 2026-10-23 20:34Z — **REQ-A87A-04 closed.** README counts corrected against data: 44 URLs / 13 sellers / 82 records / 25 findings / 37 flags / 46 HTML pages / 44 gates / 12 Python checks / 9 root sellers. `tools/build_site.py` now derives the explore counts from `data/catalog.json`; `tools/qa.py` gained **check 12** (every root URL present in the combined catalog, derived shell claim, flag title count == affected_items, register total == row count, and no melt-dollar prose).
+- 2026-10-23 20:35Z — Full local pass green: build 13 pages; QA **PASS 12 checks / 0 failures / 3 warnings**; 23/23 Node tests; `verify` PASS 44/82/25/0; dashboard build 14 pages/26 rings/11 retailers + `verify --check-build` PASS; `calc-test` PASS; `check-links` PASS (46 pages / 102 local targets / 179 external); `security` PASS; scanners 8c810c15 (0 findings / 202 controls / 6 tests), b200a880 (4262 controls / 0 failures / 25 tests), 9b875c81 (0 findings / 1984 controls / 4 tests); real-Chromium + axe PASS (44 automatic gates); regenerating twice produced an identical tree.
+- 2026-10-23 20:36Z — Recorded five review irregularities rather than smoothing them: Automic's self-contradictory production times, the duplicate "Only 3 units left" copy, Mejuri's Materials heading vs selected metal, the unattributed `$2,233` variant, and the intraday WGC header move. None blocks publication; all are visible in the audit file.
+
+
 Platform constraint: this session is bound to `arena/1eb9f828-gold2`; no other branch or worktree may be created or pushed. Work is separated by file scope below.
 
 **Active-claim check (read before claiming):** no other session has an unmerged branch claim. `S-D4C0A507`'s `T-D4-04` still reads *in progress* on this board, but its last branch commit is `63bb369` (PR #28, merged 2026-10-23T10:33Z) — more than 60 minutes old with no commits, so **T-D4-04 is taken over by this session** under the board's stale-claim rule. Its audit files are not modified.
 
 | ID | Task | Status | Owner | File scope (exclusive) |
 |----|------|--------|-------|------------------------|
-| T-1EB-01 | Fresh live line-by-line re-verification of the root register, the three missing combined-register rows, the gold reference, and a dated not-re-read list | in progress | S-1EB9F828 | `audit/1eb9f828/**` |
-| T-1EB-02 | Apply open peer handoffs REQ-A87A-01…05 (missing rows, unscoped variant price, derived-melt prose, README counts, evidence quoting/field_evidence, stale-count check) | in progress | S-1EB9F828 | `data/catalog.json`, `research/evidence.json`, `data/solid-gold-verified.json`, `data/flags.json`, `evidence/**`, `README.md`, `tools/build_site.py`, `tools/qa.py`, `explore/**`, root `*.html`, `dashboard/**` |
-| T-1EB-03 | Full local build/QA/security/hallucination pass on the combined tree | in progress | S-1EB9F828 | `reports/**`, regenerated outputs in T-1EB-02 scope |
+| T-1EB-01 | Fresh live line-by-line re-verification of the root register, the three missing combined-register rows, the gold reference, and a dated not-re-read list | done | S-1EB9F828 | `audit/1eb9f828/**` |
+| T-1EB-02 | Apply open peer handoffs REQ-A87A-01…05 (missing rows, unscoped variant price, derived-melt prose, README counts, evidence quoting/field_evidence, stale-count check) | done | S-1EB9F828 | `data/catalog.json`, `research/evidence.json`, `data/solid-gold-verified.json`, `data/flags.json`, `evidence/**`, `README.md`, `tools/build_site.py`, `tools/qa.py`, `explore/**`, root `*.html`, `dashboard/**` |
+| T-1EB-03 | Full local build/QA/security/hallucination pass on the combined tree | done | S-1EB9F828 | `reports/**`, regenerated outputs in T-1EB-02 scope |
 | T-1EB-04 | Integration: PR from `arena/1eb9f828-gold2` to `main`, merge, Pages deploy confirmation, board record | in progress | S-1EB9F828 | `COORDINATION.md`, PR/merge records |
 
 Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero and never a negative physical finding; nothing is inferred, averaged, or filled from a neighbouring value; every published value needs a field-scoped quote from a page retrieved by the session that publishes it; an automated PASS proves only that the stated controls ran; **look for hallucinations again after every review**.
@@ -26,7 +39,7 @@ Platform constraint: this session is bound to `arena/d4c0a507-gold2`; no other b
 | T-D4-01 | Independent live line-by-line re-verification of the root register, gold reference, and evidence trail | done | S-D4C0A507 | `audit/d4c0a507/**` |
 | T-D4-02 | Gold reference freshness refresh from the official WGC page | done | S-D4C0A507 | `data/gold-price.json`, `evidence/gold-price.md`, regenerated root `*.html`, `reports/qa-report.md` |
 | T-D4-03 | Flag correction where the official pages contradicted the flag's premise | done | S-D4C0A507 | `data/flags.json`, regenerated `flags.html`, `three-stone-vintage.html` |
-| T-D4-04 | Final integration, PR, merge, and Pages deployment | in progress | S-D4C0A507 | `COORDINATION.md`, PR/merge records |
+| T-D4-04 | Final integration, PR, merge, and Pages deployment | taken over by S-1EB9F828 (stale >60 min) | S-D4C0A507 | `COORDINATION.md`, PR/merge records |
 
 ### S-D4C0A507 working log
 

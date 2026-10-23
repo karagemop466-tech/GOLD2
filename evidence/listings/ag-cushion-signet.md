@@ -89,3 +89,30 @@ Cushion Diamond Signet Ring
 ```
 $2,758
 ```
+
+## Re-verification — 2026-10-23 20:xxZ (UTC)
+
+- **Product page re-read:** https://www.automicgold.com/products/cushion-diamond-signet-ring
+
+```
+Cushion Diamond Signet Ring
+$2,758
+Solid 14k Gold and 950 Platinum
+Salt and Pepper Diamond
+Clear Lab Diamond
+Approximate item weight: gold 5.5g, platinum 8.3g
+Approximately 0.65ct
+Band width is tapered from 8.5mm - 2.5mm
+Approximately 2mm - 4mm
+950 platinum and/or Solid 14k gold
+```
+
+- **Seller product JSON:** https://www.automicgold.com/products/cushion-diamond-signet-ring.js
+
+```
+"price":240800,"price_min":240800,"price_max":325300,"price_varies":true
+"title":"14k Yellow Gold \/ Salt and Pepper Diamond","price":275800
+"title":"14k Yellow Gold \/ Clear Lab Diamond","price":240800
+```
+
+- **Interpretation boundary:** the stored `$2,758` is the 14k Yellow Gold / Salt and Pepper Diamond variant, not a single product-wide price. The range is `$2,408–$3,253` and is not averaged (F-039). `5.5 g` remains a gross item weight that includes the ~0.65 ct stone, so `weight_g` stays `null` (F-028).

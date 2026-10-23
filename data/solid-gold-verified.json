@@ -44,11 +44,12 @@
         "F-021",
         "F-024",
         "F-027",
-        "F-031"
+        "F-031",
+        "F-039"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
-      "notes": "Explicitly discloses 'Solid 14k Gold' and 'Approximately 6.1g (gold)' on a stone-free all-metal engagement/promise ring (3.0 mm band). Reference size for 6.1 g and physical interior stamp remain unstated.",
+      "notes": "Explicitly discloses 'Solid 14k Gold' and 'Approximately 6.1g (gold)' on a stone-free all-metal engagement/promise ring (3.0 mm band). Reference size for 6.1 g and physical interior stamp remain unstated. The stored $1,910 is the default 14k configuration; the seller's product JSON spans $1,910–$2,233 across metal variants (F-039).",
       "field_evidence": {
         "name": [
           "Coffin Ring"
@@ -91,7 +92,16 @@
         ]
       },
       "currency_source_url": "https://www.automicgold.com/cart.js",
-      "currency_evidence": "The store\u2019s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
+      "currency_evidence": "The store’s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign.",
+      "observed_price_range": {
+        "min": 1910,
+        "max": 2233,
+        "currency": "USD",
+        "price_varies": true,
+        "source_url": "https://www.automicgold.com/products/coffin-ring.js",
+        "retrieved_at": "2026-10-23",
+        "note": "Product JSON price_min 191000 / price_max 223300 minor units; 14k Yellow/White/Rose 191000, Nickel Free 14k White 203900."
+      }
     },
     {
       "id": "AG-CUSHION-SIGNET",
@@ -119,7 +129,7 @@
       "prong_metal": null,
       "surface_finish": null,
       "source_url": "https://www.automicgold.com/products/cushion-diamond-signet-ring",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/ag-cushion-signet.md",
       "solid_gold_explicit": true,
       "hallmark_stated": null,
@@ -136,11 +146,12 @@
         "F-024",
         "F-027",
         "F-028",
-        "F-031"
+        "F-031",
+        "F-039"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
-      "notes": "Explicitly discloses 'Solid 14k Gold'. Published 5.5 g item weight includes the ~0.65 ct diamond so metal-only weight_g stays strictly null (F-028); tapered 8.5mm - 2.5mm width stays un-averaged (F-016).",
+      "notes": "Explicitly discloses 'Solid 14k Gold'. Published 5.5 g item weight includes the ~0.65 ct diamond so metal-only weight_g stays strictly null (F-028); tapered 8.5mm - 2.5mm width stays un-averaged (F-016). The stored $2,758 is the 14k Yellow Gold / Salt and Pepper Diamond configuration; the live product JSON spans $2,408–$3,253 (F-039).",
       "field_evidence": {
         "name": [
           "Cushion Diamond Signet Ring"
@@ -172,10 +183,25 @@
         ],
         "center_stone_included": [
           "Cushion Diamond Signet Ring"
+        ],
+        "weight_g": [
+          "Approximate item weight: gold 5.5g, platinum 8.3g"
+        ],
+        "gross_ring_weight_g": [
+          "Approximate item weight: gold 5.5g, platinum 8.3g"
         ]
       },
       "currency_source_url": "https://www.automicgold.com/cart.js",
-      "currency_evidence": "The store\u2019s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
+      "currency_evidence": "The store’s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign.",
+      "observed_price_range": {
+        "min": 2408,
+        "max": 3253,
+        "currency": "USD",
+        "price_varies": true,
+        "source_url": "https://www.automicgold.com/products/cushion-diamond-signet-ring.js",
+        "retrieved_at": "2026-10-23",
+        "note": "Product JSON price_min 240800 / price_max 325300 minor units; 14k Yellow/Salt and Pepper 275800, 14k Yellow/Clear Lab 240800."
+      }
     },
     {
       "id": "AG-SAPPHIRE-RING",
@@ -261,10 +287,16 @@
         "center_stone_included": [
           "Sapphire Ring",
           "Natural sapphire"
+        ],
+        "weight_g": [
+          "Approximately 1.2g (gold) or 1.8g (platinum)"
+        ],
+        "gross_ring_weight_g": [
+          "Approximately 1.2g (gold) or 1.8g (platinum)"
         ]
       },
       "currency_source_url": "https://www.automicgold.com/cart.js",
-      "currency_evidence": "The store\u2019s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
+      "currency_evidence": "The store’s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
     },
     {
       "id": "MJ-BOLD-ETERNITY",
@@ -312,7 +344,7 @@
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
-      "notes": "Product page re-read 2026-10-23: still \u201cFrom\u2009$2,900\u201d, 2.6\u202fmm band, 23 round brilliant diamonds, 1.15\u20131.57 ct, GHI, SI\u2013I. No official Mejuri page retrieved states the ISO currency, so the amount is displayed verbatim but not assigned as a USD price (F-025).",
+      "notes": "Product page re-read 2026-10-23: still “From $2,900”, 2.6 mm band, 23 round brilliant diamonds, 1.15–1.57 ct, GHI, SI–I. No official Mejuri page retrieved states the ISO currency, so the amount is displayed verbatim but not assigned as a USD price (F-025).",
       "field_evidence": {
         "name": [
           "Bold Diamond Eternity Ring"
@@ -481,7 +513,7 @@
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
-      "notes": "Heavy 10.00 g solid 14K white gold solitaire ring ($754.77 melt = 28.4% of US$2,661.00 retail) with 0.50 ct natural diamond.",
+      "notes": "Heavy 10.00 g solid 14K white gold solitaire ring with 0.50 ct natural diamond; nominal fine-gold mass and any melt arithmetic are generated on the analysis page from the dated gold quote, not stated here.",
       "field_evidence": {
         "name": [
           "14k White Gold Men's Solitaire Diamond Ring 1/2 ct."
@@ -569,7 +601,7 @@
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
-      "notes": "8.00 g solid 14K yellow gold solitaire ring ($603.82 melt = 21.1% of US$2,858.00 retail) with 0.50 ct natural diamond.",
+      "notes": "8.00 g solid 14K yellow gold solitaire ring with 0.50 ct natural diamond; nominal fine-gold mass and any melt arithmetic are generated on the analysis page from the dated gold quote, not stated here.",
       "field_evidence": {
         "name": [
           "14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct."
@@ -657,7 +689,7 @@
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
-      "notes": "Highest gold-value-share item audited: 13.40 g 14K solid gold at size 10 ($1,011.39 melt = 74.3% of US$1,362.00 retail); note size-10 benchmark variance in smaller sizes (F-036).",
+      "notes": "Highest gold-value-share item audited: 13.40 g 14K solid gold stated at size 10; note size-10 benchmark variance in smaller sizes (F-036). Nominal fine-gold mass and any melt arithmetic are generated on the analysis page from the dated gold quote, not stated here.",
       "field_evidence": {
         "name": [
           "14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band"
@@ -747,7 +779,7 @@
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
-      "notes": "99.99% pure Solid 24k Gold all-metal band with 11.0 g weight ($1,423.28 pure gold melt = 40.4% of $3,520.00 USD retail).",
+      "notes": "99.99% pure Solid 24k Gold all-metal band with 11.0 g weight; nominal fine-gold mass and any melt arithmetic are generated on the analysis page from the dated gold quote, not stated here.",
       "field_evidence": {
         "name": [
           "24k Band"
@@ -840,7 +872,7 @@
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
-      "notes": "Discloses '14K Solid Gold', 'Karat stamped inside the band.', and 'Weight:1.25 Grams' alongside 'Total Carat Weight: 1.37cts' (0.274 g gem mass -> 0.976 g net 14K = $73.67 melt if gross). Flagged HIGH CAUTION for ultra-thin casting + Not BBB Accredited 1.8/5 record (F-035).",
+      "notes": "Discloses '14K Solid Gold', 'Karat stamped inside the band.', and 'Weight:1.25 Grams' alongside 'Total Carat Weight: 1.37cts'. The 0.976 g net figure is a hypothetical only if 1.25 g is a gross weight, which the page does not state; no melt value is published in prose.",
       "field_evidence": {
         "name": [
           "Lab Grown Diamond Halo Engagement Ring in 14K Gold"
@@ -870,6 +902,12 @@
         "center_stone_included": [
           "Lab Grown Diamond Halo Engagement Ring in 14K Gold",
           "Total Carat Weight: 1.37cts"
+        ],
+        "weight_g": [
+          "Weight:1.25 Grams"
+        ],
+        "gross_ring_weight_g": [
+          "Weight:1.25 Grams"
         ]
       }
     },

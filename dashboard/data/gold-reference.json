@@ -1,13 +1,13 @@
 {
   "retrieved_at": "2026-10-23",
-  "spot_usd_per_troy_oz": 4024.45,
+  "spot_usd_per_troy_oz": 3996.31,
   "chart_as_of_date": "2026-10-22",
   "quote_timestamp_confirmed": false,
-  "usd_per_fine_gram": 129.389072,
+  "usd_per_fine_gram": 128.48435,
   "spot_source_name": "World Gold Council \u2014 Goldhub Gold Prices",
   "spot_source_url": "https://www.gold.org/goldhub/data/gold-prices",
   "spot_quotes": [
-    "USD /oz - 4,024.45",
+    "USD /oz - 3,996.31",
     "Data as of 22 October, 2026"
   ],
   "troy_ounce": {

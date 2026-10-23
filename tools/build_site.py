@@ -30,7 +30,7 @@ DASH = "&mdash;"
 
 # Counts shown in the shared page shell. They are filled from the data in main()
 # so a template can never carry a stale total.
-SHELL = {"items": 0, "sellers": 0, "flags": 0, "explore_products": 41, "explore_sellers": 12, "quotes": 0}
+SHELL = {"items": 0, "sellers": 0, "flags": 0, "explore_products": 0, "explore_sellers": 0, "quotes": 0}
 
 CSS = r"""
 :root{
@@ -572,7 +572,7 @@ def build_methods(qa_summary, gold, items, flags, retailers, retrieved):
 <h2>6. Automated checks after every review</h2><p>Run <code>python3 tools/build_site.py</code>, <code>python3 tools/qa.py</code>, <code>node tools/test_calculator.js</code>, and <code>python3 reviews/independent_snapshot_audit.py .</code>. The audits check schema, field-level quote backing, numeric/currency consistency, null-to-flag coverage, two-way flag references, official product domains, calculator arithmetic, built-row/source identity, internal links and fragments, CSP/script constraints, small-text contrast, stale generated values, and independent cross-schema contradictions.</p>
 <pre class="qa">RESULT: {esc(qa_summary)}
 Full timestamped log: reports/qa-report.md</pre>
-<p>Current local result: <strong>{len(items)} items</strong>, <strong>{len(flags)} flags</strong>, <strong>{quote_count}</strong> field-scoped quotes. The root suite now runs 11 checks; run <code>python3 audit/8c810c15/security_and_hallucination_scanner.py</code> for the independent 154-control HTML/security scan after every edit.</p>
+<p>Current local result: <strong>{len(items)} items</strong>, <strong>{len(flags)} flags</strong>, <strong>{quote_count}</strong> field-scoped quotes. The root suite now runs 12 checks; run <code>python3 audit/8c810c15/security_and_hallucination_scanner.py</code> for the independent 202-control HTML/security scan after every edit.</p>
 <p><a href="reports/qa-report.md">Open the complete timestamped QA report</a> · <a href="reports/source-link-review.md">Open the dated external source-link retrieval review</a></p>
 <div class="note"><strong>Recommendation:</strong> look for hallucinations again after every review and after any generator change. Automated checks reduce risk; they cannot prove a retailer’s claim or replace physical testing.</div>
 <h2>7. Earlier pass preserved</h2><p>The <code>site/</code> folder holds the earlier two-listing dashboard with its own audit and calculator tests: <a href="site/index.html">open the earlier dashboard</a>. Its two Blue Nile settings were re-fetched in this integration and appear as <code>BN-195402</code> and <code>BN-302868</code> on the <a href="halo-pave.html">Halo &amp; Pavé</a> page.</p>
@@ -802,6 +802,9 @@ def main():
     SHELL["items"] = len(items)
     SHELL["sellers"] = len({item["retailer_id"] for item in items})
     SHELL["flags"] = len(flags)
+    catalog = load(DATA / "catalog.json")
+    SHELL["explore_products"] = len(catalog["products"])
+    SHELL["explore_sellers"] = len(catalog["sellers"])
     verification = load(DATA / "verification-log.json")
     pages = {"index.html": build_index(items, payloads, flags, gold, qa_summary, retrieved)}
     for payload in payloads:

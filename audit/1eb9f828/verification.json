@@ -1,0 +1,101 @@
+{
+  "session": "S-1EB9F828",
+  "checked_at": "2026-10-23",
+  "timezone": "UTC",
+  "branch": "arena/1eb9f828-gold2",
+  "method": "fetch_page direct retrieval of the listed official URLs; comparison with the stored field evidence",
+  "records": [
+    {
+      "id": "GOLD-QUOTE",
+      "url": "https://www.gold.org/goldhub/data/gold-prices",
+      "status": "verified_correction",
+      "observed": [
+        "3,996.31",
+        "Data as of 22 October, 2026",
+        "Market Data: Provided by ICE Data Services."
+      ],
+      "note": "Evening header value; quote_date stays null (F-026). Earlier same-day value retained only as superseded history."
+    },
+    {
+      "id": "AG-COFFIN-RING",
+      "url": "https://www.automicgold.com/products/coffin-ring",
+      "status": "verified_match",
+      "observed": [
+        "$1,910",
+        "Solid 14k Gold and 950 Platinum",
+        "Approximately 6.1g (gold) or 9.2g (platinum)",
+        "Band is 3mm"
+      ],
+      "note": "Product JSON also read: price_min 191000, price_max 223300 (=$2,233 range). The variant carrying the maximum was not named in the retrieved chunk (F-039)."
+    },
+    {
+      "id": "AG-CUSHION-SIGNET",
+      "url": "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+      "status": "verified_match",
+      "observed": [
+        "$2,758",
+        "Solid 14k Gold and 950 Platinum",
+        "Approximate item weight: gold 5.5g, platinum 8.3g",
+        "Salt and Pepper Diamond",
+        "Clear Lab Diamond",
+        "Approximately 0.65ct"
+      ],
+      "note": "$2,758 is the 14k Yellow Gold / Salt and Pepper Diamond configuration; product JSON range $2,408\u2013$3,253 (F-039). 5.5 g is gross, weight_g stays null."
+    },
+    {
+      "id": "MJ-BOLD-ETERNITY",
+      "url": "https://mejuri.com/products/bold-diamond-eternity-ring",
+      "status": "verified_match",
+      "observed": [
+        "From$2,900",
+        "Solid White Gold (14k), Natural Diamond",
+        "Band Width: 2.6 mm",
+        "Minimum Carat Weight: 1.15 ct - 1.57 ct"
+      ],
+      "note": "No ISO currency statement on the page, cart endpoint or payment FAQ; price stays null (F-025, F-030)."
+    },
+    {
+      "id": "AUTOMIC-CURRENCY",
+      "url": "https://www.automicgold.com/cart.js",
+      "status": "verified_match",
+      "observed": [
+        "\"currency\":\"USD\""
+      ],
+      "note": "Empty cart; identifier not retained."
+    },
+    {
+      "id": "MEJURI-RETURNS",
+      "url": "https://mejuri.com/faq/return-exchanges/what-is-the-standard-return-policy",
+      "status": "verified_match",
+      "observed": [
+        "free 30-day returns ... starting from the day the shipment is delivered",
+        "Engraved and monogrammed products",
+        "US | Free"
+      ],
+      "note": "Engraved-work exclusion matters for the optional engraving on MJ-BOLD-ETERNITY."
+    },
+    {
+      "id": "BBB-MEJURI",
+      "url": "https://www.bbb.org/ca/on/toronto/profile/jewelry-manufacturers/mejuri-0107-1370644",
+      "status": "verified_match",
+      "observed": [
+        "This business is NOT BBB Accredited",
+        "(310) 597-4745"
+      ],
+      "note": "Profile metadata/opinions only; no static rating badge rendered (F-031)."
+    }
+  ],
+  "not_re_read": {
+    "count": 41,
+    "scope": "all other combined-register rows and the 26 root rows outside Automic Gold and Mejuri",
+    "note": "Stored values and dates unchanged; the verification log retains their earlier checked_at. Not re-read is not the same as invalidated."
+  },
+  "irregularities": [
+    "Automic product pages state two different production times on the same page (banner 1-5 or 4-8 business days vs Shipping & Returns 1-2 weeks / 2-3 with engraving).",
+    "Both Automic pages render 'Only 3 units left in stock!' - not treated as a stock fact.",
+    "Mejuri Materials accordion heading says 'Solid Yellow Gold (14k)' while the selected variant is Solid White Gold; the selected option governs.",
+    "The $2,233 product-JSON maximum is not attributable to a named variant in the retrieved chunk.",
+    "The WGC header moved within 2026-10-23; derived dollar melt figures belong in generated tables, not prose."
+  ],
+  "limits": "Extracted text only, not a byte archive. No physical inspection, scale weight, hallmark or XRF verification was performed."
+}

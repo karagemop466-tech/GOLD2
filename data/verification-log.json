@@ -1,11 +1,11 @@
 {
   "generated_at": "2026-10-23",
   "pass": {
-    "session": "S-8B9E189A",
+    "session": "S-1EB9F828",
     "checked_at": "2026-10-23",
     "timezone": "UTC",
-    "method": "Direct fetch_page retrieval of each official URL listed below, one page at a time, then comparison with the stored field evidence.",
-    "rule": "A stored value is reused only if the official page rendered it again during this pass. Anything that could not be re-read keeps its original observation date and is marked 'not re-read this pass'. No value was inferred, averaged, converted, or copied from a search snippet.",
+    "method": "Targeted direct fetch_page retrieval on 2026-10-23 of the rows changed by this pass (both Automic Gold products, the Mejuri product and returns FAQ, the Mejuri BBB profile, the Automic currency endpoint) plus the World Gold Council spot page. Changes to other rows in this pass are documentation-only and were not re-read; their entries below retain the earlier dated result.",
+    "rule": "A stored value is reused only if the official page rendered it again during the pass that recorded it. Rows not re-read this pass are marked not_re_read or keep their earlier checked_at. No value is inferred, averaged, converted, or copied from a search snippet.",
     "limits": "A successful retrieval is not an assay, not a hallmark check, and not proof of stock or future price. Pages can change after this pass."
   },
   "entries": [
@@ -60,7 +60,7 @@
     {
       "id": "BN-315661",
       "kind": "listing",
-      "label": "Pav\u00e9 Contour Diamond Engagement Ring In 14K White Gold By James Allen",
+      "label": "Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
       "checked_at": "2026-10-23",
@@ -77,7 +77,7 @@
     {
       "id": "BN-195402",
       "kind": "listing",
-      "label": "Petite Micropav\u00e9 Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
+      "label": "Petite Micropavé Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
       "checked_at": "2026-10-23",
@@ -94,7 +94,7 @@
     {
       "id": "BN-302868",
       "kind": "listing",
-      "label": "Petite Micropav\u00e9 Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
+      "label": "Petite Micropavé Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
       "checked_at": "2026-10-23",
@@ -241,7 +241,7 @@
         "Prong metal: 14K White Gold",
         "Style: BE121H6-14KY"
       ],
-      "note": "The 2026-10-22 retrieval was served \u20ac990.00; this retrieval was served USD with a USD selector. Recorded as F-032; the euro amount is retained only as a superseded observation."
+      "note": "The 2026-10-22 retrieval was served €990.00; this retrieval was served USD with a USD selector. Recorded as F-032; the euro amount is retained only as a superseded observation."
     },
     {
       "id": "VRAI-CLASSIC-4P",
@@ -256,7 +256,7 @@
         "Band depth:1.6mm",
         "Metal weight:2.86g (Ring size 6)",
         "Band width:Standard",
-        "Pav\u00e9 carat weight:0.18ctw"
+        "Pavé carat weight:0.18ctw"
       ],
       "note": "No price string in the retrieved page. Band width is published only as the word 'Standard', so no millimetre value is stored."
     },
@@ -272,9 +272,10 @@
         "$1,910",
         "Solid 14k Gold and 950 Platinum",
         "Approximately 6.1g (gold) or 9.2g (platinum)",
-        "Band is 3mm"
+        "Band is 3mm",
+        "price_min 191000 / price_max 223300"
       ],
-      "note": "Price also re-confirmed from the store's product JSON (price 191000 minor units). Currency supported by the store cart endpoint, not inferred."
+      "note": "Re-read 2026-10-23 20:xxZ: $1,910 is the default 14k configuration; the seller's product JSON reports $1,910–$2,233 across metal variants (F-039). Currency supported by the store cart endpoint, not inferred."
     },
     {
       "id": "AG-SAPPHIRE-RING",
@@ -299,10 +300,17 @@
       "label": "Cushion Diamond Signet Ring",
       "retailer": "Automic Gold",
       "url": "https://www.automicgold.com/products/cushion-diamond-signet-ring",
-      "checked_at": "2026-10-22",
-      "status": "not_re_read",
-      "observed": [],
-      "note": "Not re-read during the 2026-10-23 pass; the stored 2026-10-22 observation stands and is dated as such on the site. Currency support added from the store cart endpoint."
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "$2,758",
+        "Solid 14k Gold and 950 Platinum",
+        "Approximate item weight: gold 5.5g, platinum 8.3g",
+        "Salt and Pepper Diamond",
+        "Clear Lab Diamond",
+        "Approximately 0.65ct"
+      ],
+      "note": "Re-read 2026-10-23 20:xxZ. The $2,758 display is the 14k Yellow Gold / Salt and Pepper Diamond variant; the seller's product JSON reports price_min 240800 and price_max 325300 (=$2,408–$3,253), so $2,758 is not a product-wide price (F-039). 5.5 g is gross and includes the ~0.65 ct stone; weight_g stays null (F-028)."
     },
     {
       "id": "MJ-BOLD-ETERNITY",
@@ -320,7 +328,7 @@
         "Diamond Clarity: SI - I",
         "Stone Size: 2.5 mm"
       ],
-      "note": "No official Mejuri currency statement was found, so the amount is displayed verbatim and the structured price is blank (F-025)."
+      "note": "Re-read 2026-10-23 20:xxZ; displayed starting price and specifications unchanged. No ISO currency statement was found, so the amount is displayed verbatim and the structured price stays blank (F-025, F-030)."
     },
     {
       "id": "GOLD-QUOTE",
@@ -331,11 +339,11 @@
       "checked_at": "2026-10-23",
       "status": "verified_correction",
       "observed": [
-        "4,024.45",
+        "3,996.31",
         "Data as of 22 October, 2026",
         "Market Data: Provided by ICE Data Services."
       ],
-      "note": "Moving header value replaced the previous day's observation; quote_date stays null because the header carries no timestamp (F-026)."
+      "note": "Evening re-read on 2026-10-23 replaced the earlier same-day header observation. The header is moving; quote_date stays null because it carries no timestamp (F-026). The earlier value is retained only as superseded history."
     },
     {
       "id": "BLUENILE-RETURNS",
@@ -392,11 +400,11 @@
       "checked_at": "2026-10-23",
       "status": "verified_match",
       "observed": [
-        "free 30-day returns for customers in the US, Canada, UK, Australia, and Germany",
+        "We offer free 30-day returns for customers in the US, Canada, UK, Australia, and Germany",
         "Engraved and monogrammed products",
         "US | Free"
       ],
-      "note": "Engraved-work exclusion is directly relevant to this ring's optional engraving."
+      "note": "Re-read 2026-10-23 20:xxZ; 30-day window, engraved-work exclusion and free US return shipping confirmed. No currency statement on this page."
     },
     {
       "id": "AUTOMIC-CURRENCY",
@@ -409,7 +417,7 @@
       "observed": [
         "\"currency\":\"USD\""
       ],
-      "note": "Read-only GET on an empty cart. Only the currency field is quoted; no cart identifier is retained."
+      "note": "Read-only GET on an empty cart re-read 2026-10-23 20:xxZ; \"currency\":\"USD\" confirmed. Only the currency field is quoted; no cart identifier is retained."
     },
     {
       "id": "MEJURI-CART",
@@ -508,7 +516,7 @@
         "Approximate Metal Weight: 13.40 grams",
         "Now: US$1,362.00"
       ],
-      "note": "Live 2026-10-23 primary verification by S-9B875C81: 13.40 g at size 10 (74.3% pure melt share); size variance flagged in F-036."
+      "note": "Live 2026-10-23 primary verification by S-9B875C81: 13.40 g stated at size 10; the size benchmark and gold-content share are flagged in F-036, with any melt arithmetic left to the dated calculator."
     },
     {
       "id": "AG-24K",
@@ -590,7 +598,7 @@
     {
       "id": "BN-316238",
       "kind": "listing",
-      "label": "Petite Micropav\u00e9 Engagement Ring in 14k White Gold",
+      "label": "Petite Micropavé Engagement Ring in 14k White Gold",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238",
       "checked_at": "2026-10-23",

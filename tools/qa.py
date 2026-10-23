@@ -131,6 +131,7 @@ def main() -> int:
     gold = load(DATA / "gold-price.json")
     retailers = load(DATA / "retailers.json")["retailers"]
     flags = load(DATA / "flags.json")["flags"]
+    catalog = load(DATA / "catalog.json")
     items = []
     for lpath in LISTING_PATHS:
         payload = load(lpath)
@@ -731,6 +732,30 @@ def main() -> int:
         if f"{len(flags)} published flags" not in text:
             fail("shell", f"{name} shell note does not carry the derived flag count")
     record(f"Dated verification log, analysis arithmetic, and derived shell counts ({len(entries)} logged records)", before)
+
+    # 12 — cross-register completeness and stale-count guard.
+    before = len(issues)
+    catalog_urls = {source["url"] for source in load(ROOT / "research" / "evidence.json")["sources"]
+                    if source.get("kind") == "product"}
+    for item in items:
+        if item["source_url"] not in catalog_urls:
+            fail("register", f"{item['id']} official URL is absent from the combined catalog")
+    index_text = parsed_pages.get("index.html", ("", PageParser()))[0]
+    expected_claim = f"all {len(catalog['products'])} researched entries across {len(catalog['sellers'])} sellers"
+    if expected_claim not in index_text:
+        fail("register", f"index.html does not state the derived combined-register claim: {expected_claim}")
+    for flag in flags:
+        text = f"{flag.get('title', '')} {flag.get('detail', '')}"
+        for count, total, noun in re.findall(r"(\d+)\s+of\s+(\d+)\s+(items|product pages|rows|listings|listed settings)", text):
+            if int(total) != len(items):
+                fail("flag-count", f"{flag['id']} states '{count} of {total} {noun}', but the register holds {len(items)} rows")
+        title_counts = re.findall(r"(\d+)\s+of\s+(\d+)\s+(items|product pages|rows|listings|listed settings)", flag.get("title", ""))
+        for count, total, noun in title_counts:
+            if int(count) != len(flag["affected_items"]):
+                fail("flag-count", f"{flag['id']} title says '{count} of {total} {noun}' but lists {len(flag['affected_items'])} affected items")
+        if re.search(r"\$\s?[\d,]+(?:\.\d+)?[^.]{0,40}melt|melt[^.]{0,40}\$\s?[\d,]+", text, re.I):
+            fail("derived-melt", f"{flag['id']} publishes a melt dollar figure in flag prose; derive it on analysis.html from the dated quote instead")
+    record("Combined register covers every root URL, shell claims are derived, and flag counts/derived melt values are controlled", before)
 
     # Report.
     REPORTS.mkdir(exist_ok=True)
