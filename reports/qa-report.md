@@ -1,7 +1,7 @@
 # QA / hallucination and integration audit
 
-- Generated: 2026-10-23 10:15:56 UTC
-- Items audited: 20 · retailers: 6 · flags: 31 · field-scoped quotes: 369
+- Generated: 2026-10-23 10:37:49 UTC
+- Items audited: 30 · retailers: 10 · flags: 36 · field-scoped quotes: 577
 - **RESULT: PASS** — 11 checks, 0 failures, 3 warnings
 
 ## Checks
@@ -9,16 +9,16 @@
 | # | Check | Result | Findings |
 |---|-------|--------|----------|
 | 1 | JSON schema, item-scoped records, unique IDs, and dates | ✅ PASS | 0 |
-| 2 | Field-scoped verbatim quotes resolve in their own files (369 quotes) | ✅ PASS | 0 |
+| 2 | Field-scoped verbatim quotes resolve in their own files (577 quotes) | ✅ PASS | 0 |
 | 3 | Item name, SKU, metal, dimensions, price, basis, and scope match field quotes | ✅ PASS | 0 |
 | 4 | Retailer policy, payment, contact, and independent metrics are field-backed | ✅ PASS | 0 |
 | 5 | Official product/policy domains and independent-source URLs are constrained | ✅ PASS | 0 |
 | 6 | Blank states are flagged and item/retailer flag references are bidirectional | ✅ PASS | 0 |
 | 7 | Rejected snippets and superseded gold quotes are not current values | ✅ PASS | 0 |
 | 8 | Nominal fine-gold and melt calculations use current constants | ✅ PASS | 0 |
-| 9 | Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure (1106 link occurrences, 308 external). External retrieval is documented separately; future availability is not guaranteed. | ✅ PASS | 0 |
+| 9 | Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure (1500 link occurrences, 505 external). External retrieval is documented separately; future availability is not guaranteed. | ✅ PASS | 0 |
 | 10 | Coverage limitations remain visible | ✅ PASS | 0 |
-| 11 | Dated verification log, analysis arithmetic, and derived shell counts (29 logged records) | ✅ PASS | 0 |
+| 11 | Dated verification log, analysis arithmetic, and derived shell counts (39 logged records) | ✅ PASS | 0 |
 
 ## Failures
 
@@ -27,8 +27,8 @@
 ## Warnings
 
 - [gold] Header quote-as-of is unconfirmed; chart/retrieval dates are not substituted (F-026)
-- [coverage] 16 of 20 rows have no explicitly assigned current price (F-008/F-018/F-025)
-- [coverage] 18 of 20 rows have no published metal weight (F-003)
+- [coverage] 20 of 30 rows have no explicitly assigned current price (F-008/F-018/F-025)
+- [coverage] 23 of 30 rows have no published metal weight (F-003)
 
 ## What this audit proves, and what it does not
 

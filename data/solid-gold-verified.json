@@ -1,7 +1,7 @@
 {
   "category_id": "solid-gold",
   "category_label": "Explicit Solid Gold",
-  "retrieved_at": "2026-10-22",
+  "retrieved_at": "2026-10-23",
   "items": [
     {
       "id": "AG-COFFIN-RING",
@@ -91,7 +91,7 @@
         ]
       },
       "currency_source_url": "https://www.automicgold.com/cart.js",
-      "currency_evidence": "The store’s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
+      "currency_evidence": "The store\u2019s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
     },
     {
       "id": "AG-CUSHION-SIGNET",
@@ -175,7 +175,7 @@
         ]
       },
       "currency_source_url": "https://www.automicgold.com/cart.js",
-      "currency_evidence": "The store’s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
+      "currency_evidence": "The store\u2019s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
     },
     {
       "id": "AG-SAPPHIRE-RING",
@@ -264,7 +264,7 @@
         ]
       },
       "currency_source_url": "https://www.automicgold.com/cart.js",
-      "currency_evidence": "The store’s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
+      "currency_evidence": "The store\u2019s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
     },
     {
       "id": "MJ-BOLD-ETERNITY",
@@ -312,7 +312,7 @@
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
-      "notes": "Product page re-read 2026-10-23: still “From $2,900”, 2.6 mm band, 23 round brilliant diamonds, 1.15–1.57 ct, GHI, SI–I. No official Mejuri page retrieved states the ISO currency, so the amount is displayed verbatim but not assigned as a USD price (F-025).",
+      "notes": "Product page re-read 2026-10-23: still \u201cFrom\u2009$2,900\u201d, 2.6\u202fmm band, 23 round brilliant diamonds, 1.15\u20131.57 ct, GHI, SI\u2013I. No official Mejuri page retrieved states the ISO currency, so the amount is displayed verbatim but not assigned as a USD price (F-025).",
       "field_evidence": {
         "name": [
           "Bold Diamond Eternity Ring"
@@ -351,6 +351,755 @@
       "observed_native_display": [
         "From$2,900"
       ]
+    },
+    {
+      "id": "SAR-147370",
+      "retailer_id": "sarraf",
+      "retailer": "Sarraf Jewelry Inc.",
+      "brand": "Sarraf Jewelry Inc.",
+      "name": "14k White Gold Solitaire Ring 0.94 ctw.",
+      "sku": "147370",
+      "sku_basis": "Official SKU stated on product page",
+      "metal": "14K Solid Gold",
+      "karat": 14,
+      "color": "White",
+      "width_mm": null,
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_g": 3.8,
+      "weight_basis": "Approximate Metal Weight: 3.80 grams",
+      "price": 3004.0,
+      "currency": "USD",
+      "price_basis": "complete_ring",
+      "center_stone_included": true,
+      "original_price": 3513.0,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "source_url": "https://www.sarraf.com/products/14k-white-gold-solitaire-ring-0-94-ctw.html",
+      "retrieved_at": "2026-10-23",
+      "evidence_file": "evidence/listings/sar-147370.md",
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.sarraf.com/about-sarraf/",
+      "verification_status": "verified_solid_gold_and_weight",
+      "rejected_values": [],
+      "flags": [
+        "F-002",
+        "F-015",
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-031",
+        "F-036"
+      ],
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "notes": "Complete natural-diamond solitaire ring disclosing explicit '14K Solid Gold', separate 'Approximate Metal Weight: 3.80 grams', 'Diamond Weight: 0.94 Ct.', and explicit 'Now: US$3,004.00'.",
+      "field_evidence": {
+        "name": [
+          "14k White Gold Solitaire Ring 0.94 ctw."
+        ],
+        "sku": [
+          "SKU: 147370"
+        ],
+        "metal": [
+          "14K Solid Gold"
+        ],
+        "karat": [
+          "14K Solid Gold"
+        ],
+        "color": [
+          "14k White Gold"
+        ],
+        "weight_g": [
+          "Approximate Metal Weight: 3.80 grams"
+        ],
+        "weight_basis": [
+          "Approximate Metal Weight: 3.80 grams"
+        ],
+        "price": [
+          "Now: US$3,004.00"
+        ],
+        "original_price": [
+          "Was: US$3,513.00"
+        ],
+        "currency": [
+          "Now: US$3,004.00"
+        ],
+        "price_basis": [
+          "14k White Gold Solitaire Ring 0.94 ctw."
+        ],
+        "center_stone_included": [
+          "14k White Gold Solitaire Ring 0.94 ctw.",
+          "Diamond Weight: 0.94 Ct."
+        ]
+      }
+    },
+    {
+      "id": "SAR-145362",
+      "retailer_id": "sarraf",
+      "retailer": "Sarraf Jewelry Inc.",
+      "brand": "Sarraf Jewelry Inc.",
+      "name": "14k White Gold Men's Solitaire Diamond Ring 1/2 ct.",
+      "sku": "145362",
+      "sku_basis": "Official SKU stated on product page",
+      "metal": "14K Solid Gold",
+      "karat": 14,
+      "color": "White",
+      "width_mm": 7.75,
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_g": 10.0,
+      "weight_basis": "Approximate Metal Weight: 10.00 grams",
+      "price": 2661.0,
+      "currency": "USD",
+      "price_basis": "complete_ring",
+      "center_stone_included": true,
+      "original_price": 3112.0,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "source_url": "https://www.sarraf.com/products/14k-white-gold-mens-solitaire-diamond-ring-1-2-ct.html",
+      "retrieved_at": "2026-10-23",
+      "evidence_file": "evidence/listings/sar-145362.md",
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.sarraf.com/about-sarraf/",
+      "verification_status": "verified_solid_gold_and_weight",
+      "rejected_values": [],
+      "flags": [
+        "F-002",
+        "F-015",
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-031",
+        "F-036"
+      ],
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "notes": "Heavy 10.00 g solid 14K white gold solitaire ring ($754.77 melt = 28.4% of US$2,661.00 retail) with 0.50 ct natural diamond.",
+      "field_evidence": {
+        "name": [
+          "14k White Gold Men's Solitaire Diamond Ring 1/2 ct."
+        ],
+        "sku": [
+          "SKU: 145362"
+        ],
+        "metal": [
+          "14K Solid Gold"
+        ],
+        "karat": [
+          "14K Solid Gold"
+        ],
+        "color": [
+          "14k White Gold"
+        ],
+        "width_mm": [
+          "Width: 7.75 mm"
+        ],
+        "weight_g": [
+          "Approximate Metal Weight: 10.00 grams"
+        ],
+        "weight_basis": [
+          "Approximate Metal Weight: 10.00 grams"
+        ],
+        "price": [
+          "Now: US$2,661.00"
+        ],
+        "original_price": [
+          "Was: US$3,112.00"
+        ],
+        "currency": [
+          "Now: US$2,661.00"
+        ],
+        "price_basis": [
+          "14k White Gold Men's Solitaire Diamond Ring 1/2 ct."
+        ],
+        "center_stone_included": [
+          "14k White Gold Men's Solitaire Diamond Ring 1/2 ct.",
+          "Diamond Weight: 0.50 Ct."
+        ]
+      }
+    },
+    {
+      "id": "SAR-145364",
+      "retailer_id": "sarraf",
+      "retailer": "Sarraf Jewelry Inc.",
+      "brand": "Sarraf Jewelry Inc.",
+      "name": "14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct.",
+      "sku": "145364",
+      "sku_basis": "Official SKU stated on product page",
+      "metal": "14K Solid Gold",
+      "karat": 14,
+      "color": "Yellow",
+      "width_mm": 10.0,
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_g": 8.0,
+      "weight_basis": "Approximate Metal Weight: 8.00 grams",
+      "price": 2858.0,
+      "currency": "USD",
+      "price_basis": "complete_ring",
+      "center_stone_included": true,
+      "original_price": 3342.0,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "source_url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-1-2-ct.html",
+      "retrieved_at": "2026-10-23",
+      "evidence_file": "evidence/listings/sar-145364.md",
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.sarraf.com/about-sarraf/",
+      "verification_status": "verified_solid_gold_and_weight",
+      "rejected_values": [],
+      "flags": [
+        "F-002",
+        "F-015",
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-031",
+        "F-036"
+      ],
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "notes": "8.00 g solid 14K yellow gold solitaire ring ($603.82 melt = 21.1% of US$2,858.00 retail) with 0.50 ct natural diamond.",
+      "field_evidence": {
+        "name": [
+          "14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct."
+        ],
+        "sku": [
+          "SKU: 145364"
+        ],
+        "metal": [
+          "14K Solid Gold"
+        ],
+        "karat": [
+          "14K Solid Gold"
+        ],
+        "color": [
+          "14k Yellow Gold"
+        ],
+        "width_mm": [
+          "Width: 10.0 mm"
+        ],
+        "weight_g": [
+          "Approximate Metal Weight: 8.00 grams"
+        ],
+        "weight_basis": [
+          "Approximate Metal Weight: 8.00 grams"
+        ],
+        "price": [
+          "Now: US$2,858.00"
+        ],
+        "original_price": [
+          "Was: US$3,342.00"
+        ],
+        "currency": [
+          "Now: US$2,858.00"
+        ],
+        "price_basis": [
+          "14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct."
+        ],
+        "center_stone_included": [
+          "14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct.",
+          "Diamond Weight: 0.50 Ct."
+        ]
+      }
+    },
+    {
+      "id": "SAR-144773",
+      "retailer_id": "sarraf",
+      "retailer": "Sarraf Jewelry Inc.",
+      "brand": "Sarraf Jewelry Inc.",
+      "name": "14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band",
+      "sku": "144773",
+      "sku_basis": "Official SKU stated on product page",
+      "metal": "14K Solid Gold",
+      "karat": 14,
+      "color": "Yellow",
+      "width_mm": 12.0,
+      "depth_mm": 1.65,
+      "band_width_text": null,
+      "weight_g": 13.4,
+      "weight_basis": "Approximate Metal Weight: 13.40 grams",
+      "price": 1362.0,
+      "currency": "USD",
+      "price_basis": "complete_ring",
+      "center_stone_included": false,
+      "all_metal_design": true,
+      "original_price": 1593.0,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "source_url": "https://www.sarraf.com/products/14k-yellow-gold-12mm-high-polished-traditional-domed-wedding-band.html",
+      "retrieved_at": "2026-10-23",
+      "evidence_file": "evidence/listings/sar-144773.md",
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.sarraf.com/about-sarraf/",
+      "verification_status": "verified_solid_gold_and_weight",
+      "rejected_values": [],
+      "flags": [
+        "F-002",
+        "F-015",
+        "F-021",
+        "F-024",
+        "F-031",
+        "F-036"
+      ],
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "notes": "Highest gold-value-share item audited: 13.40 g 14K solid gold at size 10 ($1,011.39 melt = 74.3% of US$1,362.00 retail); note size-10 benchmark variance in smaller sizes (F-036).",
+      "field_evidence": {
+        "name": [
+          "14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band"
+        ],
+        "sku": [
+          "SKU: 144773"
+        ],
+        "metal": [
+          "14K Solid Gold"
+        ],
+        "karat": [
+          "14K Solid Gold"
+        ],
+        "color": [
+          "14k Yellow Gold"
+        ],
+        "width_mm": [
+          "Width: 12.0 mm"
+        ],
+        "depth_mm": [
+          "Thickness: 1.65 mm"
+        ],
+        "weight_g": [
+          "Approximate Metal Weight: 13.40 grams"
+        ],
+        "weight_basis": [
+          "Approximate Metal Weight: 13.40 grams"
+        ],
+        "price": [
+          "Now: US$1,362.00"
+        ],
+        "original_price": [
+          "Was: US$1,593.00"
+        ],
+        "currency": [
+          "Now: US$1,362.00"
+        ],
+        "price_basis": [
+          "Ring sizing may require additional processing days prior to shipping."
+        ],
+        "center_stone_included": [
+          "14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band"
+        ]
+      }
+    },
+    {
+      "id": "AG-24K",
+      "retailer_id": "automic-gold",
+      "retailer": "Automic Gold",
+      "brand": "Automic Gold",
+      "name": "24k Band",
+      "sku": "24k-band",
+      "sku_basis": "Official product URL slug",
+      "metal": "Solid 24k Gold",
+      "karat": 24,
+      "color": "Yellow",
+      "width_mm": 4.5,
+      "depth_mm": 2.2,
+      "band_width_text": null,
+      "weight_g": 11.0,
+      "weight_basis": "Approximate item weight: 11g",
+      "price": 3520.0,
+      "currency": "USD",
+      "price_basis": "complete_ring",
+      "center_stone_included": false,
+      "all_metal_design": true,
+      "original_price": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "source_url": "https://www.automicgold.com/products/24k-band",
+      "retrieved_at": "2026-10-23",
+      "evidence_file": "evidence/listings/ag-24k.md",
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.automicgold.com/pages/returns-exchange-policy",
+      "verification_status": "verified_solid_gold_and_weight",
+      "rejected_values": [],
+      "flags": [
+        "F-002",
+        "F-015",
+        "F-021",
+        "F-024",
+        "F-027",
+        "F-031"
+      ],
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "notes": "99.99% pure Solid 24k Gold all-metal band with 11.0 g weight ($1,423.28 pure gold melt = 40.4% of $3,520.00 USD retail).",
+      "field_evidence": {
+        "name": [
+          "24k Band"
+        ],
+        "sku": [
+          "24k-band"
+        ],
+        "metal": [
+          "Solid 24k Gold"
+        ],
+        "karat": [
+          "Solid 24k Gold"
+        ],
+        "color": [
+          "Yellow Gold"
+        ],
+        "width_mm": [
+          "Dimensions: 4.5mm x 2.2mm"
+        ],
+        "depth_mm": [
+          "Dimensions: 4.5mm x 2.2mm"
+        ],
+        "weight_g": [
+          "Approximate item weight: 11g"
+        ],
+        "weight_basis": [
+          "Approximate item weight: 11g"
+        ],
+        "price": [
+          "$3,520"
+        ],
+        "currency": [
+          "$3,520",
+          "\"currency\":\"USD\""
+        ],
+        "price_basis": [
+          "Your ring is packaged safely in a small, discreet mailer box."
+        ],
+        "center_stone_included": [
+          "24k Band",
+          "Solid 24k Gold"
+        ]
+      },
+      "currency_source_url": "https://www.automicgold.com/cart.js",
+      "currency_evidence": "Automic Gold cart.js reports \"currency\":\"USD\"."
+    },
+    {
+      "id": "FDJ-GR0001",
+      "retailer_id": "factory-direct-jewelry",
+      "retailer": "Factory Direct Jewelry",
+      "brand": "Factory Direct Jewelry",
+      "name": "Lab Grown Diamond Halo Engagement Ring in 14K Gold",
+      "sku": "GR0001",
+      "sku_basis": "Official style number stated on product page",
+      "metal": "14K Solid Gold",
+      "karat": 14,
+      "color": "Yellow",
+      "width_mm": null,
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_g": null,
+      "weight_basis": null,
+      "gross_ring_weight_g": 1.25,
+      "price": 1299.99,
+      "currency": "USD",
+      "price_basis": "complete_ring",
+      "center_stone_included": true,
+      "original_price": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": null,
+      "source_url": "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/",
+      "retrieved_at": "2026-10-23",
+      "evidence_file": "evidence/listings/fdj-gr0001.md",
+      "solid_gold_explicit": true,
+      "hallmark_stated": true,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.factorydirectjewelry.com/return-policy",
+      "verification_status": "verified_solid_gold_gross_weight",
+      "rejected_values": [],
+      "flags": [
+        "F-002",
+        "F-003",
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-028",
+        "F-031",
+        "F-035"
+      ],
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "notes": "Discloses '14K Solid Gold', 'Karat stamped inside the band.', and 'Weight:1.25 Grams' alongside 'Total Carat Weight: 1.37cts' (0.274 g gem mass -> 0.976 g net 14K = $73.67 melt if gross). Flagged HIGH CAUTION for ultra-thin casting + Not BBB Accredited 1.8/5 record (F-035).",
+      "field_evidence": {
+        "name": [
+          "Lab Grown Diamond Halo Engagement Ring in 14K Gold"
+        ],
+        "sku": [
+          "GR0001"
+        ],
+        "metal": [
+          "14K Solid Gold"
+        ],
+        "karat": [
+          "14K Solid Gold"
+        ],
+        "color": [
+          "14K Yellow Gold"
+        ],
+        "price": [
+          "$1,299.99"
+        ],
+        "currency": [
+          "$1,299.99",
+          "USD"
+        ],
+        "price_basis": [
+          "Lab Grown Diamond Halo Engagement Ring in 14K Gold"
+        ],
+        "center_stone_included": [
+          "Lab Grown Diamond Halo Engagement Ring in 14K Gold",
+          "Total Carat Weight: 1.37cts"
+        ]
+      }
+    },
+    {
+      "id": "SS-CLARA",
+      "retailer_id": "stone-and-strand",
+      "retailer": "Stone and Strand",
+      "brand": "Stone and Strand",
+      "name": "The Clara Diamond Ring",
+      "sku": "the-clara-ring",
+      "sku_basis": "Official product URL slug",
+      "metal": "Solid 14K yellow gold",
+      "karat": 14,
+      "color": "Yellow",
+      "width_mm": 1.65,
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_g": null,
+      "weight_basis": null,
+      "price": null,
+      "currency": null,
+      "price_basis": "complete_ring",
+      "center_stone_included": true,
+      "original_price": null,
+      "unassigned_price_text": "$2,200",
+      "prong_metal": null,
+      "surface_finish": null,
+      "source_url": "https://www.stoneandstrand.com/products/the-clara-ring",
+      "retrieved_at": "2026-10-23",
+      "evidence_file": "evidence/listings/ss-clara.md",
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "verification_status": "verified_solid_gold_no_weight",
+      "rejected_values": [],
+      "flags": [
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016",
+        "F-018",
+        "F-021",
+        "F-024",
+        "F-025",
+        "F-037"
+      ],
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "notes": "Preserved from S-75094819 & re-verified live 2026-10-23: explicit 'Solid 14K yellow gold', '$2,200' without ISO currency code (F-025), and conflicting 'Final Sale' vs '100 Day Returns' copy (F-037).",
+      "field_evidence": {
+        "name": [
+          "The Clara Diamond Ring"
+        ],
+        "sku": [
+          "the-clara-ring"
+        ],
+        "metal": [
+          "Solid 14K yellow gold"
+        ],
+        "karat": [
+          "Gold Karat: 14K"
+        ],
+        "color": [
+          "Solid 14K yellow gold"
+        ],
+        "width_mm": [
+          "Band Width: 1.65mm"
+        ],
+        "unassigned_price_text": [
+          "$2,200"
+        ],
+        "price_basis": [
+          "The Clara Diamond Ring"
+        ],
+        "center_stone_included": [
+          "The Clara Diamond Ring"
+        ]
+      }
+    },
+    {
+      "id": "SS-RITA",
+      "retailer_id": "stone-and-strand",
+      "retailer": "Stone and Strand",
+      "brand": "Stone and Strand",
+      "name": "The Rita Diamond Ring",
+      "sku": "the-rita-ring",
+      "sku_basis": "Official product URL slug",
+      "metal": "Solid 14K yellow gold",
+      "karat": 14,
+      "color": "Yellow",
+      "width_mm": 1.7,
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_g": null,
+      "weight_basis": null,
+      "price": null,
+      "currency": null,
+      "price_basis": "complete_ring",
+      "center_stone_included": true,
+      "original_price": null,
+      "unassigned_price_text": "$780 (60% off)",
+      "prong_metal": null,
+      "surface_finish": null,
+      "source_url": "https://www.stoneandstrand.com/products/the-rita-ring",
+      "retrieved_at": "2026-10-23",
+      "evidence_file": "evidence/listings/ss-rita.md",
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "verification_status": "verified_solid_gold_no_weight",
+      "rejected_values": [],
+      "flags": [
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016",
+        "F-018",
+        "F-021",
+        "F-024",
+        "F-025",
+        "F-034"
+      ],
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "notes": "Preserved from S-75094819 & re-verified live 2026-10-23: explicit 'Solid 14K yellow gold', but 60%-off sale triggers non-returnable Final Sale exclusion (F-034).",
+      "field_evidence": {
+        "name": [
+          "The Rita Diamond Ring"
+        ],
+        "sku": [
+          "the-rita-ring"
+        ],
+        "metal": [
+          "Solid 14K yellow gold"
+        ],
+        "karat": [
+          "Gold Karat: 14K"
+        ],
+        "color": [
+          "Solid 14K yellow gold"
+        ],
+        "width_mm": [
+          "Band Width: 1.7mm"
+        ],
+        "unassigned_price_text": [
+          "$780 (60% off)"
+        ],
+        "price_basis": [
+          "The Rita Diamond Ring"
+        ],
+        "center_stone_included": [
+          "The Rita Diamond Ring"
+        ]
+      }
+    },
+    {
+      "id": "SS-MIA",
+      "retailer_id": "stone-and-strand",
+      "retailer": "Stone and Strand",
+      "brand": "Stone and Strand",
+      "name": "The Mia Diamond Ring",
+      "sku": "the-mia-ring",
+      "sku_basis": "Official product URL slug",
+      "metal": "Solid 14K yellow gold",
+      "karat": 14,
+      "color": "Yellow",
+      "width_mm": null,
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_g": null,
+      "weight_basis": null,
+      "price": null,
+      "currency": null,
+      "price_basis": "complete_ring",
+      "center_stone_included": true,
+      "original_price": null,
+      "unassigned_price_text": "$925 (50% off)",
+      "prong_metal": null,
+      "surface_finish": null,
+      "source_url": "https://www.stoneandstrand.com/products/the-mia-ring",
+      "retrieved_at": "2026-10-23",
+      "evidence_file": "evidence/listings/ss-mia.md",
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "verification_status": "verified_solid_gold_no_weight",
+      "rejected_values": [],
+      "flags": [
+        "F-002",
+        "F-003",
+        "F-015",
+        "F-016",
+        "F-018",
+        "F-021",
+        "F-024",
+        "F-025",
+        "F-034"
+      ],
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "notes": "Preserved from S-75094819 & re-verified live 2026-10-23: spec states 'Gold Karat: 14K' while image alt tags state '10K Yellow Gold', and 50%-off Final Sale forbids return after independent XRF testing (F-034).",
+      "field_evidence": {
+        "name": [
+          "The Mia Diamond Ring"
+        ],
+        "sku": [
+          "the-mia-ring"
+        ],
+        "metal": [
+          "Solid 14K yellow gold"
+        ],
+        "karat": [
+          "Gold Karat: 14K"
+        ],
+        "color": [
+          "Solid 14K yellow gold"
+        ],
+        "unassigned_price_text": [
+          "$925 (50% off)"
+        ],
+        "price_basis": [
+          "The Mia Diamond Ring"
+        ],
+        "center_stone_included": [
+          "The Mia Diamond Ring"
+        ]
+      }
     }
   ]
 }

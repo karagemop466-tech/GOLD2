@@ -30,13 +30,16 @@ def main() -> int:
     def flag(code: str, item: str, detail: str) -> None:
         findings.append((code, item, detail))
 
-    listing_paths = sorted((root / "data" / "listings").glob("*.json"))
+    listing_paths = [root / "data" / "solid-gold-verified.json", *sorted((root / "data" / "listings").glob("*.json"))]
     items = []
+    review_table_items = []
     for path in listing_paths:
         payload = json.loads(path.read_text())
         for item in payload["items"]:
             item["_category"] = payload["category_id"]
             items.append(item)
+            if path.parent.name == "listings":
+                review_table_items.append(item)
 
     flags_payload = json.loads((root / "data" / "flags.json").read_text())
     flags = {entry["id"]: entry for entry in flags_payload["flags"]}
@@ -84,7 +87,7 @@ def main() -> int:
     review_report = root / "reviews" / "2026-10-22-6ca03571.md"
     if review_report.exists():
         report_lines = review_report.read_text().splitlines()
-        for item in items:
+        for item in review_table_items:
             matching = [line for line in report_lines if line.startswith(f"| {item['id']} |")]
             if len(matching) != 1:
                 flag("REVIEW-ROW-MISSING-OR-DUPLICATE", item["id"], f"found {len(matching)}")

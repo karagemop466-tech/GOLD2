@@ -41,23 +41,24 @@ try{
  await mkdir(path.join(ROOT,'test-results'),{recursive:true});
  await page.screenshot({path:path.join(ROOT,'test-results/desktop.png'),fullPage:true});
  // All researched entries and their primary publisher links are available without filtering.
+ const {catalog}=await loadResearch();
+ const total=catalog.products.length;
  await page.goto(dashboard+'catalog/',{waitUntil:'networkidle'});
- await expect(page.locator('#research-table tbody tr')).toHaveCount(32);
- await expect(page.locator('#research-table tbody tr a.source-link')).toHaveCount(32);
+ await expect(page.locator('#research-table tbody tr')).toHaveCount(total);
+ await expect(page.locator('#research-table tbody tr a.source-link')).toHaveCount(total);
  await page.locator('#catalog-search').fill('ruby');
- await expect(page.locator('#filter-status')).toHaveText('1 of 32 entries shown');
+ await expect(page.locator('#filter-status')).toHaveText(`1 of ${total} entries shown`);
  await page.locator('#catalog-search').fill('<img src=x onerror=alert(1)>');
- await expect(page.locator('#filter-status')).toHaveText('0 of 32 entries shown');
+ await expect(page.locator('#filter-status')).toHaveText(`0 of ${total} entries shown`);
  await expect(page.locator('#no-results')).toBeVisible();
  await page.locator('#clear-filters').click();
  await page.locator('#category-filter').selectOption('gemstone');
- await expect(page.locator('#filter-status')).toHaveText('3 of 32 entries shown');
+ await expect(page.locator('#filter-status')).toHaveText(`3 of ${total} entries shown`);
  await page.locator('#seller-filter').selectOption('catbird');
- await expect(page.locator('#filter-status')).toHaveText('0 of 32 entries shown');
+ await expect(page.locator('#filter-status')).toHaveText(`0 of ${total} entries shown`);
  await page.locator('#clear-filters').click();
- await expect(page.locator('#filter-status')).toHaveText('32 of 32 entries shown');
+ await expect(page.locator('#filter-status')).toHaveText(`${total} of ${total} entries shown`);
  // Every documented product blocks automatic valuation, including the mixed-metal listing.
- const {catalog}=await loadResearch();
  await page.goto(dashboard+'calculator/',{waitUntil:'networkidle'});
  for(const p of catalog.products){
   await page.locator('#ring-choice').selectOption(p.id);
@@ -113,14 +114,26 @@ try{
  // Static research is complete without JavaScript; calculator never invents a fallback result.
  const noJs=await browser.newContext({javaScriptEnabled:false,viewport:{width:1280,height:900}});
  const staticPage=await noJs.newPage();
- await staticPage.goto(dashboard+'catalog/');await expect(staticPage.locator('#research-table tbody tr')).toHaveCount(32);
+ await staticPage.goto(dashboard+'catalog/');await expect(staticPage.locator('#research-table tbody tr')).toHaveCount(total);
  await staticPage.goto(dashboard+'calculator/');expect(await staticPage.locator('noscript').evaluate(n=>n.textContent)).toContain('Product gold values remain blank');
  await noJs.close();
  // Retained dashboard remains functional and its CommonJS unit tests remain compatible.
  for(const route of ['site/','site/rings.html','site/calculator.html','site/checklist.html','site/flagged.html','site/sources.html']){
   const r=await page.goto(base+route,{waitUntil:'networkidle'});expect(r.status()).toBe(200);await expect(page.locator('body')).toContainText('No hallucinations. No invented prices.');
  }
- for(const root of ['index','solid-gold','solitaire','halo-pave','three-stone-vintage','18k','budget','retailers','prices','flags','methods']){
+ // Companion 14-page solid-gold dashboard (`dashboard/`): WCAG A/AA axe checks, zero overflow, filter & NIST gem-mass calculator.
+ for(const dp of ['index','solid-gold','solitaire','halo-pave','three-stone-vintage','high-karat','budget','rings','calculator','retailers','checklist','flagged','methodology','reference']){
+  const r=await page.goto(base+'dashboard/'+dp+'.html',{waitUntil:'networkidle'});expect(r.status()).toBe(200);
+  await expect(page.locator('main')).toContainText('No hallucinations. No invented prices.');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1),'desktop overflow dashboard/'+dp).toBe(false);
+  const dAxe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
+  for(const v of dAxe.violations)violations.push({route:'dashboard/'+dp+'.html',id:v.id,impact:v.impact,nodes:v.nodes.map(n=>({target:n.target,summary:v.description}))});
+ }
+ await page.goto(base+'dashboard/calculator.html',{waitUntil:'networkidle'});
+ await page.locator('#calc-weight').fill('1.25');await page.locator('#calc-stone-ct').fill('1.37');
+ await expect(page.locator('#out-net-g')).toHaveText('0.976 g');
+ await expect(page.locator('#out-melt')).toHaveText('$73.67');
+ for(const root of ['index','solid-gold','solitaire','halo-pave','three-stone-vintage','18k','budget','retailers','analysis','verification','prices','flags','methods']){
   const response=await page.goto(base+root+'.html',{waitUntil:'networkidle'});expect(response.status()).toBe(200);
   await expect(page.locator('main')).toContainText('No hallucinations. No invented prices.');
   await expect(page.locator('main a[href="explore/"]')).toHaveCount(1);
@@ -137,7 +150,7 @@ try{
  if(requests.length)errors.push('Unexpected external runtime requests: '+requests.join(', '));
  if(violations.length)errors.push(`${violations.length} automated accessibility violations (see report)`);
  if(errors.length)throw new Error(errors.join('\n'));
- console.log(`PASS browser: ${routes.length} expanded pages + 16 preserved/root pages, desktop/mobile, all 32 automatic gates, filters, conditional calculator, stale warning, no-JS research and zero external runtime requests. Automated axe checks found no WCAG A/AA violations in exercised states; this is not a full accessibility certification.`);
+ console.log(`PASS browser: ${routes.length} expanded pages + 33 companion/root/preserved pages, desktop/mobile, all ${total} automatic gates, filters, conditional + gemstone calculators, stale warning, no-JS research and zero external runtime requests. Automated axe checks found no WCAG A/AA violations in exercised states.`);
 }catch(error){errors.push(error.message);console.error(error.stack??error);process.exitCode=1;}
 finally{
  await saveReport('browser.json',{checkedAt:new Date().toISOString(),errors:[...new Set(errors)],violations,externalRuntimeRequests:requests,limitation:'Chromium and automated axe checks only. Not a cross-browser, manual assistive-technology, factual-truth or physical-product certification.'});

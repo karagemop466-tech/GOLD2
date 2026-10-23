@@ -881,7 +881,7 @@ def render_shell(title: str, active: str, body: str, extra_js: list[str] | None 
 <main id="main-content"><div class="wrap">
 <section class="policy-banner" aria-labelledby="no-hallucination-heading">
   <span class="policy-pill">Strict No-Hallucinations Policy</span>
-  <h2 id="no-hallucination-heading">Zero invented prices, weights, karats, or policies — verified line by line ({VERIFIED_DATE}).</h2>
+  <h2 id="no-hallucination-heading">No hallucinations. No invented prices. Verified line by line ({VERIFIED_DATE}).</h2>
   <p>Every value in this dashboard is backed by a dated verbatim excerpt from an official primary source ({VERIFIED_DATE}). Whenever a seller omits gram weight, currency code, or hallmark details — or publishes conflicting specs — the field is left <strong>blank (<code>—</code>)</strong> and documented on <a href="flagged.html"><strong>Flagged for Review</strong></a>. <strong>Keep checking for hallucinations after every review pass and site build.</strong></p>
   <p class="sub">Spot reference: <strong>$4,024.45 / troy oz</strong> ($129.39 / fine g · WGC chart as of 22 Oct 2026, retrieved {VERIFIED_DATE}) · <a href="../index.html">Root 11-Page Register</a> · <a href="../explore/index.html">32-Item Evidence Explorer</a> · <a href="reference.html">Standards &amp; Logs</a></p>
 </section>
