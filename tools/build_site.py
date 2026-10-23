@@ -303,7 +303,10 @@ def register_relationship(items):
         evidence = json.loads((ROOT / "research" / "evidence.json").read_text(encoding="utf-8"))
     except Exception:
         return ""
-    urls = {source["id"]: (source.get("url") or "").rstrip("/") for source in evidence.get("sources", [])}
+    # Only product-source URLs belong in this cross-register count; policy, cart and
+    # independent-platform records would otherwise inflate it (e.g. the Automic cart endpoint).
+    urls = {source["id"]: (source.get("url") or "").rstrip("/")
+            for source in evidence.get("sources", []) if source.get("kind") == "product"}
     companion = set()
 
     def walk(node):
