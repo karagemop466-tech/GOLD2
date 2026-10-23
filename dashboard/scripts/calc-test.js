@@ -21,31 +21,31 @@ check("troy constant exact", calc.TROY_OZ_GRAMS === 31.1034768);
 check("pennyweight constant exact", calc.DWT_GRAMS === 1.55517384);
 check("carat constant exact", calc.CARAT_GRAMS === 0.2);
 
-// 2. Live 2026-10-23 spot ($3,996.31/oz) across units & asking-price multiples
-const ozt24 = calc.compute(1, 24, 3996.31, { unit: "ozt" });
-const dwt24 = calc.compute(20, 24, 3996.31, { unit: "dwt" });
-check("1 ozt == 20 dwt == $3,996.31 exact", Math.abs(ozt24.melt - 3996.31) < 1e-9 && Math.abs(dwt24.melt - 3996.31) < 1e-9);
+// 2. Live 2026-10-23 spot ($3,995.47/oz) across units & asking-price multiples
+const ozt24 = calc.compute(1, 24, 3995.47, { unit: "ozt" });
+const dwt24 = calc.compute(20, 24, 3995.47, { unit: "dwt" });
+check("1 ozt == 20 dwt == $3,995.47 exact", Math.abs(ozt24.melt - 3995.47) < 1e-9 && Math.abs(dwt24.melt - 3995.47) < 1e-9);
 
-const sarBand = calc.compute(13.4, 14, 3996.31, { ask: 1362 });
-check("SAR-144773 13.40g 14K melt $1,004.32 & 73.74% gold share", Math.abs(sarBand.melt - 1004.319336) < 1e-3 && Math.abs(sarBand.goldSharePct - 73.7386) < 1e-2);
+const sarBand = calc.compute(13.4, 14, 3995.47, { ask: 1362 });
+check("SAR-144773 13.40g 14K melt $1,004.11 & 73.72% gold share", Math.abs(sarBand.melt - 1004.108234) < 1e-3 && Math.abs(sarBand.goldSharePct - 73.7231) < 1e-2);
 
-const gemDeduct = calc.compute(1.25, 14, 3996.31, { stoneCarats: 1.37, ask: 1299.99 });
-check("FDJ-GR0001 gross 1.25g minus 1.37ct (0.274g) = 0.976g net 14K ($73.15)", Math.abs(gemDeduct.netMetalG - 0.976) < 1e-9 && Math.abs(gemDeduct.melt - 73.1477) < 1e-2);
+const gemDeduct = calc.compute(1.25, 14, 3995.47, { stoneCarats: 1.37, ask: 1299.99 });
+check("FDJ-GR0001 gross 1.25g minus 1.37ct (0.274g) = 0.976g net 14K ($73.14)", Math.abs(gemDeduct.netMetalG - 0.976) < 1e-9 && Math.abs(gemDeduct.melt - 73.1350) < 1e-2);
 
 // 3. Negative cases: fail closed with error string (never NaN/Infinity)
 for (const [name, args] of [
-  ["Infinity weight", [Infinity, 14, 3996.31]],
+  ["Infinity weight", [Infinity, 14, 3995.47]],
   ["Infinity spot", [4.5, 14, Infinity]],
-  ["zero weight", [0, 14, 3996.31]],
-  ["negative weight", [-1, 14, 3996.31]],
-  ["NaN weight", [NaN, 14, 3996.31]],
-  ["empty weight", ["", 14, 3996.31]],
-  ["text weight", ["abc", 14, 3996.31]],
+  ["zero weight", [0, 14, 3995.47]],
+  ["negative weight", [-1, 14, 3995.47]],
+  ["NaN weight", [NaN, 14, 3995.47]],
+  ["empty weight", ["", 14, 3995.47]],
+  ["text weight", ["abc", 14, 3995.47]],
   ["zero spot", [4.5, 14, 0]],
   ["negative spot", [4.5, 14, -50]],
-  ["bad karat 12", [4.5, 12, 3996.31]],
-  ["bad karat 0", [4.5, 0, 3996.31]],
-  ["gem mass exceeds gross ring weight", [0.5, 14, 3996.31, { stoneCarats: 5.0 }]]
+  ["bad karat 12", [4.5, 12, 3995.47]],
+  ["bad karat 0", [4.5, 0, 3995.47]],
+  ["gem mass exceeds gross ring weight", [0.5, 14, 3995.47, { stoneCarats: 5.0 }]]
 ]) {
   const t = calc.compute(...args);
   check("rejects " + name, t.ok === false && typeof t.error === "string");

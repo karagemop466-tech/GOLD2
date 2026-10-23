@@ -29,7 +29,7 @@ DATA_DIR = DASH_DIR / "data"
 EVIDENCE_DIR = DASH_DIR / "evidence"
 
 TROY_OZ_G = Decimal("31.1034768")
-SPOT_USD = Decimal("3996.31")
+SPOT_USD = Decimal("3995.47")
 VERIFIED_DATE = "2026-10-23"
 EXPLORE_PRODUCTS = len(json.loads((REPO_ROOT / "data" / "catalog.json").read_text(encoding="utf-8"))["products"])
 
@@ -44,13 +44,13 @@ CATEGORIES = [
 
 GOLD_REFERENCE = {
     "retrieved_at": VERIFIED_DATE,
-    "spot_usd_per_troy_oz": 3996.31,
+    "spot_usd_per_troy_oz": 3995.47,
     "chart_as_of_date": "2026-10-22",
     "quote_timestamp_confirmed": False,
     "usd_per_fine_gram": round(float(SPOT_USD / TROY_OZ_G), 6),
     "spot_source_name": "World Gold Council — Goldhub Gold Prices",
     "spot_source_url": "https://www.gold.org/goldhub/data/gold-prices",
-    "spot_quotes": ["USD /oz - 3,996.31", "Data as of 22 October, 2026"],
+    "spot_quotes": ["USD /oz - 3,995.47", "Data as of 22 October, 2026"],
     "troy_ounce": {
         "grams": 31.1034768,
         "pennyweight_grams": 1.55517384,
@@ -801,7 +801,7 @@ CHECKLIST_ITEMS = [
     ("Hallmark + maker's mark", "Under the National Stamping Act (`15 U.S.C. § 297`), any quality mark (`14K`, `750`, etc.) in interstate commerce must be accompanied by the registered manufacturer's trademark.", "https://www.govinfo.gov/app/details/USCODE-2023-title15/USCODE-2023-title15-chap8"),
     ("Ring weight in grams (metal-only)", "Check metal mass in metric grams (`g`), separated from gemstone carats (`1 ct = 0.200 g`). Ultra-light bands (<1.8 g metal) bend or snap easily even when solid 14K.", "https://www.nist.gov/system/files/documents/2017/05/09/Precious-Metals-Conversion-Information-march2015.pdf"),
     ("Seller reputation & verified contact", "Cross-check independent BBB accreditation, customer reviews, 3-year complaint narratives, street address, phone, and email before paying.", "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/sarraf-jewelry-inc-1216-13041977"),
-    ("Price vs raw gold melt value", "Compare retail price against `metal_g × (karat/24) × ($3,996.31 / 31.1034768)`. Any 'solid gold' ring priced near or below raw melt value is an immediate counterfeit/plating red flag.", "https://www.gold.org/goldhub/data/gold-prices"),
+    ("Price vs raw gold melt value", "Compare retail price against `metal_g × (karat/24) × ($3,995.47 / 31.1034768)`. Any 'solid gold' ring priced near or below raw melt value is an immediate counterfeit/plating red flag.", "https://www.gold.org/goldhub/data/gold-prices"),
     ("Return policy & resizing traps", "Confirm a clear 14–100 day return window for full refund and check exclusions on resized, custom, made-to-order, engraved, or >=50%-off Final Sale items.", "https://www.stoneandstrand.com/pages/returns-exchanges"),
     ("Credit card purchase protection", "Always pay by major credit card (never bank wire, crypto, Zelle, or cash transfer) to preserve statutory billing-error and chargeback rights.", "https://www.bluenile.com/policies/returns"),
     ("Save written pre-purchase documentation", "Screenshot the full dated listing URL, karat, gram weight, hallmark statement, invoice specs, and support chat confirmation before ordering.", "https://www.sarraf.com/about-sarraf/"),
@@ -865,7 +865,7 @@ def render_shell(title: str, active: str, body: str, extra_js: list[str] | None 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} · GOLD2 Verified Solid-Gold Dashboard</title>
-<meta name="description" content="Zero-hallucination solid-gold engagement ring research dashboard verified live on 2026-10-23 against official brand pages, WGC spot ($3,996.31/oz), NIST OWM, FTC 16 CFR 23.3, and BBB records.">
+<meta name="description" content="Zero-hallucination solid-gold engagement ring research dashboard verified live on 2026-10-23 against official brand pages, WGC spot ($3,995.47/oz), NIST OWM, FTC 16 CFR 23.3, and BBB records.">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <link rel="stylesheet" href="assets/style.css">
@@ -884,7 +884,7 @@ def render_shell(title: str, active: str, body: str, extra_js: list[str] | None 
   <span class="policy-pill">Strict No-Hallucinations Policy</span>
   <h2 id="no-hallucination-heading">No hallucinations. No invented prices. Verified line by line ({VERIFIED_DATE}).</h2>
   <p>Every value in this dashboard is backed by a dated verbatim excerpt from an official primary source ({VERIFIED_DATE}). Whenever a seller omits gram weight, currency code, or hallmark details — or publishes conflicting specs — the field is left <strong>blank (<code>—</code>)</strong> and documented on <a href="flagged.html"><strong>Flagged for Review</strong></a>. <strong>Keep checking for hallucinations after every review pass and site build.</strong></p>
-  <p class="sub">Spot reference: <strong>$3,996.31 / troy oz</strong> ($128.48 / fine g · WGC chart as of 22 Oct 2026, retrieved {VERIFIED_DATE}) · <a href="../index.html">Root 13-Page Register</a> · <a href="../explore/index.html">{EXPLORE_PRODUCTS}-Item Evidence Explorer</a> · <a href="reference.html">Standards &amp; Logs</a></p>
+  <p class="sub">Spot reference: <strong>$3,995.47 / troy oz</strong> ($128.46 / fine g · WGC chart as of 22 Oct 2026, retrieved {VERIFIED_DATE}) · <a href="../index.html">Root 13-Page Register</a> · <a href="../explore/index.html">{EXPLORE_PRODUCTS}-Item Evidence Explorer</a> · <a href="reference.html">Standards &amp; Logs</a></p>
 </section>
 {body}
 </div></main>
@@ -934,7 +934,7 @@ def render_rings_table(rings: list[dict]) -> str:
     return (
         '<div class="table-wrap"><table><thead><tr>'
         "<th>Listing &amp; Seller</th><th>Purity &amp; Solid Claim</th><th class=\"num\">Metal Weight (g)</th>"
-        "<th class=\"num\">Observed Price</th><th class=\"num\">Fine Gold &amp; Melt ($3,996.31/oz)</th>"
+        "<th class=\"num\">Observed Price</th><th class=\"num\">Fine Gold &amp; Melt ($3,995.47/oz)</th>"
         "<th>Official Source &amp; Audit</th>"
         "</tr></thead><tbody>" + "".join(rows_html) + "</tbody></table></div>"
     )
@@ -994,7 +994,7 @@ def main() -> int:
     index_body = f"""
 <div class="eyebrow">Executive Research Overview · Live Verified {VERIFIED_DATE}</div>
 <h1>Solid Gold Engagement Ring Buying Guide &amp; Verified Price-to-Melt Dashboard</h1>
-<p class="lead">Auditing <strong>{len(RINGS)} primary official listings</strong> across <strong>{len(RETAILERS)} jewelry sellers</strong> against our 12-point solid-gold buying checklist, NIST precious-metals conversion constants, and live World Gold Council bullion pricing (<strong>$3,996.31 / troy oz</strong>).</p>
+<p class="lead">Auditing <strong>{len(RINGS)} primary official listings</strong> across <strong>{len(RETAILERS)} jewelry sellers</strong> against our 12-point solid-gold buying checklist, NIST precious-metals conversion constants, and live World Gold Council bullion pricing (<strong>$3,995.47 / troy oz</strong>).</p>
 
 <div class="grid g4">
   <div class="card"><div class="stat-val">{len(RINGS)}</div><div class="stat-lbl">Primary official listings audited ({VERIFIED_DATE})</div></div>
@@ -1066,7 +1066,7 @@ def main() -> int:
             f'<td>{ext(GOLD_REFERENCE["spot_source_url"], "WGC Spot")} · {ext(GOLD_REFERENCE["troy_ounce"]["sources"][1], "NIST PDF")}</td></tr>'
         )
     calc_body = f"""
-<div class="eyebrow">NIST OWM Metrology · Spot $3,996.31 / oz t ({VERIFIED_DATE})</div>
+<div class="eyebrow">NIST OWM Metrology · Spot $3,995.47 / oz t ({VERIFIED_DATE})</div>
 <h1>Solid Gold Weight, Gemstone Mass Deduction &amp; Melt Value Calculator</h1>
 <p class="lead">Compute exact pure fine-gold content and theoretical bullion melt value from grams (<code>g</code>), pennyweights (<code>dwt</code>), or troy ounces (<code>ozt</code>). When weighing a complete diamond ring on a local jeweler's scale, enter total stone carats (<code>1 ct = 0.200 g</code>) to avoid counting diamond mass as gold.</p>
 <div class="card">
@@ -1075,7 +1075,7 @@ def main() -> int:
     <div><label class="field-label" for="calc-unit">Unit (NIST Exact)</label><select id="calc-unit"><option value="g" selected>Grams (g)</option><option value="dwt">Pennyweights (dwt · 1.55517384g)</option><option value="ozt">Troy Ounces (ozt · 31.1034768g)</option></select></div>
     <div><label class="field-label" for="calc-karat">Stamped Karat</label><select id="calc-karat"><option value="10">10K (41.67%)</option><option value="14" selected>14K (58.33%)</option><option value="18">18K (75.00%)</option><option value="22">22K (91.67%)</option><option value="24">24K (100.00%)</option></select></div>
     <div><label class="field-label" for="calc-stone-ct">Deduct Set Stones (ct)</label><input id="calc-stone-ct" type="number" min="0" step="0.01" value="0"></div>
-    <div><label class="field-label" for="calc-spot">Gold Spot (USD / ozt)</label><input id="calc-spot" type="number" min="1" step="0.01" value="3996.31"></div>
+    <div><label class="field-label" for="calc-spot">Gold Spot (USD / ozt)</label><input id="calc-spot" type="number" min="1" step="0.01" value="3995.47"></div>
     <div><label class="field-label" for="calc-ask">Retail Price (USD, optional)</label><input id="calc-ask" type="number" min="0" step="0.01" value="3004.00"></div>
   </div>
   <div class="preset-row">{preset_buttons}<button type="button" class="preset-btn" data-preset-weight="1.25" data-preset-karat="14" data-preset-stone="1.37" data-preset-ask="1299.99">FDJ-GR0001 Gross Check: 1.25g − 1.37ct ($1,299.99)</button></div>
@@ -1089,7 +1089,7 @@ def main() -> int:
   <p id="calc-status" class="note-box"></p>
 </div>
 
-<h2>2026-10-23 Karat Reference Table at $3,996.31 / Troy Ounce</h2>
+<h2>2026-10-23 Karat Reference Table at $3,995.47 / Troy Ounce</h2>
 <div class="table-wrap"><table><thead><tr><th class="num">Karat</th><th class="num">Nominal Purity</th><th class="num">Melt / Gram Alloy</th><th class="num">4.00 g Ring Melt</th><th class="num">8.00 g Ring Melt</th><th>Official Standards</th></tr></thead><tbody>{karat_table_rows}</tbody></table></div>
 """
     (DASH_DIR / "calculator.html").write_text(render_shell("NIST Melt Calculator", "calculator", calc_body, extra_js=["calculator.js"]), encoding="utf-8")
@@ -1148,7 +1148,7 @@ def main() -> int:
 <p class="lead">Every build executes automated provenance, link-integrity, CSP/XSS security, WCAG 2.1 AA contrast, and NIST Decimal arithmetic checks — paired with mandatory line-by-line primary page re-reading.</p>
 <div class="note-box"><strong>Ongoing Recommendation:</strong> Automated verification (`PASS`) confirms internal consistency between structured JSON, verbatim evidence quotes, calculator math, and generated HTML — it does <strong>not</strong> guarantee that a physical ring matches a seller's web description. <strong>Continue running hallucination and security passes after every review and edit.</strong></div>
 <div class="table-wrap"><table><thead><tr><th>Standard / Pass</th><th>Specification</th><th>Official Source</th></tr></thead><tbody>
-<tr><td><strong>World Gold Council Spot Gold</strong></td><td><code>$3,996.31 / troy oz</code> (`Data as of 22 October, 2026`, retrieved `{VERIFIED_DATE}`)</td><td>{ext(GOLD_REFERENCE["spot_source_url"], "gold.org/goldhub/data/gold-prices")}</td></tr>
+<tr><td><strong>World Gold Council Spot Gold</strong></td><td><code>$3,995.47 / troy oz</code> (`Data as of 22 October, 2026`, retrieved `{VERIFIED_DATE}`)</td><td>{ext(GOLD_REFERENCE["spot_source_url"], "gold.org/goldhub/data/gold-prices")}</td></tr>
 <tr><td><strong>NIST OWM Mass Constants</strong></td><td><code>1 ozt = 31.1034768 g</code> · <code>1 dwt = 1.55517384 g</code> · <code>1 ct = 0.200 g</code></td><td>{ext(GOLD_REFERENCE["troy_ounce"]["sources"][1], "NIST Precious Metals PDF")}</td></tr>
 <tr><td><strong>FTC Jewelry Guides</strong></td><td><code>16 CFR § 23.3</code> — karat thresholds, hollow/plated disclosures, tolerance footnotes</td><td>{ext("https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3", "eCFR 16 CFR § 23.3")}</td></tr>
 <tr><td><strong>National Stamping Act</strong></td><td><code>15 U.S.C. §§ 294–300</code> — mandatory manufacturer trademark alongside quality marks</td><td>{ext("https://www.govinfo.gov/app/details/USCODE-2023-title15/USCODE-2023-title15-chap8", "GovInfo 15 U.S.C. Ch. 8")}</td></tr>

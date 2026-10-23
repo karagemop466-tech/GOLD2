@@ -60,7 +60,7 @@
     {
       "id": "BN-315661",
       "kind": "listing",
-      "label": "Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen",
+      "label": "Pav\u00e9 Contour Diamond Engagement Ring In 14K White Gold By James Allen",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
       "checked_at": "2026-10-23",
@@ -77,7 +77,7 @@
     {
       "id": "BN-195402",
       "kind": "listing",
-      "label": "Petite Micropavé Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
+      "label": "Petite Micropav\u00e9 Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
       "checked_at": "2026-10-23",
@@ -94,7 +94,7 @@
     {
       "id": "BN-302868",
       "kind": "listing",
-      "label": "Petite Micropavé Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
+      "label": "Petite Micropav\u00e9 Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
       "checked_at": "2026-10-23",
@@ -241,7 +241,7 @@
         "Prong metal: 14K White Gold",
         "Style: BE121H6-14KY"
       ],
-      "note": "The 2026-10-22 retrieval was served €990.00; this retrieval was served USD with a USD selector. Recorded as F-032; the euro amount is retained only as a superseded observation."
+      "note": "The 2026-10-22 retrieval was served \u20ac990.00; this retrieval was served USD with a USD selector. Recorded as F-032; the euro amount is retained only as a superseded observation."
     },
     {
       "id": "VRAI-CLASSIC-4P",
@@ -256,7 +256,7 @@
         "Band depth:1.6mm",
         "Metal weight:2.86g (Ring size 6)",
         "Band width:Standard",
-        "Pavé carat weight:0.18ctw"
+        "Pav\u00e9 carat weight:0.18ctw"
       ],
       "note": "No price string in the retrieved page. Band width is published only as the word 'Standard', so no millimetre value is stored."
     },
@@ -275,7 +275,7 @@
         "Band is 3mm",
         "price_min 191000 / price_max 223300"
       ],
-      "note": "Re-read 2026-10-23 20:xxZ: $1,910 is the default 14k configuration; the seller's product JSON reports $1,910–$2,233 across metal variants (F-039). Currency supported by the store cart endpoint, not inferred."
+      "note": "Re-read 2026-10-23 20:xxZ: $1,910 is the default 14k configuration; the seller's product JSON reports $1,910\u2013$2,233 across metal variants (F-039). Currency supported by the store cart endpoint, not inferred."
     },
     {
       "id": "AG-SAPPHIRE-RING",
@@ -310,7 +310,7 @@
         "Clear Lab Diamond",
         "Approximately 0.65ct"
       ],
-      "note": "Re-read 2026-10-23 20:xxZ. The $2,758 display is the 14k Yellow Gold / Salt and Pepper Diamond variant; the seller's product JSON reports price_min 240800 and price_max 325300 (=$2,408–$3,253), so $2,758 is not a product-wide price (F-039). 5.5 g is gross and includes the ~0.65 ct stone; weight_g stays null (F-028)."
+      "note": "Re-read 2026-10-23 20:xxZ. The $2,758 display is the 14k Yellow Gold / Salt and Pepper Diamond variant; the seller's product JSON reports price_min 240800 and price_max 325300 (=$2,408\u2013$3,253), so $2,758 is not a product-wide price (F-039). 5.5 g is gross and includes the ~0.65 ct stone; weight_g stays null (F-028)."
     },
     {
       "id": "MJ-BOLD-ETERNITY",
@@ -339,11 +339,11 @@
       "checked_at": "2026-10-23",
       "status": "verified_correction",
       "observed": [
-        "3,996.31",
+        "3,995.47",
         "Data as of 22 October, 2026",
         "Market Data: Provided by ICE Data Services."
       ],
-      "note": "Evening re-read on 2026-10-23 replaced the earlier same-day header observation. The header is moving; quote_date stays null because it carries no timestamp (F-026). The earlier value is retained only as superseded history."
+      "note": "Late-evening re-read on 2026-10-23 replaced the earlier same-day header observation; the header is moving and the superseded value is not rendered. quote_date stays null because the header carries no timestamp (F-026)."
     },
     {
       "id": "BLUENILE-RETURNS",
@@ -598,7 +598,7 @@
     {
       "id": "BN-316238",
       "kind": "listing",
-      "label": "Petite Micropavé Engagement Ring in 14k White Gold",
+      "label": "Petite Micropav\u00e9 Engagement Ring in 14k White Gold",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238",
       "checked_at": "2026-10-23",
@@ -609,7 +609,7 @@
         "Width: 1.50mm",
         "$1,240(Setting Price)"
       ],
-      "note": "Live page no longer matches the stored Petite Micropavé record. The amount is recorded as what the page shows, NOT as this row's price; the row's price stays blank and the discrepancy is published as F-041/F-042.",
+      "note": "Live page no longer matches the stored Petite Micropav\u00e9 record. The amount is recorded as what the page shows, NOT as this row's price; the row's price stays blank and the discrepancy is published as F-041/F-042.",
       "session": "S-305FDD02"
     }
   ]
