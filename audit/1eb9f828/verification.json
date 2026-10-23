@@ -1,111 +1,149 @@
 {
   "session": "S-1EB9F828",
-  "checked_at": "2026-10-23",
-  "timezone": "UTC",
+  "checked_at": "2026-10-23T20:18:00Z",
   "branch": "arena/1eb9f828-gold2",
-  "method": "fetch_page direct retrieval of the listed official URLs; comparison with the stored field evidence",
-  "records": [
+  "purpose": "Integration pass: close REQ-A87A-01..05, refresh the dated gold observation, record honest verification coverage",
+  "retrieved": [
     {
       "id": "GOLD-QUOTE",
       "url": "https://www.gold.org/goldhub/data/gold-prices",
-      "status": "verified_correction",
-      "observed": [
-        "3,996.31",
+      "read": [
+        "USD /oz - 3,996.31",
         "Data as of 22 October, 2026",
         "Market Data: Provided by ICE Data Services."
       ],
-      "note": "Evening header value; quote_date stays null (F-026). Earlier same-day value retained only as superseded history."
+      "result": "updated from 4,024.45; quote_date null (F-026)"
     },
     {
       "id": "AG-COFFIN-RING",
       "url": "https://www.automicgold.com/products/coffin-ring",
-      "status": "verified_match",
-      "observed": [
+      "read": [
+        "Coffin Ring",
         "$1,910",
-        "Solid 14k Gold and 950 Platinum",
+        "950 platinum and/or Solid 14k gold",
         "Approximately 6.1g (gold) or 9.2g (platinum)",
+        "14k Yellow Gold",
         "Band is 3mm"
       ],
-      "note": "Product JSON also read: price_min 191000, price_max 223300 (=$2,233 range). The variant carrying the maximum was not named in the retrieved chunk (F-039)."
+      "result": "matches stored values"
+    },
+    {
+      "id": "AG-COFFIN-RING.json",
+      "url": "https://www.automicgold.com/products/coffin-ring.js",
+      "read": [
+        "\"price\":191000",
+        "\"price_min\":191000",
+        "\"price_max\":223300",
+        "\"price_varies\":true",
+        "14k white 191000",
+        "Nickel Free 14k White 203900"
+      ],
+      "result": "range recorded in F-039; max variant not named"
     },
     {
       "id": "AG-CUSHION-SIGNET",
       "url": "https://www.automicgold.com/products/cushion-diamond-signet-ring",
-      "status": "verified_match",
-      "observed": [
+      "read": [
+        "Cushion Diamond Signet Ring",
         "$2,758",
-        "Solid 14k Gold and 950 Platinum",
         "Approximate item weight: gold 5.5g, platinum 8.3g",
         "Salt and Pepper Diamond",
         "Clear Lab Diamond",
         "Approximately 0.65ct"
       ],
-      "note": "$2,758 is the 14k Yellow Gold / Salt and Pepper Diamond configuration; product JSON range $2,408\u2013$3,253 (F-039). 5.5 g is gross, weight_g stays null."
+      "result": "matches stored price; gross weight not converted to net gold"
     },
     {
-      "id": "Z-19957449",
-      "url": "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
-      "status": "verified_no_price",
-      "observed": [
-        "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
-        "Discounted Price $899.00"
+      "id": "AG-CUSHION-SIGNET.json",
+      "url": "https://www.automicgold.com/products/cushion-diamond-signet-ring.js",
+      "read": [
+        "\"price\":240800",
+        "\"price_min\":240800",
+        "\"price_max\":325300",
+        "\"price_varies\":true",
+        "275800 salt and pepper"
       ],
-      "note": "Displayed amount unchanged; no ISO currency statement, so the catalog price stays null (F-018)."
-    },
-    {
-      "id": "MJ-BOLD-ETERNITY",
-      "url": "https://mejuri.com/products/bold-diamond-eternity-ring",
-      "status": "verified_match",
-      "observed": [
-        "From$2,900",
-        "Solid White Gold (14k), Natural Diamond",
-        "Band Width: 2.6 mm",
-        "Minimum Carat Weight: 1.15 ct - 1.57 ct"
-      ],
-      "note": "No ISO currency statement on the page, cart endpoint or payment FAQ; price stays null (F-025, F-030)."
+      "result": "range recorded in F-039"
     },
     {
       "id": "AUTOMIC-CURRENCY",
       "url": "https://www.automicgold.com/cart.js",
-      "status": "verified_match",
-      "observed": [
+      "read": [
         "\"currency\":\"USD\""
       ],
-      "note": "Empty cart; identifier not retained."
+      "result": "supports USD for Automic rows"
+    },
+    {
+      "id": "MJ-BOLD-ETERNITY",
+      "url": "https://mejuri.com/products/bold-diamond-eternity-ring",
+      "read": [
+        "Bold Diamond Eternity Ring",
+        "From$2,900",
+        "Solid White Gold (14k), Natural Diamond",
+        "handcrafted in 14k solid gold",
+        "Band Width: 2.6 mm",
+        "Minimum Carat Weight: 1.15 ct - 1.57 ct",
+        "Diamond Clarity: SI - I",
+        "Free 30-day returns"
+      ],
+      "result": "added to combined register; price left null (no ISO currency statement)"
     },
     {
       "id": "MEJURI-RETURNS",
       "url": "https://mejuri.com/faq/return-exchanges/what-is-the-standard-return-policy",
-      "status": "verified_match",
-      "observed": [
-        "free 30-day returns ... starting from the day the shipment is delivered",
+      "read": [
+        "free 30-day returns",
         "Engraved and monogrammed products",
         "US | Free"
       ],
-      "note": "Engraved-work exclusion matters for the optional engraving on MJ-BOLD-ETERNITY."
+      "result": "seller policy recorded"
     },
     {
       "id": "BBB-MEJURI",
       "url": "https://www.bbb.org/ca/on/toronto/profile/jewelry-manufacturers/mejuri-0107-1370644",
-      "status": "verified_match",
-      "observed": [
-        "This business is NOT BBB Accredited",
+      "read": [
+        "NOT BBB Accredited",
         "(310) 597-4745"
       ],
-      "note": "Profile metadata/opinions only; no static rating badge rendered (F-031)."
+      "result": "profile recorded; no static rating rendered (F-031)"
+    },
+    {
+      "id": "Z-19957449",
+      "url": "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
+      "read": [
+        "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
+        "Discounted Price $899.00"
+      ],
+      "result": "display unchanged; no ISO currency, price stays null"
     }
   ],
   "not_re_read": {
     "count": 40,
-    "scope": "all other combined-register rows and the 26 root rows outside Automic Gold and Mejuri",
-    "note": "Stored values and dates unchanged; the verification log retains their earlier checked_at. Not re-read is not the same as invalidated."
+    "examples": [
+      "Blue Nile 501480W14 and the remaining Blue Nile rows",
+      "the other three Zales rows",
+      "Brilliant Earth BE-121H6",
+      "VRAI configure URL (session-scoped, unstable)",
+      "Sarraf and Factory Direct Jewelry rows",
+      "Catbird, Auvere, Quince, Men\u0113, Stone and Strand rows"
+    ],
+    "note": "The verification log retains each row's earlier checked_at (2026-10-22 or 2026-10-23). This pass does not claim they were re-read."
   },
   "irregularities": [
-    "Automic product pages state two different production times on the same page (banner 1-5 or 4-8 business days vs Shipping & Returns 1-2 weeks / 2-3 with engraving).",
-    "Both Automic pages render 'Only 3 units left in stock!' - not treated as a stock fact.",
-    "Mejuri Materials accordion heading says 'Solid Yellow Gold (14k)' while the selected variant is Solid White Gold; the selected option governs.",
-    "The $2,233 product-JSON maximum is not attributable to a named variant in the retrieved chunk.",
-    "The WGC header moved within 2026-10-23; derived dollar melt figures belong in generated tables, not prose."
+    "Automic product pages state two production times on the same page (banner 1-5 or 4-8 business days; details 1-2 weeks, 2-3 weeks with engraving).",
+    "Both Automic product pages render 'Only 3 units left in stock!'.",
+    "Mejuri's Materials accordion heading says 'Solid Yellow Gold (14k)' while the selected variant is Solid White Gold (14k); the selected option governs the record.",
+    "The Automic Coffin Ring JSON price_max 223300 (= $2,233) was not tied to a named variant in the retrieved chunk; not attributed.",
+    "The World Gold Council header moved within 2026-10-23; derived dollar figures are generated from the stored dated value only."
   ],
-  "limits": "Extracted text only, not a byte archive. No physical inspection, scale weight, hallmark or XRF verification was performed."
+  "scope_changes": {
+    "catalog_products": 44,
+    "catalog_sellers": 13,
+    "evidence_sources": 85,
+    "review_findings": 26,
+    "root_flags": 37,
+    "gold_usd_per_troy_oz": 3996.31,
+    "usd_per_fine_gram": 128.4839
+  },
+  "limits": "Extracted text only; no byte archive. No physical inspection, scale weight, hallmark or XRF verification. Zero purchase approvals."
 }
