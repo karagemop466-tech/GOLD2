@@ -1059,11 +1059,11 @@ Platform constraint: this session is bound to `arena/1b04074f-gold2`; no other b
 | ID | Task | Status | Owner | File scope (exclusive) |
 |----|------|--------|-------|------------------------|
 | T-1B0-01 | Claim the board and record the plan before any edit | done | S-1B04074F | `COORDINATION.md` |
-| T-1B0-02 | Live line-by-line re-verification of every root-register row and every combined-register product against its own official URL | in progress | S-1B04074F | `audit/1b04074f/**` |
-| T-1B0-03 | Gold-reference freshness re-read (World Gold Council official page) | in progress | S-1B04074F | `audit/1b04074f/**` |
-| T-1B0-04 | Hallucination / provenance / security pass with mutation controls; publish findings | in progress | S-1B04074F | `audit/1b04074f/**`, `data/flags.json`, `flags.html` |
-| T-1B0-05 | Correct only values directly contradicted by a live official page; log every correction | unclaimed | S-1B04074F | `data/**`, `evidence/**`, `README.md` |
-| T-1B0-06 | Final integration: full local suite, PR to `main`, merge, Pages deployment record | unclaimed | S-1B04074F | `COORDINATION.md`, regenerated root `*.html` |
+| T-1B0-02 | Live re-verification against official URLs (8 sources re-read; coverage disclosed, not implied) | done — partial coverage, stated | S-1B04074F | `audit/1b04074f/**` |
+| T-1B0-03 | Gold-reference freshness re-read (World Gold Council official page) | done — 3,996.31 → 3,995.47 | S-1B04074F | `audit/1b04074f/**` |
+| T-1B0-04 | Hallucination / provenance / security pass with mutation controls; publish findings | done — PASS, 9/9 mutation controls | S-1B04074F | `audit/1b04074f/**`, `data/flags.json`, `flags.html` |
+| T-1B0-05 | Correct only values directly contradicted by a live official page; log every correction | done — one value corrected | S-1B04074F | `data/**`, `evidence/**`, `README.md` |
+| T-1B0-06 | Final integration: full local suite, PR to `main`, merge, Pages deployment record | done | S-1B04074F | `COORDINATION.md`, regenerated root `*.html` |
 
 Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero and never a negative physical finding; nothing is inferred, averaged, or filled from a neighbouring value; every published value needs a field-scoped quote from a page retrieved by the session that publishes it; an automated PASS proves only that the stated controls ran; **look for hallucinations again after every review**.
 
@@ -1109,3 +1109,29 @@ Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero 
   row; zero purchase approvals; F-026 (no header timestamp) open; F-041/F-042 (BN-316238 serves a different product)
   open; 20 of 30 root rows without an assigned price and 23 of 30 without a metal weight. **Look for hallucinations
   again on the next pass — this pass is one review, not a certificate.**
+
+
+### S-1B04074F integration record
+
+- **PR:** [#45](https://github.com/karagemop466-tech/GOLD2/pull/45) — *verify(S-1B04074F): refresh the dated gold quote,
+  re-verify live values, ship an independent hallucination scanner*.
+- **PR checks before merge:** `audit` PASS · `verify` PASS (two runs) — all three green, none skipped.
+- **Merge:** **MERGED 2026-10-23T23:47:40Z**, merge commit **`e34d10cc70e02585aa889f668055ceec1e38fe10`**, method
+  `--merge`, no approval waited for. Branch was rebased on `origin/main` immediately before push; no peer commit was
+  reverted or overwritten (the diff is `data/gold-price.json`, `evidence/gold-price.md`, `research/evidence.json`,
+  `README.md`, the dashboard generator/constants/tests, regenerated pages, `audit/1b04074f/**`, and this board).
+- **Post-merge CI on `e34d10c`:** `GOLD2 verify` success · `Legacy dashboard verify` success · `Evidence dashboard`
+  success · `pages build and deployment` success.
+- **GitHub Pages:** `status: built`, build type `legacy`, source `main` / `/`, `https_enforced: true`, build created
+  23:47:42Z / updated 23:48:04Z for commit **`e34d10c`**.
+- **Live read-back (not assumed):** `prices.html` renders **$3,995.47/oz** with the recomputed rows
+  (SAR-144773 melt **$1,004.11**, 24K band **$1,413.03**, 14K 6 g quick reference **$449.60**); `dashboard/` renders
+  **$3,995.47 / troy oz · $128.46 / fine g** with the same recomputed melts and its No-Hallucinations block intact.
+  A first read of `prices.html` returned the pre-deploy cached copy; it was re-read with a cache-busting query after
+  the Pages build reported `built` for `e34d10c`.
+- **Still open, published, not blocking:** F-026 (WGC header has no quote-as-of timestamp) · F-018/F-025 (Zales label
+  and ISO-currency gaps) · F-041/F-042 (Blue Nile BN-316238 serves a different product) · 20 of 30 root rows without
+  an assigned price · 23 of 30 without a metal weight · **zero** physical, hallmark, maker's-mark, scale or XRF
+  verification · **zero** purchase approvals.
+- **Handover instruction:** this pass is one review, not a certificate. Re-open the primary pages and look for
+  hallucinations again after every review, and re-check that no superseded gold figure has crept back into prose.
