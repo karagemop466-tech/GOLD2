@@ -1118,6 +1118,40 @@
         "https://www.automicgold.com/products/cushion-diamond-signet-ring.js"
       ],
       "recommended_action": "Open the official product page, choose the exact metal and stone options, and record that configuration and cart total before comparing prices."
+    },
+    {
+      "id": "F-041",
+      "severity": "high",
+      "type": "irregularity",
+      "title": "Blue Nile BN-316238 URL now renders a different product than the stored record",
+      "detail": "On 2026-10-23 this session re-read the official URL whose slug is “petite-micropave-engagement-ring-in-14k-white-gold-item-316238”. The page served the title “Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen” with Stock Number 505097w14, width 1.50mm and a displayed “$1,240(Setting Price)”. The stored row, the URL slug and the verification log all describe a “Petite Micropavé Engagement Ring”. The amount stays unassigned rather than being read as this row's price: a price observed on a page describing a different product is not evidence for this product, and stock numbers, styles and URL identifiers are not physical hallmarks.",
+      "affected_items": [
+        "BN-316238"
+      ],
+      "affected_retailers": [
+        "blue-nile"
+      ],
+      "sources": [
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238"
+      ],
+      "recommended_action": "Treat BN-316238 as unidentified until Blue Nile is re-read and the row is either matched to the item now served at that URL or withdrawn. Do not pay the displayed amount for the stored description."
+    },
+    {
+      "id": "F-042",
+      "severity": "medium",
+      "type": "irregularity",
+      "title": "BN-316238 verification-log entry records a price the row does not otherwise carry",
+      "detail": "The 2026-10-23 verification-log entry for BN-316238 records “$1,240(Setting Price)” and “Width: 1.50mm” as a verified match, while the row's own price and field_evidence are blank and its stored name is the Petite Micropavé setting. The log and the register therefore disagreed for the same URL on the same day, and no automated check compared them. The log entry is reclassified in this pass and the disagreement is published rather than deleted.",
+      "affected_items": [
+        "BN-316238"
+      ],
+      "affected_retailers": [
+        "blue-nile"
+      ],
+      "sources": [
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238"
+      ],
+      "recommended_action": "Add an automated check that every verification-log “observed” amount also appears in that row's field_evidence, and that the log's label matches the row's stored name."
     }
   ],
   "retrieved_at": "2026-10-23"
