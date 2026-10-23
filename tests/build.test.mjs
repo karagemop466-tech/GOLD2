@@ -14,3 +14,10 @@ test('static build is deterministic and does not renew observation timestamps',a
  await exec(process.execPath,['scripts/build.mjs'],{cwd:ROOT});assert.equal(await fingerprint(),first);
  assert.equal(await readFile(path.join(ROOT,'data/catalog.json'),'utf8'),before);
 });
+
+test('catalog distinguishes a supported native-currency setting display from unconfirmed prices',async()=>{
+ const html=await readFile(path.join(ROOT,'explore/catalog/index.html'),'utf8');
+ assert.match(html,/Setting-only amounts exclude the center diamond/);
+ assert.match(html,/€990\.00/);
+ assert.doesNotMatch(html,/Setting-only displays and unbound currency\/configurations are withheld/);
+});

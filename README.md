@@ -61,7 +61,7 @@ node scripts/test.js
 npm run check
 ```
 
-`npm run check` covers combined evidence consistency, 22 Node tests, deterministic generation, local links/fragments and official links in every table row, root small-text contrast controls, all 29 HTML pages’ static security, npm auditing, desktop/mobile Chromium, filters, all 32 valuation gates, acknowledged scenarios, nonfinite-input rejection, staleness, no-JavaScript research and automated axe checks in exercised states.
+`npm run check` covers combined evidence consistency, 23 Node tests, deterministic generation, local links/fragments and official links in every table row, root small-text contrast controls, all 29 HTML pages’ static security, npm auditing, desktop/mobile Chromium, filters, all 32 valuation gates, acknowledged scenarios, nonfinite-input rejection, staleness, no-JavaScript research and automated axe checks in exercised states.
 
 ```sh
 npm run dev            # read-only preview on 0.0.0.0:4173; open /GOLD2/explore/
