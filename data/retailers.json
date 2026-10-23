@@ -512,6 +512,70 @@
           "[Visit Website](https://www.brilliantearth.com/)"
         ]
       }
+    },
+    {
+      "id": "costco",
+      "name": "Costco",
+      "website": "https://www.costco.com",
+      "domains": [
+        "www.costco.com",
+        "costco.com",
+        "customerservice.costco.com"
+      ],
+      "contact_phone": null,
+      "contact_email": null,
+      "contact_channels": null,
+      "contact_source_url": "https://customerservice.costco.com/",
+      "contact_verified": false,
+      "return_window_days": null,
+      "return_window_basis": "Risk-free 100% satisfaction guarantee 'with some exceptions and limitations' — no day count stated on the retrieved pages.",
+      "return_policy_url": "https://customerservice.costco.com/app/answers/detail/a_id/754/~/can-i-return-jewelry-purchased-on-costco.com",
+      "return_free_shipping": null,
+      "return_free_shipping_basis": null,
+      "return_free_shipments_per_year": null,
+      "return_excludes_resized": null,
+      "return_excludes_custom": null,
+      "return_exclusions_detail": "Diamonds over 1.00 carat: return with grading certificates for a Jewelry Credit Memo after Graduate Gemologist inspection (3-5 business days in warehouse, up to two weeks by mail). Read the full official policy before purchase.",
+      "resize_policy": "Costco does not clean or resize jewelry.",
+      "payment_methods_verified": null,
+      "payment_source_url": "https://customerservice.costco.com/",
+      "payment_note": null,
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": null,
+        "candidate_profile_url": null,
+        "complaints_url": null,
+        "reviews_url": null,
+        "identity_status": null,
+        "profile_scope": null,
+        "bbb_accredited": null,
+        "bbb_rating": null,
+        "review_average_out_of_5": null,
+        "review_count": null,
+        "complaints_last_3_years": null,
+        "complaints_last_12_months": null,
+        "retrieved_at": null
+      },
+      "evidence_file": "evidence/retailers/costco.md",
+      "verification_status": "official_policies_partial",
+      "flags": [
+        "F-014",
+        "F-021"
+      ],
+      "field_evidence": {
+        "return_window_basis": [
+          "risk-free 100% satisfaction guarantee"
+        ],
+        "return_exclusions_detail": [
+          "You may return jewelry purchased on Costco.com for a refund including all shipping and handling fees.",
+          "Jewelry Credit Memo",
+          "Costco Graduate Gemologist will inspect for authenticity"
+        ],
+        "resize_policy": [
+          "Costco does not clean or resize jewelry."
+        ]
+      }
     }
   ]
 }

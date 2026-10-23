@@ -325,6 +325,88 @@
           "Prong metal: 14K White Gold"
         ]
       }
+    },
+    {
+      "id": "BN-316238",
+      "retailer_id": "blue-nile",
+      "retailer": "Blue Nile",
+      "brand": "James Allen (sold on Blue Nile)",
+      "name": "Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen",
+      "sku": "505097w14",
+      "metal": "14K White Gold",
+      "karat": 14,
+      "color": "White",
+      "width_mm": 1.5,
+      "weight_g": null,
+      "price": 1240.0,
+      "currency": "USD",
+      "price_basis": "setting_price",
+      "center_stone_included": false,
+      "original_price": null,
+      "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/comfort-fit-solitaire-engagement-ring-in-14k-white-gold-by-james-allen-item-316238",
+      "retrieved_at": "2026-10-22",
+      "evidence_file": "evidence/listings/bn-316238.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.bluenile.com/policies/returns",
+      "verification_status": "partial_official_fields",
+      "rejected_values": [],
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-010",
+        "F-015",
+        "F-016",
+        "F-021",
+        "F-024"
+      ],
+      "notes": "James Allen design sold on a Blue Nile product page; seller contact and policies are Blue Nile. Rhodium Finish: Yes (white gold).",
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_basis": null,
+      "unassigned_price_text": null,
+      "prong_metal": null,
+      "surface_finish": "Rhodium",
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "sku_basis": "Stock Number on the official product page",
+      "field_evidence": {
+        "name": [
+          "Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen"
+        ],
+        "sku": [
+          "505097w14"
+        ],
+        "metal": [
+          "14K White Gold"
+        ],
+        "karat": [
+          "14K White Gold"
+        ],
+        "color": [
+          "14K White Gold"
+        ],
+        "width_mm": [
+          "1.50mm"
+        ],
+        "price": [
+          "$1,240(Setting Price)"
+        ],
+        "currency": [
+          "$1,240(Setting Price)"
+        ],
+        "price_basis": [
+          "$1,240(Setting Price)"
+        ],
+        "center_stone_included": [
+          "$1,240(Setting Price)"
+        ],
+        "surface_finish": [
+          "Rhodium Finish\n\nYes"
+        ]
+      }
     }
   ]
 }

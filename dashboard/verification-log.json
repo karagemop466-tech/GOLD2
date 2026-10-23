@@ -260,5 +260,28 @@
       "verified_prices": 4,
       "blank_prices": 1
     }
+  },
+  {
+    "timestamp_utc": "2026-10-23T00:06:45Z",
+    "command": "verify.py --check-build",
+    "result": "PASS",
+    "passes": {
+      "P1-sources": "PASS",
+      "P2-prices": "PASS",
+      "P3-blanks": "PASS",
+      "P4-crossref": "PASS",
+      "P5-retailers": "PASS",
+      "P8-evidence": "PASS",
+      "P6-build": "PASS",
+      "P7-links": "PASS"
+    },
+    "failures": [],
+    "counts": {
+      "rings": 5,
+      "retailers": 3,
+      "flags": 7,
+      "verified_prices": 4,
+      "blank_prices": 1
+    }
   }
 ]

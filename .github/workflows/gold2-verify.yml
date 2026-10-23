@@ -32,6 +32,12 @@ jobs:
       - name: Calculator unit tests
         run: node tools/test_calculator.js
 
+      - name: Companion dashboard audit (build, verify P1-P8, calculator tests)
+        run: |
+          python3 dashboard/scripts/build.py
+          python3 dashboard/scripts/verify.py --check-build
+          node dashboard/scripts/calc-test.js
+
       - name: Refresh the rendered QA summary after the audit
         run: python3 tools/build_site.py
 
@@ -39,7 +45,7 @@ jobs:
         run: python3 reviews/independent_snapshot_audit.py .
 
       - name: Confirm generated files were committed and are reproducible
-        run: git diff --exit-code -- . ':!reports/qa-report.md'
+        run: git diff --exit-code -- . ':!reports/qa-report.md' ':!dashboard/verification-log.json'
 
       - name: Upload the audit report
         if: always()

@@ -7,7 +7,7 @@ Publishing: GitHub Pages legacy source, `main` branch, repository root.
 
 ## What this repository contains
 
-An auditable register of **16 engagement-ring listings from 4 retailers**, organized into five categories. It separates:
+An auditable register of **17 engagement-ring listings from 4 retailers**, organized into five categories, plus a fifth seller record (Costco) with policy evidence but no priced rows. It separates:
 
 - official product facts from seller policy claims;
 - official seller pages from independent BBB profile data;
@@ -16,7 +16,7 @@ An auditable register of **16 engagement-ring listings from 4 retailers**, organ
 - retrieved facts from nominal gold calculations; and
 - remote document review from physical verification, which has **not** been performed.
 
-Current coverage: **13 assigned prices**, **1 published metal weight**, and **23 open flags**. No item-specific capture states the required “solid gold” wording or documents a physical hallmark plus maker’s mark. Those are evidence gaps, not findings that a ring is fake.
+Current coverage: **14 assigned prices**, **1 published metal weight**, and **23 open flags**. No item-specific capture states the required “solid gold” wording or documents a physical hallmark plus maker’s mark. Those are evidence gaps, not findings that a ring is fake.
 
 ## Dashboard pages
 
@@ -33,6 +33,7 @@ Current coverage: **13 assigned prices**, **1 published metal weight**, and **23
 | `flags.html` | **Flagged for Review:** missing evidence, discrepancies, source limits, and material policy restrictions |
 | `methods.html` | Evidence method, source hierarchy, limitations, security notes, and QA summary |
 | `site/` | Earlier two-listing dashboard, preserved with its own generator, audit, and calculator tests |
+| `dashboard/` | Companion research dashboard: 5 rings, 12-point checklist, gold-weight calculator, Costco research, own P1–P8 audit |
 
 Every current listing row links its **official product page** and its **own field-scoped evidence file**.
 
@@ -59,6 +60,7 @@ tools/
 reports/qa-report.md    latest automated audit result
 reports/source-link-review.md  dated external-source retrieval inventory
 scripts/, site/         preserved earlier-pass implementation
+dashboard/              companion dashboard (5 rings, checklist, calculator) + own audit/tests
 COORDINATION.md         shared task board, source log, integration/deployment record
 ```
 
@@ -70,6 +72,9 @@ python3 tools/qa.py
 node tools/test_calculator.js
 python3 tools/build_site.py  # refresh the rendered QA summary after the audit
 python3 reviews/independent_snapshot_audit.py .
+python3 dashboard/scripts/build.py
+python3 dashboard/scripts/verify.py --check-build
+node dashboard/scripts/calc-test.js
 ```
 
 Run this full sequence after every review. The audit checks:

@@ -7,7 +7,7 @@
       "severity": "high",
       "type": "checklist_gap",
       "title": "Item-specific “solid gold” wording is not stated",
-      "detail": "No item-specific title or specification explicitly describes any of the 16 listed settings/rings as “solid gold.” Karat wording alone is not substituted for that checklist requirement. A page-wide “solid gold” phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
+      "detail": "No item-specific title or specification explicitly describes any of the 17 listed settings/rings as “solid gold.” Karat wording alone is not substituted for that checklist requirement. A page-wide “solid gold” phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -24,8 +24,8 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
-      ],
+        "Z-20046552",
+        "BN-316238"],
       "affected_retailers": [],
       "sources": [
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
@@ -52,7 +52,7 @@
       "severity": "high",
       "type": "checklist_gap",
       "title": "Physical hallmark and maker’s mark are not documented",
-      "detail": "None of the 16 captured product pages documents the physical karat stamp inside the band plus a maker’s/manufacturer’s mark. Stock numbers, styles, and URL identifiers are not physical hallmarks. Both fields remain null, not false.",
+      "detail": "None of the 17 captured product pages documents the physical karat stamp inside the band plus a maker’s/manufacturer’s mark. Stock numbers, styles, and URL identifiers are not physical hallmarks. Both fields remain null, not false.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -69,8 +69,8 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
-      ],
+        "Z-20046552",
+        "BN-316238"],
       "affected_retailers": [],
       "sources": [
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
@@ -96,8 +96,8 @@
       "id": "F-003",
       "severity": "high",
       "type": "unverified",
-      "title": "Metal weight in grams is missing for 15 of 16 items",
-      "detail": "Only VRAI publishes an item-specific metal weight: 2.86 g at ring size 6. The other 15 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
+      "title": "Metal weight in grams is missing for 16 of 17 items",
+      "detail": "Only VRAI publishes an item-specific metal weight: 2.86 g at ring size 6. The other 16 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -113,8 +113,8 @@
         "BN-194158",
         "BN-195269",
         "Z-19957449",
-        "Z-20046552"
-      ],
+        "Z-20046552",
+        "BN-316238"],
       "affected_retailers": [],
       "sources": [
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
@@ -243,8 +243,8 @@
         "BN-302868",
         "BN-193625",
         "BN-194158",
-        "BN-195269"
-      ],
+        "BN-195269",
+        "BN-316238"],
       "affected_retailers": [
         "blue-nile"
       ],
@@ -293,11 +293,14 @@
       "severity": "low",
       "type": "excluded_source",
       "title": "Costco candidate not added: price and gram weight did not render",
-      "detail": "The directly fetched Costco page for item 1596365 exposed 0.50 ctw, VS2/I, 12 natural untreated diamonds, and 14kt white or yellow gold options, but no current price or gram weight in the retrieved content. It is not integrated as a priced engagement-ring row, and no unrelated cached price is assigned.",
+      "detail": "The directly fetched Costco page for item 1596365 exposed 0.50 ctw, VS2/I, 12 natural untreated diamonds, and 14kt white or yellow gold options, but no current price or gram weight in the retrieved content. It is not integrated as a priced engagement-ring row, and no unrelated cached price is assigned. Update 2026-10-22 (contributor session arena-70b76800): a second independent probe (item 1593579, finished jewelry guides plus the same jewelry-returns page) likewise found no rendered price or gram weight, so Costco still contributes no rows; Costco is now a full retailer record with return-policy/contact evidence (evidence/retailers/costco.md).",
       "affected_items": [],
-      "affected_retailers": [],
+      "affected_retailers": [
+        "costco"
+      ],
       "sources": [
-        "https://www.costco.com/p/-/round-brilliant-050-ctw-vs2-clarity-i-color-diamond-14kt-gold-band/100675127"
+        "https://www.costco.com/p/-/round-brilliant-050-ctw-vs2-clarity-i-color-diamond-14kt-gold-band/100675127",
+      "https://www.costco.com/p/dp-14kt-gold-075-ctw-vs2-clarity-g-color-round-brilliant-diamond-3-stone-ring.product.1593579.html"
       ],
       "recommended_action": "If this candidate is revisited, capture the exact item price while signed in and obtain a metal-only gram weight from Costco."
     },
@@ -306,7 +309,7 @@
       "severity": "high",
       "type": "comparability",
       "title": "Setting-only and complete-ring price bases are not directly comparable",
-      "detail": "Ten Blue Nile rows, the Brilliant Earth row, and the VRAI row use a setting/configurator basis (12 rows); the four Zales rows are complete diamond-ring products. Two Zales prices are additionally unassigned under F-018. Prices are never ranked across these bases, and EUR is not converted into USD.",
+      "detail": "Eleven Blue Nile rows, the Brilliant Earth row, and the VRAI row use a setting/configurator basis (13 rows); the four Zales rows are complete diamond-ring products. Two Zales prices are additionally unassigned under F-018. Prices are never ranked across these bases, and EUR is not converted into USD.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -323,8 +326,8 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
-      ],
+        "Z-20046552",
+        "BN-316238"],
       "affected_retailers": [],
       "sources": [
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
@@ -351,7 +354,7 @@
       "severity": "low",
       "type": "unverified",
       "title": "Numeric band-width and depth coverage is incomplete",
-      "detail": "Five rows have no numeric band width (four Zales rows plus VRAI, which says only “Standard”). Fifteen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth. All unavailable dimensions remain blank.",
+      "detail": "Five rows have no numeric band width (four Zales rows plus VRAI, which says only “Standard”). Sixteen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth. All unavailable dimensions remain blank.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -368,8 +371,8 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
-      ],
+        "Z-20046552",
+        "BN-316238"],
       "affected_retailers": [],
       "sources": [
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
@@ -485,14 +488,14 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
-      ],
+        "Z-20046552",
+        "BN-316238"],
       "affected_retailers": [
         "blue-nile",
         "zales",
         "vrai",
-        "brilliant-earth"
-      ],
+        "brilliant-earth",
+        "costco"],
       "sources": [
         "https://www.bluenile.com/policies/returns",
         "https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE",
@@ -561,8 +564,8 @@
         "BN-195269",
         "VRAI-CLASSIC-4P",
         "Z-19957449",
-        "Z-20046552"
-      ],
+        "Z-20046552",
+        "BN-316238"],
       "affected_retailers": [],
       "sources": [
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",

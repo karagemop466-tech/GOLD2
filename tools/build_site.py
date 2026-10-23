@@ -357,7 +357,7 @@ def build_retailers(retailers, items, retrieved):
         count = sum(1 for item in items if item["retailer_id"] == retailer["id"])
         contact = " · ".join(filter(None, [retailer.get("contact_phone"), retailer.get("contact_email")]))
         contact_html = esc(contact) if contact else blank("No direct contact captured")
-        contact_html += f'<div class="sub">{esc(", ".join(retailer.get("contact_channels", [])))}<br>{external_link(retailer["contact_source_url"], "contact source")}</div>'
+        contact_html += f'<div class="sub">{esc(", ".join(retailer.get("contact_channels") or []))}<br>{external_link(retailer["contact_source_url"], "contact source")}</div>'
         payments = ", ".join(retailer.get("payment_methods_verified") or [])
         payment_html = esc(payments) if payments else blank("Payment methods not captured")
         payment_html += f'<div class="sub">{external_link(retailer["payment_source_url"], "payment source")}</div>'
@@ -365,16 +365,24 @@ def build_retailers(retailers, items, retrieved):
         exclusions += f'<div class="sub">{external_link(retailer["return_policy_url"], "official policy")}</div>'
         test_permission = blank("Written independent-testing permission not captured")
         test_permission += '<div class="sub"><a href="flags.html#f-021">F-021</a></div>'
+        window_days = retailer.get("return_window_days")
+        window_text = f"{window_days} days" if window_days is not None else blank("No day count stated on the retrieved pages")
+        window_basis = retailer.get("return_window_basis")
+        window_basis_html = esc(window_basis) if window_basis is not None else blank("Return basis not captured")
         policy_rows.append(
             f'<tr><td><strong>{esc(retailer["name"])}</strong><div class="sub">{count} researched row(s)<br>{external_link(retailer["website"], "retailer site")}</div></td>'
-            f'<td>{retailer["return_window_days"]} days<div class="sub">{esc(retailer["return_window_basis"])}</div></td>'
+            f'<td>{window_text}<div class="sub">{window_basis_html}</div></td>'
             f'<td>{exclusions}</td><td>{payment_html}</td><td>{contact_html}</td><td>{test_permission}</td></tr>'
         )
+        exclusions_detail = retailer.get("return_exclusions_detail")
+        resize_terms = retailer.get("resize_policy")
+        shipping_basis = retailer.get("return_free_shipping_basis")
+        payment_scope = retailer.get("payment_note")
         detail_cards.append(
-            f'<div class="card"><h3>{esc(retailer["name"])}</h3><p class="small"><strong>Return exclusions:</strong> {esc(retailer["return_exclusions_detail"])}</p>'
-            f'<p class="small"><strong>Resize terms:</strong> {esc(retailer["resize_policy"])}</p>'
-            f'<p class="small"><strong>Return shipping:</strong> {esc(retailer["return_free_shipping_basis"])}</p>'
-            f'<p class="small"><strong>Payment scope:</strong> {esc(retailer["payment_note"])}</p>'
+            f'<div class="card"><h3>{esc(retailer["name"])}</h3><p class="small"><strong>Return exclusions:</strong> {esc(exclusions_detail) if exclusions_detail is not None else blank("Exclusions not captured")}</p>'
+            f'<p class="small"><strong>Resize terms:</strong> {esc(resize_terms) if resize_terms is not None else blank("Resize terms not captured")}</p>'
+            f'<p class="small"><strong>Return shipping:</strong> {esc(shipping_basis) if shipping_basis is not None else blank("Return-shipping terms not captured")}</p>'
+            f'<p class="small"><strong>Payment scope:</strong> {esc(payment_scope) if payment_scope is not None else blank("Payment methods not captured")}</p>'
             f'<a href="{esc(retailer["evidence_file"])}">Read field-scoped policy evidence</a></div>'
         )
         reputation = retailer["independent_reputation"]
@@ -391,13 +399,19 @@ def build_retailers(retailers, items, retrieved):
         else:
             complaints = blank("Not assigned")
         profile_url = reputation.get("profile_url") or reputation.get("candidate_profile_url")
-        profile_label = "BBB profile" if reputation.get("profile_url") else "candidate BBB profile"
-        rep_sources = external_link(profile_url, profile_label)
+        if profile_url:
+            profile_label = "BBB profile" if reputation.get("profile_url") else "candidate BBB profile"
+            rep_sources = external_link(profile_url, profile_label)
+        else:
+            rep_sources = blank("No BBB profile researched")
         if reputation.get("reviews_url"):
             rep_sources += f'<div class="sub">{external_link(reputation["reviews_url"], "reviews")} · {external_link(reputation["complaints_url"], "complaints")}</div>'
-        rep_sources += f'<div class="sub">retrieved {esc(reputation["retrieved_at"])}</div>'
+        rep_retrieved = reputation.get("retrieved_at")
+        rep_scope = reputation.get("profile_scope")
+        rep_scope_html = esc(rep_scope) if rep_scope is not None else blank("Independent reputation not researched")
+        rep_sources += f'<div class="sub">retrieved {esc(rep_retrieved) if rep_retrieved is not None else blank("not researched")}</div>'
         reputation_rows.append(
-            f'<tr><td><strong>{esc(retailer["name"])}</strong><div class="sub">{esc(reputation["profile_scope"])}</div></td>'
+            f'<tr><td><strong>{esc(retailer["name"])}</strong><div class="sub">{rep_scope_html}</div></td>'
             f'<td>{bbb_status}</td><td>{reviews}</td><td>{complaints}</td><td>{rep_sources}</td></tr>'
         )
     body = f"""
@@ -520,7 +534,7 @@ def build_methods(qa_summary, gold, items, flags, retailers, retrieved):
 <li><strong>Gold reference:</strong> World Gold Council spot page with quote date and ICE Data Services attribution.</li>
 <li><strong>Calculation constants/context:</strong> NIST troy-ounce conversion chart and eCFR gold-labeling guidance.</li>
 <li><strong>Rejected as product evidence:</strong> search snippets, aggregators, blogs, coupon pages, unrelated page text, and values from other items in the same category.</li></ul>
-<h2>3. Field-scoped evidence</h2><p>The current audit resolves <strong>{quote_count}</strong> field-specific quotes across 16 item files, four retailer files, and the gold/calculation evidence. A price, width, or karat in one item’s file cannot support another item. Shared category files are retained only as inherited audit history and are not authoritative inputs.</p>
+<h2>3. Field-scoped evidence</h2><p>The current audit resolves <strong>{quote_count}</strong> field-specific quotes across {len(items)} item files, {len(retailers)} retailer files, and the gold/calculation evidence. A price, width, or karat in one item’s file cannot support another item. Shared category files are retained only as inherited audit history and are not authoritative inputs.</p>
 <h2>4. Current limitations</h2><ul class="clean">{limitations}</ul>
 <h2>5. Automated checks after every review</h2><p>Run <code>python3 tools/build_site.py</code>, <code>python3 tools/qa.py</code>, <code>node tools/test_calculator.js</code>, and <code>python3 reviews/independent_snapshot_audit.py .</code>. The audits check schema, field-level quote backing, numeric/currency consistency, null-to-flag coverage, two-way flag references, official product domains, calculator arithmetic, built-row/source identity, internal links and fragments, CSP/script constraints, stale generated values, and independent cross-schema contradictions.</p>
 <pre class="qa">RESULT: {esc(qa_summary)}
@@ -528,11 +542,12 @@ Full timestamped log: reports/qa-report.md</pre>
 <p><a href="reports/qa-report.md">Open the complete timestamped QA report</a> · <a href="reports/source-link-review.md">Open the dated external source-link retrieval review</a></p>
 <div class="note"><strong>Recommendation:</strong> look for hallucinations again after every review and after any generator change. Automated checks reduce risk; they cannot prove a retailer’s claim or replace physical testing.</div>
 <h2>6. Earlier pass preserved</h2><p>The <code>site/</code> folder holds the earlier two-listing dashboard with its own audit and calculator tests: <a href="site/index.html">open the earlier dashboard</a>. Its two Blue Nile settings were re-fetched in this integration and appear as <code>BN-195402</code> and <code>BN-302868</code> on the <a href="halo-pave.html">Halo &amp; Pavé</a> page.</p>
-<h2>7. Data provenance summary</h2><dl class="kv">
+<h2>7. Companion dashboard</h2><p>The <code>dashboard/</code> folder holds a second research dashboard built in parallel (contributor session <code>arena-70b76800</code>): five rings including the BN-316238 James Allen solitaire, a 12-point buying checklist, a gold-weight calculator, and the Costco retailer research. It runs its own audit (<code>dashboard/scripts/verify.py</code>, checks P1-P8) plus calculator unit tests: <a href="dashboard/index.html">open the companion dashboard</a> and <a href="dashboard/methodology.html">its method page</a>.</p>
+<h2>8. Data provenance summary</h2><dl class="kv">
 <dt>Items</dt><dd>{len(items)}</dd><dt>Flags</dt><dd>{len(flags)}</dd><dt>Field-scoped quotes</dt><dd>{quote_count}</dd>
 <dt>Gold quote</dt><dd>${gold['usd_per_troy_oz']:,.2f}/oz · {esc(gold['quote_date'])} · {external_link(gold['source_url'], 'World Gold Council')}</dd>
 <dt>Retrieval dates</dt><dd>{esc(retrieved)} (UTC)</dd><dt>Repository</dt><dd>{external_link('https://github.com/karagemop466-tech/GOLD2', 'karagemop466-tech/GOLD2')}</dd></dl>
-<h2>8. What to do with a flagged row</h2><ol class="clean">
+<h2>9. What to do with a flagged row</h2><ol class="clean">
 <li>Open the official source and item evidence; re-read the exact field and price basis.</li>
 <li>Ask the seller in writing about solid-gold construction, metal-only gram weight, physical hallmark/maker’s mark, and independent non-destructive testing permission.</li>
 <li>Keep the written response and the dated checkout record. Do not rely on a cached snippet or an unlabeled amount.</li>

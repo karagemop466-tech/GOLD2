@@ -139,7 +139,7 @@ def verify_summary() -> str:
     fails = "".join(f"<li><code>{e(f)}</code></li>" for f in last.get("failures", []))
     return (
         f'<div class="{cls}"><p><strong>Latest published pass: {e(last["result"])}</strong> '
-        f'({e(last["timestamp_utc"])}, <code>{e(last["command"])}</code>)</p>'
+        f'(<code>{e(last["command"])}</code>; run timestamps live in <code>verification-log.json</code>, which is excluded from the reproducibility check)</p>'
         f"<p class=\"small\">{e(items)}</p>"
         + (f"<ul class=\"small\">{fails}</ul>" if fails else "")
         + "</div>"
