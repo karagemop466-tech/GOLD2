@@ -64,19 +64,19 @@ Source: https://www.gold.org/goldhub/data/gold-prices
 | Legacy dashboard constants, karat table, calculator default, FDJ and Sarraf melt prose, calculator tests recomputed at the new spot | `dashboard/scripts/build.py`, `dashboard/scripts/calc-test.js` | The old numbers were derived from the superseded quote; leaving them would publish stale arithmetic |
 | `F-026` detail rewritten without binding the chart date to the header and without quoting a single stale figure | `data/flags.json` | The header moved twice in one day |
 | Zales rows: today's labelled render appended to `render_history`; `unassigned_price_text` set to the verbatim render actually seen, with a matching `unassigned_price_text` field quote | `data/listings/budget.json`, `data/listings/three-stone-vintage.json` | The register showed a blank price line for rows whose page displayed an amount. The amount is still **not** assigned because no ISO currency is stated |
-| New flags `F-039` (identity drift) and `F-040` (log/register disagreement) | `data/flags.json`, `data/retailers.json`, `data/verification-log.json`, item flags | See below |
+| New flags `F-041` (identity drift) and `F-042` (log/register disagreement) | `data/flags.json`, `data/retailers.json`, `data/verification-log.json`, item flags | See below |
 | `BN-316238` status → `identity mismatch · review` | `data/listings/halo-pave.json` | Stored name no longer matches the served page |
-| "Two registers, not one" note derived from the data files (30 root rows / 41 companion entries / 27 shared URLs / 3 root-only rows / 45 URLs across both) | `tools/build_site.py` → `index.html` | The scanner repeatedly flagged an "all entries" claim that compared two different registers |
-| README counts corrected to 30 rows, 9 retailers, 38 flags, 41 companion entries, 46 HTML pages | `README.md` | Five stale counts (REQ-A87A-04) |
+| "Two registers, not one" note derived from the data files (30 root rows / 44 companion entries / 27 shared URLs / 3 root-only rows / 45 URLs across both) | `tools/build_site.py` → `index.html` | The scanner repeatedly flagged an "all entries" claim that compared two different registers |
+| README counts corrected to 30 rows, 9 retailers, 38 flags, 44 companion entries, 46 HTML pages | `README.md` | Five stale counts (REQ-A87A-04) |
 
 ## 5. Irregularities published for review (nothing was silently repaired)
 
-1. **F-039 — Blue Nile `BN-316238` served a different product.** The URL slug says
+1. **F-041 — Blue Nile `BN-316238` served a different product.** The URL slug says
    *petite-micropave-engagement-ring-in-14k-white-gold-item-316238*; the live page returned
    **"Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen"**, stock
    `505097w14`, `1.50mm`, `$1,240(Setting Price)`. The row keeps its stored description, its
    price stays blank, and the discrepancy is on the Flagged for Review page with the URL.
-2. **F-040 — the verification log recorded that `$1,240` as a "verified match"** while the row
+2. **F-042 — the verification log recorded that `$1,240` as a "verified match"** while the row
    itself carried no price and a different name. Log entry corrected; the row stays blank.
    This is exactly the class of error the project says not to make: a value that the register
    never accepted had already been written into a "verified" log.
@@ -93,7 +93,7 @@ Source: https://www.gold.org/goldhub/data/gold-prices
 - `github.io` is outside this sandbox's outbound allowlist, so the deployed site could not be
   read back through this session's browser-equivalent tool. Deployment is evidenced by the
   GitHub Pages API build record for the merge commit (see `COORDINATION.md`).
-- The companion `explore/` register's 41 entries were **not** individually re-fetched in this
+- The companion `explore/` register's 44 entries were **not** individually re-fetched in this
   pass. Their stored quotes keep their own observation dates; nothing was upgraded to
   "verified today" by association with the root pass.
 - Search snippets, cached copies and third-party mirrors were never used as price evidence.

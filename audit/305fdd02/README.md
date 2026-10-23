@@ -4,7 +4,7 @@ Independent live re-verification and integration pass over the GOLD2 repository.
 
 **Headline:** every one of the 30 root-register rows was re-read from its own official product
 URL in this session. 29 rendered the stored values. One URL (`BN-316238`) now serves a different
-product, which is published as **F-039/F-040** rather than quietly "fixed". The World Gold
+product, which is published as **F-041/F-042** rather than quietly "fixed". The World Gold
 Council header was re-read twice and moved again, so the gold reference was refreshed to the
 latest observation and every derived number on all three dashboards was recomputed.
 
@@ -12,7 +12,7 @@ latest observation and every derived number on all three dashboards was recomput
 
 - `live_verification.md` — the line-by-line record: each row, the URL read, the verbatim text
   seen, whether it matched the stored value, and what was changed as a result.
-- `../data/flags.json` — the published flag register (now `F-001`–`F-040`), rendered on
+- `../data/flags.json` — the published flag register (now `F-001`–`F-042`), rendered on
   `flags.html` and linked from every affected row.
 
 ## What was checked, and against what

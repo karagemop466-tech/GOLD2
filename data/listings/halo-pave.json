@@ -421,12 +421,12 @@
         "F-021",
         "F-024",
         "F-025",
-        "F-039",
-        "F-040"
+        "F-041",
+        "F-042"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
-      "notes": "Re-read 2026-10-23: the URL now serves “Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen”, stock 505097w14, 1.50mm, “$1,240(Setting Price)”. Stored name, price and displayed text are left blank/unassigned because the served product no longer matches the stored record (F-039, F-040).",
+      "notes": "Re-read 2026-10-23: the URL now serves “Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen”, stock 505097w14, 1.50mm, “$1,240(Setting Price)”. The displayed amount is kept verbatim but is not treated as this row's price because the served product no longer matches the stored record (F-041, F-042).",
       "field_evidence": {
         "name": [
           "Petite Micropavé Engagement Ring in 14k White Gold"
