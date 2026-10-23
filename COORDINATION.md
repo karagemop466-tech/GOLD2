@@ -1049,3 +1049,24 @@ Platform constraint: this session is bound to `arena/f69a82ea-gold2`; it cannot 
 - **Branch synchronization note:** after rebasing the pushed claim onto the then-current `main`, the first normal push was rejected because the remote branch still pointed to the original claim commit (`620000d`). The remote was fetched and compared; its only unique change was this session’s same claim commit, already represented in the rebased local tree. Resolved with `--force-with-lease` pinned to `620000d`; no other session’s work was removed.
 - **Remaining irregularities:** 10 provenance warnings remain disclosed (three evidence quotes not mirrored to JSON fields; four ambiguous Zales display strings); root QA has three coverage warnings; three root-only products remain omitted from Explore but visible in the root dashboard and linked on the review page. See `audit/f69a82ea/consistency-and-hallucination-review.md`.
 - **Recommendation carried forward:** re-open primary sources and look for hallucinations again after every review. Automated PASS is not proof of seller claims or physical gold purity.
+
+## Claim — Session S-1B04074F (2026-10-23 UTC, active)
+
+Platform constraint: this session is bound to `arena/1b04074f-gold2`; no other branch or worktree may be created or pushed. Isolation is enforced by exclusive file scope. All earlier claims on this board are `done`; none is being reclaimed.
+
+**Active-claim check at claim time:** the last row of every prior claim table reads `done`. The only stale `in progress` strings are historical narrative (`T-E0-05`, `T-D4-04`), both superseded by recorded merges (PR #38 / PR #28). `main` is at `ca39632` (PR #44 merged), Pages `status: built`, `build_type: legacy`, source `main` / `/`, `https_enforced: true`.
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| T-1B0-01 | Claim the board and record the plan before any edit | done | S-1B04074F | `COORDINATION.md` |
+| T-1B0-02 | Live line-by-line re-verification of every root-register row and every combined-register product against its own official URL | in progress | S-1B04074F | `audit/1b04074f/**` |
+| T-1B0-03 | Gold-reference freshness re-read (World Gold Council official page) | in progress | S-1B04074F | `audit/1b04074f/**` |
+| T-1B0-04 | Hallucination / provenance / security pass with mutation controls; publish findings | in progress | S-1B04074F | `audit/1b04074f/**`, `data/flags.json`, `flags.html` |
+| T-1B0-05 | Correct only values directly contradicted by a live official page; log every correction | unclaimed | S-1B04074F | `data/**`, `evidence/**`, `README.md` |
+| T-1B0-06 | Final integration: full local suite, PR to `main`, merge, Pages deployment record | unclaimed | S-1B04074F | `COORDINATION.md`, regenerated root `*.html` |
+
+Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero and never a negative physical finding; nothing is inferred, averaged, or filled from a neighbouring value; every published value needs a field-scoped quote from a page retrieved by the session that publishes it; an automated PASS proves only that the stated controls ran; **look for hallucinations again after every review**.
+
+### S-1B04074F working log
+
+- 2026-10-23 — Board read in full before editing. Claim written and pushed before any data, evidence, page or script edit.
