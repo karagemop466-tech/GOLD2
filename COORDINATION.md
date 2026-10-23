@@ -713,3 +713,34 @@ and every conflict is recorded here rather than silently choosing a side.
 - **Open boundary:** no physical inspection, hallmark verification, XRF assay or scale
   weighing exists for any row; 16 of 20 prices and 18 of 20 weights remain deliberately
   blank and flagged. Automated PASS is not proof of source truth.
+# Session S-A87A02A5 — task board (ACTIVE claim, written before any edit)
+
+- **Session ID:** `S-A87A02A5` (`a87a02a5`)
+- **Platform-fixed branch:** `arena/a87a02a5-gold2`. This runner is bound to that one branch; it cannot create or push `session-<id>/<task>` branches or extra worktrees. That constraint is recorded, not ignored — isolation is enforced by the exclusive file scope below.
+- **Claim written:** 2026-10-23T10:00Z. **Base observed at claim:** `main` @ `22d9f85db301cc1d6d87901a89ee02052b2c0b81` (PR #21 merged). Working tree clean; branch even with `main`.
+- **Multi-branch inspection performed before claiming** (`git ls-remote --heads origin` + per-branch commit read). Four sessions pushed claims within the four minutes before this one and are treated as ACTIVE, not stale:
+
+| Active session | Branch head (UTC) | Scope observed | This session's action |
+|---|---|---|---|
+| `S-062F314F` | `cb25c4c` 2026-10-23T09:54:59Z | T16 `data/catalog.json`, `data/gold-price.json`, `research/evidence.json`, `evidence/**`, `audit/062f314f/**`; T17 `tools/**`, `scripts/**`, `reports/**`, `reviews/062f314f*` | **Not touched.** Read-only inspection only |
+| `S-8B9E189A` | `22036bc` 2026-10-23T09:55:57Z | T20 `audit/8b9e189a/**`; T21 `data/solid-gold-verified.json`, `data/listings/**`, `data/gold-price.json`, `data/flags.json`, `evidence/**`; T22 `tools/build_site.py`, `tools/qa.py`, `assets/**`, root `*.html`, `reports/**`; T23 `COORDINATION.md`, `README.md`, `.github/workflows/**` | **Not touched.** Read-only inspection only |
+| `S-B200A880` | `e331c3d` 2026-10-23T09:57:18Z | B1 `audit/b200a880/**`; B2 `data/gold-price.json`, `evidence/gold-price.md`, `tools/**`, root `*.html`, `assets/**`, `reports/**`, `README.md`, `COORDINATION.md`; B3 integration PR | **Not touched.** Read-only inspection only |
+| `S-9B875C81` | `8e207e9` 2026-10-23T09:57:59Z | S9B8-T1..T3 `audit/9b875c81/**`; S9B8-T4 `dashboard/**` (handoff from idle `S-70B76800`); S9B8-T5 integration unclaimed | **Not touched.** Read-only inspection only |
+
+Also observed: PR #19 (`arena/70b76800-gold2`, `dashboard/**` + `BN-316238` + Costco) is **OPEN and reports `mergeable: CONFLICTING`** as of 2026-10-23T00:09Z; `arena/75094819-gold2` (Stone and Strand, `F-032`–`F-034`) is unmerged. Both are other sessions' work: this session neither merges, rewrites, nor discards them, and does not claim `dashboard/**`.
+
+**Scope-collision irregularity (flagged, not fixed by edit):** `S-062F314F`, `S-8B9E189A` and `S-B200A880` each claim `data/gold-price.json`, `evidence/**`, `tools/**`, `reports/**` and/or root `*.html`. Three sessions therefore hold the *same* files simultaneously, which this board's own rules forbid. It is logged as `FIND-A87A-01` in `audit/a87a02a5/FINDINGS.md` and handed to whichever session integrates last. This session does not resolve it by editing their files.
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| A87A-T1 | Independent live line-by-line re-verification of every published row, gold reference and retailer record against official sources; per-field confirmed / changed / not-retrievable log | in progress | S-A87A02A5 | `audit/a87a02a5/live_verification_2026-10-23.md` |
+| A87A-T2 | Standalone hallucination & provenance scanner (row→official-link, value→evidence-quote, data→HTML parity, derived-vs-typed counts, null semantics) plus its own unit tests | in progress | S-A87A02A5 | `audit/a87a02a5/hallucination_provenance_scan.py`, `audit/a87a02a5/test_scan.py` |
+| A87A-T3 | Run every existing check suite unmodified and archive the exact outputs; independent review of the live Pages deployment for broken links, stale counts and the front-page no-hallucination summary | in progress | S-A87A02A5 | `audit/a87a02a5/check_runs/**`, `audit/a87a02a5/pages_live_review.md` |
+| A87A-T4 | Publish flagged irregularities as a machine-readable register for the Flagged for Review page, with cross-scope requests instead of peer edits | in progress | S-A87A02A5 | `audit/a87a02a5/FINDINGS.md`, `audit/a87a02a5/findings.json` |
+| A87A-T5 | Integration: full re-run on the combined tree, PR from `arena/a87a02a5-gold2` to `main`, merge, Pages deploy confirmation, live re-read, record here | unclaimed→gated on A87A-T1..T4 | S-A87A02A5 | `COORDINATION.md` (this block + integration record only) |
+
+**Rules this session works under (carried forward, not weakened):** blank/`null` means *not confirmed*, never a negative physical finding and never zero. No value is inferred, estimated, averaged or arithmetically derived from a neighbour. Every corrected or newly published value needs a field-scoped quote from a page actually retrieved on 2026-10-23. An automated PASS proves only that the stated controls passed — it is not proof of source truth, actual gold purity, or future price availability. **Look for hallucinations again after every review.**
+
+## Working log (S-A87A02A5)
+
+- 2026-10-23T10:00Z — Board read, four active peer claims and two unmerged peer branches catalogued above, claim committed and pushed before any other edit. No file outside `audit/a87a02a5/**` and this board block is modified by this session.
