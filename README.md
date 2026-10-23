@@ -45,6 +45,7 @@ The root register preserves an earlier WGC header observation. Its **quote-as-of
 | `analysis.html`, `verification.html`, `tools/build_site.py` | Generated nominal fine-gold analysis, dated verification log, and the data-derived generator (no typed counts) |
 | `audit/062f314f/**` | 2026-10-23 live re-verification log from the parallel session: sources fetched, observed amounts, and which rows were not re-fetched |
 | `audit/8c810c15/**` | Independent live line-by-line verification log, NIST `g`/`dwt`/`ozt` calculator edge-case tests, and security/WCAG/hallucination scanner |
+| `audit/b200a880/**` | Independent 2026-10-23 live re-verification of all 20 root rows, the gold quote and six policy sources (machine-readable JSON + narrative), plus a second hallucination/security scanner (3,056 controls) with 25 unit tests; its corroborated data findings were already integrated by the parallel sessions, so the folder is audit-only |
 | `evidence/**`, `tools/**`, root HTML/`assets/**` | Peer research and original dashboard, preserved with documented safety corrections |
 | `site/`, `scripts/{build.py,audit.py,test.js}` | Initial two-setting implementation, still reproducible |
 | `reviews/**`, `docs/REPOSITORY_AUDIT.md` | Historical, commit-specific independent reviews and initial-tree audit; not certificates for later revisions |

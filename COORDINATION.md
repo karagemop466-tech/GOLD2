@@ -2,6 +2,29 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Claim — Session S-D4C0A507 (2026-10-23 UTC)
+
+Platform constraint: this session is bound to `arena/d4c0a507-gold2`; no other branch or worktree may be created or pushed. Every session listed below is already marked done, so their exclusive file scopes are **not** being reclaimed. This session performs a fresh line-by-line re-verification pass and the final integration / PR / deployment pass.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T-D4-01 | Independent live line-by-line re-verification of the root register, gold reference, and evidence trail | done | S-D4C0A507 | `audit/d4c0a507/**` |
+| T-D4-02 | Gold reference freshness refresh from the official WGC page | done | S-D4C0A507 | `data/gold-price.json`, `evidence/gold-price.md`, regenerated root `*.html`, `reports/qa-report.md` |
+| T-D4-03 | Flag correction where the official pages contradicted the flag's premise | done | S-D4C0A507 | `data/flags.json`, regenerated `flags.html`, `three-stone-vintage.html` |
+| T-D4-04 | Final integration, PR, merge, and Pages deployment | in progress | S-D4C0A507 | `COORDINATION.md`, PR/merge records |
+
+### S-D4C0A507 working log
+
+- 2026-10-23 — Read the board. All prior `main` tasks (`39da17c8`, `T01`–`T14`, `S-CA4C9D8A`, `arena-24aeb4a8`, `S-8C810C15`) are done; PR #21 merged and Pages live. Claimed T-D4-01–T-D4-04 with the non-overlapping scopes above. No prior session's files were discarded or rewritten beyond the two corrections logged below.
+- 2026-10-23 — Re-read the official WGC page: header `USD /oz - 4,024.45 Last Updated`, chart `Data as of 22 October, 2026`. The published reference (4,028.53, retrieved 2026-10-22) was one retrieval day stale. Refreshed `data/gold-price.json` to 4,024.45 / retrieved 2026-10-23, moved 4,028.53 to `superseded_observations`, and updated `evidence/gold-price.md`. Regenerated the root pages. This is a freshness refresh of the existing dated-observation model, not a new inference.
+- 2026-10-23 — Live re-read of both Zales pages showed explicitly labeled amounts (`Discounted Price $979.30  Original Price was $1,399.00 30% Off` and `Discounted Price $769.30  Original Price was $1,099.00 30% Off`), contradicting F-018's "unlabeled" premise; an earlier session recheck (`research/evidence.json`) had already recorded `Discounted Price …` for both. Corrected F-018's title, detail, and recommended action. The amounts stay **unassigned** because the currency is a bare dollar sign with no confirmed ISO code (F-025).
+- 2026-10-23 — Automated evidence-trail check across all 20 root rows: every `source_url` matches its evidence file's official URL and every `field_evidence` quote appears verbatim — 0 mismatches, 0 missing quotes.
+- 2026-10-23 — Live re-verified Automic Gold (3 rows), Mejuri, Blue Nile BN-203348, VRAI (URL resolves), and both Zales rows against their official pages; the re-read values matched. VRAI's size-6 `2.86 g` line and Brilliant Earth's `€ 990.00` block are rendered client-side and were not present in the markdown extraction; recorded as *not re-confirmed by this pass*, with no value changed.
+- 2026-10-23 — `tools/qa.py` first **FAILED** the stale-output guard because the new F-026 text repeated the superseded figures. Reworded F-026 to describe the four header observations without repeating superseded values. The guard was **not** weakened; it correctly caught the repetition.
+- 2026-10-23 — Full local pass after the edits: root QA **PASS — 10 checks, 0 failures, 3 warnings**; calculator tests PASS; `reviews/independent_snapshot_audit.py` 0 findings / 6 arithmetic controls; `node --test` 23/23; `verify` PASS (32 products, 60 sources, 0 purchase approvals); `build.mjs` 13 pages; `check-links` PASS (102 external publisher URLs); `audit.py` PASS. The generator is reproducible (rebuild produces no diff).
+- 2026-10-23 — **Rebase conflict with a concurrent session — resolved without discarding work.** `git pull --rebase origin main` found `main` advanced to `fee89f0` (PR #23, session `S-8B9E189A`), which had independently re-read the same official pages and corrected the same items: gold reference 4,028.53→4,024.45, the Zales label-instability finding, the Brilliant Earth USD correction, and a single currency rule for every row (F-033). Conflicts in `data/gold-price.json`, `data/flags.json`, `evidence/gold-price.md`, `flags.html`, `methods.html`, `three-stone-vintage.html`, and `reports/qa-report.md` were resolved by taking the **merged PR #23 content** (it is newer and CI-verified) and keeping this session's independent audit record in `audit/d4c0a507/`. No prior session's data, evidence, review, or coordination record was deleted.
+- 2026-10-23 — Re-verified the integrated tree after the rebase: root QA **PASS — 11 checks, 0 failures, 3 warnings**; calculator PASS; independent snapshot audit PASS (6 arithmetic controls); `node --test` 23/23; `check-links` PASS (71 local targets, 102 external publisher URLs); `audit.py` PASS. Remaining warnings are coverage gaps, not verification failures: 16 of 20 rows have no assigned price, 18 of 20 publish no metal weight, and the WGC header quote time stays unconfirmed (F-026).
+
 ## Claim — Session S-CA4C9D8A (completed 2026-10-22 UTC)
 
 Platform constraint: this session is bound to `arena/ca4c9d8a-gold2`; no other branch or worktree may be created or pushed. File scopes below are exclusive to this session while active.
@@ -65,6 +88,7 @@ The clean-tree check caught and fixed a stale intermediate FAIL badge before PR 
 | `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 & #14 merged; findings dispositioned by S-CA4C9D8A |
 | `S-CA4C9D8A` | `arena/ca4c9d8a-gold2` | field-scoped re-verification, dashboard/calculator, combined QA, integration and closeout | T12–T15 done; PR #15 & #16 merged and Pages built |
 | `S-8C810C15` (8c810c15) | `arena/8c810c15-gold2` | independent live line-by-line audit, explicit `"Solid 14k Gold"` catalog expansion (`Automic Gold` + `Mejuri`), security/hallucination/WCAG scanner (`audit/8c810c15/**`), and final additive integration | in progress |
+| `S-B200A880` (b200a880) | `arena/b200a880-gold2` | independent 2026-10-23 live re-verification of all 20 root rows, gold quote and 6 policy sources; independent hallucination/security scanner (`audit/b200a880/**`, 3,056 controls, 25 unit tests); rebase onto `39c81db` with corroboration-only integration and Z-203 wording correction | see section below |
 
 All sessions share one environment constraint: the runner is bound to a single branch and cannot create
 `session-<id>/<task>` worktrees. That is recorded rather than ignored. Work is therefore separated by
@@ -572,7 +596,24 @@ and every conflict is recorded here rather than silently choosing a side.
 | S9B8-T2 | Fresh 2026-10-23 official-source research for additional solid-gold / hallmark / gram-weight engagement rings and seller policies (strict No Hallucinations rule: blank + flagged where unverified) | done | S-9B875C81 | `audit/9b875c81/new-listings-2026-10-23.json`, `audit/9b875c81/evidence/**` |
 | S9B8-T3 | Cross-repository security, No-Hallucinations provenance, `solid-gold-verified.json` & `dashboard/` parity, melt-formula, stale-prose-count, HTML row-source-link, and CSP audit pass + unit tests | done | S-9B875C81 | `audit/9b875c81/hallucination_security_pass.py`, `audit/9b875c81/test_pass.py` |
 | S9B8-T4 | Clean multi-category GOLD dashboard, category subpages, No-Hallucinations front-page summary, live gold/wt melt calculator (`g`/`dwt`/`ozt`), and Flagged for Review register (stale >60m handoff from `S-70B76800`) | done | S-9B875C81 | `dashboard/**` |
-| S9B8-T5 | Final multi-branch integration (`S-062F314F` + `S-8B9E189A` + `S-75094819` + `S-70B76800` + `S-9B875C81`), root/explore/dashboard/site build & full link/WCAG/hallucination passes, PR to `main`, merge, and live GitHub Pages verification | in progress | S-9B875C81 | `data/**`, `evidence/**`, `reviews/**`, `tools/**`, `site/**`, root `*.html`, `reports/**`, `.github/workflows/**`, `README.md`, `COORDINATION.md` |
+| S9B8-T5 | Final multi-branch integration (`S-062F314F` + `S-8B9E189A` + `S-D4C0A507` + `S-B200A880` + `S-75094819` + `S-70B76800` + `S-9B875C81`), root/explore/dashboard/site build & full link/WCAG/hallucination passes, PR to `main`, merge, and live GitHub Pages verification | done (pending PR merge & live Pages check) | S-9B875C81 | `data/**`, `evidence/**`, `reviews/**`, `tools/**`, `scripts/**`, `explore/**`, `dashboard/**`, root `*.html`, `reports/**`, `.github/workflows/**`, `README.md`, `COORDINATION.md` |
+
+## S-9B875C81 completion & cross-session integration log (`2026-10-23`)
+
+- **New live primary-source audit (`S9B8-T1`–`T2`, `2026-10-23` UTC):**
+  - **Sarraf Jewelry Inc.** (`sarraf.com` + LA BBB `1216-13041977`): verified **BBB Accredited Since 1998 (`A+`)**, `2.33/5` (`3` customer reviews), `6` complaints/3 yrs (`0` in 12 mos). Added 4 explicit `14K Solid Gold` + separate metal-weight (`g`) + explicit `US$` listings: `SAR-147370` (`3.80g`, `US$3,004.00`, `0.94ct` diamond), `SAR-145362` (`10.00g`, `US$2,661.00`, `0.50ct`), `SAR-145364` (`8.00g`, `US$2,858.00`, `0.50ct`), and `SAR-144773` (`13.40g` size 10, `US$1,362.00` = **74.3% pure bullion melt share** at `$4,024.45/oz`). Logged policy & size-10 benchmark findings (`F-036`).
+  - **Automic Gold (`AG-24K`):** verified `Solid 24k Gold` (`99.99%`), `11.0g`, `4.5mm × 2.2mm`, `$3,520.00 USD` (`cart.js` `"currency":"USD"`, **40.4% pure bullion melt share**); also fixed `tools/build_site.py` `status_badge` so `24K` rows never display a hardcoded `14k` badge and fixed missing `mejuri.com` + new hosts in `explore/assets/app.mjs`.
+  - **Factory Direct Jewelry (`FDJ-GR0001`):** verified `14K Solid Gold`, `Karat stamped inside the band.`, `$1,299.99 USD`, and flagged **HIGH CAUTION** (`F-035`) after catching `Weight:1.25 Grams` alongside `Total Carat Weight: 1.37cts` (`0.274g` diamond mass -> `0.976g` net 14K = `$73.67` melt if gross) plus unaccredited LA BBB `1216-100094648` (`1.8/5` across `5` reviews, `11` complaints, `20%` alteration fee).
+- **Non-destructive multi-branch preservation (`S9B8-T4`–`T5`):**
+  - Preserved 100% of merged `S-062F314F` (PRs #22/#24/#27), `S-8B9E189A` (PRs #23/#25/#26), `S-D4C0A507` (PR #28), and `S-B200A880` (PR #29).
+  - Rescued & live-reverified stale `S-75094819` (`Stone and Strand` `SS-CLARA`, `SS-RITA`, `SS-MIA` + NYC BBB `0121-87138934` + `F-034`, `F-037`) and stale `S-70B76800` (`BN-316238`, `Costco` `F-038`, and 14-page `dashboard/` including 6 category subpages and NIST `g`/`dwt`/`ozt` + `0.200 g/ct` gemstone deduction calculator).
+- **Pre-PR verification sweep (`0` errors across all 6 independent scanners & all 46 HTML pages):**
+  - `S-B200A880` scanner: `4,220` controls, `0` failures, `PASS` (`25/25` unit checks).
+  - `S-9B875C81` scanner: `1,976` controls, `0` findings, `PASS` (`4/4` unit suites).
+  - `S-8C810C15` scanner: `202` controls, `0` findings, `PASS` (`6/6` unit tests).
+  - `dashboard/scripts/verify.py --check-build` (`P1`–`P8`) + `calc-test.js` (`23/23`): `PASS`.
+  - `tools/qa.py` (`11/11`, `0` failures) + `reviews/independent_snapshot_audit.py` (`0` findings, `12` arithmetic controls) + `npm run check` (`41` products across `12` sellers, `23/23` Node tests, `46` HTML pages static security & links, real headless Chromium + `@axe-core/playwright` WCAG A/AA `0` violations, `npm audit` `0` vulnerabilities): `PASS`.
+  - **Ongoing recommendation:** Keep checking primary sources and generated tables for hallucinations after every review and edit; automated `PASS` verifies internal provenance and math, not physical metal purity.
 
 ## Cross-scope requests logged by `S-9B875C81` (instead of editing active peer claims)
 
@@ -581,3 +622,61 @@ and every conflict is recorded here rather than silently choosing a side.
 - **REQ-9B8-03 (to `S-8B9E189A` / `T22` and final integration):** Ensure the front landing page (`index.html`) prominently highlights the **No Hallucinations Policy** in its top summary, every verification pass references No Hallucinations explicitly, and every review concludes with a recommendation to keep scanning for hallucinations.
 
 
+
+---
+
+# Session S-B200A880 — independent re-verification, scanner, and rebase integration
+
+- **Session ID:** `S-B200A880` (`b200a880`)
+- **Platform-fixed branch:** `arena/b200a880-gold2` (no other branch/worktree can be created; isolation by file scope).
+- **Base at claim:** `main` @ `22d9f85`. **Rebased before integration onto:** `main` @ `a84c153` (PRs #22–#28 by `S-062F314F`, `S-8B9E189A` and `S-D4C0A507` had landed in the interim; only generated-report/board conflicts, resolved by combining).
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| B1 | Independent live line-by-line re-verification of all 20 root product rows, the WGC gold quote and 6 retailer policy sources on 2026-10-23 | done | S-B200A880 | `audit/b200a880/**` (read-only inspection of `data/**`, `evidence/**`) |
+| B2 | Independent hallucination/security scanner and unit tests; rebuild and full-gate verification | done | S-B200A880 | `audit/b200a880/hallucination_security_scanner.py`, `audit/b200a880/test_scanner.py` |
+| B3 | Rebase onto current `main`, combine without discarding other sessions' work, PR and Pages confirmation | in progress | S-B200A880 | `COORDINATION.md`, `README.md`, plus the two Z-203 wording corrections noted below |
+
+## S-B200A880 working log
+
+- **2026-10-23 — Independent pass (B1).** All 20 official product URLs, the WGC gold page and 6 retailer
+  policy URLs were re-fetched live. Result: 16 exact row matches, 4 dated evidence updates, zero
+  hallucinated values, 15 unconfirmable values left blank. Machine-readable record and narrative in
+  `audit/b200a880/live_verification_2026-10-23.json` and `live_line_by_line_verification.md`.
+- **2026-10-23 — Gold and Brilliant Earth findings corroborated, not duplicated.** This session
+  independently read WGC **4,024.45 USD/oz** (chart "Data as of 22 October, 2026", header timestamp
+  absent → `quote_date` null) and BE-121H6 **`$890(Setting Only)`** with a page-level USD selector
+  (EUR €990 retained only as superseded history, no FX conversion). The parallel sessions had already
+  integrated the identical observations via PRs #22–#27; after the rebase this branch therefore keeps
+  no overlapping data edits and accepts `main`'s stricter one-currency model (F-033): 4 assigned
+  prices, 16 displayed-but-unassigned amounts.
+- **2026-10-23 — Corroborated re-read.** `main`'s verification log marks `AG-CUSHION-SIGNET` "not
+  re-read this pass"; this session re-fetched it on 2026-10-23 and re-read `$2,758`, solid 14k gold
+  and the ~5.5 g stone-inclusive item weight exactly as stored. The later-merged `S-D4C0A507` audit
+  (PR #28) independently re-read the same row with the identical match, so two independent dated
+  observations now back it; no structured value changed and the register's dating is untouched.
+- **2026-10-23 — Zales label instability (F-018) corroborated.** This session read Z-20303279 and
+  Z-20301172 **with** explicit Discounted/Original labels while Z-20046552 rendered **without** labels;
+  the parallel sessions recorded the opposite split for the same URLs. All amounts stay unassigned.
+  One evidence-backed wording correction was made: the two Z-203 rows' present-tense "renders ...
+  without labels" notes (and their 2026-10-22 evidence sections) now describe the render-to-render
+  instability and point at the labeled 2026-10-23 re-verification already present in the same evidence
+  files. No values, flags or assignments changed.
+- **2026-10-23 — B200-F1 disposition updated.** This session's static fetch of the Zales policy page
+  returned a client-rendered shell; `S-062F314F` retrieved the same URL successfully the same day and
+  re-confirmed the 30-day returns / 60-day exchanges wording on `verification.html`, so the policy is
+  re-verified on `main` and the shell limitation is recorded as tool-path-specific.
+- **2026-10-23 — Scanner adapted to the integrated model (B2).** The independent scanner now mirrors
+  `tools/qa.py`'s authoritative three-branch blank-price rule (unassigned text → F-018; native display
+  without ISO currency → F-025; no price string → F-008), covers the new `verification.html` and
+  `analysis.html` pages, and adds currency-evidence and baseline blank-state flag controls. Result:
+  **3,056 controls, 0 failures, 0 warnings**; unit tests extended from 18 to **25**
+  (`required_item_flags` rule tests included).
+- **2026-10-23 — Full gate after rebase (all PASS).** `tools/build_site.py` + `tools/qa.py`
+  (11 checks, 0 failures, 3 coverage warnings); `tools/test_calculator.js`;
+  `reviews/independent_snapshot_audit.py` (0 findings, 6 arithmetic controls); `scripts/build.py`,
+  `scripts/audit.py`, `scripts/test.js`; `audit/8c810c15` scanner (0 findings, 154 controls);
+  `audit/b200a880` scanner (3,056 controls) and 25 unit tests; `npm run check` end-to-end
+  (`verify` 32 products/60 records, 23/23 node tests, 13-page build, 30 pages/102 external links,
+  static security + `npm audit` 0 vulnerabilities, browser/axe 32 gates, zero external runtime
+  requests). Nothing from the parallel sessions was discarded or overwritten.
