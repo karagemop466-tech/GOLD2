@@ -1,6 +1,6 @@
 # Evidence — dated gold quote and calculation constants
 
-- **Retrieved:** 2026-10-23 (UTC), direct page fetches; the prior 2026-10-22 observation is kept below as superseded history.
+- **Retrieved:** 2026-10-22 (UTC), direct page fetches.
 - **Current quote source:** World Gold Council, Gold spot prices.
 - **Conversion source:** US National Institute of Standards and Technology (NIST).
 - **Karat-labeling context:** government-hosted eCFR; useful regulatory guidance, not a physical assay.
@@ -18,20 +18,15 @@ USD
 
 -
 
-4,024.45
+4,028.53
 Last Updated
-```
-
-### `chart_as_of_date` (page metadata, not the header timestamp)
-
-```
-Data as of 22 October, 2026
 ```
 
 ### `quote_date`
 
-Left **null**: the page's own data blocks are dated 22 October, 2026, but the moving header that carries the amount shows no
-quote-as-of timestamp. Page metadata is not silently bound to the header (F-026).
+```
+Data as of 21 October, 2026
+```
 
 ### `source_name`
 
@@ -43,7 +38,7 @@ The page also states: “Prices are quoted in currency unit per troy ounce unles
 
 ## Superseded intraday observation — not used
 
-Header observations on this page move during the day. Recorded history: **4,024.36** and **4,028.53** (2026-10-22), **4,025.54** (2026-10-22 re-fetch), and **4,024.45** (2026-10-23 direct fetch, used now). Earlier numbers are retained only as superseded audit history; they are not used in `usd_per_troy_oz`, generated calculations, or dashboard outputs.
+An earlier direct capture on the same retrieval date displayed **4,024.36** with the same data date, 21 October 2026. A later direct fetch displayed **4,028.53**. The earlier number is retained only as superseded audit history; it is not used in `usd_per_troy_oz`, generated calculations, or dashboard outputs.
 
 ## NIST — troy-ounce conversion
 
@@ -98,8 +93,31 @@ No free LBMA fix is claimed. This limitation is recorded as F-013.
 - Do not use gross ring weight when it includes stones or non-gold components.
 - The result is not an appraisal, resale quote, refiner payout, or fair-retail estimate.
 
-## Integration correction — 2026-10-22, re-verified 2026-10-23
-Each stored amount is a moving-header observation. Its exact source quote timestamp is unconfirmed, so `quote_date` stays null.
-The page's own data blocks are dated 22 October, 2026 and are stored separately as `chart_as_of_date`; they are not bound to the
-header. On 2026-10-23 the header displayed 4,024.45 and that dated observation is now the current reference, with 4,028.53 kept as
-superseded history in `superseded_observations`. No header amount is treated as a fixed daily close or an LBMA benchmark.
+## Integration correction — 2026-10-22
+The stored 4,028.53 was a prior moving-header observation. Its exact source quote timestamp is unconfirmed; quote_date is now null. Chart text “Data as of 21 October, 2026” must not be silently bound to the header. A later re-fetch displayed 4,025.54 in the header; this is recorded separately in research/evidence.json, not used to make the old observation live.
+
+## Re-verification — 2026-10-23 (UTC)
+
+Direct page fetch of https://www.gold.org/goldhub/data/gold-prices.
+
+### Current observation (`usd_per_troy_oz`) — retrieved 2026-10-23
+
+```
+USD
+
+/oz
+
+-
+
+4,024.45
+```
+
+### Chart date shown on the same page
+
+```
+Data as of 22 October, 2026
+```
+
+The moving header carries no rendered quote timestamp, so `quote_date` stays `null` (F-026).
+The prior observation, 4,028.53 with chart date 21 October 2026, is retained only inside
+`superseded_observations`; it is not used in any calculation and no page renders it.

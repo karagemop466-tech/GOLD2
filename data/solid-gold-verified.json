@@ -29,7 +29,7 @@
       "prong_metal": null,
       "surface_finish": null,
       "source_url": "https://www.automicgold.com/products/coffin-ring",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/ag-coffin-ring.md",
       "solid_gold_explicit": true,
       "hallmark_stated": null,
@@ -50,19 +50,48 @@
       "independent_test_permission": null,
       "notes": "Explicitly discloses 'Solid 14k Gold' and 'Approximately 6.1g (gold)' on a stone-free all-metal engagement/promise ring (3.0 mm band). Reference size for 6.1 g and physical interior stamp remain unstated.",
       "field_evidence": {
-        "name": ["Coffin Ring"],
-        "sku": ["coffin-ring"],
-        "metal": ["Solid 14k Gold and 950 Platinum"],
-        "karat": ["Solid 14k Gold"],
-        "color": ["14k Yellow Gold"],
-        "width_mm": ["Band is 3mm"],
-        "weight_g": ["Approximately 6.1g (gold) or 9.2g (platinum)"],
-        "weight_basis": ["Approximately 6.1g (gold) or 9.2g (platinum)"],
-        "price": ["$1,910"],
-        "currency": ["$1,910"],
-        "price_basis": ["Coffin Ring", "giving it to the one you love as a unique engagement or promise ring"],
-        "center_stone_included": ["Coffin Ring", "Solid 14k Gold"]
-      }
+        "name": [
+          "Coffin Ring"
+        ],
+        "sku": [
+          "coffin-ring"
+        ],
+        "metal": [
+          "Solid 14k Gold and 950 Platinum"
+        ],
+        "karat": [
+          "Solid 14k Gold"
+        ],
+        "color": [
+          "14k Yellow Gold"
+        ],
+        "width_mm": [
+          "Band is 3mm"
+        ],
+        "weight_g": [
+          "Approximately 6.1g (gold) or 9.2g (platinum)"
+        ],
+        "weight_basis": [
+          "Approximately 6.1g (gold) or 9.2g (platinum)"
+        ],
+        "price": [
+          "$1,910"
+        ],
+        "currency": [
+          "$1,910",
+          "\"currency\":\"USD\""
+        ],
+        "price_basis": [
+          "Coffin Ring",
+          "giving it to the one you love as a unique engagement or promise ring"
+        ],
+        "center_stone_included": [
+          "Coffin Ring",
+          "Solid 14k Gold"
+        ]
+      },
+      "currency_source_url": "https://www.automicgold.com/cart.js",
+      "currency_evidence": "The store’s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
     },
     {
       "id": "AG-CUSHION-SIGNET",
@@ -113,17 +142,40 @@
       "independent_test_permission": null,
       "notes": "Explicitly discloses 'Solid 14k Gold'. Published 5.5 g item weight includes the ~0.65 ct diamond so metal-only weight_g stays strictly null (F-028); tapered 8.5mm - 2.5mm width stays un-averaged (F-016).",
       "field_evidence": {
-        "name": ["Cushion Diamond Signet Ring"],
-        "sku": ["cushion-diamond-signet-ring"],
-        "metal": ["Solid 14k Gold and 950 Platinum"],
-        "karat": ["Solid 14k Gold"],
-        "color": ["14k Yellow Gold"],
-        "band_width_text": ["Band width is tapered from 8.5mm - 2.5mm"],
-        "price": ["$2,758"],
-        "currency": ["$2,758"],
-        "price_basis": ["Cushion Diamond Signet Ring"],
-        "center_stone_included": ["Cushion Diamond Signet Ring"]
-      }
+        "name": [
+          "Cushion Diamond Signet Ring"
+        ],
+        "sku": [
+          "cushion-diamond-signet-ring"
+        ],
+        "metal": [
+          "Solid 14k Gold and 950 Platinum"
+        ],
+        "karat": [
+          "Solid 14k Gold"
+        ],
+        "color": [
+          "14k Yellow Gold"
+        ],
+        "band_width_text": [
+          "Band width is tapered from 8.5mm - 2.5mm"
+        ],
+        "price": [
+          "$2,758"
+        ],
+        "currency": [
+          "$2,758",
+          "\"currency\":\"USD\""
+        ],
+        "price_basis": [
+          "Cushion Diamond Signet Ring"
+        ],
+        "center_stone_included": [
+          "Cushion Diamond Signet Ring"
+        ]
+      },
+      "currency_source_url": "https://www.automicgold.com/cart.js",
+      "currency_evidence": "The store’s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
     },
     {
       "id": "AG-SAPPHIRE-RING",
@@ -151,7 +203,7 @@
       "prong_metal": null,
       "surface_finish": null,
       "source_url": "https://www.automicgold.com/products/sapphire-ring",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/ag-sapphire-ring.md",
       "solid_gold_explicit": true,
       "hallmark_stated": null,
@@ -174,18 +226,45 @@
       "independent_test_permission": null,
       "notes": "Explicitly discloses 'Solid 14k Gold' at $526 complete-ring price. Published 1.2 g gross item weight includes the 3 mm natural sapphire (weight_g kept null, F-028) and ultra-thin 1.1 mm band is flagged for daily-wear bending risk (F-029).",
       "field_evidence": {
-        "name": ["Sapphire Ring"],
-        "sku": ["sapphire-ring"],
-        "metal": ["Solid 14k Gold and 950 Platinum"],
-        "karat": ["Solid 14k Gold"],
-        "color": ["14k Yellow Gold"],
-        "width_mm": ["Band is 1.1mm"],
-        "depth_mm": ["Approximately 1.1mm"],
-        "price": ["$526"],
-        "currency": ["$526"],
-        "price_basis": ["Sapphire Ring", "Natural sapphire"],
-        "center_stone_included": ["Sapphire Ring", "Natural sapphire"]
-      }
+        "name": [
+          "Sapphire Ring"
+        ],
+        "sku": [
+          "sapphire-ring"
+        ],
+        "metal": [
+          "Solid 14k Gold and 950 Platinum"
+        ],
+        "karat": [
+          "Solid 14k Gold"
+        ],
+        "color": [
+          "14k Yellow Gold"
+        ],
+        "width_mm": [
+          "Band is 1.1mm"
+        ],
+        "depth_mm": [
+          "Approximately 1.1mm"
+        ],
+        "price": [
+          "$526"
+        ],
+        "currency": [
+          "$526",
+          "\"currency\":\"USD\""
+        ],
+        "price_basis": [
+          "Sapphire Ring",
+          "Natural sapphire"
+        ],
+        "center_stone_included": [
+          "Sapphire Ring",
+          "Natural sapphire"
+        ]
+      },
+      "currency_source_url": "https://www.automicgold.com/cart.js",
+      "currency_evidence": "The store’s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
     },
     {
       "id": "MJ-BOLD-ETERNITY",
@@ -203,8 +282,8 @@
       "band_width_text": null,
       "weight_g": null,
       "weight_basis": null,
-      "price": 2900.0,
-      "currency": "USD",
+      "price": null,
+      "currency": null,
       "price_basis": "complete_ring",
       "center_stone_included": true,
       "original_price": null,
@@ -212,13 +291,13 @@
       "prong_metal": null,
       "surface_finish": "rhodium plating",
       "source_url": "https://mejuri.com/products/bold-diamond-eternity-ring",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/mj-bold-eternity.md",
       "solid_gold_explicit": true,
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://mejuri.com/faq/return-exchanges/what-is-the-standard-return-policy",
-      "verification_status": "verified_solid_gold_price_from",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-002",
@@ -227,25 +306,51 @@
         "F-016",
         "F-021",
         "F-024",
+        "F-025",
         "F-030",
         "F-031"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
-      "notes": "Explicitly discloses 'Solid White Gold (14k)' and 'handcrafted in 14k solid gold' with 2.6 mm band width and rhodium finish. Gram weight and depth are omitted (left null), and price starts 'From$2,900' by size (F-030).",
+      "notes": "Product page re-read 2026-10-23: still “From $2,900”, 2.6 mm band, 23 round brilliant diamonds, 1.15–1.57 ct, GHI, SI–I. No official Mejuri page retrieved states the ISO currency, so the amount is displayed verbatim but not assigned as a USD price (F-025).",
       "field_evidence": {
-        "name": ["Bold Diamond Eternity Ring"],
-        "sku": ["bold-diamond-eternity-ring"],
-        "metal": ["Solid White Gold (14k), Natural Diamond"],
-        "karat": ["Solid White Gold (14k), Natural Diamond"],
-        "color": ["Solid White Gold (14k), Natural Diamond"],
-        "surface_finish": ["14k solid white gold pieces are finished with rhodium plating"],
-        "width_mm": ["Band Width: 2.6 mm"],
-        "price": ["From$2,900"],
-        "currency": ["From$2,900"],
-        "price_basis": ["Bold Diamond Eternity Ring"],
-        "center_stone_included": ["Bold Diamond Eternity Ring"]
-      }
+        "name": [
+          "Bold Diamond Eternity Ring"
+        ],
+        "sku": [
+          "bold-diamond-eternity-ring"
+        ],
+        "metal": [
+          "Solid White Gold (14k), Natural Diamond"
+        ],
+        "karat": [
+          "Solid White Gold (14k), Natural Diamond"
+        ],
+        "color": [
+          "Solid White Gold (14k), Natural Diamond"
+        ],
+        "surface_finish": [
+          "14k solid white gold pieces are finished with rhodium plating"
+        ],
+        "width_mm": [
+          "Band Width: 2.6 mm"
+        ],
+        "price": [
+          "From$2,900"
+        ],
+        "currency": [
+          "From$2,900"
+        ],
+        "price_basis": [
+          "Bold Diamond Eternity Ring"
+        ],
+        "center_stone_included": [
+          "Bold Diamond Eternity Ring"
+        ]
+      },
+      "observed_native_display": [
+        "From$2,900"
+      ]
     }
   ]
 }

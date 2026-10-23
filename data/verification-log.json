@@ -1,0 +1,332 @@
+{
+  "generated_at": "2026-10-23",
+  "pass": {
+    "session": "S-8B9E189A",
+    "checked_at": "2026-10-23",
+    "timezone": "UTC",
+    "method": "Direct fetch_page retrieval of each official URL listed below, one page at a time, then comparison with the stored field evidence.",
+    "rule": "A stored value is reused only if the official page rendered it again during this pass. Anything that could not be re-read keeps its original observation date and is marked 'not re-read this pass'. No value was inferred, averaged, converted, or copied from a search snippet.",
+    "limits": "A successful retrieval is not an assay, not a hallmark check, and not proof of stock or future price. Pages can change after this pass."
+  },
+  "entries": [
+    {
+      "id": "BN-194158",
+      "kind": "listing",
+      "label": "Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["$1,125(Setting Price)", "Stock Number 500000y", "18K Yellow Gold", "Width 1.90mm"],
+      "note": "Displayed setting price, stock number, metal and width unchanged. The description still states platinum prongs."
+    },
+    {
+      "id": "BN-195269",
+      "kind": "listing",
+      "label": "Petite Solitaire Engagement Ring in 18k Yellow Gold",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["$1,155(Setting Price)", "Stock Number 501130y", "18K Yellow Gold", "Width 1.80mm"],
+      "note": "Unchanged. Still no gram weight, polish-stamp evidence or currency code."
+    },
+    {
+      "id": "BN-192506",
+      "kind": "listing",
+      "label": "Petite Hidden Halo Solitaire Plus Diamond Engagement Ring in 14k Yellow Gold",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-hidden-halo-solitaire-plus-diamond-engagement-ring-in-14k-yellow-gold-item-192506",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["$1,255(Setting Price)", "Stock Number 502250y14", "14K Yellow Gold", "Width 1.60mm"],
+      "note": "Accent diamonds re-stated as 26 round, 1/10 ct. tw."
+    },
+    {
+      "id": "BN-315661",
+      "kind": "listing",
+      "label": "Pav\u00e9 Contour Diamond Engagement Ring In 14K White Gold By James Allen",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["$2,210(Setting Price)", "Stock Number 505094w14", "14K White Gold", "Width 1.75mm", "Rhodium Finish Yes"],
+      "note": "Unchanged, including the rhodium finish line."
+    },
+    {
+      "id": "BN-195402",
+      "kind": "listing",
+      "label": "Petite Micropav\u00e9 Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["$1,300(Setting Price)", "Stock Number 501480w14", "14K White Gold", "Width 1.70mm", "22 round diamonds 1/10 ct. tw."],
+      "note": "Natural-diamond version; the page links to the lab-grown equivalent."
+    },
+    {
+      "id": "BN-302868",
+      "kind": "listing",
+      "label": "Petite Micropav\u00e9 Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["$1,050(Setting Price)", "Stock Number 501480w14l", "14K White Gold", "Width 1.70mm", "Rhodium Finish Yes"],
+      "note": "Lab-grown acccents re-confirmed."
+    },
+    {
+      "id": "BN-203348",
+      "kind": "listing",
+      "label": "Classic Simple Solitaire Engagement Ring in 14K Yellow Gold",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["$1,145(Setting Price)", "Stock Number 502120y14", "14K Yellow Gold", "Width 2.40mm"],
+      "note": "Unchanged."
+    },
+    {
+      "id": "BN-195639",
+      "kind": "listing",
+      "label": "Petite Solitaire Engagement Ring in 14k Yellow Gold",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["$1,000(Setting Price)", "Stock Number 501130y14", "14K Yellow Gold", "Width 1.80mm"],
+      "note": "Unchanged."
+    },
+    {
+      "id": "BN-194548",
+      "kind": "listing",
+      "label": "Solitaire Compass Set Engagement Ring in 14k White Gold",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/solitaire-compass-set-engagement-ring-in-14k-white-gold-item-194548",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["$1,045(Setting Price)", "Stock Number 501290w14", "14K White Gold", "Width 2.00mm", "Rhodium Finish Yes"],
+      "note": "Unchanged."
+    },
+    {
+      "id": "BN-193625",
+      "kind": "listing",
+      "label": "Petite Three-Stone Diamond Engagement Ring in 14k Yellow Gold",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-three-stone-diamond-engagement-ring-in-14k-yellow-gold-item-193625",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["$1,950(Setting Price)", "Stock Number 502350y14", "14K Yellow Gold", "Width 1.80mm", "2 round side stones 1/4 ct. tw."],
+      "note": "The page links to a lab-grown version in a different item number, which is not this row."
+    },
+    {
+      "id": "Z-19957449",
+      "kind": "listing",
+      "label": "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
+      "retailer": "Zales",
+      "url": "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["Discounted Price $899.00"],
+      "note": "Single labeled amount, unchanged. The previously rejected search-snippet price is still not used."
+    },
+    {
+      "id": "Z-20046552",
+      "kind": "listing",
+      "label": "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold",
+      "retailer": "Zales",
+      "url": "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
+      "checked_at": "2026-10-23",
+      "status": "verified_correction",
+      "observed": ["$909.30  $1,299.00 30% Off"],
+      "note": "Labeled on the 2026-10-22 render, unlabeled on 2026-10-23. The row now records the unlabeled render as F-018 and assigns no amount."
+    },
+    {
+      "id": "Z-20303279",
+      "kind": "listing",
+      "label": "1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold",
+      "retailer": "Zales",
+      "url": "https://www.zales.com/12-ct-tw-diamond-frame-vintagestyle-twist-shank-engagement-ring-10k-gold/p/V-20303279",
+      "checked_at": "2026-10-23",
+      "status": "verified_correction",
+      "observed": ["Discounted Price $979.30  Original Price was $1,399.00 30% Off"],
+      "note": "Labels returned on this render. Amounts remain unassigned because no ISO currency is stated (F-025)."
+    },
+    {
+      "id": "Z-20301172",
+      "kind": "listing",
+      "label": "1/3 CT. T.W. Diamond Three Stone Engagement Ring in 10K Gold",
+      "retailer": "Zales",
+      "url": "https://www.zales.com/13-ct-tw-diamond-three-stone-engagement-ring-10k-gold/p/V-20301172",
+      "checked_at": "2026-10-23",
+      "status": "verified_correction",
+      "observed": ["Discounted Price $769.30  Original Price was $1,099.00 30% Off"],
+      "note": "Labels returned on this render. Amounts remain unassigned because no ISO currency is stated (F-025)."
+    },
+    {
+      "id": "BE-121H6",
+      "kind": "listing",
+      "label": "Classic Six-Prong Solitaire Ring in 14K Yellow Gold",
+      "retailer": "Brilliant Earth",
+      "url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
+      "checked_at": "2026-10-23",
+      "status": "verified_correction",
+      "observed": ["$890(Setting Only)", "USD", "Width: 2.5 mm", "Prong metal: 14K White Gold", "Style: BE121H6-14KY"],
+      "note": "The 2026-10-22 retrieval was served \u20ac990.00; this retrieval was served USD with a USD selector. Recorded as F-032; the euro amount is retained only as a superseded observation."
+    },
+    {
+      "id": "VRAI-CLASSIC-4P",
+      "kind": "listing",
+      "label": "Classic Round Brilliant Engagement Ring | Plain Band | 18k Yellow Gold",
+      "retailer": "VRAI",
+      "url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
+      "checked_at": "2026-10-23",
+      "status": "verified_no_price",
+      "observed": ["Metal:18k Yellow Gold", "Band depth:1.6mm", "Metal weight:2.86g (Ring size 6)", "Band width:Standard", "Pav\u00e9 carat weight:0.18ctw"],
+      "note": "No price string in the retrieved page. Band width is published only as the word 'Standard', so no millimetre value is stored."
+    },
+    {
+      "id": "AG-COFFIN-RING",
+      "kind": "listing",
+      "label": "Coffin Ring",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/products/coffin-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["$1,910", "Solid 14k Gold and 950 Platinum", "Approximately 6.1g (gold) or 9.2g (platinum)", "Band is 3mm"],
+      "note": "Price also re-confirmed from the store's product JSON (price 191000 minor units). Currency supported by the store cart endpoint, not inferred."
+    },
+    {
+      "id": "AG-SAPPHIRE-RING",
+      "kind": "listing",
+      "label": "Sapphire Ring",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/products/sapphire-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["$526", "Band is 1.1mm", "Approximately 1.1mm", "Approximately 1.2g (gold) or 1.8g (platinum)", "Stone is 3mm in diameter"],
+      "note": "The published 1.2 g is a gross item weight that includes the sapphire, so it is not used as metal-only weight (F-028)."
+    },
+    {
+      "id": "AG-CUSHION-SIGNET",
+      "kind": "listing",
+      "label": "Cushion Diamond Signet Ring",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+      "checked_at": "2026-10-22",
+      "status": "not_re_read",
+      "observed": [],
+      "note": "Not re-read during the 2026-10-23 pass; the stored 2026-10-22 observation stands and is dated as such on the site. Currency support added from the store cart endpoint."
+    },
+    {
+      "id": "MJ-BOLD-ETERNITY",
+      "kind": "listing",
+      "label": "Bold Diamond Eternity Ring",
+      "retailer": "Mejuri",
+      "url": "https://mejuri.com/products/bold-diamond-eternity-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_correction",
+      "observed": ["From$2,900", "Band Width: 2.6 mm", "Minimum Carat Weight: 1.15 ct - 1.57 ct", "Diamond Color: GHI", "Diamond Clarity: SI - I", "Stone Size: 2.5 mm"],
+      "note": "No official Mejuri currency statement was found, so the amount is displayed verbatim and the structured price is blank (F-025)."
+    },
+    {
+      "id": "GOLD-QUOTE",
+      "kind": "reference",
+      "label": "World Gold Council gold spot page",
+      "retailer": "World Gold Council",
+      "url": "https://www.gold.org/goldhub/data/gold-prices",
+      "checked_at": "2026-10-23",
+      "status": "verified_correction",
+      "observed": ["4,024.45", "Data as of 22 October, 2026", "Market Data: Provided by ICE Data Services."],
+      "note": "Moving header value replaced the previous day's observation; quote_date stays null because the header carries no timestamp (F-026)."
+    },
+    {
+      "id": "BLUENILE-RETURNS",
+      "kind": "retailer",
+      "label": "Blue Nile return policy",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/policies/returns",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["within 30 days from the shipment date", "items resized after initial purchase", "Two complimentary returns are allowed per customer, per year", "one free resize, up or down two sizes, within 6 months"],
+      "note": "Window, resized-item exclusion, return allowance and resize terms match the stored record."
+    },
+    {
+      "id": "ZALES-RETURNS",
+      "kind": "retailer",
+      "label": "Zales returns and exchanges",
+      "retailer": "Zales",
+      "url": "https://www.zales.com/return-and-exchange-policy",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["Returns are allowed within 30 days from the purchase (shipment) date and exchanges within 60 days", "jewelry that has been engraved or altered/modified beyond sizing or stone setting", "If you return a sized-to-order ring, we will refund the sizing fee"],
+      "note": "Also re-confirmed the customer-service number (800) 311-5393 and the holiday extension stated at the top of the page."
+    },
+    {
+      "id": "VRAI-RETURNS",
+      "kind": "retailer",
+      "label": "VRAI returns and exchanges",
+      "retailer": "VRAI",
+      "url": "https://www.vrai.com/returns-exchanges",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["Engagement ring: A $300 recycling fee will apply", "Modified or resized rings", "one complimentary resize up to one full US size"],
+      "note": "Fee, exclusion and resize terms match the stored record. The page is dated 'Last revised on March 21, 2025'."
+    },
+    {
+      "id": "MEJURI-RETURNS",
+      "kind": "retailer",
+      "label": "Mejuri standard return policy",
+      "retailer": "Mejuri",
+      "url": "https://mejuri.com/faq/return-exchanges/what-is-the-standard-return-policy",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["free 30-day returns for customers in the US, Canada, UK, Australia, and Germany", "Engraved and monogrammed products", "US | Free"],
+      "note": "Engraved-work exclusion is directly relevant to this ring's optional engraving."
+    },
+    {
+      "id": "AUTOMIC-CURRENCY",
+      "kind": "reference",
+      "label": "Automic Gold public cart endpoint (currency only)",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/cart.js",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": ["\"currency\":\"USD\""],
+      "note": "Read-only GET on an empty cart. Only the currency field is quoted; no cart identifier is retained."
+    },
+    {
+      "id": "MEJURI-CART",
+      "kind": "reference",
+      "label": "Mejuri cart endpoint (attempted currency statement)",
+      "retailer": "Mejuri",
+      "url": "https://mejuri.com/cart.js",
+      "checked_at": "2026-10-23",
+      "status": "dead_end",
+      "observed": ["Mejuri | Page Not Found"],
+      "note": "Returned the site's 404 page, so it provides no currency statement. The Mejuri payment FAQ likewise states no currency."
+    },
+    {
+      "id": "ZALES-HELP",
+      "kind": "reference",
+      "label": "Zales help page (attempted currency statement)",
+      "retailer": "Zales",
+      "url": "https://www.zales.com/help",
+      "checked_at": "2026-10-23",
+      "status": "dead_end",
+      "observed": ["404 Page Not Found"],
+      "note": "Recorded as a dead end. No Zales page retrieved this pass states the ISO currency of a displayed amount."
+    },
+    {
+      "id": "BLUENILE-TERMS",
+      "kind": "reference",
+      "label": "Blue Nile terms and conditions",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/policies/terms-and-conditions",
+      "checked_at": "2026-10-23",
+      "status": "dead_end",
+      "observed": ["US$150 (or equivalent amount in other currencies)"],
+      "note": "The terms refer to US$ for a grading-report fee but do not declare the storefront currency of product prices, so no USD assignment was made from this page."
+    }
+  ]
+}

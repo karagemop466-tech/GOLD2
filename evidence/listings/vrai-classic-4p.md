@@ -96,3 +96,20 @@ The following search-snippet values are retained only to document the discrepanc
 ## Research note (not a substitute for the excerpts)
 
 Metal weight is published for ring size 6. Width is only described as Standard, so numeric width is blank. No price string appeared in the retrieved text.
+
+## Re-verification — 2026-10-23 (UTC)
+
+- **URL:** https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893
+- **Result:** Setting Details re-rendered the same metal, band depth and size-6 metal weight.
+  No price string was present in the retrieved text; the price stays blank (F-008).
+
+```
+Metal:18k Yellow Gold
+Band width:Standard
+Band depth:1.6mm
+Metal weight:2.86g (Ring size 6)
+Pavé carat weight:0.18ctw
+```
+
+The page still shows a pavé-carat line on a setting titled “Plain Band”; that
+inconsistency is preserved as observed and is not resolved by assumption (see F-033).

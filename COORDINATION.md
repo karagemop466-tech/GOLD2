@@ -406,6 +406,35 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 
 ---
 
+# Session S-8B9E189A — task board (active)
+
+- **Session ID:** `S-8B9E189A` (Arena session bound to `arena/8b9e189a-gold2`)
+- **Platform constraint (recorded, not ignored):** this runner is bound to one branch. Branch
+  names of the form `session-<id>/<task>` and additional worktrees cannot be created or pushed.
+  Isolation is therefore enforced by the exclusive file scopes below, exactly as in prior sessions.
+- **Board read at claim:** every task in every earlier board block is `done`. The most recent
+  external claim (`S-8C810C15`) merged as PR #21 (`22d9f85`) and left no active claim. No other
+  session held an unexpired claim when this block was written, so no task is being stolen.
+- **Branch base:** `main` @ `22d9f85db301cc1d6d87901a89ee02052b2c0b81`.
+
+| ID | Task | Status | Owner | File scope (exclusive) | Touches |
+|----|------|--------|-------|------------------------|---------|
+| T20 | Dated live re-verification of the root register (20 rows), the gold quote and every retailer policy/payment/contact page, plus a written line-by-line verification log | done | S-8B9E189A | `audit/8b9e189a/**` | read-only inspection of `data/**`, `evidence/**` |
+| T21 | Official-source expansion plus one consistent evidence rule for displayed amounts, currency, and weights; evidence files; blank + flag where a required field is absent | done | S-8B9E189A | `data/solid-gold-verified.json`, `data/listings/**`, `data/gold-price.json`, `data/flags.json`, `evidence/**` | `data/catalog.json` untouched |
+| T22 | Site build: derived (never typed) counts, dated verification-log page, nominal fine-gold analysis page, navigation, accessible tables | done | S-8B9E189A | `tools/build_site.py`, `tools/qa.py`, `assets/**`, root `*.html`, `reports/**` | `explore/**`, `site/**` untouched |
+| T23 | Final integration: full check suite, PR to `main`, merge, Pages deploy verification, closeout | in progress | S-8B9E189A | `COORDINATION.md`, `README.md`, `.github/workflows/**` | — |
+
+## Working log (S-8B9E189A)
+
+- 2026-10-23 — Claim written and pushed before any edit. Base `22d9f85`. Scopes above do not
+  overlap `explore/**`, `site/**`, `reviews/**`, `data/catalog.json`, `research/**` or
+  `audit/8c810c15/**`; those are treated as other sessions' records and are not rewritten.
+- 2026-10-23 — Audit rule for this session: a value is only reused if the official page renders it
+  again today. Anything that cannot be re-read stays at its original dated observation and is
+  marked `not re-read this pass`, never silently refreshed.
+
+---
+
 # Session S-062F314F — task board & verification log
 
 - **Session ID:** `S-062F314F` (`062f314f`)
@@ -438,3 +467,26 @@ No manual user input is required; this session works autonomously. Findings will
 - **2026-10-23 — Two findings added** to `data/review.json` (`reobservation-2026-10-23`, `newly-rendered-amounts`), 20 → **22 findings**; both published on the Flagged for Review page.
 - **2026-10-23 — Tests/data coupling fixed without weakening checks.** `tests/domain.test.mjs` no longer hardcodes the dealer reference (it reads `catalog.meta.marketReference.amount`); `tests/build.test.mjs` now asserts the USD setting display `$890.00` and asserts the superseded `€990.00` is **not** rendered. Full local suite passes: `tools/qa.py` (10 checks, 0 failures), `node --test` 23/23, `scripts/verify.mjs`, `scripts/check-links.mjs` (30 pages), `scripts/security.mjs`, `reviews/independent_snapshot_audit.py`, `scripts/audit.py`, `scripts/test.js`, `audit/8c810c15/security_and_hallucination_scanner.py` (0 findings, 117 controls), `audit/8c810c15/test_calculator_and_scanner.py` 6/6, `tools/test_calculator.js`.
 - **Hallucination-risk note for the next session:** the recurring failure mode here is *locale and variant drift*, not only invented numbers. Re-open each official page, record the currency the page itself shows, and never carry a previous amount forward as current.
+
+---
+
+# Integration record — 2026-10-23
+
+## Merge of `origin/main` (`693e472`, PR #22, session S-062F314F) into `arena/8b9e189a-gold2`
+
+Both sessions independently re-verified overlapping data on the same day. The merge was resolved by file
+and every conflict is recorded here rather than silently choosing a side.
+
+| File | Conflict | Resolution |
+|---|---|---|
+| `data/flags.json` | S-062F314F re-scoped `F-007` to the Brilliant Earth locale change and broadened `F-018` to two Zales rows; this session had added `F-032` (same locale finding) and scoped `F-018` to one row | Kept the S-062F314F `F-007` wording, **dropped the duplicate `F-032`** (its reference on the Brilliant Earth retailer record and on `BE-121H6` now points at `F-007`), and broadened `F-018` to **all four** Zales rows because label presence differed between the two sessions' same-day renders |
+| `data/listings/budget.json`, `data/listings/three-stone-vintage.json` | Each session saw a different Zales render | Both renders are preserved per row in `render_history` (labelled and unlabeled variants, each dated 2026-10-23 with the observing session). No amount is assigned a currency or ordered by position |
+| `data/gold-price.json` | Both sessions recorded 4,024.45 USD/oz as current but kept a different superseded observation | **Union**: 4,028.53 (2026-10-22, this session) and 4,024.36 (2026-10-21, S-062F314F) are both kept; `quote_date` stays `null` (F-026) |
+| `data/catalog.json`, `data/review.json`, `research/evidence.json`, `explore/**` | Not edited by this session | **Taken from `origin/main` unchanged** (Menē price corrections, Catbird render observations, 22 findings, new dealer reference 4,035.54) |
+| `evidence/gold-price.md`, `evidence/listings/be-121h6.md` | Both sessions appended quotes | This session's version kept; every S-062F314F value that survives in data is still quoted there (the USD `$890` render and the USD selector) |
+| `COORDINATION.md`, `README.md` | Both sessions appended to the same sections | S-062F314F's section is preserved verbatim at the end of this file; README states the combined-register facts from `origin/main` and the root-register facts from this session separately |
+| `tools/build_site.py`, `tools/qa.py`, generated root `*.html` | Only this session changed the generator | Generator kept from this session, then every root page was regenerated from the merged data. No generated HTML was hand-edited |
+| `reports/qa-report.md` | Both regenerated it | Regenerated from the merged data |
+
+**Post-merge verification:** `python3 tools/build_site.py` → 13 pages; `python3 tools/qa.py` → **PASS, 11 checks, 0 failures, 3 coverage warnings**; `reviews/independent_snapshot_audit.py` → 0 findings; `audit/8c810c15/security_and_hallucination_scanner.py` → 0 findings, 154 controls.
+

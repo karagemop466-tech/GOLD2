@@ -100,7 +100,23 @@ def main() -> int:
                     flag("REVIEW-WIDTH-MISMATCH", item["id"], f"expected {item['width_mm']} mm")
             if item.get("weight_g") is not None and f"{item['weight_g']} g" not in line:
                 flag("REVIEW-WEIGHT-MISMATCH", item["id"], f"expected {item['weight_g']} g")
-            if item.get("price") is not None:
+            # A price that changed after this historical review snapshot is checked
+            # against the superseded observation that the older row should still carry.
+            superseded_prices = [
+                observation for observation in item.get("superseded_observations", [])
+                if observation.get("price") is not None
+            ]
+            if superseded_prices:
+                for observation in superseded_prices:
+                    mark = {"USD": "$", "EUR": "€"}.get(
+                        observation.get("currency"), (observation.get("currency") or "") + " "
+                    )
+                    old_price = Decimal(str(observation["price"]))
+                    accepted_old = {f"{mark}{old_price:,.2f}", f"{mark}{old_price:,.0f}"}
+                    if not any(value in line for value in accepted_old):
+                        flag("REVIEW-HISTORICAL-PRICE-LOST", item["id"],
+                             f"older row should still show one of {sorted(accepted_old)}")
+            elif item.get("price") is not None:
                 mark = {"USD": "$", "EUR": "€"}.get(item["currency"], item["currency"] + " ")
                 price = Decimal(str(item["price"]))
                 accepted = {f"{mark}{price:,.2f}", f"{mark}{price:,.0f}"}

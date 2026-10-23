@@ -26,7 +26,8 @@ SITE = ROOT
 REPORTS = ROOT / "reports"
 PAGE_NAMES = [
     "index.html", "solid-gold.html", "solitaire.html", "halo-pave.html", "three-stone-vintage.html",
-    "18k.html", "budget.html", "retailers.html", "prices.html", "flags.html", "methods.html",
+    "18k.html", "budget.html", "retailers.html", "analysis.html", "verification.html",
+    "prices.html", "flags.html", "methods.html",
 ]
 CATEGORY_PAGES = ["solid-gold.html", "solitaire.html", "halo-pave.html", "three-stone-vintage.html", "18k.html", "budget.html"]
 LISTING_PATHS = [
@@ -427,7 +428,12 @@ def main() -> int:
         if item.get("color") is None:
             required.append("F-017")
         if item.get("price") is None:
-            required.append("F-025" if item.get("superseded_normalization") else "F-018" if item.get("unassigned_price_text") else "F-008")
+            if item.get("unassigned_price_text"):
+                required.append("F-018")
+            elif item.get("observed_native_display"):
+                required.append("F-025")
+            else:
+                required.append("F-008")
         if item.get("currency") not in (None, "USD"):
             required.append("F-007")
         if item.get("independent_test_permission") is not True:
@@ -439,6 +445,18 @@ def main() -> int:
                 fail("null-coverage", f"{item['id']} requires {flag_id} for its blank/unconfirmed state")
         if item.get("price") is not None and not item.get("currency"):
             fail("null-coverage", f"{item['id']} assigned price lacks currency")
+        if item.get("price") is not None and item.get("currency"):
+            currency_quotes = " ".join(item.get("field_evidence", {}).get("currency", []))
+            if item["currency"].lower() not in currency_quotes.lower() and not item.get("currency_source_url"):
+                fail("null-coverage", f"{item['id']} assigned currency has no official currency statement")
+        for displayed in item.get("observed_native_display") or []:
+            quotes = " ".join(
+                quote
+                for quotes in item.get("field_evidence", {}).values()
+                for quote in quotes
+            )
+            if norm(displayed) not in norm(quotes):
+                fail("display", f"{item['id']} displayed amount is not covered by a field quote: {displayed!r}")
         if item.get("unassigned_price_text") and (item.get("price") is not None or item.get("original_price") is not None):
             fail("null-coverage", f"{item['id']} has unassigned price text but structured prices are populated")
     for flag in flags:
@@ -478,7 +496,8 @@ def main() -> int:
     for observation in gold.get("superseded_observations", []):
         if observation.get("value") == gold["usd_per_troy_oz"]:
             fail("rejected", "superseded gold observation equals current quote")
-        if observation.get("status") != "superseded_intraday" or not observation.get("reason"):
+        allowed_status = {"superseded_intraday", "superseded_moving_header"}
+        if observation.get("status") not in allowed_status or not observation.get("reason"):
             fail("rejected", "invalid superseded gold observation")
     record("Rejected snippets and superseded gold quotes are not current values", before)
 
@@ -647,6 +666,68 @@ def main() -> int:
     if with_weight < len(items):
         warn("coverage", f"{len(items)-with_weight} of {len(items)} rows have no published metal weight (F-003)")
     record("Coverage limitations remain visible", before)
+
+    # 11 — dated verification log, analysis arithmetic, and derived shell counts.
+    before = len(issues)
+    log_path = DATA / "verification-log.json"
+    verification = load(log_path) if log_path.exists() else {}
+    entries = verification.get("entries", [])
+    if not entries:
+        fail("verification-log", "verification-log.json is missing or empty")
+    allowed_hosts = {
+        "www.bluenile.com", "www.zales.com", "www.brilliantearth.com", "www.vrai.com",
+        "www.automicgold.com", "mejuri.com", "www.gold.org",
+    }
+    known_status = {"verified_match", "verified_correction", "verified_no_price", "not_re_read", "dead_end"}
+    page_text = parsed_pages.get("verification.html", ("", PageParser()))[0]
+    logged_items = set()
+    for entry in entries:
+        for key in ("id", "kind", "label", "retailer", "url", "checked_at", "status", "note"):
+            if not entry.get(key):
+                fail("verification-log", f"entry {entry.get('id', '?')} missing {key}")
+        parsed = urlsplit(entry.get("url", ""))
+        if parsed.scheme != "https" or parsed.hostname not in allowed_hosts:
+            fail("verification-log", f"entry {entry.get('id')} has an unexpected official host {parsed.hostname}")
+        if entry.get("status") not in known_status:
+            fail("verification-log", f"entry {entry.get('id')} has unknown status {entry.get('status')!r}")
+        try:
+            checked = datetime.strptime(entry["checked_at"], "%Y-%m-%d").date()
+            if checked > date.today():
+                fail("verification-log", f"entry {entry.get('id')} is dated in the future")
+        except (ValueError, TypeError):
+            fail("verification-log", f"entry {entry.get('id')} checked_at is not YYYY-MM-DD")
+        if entry.get("kind") == "listing":
+            logged_items.add(entry["id"])
+        if entry.get("id", "").lower() not in page_text.lower() or entry.get("url") not in page_text:
+            fail("verification-log", f"entry {entry.get('id')} is not rendered with its official URL")
+    listing_ids = {item["id"] for item in items}
+    if logged_items != listing_ids:
+        fail("verification-log", f"log does not cover every listing: missing={sorted(listing_ids - logged_items)}, extra={sorted(logged_items - listing_ids)}")
+
+    analysis_text = parsed_pages.get("analysis.html", ("", PageParser()))[0]
+    for item in items:
+        if item.get("weight_g") is not None:
+            fine = item["weight_g"] * item["karat"] / 24
+            melt = fine / gold["grams_per_troy_ounce"] * gold["usd_per_troy_oz"]
+            if f"{fine:.3f} g" not in analysis_text or f"${melt:,.2f}" not in analysis_text:
+                fail("analysis", f"{item['id']} nominal fine-gold/melt output is missing or stale")
+        elif item.get("gross_ring_weight_g") is None:
+            if item["name"] in analysis_text:
+                fail("analysis", f"{item['id']} has no metal weight but appears in the analysis page")
+
+    index_text = parsed_pages.get("index.html", ("", PageParser()))[0]
+    if f"{len(items)} source-checked entries" not in index_text:
+        fail("shell", "index.html shell note does not carry the derived item count")
+    if f"{len(flags)} published flags" not in index_text:
+        fail("shell", "index.html shell note does not carry the derived flag count")
+    for name, (text, _) in parsed_pages.items():
+        if name in ("explore",):
+            continue
+        if f"{len(items)} source-checked entries" not in text:
+            fail("shell", f"{name} shell note does not carry the derived item count")
+        if f"{len(flags)} published flags" not in text:
+            fail("shell", f"{name} shell note does not carry the derived flag count")
+    record(f"Dated verification log, analysis arithmetic, and derived shell counts ({len(entries)} logged records)", before)
 
     # Report.
     REPORTS.mkdir(exist_ok=True)
