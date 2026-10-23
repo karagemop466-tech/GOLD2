@@ -1132,3 +1132,13 @@ The original audit scope remains exclusive. This runner now takes the final-inte
 | A182-03 | Integrate current official re-observations for all assigned product prices and the moving WGC spot header; update public findings/evidence, regenerate shared pages, run final checks, and publish from the fixed Arena branch | in progress | S-A182C7CC | `data/catalog.json`, `research/evidence.json`, `data/review.json`, `data/gold-price.json`, `evidence/gold-price.md`, `data/verification-log.json`, `data/flags.json`, generated `explore/**`, `data/site-manifest.json`, generated root/dashboard pages, `README.md`, `COORDINATION.md`, `audit/a182c7cc/**` |
 
 - 2026-10-23T23:46:08Z — Claim extended before shared-data edits. Official live checks so far found Menē Rose Ring now displays `$1,325 USD` (previous stored observation `$1,336`) and Menē Knot Ring `$1,442 USD` (previous `$1,454`); the WGC header now renders `$3,995.47/oz`, while its chart still says 22 October 2026 and supplies no timestamp for that moving header. These observations will be dated exactly, the old WGC quote time will remain null, and no inferred weight/purity or purchase approval will be added. The assigned-price pages will be rechecked as a complete set before the shared values are integrated.
+
+### S-A182C7CC scope extension — generated root QA summary
+
+Prior root QA report ownership is historical and complete: S-1EB9F828 T-1EB-03 and S-9B875C81 S9B8-T5 are both marked done; no active peer claim remains for this artifact. This runner adds the generated report to the already-claimed integration scope so the root dashboard's QA summary can reflect the final data/build checks.
+
+| ID | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| A182-04 | Refresh root QA report and dashboard summary from final audited data, then validate generated outputs | in progress | S-A182C7CC | `reports/qa-report.md` |
+
+- 2026-10-23T23:49:55Z — Claim recorded before any write to `reports/qa-report.md`; write-producing suites will run in a scratch copy first.
