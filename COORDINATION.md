@@ -34,6 +34,21 @@ Platform constraint: this session is bound to `arena/1eb9f828-gold2`; no other b
 
 Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero and never a negative physical finding; nothing is inferred, averaged, or filled from a neighbouring value; every published value needs a field-scoped quote from a page retrieved by the session that publishes it; an automated PASS proves only that the stated controls ran; **look for hallucinations again after every review**.
 
+## Claim — Session S-305FDD02 (2026-10-23 UTC, active)
+
+Platform constraint: this session is bound to `arena/305fdd02-gold2`; no other branch or worktree may be created or pushed. All prior claims on this board are `done`; their exclusive file scopes are not being reclaimed. This session runs a fresh **live, line-by-line re-verification** pass, the hallucination/security passes, and the final integration / PR / deployment pass.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T-305F-01 | Live line-by-line re-verification of every root register row against its official product URL | in progress | S-305FDD02 | `audit/305fdd02/**` |
+| T-305F-02 | Gold reference freshness re-read (WGC official page) | in progress | S-305FDD02 | `data/gold-price.json`, `evidence/gold-price.md` |
+| T-305F-03 | Hallucination / provenance / security pass, findings published | in progress | S-305FDD02 | `audit/305fdd02/**`, `data/flags.json`, `flags.html` |
+| T-305F-04 | Final integration, PR, merge, Pages deployment record | in progress | S-305FDD02 | `COORDINATION.md`, regenerated root `*.html`, PR/merge records |
+
+### S-305FDD02 working log
+
+- 2026-10-23 — Read the board. No task was in progress; `main` at `7fb0334` (PR #34 merged). Claimed T-305F-01…T-305F-04 with the non-overlapping scopes above and pushed the claim before starting work. No peer-owned file is rewritten; corrections are limited to values directly contradicted by a live official page, and each is logged below.
+
 ## Claim — Session S-D4C0A507 (2026-10-23 UTC)
 
 Platform constraint: this session is bound to `arena/d4c0a507-gold2`; no other branch or worktree may be created or pushed. Every session listed below is already marked done, so their exclusive file scopes are **not** being reclaimed. This session performs a fresh line-by-line re-verification pass and the final integration / PR / deployment pass.
