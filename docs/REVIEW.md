@@ -47,7 +47,7 @@ Short structured passages may be normalized factual transcriptions rather than r
 The final integration run must repeat the sequence in README after any further changes. The following have actually executed successfully after integrating the newer main implementation:
 
 - Combined evidence consistency: **32 products / 60 sources / 20 findings**, with missing evidence published as warnings rather than fabricated values.
-- **22 Node tests**, including source-price mutation rejection, currency context, numeric token boundaries (`€990.00` correctly supports 990, not 990.01), root-URL inclusion/deduplication, no gross-weight fallback, nominal/explicit purity, stale observations, deterministic generation and preview protections.
+- **23 Node tests**, including source-price mutation rejection, currency context, numeric token boundaries (`€990.00` correctly supports 990, not 990.01), root-URL inclusion/deduplication, no gross-weight fallback, nominal/explicit purity, stale observations, deterministic generation and preview protections.
 - Root audit: **10 check groups, zero failures**, with unconfirmed quote time and price/weight coverage warnings; root calculator unit controls pass.
 - Independent static negative audit: **zero findings / six arithmetic controls**. This is a programmatic negative check, not an independent human re-review or physical certification.
 - Local links: **29 HTML pages**, including all 13 expanded, ten root and six initial pages; official publisher link in every data-table row; local targets/fragments checked. Current external HTTP reachability is not certified by this test.
@@ -65,3 +65,9 @@ GitHub CI and Pages publication are verified separately in the integration PR/de
 The scheduled/manual official-source workflow writes a reachability/identity-word signal report and capped-content sample hashes. It has no automatic baseline comparison or price ingestion. Redirects stay on the HTTPS publisher allowlist. Bot blocking, region selection and JavaScript rendering can produce false alarms; a 200 response is not proof of source identity or price correctness.
 
 After every review or combined-session edit, rerun source/hallucination-risk, build/link and security checks. **Automated checks cannot establish factual truth, physical weight/purity, return entitlement, complete security/accessibility or purchase suitability.** Reopen official sources and obtain exact-configuration documentation, written inspection/return permission, protected payment and independent professional verification before wear/resizing. If verification and a qualifying return are disallowed, do not purchase.
+
+## Publication verification
+
+PR #17 merged as `c008aede2481b79f3f88159b0f9dda87868f5b3a`. Its PR checks and post-merge Evidence dashboard run passed. Actual legacy Pages build/deployment run `39875762776` succeeded for that commit; Pages API reported built/HTTPS/main-root, and public landing/catalog URLs returned the 32-entry register. A public-page wording check then clarified that supported setting-only snapshots exclude the center; it no longer incorrectly says every setting-only display is withheld. A regression test covers the EUR setting display and that scope notice.
+
+Manual dispatch of the optional source-monitor workflow was denied with GitHub HTTP 403 Resource not accessible by integration. Its scheduled/manual configuration is published, but no executed live-monitor result is claimed. Existing direct source observations and build/link checks are distinct from that unexecuted optional monitor.
