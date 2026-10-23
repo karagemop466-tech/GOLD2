@@ -635,7 +635,7 @@ and every conflict is recorded here rather than silently choosing a side.
 |----|------|--------|-------|------------|
 | B1 | Independent live line-by-line re-verification of all 20 root product rows, the WGC gold quote and 6 retailer policy sources on 2026-10-23 | done | S-B200A880 | `audit/b200a880/**` (read-only inspection of `data/**`, `evidence/**`) |
 | B2 | Independent hallucination/security scanner and unit tests; rebuild and full-gate verification | done | S-B200A880 | `audit/b200a880/hallucination_security_scanner.py`, `audit/b200a880/test_scanner.py` |
-| B3 | Rebase onto current `main`, combine without discarding other sessions' work, PR and Pages confirmation | in progress | S-B200A880 | `COORDINATION.md`, `README.md`, plus the two Z-203 wording corrections noted below |
+| B3 | Rebase onto current `main`, combine without discarding other sessions' work, PR and Pages confirmation | done (PR #29 merged) | S-B200A880 | `COORDINATION.md`, `README.md`, plus the two Z-203 wording corrections noted below |
 
 ## S-B200A880 working log
 
@@ -680,3 +680,32 @@ and every conflict is recorded here rather than silently choosing a side.
   (`verify` 32 products/60 records, 23/23 node tests, 13-page build, 30 pages/102 external links,
   static security + `npm audit` 0 vulnerabilities, browser/axe 32 gates, zero external runtime
   requests). Nothing from the parallel sessions was discarded or overwritten.
+
+### PR #29 — merged and deployed
+
+- **PR #29 — merged:** https://github.com/karagemop466-tech/GOLD2/pull/29
+  ("Independent 2026-10-23 re-verification audit (S-B200A880): second scanner,
+  corroboration record, Z-203 wording fix"), merged into `main` at
+  **2026-10-23T10:39:22Z**, merge commit `2886062` (merge commit, no squash/rebase).
+- **Integration shape:** the branch was rebased twice before merge (onto `39c81db`,
+  then `a84c153` after PR #28 landed). Every data observation this session made had
+  already been integrated independently by PRs #22–#28, so the PR is audit-only plus
+  the two Z-203 present-tense note corrections; nothing from any parallel session was
+  discarded or overwritten.
+- **PR checks:** `audit` PASS; both `verify` workflows PASS (the longer run 1m13s).
+- **Post-merge checks on `2886062`:** GOLD2 verify, Legacy dashboard verify and
+  Evidence dashboard all `success`; `pages build and deployment` run
+  `39940639143` `success` at 2026-10-23T10:39:24Z.
+- **Pages:** legacy publishing, `main` / repository root; API status `built`,
+  <https://karagemop466-tech.github.io/GOLD2/>. Live re-fetch confirmed
+  `verification.html` (five stat cards, 31 flags, no-hallucination banner) and the
+  deployed `audit/b200a880/live_verification_2026-10-23.json`.
+- **Final local gate (all PASS):** `tools/qa.py` 11 checks / 0 failures / 3 coverage
+  warnings; calculator tests; independent snapshot audit 0 findings / 6 arithmetic
+  controls; legacy build/audit/tests; 8c810c15 scanner 154 controls; b200a880 scanner
+  **3,056 controls, 0 failures/warnings** and **25 unit tests**; `npm run check`
+  (32 products / 60 records, 23/23 node tests, 13-page build, 30 pages / 102 external
+  links, 0 npm vulnerabilities, browser/axe 32 gates, zero external runtime requests).
+- **Open boundary:** no physical inspection, hallmark verification, XRF assay or scale
+  weighing exists for any row; 16 of 20 prices and 18 of 20 weights remain deliberately
+  blank and flagged. Automated PASS is not proof of source truth.
