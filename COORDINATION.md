@@ -1122,3 +1122,13 @@ Platform constraint: this runner is bound to `arena/a182c7cc-gold2`; no other br
 ### S-A182C7CC working log
 
 - 2026-10-23T23:40:29Z — Read the existing board before editing. All implementation/data scopes remain untouched; this session claims only `audit/a182c7cc/**` plus this append-only board block. Existing product-price observations are dated; no current price or physical purity will be claimed without direct official-source evidence. Will run the repository's checks and independently test them, record unresolved or unverified items as flagged, and recommend another hallucination pass after review.
+
+### S-A182C7CC scope extension — stale-price integration claim (2026-10-23T23:46:08Z UTC)
+
+The original audit scope remains exclusive. This runner now takes the final-integration follow-up for live price changes after checking the board and remote state: `S-E0D6DD62`'s T-E0-05 still says in progress although PR #38 merged at 20:52:57Z and its last branch commit was 20:55:34Z; it is therefore closed by its own integration record, not overwritten. `S-9B875C81`'s broad integration task is marked done; its re-verification/deployment scope is not active. PR #19 is still open but `CONFLICTING` and its 00:08Z dashboard work was explicitly handed to S-9B875C81, whose dashboard/integration tasks are done; no PR #19 files are treated as an active peer claim. No peer-owned audit folder will be modified.
+
+| ID | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| A182-03 | Integrate current official re-observations for all assigned product prices and the moving WGC spot header; update public findings/evidence, regenerate shared pages, run final checks, and publish from the fixed Arena branch | in progress | S-A182C7CC | `data/catalog.json`, `research/evidence.json`, `data/review.json`, `data/gold-price.json`, `evidence/gold-price.md`, `data/verification-log.json`, `data/flags.json`, generated `explore/**`, `data/site-manifest.json`, generated root/dashboard pages, `README.md`, `COORDINATION.md`, `audit/a182c7cc/**` |
+
+- 2026-10-23T23:46:08Z — Claim extended before shared-data edits. Official live checks so far found Menē Rose Ring now displays `$1,325 USD` (previous stored observation `$1,336`) and Menē Knot Ring `$1,442 USD` (previous `$1,454`); the WGC header now renders `$3,995.47/oz`, while its chart still says 22 October 2026 and supplies no timestamp for that moving header. These observations will be dated exactly, the old WGC quote time will remain null, and no inferred weight/purity or purchase approval will be added. The assigned-price pages will be rechecked as a complete set before the shared values are integrated.
