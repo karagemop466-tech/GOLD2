@@ -744,6 +744,20 @@ def main() -> int:
     expected_claim = f"all {len(catalog['products'])} researched entries across {len(catalog['sellers'])} sellers"
     if expected_claim not in index_text:
         fail("register", f"index.html does not state the derived combined-register claim: {expected_claim}")
+    # The cross-register note must count product pages only. Counting policy/cart records
+    # once inflated this to 45 against 44 catalog products (regression, fixed 2026-10-23).
+    product_urls = {source["url"].rstrip("/") for source in load(ROOT / "research" / "evidence.json")["sources"]
+                    if source.get("kind") == "product"}
+    root_urls = {item["source_url"].rstrip("/") for item in items}
+    union_claim = re.search(r"Across both registers (\d+) distinct official", index_text)
+    shared_claim = re.search(r"(\d+) official product URLs appear in both", index_text)
+    if not union_claim or not shared_claim:
+        fail("register", "index.html lacks the derived cross-register URL statement")
+    else:
+        if int(union_claim.group(1)) != len(product_urls | root_urls):
+            fail("register", f"index.html says {union_claim.group(1)} distinct product URLs; data holds {len(product_urls | root_urls)}")
+        if int(shared_claim.group(1)) != len(product_urls & root_urls):
+            fail("register", f"index.html says {shared_claim.group(1)} shared product URLs; data holds {len(product_urls & root_urls)}")
     for flag in flags:
         text = f"{flag.get('title', '')} {flag.get('detail', '')}"
         for count, total, noun in re.findall(r"(\d+)\s+of\s+(\d+)\s+(items|product pages|rows|listings|listed settings)", text):
