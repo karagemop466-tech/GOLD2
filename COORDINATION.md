@@ -43,6 +43,7 @@ No other active claim was present when this board was read. Completed historical
 | `S-6CA03571` (6ca03571) | `arena/6ca03571-gold2` | listing research, evidence trail, root dashboard, integration | PR #3–#7 merged |
 | `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9 done; R9-01 quote-date correction applied by S-CA4C9D8A |
 | `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 merged; open findings handed off |
+| `arena-70b76800` | `arena/70b76800-gold2` | independent verification pass, `dashboard/` companion site, Costco retailer record, BN-316238 root row | PR pending; built on merged PR #15; `reviews/**` touched only for the audit-required BN-316238 table row (caveated) |
 
 All sessions share one environment constraint: the runner is bound to a single branch and cannot create
 `session-<id>/<task>` worktrees. That is recorded rather than ignored. Work is therefore separated by
@@ -299,3 +300,52 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - Review PR #8 final head `779020d40bc328decb6240044da7a305366ef856` passed runs `39872116197` and `39872116200`, then merged as `73a98fe1338f901b6c85452b237469d3bde29327` at 2026-10-22T23:29:48Z. Exact-main runs `39872158608` and `39872158539` passed; Pages run `39872158049` built and deployed that commit. The PR-head and merge trees were identical.
 - PR #13 subsequently changed only `reports/qa-report.md`; main `7a453927ac410c45894c480bef47494322798e1f` verification/Pages runs `39872212871`, `39872212900`, and `39872212893` succeeded.
 - Final publication and errata evidence is in `reviews/2026-10-22-pr8-publication.md`. R39-01/R39-03/R8-01 are resolved; R9-01 and 16 other findings remain open. Successful builds/merges do not close evidence findings. Further hallucination/security review is required after every corrective edit.
+---
+
+# Session arena-70b76800 — companion dashboard + root additions (post-PR #15)
+
+> Branch constraint (Arena): this session stays on `arena/70b76800-gold2` only. Base: `894d364` (PR #15 merged).
+
+## Active claim (2026-10-22 UTC)
+
+Exclusive new scope: `dashboard/**` (companion research site). Additive root scope: one listing row
+(BN-316238 + `evidence/listings/bn-316238.md`), one retailer record (Costco + `evidence/retailers/costco.md`),
+flag count/affected updates for the +1 row, one audit-required caveated row in the review table, retailer
+null-guards + companion link in `tools/build_site.py`, dashboard steps in `gold2-verify.yml`, README/board docs.
+S-CA4C9D8A's T15 (Pages-deploy verification) is not claimed. `data/gold-price.json` and `reviews/findings.json`
+are not touched. R9-01 and the 16 other open findings stay with their owners; dispositions for the dashboard
+scope are recorded below.
+
+## Task board
+
+| ID | Task | Status | Owner | File scope | Result | Notes |
+|----|------|--------|-------|------------|--------|-------|
+| T1–T8 | Independent research pass: gold reference, retailers, rings, calculator, checklist, site shell, hallucination audits | done | arena-70b76800 | `dashboard/**` | 5 rings / 3 retailers / 7 flags; P1–P8 PASS; 20/20 node calc tests | Values only from fetched official pages; 3 of 4 Blue Nile prices independently match root data ($1,145/$1,125/$1,155). |
+| T9 | First integration attempt on PR-#13 main | superseded | arena-70b76800 | (old-schema edits) | Rebase + relocation + root edits completed and green, then main advanced (PR #14/#15) with a full schema migration | Abandoned cleanly: work rescued to `/tmp/rescue`, branch reset to `894d364`, everything re-applied fresh to the field-scoped schema. No pushes of the old-schema state. |
+| T10 | Integration on post-PR #15 main, PR, merge, Pages | in progress | arena-70b76800 | scopes above | Root suite green: qa 10/10 PASS (17 rows, 293 quotes), calculator tests PASS, snapshot audit 0 findings | PR pending. Flagged items do not block merge per standing rule. |
+
+## Verification log (this session)
+
+| Time (UTC) | Check | Result |
+|------------|-------|--------|
+| 2026-10-22 23:09–23:20 | Official-page fetches: 4 Blue Nile products, 1 Costco product, BN returns/contact, Costco FAQ/metals/returns, LBMA+NIST anchors, eCFR 16 CFR Part 23, govinfo 15 USC, JA→BN redirect | Transcribed only observed values. Costco price/weight unobserved → blank + flagged. |
+| 2026-10-22 23:5x | Root suite on final tree: `build → qa → node test_calculator → build → snapshot audit` | qa PASS 10 checks / 0 failures / 2 coverage warnings; calculator PASS; snapshot audit 0 findings, 6 arithmetic controls. |
+| 2026-10-22 23:5x | Dashboard suite: `dashboard build → verify --check-build → calc-test` + byte-stability re-run | P1–P8 PASS, 20/20 calc tests, index.html byte-stable across runs (timestamp removed from summary). |
+
+## Open-findings dispositions (dashboard scope; root/reviewer scopes untouched)
+
+- R39-02 (metal-only weight): dashboard calculator/checklist label metal-only input; root calculator is the owner's scope.
+- R39-04 (audit coverage): dashboard P8 checks evidence-quote self-consistency; quotes prove transcription, not truth (stated on dashboard/methodology.html).
+- R39-06 (contrast): dashboard palette computed — running text ≥ 4.5:1; 30px-bold gold numerals 3.25:1 (large-text pass).
+- R6-07 (calculator validation): dashboard calculator rejects non-finite/zero/negative input, USD-labeled, 20 node tests.
+- R6-08 (guidance sources): dashboard retail-vs-melt guidance attributed to the project brief, not to an authority.
+- R6-11 (purchase docs): dashboard checklist item 9 lists the written-confirmation set.
+- R39-01/R39-03/R8-01 are resolved on main; R9-01 (quote date) corrected by S-CA4C9D8A, still open pending re-review — not this session's scope.
+
+## Lessons for the next session
+
+1. Never parallel-edit one file (tool calls in one block race — lost 3 flags.json edits once; re-applied atomically).
+2. Root converge order is build → qa → build (their CI does exactly this); report timestamp lives only in the excluded qa-report.md.
+3. Any new item row REQUIRES a `| ID |` row in `reviews/2026-10-22-6ca03571.md` (snapshot audit fails CI otherwise) — added for BN-316238 with an explicit NOT-reviewer-verified caveat.
+4. Dashboard verify-summary must be timestamp-free: CI's tree-wide `git diff --exit-code` fails on run-varying HTML. `dashboard/verification-log.json` (append-only history) is excluded alongside the QA report.
+5. Retailer schema requires non-null https `website/contact_source_url/return_policy_url/payment_source_url` on listed domains, and `independent_reputation` must be a dict; the builder previously assumed non-null windows/notes — null-guards added (existing output byte-identical).
