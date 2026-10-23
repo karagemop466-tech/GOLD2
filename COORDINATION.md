@@ -2,9 +2,58 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Claim — Session S-CA4C9D8A (completed 2026-10-22 UTC)
+
+Platform constraint: this session is bound to `arena/ca4c9d8a-gold2`; no other branch or worktree may be created or pushed. File scopes below are exclusive to this session while active.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T12 | Line-by-line repository, provenance, and security audit | done | S-CA4C9D8A | `tools/qa.py`, `scripts/**`, `reports/**` |
+| T13 | Re-verify all published data against primary sources; resolve open handoffs where possible | done | S-CA4C9D8A | `data/**`, `evidence/**` |
+| T14 | Dashboard, calculator, accessibility, and generated-page review | done | S-CA4C9D8A | `tools/build_site.py`, `assets/**`, root `*.html` |
+| T15 | Final integration, PR, merge, and Pages deployment | done | S-CA4C9D8A | `COORDINATION.md`, `README.md`, `.github/workflows/**` |
+
+No other active claim was present when this board was read. Completed historical tasks are not being reclaimed as pending work; this pass is a fresh verification and integration review.
+
 - Repository: `karagemop466-tech/GOLD2`
 - Publishing: GitHub Pages, **legacy** build, branch `main`, path `/` (confirmed via API: `build_type: legacy`)
 - Last updated: 2026-10-22 (UTC)
+
+## S-CA4C9D8A working log
+
+- 2026-10-22 — Re-read all 16 official product URLs. Displayed names and labeled current prices matched inherited records where rendered. VRAI still exposes no price; Brilliant Earth exposes **EUR 990 Setting Only**, not USD. Zales `Z-20303279` and `Z-20301172` now render two amounts plus `30% Off` without Discounted/Original labels, so their structured current/original prices are blank and the exact text is flagged (F-018), not inferred.
+- 2026-10-22 — Refreshed official returns, payments, and contact evidence for Blue Nile, Zales, VRAI, and Brilliant Earth. Material corrections include VRAI's $300 engagement-ring recycling fee / value-based store-credit terms, Brilliant Earth's $40 engraved-ring removal fee and resized/modified exclusions, and Zales' channel-specific resizing rules from its official return policy and ring-sizer PDF.
+- 2026-10-22 — Consulted BBB profile, complaint, and review pages as independent third-party evidence. Blue Nile and Brilliant Earth metrics are profile-scoped; Zales metrics are explicitly combined Signet metrics; VRAI candidate-profile metrics are withheld because the profile does not link `vrai.com`. BBB allegations are not treated as proven facts.
+- 2026-10-22 — Updated WGC spot reference to **$4,028.53/troy oz**, data dated 2026-10-21; retained $4,024.36 only as superseded intraday evidence. Added NIST's 31.103 476 8 g/troy-oz conversion chart and eCFR gold-labeling context.
+- 2026-10-22 — Migrated all listings to per-item evidence with 277 field-scoped quotes across items, retailers, and gold references; intermediate quote-integrity check found 0 missing quotes. Current data: 16 items, 13 assigned prices, 1 published metal weight, 23 flags. `null` now means not stated (including solid-gold/hallmark fields), never a negative physical finding. Data/evidence checkpoint committed as `866d7c8`; generator/QA integration follows below.
+- 2026-10-22 — Rebuilt the root generator into 10 data-derived pages, moved the nominal-gold calculator to dependency-free `assets/calculator.js`, added unit tests, and preserved the earlier `site/` dashboard and its tests. The calculator never invents missing weights and labels melt output as theoretical rather than appraisal/resale value.
+- 2026-10-22 — Strengthened `tools/qa.py` for item/field provenance, semantic value checks, two-way flags, rejected-value checks, generated row/source identity, CSP, internal destinations/fragments, and external URL structure. Its first run caught VRAI's paraphrased weight basis and Zales `Z-20046552`'s incorrect original-price quote; both evidence/data defects were corrected without weakening the checks.
+- 2026-10-22 — Final local root result: **PASS — 10 checks, 0 failures, 2 intentional coverage warnings**, 277 field-scoped quotes. Calculator tests and the preserved dashboard's build/audit/tests also pass. Local HTTP preview returned 200 and the current no-hallucination rule/gold quote.
+- 2026-10-22 — Inventoried 51 unique external HTTPS destinations in the built pages. All 50 web destinations returned content during this review and the repository URL validated with `gh`; all 16 official product URLs were included. Dated record: `reports/source-link-review.md`. Redirects, dynamic extraction, and future availability limitations remain explicit.
+- 2026-10-22 — README and both workflows updated for the current evidence model, branch, calculator tests, and reproducible generated-file checks. Legacy `main` / root Pages publishing is retained; the legacy workflow verifies `site/` and is not mislabeled as the root deployment mechanism. T15 integration/PR/deployment is now active.
+- 2026-10-22 — Clean-tree reproducibility testing caught stale intermediate **FAIL** summary text in committed `index.html`/`methods.html` despite a final PASS report. Regenerated from the PASS report and added an explicit post-audit build to CI; the generated-file diff check remains enforced. This is a rendered-state correction, not a loosened audit.
+- 2026-10-22 — `git pull --rebase origin main` integrated main through PR #14 (`7276c9b`). Gold data/evidence and generated-file conflicts were resolved by combining: independent `reviews/**`, legacy `evidence_quotes`, and the `Last Updated` excerpt remain; the supported 4,028.53 quote remains; R9-01 is corrected to source-supported `quote_date: 2026-10-21` while `retrieved_at` stays 2026-10-22. No review history was deleted.
+- 2026-10-22 — Updated the inherited independent snapshot audit for per-item evidence, field-scoped quotes, and CSP-compatible external calculator scripts. Corrected its negation handling after it falsely flagged a note that explicitly said solid gold was *not* stated; the contradiction check remains and now exits nonzero on findings. Integrated result: **0 findings, 6 arithmetic controls passed**. Root QA, calculator tests, legacy checks, and HTTP preview also pass after the rebase.
+- 2026-10-22 — PR #15 merged and deployed successfully (exact runs below). Post-deploy closeout also pinned every workflow action to a full commit SHA, fixed generator-owned small-text contrast, added WCAG AA contrast checks, and recorded dispositions for all 17 remaining open inherited findings. The inherited review register is now 20/20 resolved; the separate 23 product/source evidence flags remain intentionally open.
+
+# S-CA4C9D8A final integration record
+
+| Record | Verified result |
+|---|---|
+| Integration PR | [#15](https://github.com/karagemop466-tech/GOLD2/pull/15), merged 2026-10-22T23:46:58Z |
+| Merge commit | `894d3649c4335e89d5559981bbbea19e3677a9c1` |
+| PR checks | `audit` run `39873963283` PASS; `verify` run `39873963252` PASS |
+| Post-merge main checks | GOLD2 verify run `39874026034` SUCCESS; legacy dashboard verify run `39874025947` SUCCESS |
+| Pages | Legacy `main` `/`; build `1306735062` / run `39874024671` reached `built` for `894d3649` at 2026-10-22T23:47:17Z |
+| Live URL | https://karagemop466-tech.github.io/GOLD2/ |
+| Live re-read | Root, calculator, flags, and methods pages returned the new rule, 16 items, 13 assigned prices, 1 weight, 23 flags, 277 quotes, PASS summary, $4,028.53 at quote date 2026-10-21, and VRAI $277.82 nominal melt |
+| Final local verification | Root QA 10 checks / 0 failures / 2 coverage warnings; calculator tests PASS; independent review 0 findings / 6 arithmetic controls; legacy build/audit/tests PASS; generated files reproducible |
+| External links | 51 unique destinations retrieved/validated, including 16/16 official product URLs; `reports/source-link-review.md` |
+| Non-blocking runner notices | GitHub reports Node 20 action-runtime deprecation/forced Node 24 and `ubuntu-latest` migration; all checks/deploy jobs succeeded |
+
+The clean-tree check caught and fixed a stale intermediate FAIL badge before PR #15. The rebase preserved the independent review history and corrected R9-01 rather than accepting main's unsupported quote-date label. After PR #15, closeout changes resolved the two remaining repository-control findings: immutable action SHAs and small-text contrast. The contrast audit also caught generator-owned stylesheet regeneration and valid three-digit hex parsing; both were fixed without lowering thresholds.
+
+**Completion boundary:** implementation, evidence organization, source-link review, PR merge, and Pages deployment are complete. The 23 flags are not hidden or treated as resolved facts: three prices remain unassigned, 15 weights remain missing, and no physical inspection, hallmark verification, XRF assay, or scale verification was performed. Continue to look for hallucinations after every review.
 
 ## Sessions that have worked here
 
@@ -12,9 +61,9 @@ Shared task board for parallel agent sessions. **Read this before editing anythi
 |---|---|---|---|
 | `39da17c8` | `arena/39da17c8-gold2` | initial research, dashboard in `site/`, audits, Pages | merged in PR #1 / #2 → `main` |
 | `S-6CA03571` (6ca03571) | `arena/6ca03571-gold2` | listing research, evidence trail, root dashboard, integration | PR #3–#7 merged |
-| `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9 done; R9-01 quote-date correction open |
-| `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 merged; open findings handed off |
-| `S-75094819` | `arena/75094819-gold2` | refresh pass: gold quote, F-011/F-012 handoffs, new "solid gold" retailer coverage, price spot re-verification, rebuild, PR + merge | done (2026-10-22), PR recorded below |
+| `S-da963b79` (da963b79) | `arena/da963b79-gold2` | gold-price re-verification, QA, rebuild, Pages and PR | PR #9 done; R9-01 quote-date correction applied by S-CA4C9D8A |
+| `5ff05cf9-gold2` | `arena/5ff05cf9-gold2` | initial requirements audit; independent evidence/calculator/publication review in `reviews/**` | T1/T6 done; PR #8 merged; findings dispositioned by S-CA4C9D8A |
+| `S-CA4C9D8A` | `arena/ca4c9d8a-gold2` | field-scoped re-verification, dashboard/calculator, combined QA, integration and closeout | T12–T15 done; PR #15 merged and Pages built |
 
 All sessions share one environment constraint: the runner is bound to a single branch and cannot create
 `session-<id>/<task>` worktrees. That is recorded rather than ignored. Work is therefore separated by
@@ -194,57 +243,6 @@ something this repo can resolve by itself.
 
 ---
 
-# Session S-75094819 — refresh & expansion pass (claimed 2026-10-22 UTC)
-
-Branch: `arena/75094819-gold2` (platform-bound single branch; same constraint recorded by prior sessions).
-Baseline at claim: `tools/qa.py` PASS — 11 checks, 0 failures, 2 coverage warnings. No open PRs, no other remote branches.
-
-| ID | Task | Status | Owner | File scope (exclusive) |
-|----|------|--------|-------|------------------------|
-| S750-T01 | Refresh gold spot quote if a newer official quote is retrievable | done | S-75094819 | `data/gold-price.json`, `evidence/gold-price.md`, `prices.html` |
-| S750-T02 | F-011: retrieve Zales standalone return policy from zales.com | done | S-75094819 | `evidence/retailers/zales.md`, `data/retailers.json` (Zales row), `data/flags.json` (F-011) |
-| S750-T03 | F-012: verify credit-card acceptance per retailer from official pages | done | S-75094819 | `evidence/retailers/*.md`, `data/retailers.json`, `data/flags.json` (F-012) |
-| S750-T04 | New coverage: retailers that explicitly state "solid gold" (official pages only; blank + flag if not stated) | done | S-75094819 | new `data/listings/*.json`, `evidence/listings/*.md`, new root page(s) via `tools/build_site.py` |
-| S750-T05 | Spot re-verification of existing listing prices against live pages | done | S-75094819 | `data/listings/*.json`, `evidence/listings/*.md` (append-only notes) |
-| S750-T06 | Rebuild, full QA (both audit suites), PR to main, merge, Pages verification | done | S-75094819 | root `*.html`, `reports/qa-report.md`, `COORDINATION.md`, `README.md` |
-
-Rules reaffirmed for this pass: **no hallucinations** — every value read from the retailer's own page, verbatim
-quote in `evidence/`, blank + flag when absent; never infer, average or convert. Run `tools/qa.py` (and the
-earlier pass's `scripts/audit.py`) after every review; re-check for hallucinations before merge.
-
-## S-75094819 verification log
-
-| UTC | Task | Check | Source | Result |
-|-----|------|-------|--------|--------|
-| 2026-10-22 | S750-T01 | Gold spot re-read | https://www.gold.org/goldhub/data/gold-prices | 4,028.53 USD/oz (data as of 21 Oct 2026); prior 4,024.36 kept in quote_history |
-| 2026-10-22 | S750-T02 | Zales standalone return policy | https://www.zales.com/return-and-exchange-modal (canonical: /return-and-exchange-policy, body not extractable) | 30-day returns; custom designs excluded; prepaid mail label. Resized rings not addressed — still blank |
-| 2026-10-22 | S750-T03 | Card tender | same Zales policy; https://www.stoneandstrand.com/pages/returns-exchanges | "Credit and Debit Cards" named (Zales); "your credit card provider" (Stone and Strand). Networks never named. F-012 narrowed |
-| 2026-10-22 | S750-T04 | 3 Stone and Strand product pages | the-clara-ring, the-rita-ring, the-mia-ring on stoneandstrand.com | First rows with `solid_gold_explicit=true`. All final sale (F-016). Mia karat conflict 14K spec vs 10K alt text (F-017). Clara snippet $2,000 rejected vs live $2,200 |
-| 2026-10-22 | S750-T04 | 2 Catbird product pages | catbirdnyc.com | Details block absent from retrieved text → no rows added (F-018); snippet data not used |
-| 2026-10-22 | S750-T05 | Spot re-verification ×3 | BN-203348, Z-19957449, VRAI-CLASSIC-4P live pages | 10/10 stored fields match; no data changes |
-| 2026-10-22 | S750-T06 | Full audit stack | `tools/qa.py`, `scripts/audit.py`, `node scripts/test.js` | All PASS, 0 failures (19 items, 18 flags) |
-
-## S-75094819 findings
-
-- **F-016 (high, new):** the market's "solid gold" wording currently comes with no return right — all 3 Stone and
-  Strand rows are final sale, so the XRF-verify-then-return method cannot be applied to them.
-- **F-017 (medium, new):** one retailer page contradicts itself on karat (14K spec vs 10K image alt text).
-- **F-018 (low, new):** Catbird is a documented coverage gap for tooling reasons, not evidence reasons.
-- **F-011 narrowed, F-012 narrowed** (prior handoffs closed with official policy text).
-
-## S-75094819 integration record
-
-- **PR:** recorded in the follow-up commit after merge.
-- **Method:** all counts in `tools/build_site.py` templates are now derived from data (index lead, flags intro,
-  methods limitations). Rendered pages were re-read after build — the stale-count failure mode of PR #4/#5/#6
-  was checked for explicitly (`grep` sweep for "of 16", "4 retailers", "five categories", old gold price).
-- **Open items, published and non-blocking:** F-001 (16/19 no "solid gold"), F-002 (19/19 no hallmark),
-  F-003 (18/19 no gram weight), F-016/F-017/F-018 above. Next-pass candidates: Catbird capture with a
-  JS-capable fetcher; a retailer that says "solid gold" AND allows returns; Zales resized-ring treatment;
-  Zales/Stone and Strand contact phone.
-
----
-
 # Session 5ff05cf9-gold2 — independent review board
 
 ## Session and branch rules
@@ -322,45 +320,3 @@ This session therefore leaves T2–T5 unclaimed and confines new work to T6. It 
 - Review PR #8 final head `779020d40bc328decb6240044da7a305366ef856` passed runs `39872116197` and `39872116200`, then merged as `73a98fe1338f901b6c85452b237469d3bde29327` at 2026-10-22T23:29:48Z. Exact-main runs `39872158608` and `39872158539` passed; Pages run `39872158049` built and deployed that commit. The PR-head and merge trees were identical.
 - PR #13 subsequently changed only `reports/qa-report.md`; main `7a453927ac410c45894c480bef47494322798e1f` verification/Pages runs `39872212871`, `39872212900`, and `39872212893` succeeded.
 - Final publication and errata evidence is in `reviews/2026-10-22-pr8-publication.md`. R39-01/R39-03/R8-01 are resolved; R9-01 and 16 other findings remain open. Successful builds/merges do not close evidence findings. Further hallucination/security review is required after every corrective edit.
-
----
-
-# Merge note — S-75094819 integrating PRs #8–#14 (2026-10-22)
-
-While session S-75094819 worked, sessions `5ff05cf9-gold2` and `S-da963b79` landed PRs #8–#14
-(independent review under `reviews/**`, requirements audit, and an independent gold re-verification).
-A `git pull --rebase` before this session's PR hit a content conflict in `COORDINATION.md`; the rebase
-was aborted with no work lost, and `origin/main` was then merged into `arena/75094819-gold2`.
-Conflicts resolved by **combining**, nothing discarded:
-
-| File | Resolution |
-|---|---|
-| `COORDINATION.md` | Session tables unioned; both new boards (5ff05cf9 review board, S-75094819 board) kept in full |
-| `data/gold-price.json` | Both sessions independently read 4,028.53 USD/oz. Merged record keeps the value with `quote_date: 2026-10-21` (official dataset date) — **this dispositions review finding R9-01** — plus quote_history and both sessions credited |
-| `evidence/gold-price.md` | Auto-merge had put 4,028.53 into the first session's excerpt; restored to the verbatim 4,024.36 first observation, re-check section retained, parallel verification credited |
-| `README.md` | Auto-merged cleanly: 5ff05cf9's review section and S-75094819's updated counts both present |
-| `index/methods/prices.html`, `reports/qa-report.md` | Generated files — resolved by full rebuild + audit re-run after the data merge |
-| `reviews/**`, `docs/**`, `data/requirements.json` | Untouched, taken as-is from main |
-
-Open independent-review findings (R39/R6 series in `reviews/findings.json`) are dispositions for the
-integration record below; none were silently closed.
-
-## S-75094819 — dispositions of independent-review findings (2026-10-22)
-
-Integration re-ran `reviews/independent_snapshot_audit.py` before/after: **30 findings → 3**.
-`reviews/findings.json` was NOT edited (5ff05cf9's scope); dispositions are recorded here for re-review.
-
-| Finding | Disposition in this merge |
-|---|---|
-| R9-01 (high) | **Fixed.** `quote_date` = 2026-10-21 (official dataset date); value 4,028.53 kept (two sessions converged). The reviewer's own GOLD-QUOTE-DATE-MISMATCH control now passes. |
-| R6-01 (high) | **Fixed.** 4 Zales rows: metal "10K Yellow Gold"→"10K Gold", color "Yellow"→blank (titles support only "10K Gold"); correction noted in each row. |
-| R6-03 (high) | **Fixed.** BN-194548 note no longer asserts an alloy conclusion; site meta description and dashboard H1 narrowed ("evidence-checked listings"); XRF-after-delivery remains mandatory guidance. |
-| R6-04 (medium) | **Fixed.** Blue Nile's own store credit card recorded with exact scope (verbatim quote added to evidence); F-012 rewritten per-retailer; no network/protection inference. |
-| R6-05 (medium) | **Mostly fixed.** VRAI full policy retrieved (resized/custom excluded, $300 recycling fee, free U.S. return shipping, 1 free resize, help@vrai.com); Zales policy retrieved (T02); landing "recorded per retailer" claim narrowed. **Still open:** Brilliant Earth 30-day policy text and the region scope of its recorded phone — left blank/open rather than guessed. |
-| R6-06 (medium) | **Fixed.** `weight_basis` ("…at ring size 6") now rendered under the weight in category tables. |
-| R6-10 (medium) | **Fixed.** F-015 counts corrected (10 Blue Nile setting rows; 12 setting / 7 complete); F-001 and templates narrowed to "describe the ring itself" (VRAI editorial-text caveat recorded); landing counts fully data-derived; absolute banner claim narrowed to table values. |
-| R6-02 (medium) | **Fixed for flagged rows.** URL-derived SKUs (VRAI + 4 Zales) blanked; identifiers preserved in notes with URL-derived provenance. |
-| R6-07 (high) | **Partially fixed.** `Number.isFinite` guards + karat ≤ 24; USD label on ask input; weight input explicitly metal-only. Full input-domain review remains open. |
-| R6-08 (medium) | **Fixed (wording).** Unsourced market-norm lines ("normal retail", "sold at scrap", "Melt is a floor") replaced with sourced-arithmetic wording. |
-| R6-09 (high), R6-11, R6-12, R39-02, R39-04, R39-05, R39-06 | **Open / handed off.** QA false-negative classes, seller-reputation assessment, one archived excerpt's reproducibility, terminology scope, audit coverage, action pinning, contrast. Published in `reviews/` and referenced from README; not silently closed. |
-| REVIEW-ROW ×3 (SS-CLARA/RITA/MIA) | **Awaiting independent re-review.** New rows from this session are not yet in `reviews/2026-10-22-6ca03571.md` — by design; the reviewer session owns that file. |

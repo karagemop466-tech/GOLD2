@@ -1,62 +1,180 @@
-# Evidence — Blue Nile policies & contact
+# Evidence — Blue Nile policies and reputation
 
-- **URL (returns):** https://www.bluenile.com/policies/returns
-- **URL (contact, shown on every product page and the 404 page):** https://www.bluenile.com/contact-us
-- **Retrieved:** 2026-10-22 (UTC)
+- **Retrieved:** 2026-10-22 (UTC), direct page fetches.
+- **Scope:** Official retailer pages support policy/contact/payment claims. BBB is an independent third-party profile source, not a retailer claim or endorsement.
 
-## Returns — verbatim excerpts
+## Source URLs
 
-```
-30 days from the shipment date
-```
+- **Official returns:** https://www.bluenile.com/policies/returns
+- **Official US payments:** https://www.bluenile.com/policies/us-payment-methods
+- **Official contact:** https://www.bluenile.com/contact-us
+- **Independent BBB profile:** https://www.bbb.org/us/wa/seattle/profile/jewelry-stores/blue-nile-inc-1296-15026564
+- **Independent BBB complaints:** https://www.bbb.org/us/wa/seattle/profile/jewelry-stores/blue-nile-inc-1296-15026564/complaints
+- **Independent BBB reviews:** https://www.bbb.org/us/wa/seattle/profile/jewelry-stores/blue-nile-inc-1296-15026564/customer-reviews
 
-```
-\* Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and “Final Sale” items are not eligible for return or exchange.
-```
+## Field-scoped excerpts
 
-```
-Note: Two complimentary returns are allowed per customer, per year. A Return Merchandise Authorization (RMA) number is required for all returns.
-```
-
-```
-Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase if the design permits.
-```
-
-## Contact — verbatim excerpts
+### `contact_phone`
 
 ```
 +1‑800‑242‑2728
 ```
 
+### `contact_email`
+
 ```
 service@bluenile.com
 ```
 
-## Not found on the retrieved pages
-
-Searched the retrieved text for: `solid gold`, `hallmark`, `maker's mark`, `gram weight`.
-- `solid gold` — not present on product or policy pages retrieved.
-- `hallmark` / `maker's mark` — not present.
-- `gram weight` — not present; no metal weight published.
-
-## Notes
-- A guessed URL `https://www.bluenile.com/policies/returns-policy` returned "We're sorry, the page you're looking for cannot be found." The correct URL is `/policies/returns`. Recorded so the mistake is not repeated.
-- Blue Nile also hosts James Allen designs after the merger (see flag F-009).
-
----
-
-## Store credit card named on product pages — observed 2026-10-22 (session S-75094819, dispositioning R6-04)
-
-During the spot re-verification of item 203348
-(https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348),
-the retrieved page text included verbatim:
+### `contact_channels`
 
 ```
-Or as low as $195/mo for 6months with the Blue Nile Credit Card for a total payment of$1,168**
+Chat with us
 ```
 
-So Blue Nile **does** state a card product (its own Blue Nile Credit Card) on product pages; the earlier
-blanket note "not stated on the retrieved pages" was wrong and is corrected in `data/retailers.json`.
-Scope, stated precisely: this evidences Blue Nile's own store credit card as a payment/financing option on
-that page. It does **not** name general card networks (Visa/Mastercard/Amex), and no purchase-protection
-outcome is inferred — store-card terms differ from general-purpose credit cards. Flag F-012 updated accordingly.
+```
+Message us on WhatsApp
+```
+
+### `return_window_days`
+
+```
+30 days from the shipment date
+```
+
+### `return_window_basis`
+
+```
+30 days from the shipment date
+```
+
+### `return_free_shipping`
+
+```
+Two complimentary returns are allowed per customer, per year.
+```
+
+### `return_free_shipping_basis`
+
+```
+Two complimentary returns are allowed per customer, per year.
+```
+
+### `return_free_shipments_per_year`
+
+```
+Two complimentary returns are allowed per customer, per year.
+```
+
+### `return_excludes_resized`
+
+```
+items resized after initial purchase
+```
+
+### `return_excludes_custom`
+
+```
+custom orders
+```
+
+### `return_exclusions_detail`
+
+```
+Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and “Final Sale” items are not eligible for return or exchange.
+```
+
+### `resize_policy`
+
+```
+Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase if the design permits.
+```
+
+### `payment_methods_verified`
+
+```
+Credit cards: We accept major credit cards, including Visa®, Mastercard®, American Express®, and Discover®
+```
+
+```
+We accept payment through PayPal® for orders totaling up to $50,000
+```
+
+```
+We accept secure wire transfers from most banking institutions
+```
+
+```
+We offer financing options through Affirm and Splitit
+```
+
+### `payment_note`
+
+```
+Blue Nile U.S. payment methods include only Visa® Debit and Mastercard® Debit cards. No other debit cards are accepted.
+```
+
+```
+this option is currently unavailable for purchases totaling $50,000 or more
+```
+
+### `reputation_accreditation`
+
+```
+BBB Accredited Business
+```
+
+### `reputation_rating`
+
+```
+A+Rated by BBB
+```
+
+### `reputation_reviews`
+
+```
+1/5 stars
+```
+
+```
+Average of25 Customer Reviews
+```
+
+### `reputation_complaints`
+
+```
+121 complaintsin the last 3 years.
+```
+
+```
+23 complaintsin the last 12 months.
+```
+
+### `reputation_scope`
+
+```
+Blue Nile Inc offers fine jewelry sales.
+```
+
+### `reputation_identity`
+
+```
+[Visit Website](https://www.bluenile.com/)
+```
+
+## Review limitations
+
+- Written seller permission for independent non-destructive inspection/XRF was not captured; no seller refusal is inferred.
+- No physical item was inspected or tested.
+- BBB complaint and review content includes third-party allegations. Counts and profile labels are reported only with the stated scope and retrieval date; allegations are not treated as proven facts.
+- BBB states that it does not endorse any product, service, or business and does not guarantee the accuracy of third-party information.
+
+## Additional official return-shipping excerpts
+
+```
+If using our complimentary return service, the shipping label emailed to you includes insurance protection.
+```
+
+```
+Additional shipping charges may be incurred if packages are returned via alternate carriers
+```

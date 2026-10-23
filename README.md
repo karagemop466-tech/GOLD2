@@ -1,118 +1,134 @@
-# GOLD2 — evidence-checked gold engagement ring research
+# GOLD2 — source-backed gold engagement-ring research
 
-**No hallucinations. Every price, karat and width on the site was read from the retailer's own page on the stated retrieval date, and every row links to that page. If a value was not on the page it is left blank and listed on the "Flagged for Review" page — never estimated, averaged or converted.**
+**No hallucinations. Publish only what a retrieved source supports. If a value is absent or ambiguous, leave it blank and flag it—never infer it from another item, a photograph, price position, discount arithmetic, a search snippet, or currency conversion.**
 
-Live site: **https://karagemop466-tech.github.io/GOLD2/** (GitHub Pages, legacy publishing, `main` branch, repository root)
+Live dashboard: **https://karagemop466-tech.github.io/GOLD2/**
+Publishing: GitHub Pages legacy source, `main` branch, repository root.
 
----
+## What this repository contains
 
-## What this is
+An auditable register of **16 engagement-ring listings from 4 retailers**, organized into five categories. It separates:
 
-An auditable research register for buying a **solid gold** engagement ring online. It records only what a
-retailer's own page actually states, and flags the gaps that matter — because the three things that decide
-whether a ring is really solid gold are the three things retailers rarely publish:
+- official product facts from seller policy claims;
+- official seller pages from independent BBB profile data;
+- explicitly assigned prices from blank or unlabeled amounts;
+- setting/configurator prices from complete-ring prices;
+- retrieved facts from nominal gold calculations; and
+- remote document review from physical verification, which has **not** been performed.
 
-1. the words **"solid gold"** (not plated / vermeil / gold-filled / overlay / gold-tone),
-2. a **karat stamp plus a maker's mark**,
-3. the **gram weight**.
+Current coverage: **13 assigned prices**, **1 published metal weight**, and **23 open flags**. No item-specific capture states the required “solid gold” wording or documents a physical hallmark plus maker’s mark. Those are evidence gaps, not findings that a ring is fake.
 
-Current dataset (retrieved 2026-10-22 UTC): **19 listings from 5 retailers** across six categories.
-**3 of 19** listings state the words "solid gold" (all Stone and Strand — and all three are final sale /
-non-returnable, F-016), **0 of 19** state a hallmark or maker's mark, and
-**1 of 19** publishes a gram weight. Those are the findings, not a data-entry problem.
+## Dashboard pages
 
-## Pages (served from the repository root)
+| Path | Contents |
+|------|----------|
+| `index.html` | No-hallucination rule, coverage counts, dated gold quote, category links, review checklist |
+| `solitaire.html` | Solitaire settings and the Brilliant Earth EUR-priced row |
+| `halo-pave.html` | Halo/pavé settings, including two re-verified earlier-pass listings |
+| `three-stone-vintage.html` | Three-stone/vintage rows, including two unlabeled Zales price displays |
+| `18k.html` | 18K settings and VRAI’s published size-6 metal weight |
+| `budget.html` | 10K / lower-price complete-ring rows |
+| `retailers.html` | Official returns/payments/contact details plus independently sourced, scope-labeled BBB metrics |
+| `prices.html` | Metal-only weight → nominal fine-gold → theoretical melt calculator |
+| `flags.html` | **Flagged for Review:** missing evidence, discrepancies, source limits, and material policy restrictions |
+| `methods.html` | Evidence method, source hierarchy, limitations, security notes, and QA summary |
+| `site/` | Earlier two-listing dashboard, preserved with its own generator, audit, and calculator tests |
 
-| File | What it holds |
-|------|----------------|
-| `index.html` | Dashboard: no-hallucination banner, counts, gold quote, checklist, top flags |
-| `solitaire.html` | Solitaire settings |
-| `halo-pave.html` | Halo & pavé settings (includes the two rings from the earlier pass) |
-| `three-stone-vintage.html` | Three-stone and vintage-style rings |
-| `18k.html` | 18K / high-karat settings, incl. the only published gram weight |
-| `budget.html` | 10K / lower-price complete rings |
-| `solid-gold.html` | Listings that explicitly say "solid gold" (Stone and Strand; all final sale — F-016) |
-| `retailers.html` | Return windows, exclusions, contact info, price basis per seller |
-| `prices.html` | Melt calculator + fine-gold quick reference |
-| `flags.html` | **Flagged for Review** — everything unverified or irregular, with source links |
-| `methods.html` | Method, source hierarchy, limitations and the latest QA audit |
-| `site/` | **Earlier pass (session 39da17c8), preserved unchanged.** Two Blue Nile settings, its own audit and calculator. Linked from `methods.html` as an archived pass. |
+Every current listing row links its **official product page** and its **own field-scoped evidence file**.
 
 ## Repository layout
 
-```
-data/                  machine-readable verified facts (JSON)
-  gold-price.json        one dated gold quote + limitations
-  retailers.json         policies/contact, blanks where not stated
-  listings/*.json        six categories, one row per listing
-  flags.json             18 flags with sources and recommended actions
-evidence/              audit trail: URL + retrieval date + verbatim quotes
-tools/build_site.py    renders the root pages from data/ (no invented values)
-tools/qa.py            hallucination audit + link check
-reports/qa-report.md   output of the last audit
-scripts/, site/        earlier pass (session 39da17c8), untouched and reproducible
-COORDINATION.md        shared task board, both sessions, merge record
+```text
+data/
+  listings/*.json       five categories; nullable fields and field_evidence per row
+  retailers.json        official policies plus scoped independent reputation data
+  flags.json            23 findings with affected rows/retailers and source links
+  gold-price.json       dated WGC quote, NIST conversion, eCFR context, limitations
+evidence/
+  listings/<item>.md    authoritative item-scoped excerpts and capture limits
+  listings/README.md    explains inherited shared-category files (history only)
+  retailers/*.md        official policy evidence and independent-profile excerpts
+  gold-price.md         current/superseded quotes and calculation sources
+assets/
+  calculator.js         dependency-free, testable nominal-gold calculator
+  style.css             shared dashboard styling
+tools/
+  build_site.py         renders 10 root HTML pages from data
+  qa.py                 field-level provenance, integration, link, and security audit
+  test_calculator.js    calculator unit tests
+reports/qa-report.md    latest automated audit result
+reports/source-link-review.md  dated external-source retrieval inventory
+scripts/, site/         preserved earlier-pass implementation
+COORDINATION.md         shared task board, source log, integration/deployment record
 ```
 
-## Run it
+## Build and verify
 
 ```bash
-python3 tools/build_site.py   # regenerate the root pages
-python3 tools/qa.py           # audit data + built HTML
+python3 tools/build_site.py
+python3 tools/qa.py
+node tools/test_calculator.js
+python3 tools/build_site.py  # refresh the rendered QA summary after the audit
+python3 reviews/independent_snapshot_audit.py .
 ```
 
-Earlier pass, still runnable:
+Run this full sequence after every review. The audit checks:
+
+- item-scoped schema, IDs, dates, and official domains;
+- field-specific quote existence and value/currency/unit consistency;
+- retailer policy, contact, payment, and independent-metric backing;
+- blank-to-flag coverage and two-way item/retailer flag references;
+- rejected/superseded values not becoming current values;
+- nominal fine-gold and melt calculations;
+- rendered row/source identity, internal links and fragments, CSP, script constraints, and small-text WCAG AA contrast; and
+- explicit price/weight coverage warnings.
+
+The preserved earlier pass remains runnable:
 
 ```bash
-python scripts/build.py && python scripts/audit.py && node scripts/test.js
+python3 scripts/build.py
+python3 scripts/audit.py
+node scripts/test.js
 ```
 
-**Run the audit after every review pass.** `tools/qa.py` fails when a published number is not backed by a
-verbatim quote in `evidence/`, when a source URL leaves the seller's own domain, when a rejected cached
-value equals a published value, or when a blank cell has no flag explaining it.
+**A PASS is not proof of physical truth or external-site availability.** Look for hallucinations again after every review and re-read the official source and generated page after every edit.
 
 ## Source hierarchy
 
-- **Product facts:** the retailer's own product page only — Blue Nile, Zales, VRAI, Brilliant Earth, Stone and Strand.
-- **Policies:** the retailer's own return-policy page.
-- **Gold price:** World Gold Council gold-spot page (market data: ICE Data Services), quoted with its date.
-- **Rejected:** search-engine snippets, aggregators, blogs, coupon sites. Snippets disagreed with the live
-  page three times in the first pass — each is logged as a rejected value (F-004, F-005, F-006).
+1. **Product and policy facts:** the retailer’s official product, return, payment, and contact pages.
+2. **Independent reputation context:** BBB profile/review/complaint pages, dated and labeled by identity and coverage. Blue Nile and Brilliant Earth have linked profiles; Zales figures are combined Signet figures; VRAI candidate metrics are withheld pending identity confirmation. BBB allegations are not treated as proven facts, and BBB does not endorse businesses.
+3. **Gold quote:** World Gold Council spot page with an explicit quote date and ICE Data Services attribution. LBMA’s tabulated data requires licensed portal access (F-013).
+4. **Calculation sources:** NIST’s troy-ounce conversion chart (`31.103 476 8 g`) and eCFR gold-labeling context. Nominal karat/24 arithmetic is not an assay.
+5. **Rejected as product evidence:** snippets, aggregators, blogs, coupon pages, unrelated page text, and values borrowed from another item.
 
-LBMA fix data now sits behind an IBA licence, so the free World Gold Council quote is used instead (F-013).
+## Using the research safely
 
-## Using the shortlist safely
+1. Open both the official listing and the row’s field evidence; recheck the exact configuration, price basis, currency, and retrieval date.
+2. Ask in writing whether the item is solid gold (not plated/filled), its metal-only gram weight, its physical karat/maker’s marks, and whether independent non-destructive XRF is permitted without voiding returns.
+3. Review the seller’s accepted payment methods and your own card/provider protection terms. Official acceptance does not prove a dispute outcome.
+4. Read the exact return and resizing policy. Zales rules depend on where resizing occurred; Blue Nile, VRAI, and Brilliant Earth have their own resized/custom exclusions; VRAI fees and Brilliant Earth engraving terms are published separately.
+5. Keep the item unworn and unaltered until independent inspection and the keep/return decision are complete. Do not resize before understanding the consequences.
+6. If the seller refuses independent verification or a return, do not buy.
 
-1. Open the row's **official listing** link and re-read the price and karat — a stale table is the most likely
-   way a wrong number appears.
-2. Ask the seller in writing: *is it solid gold, what is the gram weight, and what hallmark and maker's mark
-   are stamped inside?* Keep the reply.
-3. Prefer a **credit card** (named as tender on the Zales and Stone and Strand policy pages; verified for
-   no other retailer here — F-012).
-4. Do not accept a resize before testing: Blue Nile excludes resized and custom items from returns (F-010).
-   And never buy a ring you cannot return at all: the three Stone and Strand rings listed here are final
-   sale / non-returnable (F-016), so there is no path back if the metal fails an XRF test.
-5. On arrival, before wearing or resizing, have an **independent jeweller XRF-test the metal and weigh it**.
-6. If the seller will not allow independent verification or a return, don't buy.
+## Calculator boundaries
+
+Use **metal-only weight**, excluding stones and non-gold components. The formulas are:
+
+```text
+nominal fine-gold grams = metal-only grams × listed karat ÷ 24
+theoretical melt USD    = nominal fine-gold grams ÷ 31.1034768 × dated USD/troy oz
+```
+
+The result is not an appraisal, fair-retail estimate, resale offer, or refiner payout. Do not enter EUR prices into the USD asking-price field. No fine-gold or melt result is generated for rows without a published metal weight.
 
 ## Independent review and repository controls
 
-- `data/requirements.json` records the buyer and publication requirements in machine-readable form.
+- `data/requirements.json` records buyer and publication requirements in machine-readable form.
 - `docs/REPOSITORY_AUDIT.md` preserves the exact initial-tree audit.
-- `reviews/` contains the independent review protocol, official terminology/calculation baseline, commit-specific evidence reviews, raw negative-audit output, and machine-readable R39/R6 findings.
-- The latest independent report is `reviews/2026-10-22-6ca03571.md`. It confirms the populated numeric observations and arithmetic while keeping unsupported secondary fields, overbroad claims, calculator risks, and QA blind spots open. A supplied QA PASS is not a substitute for official-source and hallucination/security re-review.
-- PR #8's exact merge/deployment evidence and post-merge review errata are recorded in `reviews/2026-10-22-pr8-publication.md`.
-
-## Earlier pass — session 39da17c8 (preserved)
-
-> Evidence-first research with two documented Blue Nile settings (stock numbers `501480w14` at USD 1,300 and
-> `501480w14l` at USD 1,050, both 14K white gold, 1.70 mm). Neither qualifies for purchase: weight, explicit
-> solid-gold wording and hallmark/maker evidence are missing. The catalogue is a bounded register, not a
-> complete market inventory, and no purchase recommendation is made. Its dependency-free dashboard, audit
-> (`scripts/audit.py`), calculator tests and legacy Pages configuration are retained unchanged in `site/`.
-> Both of its rings were **re-verified live during this integration** and carried into `halo-pave.html`.
+- `reviews/` preserves the independent review protocol, official terminology/calculation baseline, commit-specific evidence reviews, raw audit output, and machine-readable findings. These dated reports are review inputs, not a substitute for rerunning current official-source and hallucination/security checks.
+- The independent R9-01 finding correctly identified that `2026-10-22` was a retrieval date, not the WGC source's as-of date. This integration retains the supported **$4,028.53** number and restores **quote date 2026-10-21** from “Data as of 21 October, 2026.” Historical raw reports remain unchanged.
+- PR #8's merge/deployment evidence and post-merge errata are preserved in `reviews/2026-10-22-pr8-publication.md`; its old row/price counts are commit-specific, not current-dashboard counts.
 
 ## Disclaimer
 
-Melt value is not an appraisal and not a resale price. Prices change without notice; the retrieval date on
-each row is the only date the figure is known to be valid. Nothing here is financial or legal advice.
+Prices and policies can change after the stated retrieval date. Nothing here is financial, legal, or appraisal advice, and no purchase recommendation is made for rows with unresolved checklist evidence.

@@ -1,74 +1,174 @@
-# Evidence — Zales policies
+# Evidence — Zales policies and reputation
 
-- **URL:** product pages (see each listing)
-- **Retrieved:** 2026-10-22 (UTC)
+- **Retrieved:** 2026-10-22 (UTC), direct page fetches.
+- **Scope:** Official retailer pages support policy/contact/payment claims. BBB is an independent third-party profile source, not a retailer claim or endorsement.
 
-## Returns — verbatim excerpt (appears on every Zales product page retrieved)
+## Source URLs
 
-```
-Free and easy 30-day returns
-```
+- **Official returns:** https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE
+- **Official ring-sizer PDF:** https://www.zales.com/_ui/v0251/responsive/theme-zales/documents/ringsizer.pdf
+- **Official payments:** https://www.zales.com/payments?icid=ZAL%3AFOOTER%3APAYMENTS
+- **Independent combined Signet BBB profile:** https://www.bbb.org/us/oh/fairlawn/profile/jewelry-stores/signet-jewelers-0272-1479
+- **Independent combined Signet BBB complaints:** https://www.bbb.org/us/oh/fairlawn/profile/jewelry-stores/signet-jewelers-0272-1479/complaints
+- **Independent combined Signet BBB reviews:** https://www.bbb.org/us/oh/fairlawn/profile/jewelry-stores/signet-jewelers-0272-1479/customer-reviews
 
-## Not captured (at first pass, 2026-10-22)
+## Field-scoped excerpts
 
-- Standalone return-policy page (exclusions for resized / custom / clearance) — **not retrieved**.
-- Contact phone / email — **not retrieved**.
-- Metal weight in grams — **not published**.
-
-These gaps are recorded as flag F-011 and are left blank in `data/retailers.json`.
-
----
-
-## Standalone return policy — retrieved 2026-10-22 (session S-75094819)
-
-- **Canonical policy page:** https://www.zales.com/return-and-exchange-policy
-  (page title "Returns and Exchanges | Zales"; the text fetcher returned only the site navigation
-  for this URL, so the policy body could not be quoted from it directly)
-- **Text actually read from:** https://www.zales.com/return-and-exchange-modal
-  (Zales' own modal rendition of the same policy, on zales.com; body fully extractable)
-- **Method:** live page fetch; excerpts below copied verbatim from the modal page.
-
-### Verbatim excerpts (modal page)
+### `contact_phone`
 
 ```
-## Returns & Exchanges Policy
+Call (800) 311-5393
+```
 
-You may return your purchase within 30 days of the purchase(shipped) date. You may exchange jewelry within 60 days and watches within 30 days. Returns and exchanges are not allowed on special ordered watches, custom designs, ear piercing earrings, gift cards and merchandise received via the Jewelry Replacement Plan. Jewelry must be in good condition and watches unworn, unaltered and accompanied by the original packaging, warranty and instructions.
+### `contact_channels`
+
+```
+Text (855) 915-4139
 ```
 
 ```
-All refunds are credited to the same tender as the original purchase
-
-- Credit and Debit Cards – The same account will be credited.
+Chat With a Jewelry Expert
 ```
 
 ```
-## Return by Mail
-
-- Start your return online
-- Ship your items with the prepaid shipping label that we'll email to you to print at home.
-- Returns are processed within 5 business days and refunds can be expected 5-7 business days after processing.
+WhatsApp
 ```
 
-### What this verifies
+### `return_window_days`
 
-- Return window: 30 days from the purchase (shipped) date for jewelry returns; 60 days for jewelry exchanges.
-- Custom exclusion: **yes** — "custom designs" are named verbatim.
-- Free mail return shipping: **yes** — prepaid label offered.
-- Card tender: "Credit and Debit Cards" are named as an original-purchase tender (refunds credited to the
-  same account). Specific card networks are **not** stated on the retrieved page.
+```
+Returns are allowed within 30 days from the purchase (shipment) date and exchanges within 60 days of the purchase (shipment) date for jewelry
+```
 
-### What the retrieved policy text still does NOT state
+### `return_window_basis`
 
-- **Resized / sized-to-order rings:** the retrieved modal text does not mention resizing or sized-to-order
-  rings at all. `return_excludes_resized` therefore stays blank. (A search-engine snippet for the canonical
-  page mentioned a sizing-fee refund, but snippets are rejected sources in this project and the canonical
-  page body was not extractable — not published as fact.)
-- **Contact phone / email:** not on the retrieved policy pages. Still blank.
-- **Metal weight in grams:** still not published on Zales product pages (flag F-003).
+```
+Returns are allowed within 30 days from the purchase (shipment) date and exchanges within 60 days of the purchase (shipment) date for jewelry
+```
 
-### Rejected source encountered during discovery
+### `return_free_shipping`
 
-- `https://zales-jewelry.com/returns-refund/` appeared in search results using the Zales name. It is **not**
-  Zales' official domain (`zales.com`) and was not used as a source for anything. Recorded here so a manual
-  reviewer does not mistake it for the retailer.
+```
+we offer a FREE pre-printed shipping label for you to return your online purchase by mail
+```
+
+### `return_free_shipping_basis`
+
+```
+we offer a FREE pre-printed shipping label for you to return your online purchase by mail
+```
+
+### `return_excludes_resized`
+
+```
+rings re-sized at a Zales store location, another retailer or independent jeweler will not be accepted for a refund or exchange online
+```
+
+### `return_excludes_custom`
+
+```
+custom designs
+```
+
+### `return_exclusions_detail`
+
+```
+Returns and exchanges are not allowed on special ordered watches, custom designs
+```
+
+```
+jewelry that has been engraved or altered/modified beyond sizing or stone setting
+```
+
+```
+We will gladly accept the exchange or return of a ring purchased and sized from our online store
+```
+
+### `resize_policy`
+
+```
+If you return a sized-to-order ring, we will refund the sizing fee once we process your return.
+```
+
+```
+We will gladly accept the exchange or return of a ring purchased and sized from our online store
+```
+
+```
+rings re-sized at a Zales store location, another retailer or independent jeweler will not be accepted for a refund or exchange online
+```
+
+### `payment_methods_verified`
+
+```
+Have a gift card? Use it today! We also accept Visa, Mastercard, American Express, Discover, PayPal, Apple Pay, Google Pay, and Venmo.
+```
+
+### `payment_note`
+
+```
+ZALES CARDHOLDER BENEFITS
+```
+
+```
+Progressive Leasing Logo
+```
+
+```
+BUY NOW, PAY OVER TIME
+```
+
+### `reputation_accreditation`
+
+```
+BBB Accredited Business
+```
+
+### `reputation_rating`
+
+```
+A+Rated by BBB
+```
+
+### `reputation_reviews`
+
+```
+1.14/5 stars
+```
+
+```
+Average of254 Customer Reviews
+```
+
+### `reputation_complaints`
+
+```
+1,053 complaintsin the last 3 years.
+```
+
+```
+371 complaintsin the last 12 months.
+```
+
+### `reputation_scope`
+
+```
+This profile reflects the combined customer reviews and complaint activity for all Signet Jewelers locations in the US and Canada and online sales.
+```
+
+### `reputation_identity`
+
+```
+Alternate Names:Banter by Piercing PagodaZales OutletZales JewelersPeoples JewellersWeisfield JewelersZales
+```
+
+```
+[zales.com](https://www.zales.com/)
+```
+
+## Review limitations
+
+- Written seller permission for independent non-destructive inspection/XRF was not captured; no seller refusal is inferred.
+- No physical item was inspected or tested.
+- BBB complaint and review content includes third-party allegations. Counts and profile labels are reported only with the stated scope and retrieval date; allegations are not treated as proven facts.
+- BBB states that it does not endorse any product, service, or business and does not guarantee the accuracy of third-party information.

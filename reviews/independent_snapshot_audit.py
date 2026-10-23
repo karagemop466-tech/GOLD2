@@ -45,11 +45,16 @@ def main() -> int:
         item_id = item["id"]
         evidence_path = root / item["evidence_file"]
         evidence = evidence_path.read_text()
+        item_file_heading = re.search(rf"(?m)^#\s+Evidence\s+—\s+{re.escape(item_id)}\s*$", evidence)
         heading = re.search(rf"(?m)^##\s+{re.escape(item_id)}\b.*$", evidence)
-        if not heading:
+        if item_file_heading:
+            # Current schema: one item per evidence file, with field-scoped excerpts.
+            section = evidence
+        elif not heading:
             flag("EVIDENCE-SECTION", item_id, "No item-specific evidence heading")
             section = ""
         else:
+            # Legacy schema: multiple items in one shared category evidence file.
             next_heading = re.search(r"(?m)^##\s+", evidence[heading.end():])
             end = heading.end() + next_heading.start() if next_heading else len(evidence)
             section = evidence[heading.start():end]
@@ -60,10 +65,16 @@ def main() -> int:
             flag("METAL-NOT-IN-ITEM-EVIDENCE", item_id, item["metal"])
         if item.get("color") and not re.search(rf"\b{re.escape(str(item['color']))}\b", section, re.I):
             flag("COLOR-NOT-IN-ITEM-EVIDENCE", item_id, str(item["color"]))
-        quote_text = " ".join(item.get("evidence_quotes", []))
+        scoped_quotes = [quote for quotes in item.get("field_evidence", {}).values() for quote in quotes]
+        quote_text = " ".join([*item.get("evidence_quotes", []), *scoped_quotes])
         if item.get("sku") and norm(item["sku"]) not in norm(quote_text):
             flag("SKU-NOT-IN-QUOTES", item_id, "Identifier may be URL-derived; no SKU/style quote")
-        if not item.get("solid_gold_explicit") and "solid" in item.get("notes", "").lower():
+        notes = norm(item.get("notes", ""))
+        affirmative_solid_claim = re.search(
+            r"\b(?:is|are|was|were|made of|made from|constructed from|verified as)\s+(?!(?:not|never|no)\b)(?:\w+\s+){0,2}solid[ -]gold\b",
+            notes,
+        )
+        if not item.get("solid_gold_explicit") and affirmative_solid_claim:
             flag("SOLID-NARRATIVE-CONTRADICTION", item_id, item["notes"])
         if item.get("width_mm") is None:
             related = [flags[fid] for fid in item.get("flags", []) if fid in flags]
@@ -131,7 +142,22 @@ def main() -> int:
     for phrase in ("normal retail", "would mean sold at scrap", "Melt is a floor"):
         if phrase in prices:
             flag("UNSOURCED-MARKET-GUIDANCE", "calculator", phrase)
-    calc_script = prices.split("<script>", 1)[1].split("</script>", 1)[0]
+    inline_scripts = re.findall(r"<script(?:\s[^>]*)?>(.*?)</script>", prices, re.S)
+    calc_script = "\n".join(inline_scripts)
+    script_source = re.search(r'<script[^>]*\bsrc="([^"]+)"[^>]*>', prices)
+    if script_source:
+        source = script_source.group(1)
+        if source.startswith(("https://", "http://", "//", "/")):
+            flag("CALCULATOR-SCRIPT-NOT-LOCAL", "calculator", source)
+        else:
+            script_path = (published / source).resolve()
+            try:
+                script_path.relative_to(published.resolve())
+                calc_script += "\n" + script_path.read_text()
+            except (ValueError, OSError) as exc:
+                flag("CALCULATOR-SCRIPT-UNREADABLE", "calculator", f"{source}: {exc}")
+    if not calc_script.strip():
+        flag("CALCULATOR-SCRIPT-MISSING", "calculator", "No inline or readable local external script")
     if "Number.isFinite" not in calc_script:
         flag("NONFINITE-INPUT-CHECK-MISSING", "calculator", "parseFloat and >0 checks do not reject Infinity")
 
@@ -183,7 +209,7 @@ def main() -> int:
         print(f"PASS [{detail}]")
     print("LIMITATION: these static negative checks do not replace official-page retrieval or prove truth.")
     print("NEXT: manually recheck every flag and rerun hallucination/security review after each edit.")
-    return 0
+    return 1 if findings else 0
 
 
 if __name__ == "__main__":

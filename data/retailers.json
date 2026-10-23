@@ -11,31 +11,130 @@
       ],
       "contact_phone": "+1-800-242-2728",
       "contact_email": "service@bluenile.com",
+      "contact_channels": [
+        "phone",
+        "email",
+        "live chat",
+        "WhatsApp"
+      ],
       "contact_source_url": "https://www.bluenile.com/contact-us",
       "contact_verified": true,
       "return_window_days": 30,
       "return_window_basis": "30 days from the shipment date",
       "return_policy_url": "https://www.bluenile.com/policies/returns",
       "return_free_shipping": true,
+      "return_free_shipping_basis": "Up to two complimentary returns per customer/year; alternate carriers or returns outside that service can incur fees",
       "return_free_shipments_per_year": 2,
       "return_excludes_resized": true,
       "return_excludes_custom": true,
-      "return_exclusions_detail": "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and 'Final Sale' items are not eligible for return or exchange.",
-      "resize_policy": "Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase if the design permits.",
-      "price_display_basis": "Setting Price (center stone sold separately)",
-      "payment_methods_verified": "Product pages name 'the Blue Nile Credit Card' as a payment/financing option (verbatim on item 203348, retrieved 2026-10-22). General card networks (Visa/Mastercard/Amex) are not named on the retrieved pages.",
-      "payment_note": "Corrected 2026-10-22 (independent review finding R6-04): the earlier blanket note that card acceptance was 'not stated on the retrieved pages' was wrong \u2014 Blue Nile's own store credit card is stated on product pages. A store card is not the same as a general-purpose credit card; no chargeback/protection outcome is inferred.",
-      "evidence_file": "evidence/retailers/blue-nile.md",
-      "evidence_quotes": [
-        "30 days from the shipment date",
-        "items resized after initial purchase",
-        "Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase",
-        "with the Blue Nile Credit Card"
+      "return_exclusions_detail": "Personalized/custom/engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance and Final Sale items are excluded.",
+      "resize_policy": "Eligible rings: one free resize, up or down two sizes, within 6 months of purchase if the design permits.",
+      "payment_methods_verified": [
+        "Visa",
+        "Mastercard",
+        "American Express",
+        "Discover",
+        "PayPal",
+        "wire transfer",
+        "Affirm",
+        "Splitit"
       ],
-      "verification_status": "verified_returns",
+      "payment_source_url": "https://www.bluenile.com/policies/us-payment-methods",
+      "payment_note": "US policy: major credit cards; Visa/Mastercard debit only; PayPal below $50,000; wire transfer; Affirm and Splitit financing.",
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": "https://www.bbb.org/us/wa/seattle/profile/jewelry-stores/blue-nile-inc-1296-15026564",
+        "candidate_profile_url": null,
+        "complaints_url": "https://www.bbb.org/us/wa/seattle/profile/jewelry-stores/blue-nile-inc-1296-15026564/complaints",
+        "reviews_url": "https://www.bbb.org/us/wa/seattle/profile/jewelry-stores/blue-nile-inc-1296-15026564/customer-reviews",
+        "identity_status": "official_website_linked",
+        "profile_scope": "Blue Nile Inc profile; BBB links to bluenile.com.",
+        "bbb_accredited": true,
+        "bbb_rating": "A+",
+        "review_average_out_of_5": 1.0,
+        "review_count": 25,
+        "complaints_last_3_years": 121,
+        "complaints_last_12_months": 23,
+        "retrieved_at": "2026-10-22"
+      },
+      "evidence_file": "evidence/retailers/blue-nile.md",
+      "verification_status": "official_policies_partial",
       "flags": [
-        "F-010"
-      ]
+        "F-010",
+        "F-021"
+      ],
+      "field_evidence": {
+        "contact_phone": [
+          "+1‑800‑242‑2728"
+        ],
+        "contact_email": [
+          "service@bluenile.com"
+        ],
+        "contact_channels": [
+          "Chat with us",
+          "Message us on WhatsApp"
+        ],
+        "return_window_days": [
+          "30 days from the shipment date"
+        ],
+        "return_window_basis": [
+          "30 days from the shipment date"
+        ],
+        "return_free_shipping": [
+          "If using our complimentary return service, the shipping label emailed to you includes insurance protection.",
+          "Two complimentary returns are allowed per customer, per year."
+        ],
+        "return_free_shipping_basis": [
+          "If using our complimentary return service, the shipping label emailed to you includes insurance protection.",
+          "Additional shipping charges may be incurred if packages are returned via alternate carriers"
+        ],
+        "return_free_shipments_per_year": [
+          "Two complimentary returns are allowed per customer, per year."
+        ],
+        "return_excludes_resized": [
+          "items resized after initial purchase"
+        ],
+        "return_excludes_custom": [
+          "custom orders"
+        ],
+        "return_exclusions_detail": [
+          "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and “Final Sale” items are not eligible for return or exchange."
+        ],
+        "resize_policy": [
+          "Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase if the design permits."
+        ],
+        "payment_methods_verified": [
+          "Credit cards: We accept major credit cards, including Visa®, Mastercard®, American Express®, and Discover®",
+          "We accept payment through PayPal® for orders totaling up to $50,000",
+          "We accept secure wire transfers from most banking institutions",
+          "We offer financing options through Affirm and Splitit"
+        ],
+        "payment_note": [
+          "Blue Nile U.S. payment methods include only Visa® Debit and Mastercard® Debit cards. No other debit cards are accepted.",
+          "this option is currently unavailable for purchases totaling $50,000 or more"
+        ],
+        "reputation_accreditation": [
+          "BBB Accredited Business"
+        ],
+        "reputation_rating": [
+          "A+Rated by BBB"
+        ],
+        "reputation_reviews": [
+          "1/5 stars",
+          "Average of25 Customer Reviews"
+        ],
+        "reputation_complaints": [
+          "121 complaintsin the last 3 years.",
+          "23 complaintsin the last 12 months."
+        ],
+        "reputation_scope": [
+          "Blue Nile Inc offers fine jewelry sales."
+        ],
+        "reputation_identity": [
+          "[Visit Website](https://www.bluenile.com/)"
+        ]
+      }
     },
     {
       "id": "zales",
@@ -45,35 +144,129 @@
         "www.zales.com",
         "zales.com"
       ],
-      "contact_phone": null,
+      "contact_phone": "+1-800-311-5393",
       "contact_email": null,
-      "contact_source_url": null,
-      "contact_verified": false,
-      "return_window_days": 30,
-      "return_window_basis": "Standalone policy: 'You may return your purchase within 30 days of the purchase(shipped) date.' Jewelry exchanges within 60 days. Product pages also state 'Free and easy 30-day returns'.",
-      "return_policy_url": "https://www.zales.com/return-and-exchange-modal",
-      "return_policy_canonical_url": "https://www.zales.com/return-and-exchange-policy",
-      "return_free_shipping": true,
-      "return_free_shipments_per_year": null,
-      "return_excludes_resized": null,
-      "return_excludes_custom": true,
-      "return_exclusions_detail": "Policy: 'Returns and exchanges are not allowed on special ordered watches, custom designs, ear piercing earrings, gift cards and merchandise received via the Jewelry Replacement Plan.' Jewelry must be in good condition. Resized / sized-to-order rings are not addressed in the retrieved policy text, so resized treatment stays blank.",
-      "resize_policy": null,
-      "price_display_basis": "Ring price includes the diamonds shown (complete ring, not setting-only)",
-      "payment_methods_verified": "Policy names 'Credit and Debit Cards' as an original-purchase tender (refunds credited to the same account). Card networks are not stated on the retrieved page.",
-      "payment_note": "Verified from the standalone return policy retrieved 2026-10-22 (session S-75094819). Refund-to-tender language confirms cards are accepted tender; it does not name Visa/Mastercard/Amex networks.",
-      "evidence_file": "evidence/retailers/zales.md",
-      "evidence_quotes": [
-        "Free and easy 30-day returns",
-        "You may return your purchase within 30 days of the purchase(shipped) date",
-        "Returns and exchanges are not allowed on special ordered watches, custom designs, ear piercing earrings, gift cards and merchandise received via the Jewelry Replacement Plan",
-        "Credit and Debit Cards \u2013 The same account will be credited.",
-        "Ship your items with the prepaid shipping label that we'll email to you to print at home."
+      "contact_channels": [
+        "phone",
+        "text",
+        "live chat",
+        "WhatsApp"
       ],
-      "verification_status": "verified_returns",
+      "contact_source_url": "https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE",
+      "contact_verified": true,
+      "return_window_days": 30,
+      "return_window_basis": "30 days from purchase (shipment) date; jewelry exchanges within 60 days",
+      "return_policy_url": "https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE",
+      "return_free_shipping": true,
+      "return_free_shipping_basis": "Free pre-printed label for online returns by mail",
+      "return_free_shipments_per_year": null,
+      "return_excludes_resized": true,
+      "return_excludes_custom": true,
+      "return_exclusions_detail": "Custom designs and jewelry engraved or altered/modified beyond sizing or stone setting are excluded. Separate Zales PDF: rings resized at a Zales store, another retailer, or independent jeweler are not accepted for online refund/exchange; rings purchased and sized from the online store are accepted.",
+      "resize_policy": "Online-purchased and online-sized rings may be returned/exchanged; store, other-retailer, and independent-jeweler resizing is not accepted online. Sized-to-order ring sizing fee is refunded on return.",
+      "payment_methods_verified": [
+        "Visa",
+        "Mastercard",
+        "American Express",
+        "Discover",
+        "PayPal",
+        "Apple Pay",
+        "Google Pay",
+        "Venmo"
+      ],
+      "payment_source_url": "https://www.zales.com/payments?icid=ZAL%3AFOOTER%3APAYMENTS",
+      "payment_note": "Official payment-page image alt text lists card and digital-wallet methods; Zales card, Progressive Leasing, and Affirm are separate financing options.",
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": "https://www.bbb.org/us/oh/fairlawn/profile/jewelry-stores/signet-jewelers-0272-1479",
+        "candidate_profile_url": null,
+        "complaints_url": "https://www.bbb.org/us/oh/fairlawn/profile/jewelry-stores/signet-jewelers-0272-1479/complaints",
+        "reviews_url": "https://www.bbb.org/us/oh/fairlawn/profile/jewelry-stores/signet-jewelers-0272-1479/customer-reviews",
+        "identity_status": "parent_profile_combined",
+        "profile_scope": "Combined Signet Jewelers profile covering Zales and other brands, US/Canada locations and online sales; not Zales-only.",
+        "bbb_accredited": true,
+        "bbb_rating": "A+",
+        "review_average_out_of_5": 1.14,
+        "review_count": 254,
+        "complaints_last_3_years": 1053,
+        "complaints_last_12_months": 371,
+        "retrieved_at": "2026-10-22"
+      },
+      "evidence_file": "evidence/retailers/zales.md",
+      "verification_status": "official_policies_partial",
       "flags": [
-        "F-011"
-      ]
+        "F-011",
+        "F-021",
+        "F-023"
+      ],
+      "field_evidence": {
+        "contact_phone": [
+          "Call (800) 311-5393"
+        ],
+        "contact_channels": [
+          "Text (855) 915-4139",
+          "Chat With a Jewelry Expert",
+          "WhatsApp"
+        ],
+        "return_window_days": [
+          "Returns are allowed within 30 days from the purchase (shipment) date and exchanges within 60 days of the purchase (shipment) date for jewelry"
+        ],
+        "return_window_basis": [
+          "Returns are allowed within 30 days from the purchase (shipment) date and exchanges within 60 days of the purchase (shipment) date for jewelry"
+        ],
+        "return_free_shipping": [
+          "we offer a FREE pre-printed shipping label for you to return your online purchase by mail"
+        ],
+        "return_free_shipping_basis": [
+          "we offer a FREE pre-printed shipping label for you to return your online purchase by mail"
+        ],
+        "return_excludes_resized": [
+          "rings re-sized at a Zales store location, another retailer or independent jeweler will not be accepted for a refund or exchange online"
+        ],
+        "return_excludes_custom": [
+          "custom designs"
+        ],
+        "return_exclusions_detail": [
+          "Returns and exchanges are not allowed on special ordered watches, custom designs",
+          "jewelry that has been engraved or altered/modified beyond sizing or stone setting",
+          "We will gladly accept the exchange or return of a ring purchased and sized from our online store"
+        ],
+        "resize_policy": [
+          "If you return a sized-to-order ring, we will refund the sizing fee once we process your return.",
+          "We will gladly accept the exchange or return of a ring purchased and sized from our online store",
+          "rings re-sized at a Zales store location, another retailer or independent jeweler will not be accepted for a refund or exchange online"
+        ],
+        "payment_methods_verified": [
+          "Have a gift card? Use it today! We also accept Visa, Mastercard, American Express, Discover, PayPal, Apple Pay, Google Pay, and Venmo."
+        ],
+        "payment_note": [
+          "ZALES CARDHOLDER BENEFITS",
+          "Progressive Leasing Logo",
+          "BUY NOW, PAY OVER TIME"
+        ],
+        "reputation_accreditation": [
+          "BBB Accredited Business"
+        ],
+        "reputation_rating": [
+          "A+Rated by BBB"
+        ],
+        "reputation_reviews": [
+          "1.14/5 stars",
+          "Average of254 Customer Reviews"
+        ],
+        "reputation_complaints": [
+          "1,053 complaintsin the last 3 years.",
+          "371 complaintsin the last 12 months."
+        ],
+        "reputation_scope": [
+          "This profile reflects the combined customer reviews and complaint activity for all Signet Jewelers locations in the US and Canada and online sales."
+        ],
+        "reputation_identity": [
+          "Alternate Names:Banter by Piercing PagodaZales OutletZales JewelersPeoples JewellersWeisfield JewelersZales",
+          "[zales.com](https://www.zales.com/)"
+        ]
+      }
     },
     {
       "id": "vrai",
@@ -83,38 +276,111 @@
         "www.vrai.com",
         "vrai.com"
       ],
-      "contact_phone": null,
+      "contact_phone": "+1-855-956-4488",
       "contact_email": "help@vrai.com",
-      "contact_source_url": "https://www.vrai.com/returns-exchanges",
+      "contact_channels": [
+        "phone",
+        "email",
+        "live chat"
+      ],
+      "contact_source_url": "https://www.vrai.com/contact-us",
       "contact_verified": true,
       "return_window_days": 30,
-      "return_window_basis": "Full policy (last revised March 21, 2025, retrieved 2026-10-22): eligible items returned within 30 days; under $15,000 = full store credit or refund minus recycling fee ($300 for an engagement ring); $15,000+ = store credit only. Product page summarizes: 'Returns accepted within 30 days; unworn items with original packaging'.",
+      "return_window_basis": "30 days from delivery; refund/store-credit treatment depends on item price",
       "return_policy_url": "https://www.vrai.com/returns-exchanges",
       "return_free_shipping": true,
+      "return_free_shipping_basis": "Free in the US; other destination rules are stated separately",
       "return_free_shipments_per_year": null,
       "return_excludes_resized": true,
       "return_excludes_custom": true,
-      "return_exclusions_detail": "Policy NON-ELIGIBLE list includes verbatim: 'Modified or resized rings', 'Custom-designed items', 'Items altered by a third-party', personalized fine jewelry, gift cards, and shipping/engraving fees. Refund to original payment carries a $300 recycling fee for engagement rings (waived for full store credit). Free return shipping in the U.S. EU withdrawal carve-outs also exclude rings made to accommodate a customer-configured diamond.",
-      "resize_policy": "One complimentary resize up to one full U.S. size (policy page, retrieved 2026-10-22).",
-      "price_display_basis": "Setting price (center stone selected separately in the configurator)",
-      "payment_methods_verified": null,
-      "payment_note": "Not verified on retrieved pages.",
-      "evidence_file": "evidence/retailers/vrai.md",
-      "evidence_quotes": [
-        "Returns accepted within 30 days",
-        "Unworn items with original packaging",
-        "Modified or resized rings",
-        "Custom-designed items",
-        "Engagement ring: A $300 recycling fee will apply.",
-        "We offer free return shipping in the US",
-        "We offer one complimentary resize up to one full US size",
-        "help@vrai.com"
+      "return_exclusions_detail": "Modified/resized rings, third-party alterations, custom designs, and other listed items are non-eligible. Below $15,000: store credit or refund less recycling fee; above $15,000: store credit only. Engagement-ring recycling fee is $300, waived for store credit.",
+      "resize_policy": "One complimentary resize up to one full US size, by quarter/half/full size; other restrictions apply.",
+      "payment_methods_verified": [
+        "PayPal",
+        "credit card"
       ],
-      "verification_status": "verified_returns",
+      "payment_source_url": "https://www.vrai.com/terms-conditions",
+      "payment_note": "PayPal and credit cards accepted; some countries offer Klarna invoice, direct debit, or bank transfer.",
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": null,
+        "candidate_profile_url": "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-advisory-service/vrai-1216-652149",
+        "complaints_url": null,
+        "reviews_url": null,
+        "identity_status": "candidate_name_match_not_confirmed",
+        "profile_scope": "Candidate BBB profile named Vrai / Vrai & Oro. Official VRAI policy identifies Vrai & Oro, LLC as VRAI, but the BBB profile does not link vrai.com; profile metrics are withheld pending identity confirmation.",
+        "bbb_accredited": null,
+        "bbb_rating": null,
+        "review_average_out_of_5": null,
+        "review_count": null,
+        "complaints_last_3_years": null,
+        "complaints_last_12_months": null,
+        "retrieved_at": "2026-10-22"
+      },
+      "evidence_file": "evidence/retailers/vrai.md",
+      "verification_status": "official_policies_partial",
       "flags": [
-        "F-008",
-        "F-012"
-      ]
+        "F-020",
+        "F-021",
+        "F-022"
+      ],
+      "field_evidence": {
+        "contact_phone": [
+          "Contact us at +1.855.956.4488"
+        ],
+        "contact_email": [
+          "help@vrai.com"
+        ],
+        "contact_channels": [
+          "START A LIVE CHAT",
+          "SEND AN EMAIL",
+          "CALL US"
+        ],
+        "return_window_days": [
+          "Eligible items below $15,000 can be returned within 30 days",
+          "VRAI’s standard 30-day return window from delivery"
+        ],
+        "return_window_basis": [
+          "Eligible items below $15,000 can be returned within 30 days for full credit to store or refund minus recycling fee to the original payment method. Eligible items above $15,000 can be returned within 30 days for full credit to store."
+        ],
+        "return_free_shipping": [
+          "We offer free return shipping in the US"
+        ],
+        "return_free_shipping_basis": [
+          "We offer free return shipping in the US"
+        ],
+        "return_excludes_resized": [
+          "Modified or resized rings"
+        ],
+        "return_excludes_custom": [
+          "Custom-designed items"
+        ],
+        "return_exclusions_detail": [
+          "Engagement ring: A $300 recycling fee will apply.",
+          "this fee is waived when you choose a full credit to store (via VRAI gift card)",
+          "Modified or resized rings",
+          "Items altered by a third-party",
+          "Custom-designed items"
+        ],
+        "resize_policy": [
+          "We offer one complimentary resize up to one full US size by the quarter, half, or full size"
+        ],
+        "payment_methods_verified": [
+          "We accept PayPal and credit card payments."
+        ],
+        "payment_note": [
+          "In some countries we offer invoice payments, direct debit and direct bank transfer options through our payment provider Klarna."
+        ],
+        "reputation_scope": [
+          "Alternate Names:Vrai & Oro",
+          "This Privacy Policy explains what information Vrai & Oro, LLC (\"VRAI\", \"we\", \"our\" or \"us\") collects"
+        ],
+        "reputation_identity": [
+          "Alternate Names:Vrai & Oro",
+          "This Privacy Policy explains what information Vrai & Oro, LLC (\"VRAI\", \"we\", \"our\" or \"us\") collects"
+        ]
+      }
     },
     {
       "id": "brilliant-earth",
@@ -124,71 +390,128 @@
         "www.brilliantearth.com",
         "brilliantearth.com"
       ],
-      "contact_phone": "1.415.426.2781",
+      "contact_phone": "+1-800-691-0952",
       "contact_email": null,
+      "contact_channels": [
+        "phone",
+        "live chat",
+        "text",
+        "email form"
+      ],
       "contact_source_url": "https://www.brilliantearth.com/contact/",
       "contact_verified": true,
-      "return_window_days": null,
-      "return_window_basis": "Product page states 'Free Shipping & Returns' and 'Free 1-Year Resizing'. Numeric return window not stated on the retrieved page.",
-      "return_policy_url": "https://www.brilliantearth.com/weve-got-you-covered/",
+      "return_window_days": 30,
+      "return_window_basis": "30 days from when purchase is available for shipment or pickup",
+      "return_policy_url": "https://www.brilliantearth.com/30-Day-Returns/",
       "return_free_shipping": true,
+      "return_free_shipping_basis": "Shipping covered both ways, subject to policy instructions",
       "return_free_shipments_per_year": null,
-      "return_excludes_resized": null,
-      "return_excludes_custom": null,
-      "return_exclusions_detail": null,
-      "resize_policy": "Free 1-Year Resizing (stated on product page)",
-      "price_display_basis": "Setting Only (center stone sold separately)",
-      "payment_methods_verified": null,
-      "payment_note": "Financing partners named on page (Affirm, Wells Fargo, layaway). Card acceptance as such not asserted.",
-      "evidence_file": "evidence/retailers/brilliant-earth.md",
-      "evidence_quotes": [
-        "Free Shipping & Returns",
-        "Free 1-Year Resizing",
-        "(Setting Only)"
-      ],
-      "verification_status": "partial",
-      "flags": [
-        "F-007",
-        "F-012"
-      ]
-    },
-    {
-      "id": "stone-and-strand",
-      "name": "Stone and Strand",
-      "website": "https://www.stoneandstrand.com",
-      "domains": [
-        "www.stoneandstrand.com",
-        "stoneandstrand.com"
-      ],
-      "contact_phone": null,
-      "contact_email": "care@stoneandstrand.com",
-      "contact_source_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
-      "contact_verified": true,
-      "return_window_days": 100,
-      "return_window_basis": "Policy: 'From the date your order arrives at your door, we offer 100 days to receive a return' (U.S. customers only). Item must be unworn with the original security tag attached.",
-      "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
-      "return_free_shipping": false,
-      "return_free_shipments_per_year": null,
-      "return_excludes_resized": null,
+      "return_excludes_resized": true,
       "return_excludes_custom": true,
-      "return_exclusions_detail": "Policy excludes: final-sale items (anything marked final sale on the product page OR purchased at a discount of 50% or greater); personalized jewelry (custom, engraved, monogrammed); made-to-order jewelry (final sale); worn items (store credit only at their discretion, 20%+ restocking fee); international returns not accepted. A $12.50 return fee applies to refunds. Resizing is not mentioned in the retrieved policy text.",
-      "resize_policy": null,
-      "price_display_basis": "Complete ring (diamonds included in the listed price)",
-      "payment_methods_verified": "Returns page refers to refunds 'to the original payment method' and to 'your credit card provider'. Card networks are not stated on the retrieved page.",
-      "payment_note": "Basis: Stone and Strand returns page retrieved 2026-10-22 (session S-75094819). Refund language implies card tender; networks not named. Same evidentiary standard as Zales.",
-      "evidence_file": "evidence/retailers/stone-and-strand.md",
-      "evidence_quotes": [
-        "we offer 100 days to receive a return",
-        "There is a $12.50 return fee for refunds to the original payment method",
-        "Any piece marked as final sale on the product page or purchased at a discount of 50% or greater",
-        "Made-to-Order Jewelry: Custom or made-to-order pieces are final sale",
-        "Depending on your credit card provider",
-        "care@stoneandstrand.com"
+      "return_exclusions_detail": "Resized/modified and custom-designed items are excluded. Engraved rings may be returned with a $40 engraving-removal charge; other exclusions apply.",
+      "resize_policy": "One complimentary resizing within 60 days regardless of sizing range, or up to 1 year within sizing range; restrictions and fees apply.",
+      "payment_methods_verified": [
+        "Visa",
+        "Mastercard",
+        "American Express",
+        "PayPal",
+        "Apple Pay",
+        "bank wire",
+        "Affirm",
+        "Wells Fargo"
       ],
-      "verification_status": "verified_returns",
+      "payment_source_url": "https://www.brilliantearth.com/flexible-payment-options/",
+      "payment_note": "Major cards, PayPal, Apple Pay, and bank wire; Affirm and Wells Fargo are financing options with eligibility/terms.",
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": "https://www.bbb.org/us/ca/san-francisco/profile/diamond/brilliant-earth-llc-1116-154721",
+        "candidate_profile_url": null,
+        "complaints_url": "https://www.bbb.org/us/ca/san-francisco/profile/diamond/brilliant-earth-llc-1116-154721/complaints",
+        "reviews_url": "https://www.bbb.org/us/ca/san-francisco/profile/diamond/brilliant-earth-llc-1116-154721/customer-reviews",
+        "identity_status": "official_website_linked",
+        "profile_scope": "Brilliant Earth LLC headquarters and corporate-owned locations profile; BBB links to brilliantearth.com.",
+        "bbb_accredited": true,
+        "bbb_rating": "A+",
+        "review_average_out_of_5": 4.45,
+        "review_count": 342,
+        "complaints_last_3_years": 283,
+        "complaints_last_12_months": 85,
+        "retrieved_at": "2026-10-22"
+      },
+      "evidence_file": "evidence/retailers/brilliant-earth.md",
+      "verification_status": "official_policies_partial",
       "flags": [
-        "F-016"
-      ]
+        "F-019",
+        "F-021"
+      ],
+      "field_evidence": {
+        "contact_phone": [
+          "Call us anytime at 800-691-0952."
+        ],
+        "contact_channels": [
+          "Get 24/7 support when you live chat our jewelry specialists.",
+          "[text](sms: +1 415.520.6526)",
+          "Need assistance? Drop us a line and we'll make sure you're taken care of."
+        ],
+        "return_window_days": [
+          "We offer free 30-day returns & exchanges"
+        ],
+        "return_window_basis": [
+          "return and exchange policy timelines begin when your purchase is available for shipment or pickup"
+        ],
+        "return_free_shipping": [
+          "Whether your purchase is headed to you or back to us, we cover the cost of shipping every time."
+        ],
+        "return_free_shipping_basis": [
+          "Whether your purchase is headed to you or back to us, we cover the cost of shipping every time."
+        ],
+        "return_excludes_resized": [
+          "Rings that have been resized or modified."
+        ],
+        "return_excludes_custom": [
+          "Custom designed jewelry."
+        ],
+        "return_exclusions_detail": [
+          "while you can return an engraved ring, we charge $40 to remove the custom engraving",
+          "Rings that have been resized or modified.",
+          "Custom designed jewelry."
+        ],
+        "resize_policy": [
+          "We offer one complimentary resizing within 60 days regardless of sizing range, or up to 1 year if within sizing range."
+        ],
+        "payment_methods_verified": [
+          "We accept all major credit cards, including Visa, MasterCard and American Express.",
+          "Whether you prefer PayPal, Apple Pay, credit card, or bank wire transfers",
+          "Affirm",
+          "Wells Fargo"
+        ],
+        "payment_note": [
+          "We accept all major credit cards, including Visa, MasterCard and American Express.",
+          "Affirm",
+          "Wells Fargo"
+        ],
+        "reputation_accreditation": [
+          "BBB Accredited Business"
+        ],
+        "reputation_rating": [
+          "A+Rated by BBB"
+        ],
+        "reputation_reviews": [
+          "4.45/5 stars",
+          "Average of342 Customer Reviews"
+        ],
+        "reputation_complaints": [
+          "283 complaintsin the last 3 years.",
+          "85 complaintsin the last 12 months."
+        ],
+        "reputation_scope": [
+          "This profile includes complaints for Brilliant Earth, LLC's headquarters and its corporate-owned locations."
+        ],
+        "reputation_identity": [
+          "[Visit Website](https://www.brilliantearth.com/)"
+        ]
+      }
     }
   ]
 }

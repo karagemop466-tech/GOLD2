@@ -1,43 +1,15 @@
-# Evidence — gold price reference
+# Evidence — dated gold quote and calculation constants
 
-- **Source:** World Gold Council, "Gold spot prices"
-- **URL:** https://www.gold.org/goldhub/data/gold-prices
-- **Retrieved:** 2026-10-22 (UTC)
-- **Method:** live page fetch; values copied from the rendered text
+- **Retrieved:** 2026-10-22 (UTC), direct page fetches.
+- **Current quote source:** World Gold Council, Gold spot prices.
+- **Conversion source:** US National Institute of Standards and Technology (NIST).
+- **Karat-labeling context:** government-hosted eCFR; useful regulatory guidance, not a physical assay.
 
-## Verbatim excerpts
+## World Gold Council — current observation
 
-```
-USD
-/oz
--
-4,024.36
-```
+**URL:** https://www.gold.org/goldhub/data/gold-prices
 
-```
-Data as of 21 October, 2026
-```
-
-```
-Market Data: Provided by ICE Data Services.
-```
-
-## Cross-check: LBMA (not usable as a free source)
-
-Source: https://www.lbma.org.uk/prices-and-data/precious-metal-prices (retrieved 2026-10-22)
-
-```
-## Tables have moved to the MyLBMA Portal
-
-The historical tabulated data for the LBMA Precious Metals Prices has been moved to our MyLBMA Portal. In order to view this data on our Portal, you will need to have the relevant licence from IBA.
-```
-
-**Consequence:** no free LBMA fix value is recorded in `data/gold-price.json`. The World Gold Council quote is used instead, with its date. This is recorded as flag F-013.
-
-## Re-check — session S-75094819, 2026-10-22 (UTC)
-
-Same URL fetched again. The spot widget now renders a different value; the chart dataset date is unchanged.
-The widget shows "Last Updated" but no date/time beside the figure in the captured text.
+### `usd_per_troy_oz`
 
 ```
 USD
@@ -47,22 +19,76 @@ USD
 -
 
 4,028.53
-
 Last Updated
 ```
+
+### `quote_date`
 
 ```
 Data as of 21 October, 2026
 ```
 
-**Action:** `data/gold-price.json` updated to 4028.53 USD/troy oz with `retrieved_at` 2026-10-22 and
-`quote_date` 2026-10-21 (the dataset date printed on the page). The earlier 4024.36 observation above is
-preserved verbatim and in `quote_history`. No value was averaged or carried forward without re-reading the page.
+### `source_name`
 
-**Parallel independent re-verification (merged 2026-10-22):** session `S-da963b79` independently re-read the
-same WGC page in PR #9 and recorded the identical value, 4,028.53 USD/oz — two sessions converged on the same
-number from the same official page. That session initially set `quote_date` to its retrieval date (2026-10-22);
-independent review finding **R9-01** requested the official source date (2026-10-21) instead. The merged
-record keeps the agreed value with `quote_date: 2026-10-21`, which dispositions R9-01. (During the merge,
-that session's in-place edit briefly replaced the first 4,024.36 excerpt above; it was restored so the
-first observation stays verbatim. Nothing was discarded: both observations and both sessions' records remain.)
+```
+Market Data: Provided by ICE Data Services.
+```
+
+The page also states: “Prices are quoted in currency unit per troy ounce unless otherwise stated.”
+
+## Superseded intraday observation — not used
+
+An earlier direct capture on the same retrieval date displayed **4,024.36** with the same data date, 21 October 2026. A later direct fetch displayed **4,028.53**. The earlier number is retained only as superseded audit history; it is not used in `usd_per_troy_oz`, generated calculations, or dashboard outputs.
+
+## NIST — troy-ounce conversion
+
+**URL:** https://www.nist.gov/system/files/documents/2017/05/09/Precious-Metals-Conversion-Information-march2015.pdf
+
+### `grams_per_troy_ounce`
+
+```
+| 1 troy ounce | 1 | 20 | 480 | 31.103 476 8 | 31 103.476 8 |
+```
+
+NIST also explains:
+
+```
+Divide the price per troy ounce by 31.103 476 8
+```
+
+The JSON stores the same chart value without grouping spaces: `31.1034768`.
+
+## Karat basis — NIST and eCFR
+
+### `karat_basis` — NIST conversion chart
+
+```
+an item marked 18 k is made of 75 % gold
+```
+
+### `karat_basis` — eCFR labeling context
+
+**URL:** https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3
+
+```
+fine (24 karat) gold
+```
+
+The same section distinguishes gold alloys from products that are only surface-plated or coated. The calculator therefore labels its result **nominal** fine-gold content and never treats a listing’s karat as laboratory confirmation.
+
+## LBMA access limitation
+
+**URL:** https://www.lbma.org.uk/prices-and-data/lbma-precious-metal-prices
+
+```
+The historical tabulated data for the LBMA Precious Metals Prices has been moved to our MyLBMA Portal. In order to view this data on our Portal, you will need to have the relevant licence from IBA.
+```
+
+No free LBMA fix is claimed. This limitation is recorded as F-013.
+
+## Calculation boundaries
+
+- `nominal fine-gold grams = documented metal-only grams × listed karat ÷ 24`
+- `theoretical melt USD = nominal fine-gold grams ÷ 31.1034768 × dated USD per troy ounce`
+- Do not use gross ring weight when it includes stones or non-gold components.
+- The result is not an appraisal, resale quote, refiner payout, or fair-retail estimate.
