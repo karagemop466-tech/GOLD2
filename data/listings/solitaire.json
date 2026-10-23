@@ -285,32 +285,31 @@
       "color": "Yellow",
       "width_mm": 2.5,
       "weight_g": null,
-      "price": 990.0,
-      "currency": "EUR",
+      "price": 890.0,
+      "currency": "USD",
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
       "source_url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/be-121h6.md",
       "solid_gold_explicit": null,
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.brilliantearth.com/30-Day-Returns/",
-      "verification_status": "partial_eur_price",
+      "verification_status": "verified_usd_setting_price",
       "rejected_values": [],
       "flags": [
         "F-001",
         "F-002",
         "F-003",
-        "F-007",
         "F-015",
         "F-016",
         "F-019",
         "F-021",
         "F-024"
       ],
-      "notes": "The official page rendered EUR 990.00 Setting Only. No USD price was displayed, recorded, or converted. The listed prong metal is 14K White Gold.",
+      "notes": "Direct fetch on 2026-10-23 rendered the site's USD locale and $890 (Setting Only) for BE121H6-14KY. The 2026-10-22 observation of EUR 990.00 (Setting Only) was a different locale rendering of the same setting and is preserved in the evidence file as a superseded observation; no exchange conversion is made. The listed prong metal is 14K White Gold.",
       "depth_mm": null,
       "band_width_text": null,
       "weight_basis": null,
@@ -340,16 +339,17 @@
           "Width: 2.5 mm"
         ],
         "price": [
-          "€ 990.00(Setting Only)"
+          "$890(Setting Only)"
         ],
         "currency": [
-          "€ 990.00(Setting Only)"
+          "USD",
+          "$890(Setting Only)"
         ],
         "price_basis": [
-          "€ 990.00(Setting Only)"
+          "$890(Setting Only)"
         ],
         "center_stone_included": [
-          "€ 990.00(Setting Only)"
+          "$890(Setting Only)"
         ],
         "prong_metal": [
           "Prong metal: 14K White Gold"
