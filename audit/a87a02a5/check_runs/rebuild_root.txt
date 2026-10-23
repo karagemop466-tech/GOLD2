@@ -1,0 +1,2 @@
+built 13 pages into /tmp/g2s2
+exit=0

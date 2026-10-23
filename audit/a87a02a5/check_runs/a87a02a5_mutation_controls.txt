@@ -1,0 +1,84 @@
+test_00_unmodified_tree_is_clean (__main__.ScannerNegativeControls.test_00_unmodified_tree_is_clean) ... ok
+test_01_missing_source_url (__main__.ScannerNegativeControls.test_01_missing_source_url) ... ok
+test_02_offsite_source_url (__main__.ScannerNegativeControls.test_02_offsite_source_url) ... ok
+test_03_http_downgrade (__main__.ScannerNegativeControls.test_03_http_downgrade) ... ok
+test_04_evidence_file_missing (__main__.ScannerNegativeControls.test_04_evidence_file_missing) ... ok
+test_05_evidence_file_url_mismatch (__main__.ScannerNegativeControls.test_05_evidence_file_url_mismatch) ... ok
+test_06_price_with_no_quote_at_all (__main__.ScannerNegativeControls.test_06_price_with_no_quote_at_all) ... ok
+test_07_price_digits_not_in_quote (__main__.ScannerNegativeControls.test_07_price_digits_not_in_quote) ... ok
+test_08_invented_weight (__main__.ScannerNegativeControls.test_08_invented_weight) ... ok
+test_09_price_without_currency (__main__.ScannerNegativeControls.test_09_price_without_currency) ... ok
+test_10_unsupported_iso_currency (__main__.ScannerNegativeControls.test_10_unsupported_iso_currency) ... ok
+test_11_unknown_flag_reference (__main__.ScannerNegativeControls.test_11_unknown_flag_reference) ... ok
+test_12_future_retrieval_date (__main__.ScannerNegativeControls.test_12_future_retrieval_date) ... ok
+test_13_malformed_retrieval_date (__main__.ScannerNegativeControls.test_13_malformed_retrieval_date) ... ok
+test_14_wrong_gram_constant (__main__.ScannerNegativeControls.test_14_wrong_gram_constant) ... ok
+test_15_gold_quote_not_in_evidence (__main__.ScannerNegativeControls.test_15_gold_quote_not_in_evidence) ... ok
+test_16_corrupted_melt_value_on_page (__main__.ScannerNegativeControls.test_16_corrupted_melt_value_on_page) ... FAIL
+test_17_corrupted_fine_gold_on_page (__main__.ScannerNegativeControls.test_17_corrupted_fine_gold_on_page) ... ok
+test_18_page_shows_different_gold_reference (__main__.ScannerNegativeControls.test_18_page_shows_different_gold_reference) ... FAIL
+test_19_row_loses_its_official_link (__main__.ScannerNegativeControls.test_19_row_loses_its_official_link) ... ok
+test_20_typed_price_into_a_null_price_row (__main__.ScannerNegativeControls.test_20_typed_price_into_a_null_price_row) ... ok
+test_21_unbacked_row_with_no_register_entry (__main__.ScannerNegativeControls.test_21_unbacked_row_with_no_register_entry) ... ok
+
+======================================================================
+FAIL: test_16_corrupted_melt_value_on_page (__main__.ScannerNegativeControls.test_16_corrupted_melt_value_on_page)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/GOLD2/audit/a87a02a5/test_scan.py", line 195, in test_16_corrupted_melt_value_on_page
+    self.assert_catches("C16", None, raw=raw)
+  File "/home/user/GOLD2/audit/a87a02a5/test_scan.py", line 94, in assert_catches
+    self.assertEqual(rc, 1, f"scanner should exit 1 for {code}; output:\n{out[-2500:]}")
+AssertionError: 0 != 1 : scanner should exit 1 for C16; output:
+d into JSON field_evidence — provenance exists, the link is implicit
+  WARN C05: AG-SAPPHIRE-RING.gross_ring_weight_g=1.2 is only supported by the evidence file, not by a JSON field_evidence quote — mirror the quote so the number is self-traceable
+  WARN C03: FDJ-GR0001.gross_ring_weight_g=1.25 is quoted in evidence/listings/fdj-gr0001.md but that quote is not mirrored into JSON field_evidence — provenance exists, the link is implicit
+  WARN C05: FDJ-GR0001.gross_ring_weight_g=1.25 is only supported by the evidence file, not by a JSON field_evidence quote — mirror the quote so the number is self-traceable
+  WARN C12: three-stone-vintage.html: row Z-20303279 displays unlabelled amounts 'Discounted Price $979.30  Original Price was $1,399.00 30% Off' verbatim with price left null (F-018). Correct handling, but a reader may still read one of them as the price
+  WARN C12: three-stone-vintage.html: row Z-20301172 displays unlabelled amounts 'Discounted Price $769.30  Original Price was $1,099.00 30% Off' verbatim with price left null (F-018). Correct handling, but a reader may still read one of them as the price
+  WARN C12: budget.html: row Z-19957449 displays unlabelled amounts 'Discounted Price $899.00' verbatim with price left null (F-018). Correct handling, but a reader may still read one of them as the price
+  WARN C12: budget.html: row Z-20046552 displays unlabelled amounts '$909.30  $1,299.00 30% Off' verbatim with price left null (F-018). Correct handling, but a reader may still read one of them as the price
+  WARN C15: AG-COFFIN-RING (https://www.automicgold.com/products/coffin-ring) is in the root register but absent from the combined explore/ register that the landing page advertises as 'all entries'
+  WARN C15: AG-CUSHION-SIGNET (https://www.automicgold.com/products/cushion-diamond-signet-ring) is in the root register but absent from the combined explore/ register that the landing page advertises as 'all entries'
+  WARN C15: MJ-BOLD-ETERNITY (https://mejuri.com/products/bold-diamond-eternity-ring) is in the root register but absent from the combined explore/ register that the landing page advertises as 'all entries'
+
+controls executed: 986
+RESULT: PASS — no provenance defect found (0 failures, 13 warnings)
+LIMITATION: this scan proves internal traceability only. It cannot prove that a
+quoted page said what the quote claims, that a price is still current, or that any
+ring is actually the stated purity. Re-read the official source after every review.
+
+
+======================================================================
+FAIL: test_18_page_shows_different_gold_reference (__main__.ScannerNegativeControls.test_18_page_shows_different_gold_reference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/user/GOLD2/audit/a87a02a5/test_scan.py", line 210, in test_18_page_shows_different_gold_reference
+    self.assert_catches("C18", None, raw=raw)
+  File "/home/user/GOLD2/audit/a87a02a5/test_scan.py", line 94, in assert_catches
+    self.assertEqual(rc, 1, f"scanner should exit 1 for {code}; output:\n{out[-2500:]}")
+AssertionError: 0 != 1 : scanner should exit 1 for C18; output:
+d into JSON field_evidence — provenance exists, the link is implicit
+  WARN C05: AG-SAPPHIRE-RING.gross_ring_weight_g=1.2 is only supported by the evidence file, not by a JSON field_evidence quote — mirror the quote so the number is self-traceable
+  WARN C03: FDJ-GR0001.gross_ring_weight_g=1.25 is quoted in evidence/listings/fdj-gr0001.md but that quote is not mirrored into JSON field_evidence — provenance exists, the link is implicit
+  WARN C05: FDJ-GR0001.gross_ring_weight_g=1.25 is only supported by the evidence file, not by a JSON field_evidence quote — mirror the quote so the number is self-traceable
+  WARN C12: three-stone-vintage.html: row Z-20303279 displays unlabelled amounts 'Discounted Price $979.30  Original Price was $1,399.00 30% Off' verbatim with price left null (F-018). Correct handling, but a reader may still read one of them as the price
+  WARN C12: three-stone-vintage.html: row Z-20301172 displays unlabelled amounts 'Discounted Price $769.30  Original Price was $1,099.00 30% Off' verbatim with price left null (F-018). Correct handling, but a reader may still read one of them as the price
+  WARN C12: budget.html: row Z-19957449 displays unlabelled amounts 'Discounted Price $899.00' verbatim with price left null (F-018). Correct handling, but a reader may still read one of them as the price
+  WARN C12: budget.html: row Z-20046552 displays unlabelled amounts '$909.30  $1,299.00 30% Off' verbatim with price left null (F-018). Correct handling, but a reader may still read one of them as the price
+  WARN C15: AG-COFFIN-RING (https://www.automicgold.com/products/coffin-ring) is in the root register but absent from the combined explore/ register that the landing page advertises as 'all entries'
+  WARN C15: AG-CUSHION-SIGNET (https://www.automicgold.com/products/cushion-diamond-signet-ring) is in the root register but absent from the combined explore/ register that the landing page advertises as 'all entries'
+  WARN C15: MJ-BOLD-ETERNITY (https://mejuri.com/products/bold-diamond-eternity-ring) is in the root register but absent from the combined explore/ register that the landing page advertises as 'all entries'
+
+controls executed: 986
+RESULT: PASS — no provenance defect found (0 failures, 13 warnings)
+LIMITATION: this scan proves internal traceability only. It cannot prove that a
+quoted page said what the quote claims, that a price is still current, or that any
+ring is actually the stated purity. Re-read the official source after every review.
+
+
+----------------------------------------------------------------------
+Ran 22 tests in 1.430s
+
+FAILED (failures=2)
+exit=1

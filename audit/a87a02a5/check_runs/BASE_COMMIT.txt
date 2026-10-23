@@ -1,0 +1,14 @@
+Suites in this directory were run against:
+
+  main / origin/main HEAD : 161dbe1fe5529acb4ee491aa87f99abdb9d08823  (PR #32, merged 2026-10-23T10:55:38Z)
+  this session's branch   : arena/a87a02a5-gold2, rebased onto that commit
+                            (branch HEAD adds only audit/a87a02a5/** and this session's
+                             COORDINATION.md block, so the audited tree == main's tree)
+
+Run date: 2026-10-23, between 10:03Z and 11:15Z (UTC).
+
+Note on scope discipline: tools/qa.py rewrites reports/qa-report.md (a timestamp line) as a
+side effect. reports/** is claimed by peer sessions S-062F314F, S-8B9E189A and S-B200A880,
+so every suite that writes files was run in a scratch copy at /tmp, never in the working
+tree. The one accidental in-tree rewrite was reverted with `git checkout -- reports/`; the
+regenerated copy is kept here as qa-report-regenerated-by-this-run.txt for transparency.

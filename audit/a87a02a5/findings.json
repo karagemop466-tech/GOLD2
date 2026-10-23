@@ -1,0 +1,196 @@
+{
+  "generated_by": "S-A87A02A5",
+  "generated_at": "2026-10-23",
+  "verified_against_commit": "161dbe1",
+  "policy": "Blank/null means not confirmed, never zero and never a negative physical finding. No value in this file was inferred, estimated, averaged or derived from a neighbouring field. Every finding cites the file or official URL it was read from. Automated PASS means only that the stated controls passed.",
+  "schema_note": "Field names mirror data/flags.json (id, severity, type, title, detail, affected_items, sources, recommended_action) so an integration owner can lift these into the Flagged for Review register without reshaping them. These are findings about the repository's own consistency and scope; they are not product facts and must not be rendered as seller claims.",
+  "findings": [
+    {
+      "id": "FIND-A87A-01",
+      "severity": "high",
+      "type": "coordination_governance",
+      "status": "open",
+      "title": "Three concurrent sessions claimed the same shared files at the same time",
+      "detail": "On 2026-10-23 between 09:54Z and 09:58Z four sessions pushed claims. S-062F314F (T16/T17), S-8B9E189A (T21/T22) and S-B200A880 (B2) each claimed overlapping parts of data/gold-price.json, evidence/**, tools/**, reports/** and the root *.html pages. The board's own rule is that scopes must be non-overlapping and that a file owned by another session is changed by logging a request, not by editing. Observed consequence during this pass: the same official gold URL was fetched independently by at least two sessions, producing two different same-day values ($4,024.45 stored, $4,023.19 observed by this session), and the root register grew from 20 to 30 rows while this session was verifying it, so counts had to be recomputed twice.",
+      "affected_items": [],
+      "affected_files": [
+        "COORDINATION.md",
+        "data/gold-price.json",
+        "evidence/**",
+        "tools/**",
+        "reports/**"
+      ],
+      "sources": [
+        "https://github.com/karagemop466-tech/GOLD2/blob/main/COORDINATION.md"
+      ],
+      "recommended_action": "Give shared registers a single owner per pass, or serialise merges through one integration branch. Sessions that only verify should claim a read-only audit directory, as this session did, and file requests instead of edits.",
+      "found_by": "git ls-remote --heads origin plus per-branch commit reads at 2026-10-23T10:00Z"
+    },
+    {
+      "id": "FIND-A87A-02",
+      "severity": "medium",
+      "type": "coverage_consistency",
+      "status": "open",
+      "title": "3 of the 30 root-register rows are missing from the combined register the landing page calls 'all researched entries'",
+      "detail": "index.html invites the reader to open 'all 41 researched entries across 12 sellers' at explore/. Exact-match checks against data/catalog.json, research/evidence.json and every file under explore/ return zero hits for AG-COFFIN-RING (automicgold.com/products/coffin-ring), AG-CUSHION-SIGNET (automicgold.com/products/cushion-diamond-signet-ring) and MJ-BOLD-ETERNITY (mejuri.com/products/bold-diamond-eternity-ring). 27 of the 30 root rows are present. Mejuri is not among the 12 combined sellers at all. Across both registers the project has actually researched 44 distinct product URLs, not 41. The three omitted rows are not trivial: AG-COFFIN-RING is the only root row publishing a stone-free gold weight (6.10 g) and MJ-BOLD-ETERNITY is the highest-priced explicit-solid-gold row ($2,900 from).",
+      "affected_items": ["AG-COFFIN-RING", "AG-CUSHION-SIGNET", "MJ-BOLD-ETERNITY"],
+      "affected_files": [
+        "data/catalog.json",
+        "research/evidence.json",
+        "explore/**",
+        "index.html",
+        "README.md"
+      ],
+      "sources": [
+        "https://www.automicgold.com/products/coffin-ring",
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://mejuri.com/products/bold-diamond-eternity-ring"
+      ],
+      "recommended_action": "Either add the three rows (with their own dated source records) to the combined register, or change the landing-page and README wording from 'all researched entries' to a count that is true of explore/ alone. Do not silently leave two registers that each claim completeness.",
+      "found_by": "audit/a87a02a5/hallucination_provenance_scan.py check C15, re-confirmed by slug grep against data/catalog.json, research/evidence.json and explore/** on main @ 161dbe1"
+    },
+    {
+      "id": "FIND-A87A-03",
+      "severity": "medium",
+      "type": "price_scope",
+      "status": "open",
+      "title": "AG-CUSHION-SIGNET publishes $2,758 with no configuration scope, while the seller's own data shows $2,408-$3,253 for the same ring",
+      "detail": "The register stores price 2758.0, currency USD, color Yellow, quote '$2,758', observed_native_display null. The retailer's own product endpoint, read on 2026-10-23, returns price_varies true with price_min 240800 ($2,408.00) and price_max 325300 ($3,253.00). $2,758.00 is the '14k Yellow Gold / Salt and Pepper Diamond' variant; '14k Yellow Gold / Clear Lab Diamond' is $2,408.00. Two live 14k yellow-gold configurations therefore differ by $350 and the row records neither the stone option nor the range. This is not an invented price: the amount is real and traceable. It is an unscoped price, which a reader will take as the price of the ring. AG-COFFIN-RING has the same shape but lower risk ($1,910.00 is both price_min and the recorded yellow-gold variant; the range runs to $2,233.00).",
+      "affected_items": ["AG-CUSHION-SIGNET", "AG-COFFIN-RING"],
+      "affected_files": ["data/solid-gold-verified.json", "evidence/listings/ag-cushion-signet.md", "solid-gold.html"],
+      "sources": [
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring.js",
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://www.automicgold.com/products/coffin-ring.js"
+      ],
+      "recommended_action": "Record the observed range and the configuration the stored price belongs to, following the pattern already used for MJ-BOLD-ETERNITY, which correctly keeps the 'From$2,900' qualifier in its quote and links F-030. Do not average the range and do not promote a variant price to a product price.",
+      "found_by": "live retrieval of the seller's own product endpoint on 2026-10-23, compared field by field with data/solid-gold-verified.json"
+    },
+    {
+      "id": "FIND-A87A-04",
+      "severity": "medium",
+      "type": "derived_value_published_as_prose",
+      "status": "open",
+      "title": "FDJ-GR0001's derived net-metal weight and $73.67 melt figure are published in flag prose on eight pages",
+      "detail": "flags.html, verification.html, explore/review/index.html and five dashboard pages state '0.274 g gem mass -> 0.976 g net 14K alloy = $73.67 melt if gross' for FDJ-GR0001. The arithmetic itself is correct and was recomputed independently: 1.37 ct x 0.2 g/ct = 0.274 g; 1.25 g - 0.274 g = 0.976 g; 0.976 g x 14/24 = 0.5693 g fine gold; 0.5693 g x ($4,024.45 / 31.1034768 g) = $73.67. But it rests on three assumptions no source states: (1) that the displayed 1.25 g is a gross weight including the stones, when the same page says 'Customize Your Options First to See Accurate Weight', so 1.25 g is not a confirmed weight for any chosen configuration; (2) that all 1.37 ct of diamond mass sits inside that 1.25 g; (3) that the entire remainder is 14K alloy with no other material. The register fields are correctly conservative (weight_g null, the dashboard's Melt column renders blank), so the derived figure lives only in prose. It also moves whenever the gold reference moves.",
+      "affected_items": ["FDJ-GR0001"],
+      "affected_files": [
+        "data/flags.json",
+        "flags.html",
+        "verification.html",
+        "explore/review/index.html",
+        "dashboard/flagged.html",
+        "dashboard/budget.html",
+        "dashboard/halo-pave.html",
+        "dashboard/rings.html",
+        "dashboard/solid-gold.html"
+      ],
+      "sources": [
+        "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/",
+        "https://www.nist.gov/system/files/documents/2017-05-09/Precious-Metals-Conversion-Information-march2015.pdf"
+      ],
+      "recommended_action": "Route it through the acknowledged-hypothetical-scenario mechanism the repository already has, label all three assumptions inline, and state that the dollar figure is conditional arithmetic on a dated moving reference rather than a valuation. Keeping weight_g null and the Melt column blank is correct and should stay.",
+      "found_by": "independent recomputation of every published figure plus a rendered-text sweep of all 46 pages for 0.274 / 0.976 / 73.67"
+    },
+    {
+      "id": "FIND-A87A-05",
+      "severity": "medium",
+      "type": "documentation_staleness",
+      "status": "open",
+      "title": "README.md still carries pre-expansion counts that contradict the data it documents",
+      "detail": "Verified against main @ 161dbe1. README says 'The combined register contains 32 unique product URLs, nine sellers, 60 structured publisher records and 20 findings' while the data holds 41 products, 12 sellers, 77 source records and 25 findings (the same numbers scripts/verify.mjs prints). README says 'all 30 HTML pages' static security while scripts/security.mjs reports 46 pages. README says 'all 32 valuation gates' while the browser suite reports 41 automatic gates. README says '`31` bidirectional flags F-001-F-033' while data/flags.json holds 36. README also contains both '`30` entries across `6` categories' and '`20` entries across `6` categories' for the same root dashboard, so it contradicts itself. Counts that are correct: 30 root entries, 36 flags, 13 explore pages, 23 Node tests.",
+      "affected_items": [],
+      "affected_files": ["README.md"],
+      "sources": [
+        "https://github.com/karagemop466-tech/GOLD2/blob/main/README.md"
+      ],
+      "recommended_action": "Derive README's counts from the data the way tools/build_site.py derives page counts, or add a check that fails when a README count disagrees with the registers. This is the same defect class the repository already fixed twice for HTML prose; the README was not covered by that fix.",
+      "found_by": "side-by-side comparison of every numeric claim in README.md against data/catalog.json, data/flags.json, research/evidence.json, data/review.json and the printed output of scripts/verify.mjs, scripts/security.mjs and scripts/browser-tests.mjs"
+    },
+    {
+      "id": "FIND-A87A-06",
+      "severity": "low",
+      "type": "provenance_format",
+      "status": "open",
+      "title": "One evidence file uses a different quoting convention, so quote-extracting tools see zero quotes for that row",
+      "detail": "evidence/listings/fdj-gr0001.md transcribes page text as inline code spans inside bullet labels ('- Hallmark: `Karat stamped inside the band.`', '`Weight:1.25 Grams`'), while every other evidence file in evidence/listings/ uses fenced code blocks. Tooling that extracts only fenced blocks therefore finds no quotes at all for FDJ-GR0001 and reports its published 1.25 g gross weight and hallmark_stated true as unbacked. This session's own scanner produced exactly that false failure on its first run against main and had to be widened to accept both conventions.",
+      "affected_items": ["FDJ-GR0001"],
+      "affected_files": ["evidence/listings/fdj-gr0001.md", "reviews/independent_snapshot_audit.py", "audit/8c810c15/security_and_hallucination_scanner.py"],
+      "sources": [
+        "https://github.com/karagemop466-tech/GOLD2/blob/main/evidence/listings/fdj-gr0001.md"
+      ],
+      "recommended_action": "Pick one convention for transcribed page text, or make every quote-extracting checker accept both fenced blocks and inline code spans. A provenance checker that silently reads zero quotes from a valid evidence file is worse than no checker, because it can be 'fixed' by deleting the value instead of the mismatch.",
+      "found_by": "first run of audit/a87a02a5/hallucination_provenance_scan.py against main @ 62b1bf6, then triaged by reading the evidence file directly"
+    },
+    {
+      "id": "FIND-A87A-07",
+      "severity": "low",
+      "type": "provenance_mirroring",
+      "status": "open",
+      "title": "Three published gross weights are quoted only in markdown, not in the register's own field_evidence map",
+      "detail": "AG-CUSHION-SIGNET (5.5 g), AG-SAPPHIRE-RING (1.2 g) and FDJ-GR0001 (1.25 g) each publish gross_ring_weight_g while field_evidence carries no quote for that key; the supporting text exists only in the evidence markdown. Every value is traceable, so none is treated as invented, but the register is not self-traceable: a reader or a checker looking only at the JSON cannot see the source of the number. AG-SAPPHIRE-RING's quote was independently re-read live on 2026-10-23 ('Item Weight' -> 'Approximately 1.2g (gold) or 1.8g (platinum)'), so that one is corroborated twice.",
+      "affected_items": ["AG-CUSHION-SIGNET", "AG-SAPPHIRE-RING", "FDJ-GR0001"],
+      "affected_files": ["data/solid-gold-verified.json"],
+      "sources": [
+        "https://www.automicgold.com/products/sapphire-ring",
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/"
+      ],
+      "recommended_action": "Mirror the existing evidence-file quote into field_evidence.gross_ring_weight_g for all three rows. No value changes; only the provenance link becomes explicit.",
+      "found_by": "audit/a87a02a5/hallucination_provenance_scan.py checks C03 and C05"
+    },
+    {
+      "id": "FIND-A87A-08",
+      "severity": "informational",
+      "type": "verification_coverage",
+      "status": "open",
+      "title": "A retrieval-infrastructure failure limited this pass to six official URLs",
+      "detail": "fetch_page returned Alibaba OSS 'SignatureDoesNotMatch' (EC 0002-00000040) instead of page content on five attempts between ~10:08Z and ~10:25Z on 2026-10-23. This is a fault in the retrieval path, not a retailer refusal, bot block, paywall or 404, and it is not evidence that any page changed. Consequently MJ-BOLD-ETERNITY ($2,900), BE-121H6 (EUR 990), the VRAI 2.86 g spec, the Coffin Ring 6.1 g spec and 24 further rows were not independently re-read by this session. They are listed by name in audit/a87a02a5/live_verification_2026-10-23.md section 2 with the value each one carries, so a later pass can target them first.",
+      "affected_items": ["MJ-BOLD-ETERNITY", "BE-121H6", "VRAI-CLASSIC-4P", "AG-COFFIN-RING", "AG-CUSHION-SIGNET"],
+      "affected_files": ["audit/a87a02a5/live_verification_2026-10-23.md"],
+      "sources": [],
+      "recommended_action": "Re-run the live pass for the listed rows when retrieval is healthy. Highest value first: the two published weights (6.10 g, 2.86 g) and the two published prices that this session could not corroborate ($2,900, EUR 990).",
+      "found_by": "five consecutive failed retrievals with identical proxy error codes"
+    },
+    {
+      "id": "FIND-A87A-09",
+      "severity": "medium",
+      "type": "stale_prose_counts",
+      "status": "resolved_by_peer_during_this_pass",
+      "title": "F-001/F-002/F-003 prose counts were stale against the 30-row register (fixed by PR #32 while this pass was running)",
+      "detail": "Detected on main @ 62b1bf6: F-001's title said 'not stated on 16 of 20 items' while its own affected_items list held 17 entries and the register held 30 rows, and index.html's derived checklist on the same page said '17 of 30'; F-001's detail said '16 of the 20' and 'the 4 Automic Gold and Mejuri rows' when 13 rows are explicit solid gold; F-002's detail said 'None of the 20 captured product pages' and 'Both fields remain null, not false' although FDJ-GR0001 has hallmark_stated true; F-003's title had been updated to '23 of 30' but its detail still said only two rows publish weights and 'the other 18 weight fields remain blank' when 7 rows publish weights and 23 are blank. The stale strings were rendered on eight pages. Re-checked on main @ 161dbe1 after PR #32 merged at 10:55Z: all four are corrected ('17 of 30', '13 rows', an explicit FDJ-GR0001 carve-out naming the missing maker's mark, '7 of 30'), and '16 of 20' no longer appears anywhere in the repository.",
+      "affected_items": [],
+      "affected_files": ["data/flags.json", "index.html", "flags.html", "18k.html", "budget.html", "halo-pave.html", "solitaire.html", "three-stone-vintage.html"],
+      "sources": [
+        "https://github.com/karagemop466-tech/GOLD2/pull/32"
+      ],
+      "recommended_action": "Closed by PR #32; recorded because it is the third recurrence of this defect class in this repository and because the fix updated titles before details. Derive flag detail counts the same way titles are derived, and add a check that fails when a flag's title count disagrees with the length of its own affected_items list.",
+      "found_by": "audit/a87a02a5/hallucination_provenance_scan.py check C14 plus a direct comparison of flag prose against counts computed from the registers"
+    },
+    {
+      "id": "FIND-A87A-10",
+      "severity": "medium",
+      "type": "moving_reference_value",
+      "status": "resolved_by_peer_during_this_pass",
+      "title": "Published gold reference was one day stale; peers refreshed it mid-pass, and the source itself is volatile",
+      "detail": "At ~10:10Z the official World Gold Council page displayed '4,023.19' with 'Data as of 22 October, 2026' while the repository published 4028.53 retrieved 2026-10-22, so every melt figure on the site was computed from a number the source no longer displayed. Peers refreshed the reference to 4024.45 (retrieved 2026-10-23, chart date 2026-10-22) in PR #29/#30 during this pass, which resolves the staleness. The residual issue is structural and is corroborated rather than created here: three reads of the same URL across two days returned 4,028.53, 4,024.45 and 4,023.19. The page publishes no quote-as-of timestamp for the header, only the label 'Last Updated' and a separate chart date, which is exactly what the repository's own F-026 says. Conditional arithmetic at the two values, for scale only: the Coffin Ring case (6.10 g, 14K, 3.5583 g fine) is $460.88 at 4,028.53 and $460.27 at 4,023.19; the VRAI case (2.86 g, 18K, 2.1450 g fine) is $277.82 and $277.45. Neither figure is a valuation, an appraisal or a resale offer.",
+      "affected_items": [],
+      "affected_files": ["data/gold-price.json", "evidence/gold-price.md", "prices.html", "index.html"],
+      "sources": [
+        "https://www.gold.org/goldhub/data/gold-prices"
+      ],
+      "recommended_action": "Keep quote_date null, keep showing the retrieval timestamp beside every melt output, and keep labelling melt as theoretical. Consider surfacing the observed same-day spread so a reader can see the reference move rather than trusting a single figure.",
+      "found_by": "live retrieval of the official page at 2026-10-23T~10:10Z, compared with data/gold-price.json before and after the peer refresh"
+    }
+  ],
+  "confirmed_correct_this_pass": [
+    "AG-SAPPHIRE-RING: all five published values ($526, Solid 14k Gold, 1.1 mm band, 1.1 mm height, 1.2 g gross item weight) re-read live on the official page and matched exactly.",
+    "AG-COFFIN-RING price $1,910.00 re-read live from the seller's own product endpoint (price 191000 minor units) and matched; the 14k Yellow Gold variant carries that same amount.",
+    "AG-CUSHION-SIGNET price $2,758.00 is a real amount the seller charges today for the 14k Yellow Gold / Salt and Pepper Diamond variant; it is not invented, only unscoped.",
+    "VRAI-CLASSIC-4P identity (18k Yellow Gold, Plain Band, Round Brilliant configurator) re-read live; no price is present in the served HTML, so price null is correct.",
+    "No published price or weight anywhere in the 30-row register lacks a stored quote: 0 provenance failures across 986 controls.",
+    "Every one of the 30 rows cites an https product page on its own seller's registered domain, and every rendered table row links that exact URL.",
+    "All melt arithmetic on prices.html recomputed independently from stored weight, karat and the NIST 31.1034768 g/ozt constant: correct to the cent.",
+    "All twelve pre-existing check suites pass on main @ 161dbe1, and the committed 46-page site is byte-for-byte reproducible from committed data."
+  ]
+}

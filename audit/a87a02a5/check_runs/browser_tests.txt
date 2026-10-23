@@ -1,0 +1,2 @@
+PASS browser: 13 expanded pages + 33 companion/root/preserved pages, desktop/mobile, all 41 automatic gates, filters, conditional + gemstone calculators, stale warning, no-JS research and zero external runtime requests. Automated axe checks found no WCAG A/AA violations in exercised states.
+exit=0

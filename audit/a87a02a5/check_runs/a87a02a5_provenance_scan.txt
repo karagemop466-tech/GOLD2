@@ -1,0 +1,28 @@
+==============================================================================
+S-A87A02A5 independent provenance / hallucination scan
+repo: /home/user/GOLD2
+scan date: 2026-10-23   rows: 30   flags: 36
+gold reference in data: 4024.45 USD/troy oz (31.1034768 g/ozt)
+==============================================================================
+
+WARNINGS (13) — coverage, scope or staleness gaps:
+  WARN C03: AG-CUSHION-SIGNET.gross_ring_weight_g=5.5 is quoted in evidence/listings/ag-cushion-signet.md but that quote is not mirrored into JSON field_evidence — provenance exists, the link is implicit
+  WARN C05: AG-CUSHION-SIGNET.gross_ring_weight_g=5.5 is only supported by the evidence file, not by a JSON field_evidence quote — mirror the quote so the number is self-traceable
+  WARN C03: AG-SAPPHIRE-RING.gross_ring_weight_g=1.2 is quoted in evidence/listings/ag-sapphire-ring.md but that quote is not mirrored into JSON field_evidence — provenance exists, the link is implicit
+  WARN C05: AG-SAPPHIRE-RING.gross_ring_weight_g=1.2 is only supported by the evidence file, not by a JSON field_evidence quote — mirror the quote so the number is self-traceable
+  WARN C03: FDJ-GR0001.gross_ring_weight_g=1.25 is quoted in evidence/listings/fdj-gr0001.md but that quote is not mirrored into JSON field_evidence — provenance exists, the link is implicit
+  WARN C05: FDJ-GR0001.gross_ring_weight_g=1.25 is only supported by the evidence file, not by a JSON field_evidence quote — mirror the quote so the number is self-traceable
+  WARN C12: three-stone-vintage.html: row Z-20303279 displays unlabelled amounts 'Discounted Price $979.30  Original Price was $1,399.00 30% Off' verbatim with price left null (F-018). Correct handling, but a reader may still read one of them as the price
+  WARN C12: three-stone-vintage.html: row Z-20301172 displays unlabelled amounts 'Discounted Price $769.30  Original Price was $1,099.00 30% Off' verbatim with price left null (F-018). Correct handling, but a reader may still read one of them as the price
+  WARN C12: budget.html: row Z-19957449 displays unlabelled amounts 'Discounted Price $899.00' verbatim with price left null (F-018). Correct handling, but a reader may still read one of them as the price
+  WARN C12: budget.html: row Z-20046552 displays unlabelled amounts '$909.30  $1,299.00 30% Off' verbatim with price left null (F-018). Correct handling, but a reader may still read one of them as the price
+  WARN C15: AG-COFFIN-RING (https://www.automicgold.com/products/coffin-ring) is in the root register but absent from the combined explore/ register that the landing page advertises as 'all entries'
+  WARN C15: AG-CUSHION-SIGNET (https://www.automicgold.com/products/cushion-diamond-signet-ring) is in the root register but absent from the combined explore/ register that the landing page advertises as 'all entries'
+  WARN C15: MJ-BOLD-ETERNITY (https://mejuri.com/products/bold-diamond-eternity-ring) is in the root register but absent from the combined explore/ register that the landing page advertises as 'all entries'
+
+controls executed: 986
+RESULT: PASS — no provenance defect found (0 failures, 13 warnings)
+LIMITATION: this scan proves internal traceability only. It cannot prove that a
+quoted page said what the quote claims, that a price is still current, or that any
+ring is actually the stated purity. Re-read the official source after every review.
+exit=0
