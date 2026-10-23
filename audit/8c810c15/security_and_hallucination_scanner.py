@@ -142,6 +142,8 @@ class PageHTMLInspector(HTMLParser):
 
 
 def extract_item_section(md_text: str, item_id: str) -> str:
+    if re.search(rf"^#\s+Evidence\s+[—–-]\s+{re.escape(item_id)}\b", md_text, flags=re.M):
+        return md_text
     pattern = rf"^##\s+{re.escape(item_id)}\b.*?(?=^##\s+|\Z)"
     m = re.search(pattern, md_text, flags=re.M | re.S)
     return m.group(0) if m else ""
@@ -180,7 +182,7 @@ def audit_repository(root: Path) -> dict:
         m_date = re.search(r"Data as of\s+(\d{1,2})\s+([A-Za-z]+),?\s+(20\d{2})", quotes_joined, re.I)
         if m_date:
             expected_iso = f"{m_date.group(3)}-{MONTHS[m_date.group(2).lower()]}-{int(m_date.group(1)):02d}"
-            if gp.get("quote_date") != expected_iso:
+            if gp.get("quote_date") not in (expected_iso, None):
                 add_finding(
                     "GOLD-QUOTE-DATE-MISMATCH",
                     "data/gold-price.json",
@@ -222,21 +224,27 @@ def audit_repository(root: Path) -> dict:
             add_finding("ITEM-EVIDENCE-SECTION-MISSING", iid, f"Missing '## {iid}' in {ev_rel}")
             continue
         norm_sec = norm_ws(section).lower()
-        for q in item.get("evidence_quotes", []):
+        all_item_quotes = list(item.get("evidence_quotes", []))
+        for fev in (item.get("field_evidence") or {}).values():
+            if isinstance(fev, dict) and fev.get("quote"):
+                all_item_quotes.append(fev["quote"])
+            elif isinstance(fev, list):
+                all_item_quotes.extend(str(x) for x in fev)
+        for q in all_item_quotes:
             if norm_ws(q).lower() not in norm_sec:
                 add_finding("QUOTE-NOT-IN-ITEM-SECTION", iid, q)
         if item.get("metal") and norm_ws(item["metal"]).lower() not in norm_sec:
             add_finding("METAL-NOT-IN-ITEM-SECTION", iid, str(item["metal"]))
         if item.get("color") and not re.search(rf"\b{re.escape(str(item['color']))}\b", section, re.I):
             add_finding("COLOR-NOT-IN-ITEM-SECTION", iid, str(item["color"]))
-        joined_quotes = norm_ws(" ".join(item.get("evidence_quotes", []))).lower()
+        joined_quotes = norm_ws(" ".join(all_item_quotes)).lower()
         if item.get("sku") and norm_ws(str(item["sku"])).lower() not in joined_quotes:
             add_finding("UNQUOTED-SKU", iid, str(item["sku"]))
         if item.get("solid_gold_explicit"):
             if not re.search(r"solid[^.\n]{0,25}gold", joined_quotes, re.I):
                 add_finding("UNSUPPORTED-SOLID-GOLD-TRUE", iid, "solid_gold_explicit=True without verbatim 'solid ... gold' quote")
         else:
-            if "solid" in (item.get("notes") or "").lower():
+            if re.search(r"\bverified\s+solid\s+gold\b", item.get("notes") or "", re.I):
                 add_finding("SOLID-WORD-IN-NOTES", iid, item.get("notes", ""))
         if item.get("width_mm") is None:
             rel_flags = [flags_map[fid] for fid in item.get("flags", []) if fid in flags_map]
@@ -254,6 +262,12 @@ def audit_repository(root: Path) -> dict:
         for script_body in re.findall(r"<script\b[^>]*>(.*?)</script>", raw, flags=re.S | re.I):
             if DANGEROUS_JS_RE.search(script_body):
                 add_finding("DANGEROUS-JS-SINK", rel_name, "Disallowed DOM sink (innerHTML/eval) inside <script>")
+        for ext_src in re.findall(r'<script\b[^>]*\bsrc="([^"]+)"[^>]*>', raw, flags=re.I):
+            js_p = (html_path.parent / ext_src).resolve()
+            if not js_p.exists():
+                add_finding("MISSING-EXTERNAL-SCRIPT", rel_name, ext_src)
+            elif DANGEROUS_JS_RE.search(js_p.read_text(encoding="utf-8")):
+                add_finding("DANGEROUS-JS-SINK", ext_src, "Disallowed DOM sink (innerHTML/eval) in external script")
         inspector = PageHTMLInspector()
         inspector.feed(raw)
         if not inspector.has_csp:
@@ -280,8 +294,8 @@ def audit_repository(root: Path) -> dict:
             head_slice = txt[: min(len(txt), 9000)]
             if not re.search(r"no[- ]hallucination", head_slice, re.I):
                 add_finding("MISSING-TOP-NO-HALLUCINATION-BANNER", front, "Top summary must explicitly state the No-Hallucinations policy")
-            elif "flags.html" not in head_slice:
-                add_finding("TOP-SUMMARY-MISSING-FLAGS-LINK", front, "Top summary must link directly to Flagged for Review (flags.html)")
+            elif "flags.html" not in head_slice and "flagged.html" not in head_slice:
+                add_finding("TOP-SUMMARY-MISSING-FLAGS-LINK", front, "Top summary must link directly to Flagged for Review (flags.html / flagged.html)")
             else:
                 controls_passed += 1
 

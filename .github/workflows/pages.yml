@@ -5,7 +5,7 @@ name: Legacy dashboard verify
 # the deployment mechanism for the current root dashboard.
 on:
   push:
-    branches: [main, arena/ca4c9d8a-gold2]
+    branches: [main, arena/ca4c9d8a-gold2, arena/8c810c15-gold2]
   pull_request:
   workflow_dispatch:
 

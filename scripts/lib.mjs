@@ -11,7 +11,7 @@ export async function loadResearch() {
 export const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const escapeAttr = escapeHTML;
 export const PRODUCT_HOSTS = Object.freeze({
-  automic: ['www.automicgold.com'], catbird: ['www.catbirdnyc.com'], auvere: ['auvere.com'],
+  automic: ['www.automicgold.com', 'automicgold.com'], mejuri: ['mejuri.com', 'www.mejuri.com'], catbird: ['www.catbirdnyc.com'], auvere: ['auvere.com'],
   quince: ['www.quince.com'], mene: ['mene.com'], bluenile: ['www.bluenile.com'], zales: ['www.zales.com'], vrai: ['www.vrai.com'], 'brilliant-earth': ['www.brilliantearth.com']
 });
 export const SOURCE_HOSTS = new Set([

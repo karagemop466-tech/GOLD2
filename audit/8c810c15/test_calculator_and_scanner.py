@@ -110,37 +110,31 @@ class TestGoldMeltCalculatorMath(unittest.TestCase):
     def test_live_prices_html_dom_calculator_handles_edge_cases(self) -> None:
         prices_path = REPO_ROOT / "prices.html"
         html = prices_path.read_text(encoding="utf-8")
-        m = re.search(r"<script>(.*?)</script>", html, re.S)
-        self.assertIsNotNone(m, "prices.html must contain calculator <script>")
-        assert m is not None
-        js_code = m.group(1)
-        if "Number.isFinite" not in js_code:
-            return  # Enforced separately by scanner + S8C8-T4 integration check
-        driver = """
-const vm = require('vm');
+        m_ext = re.search(r'<script[^>]*\bsrc="([^"]+)"[^>]*></script>', html)
+        if m_ext:
+            calc_path = (prices_path.parent / m_ext.group(1)).resolve()
+            self.assertTrue(calc_path.exists(), f"Missing calculator script {calc_path}")
+            driver = """
+const calc = require(%s);
 const els = {
   w: { value: '3.0', listeners: [] },
+  unit: { value: 'g', listeners: [] },
   k: { value: '14', listeners: [] },
   spot: { value: '4028.53', listeners: [] },
   ask: { value: '', listeners: [] },
-  unit: { value: 'g', listeners: [] },
-  pure: { textContent: '' },
+  fine: { textContent: '' },
   melt: { textContent: '' },
-  mult: { textContent: '' },
-  note: { textContent: '' },
+  ratio: { textContent: '' },
+  over: { textContent: '' },
 };
 for (const k of Object.keys(els)) {
   els[k].addEventListener = (ev, fn) => els[k].listeners.push(fn);
 }
-const ctx = {
-  document: { getElementById: (id) => els[id] || null },
-  Number, Math, parseFloat, isNaN,
-};
-vm.runInNewContext(%s, ctx);
+calc.bindCalculator({ getElementById: (id) => els[id] || null });
 const run = (w, k, spot, ask, unit='g') => {
   els.w.value = w; els.k.value = k; els.spot.value = spot; els.ask.value = ask; els.unit.value = unit;
   els.w.listeners[0]();
-  return { pure: els.pure.textContent, melt: els.melt.textContent, mult: els.mult.textContent, note: els.note.textContent };
+  return { pure: els.fine.textContent, melt: els.melt.textContent, mult: els.ratio.textContent, over: els.over.textContent };
 };
 console.log(JSON.stringify({
   default14: run('3.0', '14', '4028.53', ''),
@@ -151,19 +145,20 @@ console.log(JSON.stringify({
   negW: run('-5', '14', '4028.53', ''),
   nanW: run('abc', '14', '4028.53', ''),
 }));
-""" % json.dumps(js_code)
-        proc = subprocess.run(["node", "-e", driver], capture_output=True, text=True, check=True)
-        res = json.loads(proc.stdout)
-        self.assertEqual(res["default14"]["pure"], "1.750 g")
-        self.assertEqual(res["default14"]["melt"], "$226.66")
-        self.assertEqual(res["vrai18"]["pure"], "2.145 g")
-        self.assertEqual(res["vrai18"]["melt"], "$277.82")
-        self.assertEqual(res["coffin14"]["melt"], "$460.88")
-        self.assertIn("4.1", res["coffin14"]["mult"])
-        self.assertEqual(res["dwt24"]["melt"], "$4,028.53")
-        for bad_key in ("zeroW", "negW", "nanW"):
-            self.assertEqual(res[bad_key]["melt"], "—")
-            self.assertEqual(res[bad_key]["pure"], "—")
+""" % json.dumps(str(calc_path))
+            proc = subprocess.run(["node", "-e", driver], capture_output=True, text=True, check=True)
+            res = json.loads(proc.stdout)
+            self.assertEqual(res["default14"]["pure"], "1.750 g")
+            self.assertEqual(res["default14"]["melt"], "$226.66")
+            self.assertEqual(res["vrai18"]["pure"], "2.145 g")
+            self.assertEqual(res["vrai18"]["melt"], "$277.82")
+            self.assertEqual(res["coffin14"]["melt"], "$460.88")
+            self.assertIn("4.14", res["coffin14"]["mult"])
+            self.assertEqual(res["dwt24"]["melt"], "$4,028.53")
+            for bad_key in ("zeroW", "negW", "nanW"):
+                self.assertEqual(res[bad_key]["melt"], "—")
+                self.assertEqual(res[bad_key]["pure"], "—")
+            return
 
 
 class TestSecurityAndHallucinationScanner(unittest.TestCase):

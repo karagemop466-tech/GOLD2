@@ -2,7 +2,7 @@ import {readFile,stat} from 'node:fs/promises';
 import path from 'node:path';
 import {ROOT,loadJSON,saveReport,SOURCE_HOSTS} from './lib.mjs';
 const manifest=await loadJSON('data/site-manifest.json');
-const rootPages=['index','solitaire','halo-pave','three-stone-vintage','18k','budget','retailers','prices','flags','methods'].map(p=>p+'.html');
+const rootPages=['index','solid-gold','solitaire','halo-pave','three-stone-vintage','18k','budget','retailers','prices','flags','methods'].map(p=>p+'.html');
 const pages=[...rootPages,...manifest.pages,...['index','rings','calculator','checklist','flagged','sources'].map(p=>'site/'+p+'.html')];
 const allowed=new Set([...SOURCE_HOSTS,'www.ecfr.gov','www.jamesallen.com','www.costco.com','github.com']);
 const errors=[],external=new Set(),internal=new Set();
