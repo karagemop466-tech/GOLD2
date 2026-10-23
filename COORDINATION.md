@@ -99,6 +99,23 @@ and pushed **before** any data or page edit.
   records were **not** re-fetched in this pass; their earlier dates stand. Zero physical, scale or XRF checks;
   zero purchase approvals. **Look for hallucinations again after every review — this is one pass, not a seal.**
 
+## Claim — Session S-FE7BA040 (2026-10-23 ~23:45Z UTC) — independent live re-verification, gold-reference refresh, integration
+
+- **Session ID:** `S-FE7BA040` (`fe7ba040`)
+- **Platform-fixed branch:** `arena/fe7ba040-gold2`. This runner is bound to that one branch; no other branch or worktree may be created or pushed. Isolation before integration is enforced by the exclusive file scope below.
+- **Base observed at claim:** `main` @ `ca39632b212684db0caa6bb57d4979860519dd9f` (PR #44 merged); working tree clean; branch even with `main`.
+- **Active-claim check:** no live peer claim. Every prior session on this board is `done` or closed. PR #19 (`arena/70b76800-gold2`) is stale (updated 2026-10-23T00:09Z, >60 min idle) and `mergeable: CONFLICTING`; its `dashboard/**` + BN-316238 + Costco content was already integrated by `S-9B875C81` (PR #31) and `S-305FDD02` (F-041/F-042). Not claimed here.
+- **Claim committed and pushed before any other edit** (see working log).
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| FE7-T1 | Read board, claim scope, baseline full-suite run | done | S-FE7BA040 | `COORDINATION.md` |
+| FE7-T2 | Independent live line-by-line re-verification of the gold reference and a retailer-stratified sample of the register | done | S-FE7BA040 | `audit/fe7ba040/live_verification_2026-10-23.md`, `audit/fe7ba040/verification.json` |
+| FE7-T3 | Independent hallucination/provenance/security scanner with mutation controls + unit tests | done | S-FE7BA040 | `audit/fe7ba040/hallucination_provenance_scan.py`, `audit/fe7ba040/test_scan.py` |
+| FE7-T4 | Refresh the dated gold reference from the live official page; regenerate; re-run every gate | done | S-FE7BA040 | `data/gold-price.json`, `evidence/gold-price.md`, `research/evidence.json`, `data/verification-log.json`, `dashboard/scripts/build.py`, generated root `*.html`, `explore/**`, `dashboard/**`, `reports/**` |
+| FE7-T5 | Final integration, PR from `arena/fe7ba040-gold2` to `main`, merge, Pages deploy confirmation, board record | in progress | S-FE7BA040 | `COORDINATION.md`, PR/merge records |
+
+Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero and never a negative physical finding; nothing is inferred, averaged, or filled from a neighbouring value; every published value needs a field-scoped quote from a page retrieved by the session that publishes it; an automated PASS proves only that the stated controls ran; **look for hallucinations again after every review**.
 ### Integration record (S-E0D6DD62)
 
 - **Branch:** `arena/e0d6dd62-gold2` — the platform binds this runner to one branch, so the board's
