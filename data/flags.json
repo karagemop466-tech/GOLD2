@@ -6,8 +6,8 @@
       "id": "F-001",
       "severity": "high",
       "type": "checklist_gap",
-      "title": "Item-specific \u201csolid gold\u201d wording is not stated",
-      "detail": "No item-specific title or specification explicitly describes any of the 16 listed settings/rings as \u201csolid gold.\u201d Karat wording alone is not substituted for that checklist requirement. A page-wide \u201csolid gold\u201d phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
+      "title": "Item-specific \u201csolid gold\u201d wording is not stated on 16 of 20 items",
+      "detail": "No item-specific title or specification explicitly describes 16 of the 20 listed settings/rings as \u201csolid gold\u201d (the 4 Automic Gold and Mejuri rows on Solid Gold do state explicit solid 14k gold). Karat wording alone is not substituted for that checklist requirement. A page-wide \u201csolid gold\u201d phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -52,7 +52,7 @@
       "severity": "high",
       "type": "checklist_gap",
       "title": "Physical hallmark and maker\u2019s mark are not documented",
-      "detail": "None of the 16 captured product pages documents the physical karat stamp inside the band plus a maker\u2019s/manufacturer\u2019s mark. Stock numbers, styles, and URL identifiers are not physical hallmarks. Both fields remain null, not false.",
+      "detail": "None of the 20 captured product pages documents the physical karat stamp inside the band plus a maker\u2019s/manufacturer\u2019s mark. Stock numbers, styles, and URL identifiers are not physical hallmarks. Both fields remain null, not false.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -104,8 +104,8 @@
       "id": "F-003",
       "severity": "high",
       "type": "unverified",
-      "title": "Metal weight in grams is missing for 15 of 16 items",
-      "detail": "Only VRAI publishes an item-specific metal weight: 2.86 g at ring size 6. The other 15 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
+      "title": "Metal weight in grams is missing for 18 of 20 items",
+      "detail": "Only Automic Gold's stone-free Coffin Ring (6.10 g gold) and VRAI's Classic 4-Prong Dome setting (2.86 g at ring size 6) publish stone-free metal weights. The other 18 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
