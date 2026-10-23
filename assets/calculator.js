@@ -14,6 +14,7 @@
   "use strict";
 
   const GRAMS_PER_TROY_OUNCE = 31.1034768;
+  const GRAMS_PER_PENNYWEIGHT = 1.55517384;
   const EMPTY = "—";
 
   function positiveNumber(value) {
@@ -22,8 +23,8 @@
     return Number.isFinite(number) && number > 0 ? number : null;
   }
 
-  function calculate(weight, karat, spot, askingPrice) {
-    const metalWeight = positiveNumber(weight);
+  function calculate(weight, karat, spot, askingPrice, unit) {
+    const rawWeight = positiveNumber(weight);
     const listedKarat = positiveNumber(karat);
     const goldSpot = positiveNumber(spot);
     const empty = {
@@ -32,9 +33,11 @@
       askingToMeltRatio: null,
       askingMinusMeltUsd: null
     };
-    if (metalWeight === null || listedKarat === null || goldSpot === null || listedKarat > 24) {
+    if (rawWeight === null || listedKarat === null || goldSpot === null || listedKarat > 24) {
       return empty;
     }
+    const u = unit || "g";
+    const metalWeight = u === "dwt" ? rawWeight * GRAMS_PER_PENNYWEIGHT : (u === "ozt" ? rawWeight * GRAMS_PER_TROY_OUNCE : rawWeight);
 
     const fineGoldGrams = metalWeight * listedKarat / 24;
     const meltUsd = fineGoldGrams / GRAMS_PER_TROY_OUNCE * goldSpot;
@@ -67,6 +70,7 @@
 
   function bindCalculator(doc) {
     const weight = doc.getElementById("w");
+    const unit = doc.getElementById("unit");
     const karat = doc.getElementById("k");
     const spot = doc.getElementById("spot");
     const asking = doc.getElementById("ask");
@@ -80,14 +84,14 @@
 
     const acknowledgement = doc.getElementById("root-scenario-ack");
     function run() {
-      const result = acknowledgement && acknowledgement.checked ? calculate(weight.value, karat.value, spot.value, asking.value) : calculate(null, null, null, null);
+      const result = (!acknowledgement || acknowledgement.checked) ? calculate(weight.value, karat.value, spot.value, asking.value, unit ? unit.value : "g") : calculate(null, null, null, null);
       fine.textContent = result.fineGoldGrams === null ? EMPTY : result.fineGoldGrams.toFixed(3) + " g";
       melt.textContent = money(result.meltUsd);
       ratio.textContent = result.askingToMeltRatio === null ? EMPTY : result.askingToMeltRatio.toFixed(2) + "×";
       over.textContent = money(result.askingMinusMeltUsd);
     }
 
-    [weight, karat, spot, asking].forEach(function (element) {
+    [weight, unit, karat, spot, asking].filter(Boolean).forEach(function (element) {
       element.addEventListener("input", run);
       element.addEventListener("change", run);
     });

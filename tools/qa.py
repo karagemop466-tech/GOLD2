@@ -25,11 +25,18 @@ DATA = ROOT / "data"
 SITE = ROOT
 REPORTS = ROOT / "reports"
 PAGE_NAMES = [
-    "index.html", "solitaire.html", "halo-pave.html", "three-stone-vintage.html",
+    "index.html", "solid-gold.html", "solitaire.html", "halo-pave.html", "three-stone-vintage.html",
     "18k.html", "budget.html", "retailers.html", "prices.html", "flags.html", "methods.html",
 ]
-CATEGORY_PAGES = ["solitaire.html", "halo-pave.html", "three-stone-vintage.html", "18k.html", "budget.html"]
-LISTING_FILES = ["solitaire.json", "halo-pave.json", "three-stone-vintage.json", "18k.json", "budget.json"]
+CATEGORY_PAGES = ["solid-gold.html", "solitaire.html", "halo-pave.html", "three-stone-vintage.html", "18k.html", "budget.html"]
+LISTING_PATHS = [
+    DATA / "solid-gold-verified.json",
+    DATA / "listings" / "solitaire.json",
+    DATA / "listings" / "halo-pave.json",
+    DATA / "listings" / "three-stone-vintage.json",
+    DATA / "listings" / "18k.json",
+    DATA / "listings" / "budget.json",
+]
 
 issues: list[tuple[str, str]] = []
 checks: list[tuple[str, str, int]] = []
@@ -123,10 +130,10 @@ def main() -> int:
     retailers = load(DATA / "retailers.json")["retailers"]
     flags = load(DATA / "flags.json")["flags"]
     items = []
-    for filename in LISTING_FILES:
-        payload = load(DATA / "listings" / filename)
+    for lpath in LISTING_PATHS:
+        payload = load(lpath)
         for item in payload["items"]:
-            item["_file"] = filename
+            item["_file"] = lpath.name
             item["_category"] = payload["category_id"]
             items.append(item)
     by_item = {item["id"]: item for item in items}
@@ -297,13 +304,13 @@ def main() -> int:
         basis_text = combined_quotes(item, "price_basis")
         if item["price_basis"] == "setting_price" and "setting" not in basis_text:
             fail("field-backing", f"{item['id']} setting basis lacks setting wording")
-        if item["price_basis"] == "complete_ring" and not ("diamond" in basis_text and "ring" in basis_text):
-            fail("field-backing", f"{item['id']} complete-ring basis lacks diamond-ring title evidence")
+        if item["price_basis"] == "complete_ring" and "ring" not in basis_text:
+            fail("field-backing", f"{item['id']} complete-ring basis lacks ring title evidence")
         scope_text = combined_quotes(item, "center_stone_included")
-        if item["center_stone_included"] is False and "setting" not in scope_text:
+        if item["center_stone_included"] is False and "setting" not in scope_text and not item.get("all_metal_design"):
             fail("field-backing", f"{item['id']} centre-stone exclusion lacks setting evidence")
-        if item["center_stone_included"] is True and not ("diamond" in scope_text and "ring" in scope_text):
-            fail("field-backing", f"{item['id']} listed-diamond scope lacks title evidence")
+        if item["center_stone_included"] is True and not (any(gem in scope_text for gem in ("diamond", "sapphire")) and "ring" in scope_text):
+            fail("field-backing", f"{item['id']} listed-stone scope lacks title evidence")
     record("Item name, SKU, metal, dimensions, price, basis, and scope match field quotes", before)
 
     # 4 — retailer policy/payment/contact and independent metrics have field backing.

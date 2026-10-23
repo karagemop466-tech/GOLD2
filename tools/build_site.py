@@ -19,11 +19,12 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 SITE = ROOT  # Pages is configured as legacy main /.
 CATEGORY_FILES = [
-    ("solitaire", "solitaire.json"),
-    ("halo-pave", "halo-pave.json"),
-    ("three-stone-vintage", "three-stone-vintage.json"),
-    ("18k", "18k.json"),
-    ("budget", "budget.json"),
+    ("solid-gold", DATA / "solid-gold-verified.json"),
+    ("solitaire", DATA / "listings" / "solitaire.json"),
+    ("halo-pave", DATA / "listings" / "halo-pave.json"),
+    ("three-stone-vintage", DATA / "listings" / "three-stone-vintage.json"),
+    ("18k", DATA / "listings" / "18k.json"),
+    ("budget", DATA / "listings" / "budget.json"),
 ]
 DASH = "&mdash;"
 
@@ -36,7 +37,7 @@ CSS = r"""
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-a{color:var(--info);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:3px solid #c4932d;outline-offset:3px}
+a{color:var(--info);text-decoration:none}p a,li a,.note a,dd a,td a{text-decoration:underline;text-underline-offset:2px}a:hover{text-decoration:underline}a:focus-visible{outline:3px solid #c4932d;outline-offset:3px}
 .wrap{max-width:1220px;margin:0 auto;padding:0 20px}.skip-link{position:absolute;left:-9999px;top:0;background:#fff;padding:10px;z-index:100}.skip-link:focus{left:10px}
 header.top{position:sticky;top:0;z-index:30;background:rgba(251,250,247,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .topbar{display:flex;align-items:center;gap:18px;min-height:62px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px;color:var(--ink)}
@@ -98,6 +99,10 @@ def basis_badge(basis: str) -> str:
 
 
 def status_badge(status: str) -> str:
+    if status == "verified_solid_gold_and_weight":
+        return '<span class="badge b-ok">Solid 14k + weight</span>'
+    if status.startswith("verified_solid_gold"):
+        return '<span class="badge b-ok">Explicit Solid 14k</span>'
     labels = {
         "partial_official_fields": "official fields · gaps flagged",
         "partial_eur_price": "EUR official price · gaps flagged",
@@ -113,8 +118,8 @@ def external_link(url: str, label: str) -> str:
 
 def all_items() -> list[dict]:
     items = []
-    for _, fname in CATEGORY_FILES:
-        payload = load(DATA / "listings" / fname)
+    for _, lpath in CATEGORY_FILES:
+        payload = load(lpath)
         for item in payload["items"]:
             item["_category_id"] = payload["category_id"]
             item["_category_label"] = payload["category_label"]
@@ -123,7 +128,7 @@ def all_items() -> list[dict]:
 
 
 def category_payloads() -> list[dict]:
-    return [load(DATA / "listings" / fname) for _, fname in CATEGORY_FILES]
+    return [load(lpath) for _, lpath in CATEGORY_FILES]
 
 
 def retrieval_dates(items: list[dict]) -> list[str]:
@@ -133,6 +138,7 @@ def retrieval_dates(items: list[dict]) -> list[str]:
 def page(title: str, active: str, body: str, retrieved: str, include_calculator: bool = False) -> str:
     nav_items = [
         ("index.html", "Dashboard", "dashboard"),
+        ("solid-gold.html", "Solid Gold", "solid-gold"),
         ("solitaire.html", "Solitaire", "solitaire"),
         ("halo-pave.html", "Halo & Pavé", "halo-pave"),
         ("three-stone-vintage.html", "Three-Stone", "three-stone-vintage"),
@@ -168,7 +174,7 @@ def page(title: str, active: str, body: str, retrieved: str, include_calculator:
   <nav class="main" aria-label="Main navigation">{links}</nav>
 </div></header>
 <main id="main-content"><div class="wrap">
-<section class="note"><strong>No hallucinations. No invented prices.</strong> This is the original 16-entry category register. <a href="explore/"><strong>Open all 32 researched entries across nine sellers →</strong></a> or <a href="explore/review/">Flagged for Review</a>. Seller statements and automated checks do not independently prove truth or purity.</section>
+<section class="note"><strong>No hallucinations. No invented prices.</strong> Root register covers 20 source-checked entries across six official sellers (including <a href="solid-gold.html"><strong>Solid Gold</strong></a>). <a href="explore/"><strong>Open all 32 researched entries across nine sellers →</strong></a> or <a href="flags.html">Flagged for Review</a>. Seller statements and automated checks do not independently prove truth or purity.</section>
 {body}
 </div></main>
 <footer><div class="wrap row">
@@ -227,7 +233,11 @@ def listing_table(items: list[dict]) -> str:
         elif item.get("price") is None:
             price += '<div class="sub">no price assigned; see flag</div>'
 
-        stone_scope = "centre stone not included" if item.get("center_stone_included") is False else "diamond ring as listed"
+        stone_scope = (
+            "all-metal solid gold ring (no stones)"
+            if item.get("all_metal_design")
+            else ("centre stone not included" if item.get("center_stone_included") is False else "complete ring as listed")
+        )
         source = external_link(item["source_url"], "official listing")
         source += f'<div class="sub">retrieved {esc(item["retrieved_at"])}</div>'
         source += f'<div class="sub"><a href="{esc(item["evidence_file"])}">field evidence</a></div>'
@@ -315,7 +325,7 @@ def build_index(items, payloads, flags, gold, qa_summary, retrieved):
 </section>
 
 <h1>Gold engagement-ring research dashboard</h1>
-<p class="lead">{len(items)} researched listings from {len({item['retailer_id'] for item in items})} retailers, organized into five categories. Official page claims are not physical verification: item-specific “solid gold” wording and hallmark/maker’s-mark documentation remain open, while only {weights} row publishes a metal weight.</p>
+<p class="lead">{len(items)} researched listings from {len({item['retailer_id'] for item in items})} official retailers, organized into {len(payloads)} categories (including {len(items)-solid_missing} explicit <em>Solid 14k Gold</em> rings). Official page claims are not physical verification: physical hallmark/maker’s-mark stamps remain unverified on all {len(items)} pages, while {weights} rows publish stone-free metal weights.</p>
 
 <div class="grid g4 mt18">
   <div class="card stat"><div class="n">{len(items)}</div><div class="l">researched listings</div></div>
@@ -492,7 +502,8 @@ def build_prices(gold, items, retrieved):
   <p><a href="explore/calculator/">Expanded evidence-gated calculator →</a></p>
   <label><input id="root-scenario-ack" type="checkbox"> I acknowledge this is a conditional USD scenario, not verified ring weight, purity or value.</label>
   <div class="calcgrid">
-    <div><label class="f" for="w">Metal-only weight (g)</label><input id="w" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Documented grams"></div>
+    <div><label class="f" for="w">Metal-only weight (g / unit)</label><input id="w" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Documented mass"></div>
+    <div><label class="f" for="unit">Unit (NIST)</label><select id="unit"><option value="g" selected>Grams (g)</option><option value="dwt">Pennyweights (dwt)</option><option value="ozt">Troy ounces (ozt)</option></select></div>
     <div><label class="f" for="k">Listed karat</label><select id="k"><option value="10">10K</option><option value="14" selected>14K</option><option value="18">18K</option><option value="22">22K</option><option value="24">24K</option></select></div>
     <div><label class="f" for="spot">Gold spot (USD / troy oz)</label><input id="spot" type="number" min="0" step="0.01" inputmode="decimal" value="{spot:.2f}"></div>
     <div><label class="f" for="ask">Asking price (optional, USD)</label><input id="ask" type="number" min="0" step="0.01" inputmode="decimal" placeholder="USD only"></div>

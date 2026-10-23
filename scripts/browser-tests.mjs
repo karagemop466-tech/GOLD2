@@ -120,12 +120,14 @@ try{
  for(const route of ['site/','site/rings.html','site/calculator.html','site/checklist.html','site/flagged.html','site/sources.html']){
   const r=await page.goto(base+route,{waitUntil:'networkidle'});expect(r.status()).toBe(200);await expect(page.locator('body')).toContainText('No hallucinations. No invented prices.');
  }
- for(const root of ['index','solitaire','halo-pave','three-stone-vintage','18k','budget','retailers','prices','flags','methods']){
+ for(const root of ['index','solid-gold','solitaire','halo-pave','three-stone-vintage','18k','budget','retailers','prices','flags','methods']){
   const response=await page.goto(base+root+'.html',{waitUntil:'networkidle'});expect(response.status()).toBe(200);
   await expect(page.locator('main')).toContainText('No hallucinations. No invented prices.');
   await expect(page.locator('main a[href="explore/"]')).toHaveCount(1);
   expect(await page.locator('script:not([src])').count()).toBe(0);
   const css=await page.locator('body').evaluate(el=>getComputedStyle(el).fontFamily);expect(css).toContain('sans-serif');
+  const rootAxe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
+  for(const v of rootAxe.violations)violations.push({route:root+'.html',id:v.id,impact:v.impact,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))});
  }
  await page.goto(base+'prices.html');await expect(page.locator('a[href="explore/calculator/"]')).toBeVisible();
  await page.locator('#w').fill('6');await expect(page.locator('#fine')).toHaveText('—');

@@ -2,7 +2,7 @@ name: GOLD2 verify
 
 on:
   push:
-    branches: [main, arena/ca4c9d8a-gold2]
+    branches: [main, arena/ca4c9d8a-gold2, arena/8c810c15-gold2]
   pull_request:
   workflow_dispatch:
 
@@ -37,6 +37,12 @@ jobs:
 
       - name: Independent cross-schema negative review
         run: python3 reviews/independent_snapshot_audit.py .
+
+      - name: Security, WCAG contrast, and verbatim-provenance hallucination scan
+        run: python3 audit/8c810c15/security_and_hallucination_scanner.py .
+
+      - name: NIST conversion and scanner regression tests
+        run: python3 audit/8c810c15/test_calculator_and_scanner.py
 
       - name: Confirm generated files were committed and are reproducible
         run: git diff --exit-code -- . ':!reports/qa-report.md'
