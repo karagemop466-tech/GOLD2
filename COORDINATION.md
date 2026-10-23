@@ -13,14 +13,52 @@ and pushed **before** any data or page edit.
 | ID | Task | Status | Owner | File scope (exclusive) |
 |----|------|--------|-------|------------------------|
 | V-88-01 | Claim the board; baseline every check before editing | done | S-88AA65FD | `COORDINATION.md` |
-| V-88-02 | Live, line-by-line re-read of the highest-risk published claims (prices, weights, seller policies, gold reference) and independent link liveness for every source URL | in progress | S-88AA65FD | `audit/88aa65fd/**` |
-| V-88-03 | Hallucination pass: count/claim consistency, stale or contradictory values, unverified rows — flag, never infer | in progress | S-88AA65FD | `audit/88aa65fd/**`, `data/**`, `README.md` |
-| V-88-04 | Site build, broken-link sweep, security scan, final PR to `main`, merge, Pages verification | unclaimed | S-88AA65FD | `COORDINATION.md`, generated pages only via `tools/build_site.py` |
+| V-88-02 | Live re-read of the highest-risk published claims (gold reference, two Automic products, Sarraf, Factory Direct, two Menē rings, 16 CFR 23.3, FTC) | done | S-88AA65FD | `audit/88aa65fd/**` |
+| V-88-03 | Hallucination pass: count/claim consistency, stale or contradictory values, unverified rows — flag, never infer | done | S-88AA65FD | `audit/88aa65fd/**`, `data/**`, `README.md` |
+| V-88-04 | Site build, broken-link sweep, security scan, PR to `main`, merge, Pages verification | in progress | S-88AA65FD | `COORDINATION.md`, generated pages via the generators only |
 
 ### S-88AA65FD working log
 
 - Read the board and `git branch -r` before editing. Only `origin/main` exists; no live peer claim. Prior sessions'
   flags, disclosures and warnings are inherited and will not be suppressed.
+
+- **Baseline before editing:** clean tree at `ca39632`. `tools/build_site.py` 13 pages; `tools/qa.py` **12 checks /
+  0 failures / 3 warnings**; `node --test` 23/23; `verify` 44 products / 85 sources / 26 findings; `check-links`
+  46 pages / 102 local / 179 external; `security` PASS + `npm audit` 0; dashboard build + `verify --check-build`
+  PASS; `calc-test` PASS; real Chromium + axe PASS. All six inherited scanners PASS.
+- **Tooling limitation, stated up front:** this sandbox has no outbound `curl`/`wget` (TLS `SSL_ERROR_SYSCALL`),
+  so no external HTTP status sweep was possible. Every live value in this pass came from a page fetch, and the
+  pass does **not** claim any publisher URL returned 200. `check-links` remains structural only.
+- **Nine official pages re-read** (23:41–23:49Z). Three values had moved and were corrected with dated
+  evidence: WGC header 3,996.31 → **3,995.47** (prior value moved to `superseded_observations`), Menē Rose
+  1,336 → **1,325**, Menē Knot 1,454 → **1,442**. Four rows matched byte-for-byte (Automic Coffin $1,910/$2,233,
+  Automic Cushion $2,758 / $2,408–$3,253, Sarraf 147370 $3,004 + 3.80 g, Factory Direct GR0001 $1,299.99 +
+  1.25 g + karat-stamp sentence). Detail: `audit/88aa65fd/verification_2026-10-23.md`.
+- **A fabricated verbatim quote was found and removed.** `data/gold-price.json` stored *"an item marked 18 k is
+  made of 75 % gold"* as a field-scoped quotation of 16 CFR 23.3, and `evidence/gold-price.md` labelled it a
+  NIST conversion-chart quote. Both the regulation and the FTC consumer article were re-read: neither contains
+  the sentence, and the FTC expresses the same fact in parts, making 75 % arithmetic (18 ÷ 24). The verified FTC
+  sentence is stored instead, the percentage is labelled arithmetic, and the defect is published as **F-044**.
+- **A new seller self-contradiction was found:** Factory Direct Jewelry's own page says both *since 1985* and
+  *since 1988* about the same Los Angeles factory. Published as **F-043**. Price, weight and stamp statements are
+  unaffected; no founding year is used as a trust signal anywhere.
+- **Provenance gap closed:** the gold reference cited `ecfr.gov` but no evidence record for that page existed.
+  A dated, verbatim `ecfr-23-3` record was added (85 → **86 source records**) and the host was added to the
+  generator's publisher allowlist in `scripts/lib.mjs` (the only generator change in this pass).
+- **New independent scanner:** `audit/88aa65fd/hallucination_scan.py` imports none of the repo's validators;
+  it re-derives price/quote, render, gold, flag-count, README/manifest, host and superseded-value expectations
+  from the JSON and HTML, and carries **6/6 mutation controls**. Result: **10 checks, 0 failures**. Wired into
+  `.github/workflows/gold2-verify.yml` so it runs on every PR and push.
+- **Derived constants were recomputed, not patched to fit.** The dashboard calculator tests were pinned to the
+  old spot; the expected SAR melt ($1,004.11 / 73.72 %) and FDJ hypothetical ($73.14) were recomputed from the
+  formula at the new quote. Two assertions failed first — that failure is what located the stale constants.
+- **Post-change verification:** `tools/build_site.py` 13 pages; `tools/qa.py` **PASS 12 / 0 / 3**; `verify` PASS
+  **44 / 86 / 27 / 0**; `node --test` 23/23; `npm run check` PASS end to end (links 46/102/179, security, axe,
+  44 gates); all six inherited scanners PASS; new scanner PASS with 6/6 controls; three generators run twice
+  produce a byte-identical tree.
+- **Not re-read, stated on the page and here:** 35 of 44 combined rows, 26 of 30 root rows, and 76 of 86 evidence
+  records were **not** re-fetched in this pass; their earlier dates stand. Zero physical, scale or XRF checks;
+  zero purchase approvals. **Look for hallucinations again after every review — this is one pass, not a seal.**
 
 ### Integration record (S-E0D6DD62)
 
