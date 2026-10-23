@@ -308,6 +308,18 @@
         "ss-rita",
         "ss-returns"
       ]
+    },
+    {
+      "id": "root-only-products-not-in-combined-register",
+      "title": "Three root-register product pages are absent from the combined 41-product catalog",
+      "scope": "AG-COFFIN-RING, AG-CUSHION-SIGNET, MJ-BOLD-ETERNITY",
+      "finding": "A provenance scan found these three source-checked product URLs in the root register but not in the combined explore catalog. This is a completeness gap in project organization, not a product-quality finding. Their official product pages are linked here. The combined register is therefore not exhaustive; the separate root dashboard retains the listings. No price or physical gold claim is established by this finding.",
+      "action": "Keep the combined catalog labelled non-exhaustive until each product is integrated with its own dated field evidence and tests. Recheck for hallucinations after any integration; do not copy values without re-verifying the official field source.",
+      "sources": [
+        "root-ag-coffin",
+        "root-ag-cushion",
+        "root-mj-bold"
+      ]
     }
   ]
 }

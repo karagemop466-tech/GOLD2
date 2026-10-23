@@ -1478,6 +1478,55 @@
         "material": "Solid 14K yellow gold",
         "karat": "Gold Karat: 14K"
       }
+    },
+    {
+      "id": "root-ag-coffin",
+      "publisher": "Automic Gold",
+      "kind": "product",
+      "url": "https://www.automicgold.com/products/coffin-ring",
+      "observedAt": "2026-10-23",
+      "method": "Direct official-page retrieval; page title transcribed; no product values are re-entered in the combined catalog by this record.",
+      "access": "fetched",
+      "note": "Official product page corresponding to root-register item AG-COFFIN-RING. Identity/link only; not a fresh price observation or independent purity/weight verification.",
+      "quotes": {
+        "name": "Coffin Ring - 14k Solid Gold Jewelry - Automic Gold"
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "root-ag-cushion",
+      "publisher": "Automic Gold",
+      "kind": "product",
+      "url": "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+      "observedAt": "2026-10-23",
+      "method": "Direct official-page retrieval; page title transcribed; no product values are re-entered in the combined catalog by this record.",
+      "access": "fetched",
+      "note": "Official product page corresponding to root-register item AG-CUSHION-SIGNET. Identity/link only; not a fresh price observation or independent purity/weight verification.",
+      "quotes": {
+        "name": "Automic Gold Cushion Diamond Signet Ring | Jewelry"
+      },
+      "relevantChunks": [
+        0
+      ]
+    },
+    {
+      "id": "root-mj-bold",
+      "publisher": "Mejuri",
+      "kind": "product",
+      "url": "https://mejuri.com/products/bold-diamond-eternity-ring",
+      "observedAt": "2026-10-23",
+      "method": "Direct official-page retrieval; product heading transcribed; displayed starting amount not assigned a currency in the combined catalog.",
+      "access": "fetched",
+      "note": "Official product page corresponding to root-register item MJ-BOLD-ETERNITY. Identity only; no price is assigned because an ISO currency was not confirmed.",
+      "quotes": {
+        "name": "Bold Diamond Eternity Ring",
+        "display": "From$2,900"
+      },
+      "relevantChunks": [
+        0
+      ]
     }
   ]
 }
