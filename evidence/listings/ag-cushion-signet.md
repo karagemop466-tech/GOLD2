@@ -73,3 +73,19 @@ Cushion Diamond Signet Ring
 - Band width is tapered (`8.5mm - 2.5mm`) and height is a range (`Approximately 2mm - 4mm`), so `width_mm` and `depth_mm` remain `null` rather than averaged (flagged F-016).
 - Published `5.5g` item weight includes the set `~0.65ct` diamond, so stone-excluded `weight_g` is left strictly `null` (flagged F-003, F-028).
 - No physical hallmark or maker’s mark text appeared on the product page (flagged F-002).
+
+## Re-verification — 2026-10-23 (UTC)
+
+- **Currency source:** https://www.automicgold.com/cart.js
+- **Result:** the public cart endpoint reports the store currency, which is the only formal
+  currency statement found for this retailer. It is quoted verbatim, not inferred.
+
+```
+"currency":"USD"
+```
+
+- **Product page re-read 2026-10-23:** https://www.automicgold.com/products/cushion-diamond-signet-ring (not re-read this pass; observation date unchanged)
+
+```
+$2,758
+```

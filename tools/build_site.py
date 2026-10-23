@@ -28,6 +28,10 @@ CATEGORY_FILES = [
 ]
 DASH = "&mdash;"
 
+# Counts shown in the shared page shell. They are filled from the data in main()
+# so a template can never carry a stale total.
+SHELL = {"items": 0, "sellers": 0, "flags": 0, "explore_products": 32, "explore_sellers": 9, "quotes": 0}
+
 CSS = r"""
 :root{
   --bg:#fbfaf7;--card:#fff;--ink:#14161a;--muted:#5b6472;--line:#e8e3d8;
@@ -145,6 +149,8 @@ def page(title: str, active: str, body: str, retrieved: str, include_calculator:
         ("18k.html", "18K", "18k"),
         ("budget.html", "10K", "budget"),
         ("retailers.html", "Retailers", "retailers"),
+        ("analysis.html", "Analysis", "analysis"),
+        ("verification.html", "Checks", "verification"),
         ("prices.html", "Calculator", "prices"),
         ("flags.html", "Flagged", "flags"),
         ("methods.html", "Method", "methods"),
@@ -174,7 +180,7 @@ def page(title: str, active: str, body: str, retrieved: str, include_calculator:
   <nav class="main" aria-label="Main navigation">{links}</nav>
 </div></header>
 <main id="main-content"><div class="wrap">
-<section class="note"><strong>No hallucinations. No invented prices.</strong> Root register covers 20 source-checked entries across six official sellers (including <a href="solid-gold.html"><strong>Solid Gold</strong></a>). <a href="explore/"><strong>Open all 32 researched entries across nine sellers →</strong></a> or <a href="flags.html">Flagged for Review</a>. Seller statements and automated checks do not independently prove truth or purity.</section>
+<section class="note"><strong>No hallucinations. No invented prices.</strong> Root register covers {SHELL["items"]} source-checked entries across {SHELL["sellers"]} official sellers (including <a href="solid-gold.html"><strong>Solid Gold</strong></a>) and {SHELL["flags"]} published flags. <a href="explore/"><strong>Open all {SHELL["explore_products"]} researched entries across {SHELL["explore_sellers"]} sellers →</strong></a>, read the <a href="verification.html">dated re-verification log</a>, or open <a href="flags.html">Flagged for Review</a>. Seller statements and automated checks do not independently prove truth or purity.</section>
 {body}
 </div></main>
 <footer><div class="wrap row">
@@ -225,6 +231,10 @@ def listing_table(items: list[dict]) -> str:
             weight += f'<div class="sub">{esc(item["weight_basis"])}</div>'
 
         price = f'<strong>{fmt_price(item)}</strong>'
+        displayed = item.get("observed_native_display") or []
+        if displayed:
+            verbatim = " · ".join(f"“{esc(text)}”" for text in displayed)
+            price += f'<div class="sub">page display, verbatim: {verbatim}</div>'
         if item.get("original_price") is not None:
             symbol = {"USD": "$", "EUR": "€"}.get(item.get("currency"), "")
             price += f'<div class="sub">original {symbol}{item["original_price"]:,.2f}</div>'
@@ -287,6 +297,10 @@ def build_index(items, payloads, flags, gold, qa_summary, retrieved):
     solid_missing = sum(1 for item in items if item.get("solid_gold_explicit") is not True)
     hallmark_missing = sum(1 for item in items if item.get("hallmark_stated") is not True or item.get("makers_mark_stated") is not True)
     ambiguous = sum(1 for item in items if item.get("unassigned_price_text"))
+    displayed_only = sum(
+        1 for item in items
+        if item.get("price") is None and (item.get("observed_native_display") or item.get("unassigned_price_text"))
+    )
     rejected = sum(1 for flag in flags if flag["type"] == "price_discrepancy")
     cat_cards = "".join(
         f'<a class="catlink" href="{payload["category_id"]}.html"><div class="c">{len(payload["items"])} item(s)</div>'
@@ -299,7 +313,7 @@ def build_index(items, payloads, flags, gold, qa_summary, retrieved):
         ("Hallmark", f"{hallmark_missing} of {len(items)} rows lack documented physical karat/maker’s marks; stock and source IDs are not hallmarks (F-002)."),
         ("Weight", f"A size-specific seller metal-weight claim is published for {weights} of {len(items)} rows; every other weight is blank (F-003)."),
         ("Seller", "Official contact, payment, and return policies are separated from scoped independent BBB profile data. Neither is an endorsement."),
-        ("Price", f"{priced} rows have explicitly assigned prices; {len(items)-priced} are blank, including {ambiguous} unlabeled Zales displays. {rejected} cached-price discrepancies are logged as rejected evidence."),
+        ("Price", f"{priced} rows have an explicitly assigned price. {displayed_only} more show the page's amount verbatim but leave the structured price blank because the ISO currency or the label is unresolved ({ambiguous} of those render an unlabeled amount). {len(items)-priced-displayed_only} row(s) publish no price in the retrieved text. {rejected} cached-price discrepancies are logged as rejected evidence."),
         ("Returns", "Resized/custom exclusions, VRAI fees, Brilliant Earth engraving terms, and Zales resizing-channel rules are shown per retailer."),
         ("Payment", "Accepted methods are linked to official payment/terms pages. Acceptance does not prove chargeback or purchase-protection outcomes."),
         ("Records", "Every row links its official product page and its own field-scoped evidence file with retrieval date."),
@@ -536,7 +550,7 @@ def build_methods(qa_summary, gold, items, flags, retailers, retrieved):
     quote_count = sum(len(quotes) for item in items for quotes in item.get("field_evidence", {}).values())
     quote_count += sum(len(quotes) for retailer in retailers for quotes in retailer.get("field_evidence", {}).values())
     quote_count += sum(len(quotes) for quotes in gold.get("field_evidence", {}).values())
-    limitation_ids = [fid for fid in ("F-007", "F-008", "F-013", "F-018", "F-021", "F-022", "F-023", "F-024") if any(flag["id"] == fid for flag in flags)]
+    limitation_ids = [fid for fid in ("F-007", "F-008", "F-013", "F-018", "F-021", "F-022", "F-023", "F-024", "F-025", "F-026", "F-032", "F-033") if any(flag["id"] == fid for flag in flags)]
     limitations = "".join(
         f'<li><a href="flags.html#{fid.lower()}">{fid}</a> — {esc(next(flag["title"] for flag in flags if flag["id"] == fid))}</li>'
         for fid in limitation_ids
@@ -551,19 +565,21 @@ def build_methods(qa_summary, gold, items, flags, retailers, retrieved):
 <li><strong>Gold reference:</strong> World Gold Council spot page with quote date and ICE Data Services attribution.</li>
 <li><strong>Calculation constants/context:</strong> NIST troy-ounce conversion chart and eCFR gold-labeling guidance.</li>
 <li><strong>Rejected as product evidence:</strong> search snippets, aggregators, blogs, coupon pages, unrelated page text, and values from other items in the same category.</li></ul>
-<h2>3. Field-scoped evidence</h2><p>The current audit resolves <strong>{quote_count}</strong> field-specific quotes across 16 item files, four retailer files, and the gold/calculation evidence. A price, width, or karat in one item’s file cannot support another item. Shared category files are retained only as inherited audit history and are not authoritative inputs.</p>
+<h2>3. Field-scoped evidence</h2><p>The current audit resolves <strong>{quote_count}</strong> field-specific quotes across {len(items)} item files, {len(retailers)} retailer files, and the gold/calculation evidence. A price, width, or karat in one item’s file cannot support another item. Shared category files are retained only as inherited audit history and are not authoritative inputs.</p>
 <h2>4. Current limitations</h2><ul class="clean">{limitations}</ul>
-<h2>5. Automated checks after every review</h2><p>Run <code>python3 tools/build_site.py</code>, <code>python3 tools/qa.py</code>, <code>node tools/test_calculator.js</code>, and <code>python3 reviews/independent_snapshot_audit.py .</code>. The audits check schema, field-level quote backing, numeric/currency consistency, null-to-flag coverage, two-way flag references, official product domains, calculator arithmetic, built-row/source identity, internal links and fragments, CSP/script constraints, small-text contrast, stale generated values, and independent cross-schema contradictions.</p>
+<h2>5. Dated live re-verification</h2><p>The <a href="verification.html">verification log</a> records each official page that was actually re-read, the verbatim values it rendered, the date, and what changed in the register. A value is reused only when the page renders it again; anything that could not be re-read keeps its older date and is labelled. Pages that returned 404 or did not state the fact being sought are recorded as dead ends instead of being treated as evidence.</p>
+<h2>6. Automated checks after every review</h2><p>Run <code>python3 tools/build_site.py</code>, <code>python3 tools/qa.py</code>, <code>node tools/test_calculator.js</code>, and <code>python3 reviews/independent_snapshot_audit.py .</code>. The audits check schema, field-level quote backing, numeric/currency consistency, null-to-flag coverage, two-way flag references, official product domains, calculator arithmetic, built-row/source identity, internal links and fragments, CSP/script constraints, small-text contrast, stale generated values, and independent cross-schema contradictions.</p>
 <pre class="qa">RESULT: {esc(qa_summary)}
 Full timestamped log: reports/qa-report.md</pre>
+<p>Current local result: <strong>{len(items)} items</strong>, <strong>{len(flags)} flags</strong>, <strong>{quote_count}</strong> field-scoped quotes. The root suite now runs 11 checks; run <code>python3 audit/8c810c15/security_and_hallucination_scanner.py</code> for the independent 154-control HTML/security scan after every edit.</p>
 <p><a href="reports/qa-report.md">Open the complete timestamped QA report</a> · <a href="reports/source-link-review.md">Open the dated external source-link retrieval review</a></p>
 <div class="note"><strong>Recommendation:</strong> look for hallucinations again after every review and after any generator change. Automated checks reduce risk; they cannot prove a retailer’s claim or replace physical testing.</div>
-<h2>6. Earlier pass preserved</h2><p>The <code>site/</code> folder holds the earlier two-listing dashboard with its own audit and calculator tests: <a href="site/index.html">open the earlier dashboard</a>. Its two Blue Nile settings were re-fetched in this integration and appear as <code>BN-195402</code> and <code>BN-302868</code> on the <a href="halo-pave.html">Halo &amp; Pavé</a> page.</p>
-<h2>7. Data provenance summary</h2><dl class="kv">
+<h2>7. Earlier pass preserved</h2><p>The <code>site/</code> folder holds the earlier two-listing dashboard with its own audit and calculator tests: <a href="site/index.html">open the earlier dashboard</a>. Its two Blue Nile settings were re-fetched in this integration and appear as <code>BN-195402</code> and <code>BN-302868</code> on the <a href="halo-pave.html">Halo &amp; Pavé</a> page.</p>
+<h2>8. Data provenance summary</h2><dl class="kv">
 <dt>Items</dt><dd>{len(items)}</dd><dt>Flags</dt><dd>{len(flags)}</dd><dt>Field-scoped quotes</dt><dd>{quote_count}</dd>
 <dt>Gold quote</dt><dd>${gold['usd_per_troy_oz']:,.2f}/oz · {esc(gold['quote_date'] or 'unconfirmed — F-026')} · {external_link(gold['source_url'], 'World Gold Council')}</dd>
 <dt>Retrieval dates</dt><dd>{esc(retrieved)} (UTC)</dd><dt>Repository</dt><dd>{external_link('https://github.com/karagemop466-tech/GOLD2', 'karagemop466-tech/GOLD2')}</dd></dl>
-<h2>8. What to do with a flagged row</h2><ol class="clean">
+<h2>9. What to do with a flagged row</h2><ol class="clean">
 <li>Open the official source and item evidence; re-read the exact field and price basis.</li>
 <li>Ask the seller in writing about solid-gold construction, metal-only gram weight, physical hallmark/maker’s mark, and independent non-destructive testing permission.</li>
 <li>Keep the written response and the dated checkout record. Do not rely on a cached snippet or an unlabeled amount.</li>
@@ -571,6 +587,195 @@ Full timestamped log: reports/qa-report.md</pre>
 <li>If the seller refuses independent verification or a return, do not buy.</li></ol>
 """
     return page("Method & QA", "methods", body, retrieved)
+
+
+
+STATUS_LABELS = {
+    "verified_match": ("b-ok", "re-read · matched"),
+    "verified_correction": ("b-part", "re-read · register corrected"),
+    "verified_no_price": ("b-part", "re-read · no price published"),
+    "not_re_read": ("b-neutral", "not re-read this pass"),
+    "dead_end": ("b-bad", "source unavailable / no statement"),
+}
+
+
+def build_analysis(gold, items, flags, retailers, retrieved):
+    grams_oz = gold["grams_per_troy_ounce"]
+    spot = gold["usd_per_troy_oz"]
+    weighted = [item for item in items if item.get("weight_g") is not None]
+    gross_only = [item for item in items if item.get("weight_g") is None and item.get("gross_ring_weight_g")]
+    melt_rows = []
+    comparisons = []
+    for item in weighted:
+        fine = item["weight_g"] * item["karat"] / 24
+        melt = fine / grams_oz * spot
+        ratio = None
+        if item.get("price") is not None and item.get("currency") == "USD":
+            ratio = item["price"] / melt
+            comparisons.append((item, melt, ratio))
+        melt_rows.append(
+            f'<tr><td><div class="itemname">{esc(item["name"])}</div>'
+            f'<div class="sub">{esc(item["brand"])} · {esc(item["id"])}<br>karat {item["karat"]}K</div></td>'
+            f'<td class="num">{item["weight_g"]:.2f} g<div class="sub">{esc(item.get("weight_basis") or "")}</div></td>'
+            f'<td class="num">{fine:.3f} g</td>'
+            f'<td class="num"><strong>${melt:,.2f}</strong></td>'
+            f'<td class="num">{fmt_price(item)}</td>'
+            f'<td class="num">{(f"{ratio:.2f}× nominal melt" if ratio else blank("No assigned USD price"))}</td>'
+            f'<td class="src">{external_link(item["source_url"], "official listing")}</td></tr>'
+        )
+    excluded = "".join(
+        f'<li><strong>{esc(item["name"])}</strong> ({esc(item["id"])}) publishes '
+        f'<strong>{item["gross_ring_weight_g"]:.2f} g</strong> as a gross item weight that includes the '
+        f'stone. It is shown on the category page and deliberately excluded from fine-gold arithmetic '
+        f'(<a href="flags.html#f-028">F-028</a>).</li>'
+        for item in gross_only
+    ) or "<li>None.</li>"
+    solid = sum(1 for item in items if item.get("solid_gold_explicit") is True)
+    hallmarks = sum(1 for item in items if item.get("hallmark_stated") is True)
+    makers = sum(1 for item in items if item.get("makers_mark_stated") is True)
+    priced = sum(1 for item in items if item.get("price") is not None)
+    approved_tests = sum(1 for item in items if item.get("independent_test_permission") is True)
+    retailer_sites = {retailer["id"]: retailer.get("website") for retailer in retailers}
+    category_rows = []
+    for payload in category_payloads():
+        rows = payload["items"]
+        seller_links = " · ".join(
+            external_link(retailer_sites[retailer_id], retailer_id.replace("-", " ").title())
+            for retailer_id in sorted({row["retailer_id"] for row in rows})
+            if retailer_sites.get(retailer_id)
+        )
+        category_rows.append(
+            f'<tr><td><a href="{payload["category_id"]}.html"><strong>{esc(payload["category_label"])}</strong></a></td>'
+            f'<td class="num">{len(rows)}</td>'
+            f'<td class="num">{sum(1 for r in rows if r.get("price") is not None)}</td>'
+            f'<td class="num">{sum(1 for r in rows if r.get("weight_g") is not None)}</td>'
+            f'<td class="num">{sum(1 for r in rows if r.get("solid_gold_explicit") is True)}</td>'
+            f'<td class="src">{seller_links}</td>'
+            f'<td>{esc(price_summary(rows))}</td></tr>'
+        )
+    ratio_note = ""
+    if comparisons:
+        item, melt, ratio = max(comparisons, key=lambda entry: entry[2])
+        ratio_note = (
+            f'<p>The only row with both a published stone-free metal weight and an assigned USD asking '
+            f'price is <strong>{esc(item["name"])}</strong>: ${item["price"]:,.2f} against '
+            f'${melt:,.2f} of nominal fine-gold content, i.e. {ratio:.2f}× the nominal metal value. '
+            f'That multiple is arithmetic, not a valuation of the ring: design work, finishing, '
+            f'manufacturing, taxes, fees and any resale spread are excluded.</p>'
+        )
+    body = f"""
+<div class="eyebrow">Analysis</div>
+<h1>Nominal gold content, price coverage, and what the register can actually compare</h1>
+<p class="lead">Every figure below is arithmetic on a <em>published</em> weight and the <em>dated</em> gold
+reference. A weight that is not published is never estimated, and a price whose currency is not stated is
+never assigned. Blank means unverified.</p>
+
+<div class="grid g4 mt18">
+  <div class="card stat"><div class="n">{len(weighted)}<span class="small"> / {len(items)}</span></div><div class="l">rows with a published metal weight</div></div>
+  <div class="card stat"><div class="n">{priced}</div><div class="l">rows with an assigned price</div></div>
+  <div class="card stat"><div class="n">{solid}</div><div class="l">rows stating solid gold explicitly</div></div>
+  <div class="card stat"><div class="n">{hallmarks + makers}<span class="small"> / {len(items)}</span></div><div class="l">rows documenting physical marks</div></div>
+</div>
+
+<h2>1. Nominal fine-gold content at the dated reference</h2>
+<div class="note"><strong>Method.</strong> Nominal fine gold = published metal weight × karat ÷ 24.
+Theoretical melt = nominal fine gold ÷ {grams_oz} g per troy ounce × ${spot:,.2f}/oz
+({esc(gold["quote_date"] or "header quote date unconfirmed — F-026")}). Karat is the seller's stated
+alloy, not an assay. Weight must exclude stones and non-gold components for this arithmetic to mean
+anything about gold content.</div>
+<div class="tablewrap mt16"><table><thead><tr>
+<th>Item</th><th>Published metal weight</th><th>Nominal fine gold</th><th>Theoretical melt</th>
+<th>Asking price</th><th>Asking ÷ nominal melt</th><th>Source</th>
+</tr></thead><tbody>{"".join(melt_rows) or '<tr><td colspan="7">No row publishes a usable metal weight.</td></tr>'}</tbody></table></div>
+{ratio_note}
+
+<h2>2. Weights that exist but cannot be used</h2>
+<ul class="clean">{excluded}</ul>
+
+<h2>3. Coverage by category</h2>
+<div class="tablewrap mt16"><table><thead><tr>
+<th>Category</th><th>Rows</th><th>Assigned prices</th><th>Published metal weights</th><th>Explicit solid gold</th><th>Official retailer sites</th><th>Price summary</th>
+</tr></thead><tbody>{"".join(category_rows)}</tbody></table></div>
+
+<h2>4. Checklist coverage across the register</h2>
+<div class="card"><ul class="checklist">
+<li><span class="k">01</span><span><strong>Karat stated.</strong> {sum(1 for item in items if item.get("karat") is not None)} of {len(items)} rows publish a karat. None of those values is a measured purity.</span></li>
+<li><span class="k">02</span><span><strong>Explicit solid gold.</strong> {solid} of {len(items)} rows use the words solid gold on their own product page. The other rows are still listed, because a karat alone is not evidence of solid construction (<a href="flags.html#f-001">F-001</a>).</span></li>
+<li><span class="k">03</span><span><strong>Hallmark and maker’s mark.</strong> {hallmarks} of {len(items)} rows document a physical karat stamp, and {makers} document a maker’s mark. No online page in this register does (<a href="flags.html#f-002">F-002</a>).</span></li>
+<li><span class="k">04</span><span><strong>Metal weight.</strong> {len(weighted)} of {len(items)} rows publish a stone-free metal weight; {len(gross_only)} more publish only a gross item weight that includes stones (<a href="flags.html#f-003">F-003</a>, <a href="flags.html#f-028">F-028</a>).</span></li>
+<li><span class="k">05</span><span><strong>Price currency.</strong> {priced} of {len(items)} rows carry an assigned amount whose currency is supported by the retailer’s own statement. The rest show the page text verbatim and stay unassigned (<a href="flags.html#f-025">F-025</a>).</span></li>
+<li><span class="k">06</span><span><strong>Independent testing permission.</strong> {approved_tests} of {len(items)} rows have written permission captured for third-party testing or return after testing (<a href="flags.html#f-021">F-021</a>).</span></li>
+<li><span class="k">07</span><span><strong>Physical verification.</strong> 0 of {len(items)} rings were weighed, XRF-tested, or inspected in person (<a href="flags.html#f-024">F-024</a>).</span></li>
+</ul></div>
+
+<h2>5. What this analysis must not be used for</h2>
+<div class="note">The melt figures are conditional arithmetic, not appraisals, offers, or resale floors.
+A ring can legitimately cost several times its metal value because of design, labour, setting, brand and
+margin — and a suspiciously <em>low</em> price is the direction that deserves the extra questions
+(checklist item: unusually cheap pricing is a red flag). Nothing here establishes that a ring is solid
+gold, that its stated karat is accurate, or that a seller will honour a return.</div>
+<p class="mt16"><a href="prices.html"><strong>Open the calculator to test your own weight and karat →</strong></a> · <a href="verification.html">Dated re-verification log</a></p>
+"""
+    return page("Analysis", "analysis", body, retrieved)
+
+
+def build_verification(log, items, retrieved):
+    entries = log["entries"]
+    counts = {}
+    for entry in entries:
+        counts[entry["status"]] = counts.get(entry["status"], 0) + 1
+    rows = []
+    for entry in entries:
+        css, label = STATUS_LABELS.get(entry["status"], ("b-neutral", entry["status"]))
+        observed = "<br>".join(f"“{esc(text)}”" for text in entry.get("observed") or []) or DASH
+        rows.append(
+            f'<tr id="check-{esc(entry["id"].lower())}">'
+            f'<td><div class="itemname">{esc(entry["label"])}</div>'
+            f'<div class="sub">{esc(entry["retailer"])} · {esc(entry["id"])}</div></td>'
+            f'<td>{esc(entry["checked_at"])}</td>'
+            f'<td><span class="badge {css}">{esc(label)}</span></td>'
+            f'<td class="src">{observed}</td>'
+            f'<td class="src">{external_link(entry["url"], "official page")}</td>'
+            f'<td class="src">{esc(entry["note"])}</td></tr>'
+        )
+    pass_meta = log["pass"]
+    body = f"""
+<div class="eyebrow">Verification</div>
+<h1>Dated re-verification log — {esc(pass_meta["checked_at"])} (UTC)</h1>
+<p class="lead">{esc(pass_meta["rule"])}</p>
+
+<section class="banner" aria-labelledby="pass-rule">
+  <span class="pill">NO HALLUCINATIONS</span>
+  <h2 id="pass-rule">A value is only reused if the official page renders it again.</h2>
+  <p>{esc(pass_meta["method"])}</p>
+  <p class="flagline"><strong>Look for hallucinations again after every review.</strong> This page is a
+  dated record, not a live feed. Re-open each official link before acting on a row; a page that changed
+  after this pass makes the row stale, not true.</p>
+</section>
+
+<div class="grid g4 mt18">
+  <div class="card stat"><div class="n">{counts.get("verified_match", 0)}</div><div class="l">re-read · unchanged</div></div>
+  <div class="card stat"><div class="n">{counts.get("verified_correction", 0)}</div><div class="l">re-read · register corrected</div></div>
+  <div class="card stat"><div class="n">{counts.get("not_re_read", 0)}</div><div class="l">not re-read this pass</div></div>
+  <div class="card stat"><div class="n">{counts.get("dead_end", 0)}</div><div class="l">dead ends recorded</div></div>
+</div>
+
+<h2>Entry-by-entry record</h2>
+<div class="tablewrap"><table><thead><tr>
+<th>Record</th><th>Checked</th><th>Result</th><th>Observed on the official page (verbatim)</th><th>Official source</th><th>Effect on the register</th>
+</tr></thead><tbody>{"".join(rows)}</tbody></table></div>
+
+<h2>How to read the results</h2>
+<div class="card"><ul class="clean">
+<li><strong>re-read · unchanged</strong> — the page rendered the same values that were already stored. Nothing was added.</li>
+<li><strong>re-read · register corrected</strong> — the page differed from the stored record, so the record was changed and the reason is written into the evidence file. Superseded values stay in the data as history and are never re-rendered as current.</li>
+<li><strong>not re-read this pass</strong> — the stored observation keeps its own older date and is labelled as such; it is not silently refreshed.</li>
+<li><strong>dead ends</strong> — a 404 or a page that does not state the fact being sought. Recorded so the same dead end is not mistaken for evidence later.</li>
+</ul>
+<div class="note mt16">{esc(pass_meta["limits"])}</div></div>
+<p class="mt16"><a href="index.html">← Back to dashboard</a> · <a href="flags.html">Flagged for Review</a> · <a href="methods.html">Method &amp; automated checks</a></p>
+"""
+    return page("Verification log", "verification", body, retrieved)
 
 
 def main():
@@ -592,10 +797,16 @@ def main():
             qa_summary = line.split("RESULT:", 1)[1].replace("*", "").strip(" -—")
             break
 
+    SHELL["items"] = len(items)
+    SHELL["sellers"] = len({item["retailer_id"] for item in items})
+    SHELL["flags"] = len(flags)
+    verification = load(DATA / "verification-log.json")
     pages = {"index.html": build_index(items, payloads, flags, gold, qa_summary, retrieved)}
     for payload in payloads:
         pages[f'{payload["category_id"]}.html'] = build_category(payload, flags, retrieved)
     pages["retailers.html"] = build_retailers(retailers, items, retrieved)
+    pages["analysis.html"] = build_analysis(gold, items, flags, retailers, retrieved)
+    pages["verification.html"] = build_verification(verification, items, retrieved)
     pages["flags.html"] = build_flags(flags, items, retrieved)
     pages["prices.html"] = build_prices(gold, items, retrieved)
     pages["methods.html"] = build_methods(qa_summary, gold, items, flags, retailers, retrieved)

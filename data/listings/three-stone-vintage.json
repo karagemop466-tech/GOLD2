@@ -21,7 +21,7 @@
       "center_stone_included": false,
       "original_price": null,
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-three-stone-diamond-engagement-ring-in-14k-yellow-gold-item-193625",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/bn-193625.md",
       "solid_gold_explicit": null,
       "hallmark_stated": null,
@@ -117,13 +117,13 @@
       "center_stone_included": true,
       "original_price": null,
       "source_url": "https://www.zales.com/12-ct-tw-diamond-frame-vintagestyle-twist-shank-engagement-ring-10k-gold/p/V-20303279",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/z-20303279.md",
       "solid_gold_explicit": null,
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE",
-      "verification_status": "partial_price_unassigned",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
@@ -136,13 +136,14 @@
         "F-018",
         "F-021",
         "F-023",
-        "F-024"
+        "F-024",
+        "F-025"
       ],
       "notes": "The current page renders two dollar amounts and 30% Off without labels. Neither amount is assigned to current or original price.",
       "depth_mm": null,
       "band_width_text": null,
       "weight_basis": null,
-      "unassigned_price_text": "$979.30  $1,399.00 30% Off",
+      "unassigned_price_text": null,
       "prong_metal": null,
       "surface_finish": null,
       "physical_test_status": "not_tested",
@@ -167,10 +168,27 @@
         "center_stone_included": [
           "1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold"
         ],
-        "unassigned_price_text": [
-          "$979.30  $1,399.00 30% Off"
+        "price": [
+          "Discounted Price $979.30  Original Price was $1,399.00 30% Off"
+        ],
+        "currency": [
+          "Discounted Price $979.30  Original Price was $1,399.00 30% Off"
         ]
-      }
+      },
+      "observed_native_display": [
+        "Discounted Price $979.30  Original Price was $1,399.00 30% Off"
+      ],
+      "render_history": [
+        {
+          "retrieved_at": "2026-10-23",
+          "render_variant": "unlabeled",
+          "rendered": [
+            "$979.30  $1,399.00 30% Off"
+          ],
+          "note": "A same-day retrieval by the parallel verification session (S-062F314F) rendered these amounts with no Discounted/Original labels; the labels reappeared on this session's render. Both renders are kept; neither is assigned a currency or ordered by position.",
+          "session": "S-062F314F"
+        }
+      ]
     },
     {
       "id": "Z-20301172",
@@ -190,13 +208,13 @@
       "center_stone_included": true,
       "original_price": null,
       "source_url": "https://www.zales.com/13-ct-tw-diamond-three-stone-engagement-ring-10k-gold/p/V-20301172",
-      "retrieved_at": "2026-10-22",
+      "retrieved_at": "2026-10-23",
       "evidence_file": "evidence/listings/z-20301172.md",
       "solid_gold_explicit": null,
       "hallmark_stated": null,
       "makers_mark_stated": null,
       "return_policy_url": "https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE",
-      "verification_status": "partial_price_unassigned",
+      "verification_status": "partial_price_unverified",
       "rejected_values": [],
       "flags": [
         "F-001",
@@ -209,13 +227,14 @@
         "F-018",
         "F-021",
         "F-023",
-        "F-024"
+        "F-024",
+        "F-025"
       ],
       "notes": "The current page renders two dollar amounts and 30% Off without labels. Neither amount is assigned to current or original price.",
       "depth_mm": null,
       "band_width_text": null,
       "weight_basis": null,
-      "unassigned_price_text": "$769.30  $1,099.00 30% Off",
+      "unassigned_price_text": null,
       "prong_metal": null,
       "surface_finish": null,
       "physical_test_status": "not_tested",
@@ -240,10 +259,27 @@
         "center_stone_included": [
           "1/3 CT. T.W. Diamond Three Stone Engagement Ring in 10K Gold"
         ],
-        "unassigned_price_text": [
-          "$769.30  $1,099.00 30% Off"
+        "price": [
+          "Discounted Price $769.30  Original Price was $1,099.00 30% Off"
+        ],
+        "currency": [
+          "Discounted Price $769.30  Original Price was $1,099.00 30% Off"
         ]
-      }
+      },
+      "observed_native_display": [
+        "Discounted Price $769.30  Original Price was $1,099.00 30% Off"
+      ],
+      "render_history": [
+        {
+          "retrieved_at": "2026-10-23",
+          "render_variant": "unlabeled",
+          "rendered": [
+            "$769.30  $1,099.00 30% Off"
+          ],
+          "note": "A same-day retrieval by the parallel verification session (S-062F314F) rendered these amounts with no Discounted/Original labels; the labels reappeared on this session's render. Both renders are kept; neither is assigned a currency or ordered by position.",
+          "session": "S-062F314F"
+        }
+      ]
     }
   ]
 }

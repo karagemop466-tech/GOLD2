@@ -442,9 +442,9 @@
       "evidence_file": "evidence/retailers/brilliant-earth.md",
       "verification_status": "official_policies_partial",
       "flags": [
+        "F-007",
         "F-019",
-        "F-021",
-        "F-007"
+        "F-021"
       ],
       "field_evidence": {
         "contact_phone": [

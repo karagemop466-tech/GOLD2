@@ -38,20 +38,21 @@
   },
   "superseded_observations": [
     {
+      "value": 4028.53,
+      "currency": "USD",
+      "quote_date": null,
+      "retrieved_at": "2026-10-22",
+      "chart_as_of_date": "2026-10-21",
+      "status": "superseded_moving_header",
+      "reason": "Header value observed on the previous retrieval date. The moving header is not a fixed benchmark; only the value observed on 2026-10-23 is used in calculations."
+    },
+    {
       "value": 4024.36,
       "currency": "USD",
       "quote_date": "2026-10-21",
       "retrieved_at": "2026-10-22",
       "status": "superseded_intraday",
       "reason": "Earlier same-day WGC capture. A later direct fetch displayed 4,028.53 with the same data date; only the later value is used in calculations."
-    },
-    {
-      "value": 4028.53,
-      "currency": "USD",
-      "quote_date": null,
-      "retrieved_at": "2026-10-22",
-      "status": "superseded_intraday",
-      "reason": "Earlier WGC moving-header observation recorded on 2026-10-22. A direct fetch on 2026-10-23 displayed 4,024.45 with page data dated 22 October, 2026; only the later value is used in calculations. Neither header timestamp is confirmed, so the quote date is left blank (F-026)."
     }
   ],
   "limitations": [
@@ -59,8 +60,9 @@
     "Spot quotes move. Calculations on this site use only the dated quote above unless a user deliberately enters a different value.",
     "Use metal-only weight, excluding stones and non-gold components. Nominal karat/24 is not a physical assay.",
     "Theoretical melt value is not an appraisal, fair-retail estimate, resale offer, or refiner payout; workmanship, stones, brand, taxes, fees, and spreads are excluded.",
-    "F-026: exact header quote-as-of timestamp unconfirmed. The page's data blocks are dated 22 October, 2026, but that is chart/page metadata, not the header quote time; the header itself only showed a moving value. Observed/retrieved dates do not establish quote time."
+    "F-026: exact header quote-as-of timestamp unconfirmed. An earlier correction to 21 October bound unrelated chart metadata to the moving header; this is not justified. Observed/retrieved dates do not establish quote time."
   ],
   "chart_as_of_date": "2026-10-22",
-  "quote_scope": "Moving-header observation on 2026-10-23; page data blocks dated 22 October, 2026. Exact header quote-as-of timestamp unconfirmed (F-026)."
+  "quote_scope": "Moving-header observation retrieved 2026-10-23; exact quote-as-of timestamp is unconfirmed (F-026). The chart's stated date is stored separately and is not assigned to the header.",
+  "limits_note": ""
 }
