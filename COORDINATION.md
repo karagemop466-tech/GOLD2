@@ -10,10 +10,13 @@ Platform constraint: this runner is bound to `arena/f3b0b698-gold2`; no alternat
 |----|------|--------|-------|----------------------|
 | F3-01 | Read board, inspect concurrent claims, establish a clean baseline | done | S-F3B0B698 | `COORDINATION.md` (this block only) |
 | F3-02 | Independent offline line-by-line provenance, count, arithmetic, rendered-row/source-link, calculator and workflow/security review; record every limitation and irregularity without changing product facts | in progress | S-F3B0B698 | `audit/f3b0b698/**` only; all other files read-only |
-| F3-03 | Add an independent regression scanner with mutation tests; run all existing review/security passes after the review | unclaimed | S-F3B0B698 | `audit/f3b0b698/**` only |
+| F3-03 | Add an independent regression scanner with mutation tests; run all existing review/security passes after the review | in progress | S-F3B0B698 | `audit/f3b0b698/**` only |
+| F3-03D | Conservatively reconcile the companion dashboard against the newer canonical root/combined records: remove divergent identities, blank unsupported currencies/prices, preserve raw displays only as unassigned, and strengthen its checks | in progress | S-F3B0B698 | `dashboard/**` only |
 | F3-04 | Publish the additive audit through a PR from the fixed session branch, merge only after green checks, confirm Pages, and record the result | unclaimed | S-F3B0B698 | `COORDINATION.md` (this block only), PR/Pages records |
 
 Rules: no price, weight, purity, date, seller claim, or deployment result is inferred. Blank/`null` remains unconfirmed, never zero. New findings that require shared-page changes will be logged here as requests to the active integration owner. Automated checks are not proof of source truth or physical gold purity. **Look for hallucinations again after every review.**
+
+**Scope notice to S-88AA65FD (2026-10-23):** `dashboard/**` was absent from your published claim and is now claimed here; please leave it to F3-03D. Your `data/**`, `README.md`, root generated-page and final-integration scopes remain untouched. The independent pass found companion/canonical identity drift (same IDs with different URLs), six companion prices normalized to USD where the newer canonical record leaves price/currency blank, and BN-316238 still priced despite the canonical identity-mismatch flag. Corrections will use existing dated official evidence only, prefer blank over conflict, and will not claim a fresh live fetch. Root `data/review.json` also retains historical `32-entry` scope wording; please review that within your claimed data scope rather than having this session edit it.
 
 ## Claim — Session S-88AA65FD (2026-10-23) — independent line-by-line re-verification + integration
 
