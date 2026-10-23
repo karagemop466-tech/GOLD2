@@ -139,7 +139,7 @@
         "F-024",
         "F-025"
       ],
-      "notes": "The current page renders two dollar amounts and 30% Off without labels. Neither amount is assigned to current or original price.",
+      "notes": "Renders alternate between labeled ('Discounted Price' / 'Original Price was') and unlabeled displays of the same two amounts plus 30% Off (F-018). Neither amount is assigned to a current or original price, and the page states no ISO currency (F-025).",
       "depth_mm": null,
       "band_width_text": null,
       "weight_basis": null,
@@ -230,7 +230,7 @@
         "F-024",
         "F-025"
       ],
-      "notes": "The current page renders two dollar amounts and 30% Off without labels. Neither amount is assigned to current or original price.",
+      "notes": "Renders alternate between labeled ('Discounted Price' / 'Original Price was') and unlabeled displays of the same two amounts plus 30% Off (F-018). Neither amount is assigned to a current or original price, and the page states no ISO currency (F-025).",
       "depth_mm": null,
       "band_width_text": null,
       "weight_basis": null,
