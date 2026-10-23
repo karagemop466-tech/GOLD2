@@ -339,7 +339,7 @@ def build_index(items, payloads, flags, gold, qa_summary, retrieved):
 </section>
 
 <h1>Gold engagement-ring research dashboard</h1>
-<p class="lead">{len(items)} researched listings from {len({item['retailer_id'] for item in items})} official retailers, organized into {len(payloads)} categories (including {len(items)-solid_missing} explicit <em>Solid 14k Gold</em> rings). Official page claims are not physical verification: physical hallmark/maker’s-mark stamps remain unverified on all {len(items)} pages, while {weights} rows publish stone-free metal weights.</p>
+<p class="lead">{len(items)} researched listings from {len({item['retailer_id'] for item in items})} official retailers, organized into {len(payloads)} categories (including {len(items)-solid_missing} explicit <em>Solid Gold</em> (14k–24k) rings). Official page claims are not physical verification: full physical hallmark + maker’s-mark stamps remain unverified across all {hallmark_missing} pages, while {weights} rows publish stone-free metal weights.</p>
 
 <div class="grid g4 mt18">
   <div class="card stat"><div class="n">{len(items)}</div><div class="l">researched listings</div></div>
@@ -479,11 +479,12 @@ def build_flags(flags, items, retrieved):
 <details{open_attr}><summary>{len(flag['sources'])} source link(s)</summary><ul class="clean small">{sources}</ul></details>
 </article>""")
     solid_n = sum(1 for item in items if item.get("solid_gold_explicit") is not True)
+    hallmark_n = sum(1 for item in items if item.get("hallmark_stated") is not True or item.get("makers_mark_stated") is not True)
     weight_missing = sum(1 for item in items if item.get("weight_g") is None)
     body = f"""
 <div class="eyebrow">Open limitations, discrepancies, and policy cautions</div><h1>Flagged for review</h1>
 <p class="lead">Every unresolved value, ambiguity, source-scope limit, and material policy restriction is kept visible. Flagged rows remain published with sources; no gap is silently filled and no row is presented as physically verified.</p>
-<div class="note" style="margin-bottom:18px"><strong>No-hallucination policy, applied.</strong> {solid_n} of {len(items)} rows lack item-specific “solid gold” wording and physical hallmark/maker’s-mark documentation; {weight_missing} lack published metal weight. These are evidence gaps, not findings that a ring is fake. No physical inspection or XRF assay was performed (F-024).</div>
+<div class="note" style="margin-bottom:18px"><strong>No-hallucination policy, applied.</strong> {solid_n} of {len(items)} rows lack item-specific “solid gold” wording; {hallmark_n} of {len(items)} lack complete physical hallmark + maker’s-mark documentation; {weight_missing} lack published metal weight. These are evidence gaps, not findings that a ring is fake. No physical inspection or XRF assay was performed (F-024).</div>
 <div class="grid" style="grid-template-columns:1fr">{''.join(cards)}</div>
 """
     return page("Flagged for Review", "flags", body, retrieved)
@@ -701,7 +702,7 @@ anything about gold content.</div>
 <div class="card"><ul class="checklist">
 <li><span class="k">01</span><span><strong>Karat stated.</strong> {sum(1 for item in items if item.get("karat") is not None)} of {len(items)} rows publish a karat. None of those values is a measured purity.</span></li>
 <li><span class="k">02</span><span><strong>Explicit solid gold.</strong> {solid} of {len(items)} rows use the words solid gold on their own product page. The other rows are still listed, because a karat alone is not evidence of solid construction (<a href="flags.html#f-001">F-001</a>).</span></li>
-<li><span class="k">03</span><span><strong>Hallmark and maker’s mark.</strong> {hallmarks} of {len(items)} rows document a physical karat stamp, and {makers} document a maker’s mark. No online page in this register does (<a href="flags.html#f-002">F-002</a>).</span></li>
+<li><span class="k">03</span><span><strong>Hallmark and maker’s mark.</strong> {hallmarks} of {len(items)} rows document a physical karat stamp inside the band, and {makers} document a maker’s/manufacturer’s mark (<a href="flags.html#f-002">F-002</a>).</span></li>
 <li><span class="k">04</span><span><strong>Metal weight.</strong> {len(weighted)} of {len(items)} rows publish a stone-free metal weight; {len(gross_only)} more publish only a gross item weight that includes stones (<a href="flags.html#f-003">F-003</a>, <a href="flags.html#f-028">F-028</a>).</span></li>
 <li><span class="k">05</span><span><strong>Price currency.</strong> {priced} of {len(items)} rows carry an assigned amount whose currency is supported by the retailer’s own statement. The rest show the page text verbatim and stay unassigned (<a href="flags.html#f-025">F-025</a>).</span></li>
 <li><span class="k">06</span><span><strong>Independent testing permission.</strong> {approved_tests} of {len(items)} rows have written permission captured for third-party testing or return after testing (<a href="flags.html#f-021">F-021</a>).</span></li>

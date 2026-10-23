@@ -6,8 +6,8 @@
       "id": "F-001",
       "severity": "high",
       "type": "checklist_gap",
-      "title": "Item-specific \u201csolid gold\u201d wording is not stated on 16 of 20 items",
-      "detail": "No item-specific title or specification explicitly describes 16 of the 20 listed settings/rings as \u201csolid gold\u201d (the 4 Automic Gold and Mejuri rows on Solid Gold do state explicit solid 14k gold). Karat wording alone is not substituted for that checklist requirement. A page-wide \u201csolid gold\u201d phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
+      "title": "Item-specific \u201csolid gold\u201d wording is not stated on 17 of 30 items",
+      "detail": "No item-specific title or specification explicitly describes 17 of the 30 listed settings/rings as \u201csolid gold\u201d (the 13 rows on Explicit Solid Gold do state explicit solid 14K\u201324K gold). Karat wording alone is not substituted for that checklist requirement. A page-wide \u201csolid gold\u201d phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -54,7 +54,7 @@
       "severity": "high",
       "type": "checklist_gap",
       "title": "Physical hallmark and maker\u2019s mark are not documented",
-      "detail": "None of the 20 captured product pages documents the physical karat stamp inside the band plus a maker\u2019s/manufacturer\u2019s mark. Stock numbers, styles, and URL identifiers are not physical hallmarks. Both fields remain null, not false.",
+      "detail": "None of the 30 captured product pages documents both a physical karat stamp inside the band and a registered maker\u2019s/manufacturer\u2019s mark (FDJ-GR0001 states \u201cKarat stamped inside the band.\u201d without a maker\u2019s mark; the other 29 omit both). Stock numbers, styles, and URL identifiers are not physical hallmarks.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -127,7 +127,7 @@
       "severity": "high",
       "type": "unverified",
       "title": "Metal weight in grams is unpublished on 23 of 30 product pages",
-      "detail": "Only Automic Gold's stone-free Coffin Ring (6.10 g gold) and VRAI's Classic 4-Prong Dome setting (2.86 g at ring size 6) publish stone-free metal weights. The other 18 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
+      "detail": "Only 7 of 30 rows publish seller metal weights in grams (Automic Gold AG-COFFIN-RING 6.10 g and AG-24K 11.00 g, VRAI Classic 4-Prong Dome 2.86 g at size 6, and Sarraf SAR-147370 3.80 g, SAR-145362 10.00 g, SAR-145364 8.00 g, and SAR-144773 13.40 g at size 10). The other 23 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -810,7 +810,7 @@
       "severity": "medium",
       "type": "unverified_currency",
       "title": "Dollar-sign observations lack confirmed ISO currency",
-      "detail": "The official excerpts establish displayed dollar-sign amounts, but not the ISO currency of the selected configuration. Those amounts are now shown verbatim in the register and are **not** copied into the assigned price/currency cells. Two exceptions are recorded only because the retailer publishes its own currency statement: Automic Gold\u2019s public cart endpoint reports \"currency\":\"USD\", and the Brilliant Earth page renders a USD selector next to the price. Mejuri shows \u201cFrom$2,900\u201d but no official currency statement was found, so its amount is displayed and left unassigned.",
+      "detail": "The official excerpts establish displayed dollar-sign amounts, but not the ISO currency of the selected configuration. Those amounts are shown verbatim in the register and are **not** copied into the assigned price/currency cells. Four exceptions are recorded only because the retailer publishes its own currency statement: Automic Gold\u2019s public cart endpoint reports \"currency\":\"USD\", Brilliant Earth renders a USD selector next to the price, Sarraf prints an explicit US$ prefix on every item price, and Factory Direct Jewelry prints \"$1,299.99 USD\". Mejuri, Stone and Strand, Blue Nile, and Zales omit an explicit ISO currency token on these captures, so their amounts are displayed verbatim and left unassigned.",
       "affected_items": [
         "BN-194158",
         "BN-195269",
