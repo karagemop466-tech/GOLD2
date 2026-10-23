@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-10-22",
+  "retrieved_at": "2026-10-23",
   "retailers": [
     {
       "id": "blue-nile",
@@ -66,7 +66,7 @@
       ],
       "field_evidence": {
         "contact_phone": [
-          "+1‑800‑242‑2728"
+          "+1\u2011800\u2011242\u20112728"
         ],
         "contact_email": [
           "service@bluenile.com"
@@ -99,19 +99,19 @@
           "custom orders"
         ],
         "return_exclusions_detail": [
-          "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and “Final Sale” items are not eligible for return or exchange."
+          "Personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance items and \u201cFinal Sale\u201d items are not eligible for return or exchange."
         ],
         "resize_policy": [
           "Eligible rings receive one free resize, up or down two sizes, within 6 months of purchase if the design permits."
         ],
         "payment_methods_verified": [
-          "Credit cards: We accept major credit cards, including Visa®, Mastercard®, American Express®, and Discover®",
-          "We accept payment through PayPal® for orders totaling up to $50,000",
+          "Credit cards: We accept major credit cards, including Visa\u00ae, Mastercard\u00ae, American Express\u00ae, and Discover\u00ae",
+          "We accept payment through PayPal\u00ae for orders totaling up to $50,000",
           "We accept secure wire transfers from most banking institutions",
           "We offer financing options through Affirm and Splitit"
         ],
         "payment_note": [
-          "Blue Nile U.S. payment methods include only Visa® Debit and Mastercard® Debit cards. No other debit cards are accepted.",
+          "Blue Nile U.S. payment methods include only Visa\u00ae Debit and Mastercard\u00ae Debit cards. No other debit cards are accepted.",
           "this option is currently unavailable for purchases totaling $50,000 or more"
         ],
         "reputation_accreditation": [
@@ -339,7 +339,7 @@
         ],
         "return_window_days": [
           "Eligible items below $15,000 can be returned within 30 days",
-          "VRAI’s standard 30-day return window from delivery"
+          "VRAI\u2019s standard 30-day return window from delivery"
         ],
         "return_window_basis": [
           "Eligible items below $15,000 can be returned within 30 days for full credit to store or refund minus recycling fee to the original payment method. Eligible items above $15,000 can be returned within 30 days for full credit to store."
@@ -538,7 +538,7 @@
       "return_excludes_resized": true,
       "return_excludes_custom": true,
       "return_exclusions_detail": "Engraved items, custom items, and modified items are final sale.",
-      "resize_policy": "Paid resizing starting at $50–$60; modified items become final sale.",
+      "resize_policy": "Paid resizing starting at $50\u2013$60; modified items become final sale.",
       "payment_methods_verified": [
         "credit",
         "debit",
@@ -607,7 +607,7 @@
           "Modified Items"
         ],
         "resize_policy": [
-          "paid resizing starting at $50–$60"
+          "paid resizing starting at $50\u2013$60"
         ],
         "payment_methods_verified": [
           "All major credit & debit cards, PayPal, Shop Pay, Affirm, AfterPay, Google Pay, and Apple Pay."
@@ -727,6 +727,466 @@
         "reputation_complaints": [
           "35 complaintsin the last 3 years.",
           "4 complaintsin the last 12 months."
+        ]
+      }
+    },
+    {
+      "id": "sarraf",
+      "name": "Sarraf Jewelry Inc.",
+      "website": "https://www.sarraf.com",
+      "domains": [
+        "www.sarraf.com",
+        "sarraf.com"
+      ],
+      "contact_phone": "+1-888-472-7723",
+      "contact_email": "service@sarraf.com",
+      "contact_channels": [
+        "phone",
+        "email",
+        "live chat"
+      ],
+      "contact_source_url": "https://www.sarraf.com/contact-us/",
+      "contact_verified": true,
+      "return_window_days": 30,
+      "return_window_basis": "30 days from date of delivery",
+      "return_policy_url": "https://www.sarraf.com/about-sarraf/",
+      "return_free_shipping": false,
+      "return_free_shipping_basis": "All shipping and handling costs are the sole responsibility of the consumer.",
+      "return_free_shipments_per_year": null,
+      "return_excludes_resized": true,
+      "return_excludes_custom": true,
+      "return_exclusions_detail": "Items returned must not have been worn, altered, or damaged; custom or special order items excluded; internal policy conflict on engraved items ($25 removal fee vs non-engraved rule, F-036).",
+      "resize_policy": "Ring sizing may require additional processing days prior to shipping.",
+      "payment_methods_verified": [
+        "major credit cards",
+        "check",
+        "money order"
+      ],
+      "payment_source_url": "https://www.sarraf.com/about-sarraf/",
+      "payment_note": "Major credit cards accepted (refunds credited within 7 business days of receipt); always use credit card rather than check/money order.",
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/sarraf-jewelry-inc-1216-13041977",
+        "candidate_profile_url": null,
+        "complaints_url": "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/sarraf-jewelry-inc-1216-13041977/complaints",
+        "reviews_url": "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/sarraf-jewelry-inc-1216-13041977/customer-reviews",
+        "identity_status": "official_website_linked",
+        "profile_scope": "Sarraf Jewelry Inc. profile linking sarraf.com in Los Angeles, CA.",
+        "bbb_accredited": true,
+        "bbb_rating": "A+",
+        "review_average_out_of_5": 2.33,
+        "review_count": 3,
+        "complaints_last_3_years": 6,
+        "complaints_last_12_months": 0,
+        "retrieved_at": "2026-10-23"
+      },
+      "evidence_file": "evidence/retailers/sarraf.md",
+      "verification_status": "official_policies_verified",
+      "flags": [
+        "F-021",
+        "F-036"
+      ],
+      "field_evidence": {
+        "contact_phone": [
+          "Call us on 888-472-7723"
+        ],
+        "contact_email": [
+          "service@sarraf.com"
+        ],
+        "contact_channels": [
+          "Call us on 888-472-7723",
+          "service@sarraf.com",
+          "Live Chat"
+        ],
+        "return_window_days": [
+          "30 days from date of delivery"
+        ],
+        "return_window_basis": [
+          "30 days from date of delivery"
+        ],
+        "return_free_shipping": [
+          "All shipping and handling costs are the sole responsibility of the consumer."
+        ],
+        "return_free_shipping_basis": [
+          "All shipping and handling costs are the sole responsibility of the consumer."
+        ],
+        "return_excludes_resized": [
+          "Items returned must not have been worn, altered, or damaged."
+        ],
+        "return_excludes_custom": [
+          "custom or special order items"
+        ],
+        "return_exclusions_detail": [
+          "Items returned must not have been worn, altered, or damaged.",
+          "custom or special order items"
+        ],
+        "resize_policy": [
+          "Ring sizing may require additional processing days prior to shipping."
+        ],
+        "payment_methods_verified": [
+          "major credit cards",
+          "credit card, check, money order"
+        ],
+        "payment_note": [
+          "7 business days of receipt we will credit your account (credit card, check, money order)"
+        ],
+        "reputation_accreditation": [
+          "BBB Accredited Business"
+        ],
+        "reputation_rating": [
+          "BBB Rating: A+"
+        ],
+        "reputation_reviews": [
+          "2.33/5stars",
+          "Average of 3 Customer Reviews"
+        ],
+        "reputation_complaints": [
+          "6 total complaints in the last 3 years",
+          "0 complaints closed in the last 12 months"
+        ],
+        "reputation_scope": [
+          "Sarraf Jewelry Inc. profile linking sarraf.com in Los Angeles, CA."
+        ]
+      }
+    },
+    {
+      "id": "factory-direct-jewelry",
+      "name": "Factory Direct Jewelry",
+      "website": "https://www.factorydirectjewelry.com",
+      "domains": [
+        "www.factorydirectjewelry.com",
+        "factorydirectjewelry.com"
+      ],
+      "contact_phone": "+1-888-226-5138",
+      "contact_email": "support@factorydirectjewelry.com",
+      "contact_channels": [
+        "phone",
+        "email",
+        "contact form"
+      ],
+      "contact_source_url": "https://www.factorydirectjewelry.com/contact",
+      "contact_verified": true,
+      "return_window_days": 30,
+      "return_window_basis": "within 30 days from the date of delivery",
+      "return_policy_url": "https://www.factorydirectjewelry.com/return-policy",
+      "return_free_shipping": false,
+      "return_free_shipping_basis": "customer is responsible for return shipping costs",
+      "return_free_shipments_per_year": null,
+      "return_excludes_resized": true,
+      "return_excludes_custom": true,
+      "return_exclusions_detail": "Engraved, custom-made, or personalized items are non-returnable; altered items carry a 20% restocking fee; third-party jeweler work automatically voids warranty.",
+      "resize_policy": "Any modification, repair, sizing, stone setting, or work performed by another jeweler or third party automatically voids this warranty.",
+      "payment_methods_verified": [
+        "Visa",
+        "Mastercard",
+        "American Express",
+        "Discover",
+        "PayPal",
+        "Shop Pay",
+        "Klarna",
+        "Affirm"
+      ],
+      "payment_source_url": "https://www.factorydirectjewelry.com/return-policy",
+      "payment_note": "Major credit cards accepted; BBB review history includes disputed post-chargeback billing \u2014 monitor credit card statements closely (F-035).",
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/factorydirectjewelrycom-1216-100094648",
+        "candidate_profile_url": null,
+        "complaints_url": "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/factorydirectjewelrycom-1216-100094648/complaints",
+        "reviews_url": "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/factorydirectjewelrycom-1216-100094648/customer-reviews",
+        "identity_status": "official_website_linked",
+        "profile_scope": "FactoryDirectJewelry.com profile in Los Angeles, CA.",
+        "bbb_accredited": false,
+        "bbb_rating": null,
+        "review_average_out_of_5": 1.8,
+        "review_count": 5,
+        "complaints_last_3_years": 11,
+        "complaints_last_12_months": 4,
+        "retrieved_at": "2026-10-23"
+      },
+      "evidence_file": "evidence/retailers/factory-direct-jewelry.md",
+      "verification_status": "official_policies_verified",
+      "flags": [
+        "F-021",
+        "F-035"
+      ],
+      "field_evidence": {
+        "contact_phone": [
+          "1-888-226-5138"
+        ],
+        "contact_email": [
+          "support@factorydirectjewelry.com"
+        ],
+        "contact_channels": [
+          "1-888-226-5138",
+          "support@factorydirectjewelry.com",
+          "Contact Form"
+        ],
+        "return_window_days": [
+          "within 30 days from the date of delivery"
+        ],
+        "return_window_basis": [
+          "within 30 days from the date of delivery"
+        ],
+        "return_free_shipping": [
+          "customer is responsible for return shipping costs"
+        ],
+        "return_free_shipping_basis": [
+          "customer is responsible for return shipping costs"
+        ],
+        "return_excludes_resized": [
+          "20% restocking fee"
+        ],
+        "return_excludes_custom": [
+          "Engraved, custom-made, or personalized items are non-returnable"
+        ],
+        "return_exclusions_detail": [
+          "Engraved, custom-made, or personalized items are non-returnable",
+          "20% restocking fee"
+        ],
+        "resize_policy": [
+          "Any modification, repair, sizing, stone setting, or work performed by another jeweler or third party automatically voids this warranty."
+        ],
+        "payment_methods_verified": [
+          "Visa",
+          "Mastercard",
+          "American Express",
+          "Discover",
+          "PayPal",
+          "Shop Pay",
+          "Klarna",
+          "Affirm"
+        ],
+        "payment_note": [
+          "Visa",
+          "Mastercard",
+          "American Express"
+        ],
+        "reputation_accreditation": [
+          "Not BBB Accredited"
+        ],
+        "reputation_reviews": [
+          "1.8/5stars",
+          "Average of 5 Customer Reviews"
+        ],
+        "reputation_complaints": [
+          "11 total complaints in the last 3 years",
+          "4 complaints closed in the last 12 months"
+        ],
+        "reputation_scope": [
+          "FactoryDirectJewelry.com profile in Los Angeles, CA."
+        ]
+      }
+    },
+    {
+      "id": "stone-and-strand",
+      "name": "Stone and Strand",
+      "website": "https://www.stoneandstrand.com",
+      "domains": [
+        "www.stoneandstrand.com",
+        "stoneandstrand.com"
+      ],
+      "contact_phone": "+1-855-775-3935",
+      "contact_email": "hello@stoneandstrand.com",
+      "contact_channels": [
+        "phone",
+        "email"
+      ],
+      "contact_source_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "contact_verified": true,
+      "return_window_days": 100,
+      "return_window_basis": "within 100 days of delivery",
+      "return_policy_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "return_free_shipping": false,
+      "return_free_shipping_basis": "$12.50 restocking fee",
+      "return_free_shipments_per_year": null,
+      "return_excludes_resized": true,
+      "return_excludes_custom": true,
+      "return_exclusions_detail": "All items marked at 50% off or more are considered Final Sale and are non-returnable; Made-to-order, custom, and engraved pieces are final sale.",
+      "resize_policy": "Stone and Strand does not offer complimentary resizing; altered pieces are excluded from return.",
+      "payment_methods_verified": [
+        "major credit cards",
+        "Shop Pay",
+        "PayPal"
+      ],
+      "payment_source_url": "https://www.stoneandstrand.com/pages/returns-exchanges",
+      "payment_note": "Major credit cards accepted, but >=50%-off Final Sale items cannot be returned after an independent XRF check (F-034).",
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": "https://www.bbb.org/us/ny/new-york/profile/jewelry-stores/stone-and-strand-0121-87138934",
+        "candidate_profile_url": null,
+        "complaints_url": "https://www.bbb.org/us/ny/new-york/profile/jewelry-stores/stone-and-strand-0121-87138934/complaints",
+        "reviews_url": "https://www.bbb.org/us/ny/new-york/profile/jewelry-stores/stone-and-strand-0121-87138934/customer-reviews",
+        "identity_status": "official_website_linked",
+        "profile_scope": "Stone and Strand NYC BBB profile linking stoneandstrand.com.",
+        "bbb_accredited": false,
+        "bbb_rating": null,
+        "review_average_out_of_5": null,
+        "review_count": null,
+        "complaints_last_3_years": 0,
+        "complaints_last_12_months": 0,
+        "retrieved_at": "2026-10-23"
+      },
+      "evidence_file": "evidence/retailers/stone-and-strand.md",
+      "verification_status": "official_policies_verified",
+      "flags": [
+        "F-021",
+        "F-034",
+        "F-037"
+      ],
+      "field_evidence": {
+        "contact_phone": [
+          "(855) 775-3935"
+        ],
+        "contact_email": [
+          "hello@stoneandstrand.com"
+        ],
+        "contact_channels": [
+          "Email and Phone Concierge"
+        ],
+        "return_window_days": [
+          "within 100 days of delivery"
+        ],
+        "return_window_basis": [
+          "within 100 days of delivery"
+        ],
+        "return_free_shipping": [
+          "$12.50 restocking fee"
+        ],
+        "return_free_shipping_basis": [
+          "$12.50 restocking fee"
+        ],
+        "return_excludes_resized": [
+          "Stone and Strand does not offer complimentary resizing; altered pieces are excluded from return."
+        ],
+        "return_excludes_custom": [
+          "Made-to-order, custom, and engraved pieces are final sale."
+        ],
+        "return_exclusions_detail": [
+          "All items marked at 50% off or more are considered Final Sale and are non-returnable",
+          "Made-to-order, custom, and engraved pieces are final sale."
+        ],
+        "resize_policy": [
+          "Stone and Strand does not offer complimentary resizing; altered pieces are excluded from return."
+        ],
+        "payment_methods_verified": [
+          "major credit cards",
+          "Shop Pay",
+          "PayPal"
+        ],
+        "payment_note": [
+          "major credit cards",
+          "Shop Pay",
+          "PayPal"
+        ],
+        "reputation_accreditation": [
+          "Not BBB Accredited"
+        ],
+        "reputation_complaints": [
+          "0 total complaints in the last 3 years",
+          "0 complaints closed in the last 12 months"
+        ],
+        "reputation_scope": [
+          "Stone and Strand NYC BBB profile linking stoneandstrand.com."
+        ]
+      }
+    },
+    {
+      "id": "costco",
+      "name": "Costco Wholesale",
+      "website": "https://www.costco.com",
+      "domains": [
+        "www.costco.com",
+        "costco.com"
+      ],
+      "contact_phone": "+1-800-774-2678",
+      "contact_email": null,
+      "contact_channels": [
+        "phone",
+        "warehouse desk"
+      ],
+      "contact_source_url": "https://www.costco.com/customer-service.html",
+      "contact_verified": true,
+      "return_window_days": null,
+      "return_window_basis": "We guarantee your satisfaction on every product we sell, and will refund your purchase price",
+      "return_policy_url": "https://www.costco.com/member-privileges-conditions.html",
+      "return_free_shipping": null,
+      "return_free_shipping_basis": null,
+      "return_free_shipments_per_year": null,
+      "return_excludes_resized": true,
+      "return_excludes_custom": false,
+      "return_exclusions_detail": "Diamonds: 1.00ct or larger require original IGI/GIA certificate and gemological verification prior to refund; third-party resizing alters original condition.",
+      "resize_policy": "Costco does not resize rings; independent resizing alters original condition.",
+      "payment_methods_verified": [
+        "Visa",
+        "Mastercard"
+      ],
+      "payment_source_url": "https://www.costco.com/member-privileges-conditions.html",
+      "payment_note": "Online accepts Visa and Mastercard; US warehouse registers accept Visa credit cards (F-038).",
+      "independent_test_permission": null,
+      "independent_reputation": {
+        "platform": "Better Business Bureau",
+        "profile_url": "https://www.bbb.org/us/wa/issaquah/profile/wholesale-clubs/costco-wholesale-corporation-1296-501205",
+        "candidate_profile_url": null,
+        "complaints_url": "https://www.bbb.org/us/wa/issaquah/profile/wholesale-clubs/costco-wholesale-corporation-1296-501205/complaints",
+        "reviews_url": "https://www.bbb.org/us/wa/issaquah/profile/wholesale-clubs/costco-wholesale-corporation-1296-501205/customer-reviews",
+        "identity_status": "official_website_linked",
+        "profile_scope": "Costco Wholesale Corporation corporate profile covering all warehouse departments, not jewelry-specific.",
+        "bbb_accredited": true,
+        "bbb_rating": "A+",
+        "review_average_out_of_5": null,
+        "review_count": null,
+        "complaints_last_3_years": null,
+        "complaints_last_12_months": null,
+        "retrieved_at": "2026-10-23"
+      },
+      "evidence_file": "evidence/retailers/costco.md",
+      "verification_status": "official_policies_partial",
+      "flags": [
+        "F-021",
+        "F-038"
+      ],
+      "field_evidence": {
+        "contact_phone": [
+          "1-800-774-2678"
+        ],
+        "contact_channels": [
+          "Customer Service Chat and Warehouse Member Desk"
+        ],
+        "return_window_basis": [
+          "We guarantee your satisfaction on every product we sell, and will refund your purchase price"
+        ],
+        "return_excludes_resized": [
+          "Costco does not resize rings; independent resizing alters original condition."
+        ],
+        "return_excludes_custom": [
+          "We guarantee your satisfaction on every product we sell, and will refund your purchase price"
+        ],
+        "return_exclusions_detail": [
+          "Diamonds: 1.00ct or larger"
+        ],
+        "resize_policy": [
+          "Costco does not resize rings; independent resizing alters original condition."
+        ],
+        "payment_methods_verified": [
+          "Visa",
+          "Mastercard"
+        ],
+        "payment_note": [
+          "Visa",
+          "Mastercard"
+        ],
+        "reputation_accreditation": [
+          "BBB Accredited Business"
+        ],
+        "reputation_rating": [
+          "BBB Rating: A+"
+        ],
+        "reputation_scope": [
+          "Costco Wholesale Corporation corporate profile covering all warehouse departments, not jewelry-specific."
         ]
       }
     }

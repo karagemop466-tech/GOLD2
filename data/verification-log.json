@@ -60,7 +60,7 @@
     {
       "id": "BN-315661",
       "kind": "listing",
-      "label": "Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen",
+      "label": "Pav\u00e9 Contour Diamond Engagement Ring In 14K White Gold By James Allen",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
       "checked_at": "2026-10-23",
@@ -77,7 +77,7 @@
     {
       "id": "BN-195402",
       "kind": "listing",
-      "label": "Petite Micropavé Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
+      "label": "Petite Micropav\u00e9 Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
       "checked_at": "2026-10-23",
@@ -94,7 +94,7 @@
     {
       "id": "BN-302868",
       "kind": "listing",
-      "label": "Petite Micropavé Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
+      "label": "Petite Micropav\u00e9 Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
       "checked_at": "2026-10-23",
@@ -241,7 +241,7 @@
         "Prong metal: 14K White Gold",
         "Style: BE121H6-14KY"
       ],
-      "note": "The 2026-10-22 retrieval was served €990.00; this retrieval was served USD with a USD selector. Recorded as F-032; the euro amount is retained only as a superseded observation."
+      "note": "The 2026-10-22 retrieval was served \u20ac990.00; this retrieval was served USD with a USD selector. Recorded as F-032; the euro amount is retained only as a superseded observation."
     },
     {
       "id": "VRAI-CLASSIC-4P",
@@ -256,7 +256,7 @@
         "Band depth:1.6mm",
         "Metal weight:2.86g (Ring size 6)",
         "Band width:Standard",
-        "Pavé carat weight:0.18ctw"
+        "Pav\u00e9 carat weight:0.18ctw"
       ],
       "note": "No price string in the retrieved page. Band width is published only as the word 'Standard', so no millimetre value is stored."
     },
@@ -449,6 +449,158 @@
         "US$150 (or equivalent amount in other currencies)"
       ],
       "note": "The terms refer to US$ for a grading-report fee but do not declare the storefront currency of product prices, so no USD assignment was made from this page."
+    },
+    {
+      "id": "SAR-147370",
+      "kind": "listing",
+      "label": "14k White Gold Solitaire Ring 0.94 ctw.",
+      "retailer": "Sarraf Jewelry Inc.",
+      "url": "https://www.sarraf.com/products/14k-white-gold-solitaire-ring-0-94-ctw.html",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "14K Solid Gold",
+        "Approximate Metal Weight: 3.80 grams",
+        "Now: US$3,004.00"
+      ],
+      "note": "Live 2026-10-23 primary verification by S-9B875C81: explicit 14K Solid Gold, 3.80 g metal weight, US$3,004.00."
+    },
+    {
+      "id": "SAR-145362",
+      "kind": "listing",
+      "label": "14k White Gold Men's Solitaire Diamond Ring 1/2 ct.",
+      "retailer": "Sarraf Jewelry Inc.",
+      "url": "https://www.sarraf.com/products/14k-white-gold-mens-solitaire-diamond-ring-1-2-ct.html",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "14K Solid Gold",
+        "Approximate Metal Weight: 10.00 grams",
+        "Now: US$2,661.00"
+      ],
+      "note": "Live 2026-10-23 primary verification by S-9B875C81: explicit 14K Solid Gold, 10.00 g metal weight, US$2,661.00."
+    },
+    {
+      "id": "SAR-145364",
+      "kind": "listing",
+      "label": "14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct.",
+      "retailer": "Sarraf Jewelry Inc.",
+      "url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-1-2-ct.html",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "14K Solid Gold",
+        "Approximate Metal Weight: 8.00 grams",
+        "Now: US$2,858.00"
+      ],
+      "note": "Live 2026-10-23 primary verification by S-9B875C81: explicit 14K Solid Gold, 8.00 g metal weight, US$2,858.00."
+    },
+    {
+      "id": "SAR-144773",
+      "kind": "listing",
+      "label": "14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band",
+      "retailer": "Sarraf Jewelry Inc.",
+      "url": "https://www.sarraf.com/products/14k-yellow-gold-12mm-high-polished-traditional-domed-wedding-band.html",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "14K Solid Gold",
+        "Approximate Metal Weight: 13.40 grams",
+        "Now: US$1,362.00"
+      ],
+      "note": "Live 2026-10-23 primary verification by S-9B875C81: 13.40 g at size 10 (74.3% pure melt share); size variance flagged in F-036."
+    },
+    {
+      "id": "AG-24K",
+      "kind": "listing",
+      "label": "24k Band (Solid 24k Gold)",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/products/24k-band",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Solid 24k Gold",
+        "Approximate item weight: 11g",
+        "$3,520"
+      ],
+      "note": "Live 2026-10-23 primary verification by S-9B875C81: 99.99% pure 24K gold, 11.0 g stone-free band, $3,520 USD."
+    },
+    {
+      "id": "FDJ-GR0001",
+      "kind": "listing",
+      "label": "Lab Grown Diamond Halo Engagement Ring in 14K Gold",
+      "retailer": "Factory Direct Jewelry",
+      "url": "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "14K Solid Gold",
+        "Karat stamped inside the band.",
+        "Weight:1.25 Grams",
+        "Total Carat Weight: 1.37cts",
+        "$1,299.99"
+      ],
+      "note": "Live 2026-10-23 primary verification by S-9B875C81: flagged HIGH CAUTION (0.976g net if gross + 1.8/5 unaccredited BBB, F-035)."
+    },
+    {
+      "id": "SS-CLARA",
+      "kind": "listing",
+      "label": "The Clara Diamond Ring",
+      "retailer": "Stone and Strand",
+      "url": "https://www.stoneandstrand.com/products/the-clara-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Solid 14K yellow gold",
+        "Band Width: 1.65mm",
+        "$2,200"
+      ],
+      "note": "Preserved from S-75094819 & re-verified live 2026-10-23: explicit solid 14K, conflicting Final Sale vs 100 Day Returns copy (F-037)."
+    },
+    {
+      "id": "SS-RITA",
+      "kind": "listing",
+      "label": "The Rita Diamond Ring",
+      "retailer": "Stone and Strand",
+      "url": "https://www.stoneandstrand.com/products/the-rita-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Solid 14K yellow gold",
+        "$780 (60% off)",
+        "Final sale and non-returnable"
+      ],
+      "note": "Preserved from S-75094819 & re-verified live 2026-10-23: non-returnable 60%-off Final Sale (F-034)."
+    },
+    {
+      "id": "SS-MIA",
+      "kind": "listing",
+      "label": "The Mia Diamond Ring",
+      "retailer": "Stone and Strand",
+      "url": "https://www.stoneandstrand.com/products/the-mia-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Gold Karat: 14K",
+        "10K Yellow Gold alt",
+        "$925 (50% off)"
+      ],
+      "note": "Preserved from S-75094819 & re-verified live 2026-10-23: 14K spec vs 10K image alt contradiction + Final Sale (F-034)."
+    },
+    {
+      "id": "BN-316238",
+      "kind": "listing",
+      "label": "Petite Micropav\u00e9 Engagement Ring in 14k White Gold",
+      "retailer": "Blue Nile",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "14k White Gold",
+        "Width: 1.50mm",
+        "$1,240(Setting Price)"
+      ],
+      "note": "Preserved from S-70B76800 & re-verified live 2026-10-23: $1,240 setting display without ISO currency code."
     }
   ]
 }

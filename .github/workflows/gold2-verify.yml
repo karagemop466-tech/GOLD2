@@ -44,6 +44,15 @@ jobs:
       - name: NIST conversion and scanner regression tests
         run: python3 audit/8c810c15/test_calculator_and_scanner.py
 
+      - name: S-B200A880 independent field & row scanner + regression tests
+        run: python3 audit/b200a880/hallucination_security_scanner.py . && python3 audit/b200a880/test_scanner.py
+
+      - name: Build and audit companion dashboard (P1-P8 + NIST gemstone calculator)
+        run: python3 dashboard/scripts/build.py && python3 dashboard/scripts/verify.py --check-build && node dashboard/scripts/calc-test.js
+
+      - name: Cross-repository S-9B875C81 hallucination, security, WCAG & provenance pass
+        run: python3 audit/9b875c81/hallucination_security_pass.py . && python3 audit/9b875c81/test_pass.py
+
       - name: Confirm generated files were committed and are reproducible
         run: git diff --exit-code -- . ':!reports/qa-report.md'
 

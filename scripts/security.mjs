@@ -2,8 +2,9 @@ import {readFile,readdir} from 'node:fs/promises';
 import path from 'node:path';
 import {ROOT,loadJSON,saveReport} from './lib.mjs';
 const manifest=await loadJSON('data/site-manifest.json');
-const rootPages=['index','solid-gold','solitaire','halo-pave','three-stone-vintage','18k','budget','retailers','prices','flags','methods'].map(p=>p+'.html');
-const pages=[...rootPages,...manifest.pages,...['index','rings','calculator','checklist','flagged','sources'].map(p=>'site/'+p+'.html')];
+const rootPages=['index','solid-gold','solitaire','halo-pave','three-stone-vintage','18k','budget','retailers','analysis','verification','prices','flags','methods'].map(p=>p+'.html');
+const dashPages=['index','solid-gold','solitaire','halo-pave','three-stone-vintage','high-karat','budget','rings','calculator','retailers','checklist','flagged','methodology','reference'].map(p=>'dashboard/'+p+'.html');
+const pages=[...rootPages,...manifest.pages,...dashPages,...['index','rings','calculator','checklist','flagged','sources'].map(p=>'site/'+p+'.html')];
 const errors=[];
 for(const file of pages){
  const text=await readFile(path.join(ROOT,file),'utf8');
@@ -20,7 +21,7 @@ for(const file of pages){
  if(/<iframe|<object|<embed/i.test(text))errors.push(file+': unnecessary embedded active content');
  if(/target="_blank"/.test(text)&&!text.includes('noopener'))errors.push(file+': unsafe opener');
 }
-const runtime=['explore/assets/app.mjs','explore/assets/domain.mjs','site/app.js','assets/calculator.js'];
+const runtime=['explore/assets/app.mjs','explore/assets/domain.mjs','site/app.js','assets/calculator.js','dashboard/assets/calculator.js','dashboard/assets/app.js'];
 for(const file of runtime){
  const text=await readFile(path.join(ROOT,file),'utf8');
  if(/\beval\s*\(|new\s+Function\s*\(|\.innerHTML\s*=|document\.write\s*\(/.test(text))errors.push(file+': unsafe code/HTML sink');

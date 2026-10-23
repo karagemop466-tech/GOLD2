@@ -1,6 +1,6 @@
 {
   "category_id": "halo-pave",
-  "category_label": "Halo & Pavé",
+  "category_label": "Halo & Pav\u00e9",
   "retrieved_at": "2026-10-22",
   "items": [
     {
@@ -97,7 +97,7 @@
       "retailer_id": "blue-nile",
       "retailer": "Blue Nile",
       "brand": "James Allen (sold on Blue Nile)",
-      "name": "Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen",
+      "name": "Pav\u00e9 Contour Diamond Engagement Ring In 14K White Gold By James Allen",
       "sku": "505094w14",
       "metal": "14K White Gold",
       "karat": 14,
@@ -149,7 +149,7 @@
       "sku_basis": "Stock Number on the official product page",
       "field_evidence": {
         "name": [
-          "Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen"
+          "Pav\u00e9 Contour Diamond Engagement Ring In 14K White Gold By James Allen"
         ],
         "sku": [
           "505094w14"
@@ -197,7 +197,7 @@
       "retailer_id": "blue-nile",
       "retailer": "Blue Nile",
       "brand": "Blue Nile",
-      "name": "Petite Micropavé Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
+      "name": "Petite Micropav\u00e9 Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
       "sku": "501480w14",
       "metal": "14K White Gold",
       "karat": 14,
@@ -241,7 +241,7 @@
       "sku_basis": "Stock Number on the official product page",
       "field_evidence": {
         "name": [
-          "Petite Micropavé Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)"
+          "Petite Micropav\u00e9 Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)"
         ],
         "sku": [
           "501480w14"
@@ -289,7 +289,7 @@
       "retailer_id": "blue-nile",
       "retailer": "Blue Nile",
       "brand": "Blue Nile",
-      "name": "Petite Micropavé Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
+      "name": "Petite Micropav\u00e9 Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
       "sku": "501480w14l",
       "metal": "14K White Gold",
       "karat": 14,
@@ -333,7 +333,7 @@
       "sku_basis": "Stock Number on the official product page",
       "field_evidence": {
         "name": [
-          "Petite Micropavé Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)"
+          "Petite Micropav\u00e9 Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)"
         ],
         "sku": [
           "501480w14l"
@@ -375,6 +375,88 @@
       "observed_native_display": [
         "$1,050(Setting Price)"
       ]
+    },
+    {
+      "id": "BN-316238",
+      "retailer_id": "blue-nile",
+      "retailer": "Blue Nile",
+      "brand": "Blue Nile",
+      "name": "Petite Micropav\u00e9 Engagement Ring in 14k White Gold",
+      "sku": "316238",
+      "sku_basis": "Item number stated in official Blue Nile listing URL and page",
+      "metal": "14k White Gold",
+      "karat": 14,
+      "color": "White",
+      "width_mm": 1.5,
+      "depth_mm": null,
+      "band_width_text": null,
+      "weight_g": null,
+      "weight_basis": null,
+      "price": null,
+      "currency": null,
+      "price_basis": "setting_price",
+      "center_stone_included": false,
+      "original_price": null,
+      "unassigned_price_text": "$1,240(Setting Price)",
+      "prong_metal": null,
+      "surface_finish": "Rhodium Finish: Yes",
+      "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238",
+      "retrieved_at": "2026-10-23",
+      "evidence_file": "evidence/listings/bn-316238.md",
+      "solid_gold_explicit": null,
+      "hallmark_stated": null,
+      "makers_mark_stated": null,
+      "return_policy_url": "https://www.bluenile.com/policies/returns",
+      "verification_status": "partial_official_fields",
+      "rejected_values": [],
+      "flags": [
+        "F-001",
+        "F-002",
+        "F-003",
+        "F-004",
+        "F-010",
+        "F-015",
+        "F-016",
+        "F-018",
+        "F-021",
+        "F-024",
+        "F-025"
+      ],
+      "physical_test_status": "not_tested",
+      "independent_test_permission": null,
+      "notes": "Preserved from S-70B76800 & live-verified 2026-10-23: 14k White Gold micropav\u00e9 setting ($1,240 setting display without ISO currency code; gram weight unpublished).",
+      "field_evidence": {
+        "name": [
+          "Petite Micropav\u00e9 Engagement Ring in 14k White Gold"
+        ],
+        "sku": [
+          "316238"
+        ],
+        "metal": [
+          "14k White Gold"
+        ],
+        "karat": [
+          "14k White Gold"
+        ],
+        "color": [
+          "14k White Gold"
+        ],
+        "width_mm": [
+          "Width: 1.50mm"
+        ],
+        "surface_finish": [
+          "Rhodium Finish: Yes"
+        ],
+        "unassigned_price_text": [
+          "$1,240(Setting Price)"
+        ],
+        "price_basis": [
+          "$1,240(Setting Price)"
+        ],
+        "center_stone_included": [
+          "$1,240(Setting Price)"
+        ]
+      }
     }
   ]
 }

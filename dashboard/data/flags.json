@@ -1,0 +1,85 @@
+{
+  "retrieved_at": "2026-10-23",
+  "flags": [
+    {
+      "id": "DF-001",
+      "severity": "high",
+      "title": "Stone and Strand `SS-MIA`: 14K Spec vs 10K Image Alt Contradiction + Non-Returnable Final Sale",
+      "detail": "Live PDP specifications state 'Gold Karat: 14K' while gallery image alt attributes state 'Stone and Strand 10K Yellow Gold The Mia Diamond Ring'. At 50% off ($925 vs $1,850), both SS-MIA and SS-RITA ($780, 60% off) are explicitly 'Final sale and non-returnable' \u2014 failing Checklist Rule #12 (never buy when return after independent XRF check is disallowed).",
+      "action": "Do not purchase Final Sale jewelry online without return rights; require written 14K vs 10K clarification before any full-price order.",
+      "sources": [
+        "https://www.stoneandstrand.com/products/the-mia-ring",
+        "https://www.stoneandstrand.com/products/the-rita-ring",
+        "https://www.stoneandstrand.com/pages/returns-exchanges"
+      ]
+    },
+    {
+      "id": "DF-002",
+      "severity": "high",
+      "title": "Factory Direct Jewelry `FDJ-GR0001`: Ultra-Light `1.25 g` Displayed Weight vs `1.37 ctw` Diamonds & `1.8/5` BBB Score",
+      "detail": "Although FDJ-GR0001 explicitly states 'Made with solid gold. Never plated.' and 'Karat stamped inside the band.', its default displayed weight is 'Weight:1.25 Grams' alongside 1.37 carats of lab diamonds (0.274 g gem mass). If gross weight, net 14K gold is only 0.976 g ($73.67 melt at $4,024.45/oz) \u2014 extreme bending/snapping risk matching BBB complaints (Not Accredited, 1.8/5 across 5 reviews, 11 complaints, 20% alteration restocking fee).",
+      "action": "Treat verbal 'solid gold + stamped' claims as insufficient whenever gram mass is ultra-low or BBB complaints report snapped shanks.",
+      "sources": [
+        "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/",
+        "https://www.factorydirectjewelry.com/return-policy",
+        "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/factorydirectjewelrycom-1216-100094648/complaints"
+      ]
+    },
+    {
+      "id": "DF-003",
+      "severity": "high",
+      "title": "Missing Metal Weight in Grams on Mainstream Settings (`Blue Nile`, `Brilliant Earth`, `Mejuri`, `Zales`, `Stone & Strand`, `Men\u0113` PDP)",
+      "detail": "Most mass-market engagement ring PDPs omit gram weight entirely (`weight_g: null`). Under the No-Hallucinations Policy, missing weights are never estimated from band width.",
+      "action": "Request size-specific metal gram weight in writing from customer support before checkout, then verify on an independent jeweler's calibrated scale upon arrival.",
+      "sources": [
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
+        "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/"
+      ]
+    },
+    {
+      "id": "DF-004",
+      "severity": "medium",
+      "title": "Sarraf Jewelry Inc. (`SAR-*`): Internal Policy Contradictions & Size-10 Weight Benchmark Variance",
+      "detail": "Sarraf publishes explicit '14K Solid Gold', 'US$' prices, and separate 'Approximate Metal Weight' in grams, and holds an A+ Accredited BBB profile since 1998. However, live audit caught: (1) product tab allows engraved ring returns less $25 fee while /about-sarraf/ says 'non-engraved items'; (2) warranty deductible reads '$100 or 10%' on diamond ring pages vs '$50 or 5%' on 10K bands; (3) SAR-144773's 13.40 g weight ($1,011.39 melt = 74.3% of US$1,362) is benchmarked at ring size 10, weighing less in smaller sizes (10.1\u201310.2 g reported in buyer reviews; BBB customer reviews 2.33/5).",
+      "action": "Confirm exact gram weight for your ring size in writing before ordering, avoid engraving before XRF/scale inspection, and pay by credit card.",
+      "sources": [
+        "https://www.sarraf.com/products/14k-yellow-gold-12mm-high-polished-traditional-domed-wedding-band.html",
+        "https://www.sarraf.com/about-sarraf/",
+        "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/sarraf-jewelry-inc-1216-13041977/customer-reviews"
+      ]
+    },
+    {
+      "id": "DF-005",
+      "severity": "medium",
+      "title": "Gross Item Weight vs Stone-Free Metal Weight (`AG-SAPPHIRE-RING`, `AV-BRIDGE`, `AV-CLEAN`)",
+      "detail": "Automic Gold stone-free bands (`AG-COFFIN-RING` 6.1g, `AG-24K` 11.0g) give pure metal weight, whereas gemstone rings (`AG-SAPPHIRE-RING` 1.2g) include gemstone mass, and Auvere 22K rings (`AV-BRIDGE` 5\u20136.1g, `AV-CLEAN` 2.8\u20133.7g) publish size ranges rather than a single size weight.",
+      "action": "Use the gemstone carat deduction input (`1 ct = 0.200 g`) in the calculator when weighing set rings; never plug gross stone+metal mass directly into pure alloy melt.",
+      "sources": [
+        "https://www.automicgold.com/products/sapphire-ring",
+        "https://auvere.com/product/diamond-bridge-ring-tall/"
+      ]
+    },
+    {
+      "id": "DF-006",
+      "severity": "medium",
+      "title": "Zales Currency Symbol Without Explicit ISO `USD` & `Z-20046552` Unlabeled Dual Amounts",
+      "detail": "Live 2026-10-23 fetch confirmed Z-20303279 ($979.30 / $1,399.00) and Z-20301172 ($769.30 / $1,099.00) restored 'Discounted Price' / 'Original Price was' labels, while Z-20046552 still displays unlabeled '$909.30  $1,299.00 30% Off' and all four omit an explicit 'USD' string.",
+      "action": "Keep Z-20046552 price unassigned (`null`) rather than guessing which unlabeled amount applies, and verify checkout currency in USD.",
+      "sources": [
+        "https://www.zales.com/1-ct-tw-diamond-frame-twist-shank-engagement-ring-10k-white-gold/p/V-20046552",
+        "https://www.zales.com/vera-wang-love-collection-3-4-ct-tw-princesscut-diamond-solitaire-engagement-ring-10k-white-gold/p/V-20303279"
+      ]
+    },
+    {
+      "id": "DF-007",
+      "severity": "low",
+      "title": "Zero Physical XRF or Calibrated Scale Assays Performed Remotely",
+      "detail": "Every record in GOLD2 reflects primary web document verification as of 2026-10-23. Seller text and stamps can still be inaccurate on a delivered piece.",
+      "action": "Upon arrival \u2014 before wearing, resizing, or removing tags \u2014 weigh the ring on an independent local jeweler's gram scale and verify karat purity via non-destructive XRF.",
+      "sources": [
+        "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3",
+        "https://www.gold.org/goldhub/data/gold-prices"
+      ]
+    }
+  ]
+}

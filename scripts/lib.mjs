@@ -12,7 +12,8 @@ export const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({'&':
 export const escapeAttr = escapeHTML;
 export const PRODUCT_HOSTS = Object.freeze({
   automic: ['www.automicgold.com', 'automicgold.com'], mejuri: ['mejuri.com', 'www.mejuri.com'], catbird: ['www.catbirdnyc.com'], auvere: ['auvere.com'],
-  quince: ['www.quince.com'], mene: ['mene.com'], bluenile: ['www.bluenile.com'], zales: ['www.zales.com'], vrai: ['www.vrai.com'], 'brilliant-earth': ['www.brilliantearth.com']
+  quince: ['www.quince.com'], mene: ['mene.com'], bluenile: ['www.bluenile.com'], zales: ['www.zales.com'], vrai: ['www.vrai.com'], 'brilliant-earth': ['www.brilliantearth.com'],
+  sarraf: ['www.sarraf.com', 'sarraf.com'], 'factory-direct': ['www.factorydirectjewelry.com', 'factorydirectjewelry.com'], 'stone-and-strand': ['www.stoneandstrand.com', 'stoneandstrand.com']
 });
 export const SOURCE_HOSTS = new Set([
   ...Object.values(PRODUCT_HOSTS).flat(), 'consumer.ftc.gov', 'www.gia.edu', 'www.nist.gov',
@@ -70,7 +71,7 @@ export function validateResearch({catalog, evidence, review}, now = Date.now()) 
       if (!proof) continue;
       if (proof.source.kind === 'independent-platform') addError(p.id, `review platforms cannot prove product field ${key}`);
       if (key === 'karat' && (!finitePositive(f.value) || f.value > 24 || !new RegExp(`${f.value}\\s*(?:k\\b|karat)`, 'i').test(proof.text))) addError(p.id, 'karat unsupported by passage');
-      if (key === 'solidGold' && (f.value !== true || !/solid\s+(?:\d+\s*(?:k|karat)\s+)?gold/i.test(proof.text))) addError(p.id, 'explicit solid-gold wording missing');
+      if (key === 'solidGold' && (f.value !== true || !/(?:(?:\d+\s*(?:k|karat)\s+)?solid\s+gold|solid\s+\d+\s*(?:k|karat)\s+(?:yellow\s+|white\s+|rose\s+)?gold)/i.test(proof.text))) addError(p.id, 'explicit solid-gold wording missing');
       if (['itemWeightG','netMetalWeightG','fineGoldWeightG'].includes(key) && (!finitePositive(f.value) || !hasNumber(proof.text, f.value))) addError(p.id, `${key} numeric evidence mismatch`);
       if (key === 'declaredPurity' && (!finitePositive(f.value) || f.value > 1 || !hasNumber(proof.text, Number((f.value * 100).toFixed(8))))) addError(p.id, 'declared purity must have explicit percentage evidence');
       if (key === 'stone' && (typeof f.value !== 'string' || !proof.text.includes(f.value))) addError(p.id, 'stone description differs from passage');
@@ -82,7 +83,7 @@ export function validateResearch({catalog, evidence, review}, now = Date.now()) 
       if (!finitePositive(price.amount) || !['USD','EUR'].includes(price.currency) || !price.scope || !['displayed-option','unbound-display','setting-only'].includes(price.kind)) addError(p.id, 'invalid observed price/scope/currency');
       const proofs = (price.evidence ?? []).map(r => resolve(r, p.id + '.price')).filter(Boolean);
       if (!proofs.some(x => hasNumber(x.text, price.amount))) addError(p.id, 'price amount is not present in cited passage');
-      if (!proofs.some(x => new RegExp('\\b'+price.currency+'\\b').test(x.text))) addError(p.id, 'currency context is not evidenced');
+      if (!proofs.some(x => price.currency === 'USD' ? /(?:\bUSD\b|US\$)/.test(x.text) : new RegExp('\\b'+price.currency+'\\b').test(x.text))) addError(p.id, 'currency context is not evidenced');
       if (proofs.some(x => x.source.kind === 'independent-platform' || x.source.access === 'unavailable')) addError(p.id, 'price cannot come from a review or unavailable source');
       if (['future-dated','unverified'].includes(freshness(price.observedAt, now))) addError(p.id, 'price timestamp invalid');
       if (freshness(price.observedAt, now, catalog.meta.freshnessHours) === 'stale') warnings.push(`${p.id}: price older than ${catalog.meta.freshnessHours}h; manual refresh required`);

@@ -1,0 +1,112 @@
+{
+  "session_id": "S-9B875C81",
+  "verified_date": "2026-10-23",
+  "no_hallucination_policy": "Strictly verbatim field-scoped provenance from primary official brand domains, NIST OWM, FTC eCFR, World Gold Council, and scoped BBB profiles. Unconfirmed values are null, never zero, estimated, or inferred.",
+  "gold_spot_reference": {
+    "source_name": "World Gold Council — Goldhub Gold Prices",
+    "source_url": "https://www.gold.org/goldhub/data/gold-prices",
+    "retrieved_at": "2026-10-23",
+    "usd_per_troy_oz": 4024.45,
+    "chart_as_of_date": "2026-10-22",
+    "quote_date": null,
+    "superseded_observations": [
+      {
+        "value": 4028.53,
+        "chart_as_of_date": "2026-10-21",
+        "retrieved_at": "2026-10-22",
+        "status": "superseded_intraday"
+      }
+    ],
+    "grams_per_troy_ounce": 31.1034768,
+    "grams_per_pennyweight": 1.55517384,
+    "grams_per_carat": 0.2,
+    "usd_per_fine_gram": 129.38907173253415,
+    "verbatim_quotes": [
+      "USD /oz - 4,024.45",
+      "Data as of 22 October, 2026"
+    ],
+    "standards_urls": {
+      "nist_owm_html": "https://www.nist.gov/pml/owm/approximate-conversions-us-customary-measures-metric",
+      "nist_precious_metals_pdf": "https://www.nist.gov/system/files/documents/2017/05/09/Precious-Metals-Conversion-Information-march2015.pdf",
+      "ftc_jewelry_guides_ecfr": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3"
+    }
+  },
+  "material_live_drifts_detected_2026_10_23": [
+    {
+      "id": "DRIFT-01",
+      "subject": "World Gold Council Spot Gold",
+      "url": "https://www.gold.org/goldhub/data/gold-prices",
+      "prior_2026_10_22": "USD /oz - 4,028.53 (Data as of 21 October, 2026)",
+      "live_2026_10_23": "USD /oz - 4,024.45 (Data as of 22 October, 2026)",
+      "delta": "-$4.08 / troy oz (-0.10%)"
+    },
+    {
+      "id": "DRIFT-02",
+      "subject": "Brilliant Earth BE-121H6 Classic Six-Prong Solitaire",
+      "url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
+      "prior_2026_10_22": "€990.00 (Setting Only) — EUR geo-IP variant",
+      "live_2026_10_23": "USD header + $890(Setting Only)",
+      "delta": "Resolved to native USD setting price ($890.00 USD)"
+    },
+    {
+      "id": "DRIFT-03",
+      "subject": "Menē 24K Rose Ring & Knot Ring (bullion-indexed)",
+      "url": "https://mene.com/products/rose-ring-gold",
+      "prior_2026_10_22": "$1,346 USD (Rose) / $1,465 USD (Knot)",
+      "live_2026_10_23": "$1,336 USD (Rose) / $1,454 USD (Knot)",
+      "delta": "-$10 USD / -$11 USD tracking lower spot gold"
+    },
+    {
+      "id": "DRIFT-04",
+      "subject": "Zales 10K Solitaire & Twist Listings (Z-20303279, Z-20301172 vs Z-20046552)",
+      "url": "https://www.zales.com/vera-wang-love-collection-3-4-ct-tw-princesscut-diamond-solitaire-engagement-ring-10k-white-gold/p/V-20303279",
+      "prior_2026_10_22": "Unlabeled two-amount rendering on 3 SKUs",
+      "live_2026_10_23": "Z-20303279 ('Discounted Price $979.30 Original Price was $1,399.00 30% Off') and Z-20301172 ('Discounted Price $769.30 Original Price was $1,099.00 30% Off') restored explicit labels; Z-20046552 remains unlabeled ('$909.30  $1,299.00 30% Off'); all omit explicit ISO 'USD' string per F-025",
+      "delta": "Explicit price role labels restored on 2 of 3 SKUs; F-025 currency omission persists"
+    }
+  ],
+  "irregularities_caught_2026_10_23": [
+    {
+      "id": "IRR-9B8-01",
+      "severity": "high",
+      "subject": "SS-MIA (Stone and Strand — The Mia Diamond Ring)",
+      "url": "https://www.stoneandstrand.com/products/the-mia-ring",
+      "finding": "Internal purity contradiction on live PDP: Specifications state 'Gold Karat: 14K' whereas multiple gallery image alt attributes state 'Stone and Strand 10K Yellow Gold The Mia Diamond Ring'. Furthermore, 50%-off pricing ($925 vs $1,850) renders 'Final sale and non-returnable', blocking independent post-arrival XRF return protection."
+    },
+    {
+      "id": "IRR-9B8-02",
+      "severity": "high",
+      "subject": "SS-CLARA (Stone and Strand — The Clara Diamond Ring)",
+      "url": "https://www.stoneandstrand.com/products/the-clara-ring",
+      "finding": "Conflicting return eligibility copy on the same live PDP: renders both 'Final Sale' and '100 Day Returns' UI badges simultaneously at full price ($2,200)."
+    },
+    {
+      "id": "IRR-9B8-03",
+      "severity": "high",
+      "subject": "FDJ-GR0001 (Factory Direct Jewelry — Lab Grown Diamond Halo Engagement Ring in 14K Gold)",
+      "url": "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/",
+      "finding": "Displays 'Made with solid gold. Never plated.', 'Karat stamped inside the band.', and default 'Weight:1.25 Grams' alongside 'Total Carat Weight: 1.37cts' (0.274 g diamond mass). If gross weight, net 14K alloy mass is just 0.976 g ($73.67 melt at $4,024.45/oz) — extreme structural thin-band fragility risk corroborated by unaccredited BBB profile (1.8/5 across 5 reviews; 11 complaints including snapped bands and 20% alteration restocking fee)."
+    },
+    {
+      "id": "IRR-9B8-04",
+      "severity": "medium",
+      "subject": "SAR-144773 & Sarraf Jewelry Inc. Policy Cross-Check",
+      "url": "https://www.sarraf.com/about-sarraf/",
+      "finding": "Three verbatim internal inconsistencies caught across sarraf.com: (1) Product return tab states engraved rings may be returned less $25 fee, whereas /about-sarraf/ restricts 30-day refunds to 'non-engraved items'; (2) Warranty repair deductible reads '$100.00 or 10%' on diamond ring pages vs '$50.00 or 5%' on 10K band pages and BBB filings; (3) Size-10 benchmark metal weights (e.g. 13.40 g on SAR-144773 = $1,011.39 melt, 74.26% of US$1,362.00) weigh less in smaller finger sizes (10.1–10.2 g reported by buyer local jeweler checks) and BBB customer reviews average 2.33/5 (3 reviews) despite A+ BBB Accreditation since 1998."
+    },
+    {
+      "id": "IRR-9B8-05",
+      "severity": "medium",
+      "subject": "Automic Gold Set-Stone 'Item Weight' vs Stone-Free Metal Weight",
+      "url": "https://www.automicgold.com/products/diamond-petal-ring",
+      "finding": "Automic Gold stone-free bands (AG-COFFIN-RING 6.1g 14K, AG-24K 11g 24K) publish pure metal weight, whereas gemstone rings publish gross 'Item Weight: Approximately 2.7g (gold)' (AG-PETAL, 0.6ct = 0.12g stone -> ~2.58g metal) and 'Item Weight: Approximately 1.2g (gold)' (AG-NATURAL 0.10ct, AG-SAPPHIRE-RING 3mm sapphire). Treating gross item weight as pure alloy weight slightly overstates fine gold unless stone carat mass (1 ct = 0.200 g) is separated."
+    },
+    {
+      "id": "IRR-9B8-06",
+      "severity": "medium",
+      "subject": "Auvere 22K 'Approximate Fine Weight' Range Wording",
+      "url": "https://auvere.com/product/diamond-bridge-ring-tall/",
+      "finding": "Auvere publishes size-dependent ranges labeled 'Approximate Fine Weight:5 to 6.1 grams depending on size' (AV-BRIDGE) and '2.8 to 3.7 grams depending on size' (AV-CLEAN) without clarifying whether 'Fine Weight' means 22K alloy mass (91.67% gold) or 999 fine-gold mass, and without assigning a single default size weight."
+    }
+  ]
+}

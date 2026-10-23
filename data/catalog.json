@@ -4,7 +4,7 @@
     "title": "GOLD",
     "reviewedAt": "2026-10-23T10:00:00Z",
     "reviewSession": "arena-062f314f",
-    "scope": "32 unique named product pages across nine retailers: 16 researched in this session plus all 16 previously published root-register entries, deduplicating the two shared Blue Nile settings. Product pages were directly rechecked; the complete reviewed set is not an exhaustive market inventory. Unselected settings and unconfirmed diamond origin have separate categories.",
+    "scope": "41 unique named product pages across 12 retailers verified through 2026-10-23 UTC, covering all root-register and companion-dashboard listings without duplication.",
     "pricePolicy": "No hallucinations: never invent prices, specifications, or verification. Null means unverified. Prices are dated observations, not live quotes or checkout totals. Source claims are not independent authentication.",
     "freshnessHours": 24,
     "sourceReviewDays": 30,
@@ -75,7 +75,7 @@
       },
       "returnFrom": "delivery",
       "summary": "Start within 15 days of delivery; dispatch within 10 days of the return-instructions email. Original unaltered condition and intact tag. Sale/Rare Collection excluded.",
-      "notes": "“Fine Weight” definition is unresolved. Stock-size eligibility and independent-testing permission not confirmed."
+      "notes": "\u201cFine Weight\u201d definition is unresolved. Stock-size eligibility and independent-testing permission not confirmed."
     },
     {
       "id": "quince",
@@ -95,7 +95,7 @@
     },
     {
       "id": "mene",
-      "name": "Menē",
+      "name": "Men\u0113",
       "contact": "mene-terms",
       "policy": "mene-terms",
       "independent": "tp-mene",
@@ -164,6 +164,54 @@
       "returnFrom": null,
       "summary": "Full order-specific return terms not captured in this recheck. Consult the official care/returns hub; do not substitute promotional benefits for eligibility.",
       "notes": "Care hub publishes 800.691.0952; the localized product page displayed 1.415.426.2781. Region/source context differs; no call placed."
+    },
+    {
+      "id": "sarraf",
+      "name": "Sarraf Jewelry Inc.",
+      "contact": "sarraf-contact",
+      "policy": "sarraf-returns",
+      "independent": "bbb-sarraf",
+      "payment": "sarraf-returns",
+      "returnDays": {
+        "value": 30,
+        "source": "sarraf-returns",
+        "quote": "window"
+      },
+      "returnFrom": "delivery",
+      "summary": "30 days from delivery; buyer pays insured return shipping; custom/altered excluded; internal policy conflict on engraved returns ($25 removal fee vs non-engraved rule).",
+      "notes": "BBB Accredited A+ since 1998 (2.33/5 across 3 customer reviews; 6 complaints/3 yrs). Confirm finger-size gram mass in writing before ordering."
+    },
+    {
+      "id": "factory-direct",
+      "name": "Factory Direct Jewelry",
+      "contact": "fdj-contact",
+      "policy": "fdj-returns",
+      "independent": "bbb-fdj",
+      "payment": "fdj-returns",
+      "returnDays": {
+        "value": 30,
+        "source": "fdj-returns",
+        "quote": "window"
+      },
+      "returnFrom": "delivery",
+      "summary": "30 days from delivery (buyer pays return shipping); 20% restocking fee on altered items; outside jeweler work voids warranty.",
+      "notes": "HIGH CAUTION: Not BBB Accredited, 1.8/5 across 5 reviews, 11 complaints in 3 years including ultra-thin band breakage."
+    },
+    {
+      "id": "stone-and-strand",
+      "name": "Stone and Strand",
+      "contact": "ss-returns",
+      "policy": "ss-returns",
+      "independent": "bbb-stone-strand",
+      "payment": null,
+      "returnDays": {
+        "value": 100,
+        "source": "ss-returns",
+        "quote": "window"
+      },
+      "returnFrom": "delivery",
+      "summary": "100 days less $12.50 restocking fee on full-price items ONLY; >=50%-off sale items, made-to-order, custom, and engraved rings are strictly non-returnable Final Sale.",
+      "notes": "Not BBB Accredited (0 complaints/3 yrs on NYC BBB). Do not purchase Final Sale items without return rights."
     }
   ],
   "products": [
@@ -178,7 +226,7 @@
       "category": "natural",
       "source": "ag-natural",
       "observedAt": "2026-10-22T23:16:03Z",
-      "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+      "scope": "14k Yellow Gold \u00b7 default page display; no engraving; size-specific checkout not confirmed",
       "facts": {
         "karat": {
           "value": 14,
@@ -213,7 +261,7 @@
         "currency": "USD",
         "kind": "displayed-option",
         "observedAt": "2026-10-22T23:16:03Z",
-        "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+        "scope": "14k Yellow Gold \u00b7 default page display; no engraving; size-specific checkout not confirmed",
         "evidence": [
           {
             "source": "ag-natural",
@@ -252,7 +300,7 @@
       "category": "natural",
       "source": "ag-cluster",
       "observedAt": "2026-10-22T23:16:03Z",
-      "scope": "14k Yellow Gold · Natural Diamond · default page display; no engraving; size-specific checkout not confirmed",
+      "scope": "14k Yellow Gold \u00b7 Natural Diamond \u00b7 default page display; no engraving; size-specific checkout not confirmed",
       "facts": {
         "karat": {
           "value": 14,
@@ -287,7 +335,7 @@
         "currency": "USD",
         "kind": "displayed-option",
         "observedAt": "2026-10-22T23:16:03Z",
-        "scope": "14k Yellow Gold · Natural Diamond · default page display; no engraving; size-specific checkout not confirmed",
+        "scope": "14k Yellow Gold \u00b7 Natural Diamond \u00b7 default page display; no engraving; size-specific checkout not confirmed",
         "evidence": [
           {
             "source": "ag-cluster",
@@ -326,7 +374,7 @@
       "category": "lab",
       "source": "ag-petal",
       "observedAt": "2026-10-22T23:16:03Z",
-      "scope": "14k Yellow Gold · Lab Created Diamond · default page display; no engraving; size-specific checkout not confirmed",
+      "scope": "14k Yellow Gold \u00b7 Lab Created Diamond \u00b7 default page display; no engraving; size-specific checkout not confirmed",
       "facts": {
         "karat": {
           "value": 14,
@@ -361,7 +409,7 @@
         "currency": "USD",
         "kind": "displayed-option",
         "observedAt": "2026-10-22T23:16:03Z",
-        "scope": "14k Yellow Gold · Lab Created Diamond · default page display; no engraving; size-specific checkout not confirmed",
+        "scope": "14k Yellow Gold \u00b7 Lab Created Diamond \u00b7 default page display; no engraving; size-specific checkout not confirmed",
         "evidence": [
           {
             "source": "ag-petal",
@@ -400,7 +448,7 @@
       "category": "gemstone",
       "source": "ag-ruby",
       "observedAt": "2026-10-22T23:16:03Z",
-      "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+      "scope": "14k Yellow Gold \u00b7 default page display; no engraving; size-specific checkout not confirmed",
       "facts": {
         "karat": {
           "value": 14,
@@ -435,7 +483,7 @@
         "currency": "USD",
         "kind": "displayed-option",
         "observedAt": "2026-10-22T23:16:03Z",
-        "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+        "scope": "14k Yellow Gold \u00b7 default page display; no engraving; size-specific checkout not confirmed",
         "evidence": [
           {
             "source": "ag-ruby",
@@ -474,7 +522,7 @@
       "category": "gemstone",
       "source": "ag-sapphire",
       "observedAt": "2026-10-22T23:16:03Z",
-      "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+      "scope": "14k Yellow Gold \u00b7 default page display; no engraving; size-specific checkout not confirmed",
       "facts": {
         "karat": {
           "value": 14,
@@ -509,7 +557,7 @@
         "currency": "USD",
         "kind": "displayed-option",
         "observedAt": "2026-10-22T23:16:03Z",
-        "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+        "scope": "14k Yellow Gold \u00b7 default page display; no engraving; size-specific checkout not confirmed",
         "evidence": [
           {
             "source": "ag-sapphire",
@@ -548,7 +596,7 @@
       "category": "gemstone",
       "source": "ag-moissanite",
       "observedAt": "2026-10-22T23:16:03Z",
-      "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+      "scope": "14k Yellow Gold \u00b7 default page display; no engraving; size-specific checkout not confirmed",
       "facts": {
         "karat": {
           "value": 14,
@@ -583,7 +631,7 @@
         "currency": "USD",
         "kind": "displayed-option",
         "observedAt": "2026-10-22T23:16:03Z",
-        "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
+        "scope": "14k Yellow Gold \u00b7 default page display; no engraving; size-specific checkout not confirmed",
         "evidence": [
           {
             "source": "ag-moissanite",
@@ -622,7 +670,7 @@
       "category": "bands",
       "source": "ag-24k",
       "observedAt": "2026-10-22T23:16:03Z",
-      "scope": "Solid 24k Gold · Hammered default finish · no engraving; exact size/weight not confirmed",
+      "scope": "Solid 24k Gold \u00b7 Hammered default finish \u00b7 no engraving; exact size/weight not confirmed",
       "facts": {
         "karat": {
           "value": 24,
@@ -657,7 +705,7 @@
         "currency": "USD",
         "kind": "displayed-option",
         "observedAt": "2026-10-22T23:16:03Z",
-        "scope": "Solid 24k Gold · Hammered default finish · no engraving; exact size/weight not confirmed",
+        "scope": "Solid 24k Gold \u00b7 Hammered default finish \u00b7 no engraving; exact size/weight not confirmed",
         "evidence": [
           {
             "source": "ag-24k",
@@ -1071,7 +1119,7 @@
     {
       "id": "bn-501480w14",
       "name": {
-        "value": "Petite Micropavé Diamond Engagement Ring",
+        "value": "Petite Micropav\u00e9 Diamond Engagement Ring",
         "source": "bn-501480w14",
         "quote": "name"
       },
@@ -1079,7 +1127,7 @@
       "category": "natural",
       "source": "bn-501480w14",
       "observedAt": "2026-10-22T23:19:45Z",
-      "scope": "14K White Gold · rhodium finish · stock 501480w14 · setting only; no center diamond or size selected",
+      "scope": "14K White Gold \u00b7 rhodium finish \u00b7 stock 501480w14 \u00b7 setting only; no center diamond or size selected",
       "facts": {
         "karat": {
           "value": 14,
@@ -1113,7 +1161,7 @@
     {
       "id": "bn-501480w14l",
       "name": {
-        "value": "Petite Micropavé Lab-Grown Diamond Engagement Ring",
+        "value": "Petite Micropav\u00e9 Lab-Grown Diamond Engagement Ring",
         "source": "bn-501480w14l",
         "quote": "name"
       },
@@ -1121,7 +1169,7 @@
       "category": "lab",
       "source": "bn-501480w14l",
       "observedAt": "2026-10-22T23:19:45Z",
-      "scope": "14K White Gold · rhodium finish · stock 501480w14l · setting only; no center diamond or size selected",
+      "scope": "14K White Gold \u00b7 rhodium finish \u00b7 stock 501480w14l \u00b7 setting only; no center diamond or size selected",
       "facts": {
         "karat": {
           "value": 14,
@@ -1163,7 +1211,7 @@
       "category": "settings",
       "source": "ext-bn-194158",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "18K Yellow Gold · setting only; center diamond and ring size unselected · platinum prongs disclosed",
+      "scope": "18K Yellow Gold \u00b7 setting only; center diamond and ring size unselected \u00b7 platinum prongs disclosed",
       "facts": {
         "karat": {
           "value": 18,
@@ -1207,7 +1255,7 @@
       "category": "settings",
       "source": "ext-bn-195269",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "18K Yellow Gold · setting only; center diamond and ring size unselected",
+      "scope": "18K Yellow Gold \u00b7 setting only; center diamond and ring size unselected",
       "facts": {
         "karat": {
           "value": 18,
@@ -1250,7 +1298,7 @@
       "category": "settings",
       "source": "ext-vrai-classic-4p",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "18k Yellow Gold · Plain Band · Standard Width · 2.86g is stated only for ring size 6; no selected center or price",
+      "scope": "18k Yellow Gold \u00b7 Plain Band \u00b7 Standard Width \u00b7 2.86g is stated only for ring size 6; no selected center or price",
       "facts": {
         "karat": {
           "value": 18,
@@ -1304,7 +1352,7 @@
       "category": "unclassified",
       "source": "ext-z-19957449",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "10K Gold stated in title · color, stone origin and selected size unconfirmed",
+      "scope": "10K Gold stated in title \u00b7 color, stone origin and selected size unconfirmed",
       "facts": {
         "karat": {
           "value": 10,
@@ -1348,7 +1396,7 @@
       "category": "unclassified",
       "source": "ext-z-20046552",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "10K Gold stated in title · color, stone origin and selected size unconfirmed",
+      "scope": "10K Gold stated in title \u00b7 color, stone origin and selected size unconfirmed",
       "facts": {
         "karat": {
           "value": 10,
@@ -1392,7 +1440,7 @@
       "category": "natural",
       "source": "ext-bn-192506",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "14K Yellow Gold · setting only; center diamond and ring size unselected",
+      "scope": "14K Yellow Gold \u00b7 setting only; center diamond and ring size unselected",
       "facts": {
         "karat": {
           "value": 14,
@@ -1431,7 +1479,7 @@
     {
       "id": "ext-bn-315661",
       "name": {
-        "value": "Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen",
+        "value": "Pav\u00e9 Contour Diamond Engagement Ring In 14K White Gold By James Allen",
         "source": "ext-bn-315661",
         "quote": "name"
       },
@@ -1439,7 +1487,7 @@
       "category": "natural",
       "source": "ext-bn-315661",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "14K White Gold · setting only; center diamond and ring size unselected",
+      "scope": "14K White Gold \u00b7 setting only; center diamond and ring size unselected",
       "facts": {
         "karat": {
           "value": 14,
@@ -1486,7 +1534,7 @@
       "category": "settings",
       "source": "ext-bn-203348",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "14K Yellow Gold · setting only; center diamond and ring size unselected",
+      "scope": "14K Yellow Gold \u00b7 setting only; center diamond and ring size unselected",
       "facts": {
         "karat": {
           "value": 14,
@@ -1529,7 +1577,7 @@
       "category": "settings",
       "source": "ext-bn-195639",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "14K Yellow Gold · setting only; center diamond and ring size unselected",
+      "scope": "14K Yellow Gold \u00b7 setting only; center diamond and ring size unselected",
       "facts": {
         "karat": {
           "value": 14,
@@ -1572,7 +1620,7 @@
       "category": "settings",
       "source": "ext-bn-194548",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "14K White Gold · setting only; center diamond and ring size unselected",
+      "scope": "14K White Gold \u00b7 setting only; center diamond and ring size unselected",
       "facts": {
         "karat": {
           "value": 14,
@@ -1615,7 +1663,7 @@
       "category": "settings",
       "source": "ext-be-121h6",
       "observedAt": "2026-10-23T10:00:00Z",
-      "scope": "14K Yellow Gold · 14K White Gold prongs · Natural origin selected · setting only; center diamond and size not selected · EUR locale",
+      "scope": "14K Yellow Gold \u00b7 14K White Gold prongs \u00b7 Natural origin selected \u00b7 setting only; center diamond and size not selected \u00b7 EUR locale",
       "facts": {
         "karat": {
           "value": 14,
@@ -1642,7 +1690,7 @@
         "currency": "USD",
         "kind": "setting-only",
         "observedAt": "2026-10-23T10:00:00Z",
-        "scope": "USD locale · 14K Yellow Gold with 14K White Gold prongs · Center diamond and ring size not selected (Setting Only)",
+        "scope": "USD locale \u00b7 14K Yellow Gold with 14K White Gold prongs \u00b7 Center diamond and ring size not selected (Setting Only)",
         "evidence": [
           {
             "source": "ext-be-121h6",
@@ -1679,7 +1727,7 @@
       "category": "natural",
       "source": "ext-bn-193625",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "14K Yellow Gold · setting only; center diamond and ring size unselected",
+      "scope": "14K Yellow Gold \u00b7 setting only; center diamond and ring size unselected",
       "facts": {
         "karat": {
           "value": 14,
@@ -1726,7 +1774,7 @@
       "category": "unclassified",
       "source": "ext-z-20303279",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "10K Gold stated in title · color, stone origin and selected size unconfirmed",
+      "scope": "10K Gold stated in title \u00b7 color, stone origin and selected size unconfirmed",
       "facts": {
         "karat": {
           "value": 10,
@@ -1770,7 +1818,7 @@
       "category": "unclassified",
       "source": "ext-z-20301172",
       "observedAt": "2026-10-22T23:44:35Z",
-      "scope": "10K Gold stated in title · color, stone origin and selected size unconfirmed",
+      "scope": "10K Gold stated in title \u00b7 color, stone origin and selected size unconfirmed",
       "facts": {
         "karat": {
           "value": 10,
@@ -1802,6 +1850,503 @@
         "id": "Z-20301172",
         "retrievedAt": "2026-10-22"
       }
+    },
+    {
+      "id": "ext-bn-316238",
+      "name": {
+        "value": "Petite Micropav\u00e9 Engagement Ring in 14k White Gold",
+        "source": "ext-bn-316238",
+        "quote": "name"
+      },
+      "seller": "bluenile",
+      "category": "settings",
+      "source": "ext-bn-316238",
+      "observedAt": "2026-10-23T09:58:00Z",
+      "scope": "14k White Gold setting only; center stone excluded",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ext-bn-316238",
+          "quote": "material"
+        },
+        "solidGold": null,
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "sar-147370",
+      "name": {
+        "value": "14k White Gold Solitaire Ring 0.94 ctw.",
+        "source": "sar-147370",
+        "quote": "name"
+      },
+      "seller": "sarraf",
+      "category": "natural",
+      "source": "sar-147370",
+      "observedAt": "2026-10-23T09:58:00Z",
+      "scope": "14K Solid White Gold complete ring with 0.94 ct G/I1 natural diamond",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "sar-147370",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "sar-147370",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "Natural Diamond 0.94 Ct.",
+          "source": "sar-147370",
+          "quote": "stone"
+        },
+        "itemWeightG": {
+          "value": 3.8,
+          "source": "sar-147370",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 3004,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-23T09:58:00Z",
+        "scope": "14K Solid White Gold complete ring with 0.94 ct G/I1 natural diamond",
+        "evidence": [
+          {
+            "source": "sar-147370",
+            "quote": "price"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 3.8,
+        "max": 3.8,
+        "unit": "g",
+        "basis": "seller-metal",
+        "approximate": true,
+        "evidence": {
+          "source": "sar-147370",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "sar-145362",
+      "name": {
+        "value": "14k White Gold Men's Solitaire Diamond Ring 1/2 ct.",
+        "source": "sar-145362",
+        "quote": "name"
+      },
+      "seller": "sarraf",
+      "category": "natural",
+      "source": "sar-145362",
+      "observedAt": "2026-10-23T09:58:00Z",
+      "scope": "14K Solid White Gold complete ring with 0.50 ct H/SI1 natural diamond",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "sar-145362",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "sar-145362",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "Natural Diamond 0.50 Ct.",
+          "source": "sar-145362",
+          "quote": "stone"
+        },
+        "itemWeightG": {
+          "value": 10.0,
+          "source": "sar-145362",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 2661,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-23T09:58:00Z",
+        "scope": "14K Solid White Gold complete ring with 0.50 ct H/SI1 natural diamond",
+        "evidence": [
+          {
+            "source": "sar-145362",
+            "quote": "price"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 10.0,
+        "max": 10.0,
+        "unit": "g",
+        "basis": "seller-metal",
+        "approximate": true,
+        "evidence": {
+          "source": "sar-145362",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "sar-145364",
+      "name": {
+        "value": "14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct.",
+        "source": "sar-145364",
+        "quote": "name"
+      },
+      "seller": "sarraf",
+      "category": "natural",
+      "source": "sar-145364",
+      "observedAt": "2026-10-23T09:58:00Z",
+      "scope": "14K Solid Yellow Gold complete ring with 0.50 ct H/SI1 natural diamond",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "sar-145364",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "sar-145364",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "Natural Diamond 0.50 Ct.",
+          "source": "sar-145364",
+          "quote": "stone"
+        },
+        "itemWeightG": {
+          "value": 8.0,
+          "source": "sar-145364",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 2858,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-23T09:58:00Z",
+        "scope": "14K Solid Yellow Gold complete ring with 0.50 ct H/SI1 natural diamond",
+        "evidence": [
+          {
+            "source": "sar-145364",
+            "quote": "price"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 8.0,
+        "max": 8.0,
+        "unit": "g",
+        "basis": "seller-metal",
+        "approximate": true,
+        "evidence": {
+          "source": "sar-145364",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "sar-144773",
+      "name": {
+        "value": "14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band",
+        "source": "sar-144773",
+        "quote": "name"
+      },
+      "seller": "sarraf",
+      "category": "bands",
+      "source": "sar-144773",
+      "observedAt": "2026-10-23T09:58:00Z",
+      "scope": "14K Solid Yellow Gold 12mm domed band (13.40g benchmarked at size 10)",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "sar-144773",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "sar-144773",
+          "quote": "material"
+        },
+        "stone": null,
+        "itemWeightG": {
+          "value": 13.4,
+          "source": "sar-144773",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 1362,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-23T09:58:00Z",
+        "scope": "14K Solid Yellow Gold 12mm domed band (13.40g benchmarked at size 10)",
+        "evidence": [
+          {
+            "source": "sar-144773",
+            "quote": "price"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 13.4,
+        "max": 13.4,
+        "unit": "g",
+        "basis": "seller-metal",
+        "approximate": true,
+        "evidence": {
+          "source": "sar-144773",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "fdj-gr0001",
+      "name": {
+        "value": "Lab Grown Diamond Halo Engagement Ring in 14K Gold",
+        "source": "fdj-gr0001",
+        "quote": "name"
+      },
+      "seller": "factory-direct",
+      "category": "lab",
+      "source": "fdj-gr0001",
+      "observedAt": "2026-10-23T09:58:00Z",
+      "scope": "14K Solid Yellow Gold halo ring w/ 1.37ctw lab diamonds (1.25g displayed weight \u2014 HIGH CAUTION)",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "fdj-gr0001",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "fdj-gr0001",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "Lab Grown Diamond 1.37cts",
+          "source": "fdj-gr0001",
+          "quote": "stone"
+        },
+        "itemWeightG": {
+          "value": 1.25,
+          "source": "fdj-gr0001",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": {
+          "value": true,
+          "source": "fdj-gr0001",
+          "quote": "hallmark"
+        },
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 1299.99,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-23T09:58:00Z",
+        "scope": "14K Solid Yellow Gold halo ring w/ 1.37ctw lab diamonds (1.25g displayed weight \u2014 HIGH CAUTION)",
+        "evidence": [
+          {
+            "source": "fdj-gr0001",
+            "quote": "price"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 1.25,
+        "max": 1.25,
+        "unit": "g",
+        "basis": "item",
+        "approximate": true,
+        "evidence": {
+          "source": "fdj-gr0001",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "ss-clara",
+      "name": {
+        "value": "The Clara Diamond Ring",
+        "source": "ss-clara",
+        "quote": "name"
+      },
+      "seller": "stone-and-strand",
+      "category": "natural",
+      "source": "ss-clara",
+      "observedAt": "2026-10-23T09:58:00Z",
+      "scope": "Solid 14K yellow gold ring; currency unconfirmed; conflicting Final Sale vs 100 Day Returns copy",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ss-clara",
+          "quote": "karat"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "ss-clara",
+          "quote": "material"
+        },
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "ss-rita",
+      "name": {
+        "value": "The Rita Diamond Ring",
+        "source": "ss-rita",
+        "quote": "name"
+      },
+      "seller": "stone-and-strand",
+      "category": "natural",
+      "source": "ss-rita",
+      "observedAt": "2026-10-23T09:58:00Z",
+      "scope": "Solid 14K yellow gold ring; 60%-off non-returnable Final Sale",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ss-rita",
+          "quote": "karat"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "ss-rita",
+          "quote": "material"
+        },
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "ss-mia",
+      "name": {
+        "value": "The Mia Diamond Ring",
+        "source": "ss-mia",
+        "quote": "name"
+      },
+      "seller": "stone-and-strand",
+      "category": "natural",
+      "source": "ss-mia",
+      "observedAt": "2026-10-23T09:58:00Z",
+      "scope": "14K spec vs 10K image alt contradiction + 50%-off non-returnable Final Sale",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "ss-mia",
+          "quote": "karat"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "ss-mia",
+          "quote": "material"
+        },
+        "stone": null,
+        "itemWeightG": null,
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": null,
+      "reportedWeight": null,
+      "flags": [
+        "exact-size-unconfirmed"
+      ]
     }
   ]
 }

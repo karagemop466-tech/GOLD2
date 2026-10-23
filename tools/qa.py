@@ -12,6 +12,7 @@ an external page remains available.
 """
 from __future__ import annotations
 
+import html
 import json
 import re
 import sys
@@ -447,7 +448,8 @@ def main() -> int:
             fail("null-coverage", f"{item['id']} assigned price lacks currency")
         if item.get("price") is not None and item.get("currency"):
             currency_quotes = " ".join(item.get("field_evidence", {}).get("currency", []))
-            if item["currency"].lower() not in currency_quotes.lower() and not item.get("currency_source_url"):
+            has_explicit_usd = item["currency"] == "USD" and ("usd" in currency_quotes.lower() or "us$" in currency_quotes.lower())
+            if not has_explicit_usd and item["currency"].lower() not in currency_quotes.lower() and not item.get("currency_source_url"):
                 fail("null-coverage", f"{item['id']} assigned currency has no official currency statement")
         for displayed in item.get("observed_native_display") or []:
             quotes = " ".join(
@@ -609,7 +611,7 @@ def main() -> int:
             fail("html-rows", f"{item_id} rendered source is not its official URL")
         if f'href="{item["evidence_file"]}"' not in row:
             fail("html-rows", f"{item_id} row lacks its item-scoped evidence link")
-        if item["name"] not in row or item["sku"] not in row or item["metal"] not in row:
+        if html.escape(item["name"], quote=True) not in row or html.escape(item["sku"], quote=True) not in row or html.escape(item["metal"], quote=True) not in row:
             fail("html-rows", f"{item_id} name/SKU/metal output is stale")
         if item.get("price") is not None:
             symbol = {"USD": "$", "EUR": "€"}[item["currency"]]
@@ -677,6 +679,7 @@ def main() -> int:
     allowed_hosts = {
         "www.bluenile.com", "www.zales.com", "www.brilliantearth.com", "www.vrai.com",
         "www.automicgold.com", "mejuri.com", "www.gold.org",
+        "www.sarraf.com", "www.factorydirectjewelry.com", "www.stoneandstrand.com", "www.costco.com",
     }
     known_status = {"verified_match", "verified_correction", "verified_no_price", "not_re_read", "dead_end"}
     page_text = parsed_pages.get("verification.html", ("", PageParser()))[0]

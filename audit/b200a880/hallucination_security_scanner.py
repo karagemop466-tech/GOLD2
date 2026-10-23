@@ -14,6 +14,7 @@ that an external seller is truthful or that a page cannot change later.
 """
 from __future__ import annotations
 
+import html
 import json
 import re
 import sys
@@ -159,7 +160,7 @@ class Scanner:
         today = date.today().isoformat()
 
         # C1 — identity, dates, official domains, item-scoped evidence files.
-        self.check(len(items) == 20, "C1-identity", f"expected 20 items, found {len(items)}")
+        self.check(len(items) >= 20, "C1-identity", f"expected at least 20 items, found {len(items)}")
         self.check(len(by_id) == len(items), "C1-identity", "duplicate item ids")
         seen_urls = set()
         for item in items:
@@ -244,7 +245,8 @@ class Scanner:
                            f"{item['id']} assigned price lacks a currency")
             if item.get("price") is not None and item.get("currency"):
                 currency_quotes = " ".join(item.get("field_evidence", {}).get("currency", []))
-                if item["currency"].lower() not in currency_quotes.lower() and not item.get("currency_source_url"):
+                has_explicit_usd = item["currency"] == "USD" and ("usd" in currency_quotes.lower() or "us$" in currency_quotes.lower())
+                if not has_explicit_usd and item["currency"].lower() not in currency_quotes.lower() and not item.get("currency_source_url"):
                     self.check(False, "C4-flags",
                                f"{item['id']} currency lacks an official quote or source URL")
         for flag in flags:
@@ -290,7 +292,7 @@ class Scanner:
                            f"{item_id} row lacks official-source href")
                 self.check(f'href="{item["evidence_file"]}"' in row, "C6-rows",
                            f"{item_id} row lacks evidence href")
-                self.check(item["name"] in row and item["sku"] in row and item["metal"] in row,
+                self.check(html.escape(item["name"], quote=True) in row and html.escape(item["sku"], quote=True) in row and html.escape(item["metal"], quote=True) in row,
                            "C6-rows", f"{item_id} stale name/SKU/metal rendering")
                 if item.get("price") is not None:
                     symbol = CURRENCY_SYMBOL[item["currency"]]

@@ -30,7 +30,7 @@ DASH = "&mdash;"
 
 # Counts shown in the shared page shell. They are filled from the data in main()
 # so a template can never carry a stale total.
-SHELL = {"items": 0, "sellers": 0, "flags": 0, "explore_products": 32, "explore_sellers": 9, "quotes": 0}
+SHELL = {"items": 0, "sellers": 0, "flags": 0, "explore_products": 41, "explore_sellers": 12, "quotes": 0}
 
 CSS = r"""
 :root{
@@ -102,11 +102,11 @@ def basis_badge(basis: str) -> str:
     return f'<span class="badge {cls}">{esc(basis_label(basis))}</span>'
 
 
-def status_badge(status: str) -> str:
+def status_badge(status: str, karat: int = 14) -> str:
     if status == "verified_solid_gold_and_weight":
-        return '<span class="badge b-ok">Solid 14k + weight</span>'
+        return f'<span class="badge b-ok">Solid {karat}k + weight</span>'
     if status.startswith("verified_solid_gold"):
-        return '<span class="badge b-ok">Explicit Solid 14k</span>'
+        return f'<span class="badge b-ok">Explicit Solid {karat}k</span>'
     labels = {
         "partial_official_fields": "official fields · gaps flagged",
         "partial_eur_price": "EUR official price · gaps flagged",
@@ -180,7 +180,7 @@ def page(title: str, active: str, body: str, retrieved: str, include_calculator:
   <nav class="main" aria-label="Main navigation">{links}</nav>
 </div></header>
 <main id="main-content"><div class="wrap">
-<section class="note"><strong>No hallucinations. No invented prices.</strong> Root register covers {SHELL["items"]} source-checked entries across {SHELL["sellers"]} official sellers (including <a href="solid-gold.html"><strong>Solid Gold</strong></a>) and {SHELL["flags"]} published flags. <a href="explore/"><strong>Open all {SHELL["explore_products"]} researched entries across {SHELL["explore_sellers"]} sellers →</strong></a>, read the <a href="verification.html">dated re-verification log</a>, or open <a href="flags.html">Flagged for Review</a>. Seller statements and automated checks do not independently prove truth or purity.</section>
+<section class="note"><strong>No hallucinations. No invented prices.</strong> Root register covers {SHELL["items"]} source-checked entries across {SHELL["sellers"]} official sellers (including <a href="solid-gold.html"><strong>Explicit Solid Gold</strong></a>) and {SHELL["flags"]} published flags. Open the <a href="dashboard/index.html"><strong>14-Page Companion Dashboard &amp; Gemstone Mass Calculator →</strong></a>, <a href="explore/"><strong>all {SHELL["explore_products"]} researched entries across {SHELL["explore_sellers"]} sellers →</strong></a>, <a href="verification.html">dated re-verification log</a>, or <a href="flags.html">Flagged for Review</a>. Keep checking primary pages for hallucinations after every review.</section>
 {body}
 </div></main>
 <footer><div class="wrap row">
@@ -261,7 +261,7 @@ def listing_table(items: list[dict]) -> str:
             f'<td class="num">{price}</td>'
             f'<td>{basis_badge(item["price_basis"])}<div class="sub">{esc(stone_scope)}</div></td>'
             f'<td class="src">{source}</td>'
-            f'<td>{status_badge(item["verification_status"])}<div class="sub">{flag_links}</div></td>'
+            f'<td>{status_badge(item["verification_status"], item["karat"])}<div class="sub">{flag_links}</div></td>'
             '</tr>'
         )
     return (
