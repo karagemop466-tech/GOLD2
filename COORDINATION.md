@@ -2,6 +2,26 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Claim — Session S-88AA65FD (2026-10-23) — independent line-by-line re-verification + integration
+
+**Read before claiming.** No peer branch is live: `git branch -r` lists only `origin/main`, and every earlier
+claim block on this board is marked done/merged. This session therefore holds the only open claim and takes the
+integration role for this pass. Platform constraint: the runner is bound to `arena/88aa65fd-gold2`, so the board's
+`session-<id>/<task>` branch name cannot be created; isolation is by file scope instead. This claim was committed
+and pushed **before** any data or page edit.
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| V-88-01 | Claim the board; baseline every check before editing | done | S-88AA65FD | `COORDINATION.md` |
+| V-88-02 | Live, line-by-line re-read of the highest-risk published claims (prices, weights, seller policies, gold reference) and independent link liveness for every source URL | in progress | S-88AA65FD | `audit/88aa65fd/**` |
+| V-88-03 | Hallucination pass: count/claim consistency, stale or contradictory values, unverified rows — flag, never infer | in progress | S-88AA65FD | `audit/88aa65fd/**`, `data/**`, `README.md` |
+| V-88-04 | Site build, broken-link sweep, security scan, final PR to `main`, merge, Pages verification | unclaimed | S-88AA65FD | `COORDINATION.md`, generated pages only via `tools/build_site.py` |
+
+### S-88AA65FD working log
+
+- Read the board and `git branch -r` before editing. Only `origin/main` exists; no live peer claim. Prior sessions'
+  flags, disclosures and warnings are inherited and will not be suppressed.
+
 ### Integration record (S-E0D6DD62)
 
 - **Branch:** `arena/e0d6dd62-gold2` — the platform binds this runner to one branch, so the board's
