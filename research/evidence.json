@@ -654,7 +654,8 @@
         "price": "$1,325",
         "currency": "USD",
         "karat": "24k Gold",
-        "cod": "This is a Crafted-on-Demand item."
+        "cod": "This is a Crafted-on-Demand item.",
+        "previous-price": "$1,336 USD \u2014 direct official-page observation at 2026-10-23T10:00:00Z; superseded later on 2026-10-23."
       },
       "relevantChunks": [
         0,
@@ -682,7 +683,8 @@
         "price": "$1,442",
         "currency": "USD",
         "karat": "24k Gold",
-        "cod": "This is a Crafted-on-Demand item."
+        "cod": "This is a Crafted-on-Demand item.",
+        "previous-price": "$1,454 USD \u2014 direct official-page observation at 2026-10-23T10:00:00Z; superseded later on 2026-10-23."
       },
       "relevantChunks": [
         0,
@@ -1233,7 +1235,7 @@
       "kind": "market-context",
       "url": "https://www.gold.org/goldhub/data/gold-prices",
       "observedAt": "2026-10-23T23:45:00Z",
-      "method": "fetch_page; directly rechecked 2026-10-23 (evening) by session S-1EB9F828, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked 2026-10-23 (evening) by session S-1EB9F828, short factual transcriptions only; independently re-read by S-A182C7CC on 2026-10-23 UTC (date-level precision only)",
       "access": "fetched",
       "relevantChunks": [
         0
@@ -1383,7 +1385,8 @@
         "stone": "Natural Diamond 0.94 Ct.",
         "weight": "Approximate Metal Weight: 3.80 grams",
         "price": "Now: US$3,004.00"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "sar-145362",
@@ -1400,7 +1403,8 @@
         "stone": "Natural Diamond 0.50 Ct.",
         "weight": "Approximate Metal Weight: 10.00 grams",
         "price": "Now: US$2,661.00"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "sar-145364",
@@ -1417,7 +1421,8 @@
         "stone": "Natural Diamond 0.50 Ct.",
         "weight": "Approximate Metal Weight: 8.00 grams",
         "price": "Now: US$2,858.00"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "sar-144773",
@@ -1433,7 +1438,8 @@
         "material": "14K Solid Gold",
         "weight": "Approximate Metal Weight: 13.40 grams",
         "price": "Now: US$1,362.00"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "fdj-gr0001",
@@ -1451,7 +1457,8 @@
         "stone": "Lab Grown Diamond 1.37cts",
         "weight": "Weight:1.25 Grams",
         "price": "$1,299.99 USD"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "ss-clara",
@@ -1534,7 +1541,8 @@
         "stone": "Ethically sourced natural salt and pepper diamond, clear lab-created diamond",
         "selected": "14k Yellow Gold",
         "gemstone": "Salt and Pepper Diamond",
-        "json": "\"price\":240800,\"price_min\":240800,\"price_max\":325300,\"price_varies\":true"
+        "json": "\"price\":240800,\"price_min\":240800,\"price_max\":325300,\"price_varies\":true",
+        "variant-price-json": "Official product JSON variant: 14k Yellow Gold / Salt and Pepper Diamond; raw price field 275800."
       },
       "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },

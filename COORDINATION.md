@@ -1545,4 +1545,63 @@ Blank/`null` means *not confirmed*, never zero.
      - `S8637-F14` (low): Live `https://www.factorydirectjewelry.com/contact` contains a malformed `mailto:support@factorydirectjewelry;` href alongside valid `mailto:support@factorydirectjewelry.com`.
 - **Recommendation carried forward:** Always re-open the official primary pages and run hallucination and security checks (`python3 audit/86379ca7/hallucination_security_scanner.py` and `python3 audit/86379ca7/test_scanner.py`) after every review. Automated PASS is not proof of physical purity or seller claims.
 
+## Claim — Session S-A182C7CC (2026-10-23T23:40:29Z UTC) — independent repository review
+
+Platform constraint: this runner is bound to `arena/a182c7cc-gold2`; no other branch or worktree will be created or pushed. The board and audit scope are exclusive to this session; shared catalog, website pages, generators, and workflows are not claimed or edited.
+
+| ID | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| A182-01 | Independent repository review, line-by-line provenance / hallucination scan, and documented findings | done | S-A182C7CC | `audit/a182c7cc/**` |
+| A182-02 | Run security, evidence, build, link, calculator, and browser checks; record exact results and limitations | done | S-A182C7CC | `audit/a182c7cc/**` |
+
+### S-A182C7CC working log
+
+- 2026-10-23T23:40:29Z — Read the existing board before editing. All implementation/data scopes remain untouched; this session claims only `audit/a182c7cc/**` plus this append-only board block. Existing product-price observations are dated; no current price or physical purity will be claimed without direct official-source evidence. Will run the repository's checks and independently test them, record unresolved or unverified items as flagged, and recommend another hallucination pass after review.
+
+### S-A182C7CC scope extension — stale-price integration claim (2026-10-23T23:46:08Z UTC)
+
+The original audit scope remains exclusive. This runner now takes the final-integration follow-up for live price changes after checking the board and remote state: `S-E0D6DD62`'s T-E0-05 still says in progress although PR #38 merged at 20:52:57Z and its last branch commit was 20:55:34Z; it is therefore closed by its own integration record, not overwritten. `S-9B875C81`'s broad integration task is marked done; its re-verification/deployment scope is not active. PR #19 is still open but `CONFLICTING` and its 00:08Z dashboard work was explicitly handed to S-9B875C81, whose dashboard/integration tasks are done; no PR #19 files are treated as an active peer claim. No peer-owned audit folder will be modified.
+
+| ID | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| A182-03 | Integrate official re-observations for assigned product prices and the moving WGC header; preserve evidence, regenerate permitted pages, run final checks, publish from the fixed Arena branch and verify Pages | in progress | S-A182C7CC | `data/catalog.json`, `research/evidence.json`, `data/review.json`, `data/gold-price.json`, `evidence/gold-price.md`, `data/verification-log.json`, generated `explore/**`, `data/site-manifest.json`, `verification.html`, `reports/qa-report.md`, `README.md`, `COORDINATION.md`, `audit/a182c7cc/**` (excluding `data/flags.json`, `flags.html`, and `dashboard/**`) |
+
+- 2026-10-23T23:46:08Z — Claim extended before shared-data edits. Official live checks so far found Menē Rose Ring now displays `$1,325 USD` (previous stored observation `$1,336`) and Menē Knot Ring `$1,442 USD` (previous `$1,454`); the WGC header now renders `$3,995.47/oz`, while its chart still says 22 October 2026 and supplies no timestamp for that moving header. These observations will be dated exactly, the old WGC quote time will remain null, and no inferred weight/purity or purchase approval will be added. The assigned-price pages will be rechecked as a complete set before the shared values are integrated.
+
+### S-A182C7CC scope extension — generated root QA summary
+
+Prior root QA report ownership is historical and complete: S-1EB9F828 T-1EB-03 and S-9B875C81 S9B8-T5 are both marked done; no active peer claim remains for this artifact. This runner adds the generated report to the already-claimed integration scope so the root dashboard's QA summary can reflect the final data/build checks.
+
+| ID | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| A182-04 | Refresh root QA report and dashboard summary from final audited data, then validate generated outputs | done | S-A182C7CC | `reports/qa-report.md` |
+
+- 2026-10-23T23:49:55Z — Claim recorded before any write to `reports/qa-report.md`; write-producing suites will run in a scratch copy first.
+
+### S-A182C7CC scope resolution after PR #45
+
+`main` advanced to `e34d10c` when PR #45 from S-1B04074F merged at 2026-10-23T23:47:40Z. Its board still shows T-1B0-02/03/04 in progress, and its last branch commit was 23:45:32Z; no idle handoff is assumed. T-1B0-04 explicitly claims `data/flags.json` and `flags.html`, so A182-03 will not edit either file and will not copy/regenerate `flags.html`. The PR already integrated the WGC `$3,995.47/oz` observation; this session's direct fetch independently agrees, so no duplicate gold-price JSON/dashboard edit is planned. The current spot timestamp limitation remains F-026. A182-03 continues only on its other claimed paths, and the final scratch build will be copied into root outputs excluding `flags.html` and all `dashboard/**` files.
+
+- 2026-10-23T23:51:30Z — Scope narrowed before any shared data/page edit. The recent S-1B04074F claim is respected without waiting on or modifying its audit/flag outputs. Its work is treated as already integrated at PR #45; further product-price changes are limited to rows where this session's direct official-page checks found new or confirmatory values.
+
+### S-A182C7CC scope extension — QA host allowlist correction (2026-10-23)
+
+After the scratch build reached the final QA audit, `tools/qa.py` reported exactly two failures for the new Menē verification-log entries: the canonical official host `mene.com` is not in the scanner's hard-coded official-host allowlist. This is an allowlist coverage defect, not a product-source mismatch: both direct official product pages were fetched, and the exact canonical URLs are present in the evidence records. Board review found no active claim on `tools/qa.py`; earlier shared-QA edits are marked done. To avoid suppressing valid A182 evidence, this session claims a narrow correction to the allowlist and will rerun the complete QA audit. No data, generated page, flag, dashboard, or other session's audit folder is added to this scope.
+
+| ID | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| A182-05 | Permit the directly verified canonical Menē host in the root QA verification-log host allowlist; validate all checks | done | S-A182C7CC | `tools/qa.py` |
+
+### S-A182C7CC integration checkpoint after PR #55
+
+- `origin/main` advanced to `86d6f33` after PR #55 from S-C74095E5 merged. Its two Sarraf records, official-source evidence, audit artifacts, cross-register findings and companion-dashboard work are preserved; this integration does not rewrite those records. C740's documentation-only PR #58 then merged as `00dc5b4`, marking its tasks done and recording the Pages build/read-back for `86d6f33`; the latest main update contains no data changes. S-F3B0B698's F3-04 block remains in progress and is not edited here.
+- A182's dated price snapshots remain separate verification-log entries. The merged catalog is retained, with A182 date-only observation dates added only where the stored price observation predated 2026-10-23; more precise same-day timestamps already present are preserved. The Menē earlier-price quotes are retained as source history.
+- Scratch builds and tests may read the full repository, but copied outputs exclude `data/flags.json`, `flags.html`, and all `dashboard/**` files.
+
+### S-A182C7CC merged-main validation checkpoint (2026-10-24 UTC)
+
+- PR #55 from S-C74095E5 was already merged when checked; the resulting data commit was `86d6f33` (46 products / 88 sources / 29 findings / two new Sarraf rows / 42 root flags), and its peer audit/dashboard work was preserved. C740's docs-only PR #58 subsequently moved `origin/main` to `00dc5b4` and recorded the Pages read-back; it made no data changes. This session did not modify C740's or S-F3B0B698's coordination blocks.
+- A182's 18 verification records were merged with the 41-entry main log. Current log: 59 entries; catalog: 46 products, 19 assigned prices, 27 blank prices. A182's own 17-row scanner and 5 mutation tests pass.
+- Final merged-snapshot gates: `npm run check` PASS (23/23 tests, links/security/browser/axe and npm audit); root QA PASS 12/0/3; calculator PASS; snapshot audit 0 findings / 14 arithmetic controls. Independent scanner results and known stale-count/mutation-fixture exceptions are documented in `audit/a182c7cc/FINAL_AUDIT.md`.
+- A182-01, A182-02, A182-04 and A182-05 are complete. A182-03 remains in progress until its own PR is merged and Pages is verified; no deployment is claimed yet.
 

@@ -1,6 +1,6 @@
 # QA / hallucination and integration audit
 
-- Generated: 2026-10-24 00:21:24 UTC
+- Generated: 2026-10-24 00:39:34 UTC
 - Items audited: 32 · retailers: 10 · flags: 42 · field-scoped quotes: 613
 - **RESULT: PASS** — 12 checks, 0 failures, 3 warnings
 
@@ -16,9 +16,9 @@
 | 6 | Blank states are flagged and item/retailer flag references are bidirectional | ✅ PASS | 0 |
 | 7 | Rejected snippets and superseded gold quotes are not current values | ✅ PASS | 0 |
 | 8 | Nominal fine-gold and melt calculations use current constants | ✅ PASS | 0 |
-| 9 | Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure (1561 link occurrences, 525 external). External retrieval is documented separately; future availability is not guaranteed. | ✅ PASS | 0 |
+| 9 | Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure (1579 link occurrences, 543 external). External retrieval is documented separately; future availability is not guaranteed. | ✅ PASS | 0 |
 | 10 | Coverage limitations remain visible | ✅ PASS | 0 |
-| 11 | Dated verification log, analysis arithmetic, and derived shell counts (41 logged records) | ✅ PASS | 0 |
+| 11 | Dated verification log, analysis arithmetic, and derived shell counts (59 logged records) | ✅ PASS | 0 |
 | 12 | Combined register covers every root URL, shell claims are derived, and flag counts/derived melt values are controlled | ✅ PASS | 0 |
 
 ## Failures

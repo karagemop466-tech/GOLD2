@@ -93,7 +93,7 @@
         "mene-knot",
         "mene-terms"
       ],
-      "finding": "The reviewed pages show USD amounts but no primary-product grams or bound size. Terms permit up to 1g variation for Crafted-on-Demand pieces and a final-price adjustment. Cancellation after shipment or more than 24 hours can incur up to a 10% restocking fee. The return window is not confirmed in captured clauses.",
+      "finding": "Direct official-page reads on 2026-10-23 now show Men\u0113 Rose Ring at $1,325 USD and Knot Ring at $1,442 USD; the earlier same-day $1,336 and $1,454 observations are preserved as superseded history. Both pages identify 24k gold and Crafted-on-Demand, but no buyer size or primary-product grams are bound. Terms permit up to 1g variation and a final-price adjustment. Cancellation after shipment or more than 24 hours can incur up to a 10% restocking fee. The return window is not confirmed in captured clauses.",
       "action": "Get the final size, weight, total price and applicable return policy before ordering. Buyback is a separate, conditional transaction, not a guaranteed recovery of purchase price."
     },
     {
@@ -218,7 +218,7 @@
         "wgc-panel-review",
         "jm-gold"
       ],
-      "finding": "Earlier sessions recorded a WGC header value with a 22 October quote-date label while the chart said data as of 21 October. The current moving header differs again. Chart metadata and a header price are separate panels; neither the retrieval date nor the chart date proves the header quote timestamp.",
+      "finding": "The World Gold Council page renders a moving spot header without a quote timestamp. The 2026-10-23 date-level re-read displayed $3,995.47 USD/oz while the chart stated \u201cData as of 22 October, 2026\u201d; an earlier same-day header observation is retained in the superseded-price history in data/gold-price.json and evidence/gold-price.md. Neither the retrieval date nor the chart date proves the header quote timestamp. The observation is dated, not represented as live.",
       "action": "Keep an unknown source quote-as-of date blank, distinguish it from the observation date, and preserve the discrepancy. The expanded calculator uses its separately identified dated dealer body/table reference, not an inferred WGC timestamp."
     },
     {
@@ -256,7 +256,7 @@
         "jm-gold",
         "wgc-panel-review"
       ],
-      "finding": "Direct official-page fetches on 2026-10-23 replaced earlier dated observations: Men\u0113 Rose Ring $1,346 \u2192 $1,336 and Men\u0113 Knot Ring $1,465 \u2192 $1,454 (both USD, Crafted-on-Demand); Brilliant Earth's Classic Six-Prong setting rendered in a USD locale as $890 (Setting Only) instead of the 2026-10-22 EUR-locale \u20ac990.00; the JM Bullion dealer reference moved from $4,039.76 to $4,035.54 and the World Gold Council moving header changed again within the same day. Each figure is a dated display observation, not a fixed price; nothing was converted between currencies or averaged.",
+      "finding": "The 2026-10-23 follow-up directly re-read all 17 product rows with assigned prices. Men\u0113 Rose Ring moved $1,346 \u2192 $1,336 \u2192 $1,325 USD and Knot Ring $1,465 \u2192 $1,454 \u2192 $1,442 USD; earlier same-day values remain preserved as dated history. Brilliant Earth still renders $890 (Setting Only) with a USD selector. Automic Gold, Sarraf, and Factory Direct Jewelry displayed the previously recorded amounts on their official pages; Automic Gold\u2019s Cushion Signet page displayed $2,758 for 14k Yellow Gold / Salt and Pepper Diamond, and its JSON separately identifies the selected variant and product range. The WGC header was independently re-read at $3,995.47/oz, matching the value already integrated by PR #45, with no quote-as-of time; chart metadata remained 22 October 2026. The dated JM Bullion dealer reference ($4,035.54) was not re-read by this follow-up. No currency was converted, no ranges averaged, and no amount is a checkout total.",
       "action": "Re-open each official page and the cart for the exact configuration before deciding. Treat every amount here as dated, record the observation date with any comparison, and never treat a locale change as an exchange-rate conversion."
     },
     {
