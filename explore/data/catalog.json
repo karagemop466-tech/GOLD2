@@ -2,30 +2,30 @@
   "meta": {
     "schemaVersion": 1,
     "title": "GOLD",
-    "reviewedAt": "2026-10-23T20:00:00Z",
-    "reviewSession": "arena-1eb9f828 integration additions on base records from arena-062f314f",
-    "scope": "44 unique named product pages across 13 retailers verified through 2026-10-23 UTC, covering all root-register and companion-dashboard listings without duplication.",
+    "reviewedAt": "2026-10-23T23:52:00Z",
+    "reviewSession": "arena-c74095e5 evening integration (live re-verification 2026-10-23 23:39–23:59Z) on base records from arena-1eb9f828 / arena-062f314f",
+    "scope": "46 unique named product pages across 13 retailers verified through 2026-10-23 UTC, covering all root-register and companion-dashboard listings without duplication.",
     "pricePolicy": "No hallucinations: never invent prices, specifications, or verification. Null means unverified. Prices are dated observations, not live quotes or checkout totals. Source claims are not independent authentication.",
     "freshnessHours": 24,
     "sourceReviewDays": 30,
     "observationWindow": {
       "start": "2026-10-23T09:56:00Z",
-      "end": "2026-10-23T20:00:00Z"
+      "end": "2026-10-23T23:52:00Z"
     },
     "benchmark": {
       "amount": null,
       "source": "lbma-prices"
     },
     "marketReference": {
-      "amount": 4035.54,
+      "amount": 4009.38,
       "currency": "USD",
       "unit": "troy ounce",
       "side": "dealer body/table ask",
-      "publishedAt": "2026-10-23T09:56:00Z",
-      "observedAt": "2026-10-23T10:00:00Z",
+      "publishedAt": "2026-10-23T23:46:00Z",
+      "observedAt": "2026-10-23T23:52:00Z",
       "source": "jm-gold",
       "quote": "quote",
-      "caveat": "Dated dealer reference, not LBMA and not a live feed. The page's own timestamp is 2026-10-23 05:56 EDT. Calculations are conditional illustrations only."
+      "caveat": "Dated dealer reference, not LBMA and not a live feed. The page's own timestamp is 2026-10-23 19:46 EDT. Calculations are conditional illustrations only."
     }
   },
   "sellers": [
@@ -1034,7 +1034,7 @@
       "seller": "mene",
       "category": "bands",
       "source": "mene-rose",
-      "observedAt": "2026-10-23T10:00:00Z",
+      "observedAt": "2026-10-23T23:52:00Z",
       "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
       "facts": {
         "karat": {
@@ -1054,10 +1054,10 @@
         "fineGoldWeightG": null
       },
       "price": {
-        "amount": 1336,
+        "amount": 1325,
         "currency": "USD",
         "kind": "unbound-display",
-        "observedAt": "2026-10-23T10:00:00Z",
+        "observedAt": "2026-10-23T23:52:00Z",
         "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
         "evidence": [
           {
@@ -1088,7 +1088,7 @@
       "seller": "mene",
       "category": "bands",
       "source": "mene-knot",
-      "observedAt": "2026-10-23T10:00:00Z",
+      "observedAt": "2026-10-23T23:52:00Z",
       "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
       "facts": {
         "karat": {
@@ -1108,10 +1108,10 @@
         "fineGoldWeightG": null
       },
       "price": {
-        "amount": 1454,
+        "amount": 1442,
         "currency": "USD",
         "kind": "unbound-display",
-        "observedAt": "2026-10-23T10:00:00Z",
+        "observedAt": "2026-10-23T23:52:00Z",
         "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
         "evidence": [
           {
@@ -2551,6 +2551,144 @@
       "price": null,
       "reportedWeight": null,
       "flags": []
+    },
+    {
+      "id": "sar-151362",
+      "name": {
+        "value": "14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw",
+        "source": "sar-151362",
+        "quote": "name"
+      },
+      "seller": "sarraf",
+      "category": "natural",
+      "source": "sar-151362",
+      "observedAt": "2026-10-23T23:52:00Z",
+      "scope": "14K Solid Yellow Gold complete ring with 1.00 ct H/SI1 natural diamond",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "sar-151362",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "sar-151362",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "Natural Diamond 1.00 Ct.",
+          "source": "sar-151362",
+          "quote": "stone"
+        },
+        "itemWeightG": {
+          "value": 9.2,
+          "source": "sar-151362",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 8203,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-23T23:52:00Z",
+        "scope": "14K Solid Yellow Gold complete ring with 1.00 ct H/SI1 natural diamond",
+        "evidence": [
+          {
+            "source": "sar-151362",
+            "quote": "price"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 9.2,
+        "max": 9.2,
+        "unit": "g",
+        "basis": "seller-metal",
+        "approximate": true,
+        "evidence": {
+          "source": "sar-151362",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "exact-size-unconfirmed"
+      ]
+    },
+    {
+      "id": "sar-147371",
+      "name": {
+        "value": "14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.",
+        "source": "sar-147371",
+        "quote": "name"
+      },
+      "seller": "sarraf",
+      "category": "natural",
+      "source": "sar-147371",
+      "observedAt": "2026-10-23T23:52:00Z",
+      "scope": "14K Solid Yellow Gold complete ring with 0.98 ct I1 natural diamond (seller states color G in specifications and H in description — unresolved; root flag F-043)",
+      "facts": {
+        "karat": {
+          "value": 14,
+          "source": "sar-147371",
+          "quote": "material"
+        },
+        "solidGold": {
+          "value": true,
+          "source": "sar-147371",
+          "quote": "material"
+        },
+        "stone": {
+          "value": "Natural Diamond 0.98 Ct.",
+          "source": "sar-147371",
+          "quote": "stone"
+        },
+        "itemWeightG": {
+          "value": 7.7,
+          "source": "sar-147371",
+          "quote": "weight"
+        },
+        "netMetalWeightG": null,
+        "declaredPurity": null,
+        "hallmark": null,
+        "makerMark": null,
+        "independentTest": null,
+        "independentInspectionReturnPermission": null,
+        "fineGoldWeightG": null
+      },
+      "price": {
+        "amount": 4049,
+        "currency": "USD",
+        "kind": "displayed-option",
+        "observedAt": "2026-10-23T23:52:00Z",
+        "scope": "14K Solid Yellow Gold complete ring with 0.98 ct I1 natural diamond (seller states color G in specifications and H in description — unresolved; root flag F-043)",
+        "evidence": [
+          {
+            "source": "sar-147371",
+            "quote": "price"
+          }
+        ]
+      },
+      "reportedWeight": {
+        "min": 7.7,
+        "max": 7.7,
+        "unit": "g",
+        "basis": "seller-metal",
+        "approximate": true,
+        "evidence": {
+          "source": "sar-147371",
+          "quote": "weight"
+        }
+      },
+      "flags": [
+        "exact-size-unconfirmed"
+      ]
     }
   ]
 }

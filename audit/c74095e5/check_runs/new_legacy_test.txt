@@ -1,0 +1,1 @@
+PASS calculator: null, invalid, nominal mass and value cases (synthetic test inputs only).

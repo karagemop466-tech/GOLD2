@@ -1,10 +1,10 @@
 {
   "generated_at": "2026-10-23",
   "pass": {
-    "session": "S-1EB9F828",
+    "session": "S-C74095E5",
     "checked_at": "2026-10-23",
     "timezone": "UTC",
-    "method": "Targeted direct fetch_page retrieval on 2026-10-23 of the rows changed by this pass (both Automic Gold products, the Mejuri product and returns FAQ, the Mejuri BBB profile, the Automic currency endpoint) plus the World Gold Council spot page. Changes to other rows in this pass are documentation-only and were not re-read; their entries below retain the earlier dated result.",
+    "method": "Live fetch_page re-verification on 2026-10-23 (23:39–23:59Z) of the World Gold Council spot page, Menē Rose/Knot, Automic Gold (product HTML, Shopify JSON extracts and the cart.js currency endpoint), all stored Sarraf rows plus two newly added Sarraf solitaires (SAR-151362, SAR-147371), Factory Direct Jewelry GR0001, Brilliant Earth BE121H6, the Mejuri natural-diamond eternity page, the VRAI configurator, Stone and Strand, Catbird, Quince, Auvere, Zales V-19957449, all five dashboard Blue Nile item IDs, and 16 CFR 23.3. Rows not re-read in this pass are listed in audit/c74095e5/live_verification_2026-10-23.md §9 and keep their earlier dated entries.",
     "rule": "A stored value is reused only if the official page rendered it again during the pass that recorded it. Rows not re-read this pass are marked not_re_read or keep their earlier checked_at. No value is inferred, averaged, converted, or copied from a search snippet.",
     "limits": "A successful retrieval is not an assay, not a hallmark check, and not proof of stock or future price. Pages can change after this pass."
   },
@@ -339,11 +339,11 @@
       "checked_at": "2026-10-23",
       "status": "verified_correction",
       "observed": [
-        "3,996.31",
+        "3,995.47",
         "Data as of 22 October, 2026",
         "Market Data: Provided by ICE Data Services."
       ],
-      "note": "Evening re-read on 2026-10-23 replaced the earlier same-day header observation. The header is moving; quote_date stays null because it carries no timestamp (F-026). The earlier value is retained only as superseded history."
+      "note": "Evening re-read on 2026-10-23 (about 23:40Z) replaced the earlier same-day header observation. The header is moving; quote_date stays null because it carries no timestamp (F-026). Superseded values are retained only as history in data/gold-price.json."
     },
     {
       "id": "BLUENILE-RETURNS",
@@ -611,6 +611,36 @@
       ],
       "note": "Live page no longer matches the stored Petite Micropavé record. The amount is recorded as what the page shows, NOT as this row's price; the row's price stays blank and the discrepancy is published as F-041/F-042.",
       "session": "S-305FDD02"
+    },
+    {
+      "id": "SAR-151362",
+      "kind": "listing",
+      "label": "14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw",
+      "retailer": "Sarraf Jewelry Inc.",
+      "url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "14K Solid Gold",
+        "Approximate Metal Weight: 9.20 grams",
+        "Now: US$8,203.00"
+      ],
+      "note": "New row added 2026-10-23 by S-C74095E5 from the official Sarraf product page: explicit 14K Solid Gold, 9.20 g metal weight, US$8,203.00."
+    },
+    {
+      "id": "SAR-147371",
+      "kind": "listing",
+      "label": "14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.",
+      "retailer": "Sarraf Jewelry Inc.",
+      "url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "14K Solid Gold",
+        "Approximate Metal Weight: 7.70 grams",
+        "Now: US$4,049.00"
+      ],
+      "note": "New row added 2026-10-23 by S-C74095E5 from the official Sarraf product page: explicit 14K Solid Gold, 7.70 g metal weight, US$4,049.00. Diamond color conflict G (specifications) vs H (description) flagged F-043."
     }
   ]
 }

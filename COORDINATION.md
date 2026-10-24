@@ -32,6 +32,27 @@ duplicated or merged by this session.
 - Standing rule re-affirmed: **run the hallucination/security pass after every review change and keep looking for
   hallucinations.** Blank = unverified, never zero or estimated. No price, weight, karat or policy value is
   published without a field-scoped excerpt from an official page actually retrieved in the pass that records it.
+- 2026-10-24 00:0xZ — Evening integration applied by `audit/c74095e5/apply_integration_2026_10_23.py` (asserts
+  before every edit; two post-run fixes: flag `type` field, F-044 retailer scope). Changes, each traced to
+  `audit/c74095e5/live_verification_2026-10-23.md`: WGC header $3,996.31 → **$3,995.47** (3,996.31 kept only as
+  superseded history); JM Bullion Ask $4,035.54 → **$4,009.38** (page stamp 2026-10-23 19:46 EDT); Menē Rose
+  $1,336 → **$1,325**, Knot $1,454 → **$1,442**; two new Sarraf solitaires **SAR-151362** ($8,203, 9.20 g) and
+  **SAR-147371** ($4,049, 7.70 g) added to root (30→32), explore (44→46) and dashboard (26→28) — SAR-147371
+  color contradiction G (spec) vs H (description) = new flags **F-043/DF-009**; companion-dashboard identity
+  defects corrected (3 dead URLs, 5 slug-derived Blue Nile names, 5 unsupported USD prices now blank with
+  verbatim displays preserved) = new flags **DF-008/F-044**. Root flags 39→41 (F-001–F-044; gaps F-012, F-040;
+  F-032 merged). **F-031 mis-scope deliberately NOT propagated** to the new Sarraf rows (published irregularity,
+  not silently unlinked). Zero physical/XRF verification and zero purchase approvals as before.
+- Checks after integration (outputs in `audit/c74095e5/check_runs/new_*`): root build 13p + `tools/qa.py`
+  12/0/3 PASS; explore build 13p (46 products/87 sources) + verify 46/87/28, 0 approvals; `node --test` 23/23
+  (three count literals 44→46 updated); dashboard build 14p/28 rings/9 flags + P1–P8 PASS + calc-test PASS
+  (spot recomputed at $3,995.47); legacy build/audit/test PASS; check-links 46p PASS; security 46p PASS;
+  prior scanners 8c810c15 (212 controls), b200a880 (4,570), 9b875c81 (2,107) PASS; session independent
+  scanner 35 checks PASS; mutation controls M1–M3/M4b fail as designed (M4 dashboard-quote mutation is
+  structurally undetectable because `dashboard/evidence/rings.md` is generated from the quotes — the dated
+  live record + root register remain the truth anchor). Full rebuild byte-reproducible. Local preview on
+  `0.0.0.0:8000` returned 200 for root/dashboard/explore with derived counts 32 entries / 41 flags rendered.
+  **PR #19 remains `needs review` (non-blocking), not merged or closed by this session.**
 
 ### Integration record (S-E0D6DD62)
 

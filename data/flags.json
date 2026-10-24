@@ -6,8 +6,8 @@
       "id": "F-001",
       "severity": "high",
       "type": "checklist_gap",
-      "title": "Item-specific “solid gold” wording is not stated on 17 of 30 items",
-      "detail": "No item-specific title or specification explicitly describes 17 of the 30 listed settings/rings as “solid gold” (the 13 rows on Explicit Solid Gold do state explicit solid 14K–24K gold). Karat wording alone is not substituted for that checklist requirement. A page-wide “solid gold” phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
+      "title": "Item-specific “solid gold” wording is not stated on 17 of 32 items",
+      "detail": "No item-specific title or specification explicitly describes 17 of the 32 listed settings/rings as “solid gold” (the 15 rows on Explicit Solid Gold do state explicit solid 14K–24K gold). Karat wording alone is not substituted for that checklist requirement. A page-wide “solid gold” phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -54,7 +54,7 @@
       "severity": "high",
       "type": "checklist_gap",
       "title": "Physical hallmark and maker’s mark are not documented",
-      "detail": "None of the 30 captured product pages documents both a physical karat stamp inside the band and a registered maker’s/manufacturer’s mark (FDJ-GR0001 states “Karat stamped inside the band.” without a maker’s mark; the other 29 omit both). Stock numbers, styles, and URL identifiers are not physical hallmarks.",
+      "detail": "None of the 32 captured product pages documents both a physical karat stamp inside the band and a registered maker’s/manufacturer’s mark (FDJ-GR0001 states “Karat stamped inside the band.” without a maker’s mark; the other 31 omit both). Stock numbers, styles, and URL identifiers are not physical hallmarks.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -85,7 +85,9 @@
         "SS-CLARA",
         "SS-RITA",
         "SS-MIA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [],
       "sources": [
@@ -126,8 +128,8 @@
       "id": "F-003",
       "severity": "high",
       "type": "unverified",
-      "title": "Metal weight in grams is unpublished on 23 of 30 product pages",
-      "detail": "Only 7 of 30 rows publish seller metal weights in grams (Automic Gold AG-COFFIN-RING 6.10 g and AG-24K 11.00 g, VRAI Classic 4-Prong Dome 2.86 g at size 6, and Sarraf SAR-147370 3.80 g, SAR-145362 10.00 g, SAR-145364 8.00 g, and SAR-144773 13.40 g at size 10). The other 23 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
+      "title": "Metal weight in grams is unpublished on 23 of 32 product pages",
+      "detail": "Only 9 of 32 rows publish seller metal weights in grams (Automic Gold AG-COFFIN-RING 6.10 g and AG-24K 11.00 g, VRAI Classic 4-Prong Dome 2.86 g at size 6, and Sarraf SAR-147370 3.80 g, SAR-145362 10.00 g, SAR-145364 8.00 g, SAR-144773 13.40 g at size 10, SAR-151362 9.20 g, and SAR-147371 7.70 g). The other 23 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -404,7 +406,9 @@
         "SS-CLARA",
         "SS-RITA",
         "SS-MIA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [],
       "sources": [
@@ -445,7 +449,7 @@
       "severity": "low",
       "type": "unverified",
       "title": "Numeric band-width and depth coverage is incomplete",
-      "detail": "Five rows have no numeric band width (four Zales rows plus VRAI, which says only “Standard”). Fifteen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth. All unavailable dimensions remain blank.",
+      "detail": "Six rows have no numeric band width (four Zales rows, VRAI, which says only “Standard”, and SAR-151362). Seventeen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth. All unavailable dimensions remain blank.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -473,7 +477,9 @@
         "SAR-145364",
         "SS-CLARA",
         "SS-RITA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [],
       "sources": [
@@ -629,7 +635,9 @@
         "SS-CLARA",
         "SS-RITA",
         "SS-MIA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [
         "blue-nile",
@@ -768,7 +776,9 @@
         "SS-CLARA",
         "SS-RITA",
         "SS-MIA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [],
       "sources": [
@@ -1051,7 +1061,9 @@
         "SAR-147370",
         "SAR-145362",
         "SAR-145364",
-        "SAR-144773"
+        "SAR-144773",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [
         "sarraf"
@@ -1062,7 +1074,9 @@
         "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/sarraf-jewelry-inc-1216-13041977",
         "https://www.sarraf.com/products/14k-white-gold-solitaire-ring-0-94-ctw.html",
         "https://www.sarraf.com/products/14k-white-gold-mens-solitaire-diamond-ring-1-2-ct.html",
-        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-1-2-ct.html"
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-1-2-ct.html",
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html",
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html"
       ],
       "recommended_action": "Confirm exact gram mass for your ordered finger size in writing prior to purchase, skip engraving before XRF/scale inspection, and pay by credit card."
     },
@@ -1152,6 +1166,57 @@
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238"
       ],
       "recommended_action": "Add an automated check that every verification-log “observed” amount also appears in that row's field_evidence, and that the log's label matches the row's stored name."
+    },
+    {
+      "id": "F-043",
+      "severity": "medium",
+      "type": "irregularity",
+      "title": "Sarraf SAR-147371 contradicts itself on diamond color (G vs H)",
+      "detail": "The SAR-147371 product page captured 2026-10-23 states 'Diamond Color: G' in its specifications and 'I1 in clarity and H in color' in its description. The register records neither color as confirmed; the 0.98 Ct natural-diamond weight, I1 clarity, '14K Solid Gold' wording, 7.70 g metal weight and US$4,049.00 price are stated consistently on the page.",
+      "affected_items": [
+        "SAR-147371"
+      ],
+      "affected_retailers": [
+        "sarraf"
+      ],
+      "sources": [
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html"
+      ],
+      "recommended_action": "Obtain written confirmation of the diamond color (and its grading basis) from Sarraf before purchase; verify the stone independently on arrival."
+    },
+    {
+      "id": "F-044",
+      "severity": "high",
+      "type": "irregularity",
+      "title": "Companion dashboard carried dead/wrong product URLs, wrong Blue Nile names and unsupported USD assignments (corrected 2026-10-23)",
+      "detail": "Live cross-register audit on 2026-10-23 found the companion dashboard (dashboard/) linking three dead product URLs — AG-CUSHION-SIGNET to a 404 lab-grown slug, MJ-BOLD-ETERNITY to a 'Page Not Found' lab-grown slug, and VRAI-CLASSIC-4P to a non-existent configuration path — and showing wrong product names for all five Blue Nile item IDs (194158, 195269, 203348, 315661, 316238): those names came from non-canonical URL slugs while the live pages render different titles (Blue Nile serves the product by item ID regardless of slug). The dashboard also published USD prices for those five settings although no captured Blue Nile page states 'USD'; under the No-Hallucinations Policy the dashboard prices are now blank with the verbatim '$(Setting Price)' displays preserved in notes, matching this register. The root-register rows listed here were themselves verified correct (canonical slugs, live titles, blank prices) and appear only as the cross-reference anchor; dashboard flag DF-008 carries the same correction.",
+      "affected_items": [
+        "AG-CUSHION-SIGNET",
+        "MJ-BOLD-ETERNITY",
+        "VRAI-CLASSIC-4P",
+        "BN-194158",
+        "BN-195269",
+        "BN-203348",
+        "BN-315661",
+        "BN-316238"
+      ],
+      "affected_retailers": [
+        "automic-gold",
+        "blue-nile",
+        "mejuri",
+        "vrai"
+      ],
+      "sources": [
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://mejuri.com/products/bold-diamond-eternity-ring",
+        "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238"
+      ],
+      "recommended_action": "Re-derive product identity from the live page title, never the URL slug, and assign a currency only where the page or a stored currency proof states it."
     }
   ],
   "retrieved_at": "2026-10-23"

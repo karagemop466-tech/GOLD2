@@ -196,7 +196,7 @@ def main() -> int:
 
     log_doc = {
         "verified_date": "2026-10-23",
-        "session": "S-9B875C81",
+        "session": "S-C74095E5",
         "spot_usd_per_troy_oz": ref["spot_usd_per_troy_oz"],
         "counts": {
             "html_pages": len(list(ROOT.glob("*.html"))),

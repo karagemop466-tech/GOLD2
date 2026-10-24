@@ -32,7 +32,7 @@ test('invalid or excessive numbers never produce gold values',()=> {
   assert.equal(calculateScenario({...valid}).ratio,null);
 });
 test('all products block automatic fine-gold and valuation; no gross-weight fallback',()=> {
-  assert.equal(catalog.products.length,44);
+  assert.equal(catalog.products.length,46);
   for (const p of catalog.products) {
     assert.equal(automaticGold(p).fineGrams,null,p.id);
     assert.equal(automaticGold(p).metalValue,null,p.id);

@@ -32,7 +32,7 @@
       "detail": "Most mass-market engagement ring PDPs omit gram weight entirely (`weight_g: null`). Under the No-Hallucinations Policy, missing weights are never estimated from band width.",
       "action": "Request size-specific metal gram weight in writing from customer support before checkout, then verify on an independent jeweler's calibrated scale upon arrival.",
       "sources": [
-        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
         "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/"
       ]
     },
@@ -79,6 +79,28 @@
       "sources": [
         "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3",
         "https://www.gold.org/goldhub/data/gold-prices"
+      ]
+    },
+    {
+      "id": "DF-008",
+      "severity": "high",
+      "title": "Dashboard identity defects corrected 2026-10-23: dead URLs, slug-derived Blue Nile names, unsupported USD (root F-044)",
+      "detail": "Evening live audit (S-C74095E5, 2026-10-23 23:39-23:59Z) found three dead product URLs (AG-CUSHION-SIGNET 404 lab-grown slug, MJ-BOLD-ETERNITY 'Page Not Found' lab-grown slug, VRAI-CLASSIC-4P non-existent configuration path) and wrong names for all five Blue Nile item IDs taken from non-canonical URL slugs \u2014 Blue Nile serves the product by item ID regardless of slug, so the pages rendered different rings than their dashboard names. No captured Blue Nile page states 'USD', so the five dashboard USD prices are now blank with the verbatim '$...(Setting Price)' displays preserved in price notes, matching the root register. Mejuri's live natural-diamond page shows only a 'From$2,900' from-price and stays blank.",
+      "action": "Identity comes from the live page title, never the URL slug; assign a currency only where the page or a stored currency proof states it.",
+      "sources": [
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "https://mejuri.com/products/bold-diamond-eternity-ring",
+        "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893"
+      ]
+    },
+    {
+      "id": "DF-009",
+      "severity": "medium",
+      "title": "Sarraf SAR-147371 diamond color contradiction: G (specifications) vs H (description) (root F-043)",
+      "detail": "The SAR-147371 page captured 2026-10-23 states 'Diamond Color: G' in its specifications and 'I1 in clarity and H in color' in its description. Neither color is published as confirmed on this dashboard.",
+      "action": "Obtain written color confirmation from Sarraf before purchase; verify the stone independently on arrival.",
+      "sources": [
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html"
       ]
     }
   ]

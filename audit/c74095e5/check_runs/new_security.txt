@@ -1,0 +1,1 @@
+PASS static security: 46 HTML pages, 6 runtime files, 106 source files and 4 pinned workflows. Run npm audit separately; no guarantee of complete security.

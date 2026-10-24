@@ -276,7 +276,7 @@
     {
       "id": "sarraf-policy-and-size10",
       "title": "Sarraf internal engraving/warranty conflicts and size-10 gram benchmark",
-      "scope": "sar-147370, sar-145362, sar-145364, sar-144773",
+      "scope": "sar-147370, sar-145362, sar-145364, sar-144773, sar-151362, sar-147371",
       "finding": "Sarraf publishes explicit '14K Solid Gold', 'US$' prices, and separate 'Approximate Metal Weight' in grams, and holds an A+ BBB profile since 1998, but product tabs conflict with /about-sarraf/ on engraved ring returns and SAR-144773's 13.40g mass is benchmarked at size 10.",
       "action": "Confirm exact gram mass for your ring size in writing before checkout and inspect on a calibrated scale + XRF prior to any engraving or resizing.",
       "sources": [
@@ -322,6 +322,29 @@
         "ag-coffin-ring",
         "ag-cushion-signet",
         "mj-bold-eternity"
+      ]
+    },
+    {
+      "id": "reobservation-2026-10-23-evening",
+      "title": "Evening 2026-10-23 re-observation supersedes same-day gold and Menē values",
+      "scope": "mene-rose, mene-knot, jm-gold, data/gold-price.json (root register)",
+      "finding": "A second live pass on 2026-10-23 (23:39–23:59Z) superseded three dated references: JM Bullion dealer Ask $4,035.54 → $4,009.38 (page timestamp 2026-10-23 19:46 EDT); Menē Rose Ring $1,336 → $1,325 and Knot Ring $1,454 → $1,442; and the root register's World Gold Council header $3,996.31 → $3,995.47 (chart data as of 22 October 2026). Superseded amounts remain only in dated notes/history, never as current values.",
+      "action": "Treat all gold-linked display prices as dated snapshots; re-read the official page before any purchase decision.",
+      "sources": [
+        "jm-gold",
+        "mene-rose",
+        "mene-knot",
+        "wgc-panel-review"
+      ]
+    },
+    {
+      "id": "sar-147371-color-conflict",
+      "title": "Sarraf SAR-147371 states diamond color G and H on the same page",
+      "scope": "sar-147371",
+      "finding": "The SAR-147371 product page states 'Diamond Color: G' in its specifications and 'I1 in clarity and H in color' in its description. Neither color is recorded as confirmed; see root flag F-043.",
+      "action": "Obtain written confirmation of the diamond color from Sarraf before purchase and verify the stone independently on arrival.",
+      "sources": [
+        "sar-147371"
       ]
     }
   ]

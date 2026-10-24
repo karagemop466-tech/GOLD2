@@ -14,7 +14,7 @@
 
 **URL:** https://www.gold.org/goldhub/data/gold-prices
 
-**Retrieved:** 2026-10-23 (UTC). This is the later of two direct fetches of the same page on that day.
+**Retrieved:** 2026-10-23 (UTC). This is the latest direct fetch of the same page on that day (evening pass, about 23:40Z).
 
 ### `usd_per_troy_oz`
 
@@ -25,7 +25,7 @@ USD
 
 -
 
-3,996.31
+3,995.47
 Last Updated
 ```
 
@@ -57,6 +57,7 @@ that retrieval are recorded. This is F-026.
 
 | Value (USD/oz) | Retrieved | Chart date on that page | Status | Why it is not current |
 | --- | --- | --- | --- | --- |
+| 3,996.31 | 2026-10-23 | 2026-10-22 | `superseded_moving_header` | Earlier same-day fetch of the same moving header; superseded by the evening re-read (3,995.47). |
 | 4,024.45 | 2026-10-23 | 2026-10-22 | `superseded_intraday` | Earlier same-day fetch of the same moving header. A later fetch displayed a different value with the same chart date. |
 | 4,028.53 | 2026-10-22 | 2026-10-21 | `superseded_moving_header` | Prior-day moving-header observation. |
 | 4,024.36 | 2026-10-22 | 2026-10-21 | `superseded_intraday` | Earlier same-day capture on 2026-10-22. |
@@ -120,6 +121,10 @@ No free LBMA fix is claimed. This limitation is recorded as F-013.
 - The result is not an appraisal, resale quote, refiner payout, or fair-retail estimate.
 - The reference moves intraday. Any figure computed from it is a conditional illustration stamped with the
   observation date, never a current retail or scrap price.
+
+## Revision note — 2026-10-23 (evening)
+
+Session S-C74095E5 re-read the same page at about 23:40Z; the header displayed 3,995.47 with the same chart date (22 October 2026). The 3,996.31 observation moved to the history table above; no other quoted text, URL, or stored value in this file changed.
 
 ## Revision note — 2026-10-23
 

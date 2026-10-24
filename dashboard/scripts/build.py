@@ -29,7 +29,7 @@ DATA_DIR = DASH_DIR / "data"
 EVIDENCE_DIR = DASH_DIR / "evidence"
 
 TROY_OZ_G = Decimal("31.1034768")
-SPOT_USD = Decimal("3996.31")
+SPOT_USD = Decimal("3995.47")
 VERIFIED_DATE = "2026-10-23"
 EXPLORE_PRODUCTS = len(json.loads((REPO_ROOT / "data" / "catalog.json").read_text(encoding="utf-8"))["products"])
 
@@ -44,13 +44,13 @@ CATEGORIES = [
 
 GOLD_REFERENCE = {
     "retrieved_at": VERIFIED_DATE,
-    "spot_usd_per_troy_oz": 3996.31,
+    "spot_usd_per_troy_oz": 3995.47,
     "chart_as_of_date": "2026-10-22",
     "quote_timestamp_confirmed": False,
     "usd_per_fine_gram": round(float(SPOT_USD / TROY_OZ_G), 6),
     "spot_source_name": "World Gold Council — Goldhub Gold Prices",
     "spot_source_url": "https://www.gold.org/goldhub/data/gold-prices",
-    "spot_quotes": ["USD /oz - 3,996.31", "Data as of 22 October, 2026"],
+    "spot_quotes": ["USD /oz - 3,995.47", "Data as of 22 October, 2026"],
     "troy_ounce": {
         "grams": 31.1034768,
         "pennyweight_grams": 1.55517384,
@@ -118,7 +118,7 @@ RETAILERS = [
         "site_url": "https://mejuri.com/",
         "contact_url": "https://mejuri.com/pages/contact-us",
         "returns_url": "https://mejuri.com/pages/returns-and-exchanges",
-        "jewelry_notes_url": "https://mejuri.com/products/bold-lab-grown-diamond-eternity-ring",
+        "jewelry_notes_url": "https://mejuri.com/products/bold-diamond-eternity-ring",
         "bbb_url": "https://www.bbb.org/ca/on/toronto/profile/jewelry-stores/mejuri-0107-1347952",
         "contact_summary": "contact@mejuri.com · Toronto & US retail stores",
         "return_window": "30 days (unworn, original packaging; free returns)",
@@ -174,7 +174,7 @@ RETAILERS = [
         "site_url": "https://www.bluenile.com/",
         "contact_url": "https://www.bluenile.com/contact-us",
         "returns_url": "https://www.bluenile.com/policies/returns",
-        "jewelry_notes_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
+        "jewelry_notes_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
         "bbb_url": "https://www.bbb.org/us/wa/seattle/profile/jewelry-stores/blue-nile-inc-1296-22011229",
         "contact_summary": "1-800-242-2728 · service@bluenile.com",
         "return_window": "30 days (free return shipping; maximum 2 complimentary returns/yr)",
@@ -202,7 +202,7 @@ RETAILERS = [
         "site_url": "https://www.vrai.com/",
         "contact_url": "https://www.vrai.com/pages/contact",
         "returns_url": "https://www.vrai.com/pages/returns-exchanges",
-        "jewelry_notes_url": "https://www.vrai.com/engagement-ring/classic-4-prong-solitaire/round-brilliant-yellow-gold-41383090421853",
+        "jewelry_notes_url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
         "bbb_url": "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/vrai-1216-1052398",
         "contact_summary": "hello@vrai.com · Los Angeles, CA",
         "return_window": "30 days unworn (restocking/shipping fees apply per category)",
@@ -272,7 +272,7 @@ FLAGS = [
         "detail": "Most mass-market engagement ring PDPs omit gram weight entirely (`weight_g: null`). Under the No-Hallucinations Policy, missing weights are never estimated from band width.",
         "action": "Request size-specific metal gram weight in writing from customer support before checkout, then verify on an independent jeweler's calibrated scale upon arrival.",
         "sources": [
-            "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
+            "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
             "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
         ],
     },
@@ -321,6 +321,28 @@ FLAGS = [
             "https://www.gold.org/goldhub/data/gold-prices",
         ],
     },
+    {
+        "id": "DF-008",
+        "severity": "high",
+        "title": "Dashboard identity defects corrected 2026-10-23: dead URLs, slug-derived Blue Nile names, unsupported USD (root F-044)",
+        "detail": "Evening live audit (S-C74095E5, 2026-10-23 23:39-23:59Z) found three dead product URLs (AG-CUSHION-SIGNET 404 lab-grown slug, MJ-BOLD-ETERNITY 'Page Not Found' lab-grown slug, VRAI-CLASSIC-4P non-existent configuration path) and wrong names for all five Blue Nile item IDs taken from non-canonical URL slugs — Blue Nile serves the product by item ID regardless of slug, so the pages rendered different rings than their dashboard names. No captured Blue Nile page states 'USD', so the five dashboard USD prices are now blank with the verbatim '$...(Setting Price)' displays preserved in price notes, matching the root register. Mejuri's live natural-diamond page shows only a 'From$2,900' from-price and stays blank.",
+        "action": "Identity comes from the live page title, never the URL slug; assign a currency only where the page or a stored currency proof states it.",
+        "sources": [
+            "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+            "https://mejuri.com/products/bold-diamond-eternity-ring",
+            "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
+        ],
+    },
+    {
+        "id": "DF-009",
+        "severity": "medium",
+        "title": "Sarraf SAR-147371 diamond color contradiction: G (specifications) vs H (description) (root F-043)",
+        "detail": "The SAR-147371 page captured 2026-10-23 states 'Diamond Color: G' in its specifications and 'I1 in clarity and H in color' in its description. Neither color is published as confirmed on this dashboard.",
+        "action": "Obtain written color confirmation from Sarraf before purchase; verify the stone independently on arrival.",
+        "sources": [
+            "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html",
+        ],
+    },
 ]
 
 RINGS = [
@@ -360,6 +382,42 @@ RINGS = [
         "product_url": "https://www.sarraf.com/products/14k-white-gold-mens-solitaire-diamond-ring-1-2-ct.html",
         "quote": "Material: 14K Solid Gold | Approximate Metal Weight: 10.00 grams | Diamond Weight: 0.50 Ct. | Now: US$2,661.00",
         "flags": ["DF-004", "DF-007"],
+    },
+    {
+        "id": "SAR-151362",
+        "retailer_id": "sarraf",
+        "retailer": "Sarraf Jewelry Inc.",
+        "categories": ["solid-gold", "solitaire"],
+        "name": "14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw",
+        "karat": 14,
+        "solid_gold_explicit": True,
+        "hallmark_stated": False,
+        "weight_g": 9.20,
+        "weight_note": "9.20 g metal-only (1.00 Ct. H/SI1 natural diamond separate; no band width stated)",
+        "price_usd": 8203.00,
+        "price_note": "Verified live 2026-10-23: explicit US$8,203.00 complete ring (was US$9,594.00).",
+        "capture_date": VERIFIED_DATE,
+        "product_url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html",
+        "quote": "Material: 14K Solid Gold | Approximate Metal Weight: 9.20 grams | Diamond Weight: 1.00 Ct. | Now: US$8,203.00",
+        "flags": ["DF-004", "DF-007"],
+    },
+    {
+        "id": "SAR-147371",
+        "retailer_id": "sarraf",
+        "retailer": "Sarraf Jewelry Inc.",
+        "categories": ["solid-gold", "solitaire"],
+        "name": "14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.",
+        "karat": 14,
+        "solid_gold_explicit": True,
+        "hallmark_stated": False,
+        "weight_g": 7.70,
+        "weight_note": "7.70 g metal-only · ~10.0 mm wide (0.98 Ct. I1 natural diamond separate; color G vs H conflict — DF-009)",
+        "price_usd": 4049.00,
+        "price_note": "Verified live 2026-10-23: explicit US$4,049.00 complete ring (was US$4,736.00).",
+        "capture_date": VERIFIED_DATE,
+        "product_url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html",
+        "quote": "Material: 14K Solid Gold | Approximate Metal Weight: 7.70 grams | Diamond Weight: 0.98 Ct. | Now: US$4,049.00",
+        "flags": ["DF-004", "DF-007", "DF-009"],
     },
     {
         "id": "SAR-145364",
@@ -445,11 +503,11 @@ RINGS = [
         "weight_g": 2.86,
         "weight_note": "2.86 g setting metal weight at ring size 6 (1.6mm depth)",
         "price_usd": None,
-        "price_note": "Blank: VRAI configurator withholds standalone setting price until lab diamond is chosen.",
+        "price_note": "Blank: VRAI configurator withholds standalone setting price until lab diamond is chosen. Earlier dashboard configuration URL no longer exists — corrected, see DF-008.",
         "capture_date": VERIFIED_DATE,
-        "product_url": "https://www.vrai.com/engagement-ring/classic-4-prong-solitaire/round-brilliant-yellow-gold-41383090421853",
+        "product_url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
         "quote": "18k Yellow Gold | Band depth:1.6mm | Metal weight:2.86g (Ring size 6)",
-        "flags": ["DF-007"],
+        "flags": ["DF-007", "DF-008"],
     },
     {
         "id": "FDJ-GR0001",
@@ -480,11 +538,11 @@ RINGS = [
         "hallmark_stated": False,
         "weight_g": None,
         "weight_note": "Blank in static HTML (sold by metric 24K gram weight; exact grams hydrated client-side)",
-        "price_usd": 1336.00,
-        "price_note": "Verified live 2026-10-23: $1,336.00 USD (updated from $1,346 on 2026-10-22 with spot drift).",
+        "price_usd": 1325.00,
+        "price_note": "Verified live 2026-10-23 (evening re-read): $1,325.00 USD (moved from $1,336 earlier the same day and $1,346 on 2026-10-22 with spot drift).",
         "capture_date": VERIFIED_DATE,
         "product_url": "https://mene.com/products/rose-ring-gold",
-        "quote": "Menē Rose Ring - 24k Gold | pure 24 karat jewelry by gram weight | $1,336",
+        "quote": "Menē Rose Ring - 24k Gold | pure 24 karat jewelry by gram weight | $1,325",
         "flags": ["DF-003", "DF-007"],
     },
     {
@@ -498,11 +556,11 @@ RINGS = [
         "hallmark_stated": False,
         "weight_g": None,
         "weight_note": "Blank in static HTML (sold by metric 24K gram weight; 7-day return window)",
-        "price_usd": 1454.00,
-        "price_note": "Verified live 2026-10-23: $1,454.00 USD (updated from $1,465 on 2026-10-22 with spot drift).",
+        "price_usd": 1442.00,
+        "price_note": "Verified live 2026-10-23 (evening re-read): $1,442.00 USD (moved from $1,454 earlier the same day and $1,465 on 2026-10-22 with spot drift).",
         "capture_date": VERIFIED_DATE,
         "product_url": "https://mene.com/products/knot-ring-gold",
-        "quote": "Knot ring - 24k Gold | pure 24 karat jewelry by gram weight | $1,454",
+        "quote": "Knot ring - 24k Gold | pure 24 karat jewelry by gram weight | $1,442",
         "flags": ["DF-003", "DF-007"],
     },
     {
@@ -546,18 +604,18 @@ RINGS = [
         "retailer_id": "automic-gold",
         "retailer": "Automic Gold",
         "categories": ["solid-gold", "three-stone-vintage"],
-        "name": "Lab-Grown Cushion Diamond Signet Ring (Solid 14k Gold)",
+        "name": "Cushion Diamond Signet Ring (Solid 14k Gold and 950 Platinum)",
         "karat": 14,
         "solid_gold_explicit": True,
         "hallmark_stated": False,
         "weight_g": None,
         "weight_note": "Blank: item weight includes center lab diamond or omitted on PDP.",
         "price_usd": 2758.00,
-        "price_note": "Verified live 2026-10-23: $2,758.00 USD (`cart.js` verified USD).",
+        "price_note": "Verified live 2026-10-23: $2,758.00 USD (`cart.js` verified USD) for the page's default display; the earlier dashboard URL (lab-grown slug) returns 404 — corrected, see DF-008. Lab-grown variant price not re-read.",
         "capture_date": VERIFIED_DATE,
-        "product_url": "https://www.automicgold.com/products/lab-grown-cushion-diamond-signet-ring",
-        "quote": "Solid 14k Gold | Lab-Grown Cushion Diamond Signet Ring | $2,758",
-        "flags": ["DF-003", "DF-007"],
+        "product_url": "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+        "quote": "Solid 14k Gold and 950 Platinum | Cushion Diamond Signet Ring | $2,758",
+        "flags": ["DF-003", "DF-007", "DF-008"],
     },
     {
         "id": "AG-SAPPHIRE-RING",
@@ -582,18 +640,18 @@ RINGS = [
         "retailer_id": "mejuri",
         "retailer": "Mejuri",
         "categories": ["solid-gold", "three-stone-vintage"],
-        "name": "Bold Lab Grown Diamond Eternity Ring (Solid 14k White Gold)",
+        "name": "Bold Diamond Eternity Ring (Solid 14k White Gold, Natural Diamond)",
         "karat": 14,
         "solid_gold_explicit": True,
         "hallmark_stated": False,
         "weight_g": None,
         "weight_note": "Blank: gram weight not published on Mejuri PDP (2.6mm band width).",
-        "price_usd": 2900.00,
-        "price_note": "Verified live 2026-10-23: $2,900.00 USD complete ring.",
+        "price_usd": None,
+        "price_note": "Blank: live page 2026-10-23 displays 'From$2,900' (a from-price; no ISO currency captured) — not assigned as a USD amount. Earlier dashboard URL (lab-grown slug) is 'Page Not Found' — corrected, see DF-008.",
         "capture_date": VERIFIED_DATE,
-        "product_url": "https://mejuri.com/products/bold-lab-grown-diamond-eternity-ring",
-        "quote": "Solid White Gold (14k) | 14k solid gold | $2,900",
-        "flags": ["DF-003", "DF-007"],
+        "product_url": "https://mejuri.com/products/bold-diamond-eternity-ring",
+        "quote": "Solid White Gold (14k), Natural Diamond | 14k solid gold | From$2,900",
+        "flags": ["DF-003", "DF-007", "DF-008"],
     },
     {
         "id": "SS-CLARA",
@@ -672,90 +730,90 @@ RINGS = [
         "retailer_id": "blue-nile",
         "retailer": "Blue Nile",
         "categories": ["solitaire", "high-karat"],
-        "name": "Petite Solitaire Engagement Ring Setting in 18k Yellow Gold",
+        "name": "Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold",
         "karat": 18,
         "solid_gold_explicit": False,
         "hallmark_stated": False,
         "weight_g": None,
         "weight_note": "Blank: Blue Nile omits setting gram weight (1.90mm width).",
-        "price_usd": 1125.00,
-        "price_note": "Verified live 2026-10-23: $1,125.00 USD (setting price, excludes center diamond).",
+        "price_usd": None,
+        "price_note": "Blank per No-Hallucinations Policy: live page 2026-10-23 displays '$1,125(Setting Price)' with no 'USD' statement — amount preserved verbatim, currency not assigned (excludes center diamond). Earlier dashboard name came from a non-canonical slug — corrected, see DF-008.",
         "capture_date": VERIFIED_DATE,
-        "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
-        "quote": "Petite Solitaire Engagement Ring in 18k Yellow Gold | $1,125 (Setting Price)",
-        "flags": ["DF-003", "DF-007"],
+        "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
+        "quote": "Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold | $1,125(Setting Price)",
+        "flags": ["DF-003", "DF-007", "DF-008"],
     },
     {
         "id": "BN-195269",
         "retailer_id": "blue-nile",
         "retailer": "Blue Nile",
         "categories": ["solitaire", "high-karat"],
-        "name": "Classic Four-Prong Solitaire Setting in 18k Rose Gold",
+        "name": "Petite Solitaire Engagement Ring in 18k Yellow Gold",
         "karat": 18,
         "solid_gold_explicit": False,
         "hallmark_stated": False,
         "weight_g": None,
         "weight_note": "Blank: Blue Nile omits setting gram weight (1.80mm width).",
-        "price_usd": 1155.00,
-        "price_note": "Verified live 2026-10-23: $1,155.00 USD (setting price).",
+        "price_usd": None,
+        "price_note": "Blank per No-Hallucinations Policy: live page 2026-10-23 displays '$1,155(Setting Price)' with no 'USD' statement — amount preserved verbatim, currency not assigned. Earlier dashboard name came from a non-canonical slug — corrected, see DF-008.",
         "capture_date": VERIFIED_DATE,
-        "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-rose-gold-item-195269",
-        "quote": "Classic Four-Prong Solitaire Engagement Ring in 18k Rose Gold | $1,155 (Setting Price)",
-        "flags": ["DF-003", "DF-007"],
+        "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
+        "quote": "Petite Solitaire Engagement Ring in 18k Yellow Gold | $1,155(Setting Price)",
+        "flags": ["DF-003", "DF-007", "DF-008"],
     },
     {
         "id": "BN-316238",
         "retailer_id": "blue-nile",
         "retailer": "Blue Nile",
-        "categories": ["halo-pave", "budget"],
-        "name": "Petite Micropavé Engagement Ring Setting in 14k White Gold",
+        "categories": ["solitaire", "budget"],
+        "name": "Comfort Fit Solitaire Engagement Ring in 14K White Gold By James Allen",
         "karat": 14,
         "solid_gold_explicit": False,
         "hallmark_stated": False,
         "weight_g": None,
         "weight_note": "Blank: Blue Nile omits setting gram weight (1.50mm width).",
-        "price_usd": 1240.00,
-        "price_note": "Verified live 2026-10-23 (preserved from S-70B76800): $1,240.00 USD (setting price).",
+        "price_usd": None,
+        "price_note": "Blank per No-Hallucinations Policy: live page 2026-10-23 displays '$1,240(Setting Price)' with no 'USD' statement — amount preserved verbatim, currency not assigned. The live title is a Comfort Fit Solitaire, not the Petite Micropavé named in the slug (root flag F-041) — corrected, see DF-008.",
         "capture_date": VERIFIED_DATE,
         "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238",
-        "quote": "Petite Micropavé Engagement Ring in 14k White Gold | $1,240 (Setting Price)",
-        "flags": ["DF-003", "DF-007"],
+        "quote": "Comfort Fit Solitaire Engagement Ring in 14K White Gold By James Allen | $1,240(Setting Price)",
+        "flags": ["DF-003", "DF-007", "DF-008"],
     },
     {
         "id": "BN-315661",
         "retailer_id": "blue-nile",
         "retailer": "Blue Nile",
         "categories": ["halo-pave"],
-        "name": "French Pavé Halo Engagement Ring Setting in 14k White Gold (1/5 ctw)",
+        "name": "Pavé Contour Diamond Engagement Ring in 14K White Gold By James Allen",
         "karat": 14,
         "solid_gold_explicit": False,
         "hallmark_stated": False,
         "weight_g": None,
         "weight_note": "Blank: Blue Nile omits setting gram weight (1.75mm width).",
-        "price_usd": 2210.00,
-        "price_note": "Verified live 2026-10-23: $2,210.00 USD (setting price).",
+        "price_usd": None,
+        "price_note": "Blank per No-Hallucinations Policy: live page 2026-10-23 displays '$2,210(Setting Price)' with no 'USD' statement — amount preserved verbatim, currency not assigned. Earlier dashboard name came from a non-canonical slug — corrected, see DF-008.",
         "capture_date": VERIFIED_DATE,
-        "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/french-pave-halo-engagement-ring-in-14k-white-gold-1-5-ct-tw-item-315661",
-        "quote": "French Pavé Halo Engagement Ring in 14k White Gold (1/5 ct. tw.) | $2,210",
-        "flags": ["DF-003", "DF-007"],
+        "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
+        "quote": "Pavé Contour Diamond Engagement Ring in 14K White Gold By James Allen | $2,210(Setting Price)",
+        "flags": ["DF-003", "DF-007", "DF-008"],
     },
     {
         "id": "BN-203348",
         "retailer_id": "blue-nile",
         "retailer": "Blue Nile",
-        "categories": ["three-stone-vintage"],
-        "name": "Three-Stone Trellis Engagement Ring Setting in 14k Yellow Gold",
+        "categories": ["solitaire"],
+        "name": "Classic Simple Solitaire Engagement Ring in 14K Yellow Gold",
         "karat": 14,
         "solid_gold_explicit": False,
         "hallmark_stated": False,
         "weight_g": None,
         "weight_note": "Blank: Blue Nile omits setting gram weight (2.40mm width).",
-        "price_usd": 1145.00,
-        "price_note": "Verified live 2026-10-23: $1,145.00 USD (setting price).",
+        "price_usd": None,
+        "price_note": "Blank per No-Hallucinations Policy: live page 2026-10-23 displays '$1,145(Setting Price)' with no 'USD' statement — amount preserved verbatim, currency not assigned. Earlier dashboard name came from a non-canonical slug — corrected, see DF-008.",
         "capture_date": VERIFIED_DATE,
-        "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/three-stone-trellis-engagement-ring-in-14k-yellow-gold-item-203348",
-        "quote": "Three-Stone Trellis Engagement Ring in 14k Yellow Gold | $1,145",
-        "flags": ["DF-003", "DF-007"],
+        "product_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
+        "quote": "Classic Simple Solitaire Engagement Ring in 14K Yellow Gold | $1,145(Setting Price)",
+        "flags": ["DF-003", "DF-007", "DF-008"],
     },
     {
         "id": "Z-20303279",
@@ -801,7 +859,7 @@ CHECKLIST_ITEMS = [
     ("Hallmark + maker's mark", "Under the National Stamping Act (`15 U.S.C. § 297`), any quality mark (`14K`, `750`, etc.) in interstate commerce must be accompanied by the registered manufacturer's trademark.", "https://www.govinfo.gov/app/details/USCODE-2023-title15/USCODE-2023-title15-chap8"),
     ("Ring weight in grams (metal-only)", "Check metal mass in metric grams (`g`), separated from gemstone carats (`1 ct = 0.200 g`). Ultra-light bands (<1.8 g metal) bend or snap easily even when solid 14K.", "https://www.nist.gov/system/files/documents/2017/05/09/Precious-Metals-Conversion-Information-march2015.pdf"),
     ("Seller reputation & verified contact", "Cross-check independent BBB accreditation, customer reviews, 3-year complaint narratives, street address, phone, and email before paying.", "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/sarraf-jewelry-inc-1216-13041977"),
-    ("Price vs raw gold melt value", "Compare retail price against `metal_g × (karat/24) × ($3,996.31 / 31.1034768)`. Any 'solid gold' ring priced near or below raw melt value is an immediate counterfeit/plating red flag.", "https://www.gold.org/goldhub/data/gold-prices"),
+    ("Price vs raw gold melt value", "Compare retail price against `metal_g × (karat/24) × ($3,995.47 / 31.1034768)`. Any 'solid gold' ring priced near or below raw melt value is an immediate counterfeit/plating red flag.", "https://www.gold.org/goldhub/data/gold-prices"),
     ("Return policy & resizing traps", "Confirm a clear 14–100 day return window for full refund and check exclusions on resized, custom, made-to-order, engraved, or >=50%-off Final Sale items.", "https://www.stoneandstrand.com/pages/returns-exchanges"),
     ("Credit card purchase protection", "Always pay by major credit card (never bank wire, crypto, Zelle, or cash transfer) to preserve statutory billing-error and chargeback rights.", "https://www.bluenile.com/policies/returns"),
     ("Save written pre-purchase documentation", "Screenshot the full dated listing URL, karat, gram weight, hallmark statement, invoice specs, and support chat confirmation before ordering.", "https://www.sarraf.com/about-sarraf/"),
@@ -865,7 +923,7 @@ def render_shell(title: str, active: str, body: str, extra_js: list[str] | None 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} · GOLD2 Verified Solid-Gold Dashboard</title>
-<meta name="description" content="Zero-hallucination solid-gold engagement ring research dashboard verified live on 2026-10-23 against official brand pages, WGC spot ($3,996.31/oz), NIST OWM, FTC 16 CFR 23.3, and BBB records.">
+<meta name="description" content="Zero-hallucination solid-gold engagement ring research dashboard verified live on 2026-10-23 against official brand pages, WGC spot ($3,995.47/oz), NIST OWM, FTC 16 CFR 23.3, and BBB records.">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <link rel="stylesheet" href="assets/style.css">
@@ -884,7 +942,7 @@ def render_shell(title: str, active: str, body: str, extra_js: list[str] | None 
   <span class="policy-pill">Strict No-Hallucinations Policy</span>
   <h2 id="no-hallucination-heading">No hallucinations. No invented prices. Verified line by line ({VERIFIED_DATE}).</h2>
   <p>Every value in this dashboard is backed by a dated verbatim excerpt from an official primary source ({VERIFIED_DATE}). Whenever a seller omits gram weight, currency code, or hallmark details — or publishes conflicting specs — the field is left <strong>blank (<code>—</code>)</strong> and documented on <a href="flagged.html"><strong>Flagged for Review</strong></a>. <strong>Keep checking for hallucinations after every review pass and site build.</strong></p>
-  <p class="sub">Spot reference: <strong>$3,996.31 / troy oz</strong> ($128.48 / fine g · WGC chart as of 22 Oct 2026, retrieved {VERIFIED_DATE}) · <a href="../index.html">Root 13-Page Register</a> · <a href="../explore/index.html">{EXPLORE_PRODUCTS}-Item Evidence Explorer</a> · <a href="reference.html">Standards &amp; Logs</a></p>
+  <p class="sub">Spot reference: <strong>$3,995.47 / troy oz</strong> ($128.46 / fine g · WGC chart as of 22 Oct 2026, retrieved {VERIFIED_DATE}) · <a href="../index.html">Root 13-Page Register</a> · <a href="../explore/index.html">{EXPLORE_PRODUCTS}-Item Evidence Explorer</a> · <a href="reference.html">Standards &amp; Logs</a></p>
 </section>
 {body}
 </div></main>
@@ -934,7 +992,7 @@ def render_rings_table(rings: list[dict]) -> str:
     return (
         '<div class="table-wrap"><table><thead><tr>'
         "<th>Listing &amp; Seller</th><th>Purity &amp; Solid Claim</th><th class=\"num\">Metal Weight (g)</th>"
-        "<th class=\"num\">Observed Price</th><th class=\"num\">Fine Gold &amp; Melt ($3,996.31/oz)</th>"
+        "<th class=\"num\">Observed Price</th><th class=\"num\">Fine Gold &amp; Melt ($3,995.47/oz)</th>"
         "<th>Official Source &amp; Audit</th>"
         "</tr></thead><tbody>" + "".join(rows_html) + "</tbody></table></div>"
     )
@@ -994,7 +1052,7 @@ def main() -> int:
     index_body = f"""
 <div class="eyebrow">Executive Research Overview · Live Verified {VERIFIED_DATE}</div>
 <h1>Solid Gold Engagement Ring Buying Guide &amp; Verified Price-to-Melt Dashboard</h1>
-<p class="lead">Auditing <strong>{len(RINGS)} primary official listings</strong> across <strong>{len(RETAILERS)} jewelry sellers</strong> against our 12-point solid-gold buying checklist, NIST precious-metals conversion constants, and live World Gold Council bullion pricing (<strong>$3,996.31 / troy oz</strong>).</p>
+<p class="lead">Auditing <strong>{len(RINGS)} primary official listings</strong> across <strong>{len(RETAILERS)} jewelry sellers</strong> against our 12-point solid-gold buying checklist, NIST precious-metals conversion constants, and live World Gold Council bullion pricing (<strong>$3,995.47 / troy oz</strong>).</p>
 
 <div class="grid g4">
   <div class="card"><div class="stat-val">{len(RINGS)}</div><div class="stat-lbl">Primary official listings audited ({VERIFIED_DATE})</div></div>
@@ -1066,7 +1124,7 @@ def main() -> int:
             f'<td>{ext(GOLD_REFERENCE["spot_source_url"], "WGC Spot")} · {ext(GOLD_REFERENCE["troy_ounce"]["sources"][1], "NIST PDF")}</td></tr>'
         )
     calc_body = f"""
-<div class="eyebrow">NIST OWM Metrology · Spot $3,996.31 / oz t ({VERIFIED_DATE})</div>
+<div class="eyebrow">NIST OWM Metrology · Spot $3,995.47 / oz t ({VERIFIED_DATE})</div>
 <h1>Solid Gold Weight, Gemstone Mass Deduction &amp; Melt Value Calculator</h1>
 <p class="lead">Compute exact pure fine-gold content and theoretical bullion melt value from grams (<code>g</code>), pennyweights (<code>dwt</code>), or troy ounces (<code>ozt</code>). When weighing a complete diamond ring on a local jeweler's scale, enter total stone carats (<code>1 ct = 0.200 g</code>) to avoid counting diamond mass as gold.</p>
 <div class="card">
@@ -1075,7 +1133,7 @@ def main() -> int:
     <div><label class="field-label" for="calc-unit">Unit (NIST Exact)</label><select id="calc-unit"><option value="g" selected>Grams (g)</option><option value="dwt">Pennyweights (dwt · 1.55517384g)</option><option value="ozt">Troy Ounces (ozt · 31.1034768g)</option></select></div>
     <div><label class="field-label" for="calc-karat">Stamped Karat</label><select id="calc-karat"><option value="10">10K (41.67%)</option><option value="14" selected>14K (58.33%)</option><option value="18">18K (75.00%)</option><option value="22">22K (91.67%)</option><option value="24">24K (100.00%)</option></select></div>
     <div><label class="field-label" for="calc-stone-ct">Deduct Set Stones (ct)</label><input id="calc-stone-ct" type="number" min="0" step="0.01" value="0"></div>
-    <div><label class="field-label" for="calc-spot">Gold Spot (USD / ozt)</label><input id="calc-spot" type="number" min="1" step="0.01" value="3996.31"></div>
+    <div><label class="field-label" for="calc-spot">Gold Spot (USD / ozt)</label><input id="calc-spot" type="number" min="1" step="0.01" value="3995.47"></div>
     <div><label class="field-label" for="calc-ask">Retail Price (USD, optional)</label><input id="calc-ask" type="number" min="0" step="0.01" value="3004.00"></div>
   </div>
   <div class="preset-row">{preset_buttons}<button type="button" class="preset-btn" data-preset-weight="1.25" data-preset-karat="14" data-preset-stone="1.37" data-preset-ask="1299.99">FDJ-GR0001 Gross Check: 1.25g − 1.37ct ($1,299.99)</button></div>
@@ -1089,7 +1147,7 @@ def main() -> int:
   <p id="calc-status" class="note-box"></p>
 </div>
 
-<h2>2026-10-23 Karat Reference Table at $3,996.31 / Troy Ounce</h2>
+<h2>2026-10-23 Karat Reference Table at $3,995.47 / Troy Ounce</h2>
 <div class="table-wrap"><table><thead><tr><th class="num">Karat</th><th class="num">Nominal Purity</th><th class="num">Melt / Gram Alloy</th><th class="num">4.00 g Ring Melt</th><th class="num">8.00 g Ring Melt</th><th>Official Standards</th></tr></thead><tbody>{karat_table_rows}</tbody></table></div>
 """
     (DASH_DIR / "calculator.html").write_text(render_shell("NIST Melt Calculator", "calculator", calc_body, extra_js=["calculator.js"]), encoding="utf-8")
@@ -1148,7 +1206,7 @@ def main() -> int:
 <p class="lead">Every build executes automated provenance, link-integrity, CSP/XSS security, WCAG 2.1 AA contrast, and NIST Decimal arithmetic checks — paired with mandatory line-by-line primary page re-reading.</p>
 <div class="note-box"><strong>Ongoing Recommendation:</strong> Automated verification (`PASS`) confirms internal consistency between structured JSON, verbatim evidence quotes, calculator math, and generated HTML — it does <strong>not</strong> guarantee that a physical ring matches a seller's web description. <strong>Continue running hallucination and security passes after every review and edit.</strong></div>
 <div class="table-wrap"><table><thead><tr><th>Standard / Pass</th><th>Specification</th><th>Official Source</th></tr></thead><tbody>
-<tr><td><strong>World Gold Council Spot Gold</strong></td><td><code>$3,996.31 / troy oz</code> (`Data as of 22 October, 2026`, retrieved `{VERIFIED_DATE}`)</td><td>{ext(GOLD_REFERENCE["spot_source_url"], "gold.org/goldhub/data/gold-prices")}</td></tr>
+<tr><td><strong>World Gold Council Spot Gold</strong></td><td><code>$3,995.47 / troy oz</code> (`Data as of 22 October, 2026`, retrieved `{VERIFIED_DATE}`)</td><td>{ext(GOLD_REFERENCE["spot_source_url"], "gold.org/goldhub/data/gold-prices")}</td></tr>
 <tr><td><strong>NIST OWM Mass Constants</strong></td><td><code>1 ozt = 31.1034768 g</code> · <code>1 dwt = 1.55517384 g</code> · <code>1 ct = 0.200 g</code></td><td>{ext(GOLD_REFERENCE["troy_ounce"]["sources"][1], "NIST Precious Metals PDF")}</td></tr>
 <tr><td><strong>FTC Jewelry Guides</strong></td><td><code>16 CFR § 23.3</code> — karat thresholds, hollow/plated disclosures, tolerance footnotes</td><td>{ext("https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3", "eCFR 16 CFR § 23.3")}</td></tr>
 <tr><td><strong>National Stamping Act</strong></td><td><code>15 U.S.C. §§ 294–300</code> — mandatory manufacturer trademark alongside quality marks</td><td>{ext("https://www.govinfo.gov/app/details/USCODE-2023-title15/USCODE-2023-title15-chap8", "GovInfo 15 U.S.C. Ch. 8")}</td></tr>

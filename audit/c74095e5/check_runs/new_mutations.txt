@@ -1,0 +1,12 @@
+Mutation controls (S-C74095E5, run in /tmp/mut copy; real tree untouched)
+M1 root: BN-194158 price=1125.0 currency=USD (fabricated) -> tools/qa.py FAIL
+  [null-coverage] assigned currency has no official currency statement; [html-rows] stale.
+M2 root: SAR-151362 price quote replaced with 'Now: US$1.00' -> tools/qa.py FAIL
+  [evidence] quote absent from evidence file; [field-backing] lacks matching amount/currency evidence.
+M3 explore: mene-rose price.amount=9999 -> scripts/verify.mjs FAIL
+  "mene-rose: price amount is not present in cited passage".
+M4 dashboard: SAR-151362 quote tampered before rebuild -> verify.py PASS by construction
+  (dashboard evidence/rings.md is generated FROM the quote; P8 proves data==generated-evidence only.
+   Truth anchor for dashboard quotes = dated live record audit/c74095e5/live_verification_2026-10-23.md
+   + root register evidence. Documented structural limit, not a silent pass.)
+M4b dashboard: SAR-151362 price_note blanked with assigned price -> verify.py FAIL (P2 invalid price/date).

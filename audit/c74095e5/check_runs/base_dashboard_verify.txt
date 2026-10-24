@@ -1,0 +1,1 @@
+dashboard verify: PASS — passes={'P1-sources': 'PASS', 'P2-prices': 'PASS', 'P3-blanks': 'PASS', 'P4-cross-refs': 'PASS', 'P5-retailers': 'PASS', 'P8-evidence-quotes': 'PASS', 'P6-data-site-sync': 'PASS', 'P7-link-integrity': 'PASS'}

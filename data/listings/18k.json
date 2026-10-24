@@ -38,7 +38,8 @@
         "F-016",
         "F-021",
         "F-024",
-        "F-025"
+        "F-025",
+        "F-044"
       ],
       "notes": "The description states platinum prongs; the 18K yellow-gold description is not applied to that separate component.",
       "depth_mm": null,
@@ -130,7 +131,8 @@
         "F-016",
         "F-021",
         "F-024",
-        "F-025"
+        "F-025",
+        "F-044"
       ],
       "notes": "The official price is labeled Setting Price.",
       "depth_mm": null,
@@ -226,7 +228,8 @@
         "F-020",
         "F-021",
         "F-022",
-        "F-024"
+        "F-024",
+        "F-044"
       ],
       "notes": "Metal weight is published for ring size 6. Width is only described as Standard, so numeric width is blank. No price string appeared in the retrieved text.",
       "depth_mm": 1.6,

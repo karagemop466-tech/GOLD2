@@ -1,0 +1,24 @@
+  PASS valid inputs accepted
+  PASS pure grams exact
+  PASS per-gram value
+  PASS melt value
+  PASS troy constant exact
+  PASS pennyweight constant exact
+  PASS carat constant exact
+  PASS 1 ozt == 20 dwt == $3,995.47 exact
+  PASS SAR-144773 13.40g 14K melt $1,004.11 & 73.72% gold share
+  PASS FDJ-GR0001 gross 1.25g minus 1.37ct (0.274g) = 0.976g net 14K ($73.14)
+  PASS rejects Infinity weight
+  PASS rejects Infinity spot
+  PASS rejects zero weight
+  PASS rejects negative weight
+  PASS rejects NaN weight
+  PASS rejects empty weight
+  PASS rejects text weight
+  PASS rejects zero spot
+  PASS rejects negative spot
+  PASS rejects bad karat 12
+  PASS rejects bad karat 0
+  PASS rejects gem mass exceeds gross ring weight
+  PASS fmt guards non-finite
+calc-test: PASS

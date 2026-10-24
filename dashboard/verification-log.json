@@ -1,12 +1,12 @@
 {
   "verified_date": "2026-10-23",
-  "session": "S-9B875C81",
-  "spot_usd_per_troy_oz": 3996.31,
+  "session": "S-C74095E5",
+  "spot_usd_per_troy_oz": 3995.47,
   "counts": {
     "html_pages": 14,
-    "rings": 26,
+    "rings": 28,
     "retailers": 11,
-    "flags": 7
+    "flags": 9
   },
   "passes": {
     "P1-sources": "PASS",
@@ -14,9 +14,7 @@
     "P3-blanks": "PASS",
     "P4-cross-refs": "PASS",
     "P5-retailers": "PASS",
-    "P8-evidence-quotes": "PASS",
-    "P6-data-site-sync": "PASS",
-    "P7-link-integrity": "PASS"
+    "P8-evidence-quotes": "PASS"
   },
   "status": "PASS",
   "failures": []
