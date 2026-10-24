@@ -110,22 +110,22 @@
       "publisher": "JM Bullion",
       "kind": "dealer-reference",
       "url": "https://www.jmbullion.com/charts/gold-price/",
-      "observedAt": "2026-10-23T10:00:00Z",
-      "method": "fetch_page; short excerpts transcribed and rechecked 2026-10-23 by session S-062F314F",
+      "observedAt": "2026-10-23T23:52:00Z",
+      "method": "fetch_page; short excerpts transcribed and rechecked 2026-10-23 by session S-C74095E5",
       "access": "fetched",
-      "note": "Dealer page header/table on 2026-10-23 05:56 EDT displayed $4,035.54 USD ask, bid $4,021.04, with the page stating \"As of Oct 23, 2026 at 5:56 AM EDT\". Earlier 2026-10-22 observation was $4,039.76. This is a dealer reference, not an LBMA benchmark or live feed.",
+      "note": "Dealer page timestamped 2026-10-23 19:46 EDT (23:46Z) displayed 'Gold Ask $4,009.38' with 'Bid: $3,994.88 Ask: $4,009.38'. Supersedes the same-day 05:56 EDT observation of $4,035.54 (2026-10-22: $4,039.76). This is a dealer reference, not an LBMA benchmark or live feed.",
       "quotes": {
-        "quote": "$4,035.54 USD",
+        "quote": "$4,009.38 USD",
         "units": "A troy ounce of gold is the standard unit of weight equal to 31.1034768 grams",
-        "ask": "Bid: $4,021.04   Ask: $4,035.54",
+        "ask": "Bid: $3,994.88   Ask: $4,009.38",
         "header": "Gold Ask",
-        "header-value": "$4,035.67"
+        "header-value": "$4,009.38"
       },
       "relevantChunks": [
         0,
         1
       ],
-      "lastRecheckedAt": "2026-10-23T10:00:00Z"
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "automic-currency",
@@ -141,7 +141,8 @@
       },
       "relevantChunks": [
         0
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "ag-natural",
@@ -164,7 +165,7 @@
       "relevantChunks": [
         4
       ],
-      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "ag-cluster",
@@ -188,7 +189,7 @@
       "relevantChunks": [
         4
       ],
-      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "ag-petal",
@@ -212,7 +213,7 @@
       "relevantChunks": [
         4
       ],
-      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "ag-ruby",
@@ -234,7 +235,8 @@
       },
       "relevantChunks": [
         4
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "ag-sapphire",
@@ -256,7 +258,8 @@
       },
       "relevantChunks": [
         4
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "ag-moissanite",
@@ -278,7 +281,8 @@
       },
       "relevantChunks": [
         4
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "ag-24k",
@@ -304,7 +308,7 @@
         4,
         5
       ],
-      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "ag-natural-json",
@@ -322,7 +326,8 @@
       },
       "relevantChunks": [
         0
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "automic-returns",
@@ -344,7 +349,7 @@
         3,
         4
       ],
-      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "automic-faq",
@@ -362,7 +367,8 @@
       },
       "relevantChunks": [
         4
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "automic-contact",
@@ -380,7 +386,8 @@
       "relevantChunks": [
         3,
         4
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "cb-odile",
@@ -1507,7 +1514,8 @@
         "weight": "Approximately 6.1g (gold) or 9.2g (platinum)",
         "selected": "14k Yellow Gold",
         "json": "\"price\":191000,\"price_min\":191000,\"price_max\":223300,\"price_varies\":true"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "ag-cushion-signet",
@@ -1527,7 +1535,8 @@
         "selected": "14k Yellow Gold",
         "gemstone": "Salt and Pepper Diamond",
         "json": "\"price\":240800,\"price_min\":240800,\"price_max\":325300,\"price_varies\":true"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "mj-bold-eternity",
@@ -1594,7 +1603,8 @@
       },
       "relevantChunks": [
         0
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "root-ag-cushion",
@@ -1610,7 +1620,8 @@
       },
       "relevantChunks": [
         0
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23T23:52:00Z"
     },
     {
       "id": "root-mj-bold",
@@ -1644,6 +1655,40 @@
         "alloy": "composed throughout of an alloy of gold (i.e., gold that is less than 24 karats)",
         "solid-hollow": "Such products should not be marked or described as \"solid\" or as being solidly of gold or of a gold alloy.",
         "tolerance": "articles or parts made of gold or of gold alloy that contain no solder have a permissible tolerance of three parts per thousand"
+      }
+    },
+    {
+      "id": "sar-151362",
+      "publisher": "Sarraf Jewelry Inc.",
+      "kind": "product",
+      "url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html",
+      "observedAt": "2026-10-23T23:52:00Z",
+      "method": "fetch_page live primary verification by S-C74095E5",
+      "access": "fetched",
+      "note": "New row 2026-10-23: explicit 14K Solid Gold, 9.20 g metal weight, US$8,203.00 (was US$9,594.00).",
+      "quotes": {
+        "name": "14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw",
+        "material": "14K Solid Gold",
+        "stone": "Natural Diamond 1.00 Ct. (Diamond Weight: 1.00 Ct.; Diamond ( Natural / Lab Created ): Natural; Diamond Color: H; Diamond Clarity: SI 1)",
+        "weight": "Approximate Metal Weight: 9.20 grams",
+        "price": "Now: US$8,203.00"
+      }
+    },
+    {
+      "id": "sar-147371",
+      "publisher": "Sarraf Jewelry Inc.",
+      "kind": "product",
+      "url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html",
+      "observedAt": "2026-10-23T23:52:00Z",
+      "method": "fetch_page live primary verification by S-C74095E5",
+      "access": "fetched",
+      "note": "New row 2026-10-23: explicit 14K Solid Gold, 7.70 g metal weight, US$4,049.00 (was US$4,736.00). Diamond color conflict flagged (root F-045).",
+      "quotes": {
+        "name": "14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.",
+        "material": "14K Solid Gold",
+        "stone": "Natural Diamond 0.98 Ct. (Diamond Weight: 0.98 Ct.; Diamond ( Natural / Lab Created ): Natural; Diamond Clarity: I1; Diamond Color: G in specifications vs 'H in color' in description \u2014 unresolved)",
+        "weight": "Approximate Metal Weight: 7.70 grams",
+        "price": "Now: US$4,049.00"
       }
     }
   ]

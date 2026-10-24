@@ -201,6 +201,106 @@
       "canonical_product_id": null
     },
     {
+      "id": "SAR-151362",
+      "retailer_id": "sarraf",
+      "retailer": "Sarraf Jewelry Inc.",
+      "categories": [
+        "solid-gold",
+        "solitaire"
+      ],
+      "name": "14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw",
+      "karat": 14,
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "weight_g": 9.2,
+      "weight_note": "Seller-reported metal weight: 9.20 g. Approximate Metal Weight: 9.20 grams. Not independently weighed.",
+      "price_usd": 8203.0,
+      "price_note": "Dated 2026-10-23 seller display: USD $8,203.00; scope: complete ring. Not a live checkout total.",
+      "unassigned_display": null,
+      "capture_date": "2026-10-23",
+      "product_url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html",
+      "quote": "14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw",
+      "price_quotes": [
+        "Now: US$8,203.00"
+      ],
+      "currency_quotes": [
+        "Now: US$8,203.00"
+      ],
+      "currency_source_url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html",
+      "weight_quotes": [
+        "Approximate Metal Weight: 9.20 grams"
+      ],
+      "weight_source_url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html",
+      "evidence_link": "../evidence/listings/sar-151362.md",
+      "evidence_label": "Canonical item evidence",
+      "verification_status": "verified_solid_gold_and_weight",
+      "flags": [
+        "DF-004",
+        "DF-007"
+      ],
+      "canonical_flags": [
+        "F-002",
+        "F-015",
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-036"
+      ],
+      "review_flags": [],
+      "canonical_product_id": null
+    },
+    {
+      "id": "SAR-147371",
+      "retailer_id": "sarraf",
+      "retailer": "Sarraf Jewelry Inc.",
+      "categories": [
+        "solid-gold",
+        "solitaire"
+      ],
+      "name": "14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.",
+      "karat": 14,
+      "solid_gold_explicit": true,
+      "hallmark_stated": null,
+      "weight_g": 7.7,
+      "weight_note": "Seller-reported metal weight: 7.70 g. Approximate Metal Weight: 7.70 grams. Not independently weighed.",
+      "price_usd": 4049.0,
+      "price_note": "Dated 2026-10-23 seller display: USD $4,049.00; scope: complete ring. Not a live checkout total.",
+      "unassigned_display": null,
+      "capture_date": "2026-10-23",
+      "product_url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html",
+      "quote": "14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.",
+      "price_quotes": [
+        "Now: US$4,049.00"
+      ],
+      "currency_quotes": [
+        "Now: US$4,049.00"
+      ],
+      "currency_source_url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html",
+      "weight_quotes": [
+        "Approximate Metal Weight: 7.70 grams"
+      ],
+      "weight_source_url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html",
+      "evidence_link": "../evidence/listings/sar-147371.md",
+      "evidence_label": "Canonical item evidence",
+      "verification_status": "verified_solid_gold_and_weight",
+      "flags": [
+        "DF-004",
+        "DF-007",
+        "DF-012"
+      ],
+      "canonical_flags": [
+        "F-002",
+        "F-015",
+        "F-016",
+        "F-021",
+        "F-024",
+        "F-036",
+        "F-045"
+      ],
+      "review_flags": [],
+      "canonical_product_id": null
+    },
+    {
       "id": "AG-24K",
       "retailer_id": "automic-gold",
       "retailer": "Automic Gold",

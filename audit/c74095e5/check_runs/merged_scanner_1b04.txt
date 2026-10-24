@@ -1,0 +1,6 @@
+S-1B04074F scanner: 32 root rows, 46 combined products, 88 sources, 42 flags, 40 pages, spot 3,995.47
+  FAIL C13 README states '30' but the data disagrees
+  WARN C04 flags.html mentions a gold spot but not the current 3,995.47
+  WARN C04 explore/calculator/index.html mentions a gold spot but not the current 3,995.47
+RESULT: FAIL — 1 failures, 2 warnings
+LIMITATION: internal traceability only. It cannot prove a retailer page still says what is quoted, nor that any ring is the stated purity. Re-read the official source after every review.

@@ -32,6 +32,8 @@ RING_METADATA = (
     ("SAR-145362", ("solid-gold", "solitaire")),
     ("SAR-145364", ("solid-gold", "solitaire")),
     ("SAR-144773", ("solid-gold", "budget")),
+    ("SAR-151362", ("solid-gold", "solitaire")),
+    ("SAR-147371", ("solid-gold", "solitaire")),
     ("AG-24K", ("solid-gold", "high-karat")),
     ("AG-COFFIN-RING", ("solid-gold",)),
     ("VRAI-CLASSIC-4P", ("solitaire", "high-karat")),
@@ -190,6 +192,8 @@ def special_flags(row_id: str, weight_missing: bool) -> list[str]:
     flags.append("DF-007")
     if row_id == "BN-316238":
         flags.append("DF-008")
+    if row_id == "SAR-147371":
+        flags.append("DF-012")
     return flags
 
 

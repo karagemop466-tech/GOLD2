@@ -2,6 +2,79 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Claim — Session S-C74095E5 (2026-10-23 23:39Z UTC) — fresh verification pass + final integration
+
+Platform constraint: this session is bound to branch `arena/c74095e5-gold2`; no other branch or worktree may be
+created or pushed, so the board's `session-<id>/<task>` naming is recorded as not creatable. Isolation is enforced
+by the file scope below. Claim written and pushed before any data edit. No peer claim is live: the last recorded
+session (S-E0D6DD62) marked its tasks done/merging and its PR #44 is merged; PR #19 (`arena/70b76800-gold2`,
+updated 2026-10-23T00:09Z, >23 h stale) is left untouched and logged below as a needs-review item rather than
+duplicated or merged by this session.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T-C74-01 | Claim the board, record scope & baseline | in progress | S-C74095E5 | `COORDINATION.md`, `audit/c74095e5/**` |
+| T-C74-02 | Clean-tree baseline: all builders/scanners/tests on `ca39632` | unclaimed→S-C74095E5 | S-C74095E5 | `audit/c74095e5/check_runs/**` (outputs only) |
+| T-C74-03 | Fresh live line-by-line re-verification from official pages (gold reference + priced/weighted rows first; not-re-read rows named) | unclaimed→S-C74095E5 | S-C74095E5 | `audit/c74095e5/live_verification_2026-10-23.md`; data edits only where a live official read contradicts a stored value, each with dated evidence |
+| T-C74-04 | Independent hallucination/security scanner + mutation controls, re-run after every review change | unclaimed→S-C74095E5 | S-C74095E5 | `audit/c74095e5/**` |
+| T-C74-05 | New-listing research from official seller pages only (explicit solid gold; blanks stay blank) | unclaimed→S-C74095E5 | S-C74095E5 | additive only: new evidence files + register rows, rebuilt via repo generators |
+| T-C74-06 | Rebuild all registers, broken-link sweep, preview, PR → merge → Pages verification → record | unclaimed→S-C74095E5 | S-C74095E5 | generated artifacts via repo builders, `COORDINATION.md` |
+
+### S-C74095E5 working log
+
+- 2026-10-23 23:39Z — Board + repo read on `ca39632` (merge of PR #44). State measured before editing: root
+  register 30 rows (17 `data/listings/*.json` + 13 `data/solid-gold-verified.json`), combined register 44
+  products / 13 sellers / 85 sources / 26 findings, 39 root flags, dashboard register 26 rings, gold reference
+  $3,996.31/ozt (retrieved 2026-10-23, quote date unconfirmed, F-026). Pages: `built`, legacy `main` `/`,
+  HTTPS enforced. PRs #1–#44 merged except #19 open/stale and #10 closed. **Needs review (does not block):**
+  PR #19's scope (`dashboard/`, BN-316238, Costco retailer record) appears superseded by later merges; this
+  session will verify supersession and log it, not merge or close another session's PR.
+- Standing rule re-affirmed: **run the hallucination/security pass after every review change and keep looking for
+  hallucinations.** Blank = unverified, never zero or estimated. No price, weight, karat or policy value is
+  published without a field-scoped excerpt from an official page actually retrieved in the pass that records it.
+- 2026-10-24 00:0xZ — Evening integration applied by `audit/c74095e5/apply_integration_2026_10_23.py` (asserts
+  before every edit; two post-run fixes: flag `type` field, F-044 retailer scope). Changes, each traced to
+  `audit/c74095e5/live_verification_2026-10-23.md`: WGC header $3,996.31 → **$3,995.47** (3,996.31 kept only as
+  superseded history); JM Bullion Ask $4,035.54 → **$4,009.38** (page stamp 2026-10-23 19:46 EDT); Menē Rose
+  $1,336 → **$1,325**, Knot $1,454 → **$1,442**; two new Sarraf solitaires **SAR-151362** ($8,203, 9.20 g) and
+  **SAR-147371** ($4,049, 7.70 g) added to root (30→32), explore (44→46) and dashboard (26→28) — SAR-147371
+  color contradiction G (spec) vs H (description) = new flags **F-043/DF-009**; companion-dashboard identity
+  defects corrected (3 dead URLs, 5 slug-derived Blue Nile names, 5 unsupported USD prices now blank with
+  verbatim displays preserved) = new flags **DF-008/F-044**. Root flags 39→41 (F-001–F-044; gaps F-012, F-040;
+  F-032 merged). **F-031 mis-scope deliberately NOT propagated** to the new Sarraf rows (published irregularity,
+  not silently unlinked). Zero physical/XRF verification and zero purchase approvals as before.
+- Checks after integration (outputs in `audit/c74095e5/check_runs/new_*`): root build 13p + `tools/qa.py`
+  12/0/3 PASS; explore build 13p (46 products/87 sources) + verify 46/87/28, 0 approvals; `node --test` 23/23
+  (three count literals 44→46 updated); dashboard build 14p/28 rings/9 flags + P1–P8 PASS + calc-test PASS
+  (spot recomputed at $3,995.47); legacy build/audit/test PASS; check-links 46p PASS; security 46p PASS;
+  prior scanners 8c810c15 (212 controls), b200a880 (4,570), 9b875c81 (2,107) PASS; session independent
+  scanner 35 checks PASS; mutation controls M1–M3/M4b fail as designed (M4 dashboard-quote mutation is
+  structurally undetectable because `dashboard/evidence/rings.md` is generated from the quotes — the dated
+  live record + root register remain the truth anchor). Full rebuild byte-reproducible. Local preview on
+  `0.0.0.0:8000` returned 200 for root/dashboard/explore with derived counts 32 entries / 41 flags rendered.
+  **PR #19 remains `needs review` (non-blocking), not merged or closed by this session.**
+- 2026-10-24 — **Merge with advanced main (`8852b8f`, PRs #45–#53) resolved without discarding peer work.**
+  Peer sessions (S-88AA65FD et al.) had independently converged on the WGC $3,995.47 supersession, the
+  Menē $1,325/$1,442 updates and the companion-dashboard identity reconciliation (canonical generation from
+  root data, DF-008 for BN-316238) while this session was in flight. Resolution: peer results kept;
+  only the surviving S-C74095E5 deltas re-applied by `audit/c74095e5/reapply_on_main_2026_10_24.py` —
+  JM Bullion Ask $4,009.38, the two Sarraf rows extended to explore/dashboard (`RING_METADATA`), 32-row
+  flag maintenance, and the SAR-147371 color flag **renumbered F-043→F-045 / DF-009→DF-012** because
+  peers took F-043/F-044 and DF-008..DF-011. My cross-register flag (draft F-044/DF-008) was **dropped**
+  as duplicative of the peer reconciliation. Earlier log lines above that cite draft flag numbers or
+  pre-merge counts (41 flags, DF-008/DF-009) are the historical record of the `ca39632`-based pass and
+  are superseded by this note. Final merged state: root 32 rows / 42 flags (F-001–F-045, gaps F-012,
+  F-040), explore 46 products / 88 sources / 29 findings, dashboard 28 rings / DF-001–DF-012.
+  Full check matrix re-run on the merged tree before merge (see `audit/c74095e5/check_runs/merged_*`):
+  every CI-gated check PASS (qa 12/0/3; explore 46/88/29, 0 approvals; node 23/23; dashboard P1–P10
+  incl. `--check-build`; snapshot audit; 88aa65fd scan; 8c810c15/b200a880/9b875c81 scanners+tests;
+  f03ab52d 9-check audit; session scanner 36 checks; links/security). **Change requests logged, not
+  silently edited:** `audit/86379ca7/hallucination_security_scanner.py` (Check 3 hardcodes 30 root
+  items) and `audit/1b04074f/hallucination_scanner.py` (C13 hardcodes 44/85/30) now fail on the 32/46/88
+  register purely from those literals — owners please derive counts from data. Neither is a CI gate.
+- Second merge (PRs #54/#56, main `a8b2f90`) was audit/coordination-only; conflict was limited to the
+  generated `reports/qa-report.md`, resolved by regenerating it with `tools/qa.py`.
+
 ## Claim — Session S-F3B0B698 (2026-10-23T23:42Z UTC) — independent read-only audit
 
 Platform constraint: this runner is bound to `arena/f3b0b698-gold2`; no alternate task branch or worktree may be created or pushed. Before claiming, the remote branch and open-PR state were inspected. **S-88AA65FD is active** (claim commit `dd788fd`, 2026-10-23T23:39:38Z) and owns live high-risk source re-verification (`audit/88aa65fd/**`), hallucination-driven `data/**`/`README.md` changes, and generated-page integration. This session does not edit or duplicate those scopes. Stale PR #19 and older branches are not reclaimed.

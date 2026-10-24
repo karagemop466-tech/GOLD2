@@ -1,0 +1,15 @@
+  [PASS] C1 catalog product sources exist and are official https
+  [PASS] C2 every non-null fact value and price amount is in its evidence quote
+  [PASS] C3 root register: official https source_url + existing evidence file
+  [PASS] C4 root <-> catalog URL parity (price/weight)
+         32 pairs compared
+  [PASS] C5 gold reference JSON matches evidence and has no unrecorded figure
+         documented non-observational mention(s) (exempt): 4025.54
+  [PASS] C6 derived / assay fields are null unless explicitly evidenced
+  [PASS] C7 no hallmark / maker-mark claim without evidence
+  [PASS] C8 generated HTML renders the headline gold value and product count
+         gold_value_rendered=True product_count_rendered=True
+  [PASS] C9 review findings cite at least one source
+         findings without source: 
+RESULT: PASS — 9 checks, 0 failures, 0 warnings
+report -> /home/user/GOLD2/audit/f03ab52d/hallucination_audit_report.json

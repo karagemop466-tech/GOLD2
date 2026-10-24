@@ -611,6 +611,36 @@
       ],
       "note": "Live page no longer matches the stored Petite Micropav\u00e9 record. The amount is recorded as what the page shows, NOT as this row's price; the row's price stays blank and the discrepancy is published as F-041/F-042.",
       "session": "S-305FDD02"
+    },
+    {
+      "id": "SAR-151362",
+      "kind": "listing",
+      "label": "14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw",
+      "retailer": "Sarraf Jewelry Inc.",
+      "url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "14K Solid Gold",
+        "Approximate Metal Weight: 9.20 grams",
+        "Now: US$8,203.00"
+      ],
+      "note": "New row added 2026-10-23 by S-C74095E5 from the official Sarraf product page: explicit 14K Solid Gold, 9.20 g metal weight, US$8,203.00."
+    },
+    {
+      "id": "SAR-147371",
+      "kind": "listing",
+      "label": "14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.",
+      "retailer": "Sarraf Jewelry Inc.",
+      "url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "14K Solid Gold",
+        "Approximate Metal Weight: 7.70 grams",
+        "Now: US$4,049.00"
+      ],
+      "note": "New row added 2026-10-23 by S-C74095E5 from the official Sarraf product page: explicit 14K Solid Gold, 7.70 g metal weight, US$4,049.00. Diamond color conflict G (specifications) vs H (description) flagged F-045."
     }
   ]
 }

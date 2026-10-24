@@ -6,8 +6,8 @@
       "id": "F-001",
       "severity": "high",
       "type": "checklist_gap",
-      "title": "Item-specific \u201csolid gold\u201d wording is not stated on 17 of 30 items",
-      "detail": "No item-specific title or specification explicitly describes 17 of the 30 listed settings/rings as \u201csolid gold\u201d (the 13 rows on Explicit Solid Gold do state explicit solid 14K\u201324K gold). Karat wording alone is not substituted for that checklist requirement. A page-wide \u201csolid gold\u201d phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
+      "title": "Item-specific \u201csolid gold\u201d wording is not stated on 17 of 32 items",
+      "detail": "No item-specific title or specification explicitly describes 17 of the 32 listed settings/rings as \u201csolid gold\u201d (the 15 rows on Explicit Solid Gold do state explicit solid 14K\u201324K gold). Karat wording alone is not substituted for that checklist requirement. A page-wide \u201csolid gold\u201d phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -54,7 +54,7 @@
       "severity": "high",
       "type": "checklist_gap",
       "title": "Physical hallmark and maker\u2019s mark are not documented",
-      "detail": "None of the 30 captured product pages documents both a physical karat stamp inside the band and a registered maker\u2019s/manufacturer\u2019s mark (FDJ-GR0001 states \u201cKarat stamped inside the band.\u201d without a maker\u2019s mark; the other 29 omit both). Stock numbers, styles, and URL identifiers are not physical hallmarks.",
+      "detail": "None of the 32 captured product pages documents both a physical karat stamp inside the band and a registered maker\u2019s/manufacturer\u2019s mark (FDJ-GR0001 states \u201cKarat stamped inside the band.\u201d without a maker\u2019s mark; the other 31 omit both). Stock numbers, styles, and URL identifiers are not physical hallmarks.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -85,7 +85,9 @@
         "SS-CLARA",
         "SS-RITA",
         "SS-MIA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [],
       "sources": [
@@ -126,8 +128,8 @@
       "id": "F-003",
       "severity": "high",
       "type": "unverified",
-      "title": "Metal weight in grams is unpublished on 23 of 30 product pages",
-      "detail": "Only 7 of 30 rows publish seller metal weights in grams (Automic Gold AG-COFFIN-RING 6.10 g and AG-24K 11.00 g, VRAI Classic 4-Prong Dome 2.86 g at size 6, and Sarraf SAR-147370 3.80 g, SAR-145362 10.00 g, SAR-145364 8.00 g, and SAR-144773 13.40 g at size 10). The other 23 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
+      "title": "Metal weight in grams is unpublished on 23 of 32 product pages",
+      "detail": "Only 9 of 32 rows publish seller metal weights in grams (Automic Gold AG-COFFIN-RING 6.10 g and AG-24K 11.00 g, VRAI Classic 4-Prong Dome 2.86 g at size 6, and Sarraf SAR-147370 3.80 g, SAR-145362 10.00 g, SAR-145364 8.00 g, SAR-144773 13.40 g at size 10, SAR-151362 9.20 g, and SAR-147371 7.70 g). The other 23 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -404,7 +406,9 @@
         "SS-CLARA",
         "SS-RITA",
         "SS-MIA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [],
       "sources": [
@@ -445,7 +449,7 @@
       "severity": "low",
       "type": "unverified",
       "title": "Numeric band-width and depth coverage is incomplete",
-      "detail": "Five rows have no numeric band width (four Zales rows plus VRAI, which says only \u201cStandard\u201d). Fifteen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth. All unavailable dimensions remain blank.",
+      "detail": "Six rows have no numeric band width (four Zales rows, VRAI, which says only \u201cStandard\u201d, and SAR-151362). Seventeen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth. All unavailable dimensions remain blank.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -473,7 +477,9 @@
         "SAR-145364",
         "SS-CLARA",
         "SS-RITA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [],
       "sources": [
@@ -629,7 +635,9 @@
         "SS-CLARA",
         "SS-RITA",
         "SS-MIA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [
         "blue-nile",
@@ -768,7 +776,9 @@
         "SS-CLARA",
         "SS-RITA",
         "SS-MIA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [],
       "sources": [
@@ -1051,7 +1061,9 @@
         "SAR-147370",
         "SAR-145362",
         "SAR-145364",
-        "SAR-144773"
+        "SAR-144773",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [
         "sarraf"
@@ -1062,7 +1074,9 @@
         "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/sarraf-jewelry-inc-1216-13041977",
         "https://www.sarraf.com/products/14k-white-gold-solitaire-ring-0-94-ctw.html",
         "https://www.sarraf.com/products/14k-white-gold-mens-solitaire-diamond-ring-1-2-ct.html",
-        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-1-2-ct.html"
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-1-2-ct.html",
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html",
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html"
       ],
       "recommended_action": "Confirm exact gram mass for your ordered finger size in writing prior to purchase, skip engraving before XRF/scale inspection, and pay by credit card."
     },
@@ -1179,6 +1193,23 @@
         "https://consumer.ftc.gov/articles/buying-platinum-gold-and-silver-jewelry"
       ],
       "recommended_action": "Keep quoting only text that a dated fetch actually contains, and keep derived percentages labelled as derived. Hallucination scans should compare every quoted string against its own evidence file rather than trusting a quotation mark."
+    },
+    {
+      "id": "F-045",
+      "severity": "medium",
+      "type": "irregularity",
+      "title": "Sarraf SAR-147371 contradicts itself on diamond color (G vs H)",
+      "detail": "The SAR-147371 product page captured 2026-10-23 states 'Diamond Color: G' in its specifications and 'I1 in clarity and H in color' in its description. The register records neither color as confirmed; the 0.98 Ct natural-diamond weight, I1 clarity, '14K Solid Gold' wording, 7.70 g metal weight and US$4,049.00 price are stated consistently on the page. (Flag renumbered from a pre-merge draft F-043 during the S-C74095E5 merge with main, where F-043/F-044 were taken by S-88AA65FD.)",
+      "affected_items": [
+        "SAR-147371"
+      ],
+      "affected_retailers": [
+        "sarraf"
+      ],
+      "sources": [
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html"
+      ],
+      "recommended_action": "Obtain written confirmation of the diamond color (and its grading basis) from Sarraf before purchase; verify the stone independently on arrival."
     }
   ],
   "retrieved_at": "2026-10-23"

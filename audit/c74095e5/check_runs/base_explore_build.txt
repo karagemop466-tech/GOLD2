@@ -1,0 +1,1 @@
+Built 13 static pages; 44 product rows; 85 source records. Unknown product gold values remain blank.

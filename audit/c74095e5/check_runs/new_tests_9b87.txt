@@ -1,0 +1,9 @@
+test_negative_mutations_are_caught (__main__.TestS9B875C81CalculatorAndScanner.test_negative_mutations_are_caught) ... ok
+test_nist_conversions_and_2026_10_23_spot_4024_45 (__main__.TestS9B875C81CalculatorAndScanner.test_nist_conversions_and_2026_10_23_spot_4024_45) ... ok
+test_rejects_invalid_or_stone_exceeding_gross_inputs (__main__.TestS9B875C81CalculatorAndScanner.test_rejects_invalid_or_stone_exceeding_gross_inputs) ... ok
+test_workspace_passes_with_zero_findings (__main__.TestS9B875C81CalculatorAndScanner.test_workspace_passes_with_zero_findings) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.166s
+
+OK

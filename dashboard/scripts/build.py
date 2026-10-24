@@ -171,6 +171,16 @@ FLAGS = [
             "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
         ],
     },
+    {
+        "id": "DF-012",
+        "severity": "medium",
+        "title": "Sarraf `SAR-147371` Diamond Color Contradiction: G (Specifications) vs H (Description)",
+        "detail": "The SAR-147371 page captured 2026-10-23 by S-C74095E5 states 'Diamond Color: G' in its specifications and 'I1 in clarity and H in color' in its description. Neither color is published as confirmed; canonical root flag F-045 carries the same irregularity. The '14K Solid Gold' wording, 7.70 g metal weight, 0.98 Ct/I1 natural-diamond statements and US$4,049.00 price are stated consistently on the page.",
+        "action": "Obtain written confirmation of the diamond color (and its grading basis) from Sarraf before purchase; verify the stone independently on arrival.",
+        "sources": [
+            "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html",
+        ],
+    },
 ]
 
 RINGS = build_rings(REPO_ROOT)

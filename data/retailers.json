@@ -787,7 +787,8 @@
       "verification_status": "official_policies_verified",
       "flags": [
         "F-021",
-        "F-036"
+        "F-036",
+        "F-045"
       ],
       "field_evidence": {
         "contact_phone": [

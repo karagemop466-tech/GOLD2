@@ -6,9 +6,9 @@
   "spot_usd_per_troy_oz": 3995.47,
   "counts": {
     "html_pages": 14,
-    "rings": 26,
+    "rings": 28,
     "retailers": 11,
-    "flags": 11
+    "flags": 12
   },
   "passes": {
     "P1-sources-and-seller-hosts": "PASS",

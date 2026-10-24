@@ -22,7 +22,7 @@
       "id": "C4",
       "name": "root <-> catalog URL parity (price/weight)",
       "status": "PASS",
-      "detail": "30 pairs compared"
+      "detail": "32 pairs compared"
     },
     {
       "id": "C5",

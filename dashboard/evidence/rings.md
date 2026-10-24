@@ -118,6 +118,64 @@ Now: US$1,362.00
 Approximate Metal Weight: 13.40 grams
 ```
 
+## SAR-151362 — 14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw
+- Official URL: https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/sar-151362.md
+- Verification scope: `verified_solid_gold_and_weight`
+### Stored product-name passage
+
+```text
+14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw
+```
+
+### Stored price quotes passage
+
+```text
+Now: US$8,203.00
+```
+
+### Stored currency quotes passage
+
+```text
+Now: US$8,203.00
+```
+
+### Stored weight quotes passage
+
+```text
+Approximate Metal Weight: 9.20 grams
+```
+
+## SAR-147371 — 14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.
+- Official URL: https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/sar-147371.md
+- Verification scope: `verified_solid_gold_and_weight`
+### Stored product-name passage
+
+```text
+14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.
+```
+
+### Stored price quotes passage
+
+```text
+Now: US$4,049.00
+```
+
+### Stored currency quotes passage
+
+```text
+Now: US$4,049.00
+```
+
+### Stored weight quotes passage
+
+```text
+Approximate Metal Weight: 7.70 grams
+```
+
 ## AG-24K — 24k Band
 - Official URL: https://www.automicgold.com/products/24k-band
 - Observation date: `2026-10-23`

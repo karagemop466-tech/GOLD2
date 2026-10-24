@@ -1,0 +1,5 @@
+RESULT: PASS — 12 checks, 0 failures, 3 warnings
+  WARN [gold] Header quote-as-of is unconfirmed; chart/retrieval dates are not substituted (F-026)
+  WARN [coverage] 20 of 30 rows have no explicitly assigned current price (F-008/F-018/F-025)
+  WARN [coverage] 23 of 30 rows have no published metal weight (F-003)
+report -> /home/user/GOLD2/reports/qa-report.md

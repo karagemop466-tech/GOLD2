@@ -1,0 +1,1 @@
+S-B200A880 scanner: 4570 controls, 0 failures, 0 warnings, PASS
