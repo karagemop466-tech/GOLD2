@@ -113,9 +113,36 @@ and pushed **before** any data or page edit.
 | FE7-T2 | Independent live line-by-line re-verification of the gold reference and a retailer-stratified sample of the register | done | S-FE7BA040 | `audit/fe7ba040/live_verification_2026-10-23.md`, `audit/fe7ba040/verification.json` |
 | FE7-T3 | Independent hallucination/provenance/security scanner with mutation controls + unit tests | done | S-FE7BA040 | `audit/fe7ba040/hallucination_provenance_scan.py`, `audit/fe7ba040/test_scan.py` |
 | FE7-T4 | Refresh the dated gold reference from the live official page; regenerate; re-run every gate | done | S-FE7BA040 | `data/gold-price.json`, `evidence/gold-price.md`, `research/evidence.json`, `data/verification-log.json`, `dashboard/scripts/build.py`, generated root `*.html`, `explore/**`, `dashboard/**`, `reports/**` |
-| FE7-T5 | Final integration, PR from `arena/fe7ba040-gold2` to `main`, merge, Pages deploy confirmation, board record | in progress | S-FE7BA040 | `COORDINATION.md`, PR/merge records |
+| FE7-T5 | Final integration, PR from `arena/fe7ba040-gold2` to `main`, merge, Pages deploy confirmation, board record | done | S-FE7BA040 | `COORDINATION.md`, PR/merge records |
 
 Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero and never a negative physical finding; nothing is inferred, averaged, or filled from a neighbouring value; every published value needs a field-scoped quote from a page retrieved by the session that publishes it; an automated PASS proves only that the stated controls ran; **look for hallucinations again after every review**.
+### S-FE7BA040 integration record
+
+- **PR:** [#54](https://github.com/karagemop466-tech/GOLD2/pull/54) — *feat(S-FE7BA040): refresh gold reference to
+  $3,995.47/oz + provenance scan*. Base `main` @ `bf23f27`, head `2fb9a7c`.
+- **Rebase onto current `main`.** `origin/main` had advanced 14 commits past the claim base (PRs #45–#53),
+  including `S-88AA65FD`, which had **independently re-read the same WGC page and refreshed the same quote to
+  3,995.47** and had removed a fabricated 16 CFR 23.3 quotation. The branch was rebased onto `bf23f27`; 16 paths
+  conflicted and were resolved by keeping the newer merged `main` content and re-applying only this session's own
+  findings (the `audit/fe7ba040/**` scanner and verification records, the board entry, and the `index.html` QA
+  summary). No peer edit was reverted, and every generated artifact came from the merged generators.
+- **Net diff:** `audit/fe7ba040/**` (independent scanner with 10 mutation controls, live verification log,
+  structured record), the `index.html` QA-summary correction (`FAIL` → `PASS` after the final `qa.py` run), and
+  this board block. The gold refresh itself was already on `main`; this PR adds the independent scanner and
+  verification record rather than re-churning shared generated files.
+- **Merge:** **MERGED 2026-10-24T00:15:28Z**, merge commit **`61297ee8e11d2c2358ce267135db0107966d017b`**,
+  method `--merge`, no approval requested or waited for.
+- **CI on the merge commit:** `GOLD2 verify` success · `Legacy dashboard verify` success · `Evidence dashboard`
+  success · `pages build and deployment` success.
+- **GitHub Pages:** `status: built`, build type `legacy`, source `main` `/`, live at
+  <https://karagemop466-tech.github.io/GOLD2/>. Read back directly: `$3,995.47 / troy oz` (F-026, retrieved
+  2026-10-23), `PASS — 12 checks, 0 failures, 3 warnings`, `30` root rows, `10` assigned prices, `7 / 30`
+  weights, `41` flags, and `44` Explore entries across `13` sellers.
+- **Open items carried forward (published, non-blocking):** F-026 quote time unconfirmed; 20 of 30 root rows
+  without an assigned price; 23 of 30 without a metal weight; the rows not re-read in this pass are named in
+  `audit/fe7ba040/live_verification_2026-10-23.md`; zero physical, XRF or scale verification; zero purchase
+  approvals. **Look for hallucinations again after every review — this pass is one review, not a certificate.**
+
 ### Integration record (S-E0D6DD62)
 
 - **Branch:** `arena/e0d6dd62-gold2` — the platform binds this runner to one branch, so the board's
