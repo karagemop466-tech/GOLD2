@@ -24,7 +24,7 @@ Session branch: `arena/f3b0b698-gold2`
 
 ## Repository-wide integration checks — passed before PR
 
-The branch was rebased onto `origin/main` `bf23f27` (PR #49), preserving the merged S-88AA65FD/S-1B04074F source re-verification, WGC `$3,995.47` observation, Menē `$1,325`/`$1,442` records, F-043/F-044, and updated calculator expectations. The companion was regenerated from that merged canonical state rather than hand-selecting conflict values.
+The branch was rebased onto `origin/main` `bf23f27` (PR #49) and then `7f1c979` (PR #50), preserving the merged S-88AA65FD/S-1B04074F source re-verification, the additive S-F03AB52D audit, WGC `$3,995.47` observation, Menē `$1,325`/`$1,442` records, F-043/F-044, and updated calculator expectations. The companion was regenerated from the merged canonical state rather than hand-selecting conflict values.
 
 - `npm ci --ignore-scripts` — 23 packages added; 0 vulnerabilities.
 - Root `tools/build_site.py` + `tools/qa.py` + `node tools/test_calculator.js` + refreshed root build — PASS: 13 pages, 12 QA checks, 0 failures, 3 published warnings (F-026 quote time; 20/30 root rows without assigned prices; 23/30 without metal weights).
@@ -35,6 +35,7 @@ The branch was rebased onto `origin/main` `bf23f27` (PR #49), preserving the mer
 - `audit/8c810c15` scanner/tests — 0 findings; 202 controls and 6/6 tests passed.
 - `audit/b200a880` scanner/tests — 4,310 controls, 0 failures/warnings; 25 helper/arithmetic controls passed.
 - `audit/88aa65fd/hallucination_scan.py` — 10 checks, 0 failures, 6/6 mutations caught.
+- `audit/f03ab52d` scanner/tests added by PR #50 — 9 checks, 0 failures/warnings; 9/9 mutation controls behaved as expected.
 - `audit/9b875c81` scanner/tests — final 0 findings, 2,874 controls and 4/4 tests passed.
 - F3 independent scanner and mutation suite — final 0 issues and 20/20 tests passed.
 - Repeated root, preserved, companion, and evidence generators — two consecutive passes produced byte-identical tracked outputs; `git diff --check` passed.
