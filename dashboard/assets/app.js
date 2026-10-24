@@ -39,7 +39,7 @@
       }
     }
     if (countEl) {
-      countEl.textContent = "Showing " + String(shown) + " of " + String(rows.length) + " verified source listings";
+      countEl.textContent = "Showing " + String(shown) + " of " + String(rows.length) + " source-linked listings";
     }
   }
 

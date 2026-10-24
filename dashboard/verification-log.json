@@ -1,23 +1,29 @@
 {
-  "verified_date": "2026-10-23",
-  "session": "S-9B875C81",
+  "canonical_observations_through": "2026-10-23",
+  "verification_scope": "companion offline canonical parity, generated HTML, links, security invariants, and nominal arithmetic",
+  "network_fetch_performed": false,
+  "physical_authentication": "not_tested",
   "spot_usd_per_troy_oz": 3995.47,
   "counts": {
     "html_pages": 14,
     "rings": 26,
     "retailers": 11,
-    "flags": 7
+    "flags": 11
   },
   "passes": {
-    "P1-sources": "PASS",
-    "P2-prices": "PASS",
-    "P3-blanks": "PASS",
+    "P1-sources-and-seller-hosts": "PASS",
+    "P2-strict-price-currency-evidence": "PASS",
+    "P3-blanks-weight-and-qualification": "PASS",
     "P4-cross-refs": "PASS",
-    "P5-retailers": "PASS",
+    "P5-canonical-retailers": "PASS",
     "P8-evidence-quotes": "PASS",
-    "P6-data-site-sync": "PASS",
+    "P9-canonical-product-parity": "PASS",
+    "P10-gold-and-arithmetic": "PASS",
+    "P6-rendered-data-security-sync": "PASS",
     "P7-link-integrity": "PASS"
   },
   "status": "PASS",
-  "failures": []
+  "failures": [],
+  "limitations": "PASS is not source freshness, physical purity, or proof that all hallucinations are absent.",
+  "recommendation": "Look for hallucinations again after every review; rerun repository-wide verification and security scans."
 }
