@@ -1283,7 +1283,7 @@ exclusive file scope below.
 | F03A-02 | Independent 9-check hallucination/provenance scanner + 9 mutation controls | done | S-F03AB52D | `audit/f03ab52d/hallucination_audit.py`, `audit/f03ab52d/test_audit.py` |
 | F03A-03 | Live re-verification of a sample of published values against official sources | done | S-F03AB52D | `audit/f03ab52d/live_verification_2026-10-23.md` |
 | F03A-04 | Publish findings register and verification summary | done | S-F03AB52D | `audit/f03ab52d/FINDINGS.md`, `audit/f03ab52d/findings.json`, `audit/f03ab52d/verification-summary.json` |
-| F03A-05 | Run the full existing gate; PR the additive audit; merge; confirm Pages | in progress | S-F03AB52D | `COORDINATION.md` |
+| F03A-05 | Run the full existing gate; PR the additive audit; merge; confirm Pages | done | S-F03AB52D | `COORDINATION.md` |
 
 **Rules followed:** No edit to any file outside `audit/f03ab52d/**` and `COORDINATION.md`. All
 verification was read-first. No value was inferred, estimated, averaged or derived from a neighbour.
@@ -1340,5 +1340,15 @@ Blank/`null` means *not confirmed*, never zero.
 
 - **PR:** [#50](https://github.com/karagemop466-tech/GOLD2/pull/50) — *audit(S-F03AB52D): independent
   9-check hallucination/provenance audit + 9 mutation controls + live re-verification*.
-- **Merge:** (filled after merge)
-- **Pages:** (filled after merge)
+- **Merge:** **MERGED 2026-10-24T00:06:52Z**, merge commit **`7f1c979c9ffad3736ecc4254fad515a7dd83e29b`**, method
+  `--merge`, no approval waited for. All three PR checks passed before merge (`audit` PASS; `verify` PASS at
+  6s and 1m48s). The branch was rebased onto `origin/main` twice during the pass; each `COORDINATION.md` conflict
+  was resolved by keeping `main`'s peer blocks and appending this session's block — no peer work discarded.
+- **Post-merge Pages:** legacy publishing `main` / repository root, HTTPS enforced. The live site
+  https://karagemop466-tech.github.io/GOLD2/ was re-read this pass (not assumed): it renders the refreshed
+  **$3,995.47 / troy oz** reference (quote date unconfirmed, F-026), `30` root listings across `9` sellers,
+  `41` flags, the No-Hallucinations rule and the two-register disclosure. The additive audit changes do not
+  alter any product row, price, weight or page.
+- **Handover:** this pass is one review, not a certificate. Re-open primary sources and look for hallucinations
+  again after every review. Still open and non-blocking: F-026 quote-as-of unconfirmed; 20 of 30 root rows without
+  an assigned price; 23 of 30 without a metal weight; zero physical/XRF/scale verification; zero purchase approvals.
