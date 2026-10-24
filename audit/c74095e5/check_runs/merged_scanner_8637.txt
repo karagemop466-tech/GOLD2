@@ -1,0 +1,13 @@
+========================================================================
+GOLD2 Independent Hallucination, Provenance & Security Scanner (S-86379CA7)
+========================================================================
+Scanned: 13 root pages | 13 explore pages | 14 dashboard pages | 32 root items | 46 catalog items | 28 companion rings
+Checks run: 8 | Hard failures: 1 | Advisory warnings: 6
+  WARN: [Check 6 / S8637-F07] F-031 (scoped to ['automic-gold', 'mejuri']) lists non-matching items ['SAR-147370', 'SAR-145362', 'SAR-145364', 'SAR-144773', 'FDJ-GR0001']
+  WARN: [Check 6 / S8637-F08] F-004 (Zales V-19957449 rejected snippet) lists BN-316238 in affected_items
+  WARN: [Check 6 / S8637-F09] F-015 has stale 16-row detail text or omits items (31/30)
+  WARN: [Check 6 / S8637-F10] verification-log entry BE-121H6 references removed flag F-032 in note
+  WARN: [Check 6 / S8637-F10] verification-log entry VRAI-CLASSIC-4P label 'Classic Round Brilliant Engagement Ring | Plain Band | 18k Yellow Gold' != item name 'Classic Round Brilliant Engagement Ring'
+  WARN: [Check 6 / S8637-F10] verification-log entry AG-24K label '24k Band (Solid 24k Gold)' != item name '24k Band'
+  FAIL: [Check 3] Expected 30 root items, found 32
+RESULT: FAIL — resolve hard failures before merging.

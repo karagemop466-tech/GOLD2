@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: static build is deterministic and does not renew observation timestamps
+ok 1 - static build is deterministic and does not renew observation timestamps
+  ---
+  duration_ms: 295.700229
+  type: 'test'
+  ...
+# Subtest: catalog distinguishes a supported native-currency setting display from unconfirmed prices
+ok 2 - catalog distinguishes a supported native-currency setting display from unconfirmed prices
+  ---
+  duration_ms: 2.202079
+  type: 'test'
+  ...
+# Subtest: NIST conversion uses troy ounces, not ordinary ounces
+ok 3 - NIST conversion uses troy ounces, not ordinary ounces
+  ---
+  duration_ms: 0.704335
+  type: 'test'
+  ...
+# Subtest: nominal karat and explicit fineness are distinct
+ok 4 - nominal karat and explicit fineness are distinct
+  ---
+  duration_ms: 0.249658
+  type: 'test'
+  ...
+# Subtest: conditional calculations require explicit acknowledgement
+ok 5 - conditional calculations require explicit acknowledgement
+  ---
+  duration_ms: 0.186783
+  type: 'test'
+  ...
+# Subtest: documented conditional preset uses unrounded inputs and has no automatic catalog effect
+ok 6 - documented conditional preset uses unrounded inputs and has no automatic catalog effect
+  ---
+  duration_ms: 0.208817
+  type: 'test'
+  ...
+# Subtest: invalid or excessive numbers never produce gold values
+ok 7 - invalid or excessive numbers never produce gold values
+  ---
+  duration_ms: 0.361621
+  type: 'test'
+  ...
+# Subtest: all products block automatic fine-gold and valuation; no gross-weight fallback
+ok 8 - all products block automatic fine-gold and valuation; no gross-weight fallback
+  ---
+  duration_ms: 0.395032
+  type: 'test'
+  ...
+# Subtest: numeric form parsing never converts missing input to zero
+ok 9 - numeric form parsing never converts missing input to zero
+  ---
+  duration_ms: 0.22101
+  type: 'test'
+  ...
+# Subtest: stale and future observations are explicit and never refreshed implicitly
+ok 10 - stale and future observations are explicit and never refreshed implicitly
+  ---
+  duration_ms: 0.128757
+  type: 'test'
+  ...
+# Subtest: current record has no provenance consistency errors; gaps remain warnings
+ok 11 - current record has no provenance consistency errors; gaps remain warnings
+  ---
+  duration_ms: 6.874197
+  type: 'test'
+  ...
+# Subtest: existing two Blue Nile records and all sixteen extension candidates are retained
+ok 12 - existing two Blue Nile records and all sixteen extension candidates are retained
+  ---
+  duration_ms: 0.236839
+  type: 'test'
+  ...
+# Subtest: combined register covers every original root URL exactly once
+ok 13 - combined register covers every original root URL exactly once
+  ---
+  duration_ms: 8.237598
+  type: 'test'
+  ...
+# Subtest: invented or mismatched prices are rejected
+ok 14 - invented or mismatched prices are rejected
+  ---
+  duration_ms: 7.041477
+  type: 'test'
+  ...
+# Subtest: shipping/item weight cannot be relabeled net alloy weight
+ok 15 - shipping/item weight cannot be relabeled net alloy weight
+  ---
+  duration_ms: 5.586156
+  type: 'test'
+  ...
+# Subtest: source omissions, duplicate IDs, review-platform facts and seller mismatches fail
+ok 16 - source omissions, duplicate IDs, review-platform facts and seller mismatches fail
+  ---
+  duration_ms: 13.340847
+  type: 'test'
+  ...
+# Subtest: no fabricated LBMA quote or unsupported purity substitution
+ok 17 - no fabricated LBMA quote or unsupported purity substitution
+  ---
+  duration_ms: 4.990254
+  type: 'test'
+  ...
+# Subtest: publisher allowlist is exact, HTTPS only, and disallows embedded credentials
+ok 18 - publisher allowlist is exact, HTTPS only, and disallows embedded credentials
+  ---
+  duration_ms: 0.23686
+  type: 'test'
+  ...
+# Subtest: escape rendered fields, and do not match unrelated numeric substrings
+ok 19 - escape rendered fields, and do not match unrelated numeric substrings
+  ---
+  duration_ms: 0.581627
+  type: 'test'
+  ...
+# Subtest: preview serves the root and GitHub Pages project-prefix paths
+ok 20 - preview serves the root and GitHub Pages project-prefix paths
+  ---
+  duration_ms: 48.751855
+  type: 'test'
+  ...
+# Subtest: preview accepts the proxied host and never depends on localhost in browser code
+ok 21 - preview accepts the proxied host and never depends on localhost in browser code
+  ---
+  duration_ms: 7.816652
+  type: 'test'
+  ...
+# Subtest: private paths, traversal, malformed escapes and non-read methods are denied
+ok 22 - private paths, traversal, malformed escapes and non-read methods are denied
+  ---
+  duration_ms: 18.453236
+  type: 'test'
+  ...
+# Subtest: HEAD and missing pages return accurate status without an open write surface
+ok 23 - HEAD and missing pages return accurate status without an open write surface
+  ---
+  duration_ms: 9.50612
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 709.233314

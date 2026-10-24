@@ -4,7 +4,7 @@ import {loadResearch,validateResearch,escapeHTML,safeSourceURL,hasNumber} from '
 const original=await loadResearch();
 const check=(mutate)=> {const r=structuredClone({catalog:original.catalog,evidence:original.evidence,review:original.review});mutate(r);return validateResearch(r).errors;};
 test('current record has no provenance consistency errors; gaps remain warnings',()=> {
-  const r=validateResearch(original);assert.deepEqual(r.errors,[]);assert.ok(r.warnings.length>18);assert.equal(r.counts.products,44);assert.equal(r.counts.purchaseReady,0);
+  const r=validateResearch(original);assert.deepEqual(r.errors,[]);assert.ok(r.warnings.length>18);assert.equal(r.counts.products,46);assert.equal(r.counts.purchaseReady,0);
 });
 test('existing two Blue Nile records and all sixteen extension candidates are retained',()=> {
   const ids=new Set(original.catalog.products.map(p=>p.id));
@@ -13,7 +13,7 @@ test('existing two Blue Nile records and all sixteen extension candidates are re
 test('combined register covers every original root URL exactly once',async()=>{
   const {readdir,readFile}=await import('node:fs/promises');
   const urls=original.catalog.products.map(p=>original.sourceMap.get(p.source).url);
-  assert.equal(new Set(urls).size,44);
+  assert.equal(new Set(urls).size,46);
   const catalogUrls=new Set(original.catalog.products.map(p=>original.sourceMap.get(p.source).url));
   for(const file of await readdir(new URL('../data/listings/',import.meta.url))){
     const d=JSON.parse(await readFile(new URL('../data/listings/'+file,import.meta.url),'utf8'));

@@ -1,0 +1,442 @@
+{
+  "session_id": "S-86379CA7",
+  "branch": "arena/86379ca7-gold2",
+  "verified_at_utc": "2026-10-23T23:50:00Z",
+  "policy": "No hallucinations: every verified fact is backed by a verbatim excerpt retrieved directly via fetch_page on 2026-10-23 UTC. Unconfirmed values remain null/blank and flagged on Flagged for Review. Never infer, estimate, convert currencies, or extrapolate across sizes or variants.",
+  "summary": {
+    "total_live_fetches": 33,
+    "official_source_fetches": 25,
+    "deployed_pages_fetches": 8,
+    "official_urls_matched_or_updated": 18,
+    "companion_dashboard_urls_confirmed_404": 7,
+    "physical_hallmark_or_xrf_verified": 0,
+    "purchase_ready_approvals": 0
+  },
+  "gold_spot_verification": {
+    "source_url": "https://www.gold.org/goldhub/data/gold-prices",
+    "retrieved_at_utc": "2026-10-23T23:44:00Z",
+    "observed_header_usd_per_troy_oz": 3995.47,
+    "prior_stored_usd_per_troy_oz": 3996.31,
+    "chart_as_of_text": "Data as of 22 October, 2026",
+    "market_data_attribution": "Market Data: Provided by ICE Data Services.",
+    "units_statement": "Prices are quoted in currency unit per troy ounce unless otherwise stated.",
+    "header_quote_timestamp_published": false,
+    "nist_grams_per_troy_oz": 31.1034768,
+    "derived_usd_per_fine_gram": 128.4573432,
+    "flag_id": "F-026",
+    "verdict": "moving_header_observed_3995_47_timestamp_still_unconfirmed"
+  },
+  "official_product_and_policy_fetches": [
+    {
+      "id": "AG-COFFIN-RING",
+      "retailer": "Automic Gold",
+      "urls_fetched": [
+        "https://www.automicgold.com/products/coffin-ring",
+        "https://www.automicgold.com/products/coffin-ring.js",
+        "https://www.automicgold.com/cart.js"
+      ],
+      "chunks_read": {
+        "coffin-ring": [0, 4, 5],
+        "coffin-ring.js": [0, 1, 2],
+        "cart.js": [0]
+      },
+      "observed_verbatim": [
+        "# Coffin Ring | $1,910 | Solid 14k Gold and 950 Platinum",
+        "Width: Band is 3mm | Height: Approximately 1.8mm - 2.3mm | Item Weight: Approximately 6.1g (gold) or 9.2g (platinum)",
+        "Material: 950 platinum and/or Solid 14k gold",
+        "Shipping & Returns: Returns can be made within 30 days of the delivery date. Free return shipping on US orders. Engraved items are final sale and cannot be returned.",
+        "coffin-ring.js variants: 14k Yellow Gold=191000 ($1,910), 14k White Gold=191000 ($1,910), Nickel Free 14k White Gold=203900 ($2,039), 14k Rose Gold=191000 ($1,910), 14k Champagne Gold=191000 ($1,910), 950 Platinum=223300 ($2,233)",
+        "cart.js: \"currency\":\"USD\""
+      ],
+      "verdict": "matched_and_resolved_2233_variant_as_950_platinum"
+    },
+    {
+      "id": "AG-CUSHION-SIGNET",
+      "retailer": "Automic Gold",
+      "urls_fetched": [
+        "https://www.automicgold.com/products/cushion-diamond-signet-ring"
+      ],
+      "chunks_read": {
+        "cushion-diamond-signet-ring": [0, 1]
+      },
+      "observed_verbatim": [
+        "# Cushion Diamond Signet Ring | $2,758 | Solid 14k Gold and 950 Platinum",
+        "Width: Band width is tapered from 8.5mm - 2.5mm | Height: Approximately 2mm - 4mm",
+        "Item Weight: Approximate item weight: gold 5.5g, platinum 8.3g",
+        "Stone: Ethically sourced natural salt and pepper diamond, clear lab-created diamond | Diamond weight: Approximately 0.65ct",
+        "Material: 950 platinum and/or Solid 14k gold"
+      ],
+      "verdict": "matched_root_register_confirmed_companion_slug_404"
+    },
+    {
+      "id": "AG-SAPPHIRE-RING",
+      "retailer": "Automic Gold",
+      "urls_fetched": [
+        "https://www.automicgold.com/products/sapphire-ring"
+      ],
+      "chunks_read": {
+        "sapphire-ring": [0, 4, 5, 6]
+      },
+      "observed_verbatim": [
+        "# Sapphire Ring | $526 | Solid 14k Gold and 950 Platinum",
+        "Dimensions: Stone is 3mm in diameter | Width: Band is 1.1mm | Height: Approximately 1.1mm",
+        "Item Weight: Approximately 1.2g (gold) or 1.8g (platinum)",
+        "Stone: Natural sapphire. Natural stones may vary in color",
+        "Material: 950 platinum and/or Solid 14k gold"
+      ],
+      "verdict": "matched_root_register_caught_companion_lab_sapphire_hallucination"
+    },
+    {
+      "id": "AG-24K",
+      "retailer": "Automic Gold",
+      "urls_fetched": [
+        "https://www.automicgold.com/products/24k-band"
+      ],
+      "chunks_read": {
+        "24k-band": [0]
+      },
+      "observed_verbatim": [
+        "# 24k Band | $3,520 | Solid 24k Gold",
+        "Please note that because this ring is 99.99% pure gold it only comes in yellow.",
+        "Width: Band is approximately 4.5mm wide | Height: Approximately 2.2mm | Item Weight: Approximate item weight: 11g | Material: Solid 24k gold"
+      ],
+      "verdict": "matched_root_register_caught_companion_40_4_pct_stale_note"
+    },
+    {
+      "id": "SAR-147370",
+      "retailer": "Sarraf Jewelry Inc.",
+      "urls_fetched": [
+        "https://www.sarraf.com/products/14k-white-gold-solitaire-ring-0-94-ctw.html"
+      ],
+      "chunks_read": {
+        "14k-white-gold-solitaire-ring-0-94-ctw.html": [0]
+      },
+      "observed_verbatim": [
+        "# 14k White Gold Solitaire Ring 0.94 ctw.",
+        "MSRP: US$11,683.00 | Was: US$3,513.00 | Now: US$3,004.00 -14% OFF",
+        "SKU:238401-102 | Stock Number: 147370",
+        "Material: 14K Solid Gold | Approximate Metal Weight: 3.80 grams | Diamond Weight: 0.94 Ct. | Diamond Color: G | Diamond Clarity: I 1 | Diamond ( Natural / Lab Created ): Natural"
+      ],
+      "verdict": "matched_exact"
+    },
+    {
+      "id": "SAR-144773",
+      "retailer": "Sarraf Jewelry Inc.",
+      "urls_fetched": [
+        "https://www.sarraf.com/products/14k-yellow-gold-12mm-high-polished-traditional-domed-wedding-band.html"
+      ],
+      "chunks_read": {
+        "14k-yellow-gold-12mm-high-polished-traditional-domed-wedding-band.html": [0]
+      },
+      "observed_verbatim": [
+        "# 14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band",
+        "MSRP: US$5,296.00 | Was: US$1,593.00 | Now: US$1,362.00 -15% OFF",
+        "SKU:ST-LPBWB120-14KY | Stock Number: 144773",
+        "Material: 14K Solid Gold | Approximate Metal Weight: 13.40 grams",
+        "This 14k Yellow Gold Domed wedding band is 12mm wide and 1.65mm thick. Made in USA.",
+        "The weight listed is an approximate weight of ring in size 10 Made in the USA"
+      ],
+      "verdict": "matched_exact"
+    },
+    {
+      "id": "MJ-BOLD-ETERNITY",
+      "retailer": "Mejuri",
+      "urls_fetched": [
+        "https://mejuri.com/products/bold-diamond-eternity-ring",
+        "https://mejuri.com/faq/return-exchanges"
+      ],
+      "chunks_read": {
+        "bold-diamond-eternity-ring": [0],
+        "faq/return-exchanges": [0]
+      },
+      "observed_verbatim": [
+        "# Bold Diamond Eternity Ring | From$2,900",
+        "Material & Stone Options: Solid White Gold (14k), Natural Diamond",
+        "Our 14k solid gold pieces are made to last and perfect for everyday wear. ... 14k solid white gold pieces are finished with rhodium plating",
+        "Minimum Carat Weight: 1.15 ct - 1.57 ct | Band Width: 2.6 mm | Note: Engraving is optional (complimentary) and not eligible for returns.",
+        "We offer free 30-day returns & exchanges starting from the day the shipment is delivered or picked up in-store."
+      ],
+      "verdict": "matched_root_register_confirmed_companion_urls_404_and_unconfirmed_currency"
+    },
+    {
+      "id": "BN-203348",
+      "retailer": "Blue Nile",
+      "urls_fetched": [
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348"
+      ],
+      "chunks_read": {
+        "item-203348": [0]
+      },
+      "observed_verbatim": [
+        "Stock Number 502120y14 | Metal 14K Yellow Gold | Width 2.40mm",
+        "# Classic Simple Solitaire Engagement Ring in 14K Yellow Gold | $1,145(Setting Price)"
+      ],
+      "verdict": "matched_root_register_caught_companion_three_stone_trellis_hallucination"
+    },
+    {
+      "id": "BN-316238",
+      "retailer": "Blue Nile",
+      "urls_fetched": [
+        "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238"
+      ],
+      "chunks_read": {
+        "item-316238": [0]
+      },
+      "observed_verbatim": [
+        "Stock Number 505097w14 | Metal 14K White Gold | Width 1.50mm | Rhodium Finish Yes",
+        "# Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen | $1,240(Setting Price)"
+      ],
+      "verdict": "confirmed_f041_f042_url_serves_comfort_fit_solitaire_not_petite_micropave"
+    },
+    {
+      "id": "BE-121H6",
+      "retailer": "Brilliant Earth",
+      "urls_fetched": [
+        "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/"
+      ],
+      "chunks_read": {
+        "BE121H6": [0, 4, 5]
+      },
+      "observed_verbatim": [
+        "USD | # Classic Six-Prong Solitaire Ring in 14K Yellow Gold | $890(Setting Only)",
+        "Style: BE121H6-14KY | Metal: 14K Yellow Gold | Prong metal: 14K White Gold | Width: 2.5 mm | Setting: Six-Prong",
+        "Can this engagement ring be resized? Yes. This ring qualifies for one complimentary resizing within 60 days of purchase"
+      ],
+      "verdict": "verified_in_chunks_4_and_5_resolving_peer_chunk0_dead_end"
+    },
+    {
+      "id": "VRAI-CLASSIC-4P",
+      "retailer": "VRAI",
+      "urls_fetched": [
+        "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
+        "https://www.vrai.com/returns-exchanges",
+        "https://www.vrai.com/contact-us"
+      ],
+      "chunks_read": {
+        "classic-4-prong-dome": [0, 1],
+        "returns-exchanges": [0],
+        "contact-us": [0]
+      },
+      "observed_verbatim": [
+        "title: Classic Round Brilliant Engagement Ring | Plain Band | 18k Yellow Gold",
+        "Setting Details: Metal:18k Yellow Gold | Band width:Standard | Band depth:1.6mm | Metal weight:2.86g (Ring size 6) | Pavé carat weight:0.18ctw",
+        "returns-exchanges: Engagement ring: A $300 recycling fee will apply. NON-ELIGIBLE ITEMS: Modified or resized rings ... To submit a withdrawal request, use our Withdraw from contract form. You can also contact help@vrai.com",
+        "contact-us: SEND AN EMAIL help@vrai.com | CALL US Contact us at +1.855.956.4488 | HOURS OF OPERATION Everyday: 10am-6pm EST"
+      ],
+      "verdict": "matched_root_and_verified_official_contact_us_phone_and_email"
+    },
+    {
+      "id": "Z-19957449",
+      "retailer": "Zales",
+      "urls_fetched": [
+        "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449"
+      ],
+      "chunks_read": {
+        "V-19957449": [0]
+      },
+      "observed_verbatim": [
+        "# 1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
+        "$899.00",
+        "Free and easy 30-day returns"
+      ],
+      "verdict": "observed_unlabeled_899_00_confirming_f018_label_instability_and_f025_no_iso_currency"
+    },
+    {
+      "id": "Z-20046552",
+      "retailer": "Zales",
+      "urls_fetched": [
+        "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552"
+      ],
+      "chunks_read": {
+        "V-20046552": [0]
+      },
+      "observed_verbatim": [
+        "# 1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold",
+        "Discounted Price $909.30  Original Price was $1,299.00 30% Off",
+        "Free and easy 30-day returns"
+      ],
+      "verdict": "matched_root_caught_companion_wrong_product_title_and_slug"
+    },
+    {
+      "id": "Z-20303279",
+      "retailer": "Zales",
+      "urls_fetched": [
+        "https://www.zales.com/12-ct-tw-diamond-frame-vintagestyle-twist-shank-engagement-ring-10k-gold/p/V-20303279"
+      ],
+      "chunks_read": {
+        "V-20303279": [0]
+      },
+      "observed_verbatim": [
+        "# 1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold",
+        "Discounted Price $979.30  Original Price was $1,399.00 30% Off",
+        "Free and easy 30-day returns"
+      ],
+      "verdict": "matched_root_caught_companion_vera_wang_princess_cut_hallucination"
+    },
+    {
+      "id": "SS-CLARA",
+      "retailer": "Stone and Strand",
+      "urls_fetched": [
+        "https://www.stoneandstrand.com/products/the-clara-ring"
+      ],
+      "chunks_read": {
+        "the-clara-ring": [0]
+      },
+      "observed_verbatim": [
+        "## The Clara Ring | $2,200 | Solid Gold",
+        "Final Sale This product is non-returnable | 100 Day Returns",
+        "Total Weight (CTW): 0.620CTW | Center Stone: 0.50CTW | Gold Karat: 14K | Band Width: 1.65mm | set in 14K solid gold or platinum"
+      ],
+      "verdict": "matched_exact"
+    },
+    {
+      "id": "SS-MIA",
+      "retailer": "Stone and Strand",
+      "urls_fetched": [
+        "https://www.stoneandstrand.com/products/the-mia-ring"
+      ],
+      "chunks_read": {
+        "the-mia-ring": [0]
+      },
+      "observed_verbatim": [
+        "## The Mia Ring in Yellow Gold | $1,850 | $925 (50% off) | Solid Gold",
+        "Final sale and non-returnable",
+        "Image alt: Stone and Strand 10K Yellow Gold The Mia Diamond Ring Front Image",
+        "Metals: Gold Karat: 14K | Dimensions: Ring Face Measurement: 10mm x 12.5mm | Band Width: 1.5mm"
+      ],
+      "verdict": "matched_and_noted_1_5mm_band_width_in_pdp_dimensions"
+    },
+    {
+      "id": "SS-RITA",
+      "retailer": "Stone and Strand",
+      "urls_fetched": [
+        "https://www.stoneandstrand.com/products/the-rita-ring"
+      ],
+      "chunks_read": {
+        "the-rita-ring": [0]
+      },
+      "observed_verbatim": [
+        "## The Rita Ring | $1,950 | $780 (60% off) | Solid Gold",
+        "Final sale and non-returnable",
+        "Total Weight (CTW): 0.42CTW | Center Stone: 0.20CTW | Gold Karat: 14K | Band Width: 1.70mm"
+      ],
+      "verdict": "matched_exact"
+    },
+    {
+      "id": "FDJ-GR0001",
+      "retailer": "Factory Direct Jewelry",
+      "urls_fetched": [
+        "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/",
+        "https://www.factorydirectjewelry.com/return-policy",
+        "https://www.factorydirectjewelry.com/contact"
+      ],
+      "chunks_read": {
+        "FDJ-GR0001": [0, 1],
+        "return-policy": [0],
+        "contact": [0]
+      },
+      "observed_verbatim": [
+        "# Lab Grown Diamond Halo Engagement Ring in 14K Gold | Style#:GR0001 | SALE $1,299.99 | Currency USD",
+        "Every piece is solid 10k or 14k gold all the way through. Not plated, not hollow.",
+        "Karat stamped inside the band.",
+        "Handcrafted in our Los Angeles factory since 1985 vs We've been making jewelry in our Los Angeles factory since 1988",
+        "Details: Band Width: 2.0mm | Total Carat Weight: 1.37cts vs Size & Weight: Weight:1.25 Grams | Width:0.07 inches (~1.78mm)",
+        "return-policy: 30 days From delivery | Restocking fee: 20% on items sent back with adjustments or alterations | Not returnable: Engraved pieces, Custom or personalized jewelry",
+        "contact: You can send us an email at: [support@factorydirectjewelry.com](mailto:support@factorydirectjewelry;) ... 640 S. Hill St. STE #A542 Los Angeles, CA 90014 | Toll-free: 1-888-226-5138"
+      ],
+      "verdict": "matched_and_discovered_width_contradiction_and_contact_mailto_typo"
+    },
+    {
+      "id": "MENE-ROSE-AND-KNOT",
+      "retailer": "Menē",
+      "urls_fetched": [
+        "https://mene.com/products/rose-ring-gold",
+        "https://mene.com/products/knot-ring-gold",
+        "https://mene.com/customer-care",
+        "https://mene.com/customer-care/en-US/articles/returns-319505"
+      ],
+      "chunks_read": {
+        "rose-ring-gold": [0],
+        "knot-ring-gold": [0],
+        "customer-care": [0],
+        "returns-319505": [0]
+      },
+      "observed_verbatim": [
+        "# Rose Ring | $1,325 | USD | 24k Gold | Width: 2mm Thickness: 2mm",
+        "# Knot Ring | $1,442 | USD | 24k Gold | Width: 6mm Thickness: 6.5mm",
+        "customer-care: +1 833 636 3245 | Monday to Friday from 9 AM to 6 PM EST",
+        "returns-319505: If you are not completely satisfied with your order, you may return it for merchandise credit (Menē Credit) within seven (7) days of receipt"
+      ],
+      "verdict": "observed_spot_linked_price_drift_1336_to_1325_and_1454_to_1442"
+    },
+    {
+      "id": "AV-BRIDGE",
+      "retailer": "Auvere",
+      "urls_fetched": [
+        "https://auvere.com/product/diamond-bridge-ring-tall/"
+      ],
+      "chunks_read": {
+        "diamond-bridge-ring-tall": [0, 2]
+      },
+      "observed_verbatim": [
+        "title: Diamond Bridge Ring Tall 22k Gold - AUVERE",
+        "Returns & Exchanges: You have 15 days from the day ... Returns and exchanges are free.",
+        "Our Philosophy: Our pieces are solid gold, never plated and never vermeil."
+      ],
+      "verdict": "matched_return_and_philosophy_chunks"
+    }
+  ],
+  "confirmed_404_urls_in_companion_dashboard": [
+    {
+      "url": "https://www.automicgold.com/products/lab-grown-cushion-diamond-signet-ring",
+      "referenced_in": "dashboard/data/rings.json (AG-CUSHION-SIGNET)",
+      "observed_title": "404 Not Found – Automic Gold",
+      "canonical_replacement": "https://www.automicgold.com/products/cushion-diamond-signet-ring"
+    },
+    {
+      "url": "https://mejuri.com/products/bold-lab-grown-diamond-eternity-ring",
+      "referenced_in": "dashboard/data/rings.json (MJ-BOLD-ETERNITY) & dashboard/data/retailers.json (mejuri.jewelry_notes_url)",
+      "observed_title": "Mejuri | Page Not Found",
+      "canonical_replacement": "https://mejuri.com/products/bold-diamond-eternity-ring"
+    },
+    {
+      "url": "https://www.vrai.com/engagement-ring/classic-4-prong-solitaire/round-brilliant-yellow-gold-41383090421853",
+      "referenced_in": "dashboard/data/rings.json (VRAI-CLASSIC-4P) & dashboard/data/retailers.json (vrai.jewelry_notes_url)",
+      "observed_title": "Our apologies — The page you are looking for does not exist.",
+      "canonical_replacement": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893"
+    },
+    {
+      "url": "https://mejuri.com/pages/returns-and-exchanges",
+      "referenced_in": "dashboard/data/retailers.json (mejuri.returns_url)",
+      "observed_title": "Mejuri | Page Not Found",
+      "canonical_replacement": "https://mejuri.com/faq/return-exchanges"
+    },
+    {
+      "url": "https://mejuri.com/pages/contact-us",
+      "referenced_in": "dashboard/data/retailers.json (mejuri.contact_url)",
+      "observed_title": "Mejuri | Page Not Found",
+      "canonical_replacement": "https://mejuri.com/faq/stores"
+    },
+    {
+      "url": "https://www.vrai.com/pages/returns-exchanges",
+      "referenced_in": "dashboard/data/retailers.json (vrai.returns_url)",
+      "observed_title": "404 - Page not found",
+      "canonical_replacement": "https://www.vrai.com/returns-exchanges"
+    },
+    {
+      "url": "https://www.vrai.com/pages/contact",
+      "referenced_in": "dashboard/data/retailers.json (vrai.contact_url)",
+      "observed_title": "404 - Page not found",
+      "canonical_replacement": "https://www.vrai.com/contact-us"
+    }
+  ],
+  "deployed_github_pages_fetches": [
+    "https://karagemop466-tech.github.io/GOLD2/",
+    "https://karagemop466-tech.github.io/GOLD2/solid-gold.html",
+    "https://karagemop466-tech.github.io/GOLD2/prices.html",
+    "https://karagemop466-tech.github.io/GOLD2/flags.html",
+    "https://karagemop466-tech.github.io/GOLD2/verification.html",
+    "https://karagemop466-tech.github.io/GOLD2/dashboard/index.html",
+    "https://karagemop466-tech.github.io/GOLD2/explore/index.html"
+  ]
+}

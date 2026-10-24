@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "issues": [],
+  "stats": {
+    "rings": 26,
+    "retailers": 11,
+    "html_pages": 14,
+    "assigned_prices": 12,
+    "null_prices": 14,
+    "seller_metal_weights": 7,
+    "null_weights": 19,
+    "explicit_solid_gold_wording": 15,
+    "nonqualifying_or_unconfirmed_solid_wording": 11,
+    "physical_tests": 0
+  },
+  "scope": "offline internal consistency only; no live source fetch and no physical authentication",
+  "recommendation": "Look for hallucinations again after every review and rerun all repository verification/security scans."
+}

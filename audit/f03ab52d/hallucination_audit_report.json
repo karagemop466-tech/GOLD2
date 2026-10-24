@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "C1",
+      "name": "catalog product sources exist and are official https",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "C2",
+      "name": "every non-null fact value and price amount is in its evidence quote",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "C3",
+      "name": "root register: official https source_url + existing evidence file",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "C4",
+      "name": "root <-> catalog URL parity (price/weight)",
+      "status": "PASS",
+      "detail": "32 pairs compared"
+    },
+    {
+      "id": "C5",
+      "name": "gold reference JSON matches evidence and has no unrecorded figure",
+      "status": "PASS",
+      "detail": "documented non-observational mention(s) (exempt): 4025.54"
+    },
+    {
+      "id": "C6",
+      "name": "derived / assay fields are null unless explicitly evidenced",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "C7",
+      "name": "no hallmark / maker-mark claim without evidence",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "id": "C8",
+      "name": "generated HTML renders the headline gold value and product count",
+      "status": "PASS",
+      "detail": "gold_value_rendered=True product_count_rendered=True"
+    },
+    {
+      "id": "C9",
+      "name": "review findings cite at least one source",
+      "status": "PASS",
+      "detail": "findings without source: "
+    }
+  ],
+  "failures": 0,
+  "warnings": 0
+}

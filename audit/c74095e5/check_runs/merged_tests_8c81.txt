@@ -1,0 +1,11 @@
+test_invalid_zero_negative_nan_infinity_inputs_rejected (__main__.TestGoldMeltCalculatorMath.test_invalid_zero_negative_nan_infinity_inputs_rejected) ... ok
+test_live_prices_html_dom_calculator_handles_edge_cases (__main__.TestGoldMeltCalculatorMath.test_live_prices_html_dom_calculator_handles_edge_cases) ... ok
+test_nist_unit_conversions_dwt_and_ozt (__main__.TestGoldMeltCalculatorMath.test_nist_unit_conversions_dwt_and_ozt) ... ok
+test_standard_karats_exact_nist_precision (__main__.TestGoldMeltCalculatorMath.test_standard_karats_exact_nist_precision) ... ok
+test_clean_fixture_passes_with_zero_findings (__main__.TestSecurityAndHallucinationScanner.test_clean_fixture_passes_with_zero_findings) ... ok
+test_detects_hallucinated_color_unlinked_row_unpinned_action_and_low_contrast (__main__.TestSecurityAndHallucinationScanner.test_detects_hallucinated_color_unlinked_row_unpinned_action_and_low_contrast) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.053s
+
+OK

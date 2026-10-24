@@ -6,8 +6,8 @@
       "id": "F-001",
       "severity": "high",
       "type": "checklist_gap",
-      "title": "Item-specific “solid gold” wording is not stated on 17 of 30 items",
-      "detail": "No item-specific title or specification explicitly describes 17 of the 30 listed settings/rings as “solid gold” (the 13 rows on Explicit Solid Gold do state explicit solid 14K–24K gold). Karat wording alone is not substituted for that checklist requirement. A page-wide “solid gold” phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
+      "title": "Item-specific \u201csolid gold\u201d wording is not stated on 17 of 32 items",
+      "detail": "No item-specific title or specification explicitly describes 17 of the 32 listed settings/rings as \u201csolid gold\u201d (the 15 rows on Explicit Solid Gold do state explicit solid 14K\u201324K gold). Karat wording alone is not substituted for that checklist requirement. A page-wide \u201csolid gold\u201d phrase associated with unrelated VRAI editorial jewelry is not treated as evidence for this setting. This is a documentation gap, not proof that any item is plated or filled.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -47,14 +47,14 @@
         "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238"
       ],
-      "recommended_action": "Ask each seller in writing to confirm “solid gold, not plated, vermeil, filled, overlay, or gold-tone,” and keep the reply with the order."
+      "recommended_action": "Ask each seller in writing to confirm \u201csolid gold, not plated, vermeil, filled, overlay, or gold-tone,\u201d and keep the reply with the order."
     },
     {
       "id": "F-002",
       "severity": "high",
       "type": "checklist_gap",
-      "title": "Physical hallmark and maker’s mark are not documented",
-      "detail": "None of the 30 captured product pages documents both a physical karat stamp inside the band and a registered maker’s/manufacturer’s mark (FDJ-GR0001 states “Karat stamped inside the band.” without a maker’s mark; the other 29 omit both). Stock numbers, styles, and URL identifiers are not physical hallmarks.",
+      "title": "Physical hallmark and maker\u2019s mark are not documented",
+      "detail": "None of the 32 captured product pages documents both a physical karat stamp inside the band and a registered maker\u2019s/manufacturer\u2019s mark (FDJ-GR0001 states \u201cKarat stamped inside the band.\u201d without a maker\u2019s mark; the other 31 omit both). Stock numbers, styles, and URL identifiers are not physical hallmarks.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -85,7 +85,9 @@
         "SS-CLARA",
         "SS-RITA",
         "SS-MIA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [],
       "sources": [
@@ -120,14 +122,14 @@
         "https://www.stoneandstrand.com/products/the-mia-ring",
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238"
       ],
-      "recommended_action": "Before relying on the marking, photograph the inside of the band and have an independent jeweller read the karat stamp and maker’s mark under magnification."
+      "recommended_action": "Before relying on the marking, photograph the inside of the band and have an independent jeweller read the karat stamp and maker\u2019s mark under magnification."
     },
     {
       "id": "F-003",
       "severity": "high",
       "type": "unverified",
-      "title": "Metal weight in grams is unpublished on 23 of 30 product pages",
-      "detail": "Only 7 of 30 rows publish seller metal weights in grams (Automic Gold AG-COFFIN-RING 6.10 g and AG-24K 11.00 g, VRAI Classic 4-Prong Dome 2.86 g at size 6, and Sarraf SAR-147370 3.80 g, SAR-145362 10.00 g, SAR-145364 8.00 g, and SAR-144773 13.40 g at size 10). The other 23 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
+      "title": "Metal weight in grams is unpublished on 23 of 32 product pages",
+      "detail": "Only 9 of 32 rows publish seller metal weights in grams (Automic Gold AG-COFFIN-RING 6.10 g and AG-24K 11.00 g, VRAI Classic 4-Prong Dome 2.86 g at size 6, and Sarraf SAR-147370 3.80 g, SAR-145362 10.00 g, SAR-145364 8.00 g, SAR-144773 13.40 g at size 10, SAR-151362 9.20 g, and SAR-147371 7.70 g). The other 23 weight fields remain blank. No gross-ring estimate, stone-inclusive estimate, or average weight is substituted; melt comparisons are therefore unavailable for those rows.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -180,7 +182,7 @@
         "https://www.stoneandstrand.com/products/the-mia-ring",
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238"
       ],
-      "recommended_action": "Request the metal-only gram weight for the exact size and configuration, then verify it on a jeweller’s scale before calculating fine-gold content."
+      "recommended_action": "Request the metal-only gram weight for the exact size and configuration, then verify it on a jeweller\u2019s scale before calculating fine-gold content."
     },
     {
       "id": "F-004",
@@ -234,7 +236,7 @@
       "severity": "medium",
       "type": "currency",
       "title": "Brilliant Earth served a different currency on different retrievals",
-      "detail": "The same official product URL rendered €990.00 (Setting Only) in a EUR locale on 2026-10-22 and $890 (Setting Only) with the site's USD selector on 2026-10-23. The earlier record described the page as EUR-only; that was a region-served capture, not a property of the listing. The register now carries the dated USD observation, keeps the EUR amount as a superseded locale observation, and makes no exchange-rate conversion. A cart quote for the delivery country is still required.",
+      "detail": "The same official product URL rendered \u20ac990.00 (Setting Only) in a EUR locale on 2026-10-22 and $890 (Setting Only) with the site's USD selector on 2026-10-23. The earlier record described the page as EUR-only; that was a region-served capture, not a property of the listing. The register now carries the dated USD observation, keeps the EUR amount as a superseded locale observation, and makes no exchange-rate conversion. A cart quote for the delivery country is still required.",
       "affected_items": [
         "BE-121H6"
       ],
@@ -252,7 +254,7 @@
       "severity": "medium",
       "type": "unverified",
       "title": "VRAI price is absent from the retrieved product text",
-      "detail": "The official configurator supplied setting details and a size-6 metal weight but no price string in the retrieved product chunks. The price and currency fields are blank. A search snippet claiming “Starting at $1,035” is rejected and is not used.",
+      "detail": "The official configurator supplied setting details and a size-6 metal weight but no price string in the retrieved product chunks. The price and currency fields are blank. A search snippet claiming \u201cStarting at $1,035\u201d is rejected and is not used.",
       "affected_items": [
         "VRAI-CLASSIC-4P"
       ],
@@ -267,7 +269,7 @@
       "severity": "medium",
       "type": "irregularity",
       "title": "James Allen item 41515 redirects to a sold-out Blue Nile page",
-      "detail": "The captured James Allen comfort-fit item 41515 URL redirected to Blue Nile and displayed “This popular style is sold out.” Blue Nile’s official James Allen page describes an exclusive curated collection. Item 41515 is excluded; BN-315661 remains a Blue Nile-sold James Allen design.",
+      "detail": "The captured James Allen comfort-fit item 41515 URL redirected to Blue Nile and displayed \u201cThis popular style is sold out.\u201d Blue Nile\u2019s official James Allen page describes an exclusive curated collection. Item 41515 is excluded; BN-315661 remains a Blue Nile-sold James Allen design.",
       "affected_items": [
         "BN-315661"
       ],
@@ -284,7 +286,7 @@
       "severity": "medium",
       "type": "policy",
       "title": "Blue Nile excludes resized-after-purchase and custom orders",
-      "detail": "Blue Nile’s official policy states a 30-day window from shipment and excludes personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance, and Final Sale items. Two complimentary returns per customer/year are stated; other shipping circumstances can incur fees.",
+      "detail": "Blue Nile\u2019s official policy states a 30-day window from shipment and excludes personalized jewelry, custom orders, engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance, and Final Sale items. Two complimentary returns per customer/year are stated; other shipping circumstances can incur fees.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -322,7 +324,7 @@
       "severity": "high",
       "type": "policy",
       "title": "Zales online returns depend on where resizing was performed",
-      "detail": "The official return policy allows 30-day returns and excludes custom designs and jewelry altered/modified beyond sizing or stone setting. The separate official ring-sizer PDF says rings purchased and sized from the online store can be returned/exchanged, but rings resized at a Zales store, another retailer, or an independent jeweler are not accepted for online refund/exchange. This is not a blanket “all resized rings” rule; the location/channel matters.",
+      "detail": "The official return policy allows 30-day returns and excludes custom designs and jewelry altered/modified beyond sizing or stone setting. The separate official ring-sizer PDF says rings purchased and sized from the online store can be returned/exchanged, but rings resized at a Zales store, another retailer, or an independent jeweler are not accepted for online refund/exchange. This is not a blanket \u201call resized rings\u201d rule; the location/channel matters.",
       "affected_items": [
         "Z-20303279",
         "Z-20301172",
@@ -404,7 +406,9 @@
         "SS-CLARA",
         "SS-RITA",
         "SS-MIA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [],
       "sources": [
@@ -445,7 +449,7 @@
       "severity": "low",
       "type": "unverified",
       "title": "Numeric band-width and depth coverage is incomplete",
-      "detail": "Five rows have no numeric band width (four Zales rows plus VRAI, which says only “Standard”). Fifteen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth. All unavailable dimensions remain blank.",
+      "detail": "Six rows have no numeric band width (four Zales rows, VRAI, which says only \u201cStandard\u201d, and SAR-151362). Seventeen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth. All unavailable dimensions remain blank.",
       "affected_items": [
         "BN-203348",
         "BN-195639",
@@ -473,7 +477,9 @@
         "SAR-145364",
         "SS-CLARA",
         "SS-RITA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [],
       "sources": [
@@ -512,7 +518,7 @@
       "severity": "low",
       "type": "unverified",
       "title": "Zales gold colour is not explicit in the retrieved titles",
-      "detail": "The four Zales titles state “10K Gold” but do not explicitly state yellow, white, or rose in the retrieved text. Their metal is recorded as 10K Gold and colour is blank; no colour is inferred from images or URLs.",
+      "detail": "The four Zales titles state \u201c10K Gold\u201d but do not explicitly state yellow, white, or rose in the retrieved text. Their metal is recorded as 10K Gold and colour is blank; no colour is inferred from images or URLs.",
       "affected_items": [
         "Z-20303279",
         "Z-20301172",
@@ -533,7 +539,7 @@
       "severity": "medium",
       "type": "price_ambiguity",
       "title": "Zales renders the same amounts with and without price labels",
-      "detail": "Label presence is not stable between renders. On 2026-10-23 this session read Z-20046552 as “$909.30  $1,299.00 30% Off” with no Discounted/Original labels while the parallel session read the same URL with labels, and the parallel session read Z-20303279 and Z-20301172 without labels while this session read them with labels. Every render is preserved in that row's render_history. No amount is assigned a currency, ordered by position, or reconstructed by discount arithmetic.",
+      "detail": "Label presence is not stable between renders. On 2026-10-23 this session read Z-20046552 as \u201c$909.30  $1,299.00 30% Off\u201d with no Discounted/Original labels while the parallel session read the same URL with labels, and the parallel session read Z-20303279 and Z-20301172 without labels while this session read them with labels. Every render is preserved in that row's render_history. No amount is assigned a currency, ordered by position, or reconstructed by discount arithmetic.",
       "affected_items": [
         "Z-19957449",
         "Z-20046552",
@@ -562,7 +568,7 @@
       "severity": "medium",
       "type": "policy",
       "title": "Brilliant Earth excludes resized/modified and custom-designed returns",
-      "detail": "Brilliant Earth’s official policy offers free 30-day returns but excludes custom-designed jewelry and rings that have been resized or modified. It separately says an engraved ring can be returned with a $40 engraving-removal charge. Resizing is complimentary within the stated 60-day/1-year conditions, but a resize can affect return eligibility.",
+      "detail": "Brilliant Earth\u2019s official policy offers free 30-day returns but excludes custom-designed jewelry and rings that have been resized or modified. It separately says an engraved ring can be returned with a $40 engraving-removal charge. Resizing is complimentary within the stated 60-day/1-year conditions, but a resize can affect return eligibility.",
       "affected_items": [
         "BE-121H6"
       ],
@@ -629,7 +635,9 @@
         "SS-CLARA",
         "SS-RITA",
         "SS-MIA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [
         "blue-nile",
@@ -692,7 +700,7 @@
       "severity": "medium",
       "type": "source_limitation",
       "title": "VRAI candidate BBB profile is not identity-confirmed",
-      "detail": "The candidate BBB profile is named Vrai and lists alternate name Vrai & Oro; VRAI’s official privacy policy identifies Vrai & Oro, LLC as VRAI. However, the BBB profile does not link vrai.com. Its ratings, review average, and complaint counts are withheld rather than attributed to VRAI as confirmed seller-reputation facts.",
+      "detail": "The candidate BBB profile is named Vrai and lists alternate name Vrai & Oro; VRAI\u2019s official privacy policy identifies Vrai & Oro, LLC as VRAI. However, the BBB profile does not link vrai.com. Its ratings, review average, and complaint counts are withheld rather than attributed to VRAI as confirmed seller-reputation facts.",
       "affected_items": [
         "VRAI-CLASSIC-4P"
       ],
@@ -768,7 +776,9 @@
         "SS-CLARA",
         "SS-RITA",
         "SS-MIA",
-        "BN-316238"
+        "BN-316238",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [],
       "sources": [
@@ -803,14 +813,14 @@
         "https://www.stoneandstrand.com/products/the-mia-ring",
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238"
       ],
-      "recommended_action": "Before wearing or resizing, use an independent jeweller for non-destructive XRF, hallmark/maker’s-mark inspection, and metal-only weight verification, subject to the seller’s written return terms."
+      "recommended_action": "Before wearing or resizing, use an independent jeweller for non-destructive XRF, hallmark/maker\u2019s-mark inspection, and metal-only weight verification, subject to the seller\u2019s written return terms."
     },
     {
       "id": "F-025",
       "severity": "medium",
       "type": "unverified_currency",
       "title": "Dollar-sign observations lack confirmed ISO currency",
-      "detail": "The official excerpts establish displayed dollar-sign amounts, but not the ISO currency of the selected configuration. Those amounts are shown verbatim in the register and are **not** copied into the assigned price/currency cells. Four exceptions are recorded only because the retailer publishes its own currency statement: Automic Gold’s public cart endpoint reports \"currency\":\"USD\", Brilliant Earth renders a USD selector next to the price, Sarraf prints an explicit US$ prefix on every item price, and Factory Direct Jewelry prints \"$1,299.99 USD\". Mejuri, Stone and Strand, Blue Nile, and Zales omit an explicit ISO currency token on these captures, so their amounts are displayed verbatim and left unassigned.",
+      "detail": "The official excerpts establish displayed dollar-sign amounts, but not the ISO currency of the selected configuration. Those amounts are shown verbatim in the register and are **not** copied into the assigned price/currency cells. Four exceptions are recorded only because the retailer publishes its own currency statement: Automic Gold\u2019s public cart endpoint reports \"currency\":\"USD\", Brilliant Earth renders a USD selector next to the price, Sarraf prints an explicit US$ prefix on every item price, and Factory Direct Jewelry prints \"$1,299.99 USD\". Mejuri, Stone and Strand, Blue Nile, and Zales omit an explicit ISO currency token on these captures, so their amounts are displayed verbatim and left unassigned.",
       "affected_items": [
         "BN-194158",
         "BN-195269",
@@ -861,20 +871,20 @@
       "severity": "medium",
       "type": "source_scope",
       "title": "Chart metadata does not date the moving WGC header quote",
-      "detail": "The World Gold Council page renders a moving spot header without a quote timestamp next to it. Multiple observations on 2026-10-23 differed from each other while the chart continued to state “Data as of 22 October, 2026”. The chart date is stored as chart_as_of_date and is **not** assigned to the header; quote_date stays null. Header values that are not current are retained only inside superseded_observations and are not rendered as current values on this site. Calculations are conditional arithmetic at the retrieved value, not a valuation.",
+      "detail": "The World Gold Council page renders a moving spot header without a quote timestamp next to it. Multiple observations on 2026-10-23 differed from each other while the chart continued to state \u201cData as of 22 October, 2026\u201d. The chart date is stored as chart_as_of_date and is **not** assigned to the header; quote_date stays null. Header values that are not current are retained only inside superseded_observations and are not rendered as current values on this site. Calculations are conditional arithmetic at the retrieved value, not a valuation.",
       "affected_items": [],
       "affected_retailers": [],
       "sources": [
         "https://www.gold.org/goldhub/data/gold-prices"
       ],
-      "recommended_action": "Read the live page and record both the header value and the chart date yourself before using the calculator; do not treat this register’s dated value as a live quote."
+      "recommended_action": "Read the live page and record both the header value and the chart date yourself before using the calculator; do not treat this register\u2019s dated value as a live quote."
     },
     {
       "id": "F-027",
       "severity": "medium",
       "type": "policy",
       "title": "Automic Gold excludes modified/custom items from returns and omits reference size on published weights",
-      "detail": "Automic Gold offers free 30-day US returns (items must be mailed within 14 days to avoid a recycling fee) and excludes engraved, custom, and modified items. In addition, Coffin Ring states 'Approximately 6.1g (gold)' without specifying which ring size across sizes 2–16 was weighed.",
+      "detail": "Automic Gold offers free 30-day US returns (items must be mailed within 14 days to avoid a recycling fee) and excludes engraved, custom, and modified items. In addition, Coffin Ring states 'Approximately 6.1g (gold)' without specifying which ring size across sizes 2\u201316 was weighed.",
       "affected_items": [
         "AG-COFFIN-RING",
         "AG-CUSHION-SIGNET",
@@ -925,14 +935,14 @@
       "sources": [
         "https://www.automicgold.com/products/sapphire-ring"
       ],
-      "recommended_action": "Consider ordering at least a 1.8 mm–2.0 mm band for everyday lifetime wear."
+      "recommended_action": "Consider ordering at least a 1.8 mm\u20132.0 mm band for everyday lifetime wear."
     },
     {
       "id": "F-030",
       "severity": "low",
       "type": "policy",
       "title": "Mejuri Bold Diamond Eternity Ring price starts 'From $2,900' by size and resize policy is unstated",
-      "detail": "Mejuri's Bold Diamond Eternity Ring displays 'From$2,900' because diamond count (1.15 ct – 1.57 ct) varies with ring size, and full eternity bands generally cannot be resized.",
+      "detail": "Mejuri's Bold Diamond Eternity Ring displays 'From$2,900' because diamond count (1.15 ct \u2013 1.57 ct) varies with ring size, and full eternity bands generally cannot be resized.",
       "affected_items": [
         "MJ-BOLD-ETERNITY"
       ],
@@ -990,7 +1000,7 @@
       "severity": "medium",
       "type": "irregularity",
       "title": "Inherited register assigned USD to some dollar-sign prices and blanked others",
-      "detail": "The inherited data assigned `currency: USD` to Automic Gold and Mejuri rows on the same dollar-sign evidence that was treated as unconfirmed for Blue Nile and Zales rows. That is an inconsistent evidence standard, so this pass applied one rule to every row: an assigned price now needs an official currency statement. Automic Gold is supported by the store’s cart endpoint (“currency”:“USD”); Brilliant Earth is supported by a rendered USD selector; Mejuri, Blue Nile and Zales have no retrieved currency statement, so only their verbatim displayed text is published. No amount was invented or converted.",
+      "detail": "The inherited data assigned `currency: USD` to Automic Gold and Mejuri rows on the same dollar-sign evidence that was treated as unconfirmed for Blue Nile and Zales rows. That is an inconsistent evidence standard, so this pass applied one rule to every row: an assigned price now needs an official currency statement. Automic Gold is supported by the store\u2019s cart endpoint (\u201ccurrency\u201d:\u201cUSD\u201d); Brilliant Earth is supported by a rendered USD selector; Mejuri, Blue Nile and Zales have no retrieved currency statement, so only their verbatim displayed text is published. No amount was invented or converted.",
       "affected_items": [],
       "affected_retailers": [],
       "sources": [
@@ -1000,14 +1010,14 @@
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
         "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449"
       ],
-      "recommended_action": "Keep the single documented rule. If a retailer later publishes an official currency statement, add it to that row’s evidence before assigning the amount."
+      "recommended_action": "Keep the single documented rule. If a retailer later publishes an official currency statement, add it to that row\u2019s evidence before assigning the amount."
     },
     {
       "id": "F-034",
       "severity": "high",
       "type": "purity_and_return_conflict",
       "title": "Stone and Strand SS-MIA 14K vs 10K contradiction & >=50%-off Final Sale return ban",
-      "detail": "Live 2026-10-23 audit confirmed Stone and Strand's SS-MIA product specification states 'Gold Karat: 14K' while gallery image alt tags state 'Stone and Strand 10K Yellow Gold The Mia Diamond Ring'. Furthermore, both SS-MIA ($925, 50% off) and SS-RITA ($780, 60% off) are explicitly non-returnable Final Sale — blocking any refund if post-arrival XRF or scale verification fails.",
+      "detail": "Live 2026-10-23 audit confirmed Stone and Strand's SS-MIA product specification states 'Gold Karat: 14K' while gallery image alt tags state 'Stone and Strand 10K Yellow Gold The Mia Diamond Ring'. Furthermore, both SS-MIA ($925, 50% off) and SS-RITA ($780, 60% off) are explicitly non-returnable Final Sale \u2014 blocking any refund if post-arrival XRF or scale verification fails.",
       "affected_items": [
         "SS-MIA",
         "SS-RITA"
@@ -1027,7 +1037,7 @@
       "severity": "high",
       "type": "thin_shank_and_reputation_warning",
       "title": "Factory Direct Jewelry FDJ-GR0001: 1.25 g displayed weight w/ 1.37 ctw diamonds & 1.8/5 BBB rating",
-      "detail": "FDJ-GR0001 explicitly states '14K Solid Gold' and 'Karat stamped inside the band.', yet displays 'Weight:1.25 Grams' alongside 'Total Carat Weight: 1.37cts'. Converting the diamond total at 0.2 g/ct gives 0.274 g; subtracting that from a gross 1.25 g would leave 0.976 g of 14K alloy — but the captured page does not label the 1.25 g as gross, so this is an explicitly hypothetical scenario, not a product fact. No melt value is stated here because it moves with the dated gold reference; use the calculator page. Independent LA BBB profile is Not BBB Accredited with 1.8/5 across 5 customer reviews, 11 complaints in 3 years (including thin band breakage), and a 20% alteration restocking fee.",
+      "detail": "FDJ-GR0001 explicitly states '14K Solid Gold' and 'Karat stamped inside the band.', yet displays 'Weight:1.25 Grams' alongside 'Total Carat Weight: 1.37cts'. Converting the diamond total at 0.2 g/ct gives 0.274 g; subtracting that from a gross 1.25 g would leave 0.976 g of 14K alloy \u2014 but the captured page does not label the 1.25 g as gross, so this is an explicitly hypothetical scenario, not a product fact. No melt value is stated here because it moves with the dated gold reference; use the calculator page. Independent LA BBB profile is Not BBB Accredited with 1.8/5 across 5 customer reviews, 11 complaints in 3 years (including thin band breakage), and a 20% alteration restocking fee.",
       "affected_items": [
         "FDJ-GR0001"
       ],
@@ -1046,12 +1056,14 @@
       "severity": "medium",
       "type": "policy_contradiction_and_size_benchmark",
       "title": "Sarraf Jewelry Inc. internal policy conflicts & SAR-144773 size-10 gram benchmark",
-      "detail": "Sarraf is BBB Accredited (A+ since 1998) and publishes explicit '14K Solid Gold', 'US$' prices, and separate 'Approximate Metal Weight' in grams. However, 2026-10-23 audit identified: (1) product tab allows engraved ring returns less $25 removal fee while /about-sarraf/ restricts returns to non-engraved items; (2) warranty deductible reads '$100 or 10%' on diamond rings vs '$50 or 5%' on 10K bands; and (3) SAR-144773's 13.40 g weight is benchmarked at size 10 (nominal 7.817 g fine gold at 14K), weighing less in smaller ring sizes (10.1–10.2 g reported in buyer reviews; BBB customer reviews 2.33/5). No melt value is stated in this flag because it moves with the dated gold reference.",
+      "detail": "Sarraf is BBB Accredited (A+ since 1998) and publishes explicit '14K Solid Gold', 'US$' prices, and separate 'Approximate Metal Weight' in grams. However, 2026-10-23 audit identified: (1) product tab allows engraved ring returns less $25 removal fee while /about-sarraf/ restricts returns to non-engraved items; (2) warranty deductible reads '$100 or 10%' on diamond rings vs '$50 or 5%' on 10K bands; and (3) SAR-144773's 13.40 g weight is benchmarked at size 10 (nominal 7.817 g fine gold at 14K), weighing less in smaller ring sizes (10.1\u201310.2 g reported in buyer reviews; BBB customer reviews 2.33/5). No melt value is stated in this flag because it moves with the dated gold reference.",
       "affected_items": [
         "SAR-147370",
         "SAR-145362",
         "SAR-145364",
-        "SAR-144773"
+        "SAR-144773",
+        "SAR-151362",
+        "SAR-147371"
       ],
       "affected_retailers": [
         "sarraf"
@@ -1062,7 +1074,9 @@
         "https://www.bbb.org/us/ca/los-angeles/profile/jewelry-stores/sarraf-jewelry-inc-1216-13041977",
         "https://www.sarraf.com/products/14k-white-gold-solitaire-ring-0-94-ctw.html",
         "https://www.sarraf.com/products/14k-white-gold-mens-solitaire-diamond-ring-1-2-ct.html",
-        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-1-2-ct.html"
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-1-2-ct.html",
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html",
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html"
       ],
       "recommended_action": "Confirm exact gram mass for your ordered finger size in writing prior to purchase, skip engraving before XRF/scale inspection, and pay by credit card."
     },
@@ -1104,8 +1118,8 @@
       "id": "F-039",
       "severity": "medium",
       "type": "price_scope",
-      "title": "Automic Gold variant prices span $1,910–$2,233 (Coffin) and $2,408–$3,253 (Cushion Signet)",
-      "detail": "The seller's own product JSON on 2026-10-23 reports price_varies:true for both rings. Coffin Ring: price_min 191000, price_max 223300 (=$1,910–$2,233); 14k Yellow/White/Rose variants are 191000, Nickel Free 14k White is 203900, and the stored $1,910 is the default 14k configuration. Cushion Diamond Signet Ring: price_min 240800, price_max 325300 (=$2,408–$3,253); the stored $2,758 is the 14k Yellow Gold / Salt and Pepper Diamond variant, while the 14k Yellow Gold / Clear Lab Diamond variant is $2,408. The register stores one observed amount and does not average the range; readers must select metal and stone options before treating an amount as the price.",
+      "title": "Automic Gold variant prices span $1,910\u2013$2,233 (Coffin) and $2,408\u2013$3,253 (Cushion Signet)",
+      "detail": "The seller's own product JSON on 2026-10-23 reports price_varies:true for both rings. Coffin Ring: price_min 191000, price_max 223300 (=$1,910\u2013$2,233); 14k Yellow/White/Rose variants are 191000, Nickel Free 14k White is 203900, and the stored $1,910 is the default 14k configuration. Cushion Diamond Signet Ring: price_min 240800, price_max 325300 (=$2,408\u2013$3,253); the stored $2,758 is the 14k Yellow Gold / Salt and Pepper Diamond variant, while the 14k Yellow Gold / Clear Lab Diamond variant is $2,408. The register stores one observed amount and does not average the range; readers must select metal and stone options before treating an amount as the price.",
       "affected_items": [
         "AG-COFFIN-RING",
         "AG-CUSHION-SIGNET"
@@ -1124,7 +1138,7 @@
       "severity": "high",
       "type": "irregularity",
       "title": "Blue Nile BN-316238 URL now renders a different product than the stored record",
-      "detail": "On 2026-10-23 this session re-read the official URL whose slug is “petite-micropave-engagement-ring-in-14k-white-gold-item-316238”. The page served the title “Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen” with Stock Number 505097w14, width 1.50mm and a displayed “$1,240(Setting Price)”. The stored row, the URL slug and the verification log all describe a “Petite Micropavé Engagement Ring”. The amount stays unassigned rather than being read as this row's price: a price observed on a page describing a different product is not evidence for this product, and stock numbers, styles and URL identifiers are not physical hallmarks.",
+      "detail": "On 2026-10-23 this session re-read the official URL whose slug is \u201cpetite-micropave-engagement-ring-in-14k-white-gold-item-316238\u201d. The page served the title \u201cComfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen\u201d with Stock Number 505097w14, width 1.50mm and a displayed \u201c$1,240(Setting Price)\u201d. The stored row, the URL slug and the verification log all describe a \u201cPetite Micropav\u00e9 Engagement Ring\u201d. The amount stays unassigned rather than being read as this row's price: a price observed on a page describing a different product is not evidence for this product, and stock numbers, styles and URL identifiers are not physical hallmarks.",
       "affected_items": [
         "BN-316238"
       ],
@@ -1141,7 +1155,7 @@
       "severity": "medium",
       "type": "irregularity",
       "title": "BN-316238 verification-log entry records a price the row does not otherwise carry",
-      "detail": "The 2026-10-23 verification-log entry for BN-316238 records “$1,240(Setting Price)” and “Width: 1.50mm” as a verified match, while the row's own price and field_evidence are blank and its stored name is the Petite Micropavé setting. The log and the register therefore disagreed for the same URL on the same day, and no automated check compared them. The log entry is reclassified in this pass and the disagreement is published rather than deleted.",
+      "detail": "The 2026-10-23 verification-log entry for BN-316238 records \u201c$1,240(Setting Price)\u201d and \u201cWidth: 1.50mm\u201d as a verified match, while the row's own price and field_evidence are blank and its stored name is the Petite Micropav\u00e9 setting. The log and the register therefore disagreed for the same URL on the same day, and no automated check compared them. The log entry is reclassified in this pass and the disagreement is published rather than deleted.",
       "affected_items": [
         "BN-316238"
       ],
@@ -1151,7 +1165,51 @@
       "sources": [
         "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238"
       ],
-      "recommended_action": "Add an automated check that every verification-log “observed” amount also appears in that row's field_evidence, and that the log's label matches the row's stored name."
+      "recommended_action": "Add an automated check that every verification-log \u201cobserved\u201d amount also appears in that row's field_evidence, and that the log's label matches the row's stored name."
+    },
+    {
+      "id": "F-043",
+      "severity": "low",
+      "type": "irregularity",
+      "title": "Factory Direct Jewelry states two different founding years on the same product page",
+      "detail": "The captured product page says 'Handcrafted in our Los Angeles factory since 1985' in its U.S.-made panel and 'We've been making jewelry in our Los Angeles factory since 1988' in its 'From Our Factory To You' panel. Both sentences were read on 2026-10-23. The listing's price ($1,299.99), stated weight (1.25 grams) and karat-stamp sentence are unaffected by this discrepancy, and no founding year is used anywhere in this register as a trust signal.",
+      "affected_items": [],
+      "affected_retailers": [],
+      "sources": [
+        "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/"
+      ],
+      "recommended_action": "Ask the seller in writing to confirm its founding year and its California manufacturing claims before relying on either. Treat a self-contradicting page as a documentation-quality signal, not as proof of fraud."
+    },
+    {
+      "id": "F-044",
+      "severity": "medium",
+      "type": "irregularity",
+      "title": "A sentence published as a verbatim standards quote appears on neither cited page",
+      "detail": "data/gold-price.json stored 'an item marked 18 k is made of 75 % gold' as a field-scoped quotation of 16 CFR 23.3, and evidence/gold-price.md labelled it a NIST conversion-chart quote. Both the regulation and the FTC consumer page were re-read on 2026-10-23: the regulation contains no percentage sentence, and the FTC page states the karat parts in words (18 parts gold, six parts another metal). The 75 % is 18/24 arithmetic. The fabricated quotation was removed, the verified FTC sentence is stored instead, and the arithmetic is labelled as arithmetic. No stored gold value changed because of this correction.",
+      "affected_items": [],
+      "affected_retailers": [],
+      "sources": [
+        "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3",
+        "https://consumer.ftc.gov/articles/buying-platinum-gold-and-silver-jewelry"
+      ],
+      "recommended_action": "Keep quoting only text that a dated fetch actually contains, and keep derived percentages labelled as derived. Hallucination scans should compare every quoted string against its own evidence file rather than trusting a quotation mark."
+    },
+    {
+      "id": "F-045",
+      "severity": "medium",
+      "type": "irregularity",
+      "title": "Sarraf SAR-147371 contradicts itself on diamond color (G vs H)",
+      "detail": "The SAR-147371 product page captured 2026-10-23 states 'Diamond Color: G' in its specifications and 'I1 in clarity and H in color' in its description. The register records neither color as confirmed; the 0.98 Ct natural-diamond weight, I1 clarity, '14K Solid Gold' wording, 7.70 g metal weight and US$4,049.00 price are stated consistently on the page. (Flag renumbered from a pre-merge draft F-043 during the S-C74095E5 merge with main, where F-043/F-044 were taken by S-88AA65FD.)",
+      "affected_items": [
+        "SAR-147371"
+      ],
+      "affected_retailers": [
+        "sarraf"
+      ],
+      "sources": [
+        "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html"
+      ],
+      "recommended_action": "Obtain written confirmation of the diamond color (and its grading basis) from Sarraf before purchase; verify the stone independently on arrival."
     }
   ],
   "retrieved_at": "2026-10-23"

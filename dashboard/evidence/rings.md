@@ -1,131 +1,533 @@
-# Dashboard Verbatim Ring Evidence (`2026-10-23`)
+# Dashboard Canonical Ring Evidence (observations through `2026-10-23`)
+
+These passages are copied from the existing canonical evidence records. The companion build performs no network request and does not refresh observation dates.
 
 ## SAR-147370 — 14k White Gold Solitaire Ring 0.94 ctw.
 - Official URL: https://www.sarraf.com/products/14k-white-gold-solitaire-ring-0-94-ctw.html
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Material: 14K Solid Gold | Approximate Metal Weight: 3.80 grams | Diamond Weight: 0.94 Ct. | Now: US$3,004.00`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/sar-147370.md
+- Verification scope: `verified_solid_gold_and_weight`
+### Stored product-name passage
+
+```text
+14k White Gold Solitaire Ring 0.94 ctw.
+```
+
+### Stored price quotes passage
+
+```text
+Now: US$3,004.00
+```
+
+### Stored currency quotes passage
+
+```text
+Now: US$3,004.00
+```
+
+### Stored weight quotes passage
+
+```text
+Approximate Metal Weight: 3.80 grams
+```
 
 ## SAR-145362 — 14k White Gold Men's Solitaire Diamond Ring 1/2 ct.
 - Official URL: https://www.sarraf.com/products/14k-white-gold-mens-solitaire-diamond-ring-1-2-ct.html
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Material: 14K Solid Gold | Approximate Metal Weight: 10.00 grams | Diamond Weight: 0.50 Ct. | Now: US$2,661.00`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/sar-145362.md
+- Verification scope: `verified_solid_gold_and_weight`
+### Stored product-name passage
+
+```text
+14k White Gold Men's Solitaire Diamond Ring 1/2 ct.
+```
+
+### Stored price quotes passage
+
+```text
+Now: US$2,661.00
+```
+
+### Stored currency quotes passage
+
+```text
+Now: US$2,661.00
+```
+
+### Stored weight quotes passage
+
+```text
+Approximate Metal Weight: 10.00 grams
+```
 
 ## SAR-145364 — 14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct.
 - Official URL: https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-1-2-ct.html
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Material: 14K Solid Gold | Approximate Metal Weight: 8.00 grams | Diamond Weight: 0.50 Ct. | Now: US$2,858.00`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/sar-145364.md
+- Verification scope: `verified_solid_gold_and_weight`
+### Stored product-name passage
+
+```text
+14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct.
+```
+
+### Stored price quotes passage
+
+```text
+Now: US$2,858.00
+```
+
+### Stored currency quotes passage
+
+```text
+Now: US$2,858.00
+```
+
+### Stored weight quotes passage
+
+```text
+Approximate Metal Weight: 8.00 grams
+```
 
 ## SAR-144773 — 14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band
 - Official URL: https://www.sarraf.com/products/14k-yellow-gold-12mm-high-polished-traditional-domed-wedding-band.html
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Material: 14K Solid Gold | Approximate Metal Weight: 13.40 grams | Now: US$1,362.00`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/sar-144773.md
+- Verification scope: `verified_solid_gold_and_weight`
+### Stored product-name passage
 
-## AG-24K — 24k Band (99.99% Pure Solid Gold)
+```text
+14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band
+```
+
+### Stored price quotes passage
+
+```text
+Now: US$1,362.00
+```
+
+### Stored currency quotes passage
+
+```text
+Now: US$1,362.00
+```
+
+### Stored weight quotes passage
+
+```text
+Approximate Metal Weight: 13.40 grams
+```
+
+## SAR-151362 — 14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw
+- Official URL: https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/sar-151362.md
+- Verification scope: `verified_solid_gold_and_weight`
+### Stored product-name passage
+
+```text
+14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw
+```
+
+### Stored price quotes passage
+
+```text
+Now: US$8,203.00
+```
+
+### Stored currency quotes passage
+
+```text
+Now: US$8,203.00
+```
+
+### Stored weight quotes passage
+
+```text
+Approximate Metal Weight: 9.20 grams
+```
+
+## SAR-147371 — 14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.
+- Official URL: https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/sar-147371.md
+- Verification scope: `verified_solid_gold_and_weight`
+### Stored product-name passage
+
+```text
+14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.
+```
+
+### Stored price quotes passage
+
+```text
+Now: US$4,049.00
+```
+
+### Stored currency quotes passage
+
+```text
+Now: US$4,049.00
+```
+
+### Stored weight quotes passage
+
+```text
+Approximate Metal Weight: 7.70 grams
+```
+
+## AG-24K — 24k Band
 - Official URL: https://www.automicgold.com/products/24k-band
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Solid 24k Gold | Made of 99.99% pure gold | Approximate item weight: 11g | $3,520`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/ag-24k.md
+- Verification scope: `verified_solid_gold_and_weight`
+### Stored product-name passage
 
-## AG-COFFIN-RING — Coffin Ring (Solid 14k Gold Band)
+```text
+24k Band
+```
+
+### Stored price quotes passage
+
+```text
+$3,520
+```
+
+### Stored currency quotes passage
+
+```text
+"currency":"USD"
+```
+
+### Stored weight quotes passage
+
+```text
+Approximate item weight: 11g
+```
+
+## AG-COFFIN-RING — Coffin Ring
 - Official URL: https://www.automicgold.com/products/coffin-ring
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Solid 14k Gold | Item Weight: Approximately 6.1g (gold) | $1,910`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/ag-coffin-ring.md
+- Verification scope: `verified_solid_gold_and_weight`
+### Stored product-name passage
 
-## VRAI-CLASSIC-4P — The Classic 4-Prong Solitaire Engagement Ring (18k Yellow Gold)
-- Official URL: https://www.vrai.com/engagement-ring/classic-4-prong-solitaire/round-brilliant-yellow-gold-41383090421853
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `18k Yellow Gold | Band depth:1.6mm | Metal weight:2.86g (Ring size 6)`
+```text
+Coffin Ring
+```
 
-## FDJ-GR0001 — Lab Grown Diamond Halo Engagement Ring in 14K Gold (Style GR0001)
+### Stored price quotes passage
+
+```text
+$1,910
+```
+
+### Stored currency quotes passage
+
+```text
+"currency":"USD"
+```
+
+### Stored weight quotes passage
+
+```text
+Approximately 6.1g (gold) or 9.2g (platinum)
+```
+
+## VRAI-CLASSIC-4P — Classic Round Brilliant Engagement Ring
+- Official URL: https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/vrai-classic-4p.md
+- Verification scope: `partial_price_unverified`
+### Stored product-name passage
+
+```text
+Classic Round Brilliant Engagement Ring | Plain Band | 18k Yellow Gold
+```
+
+### Stored weight quotes passage
+
+```text
+Metal weight:2.86g (Ring size 6)
+```
+
+## FDJ-GR0001 — Lab Grown Diamond Halo Engagement Ring in 14K Gold
 - Official URL: https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Made with solid gold. Never plated. | Karat stamped inside the band. | Total Carat Weight: 1.37cts | Weight:1.25 Grams | $1,299.99`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/fdj-gr0001.md
+- Verification scope: `verified_solid_gold_gross_weight`
+### Stored product-name passage
 
-## MENE-ROSE — Menē Rose Ring — Pure 24k Solid Gold
+```text
+Lab Grown Diamond Halo Engagement Ring in 14K Gold
+```
+
+### Stored price quotes passage
+
+```text
+$1,299.99
+```
+
+### Stored currency quotes passage
+
+```text
+USD
+```
+
+## MENE-ROSE — Rose Ring
 - Official URL: https://mene.com/products/rose-ring-gold
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Menē Rose Ring - 24k Gold | pure 24 karat jewelry by gram weight | $1,336`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../explore/sources/#mene-rose
+- Verification scope: `canonical_combined_record`
+### Stored product-name passage
 
-## MENE-KNOT — Menē Knot Ring — Pure 24k Solid Gold
+```text
+Rose Ring
+```
+
+### Stored price quotes passage
+
+```text
+$1,325
+```
+
+### Stored currency quotes passage
+
+```text
+USD
+```
+
+## MENE-KNOT — Knot Ring
 - Official URL: https://mene.com/products/knot-ring-gold
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Knot ring - 24k Gold | pure 24 karat jewelry by gram weight | $1,454`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../explore/sources/#mene-knot
+- Verification scope: `canonical_combined_record`
+### Stored product-name passage
 
-## AV-BRIDGE — Diamond Bridge Ring Tall (Solid 22k Gold, 0.07 ctw)
+```text
+Knot Ring
+```
+
+### Stored price quotes passage
+
+```text
+$1,442
+```
+
+### Stored currency quotes passage
+
+```text
+USD
+```
+
+## AV-BRIDGE — Diamond Bridge Ring Tall
 - Official URL: https://auvere.com/product/diamond-bridge-ring-tall/
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `handcrafted from solid 22 karat gold | Approximate Fine Weight:5 to 6.1 grams depending on size`
+- Observation date: `2026-10-22`
+- Canonical evidence: ../explore/sources/#av-bridge
+- Verification scope: `canonical_combined_record`
+### Stored product-name passage
 
-## AV-CLEAN — Clean Cut Stack Ring Polished (Solid 22k Gold)
+```text
+Diamond Bridge Ring Tall
+```
+
+## AV-CLEAN — Clean Cut Stack Ring Polished
 - Official URL: https://auvere.com/product/clean-cut-stack-ring-polished/
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Handcrafted from solid 22 karat gold | Approximate Fine Weight:2.8 to 3.7 grams depending on size`
+- Observation date: `2026-10-22`
+- Canonical evidence: ../explore/sources/#av-clean
+- Verification scope: `canonical_combined_record`
+### Stored product-name passage
 
-## AG-CUSHION-SIGNET — Lab-Grown Cushion Diamond Signet Ring (Solid 14k Gold)
-- Official URL: https://www.automicgold.com/products/lab-grown-cushion-diamond-signet-ring
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Solid 14k Gold | Lab-Grown Cushion Diamond Signet Ring | $2,758`
+```text
+Clean Cut Stack Ring Polished
+```
 
-## AG-SAPPHIRE-RING — Sapphire Ring (Solid 14k Gold, 3mm Lab Sapphire)
+## AG-CUSHION-SIGNET — Cushion Diamond Signet Ring
+- Official URL: https://www.automicgold.com/products/cushion-diamond-signet-ring
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/ag-cushion-signet.md
+- Verification scope: `verified_solid_gold_gross_weight`
+### Stored product-name passage
+
+```text
+Cushion Diamond Signet Ring
+```
+
+### Stored price quotes passage
+
+```text
+$2,758
+```
+
+### Stored currency quotes passage
+
+```text
+"currency":"USD"
+```
+
+## AG-SAPPHIRE-RING — Sapphire Ring
 - Official URL: https://www.automicgold.com/products/sapphire-ring
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Solid 14k Gold | Item Weight: Approximately 1.2g (gold) | $526`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/ag-sapphire-ring.md
+- Verification scope: `verified_solid_gold_gross_weight`
+### Stored product-name passage
 
-## MJ-BOLD-ETERNITY — Bold Lab Grown Diamond Eternity Ring (Solid 14k White Gold)
-- Official URL: https://mejuri.com/products/bold-lab-grown-diamond-eternity-ring
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Solid White Gold (14k) | 14k solid gold | $2,900`
+```text
+Sapphire Ring
+```
 
-## SS-CLARA — The Clara Diamond Ring (Solid 14k Yellow Gold, 0.62 ctw)
+### Stored price quotes passage
+
+```text
+$526
+```
+
+### Stored currency quotes passage
+
+```text
+"currency":"USD"
+```
+
+## MJ-BOLD-ETERNITY — Bold Diamond Eternity Ring
+- Official URL: https://mejuri.com/products/bold-diamond-eternity-ring
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/mj-bold-eternity.md
+- Verification scope: `partial_price_unverified`
+### Stored product-name passage
+
+```text
+Bold Diamond Eternity Ring
+```
+
+## SS-CLARA — The Clara Diamond Ring
 - Official URL: https://www.stoneandstrand.com/products/the-clara-ring
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Solid 14K yellow gold | Gold Karat: 14K | $2,200`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/ss-clara.md
+- Verification scope: `verified_solid_gold_no_weight`
+### Stored product-name passage
 
-## SS-RITA — The Rita Diamond Ring (Solid 14k Yellow Gold — Final Sale)
+```text
+The Clara Diamond Ring
+```
+
+## SS-RITA — The Rita Diamond Ring
 - Official URL: https://www.stoneandstrand.com/products/the-rita-ring
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Solid 14K yellow gold | $780 (60% off) | Final sale and non-returnable`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/ss-rita.md
+- Verification scope: `verified_solid_gold_no_weight`
+### Stored product-name passage
 
-## SS-MIA — The Mia Diamond Ring (14K Spec vs 10K Image Alt Conflict — Final Sale)
+```text
+The Rita Diamond Ring
+```
+
+## SS-MIA — The Mia Diamond Ring
 - Official URL: https://www.stoneandstrand.com/products/the-mia-ring
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Gold Karat: 14K vs alt 'Stone and Strand 10K Yellow Gold The Mia Diamond Ring' | $925 (50% off) | Final sale`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/ss-mia.md
+- Verification scope: `verified_solid_gold_no_weight`
+### Stored product-name passage
 
-## BE-121H6 — Classic Six-Prong Solitaire Ring Setting (14K Yellow Gold + 14K White Prongs)
+```text
+The Mia Diamond Ring
+```
+
+## BE-121H6 — Classic Six-Prong Solitaire Ring in 14K Yellow Gold
 - Official URL: https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `USD | $890(Setting Only) | 14K Yellow Gold | Width: 2.5 mm`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/be-121h6.md
+- Verification scope: `partial_official_fields`
+### Stored product-name passage
 
-## BN-194158 — Petite Solitaire Engagement Ring Setting in 18k Yellow Gold
-- Official URL: https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-194158
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Petite Solitaire Engagement Ring in 18k Yellow Gold | $1,125 (Setting Price)`
+```text
+Classic Six-Prong Solitaire Ring in 14K Yellow Gold
+```
 
-## BN-195269 — Classic Four-Prong Solitaire Setting in 18k Rose Gold
-- Official URL: https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-rose-gold-item-195269
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Classic Four-Prong Solitaire Engagement Ring in 18k Rose Gold | $1,155 (Setting Price)`
+### Stored price quotes passage
 
-## BN-316238 — Petite Micropavé Engagement Ring Setting in 14k White Gold
+```text
+$890(Setting Only)
+```
+
+### Stored currency quotes passage
+
+```text
+USD
+```
+
+## BN-194158 — Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold
+- Official URL: https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/bn-194158.md
+- Verification scope: `partial_price_unverified`
+### Stored product-name passage
+
+```text
+Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold
+```
+
+## BN-195269 — Petite Solitaire Engagement Ring in 18k Yellow Gold
+- Official URL: https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/bn-195269.md
+- Verification scope: `partial_price_unverified`
+### Stored product-name passage
+
+```text
+Petite Solitaire Engagement Ring in 18k Yellow Gold
+```
+
+## BN-316238 — Petite Micropavé Engagement Ring in 14k White Gold
 - Official URL: https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Petite Micropavé Engagement Ring in 14k White Gold | $1,240 (Setting Price)`
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/bn-316238.md
+- Verification scope: `partial_identity_mismatch`
+### Stored product-name passage
 
-## BN-315661 — French Pavé Halo Engagement Ring Setting in 14k White Gold (1/5 ctw)
-- Official URL: https://www.bluenile.com/engagement-rings/design-your-own-ring/french-pave-halo-engagement-ring-in-14k-white-gold-1-5-ct-tw-item-315661
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `French Pavé Halo Engagement Ring in 14k White Gold (1/5 ct. tw.) | $2,210`
+```text
+Petite Micropavé Engagement Ring in 14k White Gold
+```
 
-## BN-203348 — Three-Stone Trellis Engagement Ring Setting in 14k Yellow Gold
-- Official URL: https://www.bluenile.com/engagement-rings/design-your-own-ring/three-stone-trellis-engagement-ring-in-14k-yellow-gold-item-203348
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `Three-Stone Trellis Engagement Ring in 14k Yellow Gold | $1,145`
+## BN-315661 — Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen
+- Official URL: https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/bn-315661.md
+- Verification scope: `partial_price_unverified`
+### Stored product-name passage
 
-## Z-20303279 — Vera Wang LOVE 3/4 CT. T.W. Princess-Cut Solitaire Ring in 10K White Gold
-- Official URL: https://www.zales.com/vera-wang-love-collection-3-4-ct-tw-princesscut-diamond-solitaire-engagement-ring-10k-white-gold/p/V-20303279
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `10K White Gold | Discounted Price $979.30 Original Price was $1,399.00 30% Off`
+```text
+Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen
+```
 
-## Z-20046552 — 1 CT. T.W. Diamond Frame Twist Shank Engagement Ring in 10K White Gold
-- Official URL: https://www.zales.com/1-ct-tw-diamond-frame-twist-shank-engagement-ring-10k-white-gold/p/V-20046552
-- Capture Date: `2026-10-23`
-- Verbatim Quote: `10K White Gold | $909.30 $1,299.00 30% Off`
+## BN-203348 — Classic Simple Solitaire Engagement Ring in 14K Yellow Gold
+- Official URL: https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/bn-203348.md
+- Verification scope: `partial_price_unverified`
+### Stored product-name passage
+
+```text
+Classic Simple Solitaire Engagement Ring in 14K Yellow Gold
+```
+
+## Z-20303279 — 1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold
+- Official URL: https://www.zales.com/12-ct-tw-diamond-frame-vintagestyle-twist-shank-engagement-ring-10k-gold/p/V-20303279
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/z-20303279.md
+- Verification scope: `partial_price_unverified`
+### Stored product-name passage
+
+```text
+1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold
+```
+
+## Z-20046552 — 1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold
+- Official URL: https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552
+- Observation date: `2026-10-23`
+- Canonical evidence: ../evidence/listings/z-20046552.md
+- Verification scope: `partial_price_unassigned`
+### Stored product-name passage
+
+```text
+1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold
+```

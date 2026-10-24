@@ -26,7 +26,7 @@ EXPECTED_CORRECTIONS = {"mene-rose", "mene-knot"}
 ALLOWED_HOSTS = {
     "auvere.com", "consumer.ftc.gov", "mejuri.com", "mene.com",
     "www.automicgold.com", "www.bbb.org", "www.bluenile.com",
-    "www.brilliantearth.com", "www.catbirdnyc.com",
+    "www.brilliantearth.com", "www.catbirdnyc.com", "www.ecfr.gov",
     "www.factorydirectjewelry.com", "www.gia.edu", "www.gold.org",
     "www.jmbullion.com", "www.lbma.org.uk", "www.nist.gov",
     "www.quince.com", "www.sarraf.com", "www.stoneandstrand.com",
