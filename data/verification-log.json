@@ -1,13 +1,16 @@
 {
   "generated_at": "2026-10-23",
-  "pass": {
-    "session": "S-1EB9F828",
-    "checked_at": "2026-10-23",
-    "timezone": "UTC",
-    "method": "Targeted direct fetch_page retrieval on 2026-10-23 of the rows changed by this pass (both Automic Gold products, the Mejuri product and returns FAQ, the Mejuri BBB profile, the Automic currency endpoint) plus the World Gold Council spot page. Changes to other rows in this pass are documentation-only and were not re-read; their entries below retain the earlier dated result.",
-    "rule": "A stored value is reused only if the official page rendered it again during the pass that recorded it. Rows not re-read this pass are marked not_re_read or keep their earlier checked_at. No value is inferred, averaged, converted, or copied from a search snippet.",
-    "limits": "A successful retrieval is not an assay, not a hallmark check, and not proof of stock or future price. Pages can change after this pass."
-  },
+  "pass": {"session": "S-A182C7CC", "checked_at": "2026-10-23", "timezone": "UTC", "method": "Follow-up direct fetch_page price pass on 2026-10-23 UTC: all 17 rows carrying an assigned price in the combined catalog were opened at their official product URLs, along with a direct WGC gold-price page re-read. The rows include nine Automic Gold items, two Men\u0113 pieces, one Brilliant Earth setting, four Sarraf products and one Factory Direct Jewelry ring. The fetch tool does not expose request-second timestamps; new product price observations are stored at date precision. Automic USD context is the seller cart endpoint; Sarraf uses its page US$ prefix; Brilliant Earth shows a USD selector; Factory Direct Jewelry prints USD. Only the two Men\u0113 prices changed. WGC $3,995.47/oz matched the value already integrated by PR #45. The appended snapshot rows describe this pass; older root-register rows retain their own checked dates.", "rule": "A displayed amount is updated only when the official page or a directly retrieved official product variant supports that exact configuration. A blank remains blank. No value is inferred from a neighboring listing, search snippet, currency conversion, variant average, weight estimate, or assumed checkout selection.", "limits": "A successful fetch confirms only what the official page or JSON displayed on the observation date. It does not confirm final checkout totals, future price/stock, physical purity, marks, weight, authenticity, return eligibility, or independent test results. The WGC header timestamp remains unconfirmed (F-026). No prices in the 27 unassigned catalog rows were inferred or filled; seller policies and physical/product fields were not recertified by this targeted price pass. Look for hallucinations again after this review."},
+  "pass_history": [
+    {
+      "session": "S-1EB9F828",
+      "checked_at": "2026-10-23",
+      "timezone": "UTC",
+      "method": "Targeted direct fetch_page retrieval on 2026-10-23 of the rows changed by this pass (both Automic Gold products, the Mejuri product and returns FAQ, the Mejuri BBB profile, the Automic currency endpoint) plus the World Gold Council spot page. Changes to other rows in this pass are documentation-only and were not re-read; their entries below retain the earlier dated result.",
+      "rule": "A stored value is reused only if the official page rendered it again during the pass that recorded it. Rows not re-read this pass are marked not_re_read or keep their earlier checked_at. No value is inferred, averaged, converted, or copied from a search snippet.",
+      "limits": "A successful retrieval is not an assay, not a hallmark check, and not proof of stock or future price. Pages can change after this pass."
+    }
+  ],
   "entries": [
     {
       "id": "BN-194158",
@@ -611,6 +614,283 @@
       ],
       "note": "Live page no longer matches the stored Petite Micropav\u00e9 record. The amount is recorded as what the page shows, NOT as this row's price; the row's price stays blank and the discrepancy is published as F-041/F-042.",
       "session": "S-305FDD02"
+    },
+{
+      "id": "A182-PRICE-AG-NATURAL",
+      "kind": "price_snapshot",
+      "label": "Natural Diamond Ring",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/products/diamond-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Natural Diamond Ring",
+        "$726",
+        "14k Yellow Gold",
+        "USD currency context: Automic Gold public cart endpoint reports \"currency\":\"USD\""
+      ],
+      "note": "Official page: $726 for the displayed 14k Yellow Gold option. Cart.js separately states USD; size-specific checkout and engraving total were not checked."
+    },
+{
+      "id": "A182-PRICE-AG-CLUSTER",
+      "kind": "price_snapshot",
+      "label": "Diamond Cluster Ring",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/products/diamond-cluster-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Diamond Cluster Ring",
+        "$2,862",
+        "14k Yellow Gold / Natural Diamond",
+        "USD currency context: Automic Gold public cart endpoint reports \"currency\":\"USD\""
+      ],
+      "note": "Official page: $2,862 for the displayed 14k Yellow Gold / Natural Diamond option. Cart.js separately states USD; size-specific checkout and engraving total were not checked."
+    },
+{
+      "id": "A182-PRICE-AG-PETAL",
+      "kind": "price_snapshot",
+      "label": "0.6ct Round Diamond Petal Ring",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/products/diamond-petal-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "0.6ct Round Diamond Petal Ring",
+        "$1,774",
+        "14k Yellow Gold / Lab Created Diamond",
+        "USD currency context: Automic Gold public cart endpoint reports \"currency\":\"USD\""
+      ],
+      "note": "Official page: $1,774 for the displayed 14k Yellow Gold / Lab Created Diamond option. Cart.js separately states USD; the natural-diamond option is distinct and not substituted."
+    },
+{
+      "id": "A182-PRICE-AG-RUBY",
+      "kind": "price_snapshot",
+      "label": "Ruby Ring",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/products/ruby-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Ruby Ring",
+        "$526",
+        "14k Yellow Gold",
+        "USD currency context: Automic Gold public cart endpoint reports \"currency\":\"USD\""
+      ],
+      "note": "Official page: $526 for the displayed 14k Yellow Gold option. Cart.js separately states USD; size-specific checkout and engraving total were not checked."
+    },
+{
+      "id": "A182-PRICE-AG-SAPPHIRE",
+      "kind": "price_snapshot",
+      "label": "Sapphire Ring",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/products/sapphire-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Sapphire Ring",
+        "$526",
+        "14k Yellow Gold",
+        "USD currency context: Automic Gold public cart endpoint reports \"currency\":\"USD\""
+      ],
+      "note": "Official page: $526 for the displayed 14k Yellow Gold option. Cart.js separately states USD; size-specific checkout and engraving total were not checked."
+    },
+{
+      "id": "A182-PRICE-AG-MOISSANITE",
+      "kind": "price_snapshot",
+      "label": "Moissanite Ring",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/collections/engagement/products/moissanite-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Moissanite Ring",
+        "$420",
+        "14k Yellow Gold",
+        "USD currency context: Automic Gold public cart endpoint reports \"currency\":\"USD\""
+      ],
+      "note": "Official page: $420 for the displayed 14k Yellow Gold option. Cart.js separately states USD; size-specific checkout and engraving total were not checked."
+    },
+{
+      "id": "A182-PRICE-AG-24K",
+      "kind": "price_snapshot",
+      "label": "24k Band",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/products/24k-band",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "24k Band",
+        "$3,520",
+        "Solid 24k Gold",
+        "Hammered (default finish)",
+        "USD currency context: Automic Gold public cart endpoint reports \"currency\":\"USD\""
+      ],
+      "note": "Official page: $3,520, Solid 24k Gold; Hammered was the displayed default finish. Cart.js separately states USD. No exact size, engraving, or size-specific checkout total was confirmed."
+    },
+{
+      "id": "A182-PRICE-AG-COFFIN-RING",
+      "kind": "price_snapshot",
+      "label": "Coffin Ring",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/products/coffin-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Coffin Ring",
+        "$1,910",
+        "14k Yellow Gold (default selection)",
+        "USD currency context: Automic Gold public cart endpoint reports \"currency\":\"USD\""
+      ],
+      "note": "Official page: $1,910 for the default 14k Yellow Gold selection. Variant range remains as flagged in F-039; no alternative is substituted or averaged. Cart.js separately states USD."
+    },
+{
+      "id": "A182-PRICE-AG-CUSHION-SIGNET",
+      "kind": "price_snapshot",
+      "label": "Cushion Diamond Signet Ring",
+      "retailer": "Automic Gold",
+      "url": "https://www.automicgold.com/products/cushion-diamond-signet-ring",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Cushion Diamond Signet Ring",
+        "$2,758",
+        "14k Yellow Gold / Salt and Pepper Diamond",
+        "USD currency context: Automic Gold public cart endpoint reports \"currency\":\"USD\"",
+        "Official product JSON: selected variant raw price field 275800; no conversion used to replace the displayed price"
+      ],
+      "note": "Official page: $2,758 for 14k Yellow Gold / Salt and Pepper Diamond. The same-day official JSON identifies the selected variant with raw price field 275800 and a $2,408\u2013$3,253 product range; the displayed page amount is retained verbatim, without deriving it from the raw integer. Cart.js separately states USD."
+    },
+{
+      "id": "A182-PRICE-MENE-ROSE",
+      "kind": "price_snapshot",
+      "label": "Rose Ring",
+      "retailer": "Men\u0113",
+      "url": "https://mene.com/products/rose-ring-gold",
+      "checked_at": "2026-10-23",
+      "status": "verified_correction",
+      "observed": [
+        "Rose Ring",
+        "$1,325",
+        "USD",
+        "24k Gold",
+        "This is a Crafted-on-Demand item."
+      ],
+      "note": "Official page: $1,325 USD, 24k Gold, Crafted-on-Demand. This supersedes the earlier same-day $1,336 USD observation (10:00Z), preserved as history. Exact size, weight, final price, and checkout total remain unconfirmed; no buyer size was selected."
+    },
+{
+      "id": "A182-PRICE-MENE-KNOT",
+      "kind": "price_snapshot",
+      "label": "Knot Ring",
+      "retailer": "Men\u0113",
+      "url": "https://mene.com/products/knot-ring-gold",
+      "checked_at": "2026-10-23",
+      "status": "verified_correction",
+      "observed": [
+        "Knot Ring",
+        "$1,442",
+        "USD",
+        "24k Gold",
+        "This is a Crafted-on-Demand item."
+      ],
+      "note": "Official page: $1,442 USD, 24k Gold, Crafted-on-Demand. This supersedes the earlier same-day $1,454 USD observation (10:00Z), preserved as history. Exact size, weight, final price, and checkout total remain unconfirmed; no buyer size was selected."
+    },
+{
+      "id": "A182-PRICE-EXT-BE-121H6",
+      "kind": "price_snapshot",
+      "label": "Classic Six-Prong Solitaire Ring in 14K Yellow Gold",
+      "retailer": "Brilliant Earth",
+      "url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "USD",
+        "$890 (Setting Only)",
+        "14K Yellow Gold",
+        "Prong metal: 14K White Gold"
+      ],
+      "note": "Official page chunk 4: $890 (Setting Only) with the USD selector; 14K Yellow Gold setting and 14K White Gold prongs. Center diamond and ring size are not selected; this is not a complete-ring price."
+    },
+{
+      "id": "A182-PRICE-SAR-147370",
+      "kind": "price_snapshot",
+      "label": "14k White Gold Solitaire Ring 0.94 ctw.",
+      "retailer": "Sarraf Jewelry Inc.",
+      "url": "https://www.sarraf.com/products/14k-white-gold-solitaire-ring-0-94-ctw.html",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Now: US$3,004.00"
+      ],
+      "note": "Official Sarraf page: Now: US$3,004.00. The page itself provides the US$ currency prefix; no checkout or shipping total was verified."
+    },
+{
+      "id": "A182-PRICE-SAR-145362",
+      "kind": "price_snapshot",
+      "label": "14k White Gold Men's Solitaire Diamond Ring 1/2 ct.",
+      "retailer": "Sarraf Jewelry Inc.",
+      "url": "https://www.sarraf.com/products/14k-white-gold-mens-solitaire-diamond-ring-1-2-ct.html",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Now: US$2,661.00"
+      ],
+      "note": "Official Sarraf page: Now: US$2,661.00. The page itself provides the US$ currency prefix; no checkout or shipping total was verified."
+    },
+{
+      "id": "A182-PRICE-SAR-145364",
+      "kind": "price_snapshot",
+      "label": "14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct.",
+      "retailer": "Sarraf Jewelry Inc.",
+      "url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-1-2-ct.html",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Now: US$2,858.00"
+      ],
+      "note": "Official Sarraf page: Now: US$2,858.00. The page itself provides the US$ currency prefix; no checkout or shipping total was verified."
+    },
+{
+      "id": "A182-PRICE-SAR-144773",
+      "kind": "price_snapshot",
+      "label": "14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band",
+      "retailer": "Sarraf Jewelry Inc.",
+      "url": "https://www.sarraf.com/products/14k-yellow-gold-12mm-high-polished-traditional-domed-wedding-band.html",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "Now: US$1,362.00"
+      ],
+      "note": "Official Sarraf page: Now: US$1,362.00. The page itself provides the US$ currency prefix; its metal-weight benchmark is for size 10, not a size-specific quote. No checkout or shipping total was verified."
+    },
+{
+      "id": "A182-PRICE-FDJ-GR0001",
+      "kind": "price_snapshot",
+      "label": "Lab Grown Diamond Halo Engagement Ring in 14K Gold",
+      "retailer": "Factory Direct Jewelry",
+      "url": "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "$1,299.99 USD"
+      ],
+      "note": "Official Factory Direct Jewelry page: $1,299.99 USD. This verifies the displayed amount only; it does not resolve the high-caution displayed-weight basis or independently verify the ring."
+    },
+{
+      "id": "A182-MARKET-WGC-2026-10-23",
+      "kind": "market_snapshot",
+      "label": "Gold spot price \u2014 moving header",
+      "retailer": "World Gold Council",
+      "url": "https://www.gold.org/goldhub/data/gold-prices",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "USD",
+        "/oz",
+        "3,995.47",
+        "Data as of 22 October, 2026"
+      ],
+      "note": "Official WGC page re-read directly; the value matches the record integrated by PR #45. The page does not timestamp the moving header, so quote_date remains null (F-026); chart date is separate. This is a dated observation, not a live quote."
     }
   ]
 }

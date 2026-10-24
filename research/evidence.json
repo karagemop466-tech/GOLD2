@@ -141,7 +141,8 @@
       },
       "relevantChunks": [
         0
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "ag-natural",
@@ -151,7 +152,7 @@
       "observedAt": "2026-10-22T23:16:03Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Follow-up price verification (2026-10-23): Official product page re-read on 2026-10-23: $726 for the displayed 14k Yellow Gold option; no size-specific checkout or engraving total was checked.",
       "quotes": {
         "name": "Natural Diamond Ring",
         "price": "$726",
@@ -164,7 +165,7 @@
       "relevantChunks": [
         4
       ],
-      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "ag-cluster",
@@ -174,7 +175,7 @@
       "observedAt": "2026-10-22T23:16:03Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Follow-up price verification (2026-10-23): Official product page re-read on 2026-10-23: $2,862 for the displayed 14k Yellow Gold / Natural Diamond option; no size-specific checkout or engraving total was checked.",
       "quotes": {
         "name": "Diamond Cluster Ring",
         "price": "$2,862",
@@ -188,7 +189,7 @@
       "relevantChunks": [
         4
       ],
-      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "ag-petal",
@@ -198,7 +199,7 @@
       "observedAt": "2026-10-22T23:16:03Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Follow-up price verification (2026-10-23): Official product page re-read on 2026-10-23: $1,774 for the displayed 14k Yellow Gold / Lab Created Diamond option; the natural-diamond option is distinct and not substituted.",
       "quotes": {
         "name": "0.6ct Round Diamond Petal Ring",
         "price": "$1,774",
@@ -212,7 +213,7 @@
       "relevantChunks": [
         4
       ],
-      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "ag-ruby",
@@ -222,7 +223,7 @@
       "observedAt": "2026-10-22T23:16:03Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Follow-up price verification (2026-10-23): Official product page re-read on 2026-10-23: $526 for the displayed 14k Yellow Gold option; no size-specific checkout or engraving total was checked.",
       "quotes": {
         "name": "Ruby Ring",
         "price": "$526",
@@ -234,7 +235,8 @@
       },
       "relevantChunks": [
         4
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "ag-sapphire",
@@ -244,7 +246,7 @@
       "observedAt": "2026-10-22T23:16:03Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Follow-up price verification (2026-10-23): Official product page re-read on 2026-10-23: $526 for the displayed 14k Yellow Gold option; no size-specific checkout or engraving total was checked.",
       "quotes": {
         "name": "Sapphire Ring",
         "price": "$526",
@@ -256,7 +258,8 @@
       },
       "relevantChunks": [
         4
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "ag-moissanite",
@@ -266,7 +269,7 @@
       "observedAt": "2026-10-22T23:16:03Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Follow-up price verification (2026-10-23): Official product page re-read on 2026-10-23: $420 for the displayed 14k Yellow Gold option; no size-specific checkout or engraving total was checked.",
       "quotes": {
         "name": "Moissanite Ring",
         "price": "$420",
@@ -278,7 +281,8 @@
       },
       "relevantChunks": [
         4
-      ]
+      ],
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "ag-24k",
@@ -288,7 +292,7 @@
       "observedAt": "2026-10-22T23:16:03Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Follow-up price verification (2026-10-23): Official product page re-read on 2026-10-23: $3,520, Solid 24k Gold; Hammered was the displayed default finish. No exact size, engraving, or size-specific checkout total was confirmed.",
       "quotes": {
         "name": "24k Band",
         "price": "$3,520",
@@ -304,7 +308,7 @@
         4,
         5
       ],
-      "lastRecheckedAt": "2026-10-22T23:19:45Z"
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "ag-natural-json",
@@ -641,19 +645,20 @@
       "observedAt": "2026-10-23T10:00:00Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Direct official-product fetch on 2026-10-23 rendered $1,336 USD. The 2026-10-22 observation was $1,346; Men\u0113 prices these Crafted-on-Demand pieces from metal value, so the earlier amount is superseded, not additive.",
+      "note": "Direct official-product fetch on 2026-10-23 rendered $1,336 USD. The 2026-10-22 observation was $1,346; Men\u0113 prices these Crafted-on-Demand pieces from metal value, so the earlier amount is superseded, not additive. Follow-up price verification (2026-10-23): Later official-page re-read on 2026-10-23: $1,325 USD. This supersedes the earlier same-day $1,336 USD observation; both amounts are preserved in the source record. No buyer size, final price, or checkout total was confirmed.",
       "quotes": {
         "name": "Rose Ring",
-        "price": "$1,336",
+        "price": "$1,325",
         "currency": "USD",
         "karat": "24k Gold",
-        "cod": "This is a Crafted-on-Demand item."
+        "cod": "This is a Crafted-on-Demand item.",
+        "previous-price": "$1,336 USD \u2014 direct official-page observation at 2026-10-23T10:00:00Z; superseded later on 2026-10-23."
       },
       "relevantChunks": [
         0,
         2
       ],
-      "lastRecheckedAt": "2026-10-23T10:00:00Z"
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "mene-knot",
@@ -663,19 +668,20 @@
       "observedAt": "2026-10-23T10:00:00Z",
       "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
       "access": "fetched",
-      "note": "Direct official-product fetch on 2026-10-23 rendered $1,454 USD. The 2026-10-22 observation was $1,465; the earlier amount is superseded by the dated re-observation.",
+      "note": "Direct official-product fetch on 2026-10-23 rendered $1,454 USD. The 2026-10-22 observation was $1,465; the earlier amount is superseded by the dated re-observation. Follow-up price verification (2026-10-23): Later official-page re-read on 2026-10-23: $1,442 USD. This supersedes the earlier same-day $1,454 USD observation; both amounts are preserved in the source record. No buyer size, final price, or checkout total was confirmed.",
       "quotes": {
         "name": "Knot Ring",
-        "price": "$1,454",
+        "price": "$1,442",
         "currency": "USD",
         "karat": "24k Gold",
-        "cod": "This is a Crafted-on-Demand item."
+        "cod": "This is a Crafted-on-Demand item.",
+        "previous-price": "$1,454 USD \u2014 direct official-page observation at 2026-10-23T10:00:00Z; superseded later on 2026-10-23."
       },
       "relevantChunks": [
         0,
         2
       ],
-      "lastRecheckedAt": "2026-10-23T10:00:00Z"
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "mene-terms",
@@ -1092,7 +1098,7 @@
         0,
         4
       ],
-      "note": "2026-10-23 fetch: site locale USD, main product amount $890 (Setting Only). 2026-10-22 fetch rendered the same URL in a EUR locale as EUR 990.00 (Setting Only). Both are locale-dependent display observations; no exchange conversion is applied. Center diamond and ring size are not selected, so this is a setting-only amount.",
+      "note": "2026-10-23 fetch: site locale USD, main product amount $890 (Setting Only). 2026-10-22 fetch rendered the same URL in a EUR locale as EUR 990.00 (Setting Only). Both are locale-dependent display observations; no exchange conversion is applied. Center diamond and ring size are not selected, so this is a setting-only amount. Follow-up price verification (2026-10-23): Official page chunk 4 re-read on 2026-10-23: $890 (Setting Only) with USD selected. Center diamond and ring size remain unselected; this is not a complete-ring price.",
       "quotes": {
         "name": "Classic Six-Prong Solitaire Ring in 14K Yellow Gold",
         "material": "14K Yellow Gold",
@@ -1102,7 +1108,7 @@
         "prongs": "Prong metal: 14K White Gold",
         "phone": "1.415.426.2781"
       },
-      "lastRecheckedAt": "2026-10-23T10:00:00Z",
+      "lastRecheckedAt": "2026-10-23",
       "supersededDisplay": {
         "amount": 990,
         "currency": "EUR",
@@ -1213,20 +1219,20 @@
       "publisher": "World Gold Council",
       "kind": "market-context",
       "url": "https://www.gold.org/goldhub/data/gold-prices",
-      "observedAt": "2026-10-23T23:45:00Z",
-      "method": "fetch_page; directly rechecked 2026-10-23 (evening) by session S-1EB9F828, short factual transcriptions only",
+      "observedAt": "2026-10-23",
+      "method": "fetch_page; re-read by S-1B04074F and independently by S-A182C7CC on 2026-10-23 UTC; request-second timestamps are not exposed by the fetch tool",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Moving header read 3,995.47 USD/oz on the late-evening re-read of 2026-10-23 (session S-1B04074F); earlier same-day reads showed different values and are retained only as superseded history in data/gold-price.json, never rendered. The page's data blocks were dated 22 October, 2026. The header carries no quote-as-of timestamp, so chart metadata is stored separately and not bound to the header.",
+      "note": "The moving header displayed 3,995.47 USD/oz on the 2026-10-23 direct re-read by S-1B04074F; S-A182C7CC independently fetched the official page and saw the same display. The page data blocks state 22 October, 2026. The header has no quote-as-of timestamp; only the retrieval date is stored, and chart metadata is not assigned to the header. Prior same-day values remain in data/gold-price.json history.",
       "quotes": {
         "header": "Gold Spot price USD /oz - 3,995.47",
         "chart-as-of": "Data as of 22 October, 2026",
         "units": "Prices are quoted in currency unit per troy ounce unless otherwise stated.",
         "quote": "3,995.47"
       },
-      "lastRecheckedAt": "2026-10-23T20:00:00Z"
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "sarraf-contact",
@@ -1357,14 +1363,15 @@
       "observedAt": "2026-10-23T09:58:00Z",
       "method": "fetch_page live primary verification by S-9B875C81",
       "access": "fetched",
-      "note": "Complete natural diamond solitaire with separate metal weight.",
+      "note": "Complete natural diamond solitaire with separate metal weight. Follow-up price verification (2026-10-23): Official Sarraf product page re-read on 2026-10-23: Now: US$3,004.00. This is the page display, not a checkout/shipping total.",
       "quotes": {
         "name": "14k White Gold Solitaire Ring 0.94 ctw.",
         "material": "14K Solid Gold",
         "stone": "Natural Diamond 0.94 Ct.",
         "weight": "Approximate Metal Weight: 3.80 grams",
         "price": "Now: US$3,004.00"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "sar-145362",
@@ -1374,14 +1381,15 @@
       "observedAt": "2026-10-23T09:58:00Z",
       "method": "fetch_page live primary verification by S-9B875C81",
       "access": "fetched",
-      "note": "Heavy 10.00g 14K solid white gold solitaire.",
+      "note": "Heavy 10.00g 14K solid white gold solitaire. Follow-up price verification (2026-10-23): Official Sarraf product page re-read on 2026-10-23: Now: US$2,661.00. This is the page display, not a checkout/shipping total.",
       "quotes": {
         "name": "14k White Gold Men's Solitaire Diamond Ring 1/2 ct.",
         "material": "14K Solid Gold",
         "stone": "Natural Diamond 0.50 Ct.",
         "weight": "Approximate Metal Weight: 10.00 grams",
         "price": "Now: US$2,661.00"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "sar-145364",
@@ -1391,14 +1399,15 @@
       "observedAt": "2026-10-23T09:58:00Z",
       "method": "fetch_page live primary verification by S-9B875C81",
       "access": "fetched",
-      "note": "8.00g 14K solid yellow gold solitaire.",
+      "note": "8.00g 14K solid yellow gold solitaire. Follow-up price verification (2026-10-23): Official Sarraf product page re-read on 2026-10-23: Now: US$2,858.00. This is the page display, not a checkout/shipping total.",
       "quotes": {
         "name": "14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct.",
         "material": "14K Solid Gold",
         "stone": "Natural Diamond 0.50 Ct.",
         "weight": "Approximate Metal Weight: 8.00 grams",
         "price": "Now: US$2,858.00"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "sar-144773",
@@ -1408,13 +1417,14 @@
       "observedAt": "2026-10-23T09:58:00Z",
       "method": "fetch_page live primary verification by S-9B875C81",
       "access": "fetched",
-      "note": "13.40g 14K solid yellow gold domed band (benchmarked at size 10).",
+      "note": "13.40g 14K solid yellow gold domed band (benchmarked at size 10). Follow-up price verification (2026-10-23): Official Sarraf product page re-read on 2026-10-23: Now: US$1,362.00. The metal-weight benchmark is for size 10, not a size-specific quote; no checkout/shipping total was verified.",
       "quotes": {
         "name": "14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band",
         "material": "14K Solid Gold",
         "weight": "Approximate Metal Weight: 13.40 grams",
         "price": "Now: US$1,362.00"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "fdj-gr0001",
@@ -1424,7 +1434,7 @@
       "observedAt": "2026-10-23T09:58:00Z",
       "method": "fetch_page live primary verification by S-9B875C81",
       "access": "fetched",
-      "note": "1.25g displayed weight w/ 1.37cts lab diamonds \u2014 ultra-thin risk.",
+      "note": "1.25g displayed weight w/ 1.37cts lab diamonds \u2014 ultra-thin risk. Follow-up price verification (2026-10-23): Official Factory Direct Jewelry product page re-read on 2026-10-23: $1,299.99 USD. This verifies the displayed amount only; it does not resolve the high-caution displayed-weight basis or independently verify the ring.",
       "quotes": {
         "name": "Lab Grown Diamond Halo Engagement Ring in 14K Gold",
         "material": "14K Solid Gold",
@@ -1432,7 +1442,8 @@
         "stone": "Lab Grown Diamond 1.37cts",
         "weight": "Weight:1.25 Grams",
         "price": "$1,299.99 USD"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "ss-clara",
@@ -1487,7 +1498,7 @@
       "observedAt": "2026-10-23T20:00:00Z",
       "method": "fetch_page; product page and product JSON directly retrieved by session S-1EB9F828 on 2026-10-23",
       "access": "fetched",
-      "note": "All-metal, stone-free ring. The page displays the default 14k amount; the product JSON shows a variant range (F-039).",
+      "note": "All-metal, stone-free ring. The page displays the default 14k amount; the product JSON shows a variant range (F-039). Follow-up price verification (2026-10-23): Official product page re-read on 2026-10-23: $1,910 for the default 14k Yellow Gold selection. Variant range remains as flagged in F-039; no alternative is substituted or averaged.",
       "quotes": {
         "name": "Coffin Ring",
         "price": "$1,910",
@@ -1495,7 +1506,8 @@
         "weight": "Approximately 6.1g (gold) or 9.2g (platinum)",
         "selected": "14k Yellow Gold",
         "json": "\"price\":191000,\"price_min\":191000,\"price_max\":223300,\"price_varies\":true"
-      }
+      },
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "ag-cushion-signet",
@@ -1505,7 +1517,7 @@
       "observedAt": "2026-10-23T20:00:00Z",
       "method": "fetch_page; product page and product JSON directly retrieved by session S-1EB9F828 on 2026-10-23",
       "access": "fetched",
-      "note": "The stored amount is the 14k Yellow Gold / Salt and Pepper Diamond variant; the JSON shows $2,408\u2013$3,253 (F-039). The 5.5 g is a gross item weight including the stone.",
+      "note": "The stored amount is the 14k Yellow Gold / Salt and Pepper Diamond variant; the JSON shows $2,408\u2013$3,253 (F-039). The 5.5 g is a gross item weight including the stone. Follow-up price verification (2026-10-23): Official product page re-read on 2026-10-23: $2,758 for 14k Yellow Gold / Salt and Pepper Diamond. The same-day official JSON identifies that variant with raw price field 275800 and a $2,408\u2013$3,253 product range; the displayed amount is retained verbatim, without deriving it from the raw integer.",
       "quotes": {
         "name": "Cushion Diamond Signet Ring",
         "price": "$2,758",
@@ -1514,8 +1526,10 @@
         "stone": "Ethically sourced natural salt and pepper diamond, clear lab-created diamond",
         "selected": "14k Yellow Gold",
         "gemstone": "Salt and Pepper Diamond",
-        "json": "\"price\":240800,\"price_min\":240800,\"price_max\":325300,\"price_varies\":true"
-      }
+        "json": "\"price\":240800,\"price_min\":240800,\"price_max\":325300,\"price_varies\":true",
+        "variant-price-json": "Official product JSON variant: 14k Yellow Gold / Salt and Pepper Diamond; raw price field 275800."
+      },
+      "lastRecheckedAt": "2026-10-23"
     },
     {
       "id": "mj-bold-eternity",

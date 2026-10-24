@@ -14,8 +14,8 @@
 
 **URL:** https://www.gold.org/goldhub/data/gold-prices
 
-**Retrieved:** 2026-10-23 (UTC). This is the latest of several direct fetches of the same page on that day;
-each later read is recorded below and every earlier value is kept only as superseded history.
+**Retrieved:** 2026-10-23 (UTC). The fetch tool does not expose request-second timestamps. A later direct
+capture in this session independently confirmed the same displayed value already integrated by PR #45.
 
 ### `usd_per_troy_oz`
 
@@ -131,14 +131,21 @@ chart date, *Data as of 22 October, 2026*. The stored current observation was up
 the NIST constant; nothing is typed by hand. `quote_date` stays `null` (F-026) because the header still renders no
 quote-as-of timestamp.
 
-## Revision note — 2026-10-23
+## Revision note — 2026-10-23 (S-E0D6DD62)
 
-Session S-E0D6DD62 re-ordered this file without changing any quoted text, any URL, or any stored value:
-the single current observation is now 3,996.31 from the later same-day fetch, and the earlier readings appear
-only in the dated history table. `data/gold-price.json` is the machine-readable source of the same facts.
+At the time S-E0D6DD62 re-ordered this file, 3,996.31 was the latest same-day WGC header observation. That
+value was subsequently superseded by the direct S-1B04074F re-read at 3,995.47 and is retained only in the dated
+history table above. `data/gold-price.json` is the machine-readable source of the current dated observation.
 
 **One claim was removed rather than restated.** The previous integration note said that a header reading of
 4,025.54 was "recorded separately in `research/evidence.json`". No such figure exists anywhere in
 `research/evidence.json`, `data/gold-price.json` or any other data file in this repository, so it is not
 presented here as an observation. A pointer to a record that does not exist is the same class of defect as an
 invented number, and it is flagged for review rather than silently carried forward.
+
+## Recheck note — 2026-10-23 (S-A182C7CC)
+
+A direct fetch by S-A182C7CC again displayed 3,995.47 USD/oz with the page chart still dated 22 October, 2026.
+This independently corroborates the value already stored after PR #45; it is not a second market benchmark or a
+claim that the value is still live. The fetch tool exposed the content but not the request timestamp, so this
+record keeps date-level retrieval precision only. The exact header quote-as-of time remains unconfirmed (F-026).

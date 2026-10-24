@@ -2,9 +2,9 @@
   "meta": {
     "schemaVersion": 1,
     "title": "GOLD",
-    "reviewedAt": "2026-10-23T20:00:00Z",
-    "reviewSession": "arena-1eb9f828 integration additions on base records from arena-062f314f",
-    "scope": "44 unique named product pages across 13 retailers verified through 2026-10-23 UTC, covering all root-register and companion-dashboard listings without duplication.",
+    "reviewedAt": "2026-10-23",
+    "reviewSession": "S-A182C7CC dated price re-observation and provenance follow-up after PR #45 (2026-10-23 UTC)",
+    "scope": "44 unique named product pages across 13 retailers remain covered. On 2026-10-23, all 17 records with assigned USD prices were re-read at date-level precision; 15 product amounts matched their stored display, two Men\u0113 amounts were corrected, and the WGC moving header was independently confirmed. Other fields retain their earlier source dates; this is not a full catalog recertification.",
     "pricePolicy": "No hallucinations: never invent prices, specifications, or verification. Null means unverified. Prices are dated observations, not live quotes or checkout totals. Source claims are not independent authentication.",
     "freshnessHours": 24,
     "sourceReviewDays": 30,
@@ -276,7 +276,7 @@
         "amount": 726,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-22T23:16:03Z",
+        "observedAt": "2026-10-23",
         "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
         "evidence": [
           {
@@ -350,7 +350,7 @@
         "amount": 2862,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-22T23:16:03Z",
+        "observedAt": "2026-10-23",
         "scope": "14k Yellow Gold · Natural Diamond · default page display; no engraving; size-specific checkout not confirmed",
         "evidence": [
           {
@@ -424,7 +424,7 @@
         "amount": 1774,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-22T23:16:03Z",
+        "observedAt": "2026-10-23",
         "scope": "14k Yellow Gold · Lab Created Diamond · default page display; no engraving; size-specific checkout not confirmed",
         "evidence": [
           {
@@ -498,7 +498,7 @@
         "amount": 526,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-22T23:16:03Z",
+        "observedAt": "2026-10-23",
         "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
         "evidence": [
           {
@@ -572,7 +572,7 @@
         "amount": 526,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-22T23:16:03Z",
+        "observedAt": "2026-10-23",
         "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
         "evidence": [
           {
@@ -646,7 +646,7 @@
         "amount": 420,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-22T23:16:03Z",
+        "observedAt": "2026-10-23",
         "scope": "14k Yellow Gold · default page display; no engraving; size-specific checkout not confirmed",
         "evidence": [
           {
@@ -720,7 +720,7 @@
         "amount": 3520,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-22T23:16:03Z",
+        "observedAt": "2026-10-23",
         "scope": "Solid 24k Gold · Hammered default finish · no engraving; exact size/weight not confirmed",
         "evidence": [
           {
@@ -1054,10 +1054,10 @@
         "fineGoldWeightG": null
       },
       "price": {
-        "amount": 1336,
+        "amount": 1325,
         "currency": "USD",
         "kind": "unbound-display",
-        "observedAt": "2026-10-23T10:00:00Z",
+        "observedAt": "2026-10-23",
         "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
         "evidence": [
           {
@@ -1108,10 +1108,10 @@
         "fineGoldWeightG": null
       },
       "price": {
-        "amount": 1454,
+        "amount": 1442,
         "currency": "USD",
         "kind": "unbound-display",
-        "observedAt": "2026-10-23T10:00:00Z",
+        "observedAt": "2026-10-23",
         "scope": "24k gold page default display; Crafted-on-Demand; exact size/weight not confirmed",
         "evidence": [
           {
@@ -1705,7 +1705,7 @@
         "amount": 890,
         "currency": "USD",
         "kind": "setting-only",
-        "observedAt": "2026-10-23T10:00:00Z",
+        "observedAt": "2026-10-23",
         "scope": "USD locale · 14K Yellow Gold with 14K White Gold prongs · Center diamond and ring size not selected (Setting Only)",
         "evidence": [
           {
@@ -1947,7 +1947,7 @@
         "amount": 3004,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-23T09:58:00Z",
+        "observedAt": "2026-10-23",
         "scope": "14K Solid White Gold complete ring with 0.94 ct G/I1 natural diamond",
         "evidence": [
           {
@@ -2016,7 +2016,7 @@
         "amount": 2661,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-23T09:58:00Z",
+        "observedAt": "2026-10-23",
         "scope": "14K Solid White Gold complete ring with 0.50 ct H/SI1 natural diamond",
         "evidence": [
           {
@@ -2085,7 +2085,7 @@
         "amount": 2858,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-23T09:58:00Z",
+        "observedAt": "2026-10-23",
         "scope": "14K Solid Yellow Gold complete ring with 0.50 ct H/SI1 natural diamond",
         "evidence": [
           {
@@ -2150,7 +2150,7 @@
         "amount": 1362,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-23T09:58:00Z",
+        "observedAt": "2026-10-23",
         "scope": "14K Solid Yellow Gold 12mm domed band (13.40g benchmarked at size 10)",
         "evidence": [
           {
@@ -2223,7 +2223,7 @@
         "amount": 1299.99,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-23T09:58:00Z",
+        "observedAt": "2026-10-23",
         "scope": "14K Solid Yellow Gold halo ring w/ 1.37ctw lab diamonds (1.25g displayed weight — HIGH CAUTION)",
         "evidence": [
           {
@@ -2405,7 +2405,7 @@
         "amount": 1910,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-23T20:00:00Z",
+        "observedAt": "2026-10-23",
         "scope": "14k Yellow Gold default selection; $1,910 displayed; other metal variants up to $2,233 (F-039)",
         "evidence": [
           {
@@ -2480,7 +2480,7 @@
         "amount": 2758,
         "currency": "USD",
         "kind": "displayed-option",
-        "observedAt": "2026-10-23T20:00:00Z",
+        "observedAt": "2026-10-23",
         "scope": "14k Yellow Gold / Salt and Pepper Diamond; $2,758 displayed; Clear Lab Diamond variant $2,408 and range to $3,253 (F-039)",
         "evidence": [
           {

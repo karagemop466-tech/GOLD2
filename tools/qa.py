@@ -679,7 +679,7 @@ def main() -> int:
         fail("verification-log", "verification-log.json is missing or empty")
     allowed_hosts = {
         "www.bluenile.com", "www.zales.com", "www.brilliantearth.com", "www.vrai.com",
-        "www.automicgold.com", "mejuri.com", "www.gold.org",
+        "www.automicgold.com", "mejuri.com", "www.gold.org", "mene.com",
         "www.sarraf.com", "www.factorydirectjewelry.com", "www.stoneandstrand.com", "www.costco.com",
     }
     known_status = {"verified_match", "verified_correction", "verified_no_price", "not_re_read", "dead_end"}

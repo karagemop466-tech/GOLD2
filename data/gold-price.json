@@ -61,7 +61,7 @@
       "retrieved_at": "2026-10-23",
       "chart_as_of_date": "2026-10-22",
       "status": "superseded_moving_header",
-      "reason": "Header value observed earlier the same day (2026-10-23). The moving header is not a fixed benchmark; only the latest 2026-10-23 observation (3,996.31) is used in calculations."
+      "reason": "Header value observed earlier on 2026-10-23; later same-day WGC reads superseded it, most recently at 3,995.47 as recorded in the current observation. The moving header is not a fixed benchmark, and the chart date does not date the header quote."
     },
     {
       "value": 3996.31,
@@ -81,6 +81,6 @@
     "F-026: exact header quote-as-of timestamp unconfirmed. The chart date is stored separately; observed/retrieval dates do not establish quote time."
   ],
   "chart_as_of_date": "2026-10-22",
-  "quote_scope": "Moving-header observation retrieved 2026-10-23T23:4xZ; exact quote-as-of timestamp is unconfirmed (F-026). The chart's stated date (22 October 2026) is stored separately and is not assigned to the header.",
+  "quote_scope": "Moving-header observation retrieved on 2026-10-23 UTC; the fetch tool does not expose the request time. Exact quote-as-of timestamp is unconfirmed (F-026). The chart stated 22 October 2026, stored separately and not assigned to the header.",
   "limits_note": ""
 }
