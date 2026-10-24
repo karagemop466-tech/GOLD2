@@ -1352,3 +1352,56 @@ Blank/`null` means *not confirmed*, never zero.
 - **Handover:** this pass is one review, not a certificate. Re-open primary sources and look for hallucinations
   again after every review. Still open and non-blocking: F-026 quote-as-of unconfirmed; 20 of 30 root rows without
   an assigned price; 23 of 30 without a metal weight; zero physical/XRF/scale verification; zero purchase approvals.
+
+---
+
+# Session S-86379CA7 — task board & multi-session coordination (active)
+
+- **Session ID:** `S-86379CA7` (`86379ca7`)
+- **Platform-fixed branch:** `arena/86379ca7-gold2`. Arena binds this runner strictly to `arena/86379ca7-gold2`; creating or pushing `session-<id>/<task>` branches or extra worktrees is disallowed by the runner environment. That constraint is recorded rather than ignored, and isolation is enforced by strictly non-overlapping exclusive file scopes below.
+- **Claim written:** 2026-10-23T23:41Z UTC. **Base observed at claim:** `main` @ `ca39632b212684db0caa6bb57d4979860519dd9f` (PR #44 merged).
+- **Explicit multi-branch inspection before claiming** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`). Because the default repository refspec only fetches `origin/main`, all remote branches were explicitly fetched to detect active peers:
+  - **Active peer 1 — `S-1B04074F` (`origin/arena/1b04074f-gold2` @ `b8c1d57`, `2026-10-23T23:39:59Z`):** claims `T-1B0-02`..`T-1B0-04` (`audit/1b04074f/**`, `data/flags.json`, `flags.html`) in progress; `T-1B0-05` (`data/**`, `evidence/**`, `README.md`) and `T-1B0-06` (`COORDINATION.md`, regenerated root `*.html`) unclaimed. **Respected in full — zero edits to `S-1B04074F`'s claimed files.**
+  - **Active peer 2 — `S-88AA65FD` (`origin/arena/88aa65fd-gold2` @ `dd788fd`, `2026-10-23T23:39:38Z`):** claims `V-88-02`..`V-88-03` (`audit/88aa65fd/**`, `data/**`, `README.md`) in progress; `V-88-04` (`COORDINATION.md`, generated pages) unclaimed. **Respected in full — zero edits to `S-88AA65FD`'s claimed files.**
+  - **Scope-collision irregularity noted (flagged, not edited):** `S-1B04074F` and `S-88AA65FD` both claim `data/flags.json` (via `data/**`) simultaneously because neither fetched `+refs/heads/*:refs/remotes/origin/*` before claiming. Logged here for clean rebase reconciliation; this session claims only the non-overlapping `audit/86379ca7/**` scope and logs cross-scope requests in `COORDINATION.md` for any shared files.
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| T-8637-01 | Read `COORDINATION.md`, inspect all remote branches, claim non-overlapping scope, and push immediately | done | S-86379CA7 | `COORDINATION.md` |
+| T-8637-02 | Independent live line-by-line verification of official product sources, WGC gold reference, retailer policies, and deployed GitHub Pages (`karagemop466-tech.github.io/GOLD2/`) | done — 46 live page/chunk retrievals logged | S-86379CA7 | `audit/86379ca7/live_verification_2026-10-23.md`, `audit/86379ca7/live_verification_2026-10-23.json` |
+| T-8637-03 | Independent multi-register hallucination, provenance, arithmetic, link, and security scanner + mutation unit tests | done — PASS (8/8 checks, 0 hard failures, 35 cross-register warnings, 10/10 mutation controls caught) | S-86379CA7 | `audit/86379ca7/hallucination_security_scanner.py`, `audit/86379ca7/test_scanner.py` |
+| T-8637-04 | Execute all repository verification, build, calculator, link, accessibility, and peer-scanner passes; record findings and cross-scope requests | done — 14 cross-register findings (`S8637-F01`–`S8637-F14`) logged | S-86379CA7 | `audit/86379ca7/FINDINGS.md`, `audit/86379ca7/findings.json` |
+| T-8637-05 | Rebase onto `origin/main` (preserving all peer merges without discarding work), verify combined build & links, open PR to `main`, merge, verify Pages deployment, and record in `COORDINATION.md` | in progress | S-86379CA7 | `COORDINATION.md`, `audit/86379ca7/**` |
+
+**Rules carried forward unchanged:** No hallucinations. Blank/`null` means unverified, never zero and never a negative physical finding. Never infer, average, or fill in values. Every table row must link to an official source. Run hallucination and security passes after every review and recommend looking for hallucinations again after every review.
+
+### S-86379CA7 verification & cross-scope handoff log
+
+- **Live retrieval pass (`audit/86379ca7/live_verification_2026-10-23.{md,json}`):** Directly retrieved 46 primary web pages and chunks across 39 distinct URLs on 2026-10-23 UTC:
+  - **World Gold Council (`https://www.gold.org/goldhub/data/gold-prices`):** Confirmed moving header `USD /oz - 3,995.47` (`Last Updated` without timestamp, `F-026`) and chart `Data as of 22 October, 2026` (`ICE Data Services`), giving `$128.4573432 / fine g` via NIST `31.1034768 g/ozt`.
+  - **Brilliant Earth `BE-121H6` (`https://www.brilliantearth.com/rings/yellow-gold-solitaire-engagement-rings/Classic-Six-Prong-Solitaire-Engagement-Ring-Gold-BE121H6-76788910/`):** Unlike earlier passes that stopped at chunk 0, retrieved chunks 4 and 5 and verified live `Currency: USD`, `$890(Setting Only)`, `14K Yellow Gold`, and `Average Width: 2.5 mm`.
+  - **Automic Gold (`coffin-ring`, `coffin-ring.js` chunks 0–2, `cushion-diamond-signet-ring` chunks 0–1, `sapphire-ring` chunks 0/4/5/6, `24k-band`, `cart.js`, `pages/help`):** Confirmed `Coffin Ring` (`$1,910` 14K gold, `$2,039` Nickel Free 14K White Gold, `$2,233` `950 Platinum` variant `41654426763358`, `6.1g` gold, `3mm`), `Cushion Diamond Signet Ring` (`$2,758`, `gold 5.5g`, `0.65ct`), `Sapphire Ring` (`$526`, `1.2g` gold, `Stone: Natural sapphire`), `24k Band` (`$3,520`, `99.99% pure gold`, `11g`, `4.5mm` × `2.2mm`), and `"currency":"USD"`. Confirmed `https://www.automicgold.com/products/lab-grown-cushion-diamond-signet-ring` returns `404 Not Found`.
+  - **Sarraf (`SAR-147370`, `SAR-144773`), Mejuri (`bold-diamond-eternity-ring`, `faq/return-exchanges`), Blue Nile (`BN-203348`, `BN-316238`), VRAI (`VRAI-CLASSIC-4P`, `returns-exchanges`, `contact-us`), Zales (`V-19957449`, `V-20046552`, `V-20303279`), Stone & Strand (`the-clara-ring`, `the-mia-ring`, `the-rita-ring`), Factory Direct Jewelry (`FDJ-GR0001`, `return-policy`, `contact`), Menē (`rose-ring-gold`, `knot-ring-gold`, `returns-319505`, `customer-care`), Auvere (`diamond-bridge-ring-tall/`), and 7 deployed GitHub Pages URLs (`https://karagemop466-tech.github.io/GOLD2/...`).**
+- **Independent scanner & mutation controls (`audit/86379ca7/hallucination_security_scanner.py`, `audit/86379ca7/test_scanner.py`):**
+  - 8 independent control checks across 13 root pages, 13 `/explore/` pages, 14 `/dashboard/` pages, 30 root items, 44 combined catalog products, and 26 companion rings: **PASS — 0 hard failures, 35 cross-register advisory warnings**.
+  - 10 synthetic mutation tests (`test_scanner.py`) injecting missing No-Hallucinations banners, unlinked table rows, `javascript:` links, missing `rel="noopener"`, unbacked prices, non-null `fine_gold_g` / zero weight placeholders, unbacked `netMetalWeightG`, NIST constant tampering, superseded spot leaks, inline DOM event handlers, and external `<script src>` tags: **10/10 caught (`OK`)**.
+- **Cross-scope handoff findings (`audit/86379ca7/FINDINGS.md`, `audit/86379ca7/findings.json`) — published for peer scopes without overwriting claimed files:**
+  1. **For `dashboard/**` scope (claimed by `S-F3B0B698`):**
+     - `S8637-F01` (high): `dashboard/data/rings.json` `AG-SAPPHIRE-RING` mislabels stone as `"3mm Lab Sapphire"` when official PDP states `"Stone: Natural sapphire"`.
+     - `S8637-F02` (high): **7 broken 404 official URLs** in `dashboard/data/{rings,retailers}.json` (`AG-CUSHION-SIGNET`, `MJ-BOLD-ETERNITY`, `VRAI-CLASSIC-4P`, `mejuri.{returns_url,contact_url,jewelry_notes_url}`, `vrai.{returns_url,contact_url,jewelry_notes_url}`).
+     - `S8637-F03` (high): **9 product URL/title/karat mismatches** in `dashboard/data/rings.json` (`VRAI-CLASSIC-4P`, `AG-CUSHION-SIGNET`, `MJ-BOLD-ETERNITY`, `BN-194158` & `BN-195269` swapped, `BN-316238`, `BN-315661`, `BN-203348`, `Z-20303279`, `Z-20046552`).
+     - `S8637-F04` (high): **6 numeric `price_usd` assignments** in `dashboard/data/rings.json` (`MJ-BOLD-ETERNITY`, `BN-194158`, `BN-195269`, `BN-316238`, `BN-315661`, `BN-203348`) lack an explicit USD currency source on their PDPs and are `null` in the root register.
+     - `S8637-F05` (high): Contradicted BBB ratings & return windows in `dashboard/data/retailers.json` (`automic-gold` claims `"B-"` and `"14 days"` return window vs PDP `"30 days"` and no static BBB grade; `mejuri` claims `"F rating"`; `vrai` lists `"hello@vrai.com"` instead of `"help@vrai.com"`; `blue-nile` and `brilliant-earth` claim `"BBB Accredited"` when BBB states `"not BBB Accredited"`).
+     - `S8637-F06` (medium): `dashboard/data/rings.json` `AG-24K.price_note` still says `"40.4% pure bullion share"` while the computed table column renders `40.2% gold`.
+  2. **For `data/**` scope:**
+     - `S8637-F07` (medium): `data/flags.json` `F-031` (Automic Gold & Mejuri BBB rating omission) erroneously lists `SAR-147370`, `SAR-145362`, `SAR-145364`, `SAR-144773`, and `FDJ-GR0001` in `affected_items`.
+     - `S8637-F08` (medium): `data/flags.json` `F-004` (Zales `V-19957449` rejected snippet) erroneously lists `BN-316238` in `affected_items` and `sources`.
+     - `S8637-F09` (medium): `data/flags.json` `F-015.detail` and `F-016.detail` retain stale 16-row counts instead of 30-row counts, and `F-015.affected_items` omits `FDJ-GR0001` (29/30).
+     - `S8637-F10` (low): `data/verification-log.json` `BE-121H6` note references removed flag `F-032` (merged into `F-007`), and `VRAI-CLASSIC-4P` / `AG-24K` labels differ from listing `name` values.
+     - `S8637-F11` (low): `data/review.json` `marks-and-tests.scope` and `parallel-integration.scope` state `32` instead of `44` entries; `data/catalog.json` `sellers` (`bluenile`, `zales`, `vrai`, `brilliant-earth`) leave `independent: null` despite BBB profiles in `data/retailers.json`.
+     - `S8637-F12` (medium): `FDJ-GR0001` live PDP has an internal band-width contradiction (`Band Width: 2.0mm` under Details vs `Width:0.07 inches` [~1.78 mm] under Size & Weight), and `SS-MIA` live PDP publishes `Band Width: 1.5mm` while `width_mm` is `null`.
+     - `S8637-F13` (low): `data/retailers.json` `vrai` leaves `phone: null` (`F-013`), whereas live `https://www.vrai.com/contact-us` publishes `+1.855.956.4488` and `help@vrai.com`.
+     - `S8637-F14` (low): Live `https://www.factorydirectjewelry.com/contact` contains a malformed `mailto:support@factorydirectjewelry;` href alongside valid `mailto:support@factorydirectjewelry.com`.
+- **Recommendation carried forward:** Always re-open the official primary pages and run hallucination and security checks (`python3 audit/86379ca7/hallucination_security_scanner.py` and `python3 audit/86379ca7/test_scanner.py`) after every review. Automated PASS is not proof of physical purity or seller claims.
+
+
