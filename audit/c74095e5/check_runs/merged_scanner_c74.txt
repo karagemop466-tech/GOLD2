@@ -1,0 +1,36 @@
+  PASS S1 root items = 32 (17 category + 15 solid-gold)
+  PASS S1 flags = 42, F-001..F-045 minus F-012/F-032/F-040
+  PASS S1 verification listing entries == root item ids
+  PASS S1 explore 46/88/29
+  PASS S1 dashboard rings = 28
+  PASS S1 dashboard flags DF-001..DF-012
+  PASS S2 current gold = 3995.47
+  PASS S2 superseded set
+  PASS S2 JM reference = 4009.38 @2026-10-23T23:46Z
+  PASS S2 Menē explore amounts
+  PASS S2 Menē dashboard amounts
+  PASS S2 dashboard BNx5 + MJ prices blank
+  PASS S2 no superseded gold literal in root HTML
+  PASS S3 SAR-151362 root fields
+  PASS S3 SAR-151362 every field_evidence quote in evidence file
+  PASS S3 SAR-151362 explore product/source
+  PASS S3 SAR-151362 dashboard row
+  PASS S3 SAR-147371 root fields
+  PASS S3 SAR-147371 every field_evidence quote in evidence file
+  PASS S3 SAR-147371 explore product/source
+  PASS S3 SAR-147371 dashboard row
+  PASS S3 SAR-147371 carries F-045 + DF-012, color unconfirmed in scope
+  PASS S4 F-001 affected == items without explicit solid wording
+  PASS S4 F-003 affected == items with null weight (23)
+  PASS S4 F-002/F-021/F-024 cover all 32
+  PASS S4 item<->flag bidirectionality (32x42)
+  PASS S4 retailer<->flag bidirectionality
+  PASS S5 dashboard BN rows == root canonical (name+URL)
+  PASS S5 dashboard AG/MJ/VRAI URLs == root
+  PASS S5 every root URL in explore sources
+  PASS S6 derived fine-g/melt present in prices.html for weighted rows
+  PASS S7 README current counts/values
+  PASS S8 no physical test / permission claimed in root
+  PASS S9 no dead slugs in dashboard builder/output
+  PASS S10 F-031 not on new SAR rows; affected still 10
+independent scanner: PASS

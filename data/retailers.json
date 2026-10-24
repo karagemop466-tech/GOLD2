@@ -64,8 +64,7 @@
         "F-010",
         "F-021",
         "F-041",
-        "F-042",
-        "F-044"
+        "F-042"
       ],
       "field_evidence": {
         "contact_phone": [
@@ -326,8 +325,7 @@
       "flags": [
         "F-020",
         "F-021",
-        "F-022",
-        "F-044"
+        "F-022"
       ],
       "field_evidence": {
         "contact_phone": [
@@ -577,8 +575,7 @@
       "flags": [
         "F-021",
         "F-027",
-        "F-031",
-        "F-044"
+        "F-031"
       ],
       "field_evidence": {
         "contact_email": [
@@ -688,8 +685,7 @@
       "flags": [
         "F-021",
         "F-030",
-        "F-031",
-        "F-044"
+        "F-031"
       ],
       "field_evidence": {
         "contact_channels": [
@@ -792,7 +788,7 @@
       "flags": [
         "F-021",
         "F-036",
-        "F-043"
+        "F-045"
       ],
       "field_evidence": {
         "contact_phone": [

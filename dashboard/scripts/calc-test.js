@@ -21,16 +21,16 @@ check("troy constant exact", calc.TROY_OZ_GRAMS === 31.1034768);
 check("pennyweight constant exact", calc.DWT_GRAMS === 1.55517384);
 check("carat constant exact", calc.CARAT_GRAMS === 0.2);
 
-// 2. Dated 2026-10-23 spot ($3,995.47/oz, latest WGC observation) across units & asking-price multiples
+// 2. Live 2026-10-23 spot ($3,995.47/oz) across units & asking-price multiples
 const ozt24 = calc.compute(1, 24, 3995.47, { unit: "ozt" });
 const dwt24 = calc.compute(20, 24, 3995.47, { unit: "dwt" });
 check("1 ozt == 20 dwt == $3,995.47 exact", Math.abs(ozt24.melt - 3995.47) < 1e-9 && Math.abs(dwt24.melt - 3995.47) < 1e-9);
 
 const sarBand = calc.compute(13.4, 14, 3995.47, { ask: 1362 });
-check("SAR-144773 13.40g 14K melt $1,004.11 & 73.72% gold share", Math.abs(sarBand.melt - 1004.108234) < 1e-3 && Math.abs(sarBand.goldSharePct - 73.7231) < 1e-2);
+check("SAR-144773 13.40g 14K melt $1,004.11 & 73.72% gold share (recomputed at $3,995.47/oz)", Math.abs(sarBand.melt - 1004.108234) < 1e-3 && Math.abs(sarBand.goldSharePct - 73.7231) < 1e-2);
 
 const gemDeduct = calc.compute(1.25, 14, 3995.47, { stoneCarats: 1.37, ask: 1299.99 });
-check("FDJ-GR0001 gross 1.25g minus 1.37ct (0.274g) = 0.976g net 14K ($73.14)", Math.abs(gemDeduct.netMetalG - 0.976) < 1e-9 && Math.abs(gemDeduct.melt - 73.1350) < 1e-2);
+check("FDJ-GR0001 gross 1.25g minus 1.37ct (0.274g) = 0.976g net 14K ($73.14)", Math.abs(gemDeduct.netMetalG - 0.976) < 1e-9 && Math.abs(gemDeduct.melt - 73.135048) < 1e-2);
 
 // 3. Negative cases: fail closed with error string (never NaN/Infinity)
 for (const [name, args] of [

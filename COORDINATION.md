@@ -53,6 +53,134 @@ duplicated or merged by this session.
   live record + root register remain the truth anchor). Full rebuild byte-reproducible. Local preview on
   `0.0.0.0:8000` returned 200 for root/dashboard/explore with derived counts 32 entries / 41 flags rendered.
   **PR #19 remains `needs review` (non-blocking), not merged or closed by this session.**
+- 2026-10-24 — **Merge with advanced main (`8852b8f`, PRs #45–#53) resolved without discarding peer work.**
+  Peer sessions (S-88AA65FD et al.) had independently converged on the WGC $3,995.47 supersession, the
+  Menē $1,325/$1,442 updates and the companion-dashboard identity reconciliation (canonical generation from
+  root data, DF-008 for BN-316238) while this session was in flight. Resolution: peer results kept;
+  only the surviving S-C74095E5 deltas re-applied by `audit/c74095e5/reapply_on_main_2026_10_24.py` —
+  JM Bullion Ask $4,009.38, the two Sarraf rows extended to explore/dashboard (`RING_METADATA`), 32-row
+  flag maintenance, and the SAR-147371 color flag **renumbered F-043→F-045 / DF-009→DF-012** because
+  peers took F-043/F-044 and DF-008..DF-011. My cross-register flag (draft F-044/DF-008) was **dropped**
+  as duplicative of the peer reconciliation. Earlier log lines above that cite draft flag numbers or
+  pre-merge counts (41 flags, DF-008/DF-009) are the historical record of the `ca39632`-based pass and
+  are superseded by this note. Final merged state: root 32 rows / 42 flags (F-001–F-045, gaps F-012,
+  F-040), explore 46 products / 88 sources / 29 findings, dashboard 28 rings / DF-001–DF-012.
+  Full check matrix re-run on the merged tree before merge (see `audit/c74095e5/check_runs/merged_*`).
+
+## Claim — Session S-F3B0B698 (2026-10-23T23:42Z UTC) — independent read-only audit
+
+Platform constraint: this runner is bound to `arena/f3b0b698-gold2`; no alternate task branch or worktree may be created or pushed. Before claiming, the remote branch and open-PR state were inspected. **S-88AA65FD is active** (claim commit `dd788fd`, 2026-10-23T23:39:38Z) and owns live high-risk source re-verification (`audit/88aa65fd/**`), hallucination-driven `data/**`/`README.md` changes, and generated-page integration. This session does not edit or duplicate those scopes. Stale PR #19 and older branches are not reclaimed.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+|----|------|--------|-------|----------------------|
+| F3-01 | Read board, inspect concurrent claims, establish a clean baseline | done | S-F3B0B698 | `COORDINATION.md` (this block only) |
+| F3-02 | Independent offline line-by-line provenance, count, arithmetic, rendered-row/source-link, calculator and workflow/security review; record every limitation and irregularity without changing product facts | done | S-F3B0B698 | `audit/f3b0b698/**` only; all other files read-only |
+| F3-03 | Add an independent regression scanner with mutation tests; run all existing review/security passes after the review | done | S-F3B0B698 | `audit/f3b0b698/**` only |
+| F3-03D | Conservatively reconcile the companion dashboard against the newer canonical root/combined records: remove divergent identities, blank unsupported currencies/prices, preserve raw displays only as unassigned, and strengthen its checks | done | S-F3B0B698 | `dashboard/**` only |
+| F3-04 | Publish the additive audit through a PR from the fixed session branch, merge only after green checks, confirm Pages, and record the result | in progress | S-F3B0B698 | `COORDINATION.md` (this block only), final generated outputs via generators, PR/Pages records |
+
+Rules: no price, weight, purity, date, seller claim, or deployment result is inferred. Blank/`null` remains unconfirmed, never zero. New findings that require shared-page changes will be logged here as requests to the active integration owner. Automated checks are not proof of source truth or physical gold purity. **Look for hallucinations again after every review.**
+
+**Scope notice to S-88AA65FD (2026-10-23):** `dashboard/**` was absent from your published claim and is now claimed here; please leave it to F3-03D. Your `data/**`, `README.md`, root generated-page and final-integration scopes remain untouched. The independent pass found companion/canonical identity drift (same IDs with different URLs), six companion prices normalized to USD where the newer canonical record leaves price/currency blank, and BN-316238 still priced despite the canonical identity-mismatch flag. Corrections will use existing dated official evidence only, prefer blank over conflict, and will not claim a fresh live fetch. Root `data/review.json` also retains historical `32-entry` scope wording; please review that within your claimed data scope rather than having this session edit it.
+
+**F3 integration checkpoint (2026-10-23, after PR #49):** the companion/audit commit was rebased onto `origin/main` `bf23f27` after S-88AA65FD and S-1B04074F completed their merges. Their newer WGC observation, Menē evidence/prices, F-043/F-044, calculator expectations, scanners, and coordination records are preserved. Rebased commit `2a0aaa8` regenerates the companion from merged canonical data; companion verifier (10 families), independent scanner, and 23 calculator assertions pass. F3 performed no new external fetch. Repository-wide generators/tests, PR, merge, and Pages read-back remain pending under F3-04.
+
+## Claim — Session S-88AA65FD (2026-10-23) — independent line-by-line re-verification + integration
+
+**Read before claiming.** No peer branch is live: `git branch -r` lists only `origin/main`, and every earlier
+claim block on this board is marked done/merged. This session therefore holds the only open claim and takes the
+integration role for this pass. Platform constraint: the runner is bound to `arena/88aa65fd-gold2`, so the board's
+`session-<id>/<task>` branch name cannot be created; isolation is by file scope instead. This claim was committed
+and pushed **before** any data or page edit.
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| V-88-01 | Claim the board; baseline every check before editing | done | S-88AA65FD | `COORDINATION.md` |
+| V-88-02 | Live re-read of the highest-risk published claims (gold reference, two Automic products, Sarraf, Factory Direct, two Menē rings, 16 CFR 23.3, FTC) | done | S-88AA65FD | `audit/88aa65fd/**` |
+| V-88-03 | Hallucination pass: count/claim consistency, stale or contradictory values, unverified rows — flag, never infer | done | S-88AA65FD | `audit/88aa65fd/**`, `data/**`, `README.md` |
+| V-88-04 | Site build, broken-link sweep, security scan, PR to `main`, merge, Pages verification | done | S-88AA65FD | `COORDINATION.md`, generated pages via the generators only |
+
+
+### S-88AA65FD integration record
+
+- **PR:** [#47](https://github.com/karagemop466-tech/GOLD2/pull/47) — *verify(S-88AA65FD): line-by-line
+  re-verification — gold refreshed, a fabricated standards quote removed, 2 new flags.* Base `main` @ `e8f3d32`
+  (which included PR #45/#46 from S-1B04074F), head `6dd0055`.
+- **Checks on the PR:** `audit` pass · `verify` pass (two runs: `40041994106`, `40041994245`) · PR state
+  `MERGEABLE` / `CLEAN` at merge time. No check was skipped or bypassed.
+- **Merge:** **MERGED 2026-10-23T23:54:27Z**, method `--merge`, no approval requested or waited for. Merge commit
+  **`627ee4f39768e4bc429f8bf62aeb9144c66cb8be`**.
+- **Post-merge CI:** `GOLD2 verify` success · `Legacy dashboard verify` success · `pages build and deployment`
+  success — all on `627ee4f`. `Evidence dashboard` was still running at the time of writing and is not claimed
+  as passed.
+- **GitHub Pages:** `status: built`, build type `legacy`, source `main` `/`, `https_enforced: true`, live at
+  <https://karagemop466-tech.github.io/GOLD2/>. The first read after deploy returned the **cached** pre-merge
+  page (39 flags, $3,996.31); a cache-busted re-read served the merged build, which is what is recorded here.
+- **Live re-read of the merged site (not assumed):** the root page now renders **41 published flags**,
+  **$3,995.47 / troy oz** with the F-026 caveat, `PASS — 12 checks, 0 failures, 3 warnings`, 30 root rows,
+  44 researched entries across 13 sellers, and a link to the Flagged for Review page. The Flagged for Review
+  page serves **F-043** with its official Factory Direct source link, and the built tree carries **F-044**.
+  The Explore catalog renders the Menē rows at **$1,325** and **$1,442**.
+- **No peer work discarded.** Twelve conflicted paths were resolved by hand during the rebase; the peer's richer
+  verification-log notes, its later WGC observation time, its README sentence and its scanner are all preserved.
+  Every generated artifact was rebuilt from the merged sources, and the tree rebuilds byte-identically.
+- **Handover / still open (published, non-blocking):** F-026 (WGC header quote time unconfirmed), F-043, F-044;
+  20 of 30 root rows without an assigned price and 23 of 30 without a metal weight; 35 combined rows, 26 root
+  rows and 76 evidence records not re-read in this pass; **zero** physical, XRF or scale verification and **zero**
+  purchase approvals; the two explained `C04` warnings from the peer scanner. **Look for hallucinations again
+  after every review — this pass is one review, not a certificate.**
+
+### S-88AA65FD working log
+
+- Read the board and `git branch -r` before editing. Only `origin/main` exists; no live peer claim. Prior sessions'
+  flags, disclosures and warnings are inherited and will not be suppressed.
+
+- **Baseline before editing:** clean tree at `ca39632`. `tools/build_site.py` 13 pages; `tools/qa.py` **12 checks /
+  0 failures / 3 warnings**; `node --test` 23/23; `verify` 44 products / 85 sources / 26 findings; `check-links`
+  46 pages / 102 local / 179 external; `security` PASS + `npm audit` 0; dashboard build + `verify --check-build`
+  PASS; `calc-test` PASS; real Chromium + axe PASS. All six inherited scanners PASS.
+- **Tooling limitation, stated up front:** this sandbox has no outbound `curl`/`wget` (TLS `SSL_ERROR_SYSCALL`),
+  so no external HTTP status sweep was possible. Every live value in this pass came from a page fetch, and the
+  pass does **not** claim any publisher URL returned 200. `check-links` remains structural only.
+- **Nine official pages re-read** (23:41–23:49Z). Three values had moved and were corrected with dated
+  evidence: WGC header 3,996.31 → **3,995.47** (prior value moved to `superseded_observations`), Menē Rose
+  1,336 → **1,325**, Menē Knot 1,454 → **1,442**. Four rows matched byte-for-byte (Automic Coffin $1,910/$2,233,
+  Automic Cushion $2,758 / $2,408–$3,253, Sarraf 147370 $3,004 + 3.80 g, Factory Direct GR0001 $1,299.99 +
+  1.25 g + karat-stamp sentence). Detail: `audit/88aa65fd/verification_2026-10-23.md`.
+- **A fabricated verbatim quote was found and removed.** `data/gold-price.json` stored *"an item marked 18 k is
+  made of 75 % gold"* as a field-scoped quotation of 16 CFR 23.3, and `evidence/gold-price.md` labelled it a
+  NIST conversion-chart quote. Both the regulation and the FTC consumer article were re-read: neither contains
+  the sentence, and the FTC expresses the same fact in parts, making 75 % arithmetic (18 ÷ 24). The verified FTC
+  sentence is stored instead, the percentage is labelled arithmetic, and the defect is published as **F-044**.
+- **A new seller self-contradiction was found:** Factory Direct Jewelry's own page says both *since 1985* and
+  *since 1988* about the same Los Angeles factory. Published as **F-043**. Price, weight and stamp statements are
+  unaffected; no founding year is used as a trust signal anywhere.
+- **Provenance gap closed:** the gold reference cited `ecfr.gov` but no evidence record for that page existed.
+  A dated, verbatim `ecfr-23-3` record was added (85 → **86 source records**) and the host was added to the
+  generator's publisher allowlist in `scripts/lib.mjs` (the only generator change in this pass).
+- **New independent scanner:** `audit/88aa65fd/hallucination_scan.py` imports none of the repo's validators;
+  it re-derives price/quote, render, gold, flag-count, README/manifest, host and superseded-value expectations
+  from the JSON and HTML, and carries **6/6 mutation controls**. Result: **10 checks, 0 failures**. Wired into
+  `.github/workflows/gold2-verify.yml` so it runs on every PR and push.
+- **Derived constants were recomputed, not patched to fit.** The dashboard calculator tests were pinned to the
+  old spot; the expected SAR melt ($1,004.11 / 73.72 %) and FDJ hypothetical ($73.14) were recomputed from the
+  formula at the new quote. Two assertions failed first — that failure is what located the stale constants.
+- **Post-change verification:** `tools/build_site.py` 13 pages; `tools/qa.py` **PASS 12 / 0 / 3**; `verify` PASS
+  **44 / 86 / 27 / 0**; `node --test` 23/23; `npm run check` PASS end to end (links 46/102/179, security, axe,
+  44 gates); all six inherited scanners PASS; new scanner PASS with 6/6 controls; three generators run twice
+  produce a byte-identical tree.
+- **Concurrent work reconciled, nothing discarded.** `origin/main` advanced to `e34d10c` (PR #45, session
+  S-1B04074F) mid-pass. That session independently re-read the same WGC page and recorded the **same 3,995.47**,
+  and independently recomputed the same calculator expectations (SAR 1004.108234 / 73.7231 %, FDJ 73.1350) —
+  independent corroboration rather than a conflict. The rebase kept the peer's richer verification-log notes,
+  its later WGC `observedAt`, and its README sentence, and kept this pass's Menē records, karat-quote correction
+  and `F-043`/`F-044`; every generated artifact was rebuilt from the merged sources. Twelve conflicted paths were
+  resolved by hand; no peer edit was reverted. Their scanner's two remaining warnings (`flags.html` and
+  `explore/calculator/index.html` mention a gold spot without printing it) are deliberate and recorded as
+  explained warnings, not suppressed.
+- **Not re-read, stated on the page and here:** 35 of 44 combined rows, 26 of 30 root rows, and 76 of 86 evidence
+  records were **not** re-fetched in this pass; their earlier dates stand. Zero physical, scale or XRF checks;
+  zero purchase approvals. **Look for hallucinations again after every review — this is one pass, not a seal.**
 
 ### Integration record (S-E0D6DD62)
 
@@ -1101,3 +1229,244 @@ Platform constraint: this session is bound to `arena/f69a82ea-gold2`; it cannot 
 - **Branch synchronization note:** after rebasing the pushed claim onto the then-current `main`, the first normal push was rejected because the remote branch still pointed to the original claim commit (`620000d`). The remote was fetched and compared; its only unique change was this session’s same claim commit, already represented in the rebased local tree. Resolved with `--force-with-lease` pinned to `620000d`; no other session’s work was removed.
 - **Remaining irregularities:** 10 provenance warnings remain disclosed (three evidence quotes not mirrored to JSON fields; four ambiguous Zales display strings); root QA has three coverage warnings; three root-only products remain omitted from Explore but visible in the root dashboard and linked on the review page. See `audit/f69a82ea/consistency-and-hallucination-review.md`.
 - **Recommendation carried forward:** re-open primary sources and look for hallucinations again after every review. Automated PASS is not proof of seller claims or physical gold purity.
+
+## Claim — Session S-1B04074F (2026-10-23 UTC, active)
+
+Platform constraint: this session is bound to `arena/1b04074f-gold2`; no other branch or worktree may be created or pushed. Isolation is enforced by exclusive file scope. All earlier claims on this board are `done`; none is being reclaimed.
+
+**Active-claim check at claim time:** the last row of every prior claim table reads `done`. The only stale `in progress` strings are historical narrative (`T-E0-05`, `T-D4-04`), both superseded by recorded merges (PR #38 / PR #28). `main` is at `ca39632` (PR #44 merged), Pages `status: built`, `build_type: legacy`, source `main` / `/`, `https_enforced: true`.
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| T-1B0-01 | Claim the board and record the plan before any edit | done | S-1B04074F | `COORDINATION.md` |
+| T-1B0-02 | Live re-verification against official URLs (8 sources re-read; coverage disclosed, not implied) | done — partial coverage, stated | S-1B04074F | `audit/1b04074f/**` |
+| T-1B0-03 | Gold-reference freshness re-read (World Gold Council official page) | done — 3,996.31 → 3,995.47 | S-1B04074F | `audit/1b04074f/**` |
+| T-1B0-04 | Hallucination / provenance / security pass with mutation controls; publish findings | done — PASS, 9/9 mutation controls | S-1B04074F | `audit/1b04074f/**`, `data/flags.json`, `flags.html` |
+| T-1B0-05 | Correct only values directly contradicted by a live official page; log every correction | done — one value corrected | S-1B04074F | `data/**`, `evidence/**`, `README.md` |
+| T-1B0-06 | Final integration: full local suite, PR to `main`, merge, Pages deployment record | done | S-1B04074F | `COORDINATION.md`, regenerated root `*.html` |
+
+Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero and never a negative physical finding; nothing is inferred, averaged, or filled from a neighbouring value; every published value needs a field-scoped quote from a page retrieved by the session that publishes it; an automated PASS proves only that the stated controls ran; **look for hallucinations again after every review**.
+
+### S-1B04074F working log
+
+- 2026-10-23 — Board read in full before editing. Claim written and pushed before any data, evidence, page or script edit.
+
+### S-1B04074F working log (continued)
+
+- 2026-10-23 — **T-1B0-03 done — gold reference re-read, one value changed.** Direct fetch of the WGC page returned
+  **3,995.47 USD/oz** (stored: 3,996.31) with the chart still reading *Data as of 22 October, 2026* and no header
+  timestamp. `data/gold-price.json`, `evidence/gold-price.md`, `research/evidence.json` (`wgc-panel-review`),
+  `dashboard/data/gold-reference.json` and the dashboard `SPOT_USD` constant were updated; 3,996.31 moved to
+  `superseded_observations` (not rendered). Derived figures were recomputed from the stored quote and NIST
+  31.1034768 g/ozt — `usd_per_fine_gram` 128.45734, SAR-144773 melt $1,004.11 / 73.72 %, FDJ net-0.976 g $73.14 —
+  and the calculator tests were re-pinned to those values.
+- 2026-10-23 — **Two stale renders were caught, not papered over.** `tools/qa.py` failed the first rebuild
+  (`verification.html exposes superseded gold quote 3,996.31`) because a log *note* repeated the old figure; the note
+  was rewritten rather than the check weakened. Sibling scanner `audit/e0d6dd62` then failed
+  `explore/sources/index.html` for the same figure in a second evidence record (`wgc-panel-review`), which was
+  updated. Both scanners are green now and no page renders a superseded quote.
+- 2026-10-23 — **T-1B0-02 partial, coverage stated.** Eight official URLs were retrieved in this pass: WGC;
+  Automic Coffin JSON, 24k Band JSON, Cushion Signet JSON, Moissanite JSON; Sarraf SAR-147370 and SAR-144773; Factory
+  Direct Jewelry GR0001. Every stored value matched live text (including the 1,910–2,233 and 2,758/2,408 variant
+  ranges and Sarraf's `Was:` priors 3,513 / 1,593). Brilliant Earth's page was retrieved but chunk 0 was navigation
+  only, so its $890 was **not** re-verified and is logged as a dead end. 28 of 30 root rows and 36 of 44 combined
+  products were **not** re-read; their earlier dates still stand. Detail: `audit/1b04074f/live_verification_2026-10-23.md`.
+- 2026-10-23 — **T-1B0-04 done — independent scanner with mutation controls.**
+  `audit/1b04074f/hallucination_scanner.py` re-derives 14 control families (URL coverage, price→evidence quoting,
+  flag integrity, rendered-vs-stored gold quote, superseded-value leakage, cross-register spot agreement, fine-gold
+  bounds, NIST arithmetic, source resolution, price-quote keys, policy presence on every page, zero purchase
+  approvals, README counts, root→combined URL coverage) **without importing** `tools/qa.py` or `scripts/verify.mjs`.
+  Result on the merged tree: **PASS, 0 failures, 2 advisory warnings** (both benign: `flags.html` discusses the
+  moving spot without restating it, and the Explore calculator's spot input is empty by design).
+  `audit/1b04074f/test_scanner.py` shows **9/9** injected defects caught (clean copy exit 0).
+- 2026-10-23 — **Full local suite green before the PR:** `tools/build_site.py` 13 pages · `tools/qa.py` **PASS 12 /
+  0 / 3** · `scripts/build.mjs` 44 rows / 85 sources · `scripts/verify.mjs` PASS · `node --test` 23/23 ·
+  `check-links` PASS 46 pages / 179 external · `security` PASS + `npm audit` 0 · dashboard 14 pages +
+  `verify --check-build` 8/8 + `calc-test` PASS · `tools/test_calculator.js` PASS · snapshot audit PASS · legacy
+  build/audit/test PASS · sibling scanners `a87a02a5` / `e0d6dd62` / `9b875c81` PASS · Chromium + axe PASS
+  (13 expanded + 33 companion pages). Rebuild is byte-reproducible (`index.html` md5 unchanged).
+- 2026-10-23 — **Not claimed, not verified, still open:** zero physical / hallmark / XRF / scale verification on every
+  row; zero purchase approvals; F-026 (no header timestamp) open; F-041/F-042 (BN-316238 serves a different product)
+  open; 20 of 30 root rows without an assigned price and 23 of 30 without a metal weight. **Look for hallucinations
+  again on the next pass — this pass is one review, not a certificate.**
+
+
+### S-1B04074F integration record
+
+- **PR:** [#45](https://github.com/karagemop466-tech/GOLD2/pull/45) — *verify(S-1B04074F): refresh the dated gold quote,
+  re-verify live values, ship an independent hallucination scanner*.
+- **PR checks before merge:** `audit` PASS · `verify` PASS (two runs) — all three green, none skipped.
+- **Merge:** **MERGED 2026-10-23T23:47:40Z**, merge commit **`e34d10cc70e02585aa889f668055ceec1e38fe10`**, method
+  `--merge`, no approval waited for. Branch was rebased on `origin/main` immediately before push; no peer commit was
+  reverted or overwritten (the diff is `data/gold-price.json`, `evidence/gold-price.md`, `research/evidence.json`,
+  `README.md`, the dashboard generator/constants/tests, regenerated pages, `audit/1b04074f/**`, and this board).
+- **Post-merge CI on `e34d10c`:** `GOLD2 verify` success · `Legacy dashboard verify` success · `Evidence dashboard`
+  success · `pages build and deployment` success.
+- **GitHub Pages:** `status: built`, build type `legacy`, source `main` / `/`, `https_enforced: true`, build created
+  23:47:42Z / updated 23:48:04Z for commit **`e34d10c`**.
+- **Live read-back (not assumed):** `prices.html` renders **$3,995.47/oz** with the recomputed rows
+  (SAR-144773 melt **$1,004.11**, 24K band **$1,413.03**, 14K 6 g quick reference **$449.60**); `dashboard/` renders
+  **$3,995.47 / troy oz · $128.46 / fine g** with the same recomputed melts and its No-Hallucinations block intact.
+  A first read of `prices.html` returned the pre-deploy cached copy; it was re-read with a cache-busting query after
+  the Pages build reported `built` for `e34d10c`.
+- **Still open, published, not blocking:** F-026 (WGC header has no quote-as-of timestamp) · F-018/F-025 (Zales label
+  and ISO-currency gaps) · F-041/F-042 (Blue Nile BN-316238 serves a different product) · 20 of 30 root rows without
+  an assigned price · 23 of 30 without a metal weight · **zero** physical, hallmark, maker's-mark, scale or XRF
+  verification · **zero** purchase approvals.
+- **Handover instruction:** this pass is one review, not a certificate. Re-open the primary pages and look for
+  hallucinations again after every review, and re-check that no superseded gold figure has crept back into prose.
+
+### S-1B04074F post-peer-merge re-verification (2026-10-23 23:5xZ)
+
+Session `S-88AA65FD` merged PR #47 (`627ee4f`) on top of PR #45/#46. Its own gold refresh was reconciled with this
+session's, and the combined tree stores **3,995.47** once. Rather than assume, this session rebased onto `origin/main`
+and re-ran the whole suite on the combined content:
+
+- `tools/build_site.py` 13 pages · `tools/qa.py` **PASS 12 / 0 / 3** · `scripts/build.mjs` 44 rows / **86** sources ·
+  `scripts/verify.mjs` PASS (44 products / 86 sources / **27** findings / 0 purchase approvals) · `node --test` 23/23 ·
+  `check-links` PASS 46 pages / 179 external · `security` PASS + `npm audit` 0 · dashboard 8/8 + `calc-test` PASS ·
+  Chromium + axe PASS (13 expanded + 33 companion pages).
+- Sibling scanners: `a87a02a5` PASS (5 warnings) · `e0d6dd62` **PASS 12/0/0** · `9b875c81` 0 findings.
+- This session's scanner on the combined tree: **PASS 0 failures**, **9/9** mutation controls still correct, reading
+  30 root rows / 44 products / 86 sources / **41** flags / 40 pages at quote **3,995.47**.
+- **Reproducibility:** regenerating root, Explore and dashboard from the merged data changed exactly one file —
+  the QA report's timestamp. No page, data file or generator drifted, so the peer's merge did not leave stale output.
+- **Pages:** build `completed/success` for `627ee4f`; the site is live and the two gold figures on the published pages
+  were re-read directly after deploy.
+- **Unchanged handover:** re-open primary sources and look for hallucinations again next pass; 20 of 30 rows still
+  carry no assigned price, 23 of 30 no metal weight, and nothing on the site is physically or XRF verified.
+
+## Claim — Session S-F03AB52D (2026-10-23 UTC) — independent hallucination/provenance audit
+
+Platform constraint: this session is bound to `arena/f03ab52d-gold2`; it cannot create the
+requested `session-<id>/<task>` branch or extra worktrees. Isolation is enforced by the
+exclusive file scope below.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| F03A-01 | Read the board; claim a non-overlapping audit scope; commit and push the claim before editing | done | S-F03AB52D | `COORDINATION.md` |
+| F03A-02 | Independent 9-check hallucination/provenance scanner + 9 mutation controls | done | S-F03AB52D | `audit/f03ab52d/hallucination_audit.py`, `audit/f03ab52d/test_audit.py` |
+| F03A-03 | Live re-verification of a sample of published values against official sources | done | S-F03AB52D | `audit/f03ab52d/live_verification_2026-10-23.md` |
+| F03A-04 | Publish findings register and verification summary | done | S-F03AB52D | `audit/f03ab52d/FINDINGS.md`, `audit/f03ab52d/findings.json`, `audit/f03ab52d/verification-summary.json` |
+| F03A-05 | Run the full existing gate; PR the additive audit; merge; confirm Pages | done | S-F03AB52D | `COORDINATION.md` |
+
+**Rules followed:** No edit to any file outside `audit/f03ab52d/**` and `COORDINATION.md`. All
+verification was read-first. No value was inferred, estimated, averaged or derived from a neighbour.
+Blank/`null` means *not confirmed*, never zero.
+
+### S-F03AB52D working log
+
+- 2026-10-23 — Board read. `main` @ `ca39632` (PR #44 merged); branch even with `main`; working tree
+  clean. Prior sessions recorded done/integrated. Claimed non-overlapping scope `audit/f03ab52d/**` +
+  `COORDINATION.md`; no peer file touched.
+- 2026-10-23 — Baseline before editing: `tools/build_site.py` 13 pages byte-reproducible (no diff);
+  `tools/qa.py` PASS 12 checks / 0 failures / 3 warnings; `npm run check` PASS (verify 44 products /
+  85 sources / 26 findings / 0 approvals; 23/23 node tests; 13-page build; 46 pages / 102 local /
+  179 external links; security 0 vulnerabilities; browser/axe 44 gates).
+- 2026-10-23 — Wrote an independent scanner (`audit/f03ab52d/hallucination_audit.py`) from scratch; it
+  does not import `tools/qa.py`, `scripts/verify.mjs` or any other session's scanner. 9 checks: (C1)
+  catalog source existence + official https; (C2) every non-null fact value and price amount present in
+  its evidence quote; (C3) root register official source_url + existing evidence file; (C4) root↔catalog
+  price/weight parity (30 pairs); (C5) gold-reference JSON matches evidence with no unrecorded figure
+  (negation-context exemption for the documented 4,025.54 mention); (C6) derived/assay fields null
+  unless evidenced; (C7) no hallmark/maker-mark claim without evidence; (C8) HTML parity for the headline
+  gold value and product count; (C9) review findings cite a source. Baseline PASS 9 / 0 / 0.
+- 2026-10-23 — Mutation controls (`audit/f03ab52d/test_audit.py`): 9/9 injected defects caught (invented
+  price, karat mismatch, unbacked solidGold, non-https source, unrecorded gold figure, gold-JSON mismatch,
+  unbacked hallmark, root/catalog price conflict, unbacked derived value). A scanner that cannot catch an
+  injected hallucination is not a scanner.
+- 2026-10-23 — Live re-reads (4 official pages): WGC header `3,995.47` USD/oz (stored then `3,996.31`,
+  same-day moving quote, chart 22 Oct 2026); Mejuri Bold Diamond Eternity Ring `From$2,900` / 14k solid gold
+  / 2.6mm (confirmed); Automic Coffin Ring Shopify JSON `price 191000` / `price_max 223300` (confirmed);
+  Brilliant Earth BE121H6 `$890 (Setting Only)` / 14K Yellow Gold / 2.5mm (confirmed). No live read
+  contradicted a stored value.
+- 2026-10-23 — Irregularities recorded (non-blocking): F03A-01 WGC intraday move; F03A-02 F-026 quote-as-of
+  unconfirmed; F03A-03 documented non-observational 4,025.54 mention in evidence; F03A-04 coverage gaps
+  (20/30 root rows no assigned price, 23/30 no metal weight, zero physical/XRF/scale verification, zero
+  purchase approvals). **No hallucinations found. No values inferred or filled.**
+- 2026-10-23 — Full gate re-run after adding the audit files: `tools/qa.py` PASS 12/0/3; snapshot audit
+  PASS; `npm run check` PASS end-to-end. The additive audit files break no existing control.
+
+### S-F03AB52D reconciliation with S-1B04074F (duplicate work, reconciled not doubled)
+
+- This session's branch was cut from `ca39632` and the audit was authored against that base. While the
+  audit was in progress, `main` advanced through PR #45 (`S-1B04074F`), PR #47 (`S-88AA65FD`), PR #48 and
+  PR #49. `S-1B04074F` independently reached the **same** live WGC observation (`3,995.47`) and integrated
+  it (PR #45), and shipped its own independent scanner + mutation controls under `audit/1b04074f/**`. This
+  session's live read and scanner are therefore **corroborating, not re-applied**: this branch keeps no
+  overlapping data edit and adopts `main`'s refreshed gold reference rather than writing a second copy.
+- **No peer work was discarded, reverted or overwritten.** This branch's only unique changes are additive:
+  `audit/f03ab52d/**` and this board block. Each rebase conflict in `COORDINATION.md` was resolved by keeping
+  `main`'s blocks and appending this block after them.
+- F03A-01 (WGC intraday move) is **superseded** by `S-1B04074F`'s merge; it is retained here as the dated
+  observation this session made, not as an open defect.
+
+### S-F03AB52D integration record
+
+- **PR:** [#50](https://github.com/karagemop466-tech/GOLD2/pull/50) — *audit(S-F03AB52D): independent
+  9-check hallucination/provenance audit + 9 mutation controls + live re-verification*.
+- **Merge:** **MERGED 2026-10-24T00:06:52Z**, merge commit **`7f1c979c9ffad3736ecc4254fad515a7dd83e29b`**, method
+  `--merge`, no approval waited for. All three PR checks passed before merge (`audit` PASS; `verify` PASS at
+  6s and 1m48s). The branch was rebased onto `origin/main` twice during the pass; each `COORDINATION.md` conflict
+  was resolved by keeping `main`'s peer blocks and appending this session's block — no peer work discarded.
+- **Post-merge Pages:** legacy publishing `main` / repository root, HTTPS enforced. The live site
+  https://karagemop466-tech.github.io/GOLD2/ was re-read this pass (not assumed): it renders the refreshed
+  **$3,995.47 / troy oz** reference (quote date unconfirmed, F-026), `30` root listings across `9` sellers,
+  `41` flags, the No-Hallucinations rule and the two-register disclosure. The additive audit changes do not
+  alter any product row, price, weight or page.
+- **Handover:** this pass is one review, not a certificate. Re-open primary sources and look for hallucinations
+  again after every review. Still open and non-blocking: F-026 quote-as-of unconfirmed; 20 of 30 root rows without
+  an assigned price; 23 of 30 without a metal weight; zero physical/XRF/scale verification; zero purchase approvals.
+
+---
+
+# Session S-86379CA7 — task board & multi-session coordination (active)
+
+- **Session ID:** `S-86379CA7` (`86379ca7`)
+- **Platform-fixed branch:** `arena/86379ca7-gold2`. Arena binds this runner strictly to `arena/86379ca7-gold2`; creating or pushing `session-<id>/<task>` branches or extra worktrees is disallowed by the runner environment. That constraint is recorded rather than ignored, and isolation is enforced by strictly non-overlapping exclusive file scopes below.
+- **Claim written:** 2026-10-23T23:41Z UTC. **Base observed at claim:** `main` @ `ca39632b212684db0caa6bb57d4979860519dd9f` (PR #44 merged).
+- **Explicit multi-branch inspection before claiming** (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'`). Because the default repository refspec only fetches `origin/main`, all remote branches were explicitly fetched to detect active peers:
+  - **Active peer 1 — `S-1B04074F` (`origin/arena/1b04074f-gold2` @ `b8c1d57`, `2026-10-23T23:39:59Z`):** claims `T-1B0-02`..`T-1B0-04` (`audit/1b04074f/**`, `data/flags.json`, `flags.html`) in progress; `T-1B0-05` (`data/**`, `evidence/**`, `README.md`) and `T-1B0-06` (`COORDINATION.md`, regenerated root `*.html`) unclaimed. **Respected in full — zero edits to `S-1B04074F`'s claimed files.**
+  - **Active peer 2 — `S-88AA65FD` (`origin/arena/88aa65fd-gold2` @ `dd788fd`, `2026-10-23T23:39:38Z`):** claims `V-88-02`..`V-88-03` (`audit/88aa65fd/**`, `data/**`, `README.md`) in progress; `V-88-04` (`COORDINATION.md`, generated pages) unclaimed. **Respected in full — zero edits to `S-88AA65FD`'s claimed files.**
+  - **Scope-collision irregularity noted (flagged, not edited):** `S-1B04074F` and `S-88AA65FD` both claim `data/flags.json` (via `data/**`) simultaneously because neither fetched `+refs/heads/*:refs/remotes/origin/*` before claiming. Logged here for clean rebase reconciliation; this session claims only the non-overlapping `audit/86379ca7/**` scope and logs cross-scope requests in `COORDINATION.md` for any shared files.
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| T-8637-01 | Read `COORDINATION.md`, inspect all remote branches, claim non-overlapping scope, and push immediately | done | S-86379CA7 | `COORDINATION.md` |
+| T-8637-02 | Independent live line-by-line verification of official product sources, WGC gold reference, retailer policies, and deployed GitHub Pages (`karagemop466-tech.github.io/GOLD2/`) | done — 46 live page/chunk retrievals logged | S-86379CA7 | `audit/86379ca7/live_verification_2026-10-23.md`, `audit/86379ca7/live_verification_2026-10-23.json` |
+| T-8637-03 | Independent multi-register hallucination, provenance, arithmetic, link, and security scanner + mutation unit tests | done — PASS (8/8 checks, 0 hard failures, 35 cross-register warnings, 10/10 mutation controls caught) | S-86379CA7 | `audit/86379ca7/hallucination_security_scanner.py`, `audit/86379ca7/test_scanner.py` |
+| T-8637-04 | Execute all repository verification, build, calculator, link, accessibility, and peer-scanner passes; record findings and cross-scope requests | done — 14 cross-register findings (`S8637-F01`–`S8637-F14`) logged | S-86379CA7 | `audit/86379ca7/FINDINGS.md`, `audit/86379ca7/findings.json` |
+| T-8637-05 | Rebase onto `origin/main` (preserving all peer merges without discarding work), verify combined build & links, open PR to `main`, merge, verify Pages deployment, and record in `COORDINATION.md` | in progress | S-86379CA7 | `COORDINATION.md`, `audit/86379ca7/**` |
+
+**Rules carried forward unchanged:** No hallucinations. Blank/`null` means unverified, never zero and never a negative physical finding. Never infer, average, or fill in values. Every table row must link to an official source. Run hallucination and security passes after every review and recommend looking for hallucinations again after every review.
+
+### S-86379CA7 verification & cross-scope handoff log
+
+- **Live retrieval pass (`audit/86379ca7/live_verification_2026-10-23.{md,json}`):** Directly retrieved 46 primary web pages and chunks across 39 distinct URLs on 2026-10-23 UTC:
+  - **World Gold Council (`https://www.gold.org/goldhub/data/gold-prices`):** Confirmed moving header `USD /oz - 3,995.47` (`Last Updated` without timestamp, `F-026`) and chart `Data as of 22 October, 2026` (`ICE Data Services`), giving `$128.4573432 / fine g` via NIST `31.1034768 g/ozt`.
+  - **Brilliant Earth `BE-121H6` (`https://www.brilliantearth.com/rings/yellow-gold-solitaire-engagement-rings/Classic-Six-Prong-Solitaire-Engagement-Ring-Gold-BE121H6-76788910/`):** Unlike earlier passes that stopped at chunk 0, retrieved chunks 4 and 5 and verified live `Currency: USD`, `$890(Setting Only)`, `14K Yellow Gold`, and `Average Width: 2.5 mm`.
+  - **Automic Gold (`coffin-ring`, `coffin-ring.js` chunks 0–2, `cushion-diamond-signet-ring` chunks 0–1, `sapphire-ring` chunks 0/4/5/6, `24k-band`, `cart.js`, `pages/help`):** Confirmed `Coffin Ring` (`$1,910` 14K gold, `$2,039` Nickel Free 14K White Gold, `$2,233` `950 Platinum` variant `41654426763358`, `6.1g` gold, `3mm`), `Cushion Diamond Signet Ring` (`$2,758`, `gold 5.5g`, `0.65ct`), `Sapphire Ring` (`$526`, `1.2g` gold, `Stone: Natural sapphire`), `24k Band` (`$3,520`, `99.99% pure gold`, `11g`, `4.5mm` × `2.2mm`), and `"currency":"USD"`. Confirmed `https://www.automicgold.com/products/lab-grown-cushion-diamond-signet-ring` returns `404 Not Found`.
+  - **Sarraf (`SAR-147370`, `SAR-144773`), Mejuri (`bold-diamond-eternity-ring`, `faq/return-exchanges`), Blue Nile (`BN-203348`, `BN-316238`), VRAI (`VRAI-CLASSIC-4P`, `returns-exchanges`, `contact-us`), Zales (`V-19957449`, `V-20046552`, `V-20303279`), Stone & Strand (`the-clara-ring`, `the-mia-ring`, `the-rita-ring`), Factory Direct Jewelry (`FDJ-GR0001`, `return-policy`, `contact`), Menē (`rose-ring-gold`, `knot-ring-gold`, `returns-319505`, `customer-care`), Auvere (`diamond-bridge-ring-tall/`), and 7 deployed GitHub Pages URLs (`https://karagemop466-tech.github.io/GOLD2/...`).**
+- **Independent scanner & mutation controls (`audit/86379ca7/hallucination_security_scanner.py`, `audit/86379ca7/test_scanner.py`):**
+  - 8 independent control checks across 13 root pages, 13 `/explore/` pages, 14 `/dashboard/` pages, 30 root items, 44 combined catalog products, and 26 companion rings: **PASS — 0 hard failures, 35 cross-register advisory warnings**.
+  - 10 synthetic mutation tests (`test_scanner.py`) injecting missing No-Hallucinations banners, unlinked table rows, `javascript:` links, missing `rel="noopener"`, unbacked prices, non-null `fine_gold_g` / zero weight placeholders, unbacked `netMetalWeightG`, NIST constant tampering, superseded spot leaks, inline DOM event handlers, and external `<script src>` tags: **10/10 caught (`OK`)**.
+- **Cross-scope handoff findings (`audit/86379ca7/FINDINGS.md`, `audit/86379ca7/findings.json`) — published for peer scopes without overwriting claimed files:**
+  1. **For `dashboard/**` scope (claimed by `S-F3B0B698`):**
+     - `S8637-F01` (high): `dashboard/data/rings.json` `AG-SAPPHIRE-RING` mislabels stone as `"3mm Lab Sapphire"` when official PDP states `"Stone: Natural sapphire"`.
+     - `S8637-F02` (high): **7 broken 404 official URLs** in `dashboard/data/{rings,retailers}.json` (`AG-CUSHION-SIGNET`, `MJ-BOLD-ETERNITY`, `VRAI-CLASSIC-4P`, `mejuri.{returns_url,contact_url,jewelry_notes_url}`, `vrai.{returns_url,contact_url,jewelry_notes_url}`).
+     - `S8637-F03` (high): **9 product URL/title/karat mismatches** in `dashboard/data/rings.json` (`VRAI-CLASSIC-4P`, `AG-CUSHION-SIGNET`, `MJ-BOLD-ETERNITY`, `BN-194158` & `BN-195269` swapped, `BN-316238`, `BN-315661`, `BN-203348`, `Z-20303279`, `Z-20046552`).
+     - `S8637-F04` (high): **6 numeric `price_usd` assignments** in `dashboard/data/rings.json` (`MJ-BOLD-ETERNITY`, `BN-194158`, `BN-195269`, `BN-316238`, `BN-315661`, `BN-203348`) lack an explicit USD currency source on their PDPs and are `null` in the root register.
+     - `S8637-F05` (high): Contradicted BBB ratings & return windows in `dashboard/data/retailers.json` (`automic-gold` claims `"B-"` and `"14 days"` return window vs PDP `"30 days"` and no static BBB grade; `mejuri` claims `"F rating"`; `vrai` lists `"hello@vrai.com"` instead of `"help@vrai.com"`; `blue-nile` and `brilliant-earth` claim `"BBB Accredited"` when BBB states `"not BBB Accredited"`).
+     - `S8637-F06` (medium): `dashboard/data/rings.json` `AG-24K.price_note` still says `"40.4% pure bullion share"` while the computed table column renders `40.2% gold`.
+  2. **For `data/**` scope:**
+     - `S8637-F07` (medium): `data/flags.json` `F-031` (Automic Gold & Mejuri BBB rating omission) erroneously lists `SAR-147370`, `SAR-145362`, `SAR-145364`, `SAR-144773`, and `FDJ-GR0001` in `affected_items`.
+     - `S8637-F08` (medium): `data/flags.json` `F-004` (Zales `V-19957449` rejected snippet) erroneously lists `BN-316238` in `affected_items` and `sources`.
+     - `S8637-F09` (medium): `data/flags.json` `F-015.detail` and `F-016.detail` retain stale 16-row counts instead of 30-row counts, and `F-015.affected_items` omits `FDJ-GR0001` (29/30).
+     - `S8637-F10` (low): `data/verification-log.json` `BE-121H6` note references removed flag `F-032` (merged into `F-007`), and `VRAI-CLASSIC-4P` / `AG-24K` labels differ from listing `name` values.
+     - `S8637-F11` (low): `data/review.json` `marks-and-tests.scope` and `parallel-integration.scope` state `32` instead of `44` entries; `data/catalog.json` `sellers` (`bluenile`, `zales`, `vrai`, `brilliant-earth`) leave `independent: null` despite BBB profiles in `data/retailers.json`.
+     - `S8637-F12` (medium): `FDJ-GR0001` live PDP has an internal band-width contradiction (`Band Width: 2.0mm` under Details vs `Width:0.07 inches` [~1.78 mm] under Size & Weight), and `SS-MIA` live PDP publishes `Band Width: 1.5mm` while `width_mm` is `null`.
+     - `S8637-F13` (low): `data/retailers.json` `vrai` leaves `phone: null` (`F-013`), whereas live `https://www.vrai.com/contact-us` publishes `+1.855.956.4488` and `help@vrai.com`.
+     - `S8637-F14` (low): Live `https://www.factorydirectjewelry.com/contact` contains a malformed `mailto:support@factorydirectjewelry;` href alongside valid `mailto:support@factorydirectjewelry.com`.
+- **Recommendation carried forward:** Always re-open the official primary pages and run hallucination and security checks (`python3 audit/86379ca7/hallucination_security_scanner.py` and `python3 audit/86379ca7/test_scanner.py`) after every review. Automated PASS is not proof of physical purity or seller claims.
+
+

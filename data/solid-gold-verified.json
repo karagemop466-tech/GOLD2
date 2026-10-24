@@ -147,8 +147,7 @@
         "F-027",
         "F-028",
         "F-031",
-        "F-039",
-        "F-044"
+        "F-039"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
@@ -341,8 +340,7 @@
         "F-024",
         "F-025",
         "F-030",
-        "F-031",
-        "F-044"
+        "F-031"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
@@ -1265,11 +1263,11 @@
         "F-021",
         "F-024",
         "F-036",
-        "F-043"
+        "F-045"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
-      "notes": "Complete natural-diamond solitaire ring disclosing explicit '14K Solid Gold', separate 'Approximate Metal Weight: 7.70 grams', 'Diamond Weight: 0.98 Ct.' (Natural, I1), and explicit 'Now: US$4,049.00'. The page contradicts itself on diamond color — specifications state 'Diamond Color: G' while the description states 'I1 in clarity and H in color' — flagged F-043. Seller claims are dated observations, not independent testing.",
+      "notes": "Complete natural-diamond solitaire ring disclosing explicit '14K Solid Gold', separate 'Approximate Metal Weight: 7.70 grams', 'Diamond Weight: 0.98 Ct.' (Natural, I1), and explicit 'Now: US$4,049.00'. The page contradicts itself on diamond color — specifications state 'Diamond Color: G' while the description states 'I1 in clarity and H in color' — flagged F-045. Seller claims are dated observations, not independent testing.",
       "field_evidence": {
         "name": [
           "14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct."

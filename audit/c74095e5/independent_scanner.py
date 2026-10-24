@@ -30,15 +30,15 @@ I, F, R, P, S, D = byid(items), byid(flags), byid(rets), byid(cat["products"]), 
 
 # S1 counts & identity sets
 chk("S1 root items = 32 (17 category + 15 solid-gold)", len(items) == 32 and len(sg) == 15, f"{len(items)}/{len(sg)}")
-want_flags = {f"F-{i:03d}" for i in range(1, 45)} - {"F-012", "F-032", "F-040"}
-chk("S1 flags = 41, F-001..F-044 minus F-012/F-032/F-040", set(F) == want_flags, str(sorted(set(F) ^ want_flags)))
+want_flags = {f"F-{i:03d}" for i in range(1, 46)} - {"F-012", "F-032", "F-040"}  # merged state: peer F-043/F-044 + my F-045
+chk("S1 flags = 42, F-001..F-045 minus F-012/F-032/F-040", set(F) == want_flags, str(sorted(set(F) ^ want_flags)))
 chk("S1 verification listing entries == root item ids",
     {e["id"] for e in vl["entries"] if e["kind"] == "listing"} == set(I))
-chk("S1 explore 46/87/28", len(cat["products"]) == 46 and len(ev["sources"]) == 87 and len(rv["findings"]) == 28)
+chk("S1 explore 46/88/29", len(cat["products"]) == 46 and len(ev["sources"]) == 88 and len(rv["findings"]) == 29)
 chk("S1 dashboard rings = 28", len(D) == 28, str(len(D)))
 if dflags is not None:
     dl = dflags if isinstance(dflags, list) else dflags.get("flags", [])
-    chk("S1 dashboard flags DF-001..DF-009", {f["id"] for f in dl} == {f"DF-{i:03d}" for i in range(1, 10)})
+    chk("S1 dashboard flags DF-001..DF-012", {f["id"] for f in dl} == {f"DF-{i:03d}" for i in range(1, 13)})
 
 # S2 gold supersession
 chk("S2 current gold = 3995.47", gp["usd_per_troy_oz"] == 3995.47)
@@ -46,7 +46,7 @@ chk("S2 superseded set", {o["value"] for o in gp["superseded_observations"]} == 
 chk("S2 JM reference = 4009.38 @2026-10-23T23:46Z",
     cat["meta"]["marketReference"]["amount"] == 4009.38 and cat["meta"]["marketReference"]["publishedAt"] == "2026-10-23T23:46:00Z")
 chk("S2 Menē explore amounts", P["mene-rose"]["price"]["amount"] == 1325 and P["mene-knot"]["price"]["amount"] == 1442)
-chk("S2 Menē dashboard amounts", D["MENE-ROSE"]["price_usd"] == 1325.00 and D["MENE-KNOT"]["price_usd"] == 1442.00)
+chk("S2 Menē dashboard amounts", D["MENE-ROSE"]["price_usd"] == 1325 and D["MENE-KNOT"]["price_usd"] == 1442)
 chk("S2 dashboard BNx5 + MJ prices blank",
     all(D[b]["price_usd"] is None for b in ("BN-194158","BN-195269","BN-316238","BN-315661","BN-203348","MJ-BOLD-ETERNITY")))
 root_html = " ".join(T(p) for p in ["index.html","prices.html","verification.html","analysis.html","flags.html"] if (ROOT/p).exists())
@@ -65,8 +65,8 @@ for rid, price, grams in (("SAR-151362", 8203.0, 9.2), ("SAR-147371", 4049.0, 7.
         and "solid gold" in src["quotes"]["material"].lower()
         and str(int(price)) in src["quotes"]["price"].replace(",", ""))
     chk(f"S3 {rid} dashboard row", D[rid]["price_usd"] == price and D[rid]["weight_g"] == grams)
-chk("S3 SAR-147371 carries F-043 + DF-009, color unconfirmed in scope",
-    "F-043" in I["SAR-147371"]["flags"] and "DF-009" in D["SAR-147371"]["flags"] and "unresolved" in P["sar-147371"]["scope"])
+chk("S3 SAR-147371 carries F-045 + DF-012, color unconfirmed in scope",
+    "F-045" in I["SAR-147371"]["flags"] and "DF-012" in D["SAR-147371"]["flags"] and "unresolved" in P["sar-147371"]["scope"])
 
 # S4 flag arithmetic & bidirectionality (independent reimplementation)
 chk("S4 F-001 affected == items without explicit solid wording",
@@ -75,15 +75,15 @@ chk("S4 F-003 affected == items with null weight (23)",
     set(F["F-003"]["affected_items"]) == {i["id"] for i in items if i["weight_g"] is None} and len(F["F-003"]["affected_items"]) == 23)
 chk("S4 F-002/F-021/F-024 cover all 32", all(len(F[f]["affected_items"]) == 32 for f in ("F-002","F-021","F-024")))
 bi = all((fid in it["flags"]) == (it["id"] in F[fid]["affected_items"]) for fid in F for it in items)
-chk("S4 item<->flag bidirectionality (32x41)", bi)
+chk("S4 item<->flag bidirectionality (32x42)", bi)
 br = all((fid in r["flags"]) == (r["id"] in F[fid]["affected_retailers"]) for fid in F for r in rets)
 chk("S4 retailer<->flag bidirectionality", br)
 
 # S5 cross-register identity for the corrected rows
-live_titles = {"BN-194158": "Classic Four Prong Solitaire", "BN-195269": "Petite Solitaire",
-               "BN-316238": "Comfort Fit Solitaire", "BN-315661": "Pavé Contour", "BN-203348": "Classic Simple Solitaire"}
-ok5 = all(D[b]["product_url"] == I[b]["source_url"] and live_titles[b] in D[b]["name"] for b in live_titles)
-chk("S5 dashboard BN names live-true + URLs == root canonical", ok5)
+# canonical generation: dashboard rows are derived from root rows, so name+URL must equal root exactly
+ok5 = all(D[b]["product_url"] == I[b]["source_url"] and D[b]["name"] == I[b]["name"]
+          for b in ("BN-194158","BN-195269","BN-316238","BN-315661","BN-203348"))
+chk("S5 dashboard BN rows == root canonical (name+URL)", ok5)
 chk("S5 dashboard AG/MJ/VRAI URLs == root",
     all(D[r]["product_url"] == I[r]["source_url"] for r in ("AG-CUSHION-SIGNET","MJ-BOLD-ETERNITY","VRAI-CLASSIC-4P")))
 explore_urls = {s["url"] for s in ev["sources"]}
@@ -104,8 +104,8 @@ chk("S6 derived fine-g/melt present in prices.html for weighted rows", not bad, 
 # S7 README truthfulness
 readme = T("README.md")
 chk("S7 README current counts/values",
-    all(s in readme for s in ("46 product records","32-row","87 source records","28 review findings",
-                              "`41` bidirectional flags","$3,995.47/oz","4,009.38","19 rows carry"))
+    all(s in readme for s in ("46 product records","32-row","88 source records","29 review findings",
+                              "`42` bidirectional flags","4,009.38","19 rows carry","F-045"))
     and "44 product records" not in readme and "30 product entries" not in readme)
 
 # S8 zero approvals everywhere
@@ -120,7 +120,7 @@ dead = ["lab-grown-cushion-diamond-signet-ring","bold-lab-grown-diamond-eternity
         # BN-316238 URL (F-041: slug retained, live title corrected). Excluded on purpose.
         "french-pave-halo-engagement-ring-in-14k-white-gold-1-5-ct-tw-item-315661",
         "three-stone-trellis-engagement-ring-in-14k-yellow-gold-item-203348"]
-hay = T("dashboard/scripts/build.py")
+hay = T("dashboard/scripts/build.py") + T("dashboard/scripts/canonical.py")
 for hp in pathlib.Path(ROOT/"dashboard").glob("*.html"): hay += hp.read_text(encoding="utf-8")
 for jp in pathlib.Path(ROOT/"dashboard/data").glob("*.json"): hay += jp.read_text(encoding="utf-8")
 chk("S9 no dead slugs in dashboard builder/output", not [d for d in dead if d in hay],

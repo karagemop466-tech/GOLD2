@@ -1,12 +1,12 @@
 {
   "generated_at": "2026-10-23",
   "pass": {
-    "session": "S-C74095E5",
+    "session": "S-88AA65FD",
     "checked_at": "2026-10-23",
     "timezone": "UTC",
-    "method": "Live fetch_page re-verification on 2026-10-23 (23:39–23:59Z) of the World Gold Council spot page, Menē Rose/Knot, Automic Gold (product HTML, Shopify JSON extracts and the cart.js currency endpoint), all stored Sarraf rows plus two newly added Sarraf solitaires (SAR-151362, SAR-147371), Factory Direct Jewelry GR0001, Brilliant Earth BE121H6, the Mejuri natural-diamond eternity page, the VRAI configurator, Stone and Strand, Catbird, Quince, Auvere, Zales V-19957449, all five dashboard Blue Nile item IDs, and 16 CFR 23.3. Rows not re-read in this pass are listed in audit/c74095e5/live_verification_2026-10-23.md §9 and keep their earlier dated entries.",
-    "rule": "A stored value is reused only if the official page rendered it again during the pass that recorded it. Rows not re-read this pass are marked not_re_read or keep their earlier checked_at. No value is inferred, averaged, converted, or copied from a search snippet.",
-    "limits": "A successful retrieval is not an assay, not a hallmark check, and not proof of stock or future price. Pages can change after this pass."
+    "method": "Independent re-read on 2026-10-23T23:41-23:49Z of nine official URLs: the World Gold Council spot page, both Automic Gold product JSON documents, Sarraf 147370, Factory Direct GR0001, both Men\u0113 rings, 16 CFR 23.3 and the FTC consumer article. The four root rows re-read are updated below; the other root rows were NOT re-read in this pass and keep their earlier dated result.",
+    "rule": "A stored value is reused only if the official page rendered it again during the pass that recorded it. Rows not re-read this pass keep their earlier checked_at. No value is inferred, averaged, converted, or copied from a search snippet.",
+    "limits": "A successful retrieval is not an assay, not a hallmark or maker's-mark check, and not proof of stock or future price. No ring was weighed or XRF-tested. Pages can change after this pass."
   },
   "entries": [
     {
@@ -60,7 +60,7 @@
     {
       "id": "BN-315661",
       "kind": "listing",
-      "label": "Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen",
+      "label": "Pav\u00e9 Contour Diamond Engagement Ring In 14K White Gold By James Allen",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
       "checked_at": "2026-10-23",
@@ -77,7 +77,7 @@
     {
       "id": "BN-195402",
       "kind": "listing",
-      "label": "Petite Micropavé Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
+      "label": "Petite Micropav\u00e9 Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
       "checked_at": "2026-10-23",
@@ -94,7 +94,7 @@
     {
       "id": "BN-302868",
       "kind": "listing",
-      "label": "Petite Micropavé Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
+      "label": "Petite Micropav\u00e9 Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
       "checked_at": "2026-10-23",
@@ -241,7 +241,7 @@
         "Prong metal: 14K White Gold",
         "Style: BE121H6-14KY"
       ],
-      "note": "The 2026-10-22 retrieval was served €990.00; this retrieval was served USD with a USD selector. Recorded as F-032; the euro amount is retained only as a superseded observation."
+      "note": "The 2026-10-22 retrieval was served \u20ac990.00; this retrieval was served USD with a USD selector. Recorded as F-032; the euro amount is retained only as a superseded observation."
     },
     {
       "id": "VRAI-CLASSIC-4P",
@@ -256,7 +256,7 @@
         "Band depth:1.6mm",
         "Metal weight:2.86g (Ring size 6)",
         "Band width:Standard",
-        "Pavé carat weight:0.18ctw"
+        "Pav\u00e9 carat weight:0.18ctw"
       ],
       "note": "No price string in the retrieved page. Band width is published only as the word 'Standard', so no millimetre value is stored."
     },
@@ -270,12 +270,11 @@
       "status": "verified_match",
       "observed": [
         "$1,910",
-        "Solid 14k Gold and 950 Platinum",
-        "Approximately 6.1g (gold) or 9.2g (platinum)",
-        "Band is 3mm",
-        "price_min 191000 / price_max 223300"
+        "price_max $2,233 (variant range, F-039)",
+        "Approximately 6.1g (gold)"
       ],
-      "note": "Re-read 2026-10-23 20:xxZ: $1,910 is the default 14k configuration; the seller's product JSON reports $1,910–$2,233 across metal variants (F-039). Currency supported by the store cart endpoint, not inferred."
+      "note": "Re-read 2026-10-23T23:42Z by S-88AA65FD: the product JSON still reports price 191000, price_min 191000 and price_max 223300 cents, so $1,910 remains the default 14k configuration and the $1,910\u2013$2,233 variant range (F-039) is unchanged. Currency is supported by the store cart endpoint, not inferred. The range top is still not attributed to a named variant, and no gram weight is stated here.",
+      "session": "S-88AA65FD"
     },
     {
       "id": "AG-SAPPHIRE-RING",
@@ -303,14 +302,13 @@
       "checked_at": "2026-10-23",
       "status": "verified_match",
       "observed": [
-        "$2,758",
-        "Solid 14k Gold and 950 Platinum",
-        "Approximate item weight: gold 5.5g, platinum 8.3g",
-        "Salt and Pepper Diamond",
-        "Clear Lab Diamond",
-        "Approximately 0.65ct"
+        "$2,758 (14k Yellow Gold / Salt and Pepper Diamond)",
+        "price_min $2,408",
+        "price_max $3,253",
+        "Approximate item weight: gold 5.5g"
       ],
-      "note": "Re-read 2026-10-23 20:xxZ. The $2,758 display is the 14k Yellow Gold / Salt and Pepper Diamond variant; the seller's product JSON reports price_min 240800 and price_max 325300 (=$2,408–$3,253), so $2,758 is not a product-wide price (F-039). 5.5 g is gross and includes the ~0.65 ct stone; weight_g stays null (F-028)."
+      "note": "Re-read 2026-10-23T23:43Z by S-88AA65FD: price 240800 ($2,408), the default \u201c14k Yellow Gold / Salt and Pepper Diamond\u201d variant 275800 ($2,758), price_max 325300 ($3,253). $2,758 is not a product-wide price (F-039). The 5.5 g is gross and includes the stone, so weight_g stays null (F-028).",
+      "session": "S-88AA65FD"
     },
     {
       "id": "MJ-BOLD-ETERNITY",
@@ -343,7 +341,8 @@
         "Data as of 22 October, 2026",
         "Market Data: Provided by ICE Data Services."
       ],
-      "note": "Evening re-read on 2026-10-23 (about 23:40Z) replaced the earlier same-day header observation. The header is moving; quote_date stays null because it carries no timestamp (F-026). Superseded values are retained only as history in data/gold-price.json."
+      "note": "Re-read 2026-10-23T23:41Z by S-88AA65FD; the header rendered 3,995.47 with the chart still dated 22 October 2026. Session S-1B04074F independently read the same value at 23:45Z. Earlier same-day readings are superseded and are not rendered; quote_date stays null because the header carries no timestamp (F-026).",
+      "session": "S-88AA65FD"
     },
     {
       "id": "BLUENILE-RETURNS",
@@ -467,11 +466,13 @@
       "checked_at": "2026-10-23",
       "status": "verified_match",
       "observed": [
+        "Now: US$3,004.00",
         "14K Solid Gold",
-        "Approximate Metal Weight: 3.80 grams",
-        "Now: US$3,004.00"
+        "3.80 grams",
+        "0.94 Ct. Natural"
       ],
-      "note": "Live 2026-10-23 primary verification by S-9B875C81: explicit 14K Solid Gold, 3.80 g metal weight, US$3,004.00."
+      "note": "Re-read 2026-10-23T23:44Z. 'Approximate Metal Weight' wording preserved: this is not a scale-verified net gold weight.",
+      "session": "S-88AA65FD"
     },
     {
       "id": "SAR-145362",
@@ -542,13 +543,12 @@
       "checked_at": "2026-10-23",
       "status": "verified_match",
       "observed": [
-        "14K Solid Gold",
-        "Karat stamped inside the band.",
+        "$1,299.99",
         "Weight:1.25 Grams",
-        "Total Carat Weight: 1.37cts",
-        "$1,299.99"
+        "Karat stamped inside the band."
       ],
-      "note": "Live 2026-10-23 primary verification by S-9B875C81: flagged HIGH CAUTION (0.976g net if gross + 1.8/5 unaccredited BBB, F-035)."
+      "note": "Re-read 2026-10-23T23:45Z. Price, weight and stamp sentence unchanged. The same page states both 'since 1985' and 'since 1988' \u2014 published as F-043. The weight section also says weights update after options are chosen, so 1.25 g remains a default-display figure.",
+      "session": "S-88AA65FD"
     },
     {
       "id": "SS-CLARA",
@@ -598,7 +598,7 @@
     {
       "id": "BN-316238",
       "kind": "listing",
-      "label": "Petite Micropavé Engagement Ring in 14k White Gold",
+      "label": "Petite Micropav\u00e9 Engagement Ring in 14k White Gold",
       "retailer": "Blue Nile",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238",
       "checked_at": "2026-10-23",
@@ -609,7 +609,7 @@
         "Width: 1.50mm",
         "$1,240(Setting Price)"
       ],
-      "note": "Live page no longer matches the stored Petite Micropavé record. The amount is recorded as what the page shows, NOT as this row's price; the row's price stays blank and the discrepancy is published as F-041/F-042.",
+      "note": "Live page no longer matches the stored Petite Micropav\u00e9 record. The amount is recorded as what the page shows, NOT as this row's price; the row's price stays blank and the discrepancy is published as F-041/F-042.",
       "session": "S-305FDD02"
     },
     {
@@ -640,7 +640,7 @@
         "Approximate Metal Weight: 7.70 grams",
         "Now: US$4,049.00"
       ],
-      "note": "New row added 2026-10-23 by S-C74095E5 from the official Sarraf product page: explicit 14K Solid Gold, 7.70 g metal weight, US$4,049.00. Diamond color conflict G (specifications) vs H (description) flagged F-043."
+      "note": "New row added 2026-10-23 by S-C74095E5 from the official Sarraf product page: explicit 14K Solid Gold, 7.70 g metal weight, US$4,049.00. Diamond color conflict G (specifications) vs H (description) flagged F-045."
     }
   ]
 }

@@ -1,4 +1,4 @@
-/* GOLD2 Companion Dashboard — NIST Precious-Metals & Gemstone Mass Calculator
+/* GOLD2 Companion Dashboard — Conditional Precious-Metals & Gemstone Mass Calculator
  * Exact constants from NIST OWM & FTC 16 CFR Part 23:
  *   1 troy ounce (ozt) = 31.1034768 grams (exact)
  *   1 pennyweight (dwt) = 1.55517384 grams (exact)
@@ -150,12 +150,12 @@
       if (outRatio) outRatio.textContent = res.ratio !== null ? fmt(res.ratio, 2) + "×" : "—";
       if (outShare) outShare.textContent = res.goldSharePct !== null ? fmt(res.goldSharePct, 1) + "%" : "—";
       if (outMsg) {
-        var note = "Nominal arithmetic at $" + fmt(res.perGramPure, 2) + "/fine g (" + fmt(res.purity * 100, 2) + "% pure gold).";
+        var note = "Conditional arithmetic at $" + fmt(res.perGramPure, 2) + "/fine g (" + fmt(res.purity * 100, 2) + "% nominal gold); not an assay or resale offer.";
         if (res.stoneG > 0) {
           note += " Deducted " + fmt(res.stoneG, 3) + " g gemstone mass from gross scale weight.";
         }
         if (res.ratio !== null && res.ratio < 1.0) {
-          note += " RED FLAG: Asking price is BELOW raw gold melt value — high counterfeit/plating risk!";
+          note += " RECHECK: the entered retail price is below this nominal reference. Verify the configuration, weight scope, units, karat and price; arithmetic alone does not diagnose authenticity.";
         }
         outMsg.textContent = note;
       }
