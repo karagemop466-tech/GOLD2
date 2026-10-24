@@ -1,0 +1,242 @@
+{
+  "session_id": "S-86379CA7",
+  "branch": "arena/86379ca7-gold2",
+  "audited_at_utc": "2026-10-23T23:52:00Z",
+  "policy": "No hallucinations: never invent, estimate, or fill in unverified values. Leave unconfirmed fields blank/null and publish every irregularity on Flagged for Review.",
+  "findings_count": 14,
+  "findings": [
+    {
+      "id": "S8637-F01",
+      "severity": "high",
+      "category": "companion_dashboard_hallucination",
+      "target_files": [
+        "dashboard/data/rings.json"
+      ],
+      "affected_ids": [
+        "AG-SAPPHIRE-RING"
+      ],
+      "title": "dashboard/data/rings.json labels AG-SAPPHIRE-RING as '3mm Lab Sapphire' whereas official Automic Gold PDP states 'Natural sapphire'",
+      "detail": "In dashboard/data/rings.json, AG-SAPPHIRE-RING is named 'Sapphire Ring (Solid 14k Gold, 3mm Lab Sapphire)'. Live retrieval of https://www.automicgold.com/products/sapphire-ring (chunk 4) and root data/solid-gold-verified.json both confirm 'Stone: Natural sapphire. Natural stones may vary in color'.",
+      "recommended_action": "Owner of dashboard/** (S-F3B0B698): remove '3mm Lab Sapphire' from AG-SAPPHIRE-RING.name in dashboard/data/rings.json and align with the official PDP ('Natural sapphire')."
+    },
+    {
+      "id": "S8637-F02",
+      "severity": "high",
+      "category": "companion_dashboard_404_urls",
+      "target_files": [
+        "dashboard/data/rings.json",
+        "dashboard/data/retailers.json"
+      ],
+      "affected_ids": [
+        "AG-CUSHION-SIGNET",
+        "MJ-BOLD-ETERNITY",
+        "VRAI-CLASSIC-4P",
+        "mejuri",
+        "vrai"
+      ],
+      "title": "Seven product and retailer URLs in dashboard/data/rings.json and dashboard/data/retailers.json return HTTP 404 / Page Not Found on live fetch_page",
+      "detail": "Direct fetch_page checks on 2026-10-23 confirmed that seven URLs in dashboard/data/{rings,retailers}.json return 404 / Page Not Found: (1) https://www.automicgold.com/products/lab-grown-cushion-diamond-signet-ring ('404 Not Found – Automic Gold'; canonical: /products/cushion-diamond-signet-ring); (2) https://mejuri.com/products/bold-lab-grown-diamond-eternity-ring ('Mejuri | Page Not Found'; canonical: /products/bold-diamond-eternity-ring); (3) https://www.vrai.com/engagement-ring/classic-4-prong-solitaire/round-brilliant-yellow-gold-41383090421853 ('The page you are looking for does not exist.'; canonical: /configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893); (4) https://mejuri.com/pages/returns-and-exchanges ('Mejuri | Page Not Found'; canonical: /faq/return-exchanges); (5) https://mejuri.com/pages/contact-us ('Mejuri | Page Not Found'; canonical: /faq/stores); (6) https://www.vrai.com/pages/returns-exchanges ('404 - Page not found'; canonical: /returns-exchanges); (7) https://www.vrai.com/pages/contact ('404 - Page not found'; canonical: /contact-us).",
+      "recommended_action": "Owner of dashboard/** (S-F3B0B698): replace all 7 non-existent URLs in dashboard/data/rings.json and dashboard/data/retailers.json with the verified canonical URLs from data/solid-gold-verified.json, data/listings/18k.json, and data/retailers.json."
+    },
+    {
+      "id": "S8637-F03",
+      "severity": "high",
+      "category": "companion_dashboard_product_identity_swaps",
+      "target_files": [
+        "dashboard/data/rings.json",
+        "dashboard/data/flags.json"
+      ],
+      "affected_ids": [
+        "BN-194158",
+        "BN-195269",
+        "BN-315661",
+        "BN-203348",
+        "BN-316238",
+        "Z-20303279",
+        "Z-20046552"
+      ],
+      "title": "Seven Blue Nile and Zales rows in dashboard/data/rings.json (and DF-003/DF-006 in dashboard/data/flags.json) have swapped or fabricated product titles, URL slugs, and quotes",
+      "detail": "Cross-checking dashboard/data/rings.json against the canonical root register (data/listings/*.json) and live fetch_page retrievals shows: (1) BN-194158 is 'Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold' (not Petite Solitaire); (2) BN-195269 is 'Petite Solitaire Engagement Ring in 18k Yellow Gold' (not Classic Four-Prong in 18k Rose Gold); (3) BN-315661 is 'Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen' (not French Pavé Halo 1/5 ctw); (4) BN-203348 is 'Classic Simple Solitaire Engagement Ring in 14K Yellow Gold' (not Three-Stone Trellis); (5) BN-316238 quote says 'Petite Micropavé Engagement Ring in 14k White Gold | $1,240 (Setting Price)' from the URL slug, whereas the live page heading is 'Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen' (F-041/F-042); (6) Z-20303279 is '1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold' (not Vera Wang LOVE 3/4 CT. Princess-Cut Solitaire in 10K White Gold); (7) Z-20046552 is '1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold' (not 1 CT. T.W. Diamond Frame Twist Shank in 10K White Gold).",
+      "recommended_action": "Owner of dashboard/** (S-F3B0B698): reconcile all 7 rows in dashboard/data/rings.json and DF-003/DF-006 in dashboard/data/flags.json with the verified canonical names, URLs, and quotes in data/listings/*.json."
+    },
+    {
+      "id": "S8637-F04",
+      "severity": "high",
+      "category": "companion_dashboard_unverified_currency_prices",
+      "target_files": [
+        "dashboard/data/rings.json"
+      ],
+      "affected_ids": [
+        "MJ-BOLD-ETERNITY",
+        "BN-194158",
+        "BN-195269",
+        "BN-316238",
+        "BN-315661",
+        "BN-203348"
+      ],
+      "title": "Six rows in dashboard/data/rings.json assign numeric price_usd values where the canonical root register leaves price null due to unconfirmed ISO currency (F-025/F-030/F-041)",
+      "detail": "In dashboard/data/rings.json, MJ-BOLD-ETERNITY ($2,900.0), BN-194158 ($1,125.0), BN-195269 ($1,155.0), BN-316238 ($1,240.0), BN-315661 ($2,210.0), and BN-203348 ($1,145.0) are assigned numeric price_usd values, whereas the root register (data/solid-gold-verified.json and data/listings/*.json) and combined register (data/catalog.json) leave their structured prices null because neither Mejuri nor Blue Nile publishes an explicit ISO USD currency code on the captured product pages (F-025), MJ-BOLD-ETERNITY is a 'From$2,900' prefix (F-030), and BN-316238 serves a different product than its URL slug (F-041/F-042).",
+      "recommended_action": "Owner of dashboard/** (S-F3B0B698): set price_usd to null on those 6 rows in dashboard/data/rings.json and preserve the raw dollar strings only as unassigned display notes."
+    },
+    {
+      "id": "S8637-F05",
+      "severity": "high",
+      "category": "companion_dashboard_retailer_fabrications",
+      "target_files": [
+        "dashboard/data/retailers.json"
+      ],
+      "affected_ids": [
+        "automic-gold",
+        "mejuri",
+        "vrai"
+      ],
+      "title": "dashboard/data/retailers.json contains unverified BBB letter grades ('B-' for Automic Gold, 'F' for Mejuri), wrong Automic return window ('14 days'), and unverified contact emails",
+      "detail": "In dashboard/data/retailers.json: (1) automic-gold has bbb_summary 'Not BBB Accredited · B- · 0 complaints / 3 yrs', return_window '14 days from delivery', and contact_summary 'info@automicgold.com', whereas root data/retailers.json and evidence/retailers/automic-gold-*.md show BBB rating is null (F-031), return window is 30 days from delivery (14 days to mail back to avoid recycling fee, F-029), and official emails are care@automicgold.com / custom@automicgold.com; (2) mejuri has bbb_summary 'Not BBB Accredited · F rating on BBB Toronto profile', whereas root data/retailers.json and evidence/retailers/mejuri-bbb.md show rating is null (F-031); (3) vrai has contact_summary 'hello@vrai.com', whereas VRAI's official /contact-us and /returns-exchanges pages publish help@vrai.com and +1.855.956.4488.",
+      "recommended_action": "Owner of dashboard/** (S-F3B0B698): remove the unverified 'B-' and 'F' BBB ratings, fix Automic Gold's return window to 30 days (with 14-day recycling-fee note) and email to care@automicgold.com, and update VRAI's contact summary to help@vrai.com / +1.855.956.4488."
+    },
+    {
+      "id": "S8637-F06",
+      "severity": "medium",
+      "category": "companion_dashboard_stale_derived_note",
+      "target_files": [
+        "dashboard/data/rings.json"
+      ],
+      "affected_ids": [
+        "AG-24K"
+      ],
+      "title": "dashboard/data/rings.json AG-24K.price_note hardcodes stale '40.4% pure bullion share' alongside computed '40.2% gold' (or '40.1% gold' at $3,995.47/oz)",
+      "detail": "In dashboard/data/rings.json, AG-24K.price_note states 'Verified live 2026-10-23: $3,520 USD (cart.js verified USD); 40.4% pure bullion share.' The 40.4% figure was computed from the superseded $4,024.45/oz spot quote ($1,423.28 / $3,520 = 40.43%), whereas the adjacent table column computes 40.2% ($1,413.33 / $3,520 = 40.15% at $3,996.31/oz, or $1,413.03 / $3,520 = 40.14% at $3,995.47/oz).",
+      "recommended_action": "Owner of dashboard/** (S-F3B0B698): remove the hardcoded percentage from AG-24K.price_note so it cannot drift from the dynamically computed Fine Gold & Melt column."
+    },
+    {
+      "id": "S8637-F07",
+      "severity": "medium",
+      "category": "root_flags_scope_mismatch",
+      "target_files": [
+        "data/flags.json",
+        "data/solid-gold-verified.json"
+      ],
+      "affected_ids": [
+        "F-031",
+        "SAR-147370",
+        "SAR-145362",
+        "SAR-145364",
+        "SAR-144773",
+        "FDJ-GR0001"
+      ],
+      "title": "Root flag F-031 ('Automic Gold and Mejuri BBB pages omit static letter ratings and summary counts') erroneously lists four Sarraf rows and FDJ-GR0001 in affected_items and sources",
+      "detail": "In data/flags.json, F-031 is scoped to affected_retailers ['automic-gold', 'mejuri'] and explains that Automic Gold and Mejuri BBB profiles omit static letter ratings/summary counts. However, F-031.affected_items and F-031.sources also include SAR-147370, SAR-145362, SAR-145364, SAR-144773, and FDJ-GR0001 (and those 5 rows carry 'F-031' in data/solid-gold-verified.json), even though Sarraf (A+, 2.33/5, 3 reviews, 6 complaints) and Factory Direct Jewelry (1.8/5, 5 reviews, 11 complaints) have static BBB metrics captured in data/retailers.json and their own dedicated BBB flags (F-036, F-037).",
+      "recommended_action": "Owner of data/** (S-88AA65FD): remove SAR-147370, SAR-145362, SAR-145364, SAR-144773, and FDJ-GR0001 from F-031.affected_items and F-031.sources in data/flags.json and remove 'F-031' from those 5 items' flags arrays in data/solid-gold-verified.json."
+    },
+    {
+      "id": "S8637-F08",
+      "severity": "medium",
+      "category": "root_flags_scope_mismatch",
+      "target_files": [
+        "data/flags.json"
+      ],
+      "affected_ids": [
+        "F-004",
+        "BN-316238"
+      ],
+      "title": "Root flag F-004 ('Zales V-19957449: rejected snippet $719.20; current labeled price $899.00') includes BN-316238 in affected_items and sources",
+      "detail": "In data/flags.json, F-004 is specifically titled 'Zales V-19957449: rejected snippet $719.20; current labeled price $899.00', but affected_items is ['Z-19957449', 'BN-316238'] and sources includes BN-316238's URL. In data/listings/halo-pave.json, BN-316238 has rejected_values: [], does not reference F-004 in its flags array, and has its own dedicated flags F-041 and F-042.",
+      "recommended_action": "Owner of data/** (S-88AA65FD): remove 'BN-316238' and its URL from F-004.affected_items and F-004.sources in data/flags.json."
+    },
+    {
+      "id": "S8637-F09",
+      "severity": "medium",
+      "category": "root_flags_stale_counts",
+      "target_files": [
+        "data/flags.json"
+      ],
+      "affected_ids": [
+        "F-015",
+        "F-016"
+      ],
+      "title": "Root flags F-015.detail and F-016.detail retain stale 16-row counts (and F-015.affected_items omits FDJ-GR0001) after expansion to 30 root rows",
+      "detail": "In data/flags.json: (1) F-015.detail still states 'Ten Blue Nile rows, the Brilliant Earth row, and the VRAI row use a setting/configurator basis (12 rows); the four Zales rows are complete diamond-ring products', whereas the 30-row root register has 13 setting_price rows (11 Blue Nile + 1 Brilliant Earth + 1 VRAI) and 17 complete_ring rows (4 Zales + 13 Explicit Solid Gold), and F-015.affected_items has 29 items (omitting FDJ-GR0001); (2) F-016.detail still states 'Five rows have no numeric band width... Fifteen rows have no numeric band depth/thickness; only VRAI publishes 1.6 mm depth', whereas the 30-row root register has 9 rows with width_mm: null, 26 rows with depth_mm: null, and 4 rows with published depth_mm (VRAI-CLASSIC-4P 1.6 mm, AG-SAPPHIRE-RING 1.1 mm, SAR-144773 1.65 mm, AG-24K 2.2 mm).",
+      "recommended_action": "Owner of data/** (S-88AA65FD): update F-015.detail (and add FDJ-GR0001 to F-015.affected_items/sources) and F-016.detail in data/flags.json to match the 30-row root register."
+    },
+    {
+      "id": "S8637-F10",
+      "severity": "low",
+      "category": "verification_log_dangling_flag_and_label_drift",
+      "target_files": [
+        "data/verification-log.json"
+      ],
+      "affected_ids": [
+        "BE-121H6",
+        "VRAI-CLASSIC-4P",
+        "AG-24K"
+      ],
+      "title": "data/verification-log.json BE-121H6 note references removed flag F-032, and VRAI-CLASSIC-4P / AG-24K labels differ from row names",
+      "detail": "In data/verification-log.json: (1) BE-121H6.note still references 'F-032' ('Prior EUR-locale observation €990.00 is moved to rejected_values (F-007, F-032)'), even though F-032 was merged into F-007 and removed from data/flags.json; (2) VRAI-CLASSIC-4P has label 'Classic Round Brilliant Engagement Ring | Plain Band | 18k Yellow Gold' (row name: 'Classic Round Brilliant Engagement Ring') and AG-24K has label '24k Band (Solid 24k Gold)' (row name: '24k Band'), whereas F-042.recommended_action explicitly recommends checking that verification-log labels match row names.",
+      "recommended_action": "Owner of data/** (S-88AA65FD): remove the dangling F-032 reference from BE-121H6.note and align VRAI-CLASSIC-4P and AG-24K labels in data/verification-log.json with their canonical row names."
+    },
+    {
+      "id": "S8637-F11",
+      "severity": "low",
+      "category": "review_json_stale_scope_counts",
+      "target_files": [
+        "data/review.json"
+      ],
+      "affected_ids": [
+        "marks-and-tests",
+        "parallel-integration"
+      ],
+      "title": "data/review.json findings 'marks-and-tests' and 'parallel-integration' still state '32 entries' / '32-entry combined register' instead of 44 entries",
+      "detail": "In data/review.json, finding 'marks-and-tests' has scope 'All 32 entries' and finding 'parallel-integration' has scope '32-entry combined register', whereas data/catalog.json now contains 44 combined entries across 13 sellers.",
+      "recommended_action": "Owner of data/** (S-88AA65FD): update the scope strings in data/review.json to reflect the 44-entry combined register (or clarify that '32-entry' refers to the historical merge wave)."
+    },
+    {
+      "id": "S8637-F12",
+      "severity": "medium",
+      "category": "live_source_contradiction",
+      "target_files": [
+        "data/solid-gold-verified.json",
+        "evidence/listings/fdj-gr0001.md",
+        "evidence/retailers/factory-direct-jewelry-contact.md"
+      ],
+      "affected_ids": [
+        "FDJ-GR0001",
+        "factory-direct-jewelry"
+      ],
+      "title": "Factory Direct Jewelry FDJ-GR0001 PDP publishes conflicting band widths ('Band Width: 2.0mm' vs 'Width:0.07 inches' ≈ 1.78mm), and /contact has a malformed mailto:support@factorydirectjewelry; link",
+      "detail": "Live retrieval of https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/ (chunk 1) shows two conflicting width specifications on the same page: under 'Details' it states 'Band Width: 2.0mm', while under 'Size & Weight' it states 'Width:0.07 inches' (~1.78mm). Leaving width_mm: null in data/solid-gold-verified.json is therefore strictly required under the No Hallucinations rule. Additionally, https://www.factorydirectjewelry.com/contact contains a malformed mailto link 'mailto:support@factorydirectjewelry;' in the top paragraph alongside valid 'mailto:support@factorydirectjewelry.com' in the footer.",
+      "recommended_action": "Keep FDJ-GR0001.width_mm as null and document both the 2.0mm vs 0.07in width conflict and the /contact mailto typo in evidence/flags."
+    },
+    {
+      "id": "S8637-F13",
+      "severity": "low",
+      "category": "live_source_observation",
+      "target_files": [
+        "data/retailers.json",
+        "evidence/retailers/vrai-policy.md"
+      ],
+      "affected_ids": [
+        "vrai",
+        "F-013"
+      ],
+      "title": "VRAI official Contact Us page (https://www.vrai.com/contact-us) publishes phone +1.855.956.4488 and email help@vrai.com",
+      "detail": "Root data/retailers.json records phone: null for VRAI (flagged in F-013) because earlier sessions only inspected https://www.vrai.com/returns-exchanges. Direct fetch_page retrieval of https://www.vrai.com/contact-us on 2026-10-23 verified that VRAI publishes 'CALL US Contact us at +1.855.956.4488', 'SEND AN EMAIL We respond within 4 business days [Email us](mailto:help@vrai.com)', and 'HOURS OF OPERATION Everyday: 10am-6pm EST'.",
+      "recommended_action": "Owner of data/** (S-88AA65FD): optionally add https://www.vrai.com/contact-us to VRAI's official sources in data/retailers.json and evidence/retailers/vrai-policy.md."
+    },
+    {
+      "id": "S8637-F14",
+      "severity": "low",
+      "category": "live_source_observation",
+      "target_files": [
+        "data/solid-gold-verified.json",
+        "evidence/listings/ag-coffin-ring.md"
+      ],
+      "affected_ids": [
+        "AG-COFFIN-RING",
+        "F-039"
+      ],
+      "title": "Automic Gold coffin-ring.js chunk 1 identifies the $2,233 (price_max: 223300) variant of AG-COFFIN-RING as '950 Platinum'",
+      "detail": "Earlier session S-1EB9F828 read only chunk 0 of https://www.automicgold.com/products/coffin-ring.js and noted in F-039 that the $2,233 (223300 cents) variant was unnamed in the retrieved excerpt. Reading chunk 1 of coffin-ring.js on 2026-10-23 directly confirmed: {\"id\":41654426763358,\"title\":\"950 Platinum\",\"option1\":\"950 Platinum\",\"price\":223300}, while 14k Yellow/White/Rose/Champagne Gold are all 191000 ($1,910.00) and Nickel Free 14k White Gold is 203900 ($2,039.00).",
+      "recommended_action": "Owner of data/** (S-88AA65FD): optionally update F-039 and evidence/listings/ag-coffin-ring.md to note that chunk 1 of coffin-ring.js confirms $2,233 is the 950 Platinum variant."
+    }
+  ]
+}
