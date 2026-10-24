@@ -299,6 +299,7 @@ def scan(repo: Path) -> dict:
                 "contact_url": canonical["contact_source_url"], "returns_url": canonical["return_policy_url"],
                 "return_window": canonical.get("return_window_basis"),
                 "bbb_url": reputation.get("profile_url") or reputation.get("candidate_profile_url"),
+                "reputation_evidence_link": "../" + canonical["evidence_file"],
             }
             for field, value in direct.items():
                 if retailer.get(field) != value:
@@ -314,8 +315,14 @@ def scan(repo: Path) -> dict:
         else:
             seller = sellers[combined_id]
             expected_window = f"{seller['returnDays']['value']} days from {seller.get('returnFrom') or 'unconfirmed trigger'}" if seller.get("returnDays") else None
+            independent = sources.get(seller.get("independent")) if seller.get("independent") else None
+            expected_reputation_pointer = f"../explore/sources/#{independent['id']}" if independent else None
             if retailer.get("return_window") != expected_window or retailer.get("resized_custom_rule") != seller.get("summary"):
                 fail("seller", f"{dashboard_id} combined return/exclusion fields differ from canonical evidence")
+            if retailer.get("reputation_evidence_link") != expected_reputation_pointer:
+                fail("seller", f"{dashboard_id} reputation evidence pointer differs from canonical evidence")
+        if retailer.get("bbb_url") and not retailer.get("reputation_evidence_link"):
+            fail("seller", f"{dashboard_id} confirmed reputation record lacks an internal evidence pointer")
         markers = {"return_window": "return window", "resized_custom_rule": "exclusion", "payment_protection": "payment", "contact_summary": "contact", "bbb_summary": "reputation"}
         for field, marker in markers.items():
             if retailer.get(field) is None and not any(marker in item for item in retailer.get("unverified_fields") or []):
@@ -334,6 +341,8 @@ def scan(repo: Path) -> dict:
         text = path.read_text(encoding="utf-8")
         parser.feed(text)
         pages[path.name] = parser
+        if "undefined" in text.lower():
+            fail("render", f"{path.name} contains an unrendered/ambiguous undefined token")
         if not parser.csp or "default-src 'self'" not in parser.csp or "connect-src 'none'" not in parser.csp or "object-src 'none'" not in parser.csp:
             fail("security", f"{path.name} lacks required CSP restrictions")
         if parser.events or parser.inline_scripts:

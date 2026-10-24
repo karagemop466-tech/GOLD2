@@ -326,9 +326,14 @@ def from_combined(product: dict, categories: tuple[str, ...], data: dict) -> dic
     if weight is not None:
         weight_note = f"Seller-reported metal weight: {weight:.2f} g. Not independently weighed."
     elif reported:
+        basis_note = (
+            "with an unresolved 'Fine Weight' definition"
+            if reported.get("basis") == "fine-undefined"
+            else f"with reported basis {reported.get('basis')!r}"
+        )
         weight_note = (
             f"Blank single metal weight. Seller publishes a {reported['min']:g}–{reported['max']:g} g "
-            f"range with basis {reported['basis']!r}; it is not converted into product fine-gold mass."
+            f"range {basis_note}; it is not converted into product fine-gold mass."
         )
     else:
         weight_note = "Blank — no seller metal-only gram weight is confirmed in the canonical record."
@@ -475,6 +480,7 @@ def root_retailer(retailer: dict, dashboard_id: str, product_url: str) -> dict:
         "unverified_fields": unverified,
         "evidence_link": "../" + retailer["evidence_file"],
         "evidence_label": "Canonical seller evidence",
+        "reputation_evidence_link": "../" + retailer["evidence_file"],
         "capture_date": reputation.get("retrieved_at"),
     }
 
@@ -524,6 +530,7 @@ def combined_retailer(seller: dict, dashboard_id: str, data: dict, product_url: 
         "unverified_fields": list(dict.fromkeys(unverified)),
         "evidence_link": f"../explore/sources/#{origin_source['id']}",
         "evidence_label": f"Combined evidence record {origin_source['id']}",
+        "reputation_evidence_link": f"../explore/sources/#{independent['id']}" if independent else None,
         "capture_date": capture_date,
     }
 

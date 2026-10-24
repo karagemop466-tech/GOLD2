@@ -201,8 +201,10 @@ def cell(value) -> str:
     return esc(value) if value not in (None, "") else '<span class="blank">— (unconfirmed)</span>'
 
 
-def optional_ext(url, label: str) -> str:
-    return ext(url, label) if url else '<span class="blank">— (no confirmed profile URL)</span>'
+def reputation_link(retailer: dict) -> str:
+    if not retailer.get("bbb_url"):
+        return '<span class="blank">— (no confirmed profile URL)</span>'
+    return f'<a href="{esc(retailer["reputation_evidence_link"])}">Independent reputation evidence</a>'
 
 
 def compute_ring_metrics(ring: dict) -> tuple[str, str, str]:
@@ -381,6 +383,7 @@ def main() -> int:
             f"- Official Site: {ret['site_url']}\n"
             f"- Returns Policy: {ret['returns_url']}\n"
             f"- Canonical evidence: {ret['evidence_link']}\n"
+            f"- Independent reputation evidence: {ret['reputation_evidence_link'] or 'unconfirmed'}\n"
             f"- Observation date: `{ret['capture_date'] or 'unconfirmed'}`\n"
             f"- Return window: `{ret['return_window'] or 'unconfirmed'}`\n"
             f"- Exclusions / policy summary: `{ret['resized_custom_rule'] or 'unconfirmed'}`\n"
@@ -522,7 +525,7 @@ def main() -> int:
         f'<td>{cell(r["return_window"])}<div class="sub">{ext(r["returns_url"], "Return policy")}</div></td>'
         f'<td>{cell(r["resized_custom_rule"])}</td>'
         f'<td>{cell(r["payment_protection"])}<div class="sub">{cell(r["contact_summary"])} · {ext(r["contact_url"], "Contact page")}</div></td>'
-        f'<td>{cell(r["bbb_summary"])}<div class="sub">{optional_ext(r["bbb_url"], "Independent reputation profile")}</div>'
+        f'<td>{cell(r["bbb_summary"])}<div class="sub">{reputation_link(r)}</div>'
         f'<div class="sub">Unconfirmed: {esc(", ".join(r["unverified_fields"]))}</div></td>'
         f"</tr>"
         for r in RETAILERS

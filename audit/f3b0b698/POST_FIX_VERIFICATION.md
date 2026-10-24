@@ -10,7 +10,7 @@ Session branch: `arena/f3b0b698-gold2`
 - Disposable-copy `python3 dashboard/scripts/verify.py --check-build` — PASS: all ten pass families (`P1`–`P10`, including rendered sync and link integrity).
 - Integrated companion build and `python3 dashboard/scripts/verify.py --check-build` — PASS with the same ten families.
 - `python3 audit/f3b0b698/companion_audit.py --root /home/user/GOLD2 --json audit/f3b0b698/post-fix-scan.json` — PASS, zero issues.
-- `python3 audit/f3b0b698/test_mutations.py` — PASS, 18/18: one clean control and 17 detected mutations covering unsupported/wrong prices, missing USD evidence, null-price evidence leakage, identity-mismatch amounts, seller-host substitution, gross/supported weight errors, invented BBB rating, unflagged seller blank, missing official row link, wrong rendered fine-gold arithmetic, removed no-hallucination banner, CSP weakening, gold-reference drift, removed evidence, and promoted solid-gold status.
+- `python3 audit/f3b0b698/test_mutations.py` — PASS, 20/20: one clean control and 19 detected mutations covering unsupported/wrong prices, missing USD evidence, null-price evidence leakage, identity-mismatch amounts, seller-host substitution, gross/supported weight errors, invented BBB rating, unflagged seller blank, substituted reputation-evidence pointer, `undefined` template/basis token, missing official row link, wrong rendered fine-gold arithmetic, removed no-hallucination banner, CSP weakening, gold-reference drift, removed evidence, and promoted solid-gold status.
 
 ## Integrated companion facts (not fresh source claims)
 
@@ -22,8 +22,27 @@ Session branch: `arena/f3b0b698-gold2`
 - Menē return window remains blank; Automic retains the canonical 30-day wording with its separate mailing condition.
 - Gold calculations use only the dated canonical WGC observation, not a live feed or resale offer.
 
-## Repository-wide integration and deployment
+## Repository-wide integration checks — passed before PR
 
-Pending at this checkpoint. This companion-only PASS is not a repository-wide deployment certificate. Root/combined builds, all existing tests, security/link/browser checks, final PR/merge, and Pages read-back must be recorded here before completion.
+The branch was rebased onto `origin/main` `bf23f27` (PR #49), preserving the merged S-88AA65FD/S-1B04074F source re-verification, WGC `$3,995.47` observation, Menē `$1,325`/`$1,442` records, F-043/F-044, and updated calculator expectations. The companion was regenerated from that merged canonical state rather than hand-selecting conflict values.
 
-**Recommendation remains mandatory: look for hallucinations again after every review and rerun all verification/security scans. Automated PASS is not source truth or physical authentication.**
+- `npm ci --ignore-scripts` — 23 packages added; 0 vulnerabilities.
+- Root `tools/build_site.py` + `tools/qa.py` + `node tools/test_calculator.js` + refreshed root build — PASS: 13 pages, 12 QA checks, 0 failures, 3 published warnings (F-026 quote time; 20/30 root rows without assigned prices; 23/30 without metal weights).
+- Preserved initial dashboard `scripts/build.py`, `scripts/audit.py`, and `scripts/test.js` — PASS: 2 records, 6 pages; its existing missing-evidence/gold-quote limitations remain openly reported.
+- Companion build, verifier, and `calc-test.js` — PASS: 14 pages, ten verifier families, 23 calculator assertions at the merged `$3,995.47` reference.
+- `npm run check` — PASS end to end: 44 products, 86 source records, 27 findings, 0 purchase approvals; 23/23 Node tests; deterministic evidence build; 46 pages / 102 local targets / 146 external publisher URLs; 46 HTML pages, 6 runtime files, 104 source files and 4 pinned workflows in static security; `npm audit` 0 vulnerabilities; 13 expanded pages + 33 companion/root/preserved pages, all 44 browser gates, and no axe A/AA violations in exercised states.
+- `reviews/independent_snapshot_audit.py` — 0 findings; 12 arithmetic controls passed.
+- `audit/8c810c15` scanner/tests — 0 findings; 202 controls and 6/6 tests passed.
+- `audit/b200a880` scanner/tests — 4,310 controls, 0 failures/warnings; 25 helper/arithmetic controls passed.
+- `audit/88aa65fd/hallucination_scan.py` — 10 checks, 0 failures, 6/6 mutations caught.
+- `audit/9b875c81` scanner/tests — final 0 findings, 2,874 controls and 4/4 tests passed.
+- F3 independent scanner and mutation suite — final 0 issues and 20/20 tests passed.
+- Repeated root, preserved, companion, and evidence generators — two consecutive passes produced byte-identical tracked outputs; `git diff --check` passed.
+
+One integration run initially found three `fine-undefined` renderings and a Trustpilot URL rejected by the inherited S-9B875C81 scanner. The basis code is now explained as an unresolved “Fine Weight” definition without printing the template-like token. The canonical Trustpilot URL remains in structured evidence, while the seller table links to its exact canonical internal evidence record. Both verifier and independent scanner now bind that reputation pointer to the expected record, and a dedicated mutation proves substitution is detected. Final S-9B875C81 result is zero findings; no finding was suppressed by removing source evidence.
+
+## PR, merge, and Pages deployment
+
+Pending. No merge or deployment result is claimed yet. This section must be completed from actual GitHub/Pages read-back before the engagement is closed.
+
+**Recommendation remains mandatory: look for hallucinations again after every review and rerun all verification/security scans. Automated PASS is not source truth, source freshness, physical authentication, or proof that every hallucination is absent.**

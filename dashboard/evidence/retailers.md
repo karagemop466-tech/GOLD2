@@ -6,6 +6,7 @@ Summaries are generated from canonical structured records. Blank fields are unco
 - Official Site: https://www.sarraf.com
 - Returns Policy: https://www.sarraf.com/about-sarraf/
 - Canonical evidence: ../evidence/retailers/sarraf.md
+- Independent reputation evidence: ../evidence/retailers/sarraf.md
 - Observation date: `2026-10-23`
 - Return window: `30 days from date of delivery`
 - Exclusions / policy summary: `Items returned must not have been worn, altered, or damaged; custom or special order items excluded; internal policy conflict on engraved items ($25 removal fee vs non-engraved rule, F-036). Ring sizing may require additional processing days prior to shipping.`
@@ -18,6 +19,7 @@ Summaries are generated from canonical structured records. Blank fields are unco
 - Official Site: https://www.automicgold.com
 - Returns Policy: https://www.automicgold.com/pages/returns-exchange-policy
 - Canonical evidence: ../evidence/retailers/automic-gold.md
+- Independent reputation evidence: ../evidence/retailers/automic-gold.md
 - Observation date: `2026-10-22`
 - Return window: `Free US returns within 30 days of delivery (mail within 14 days to avoid recycling fee)`
 - Exclusions / policy summary: `Engraved items, custom items, and modified items are final sale. Paid resizing starting at $50–$60; modified items become final sale.`
@@ -30,6 +32,7 @@ Summaries are generated from canonical structured records. Blank fields are unco
 - Official Site: https://mejuri.com
 - Returns Policy: https://mejuri.com/faq/return-exchanges/what-is-the-standard-return-policy
 - Canonical evidence: ../evidence/retailers/mejuri.md
+- Independent reputation evidence: ../evidence/retailers/mejuri.md
 - Observation date: `2026-10-22`
 - Return window: `Free 30-day returns in the US, Canada, UK, Australia, and Germany from delivery or pickup`
 - Exclusions / policy summary: `Engraved and monogrammed products, piercing stud earrings, gift cards, and final sale items are excluded; post-purchase resize/custom exclusions are unstated.`
@@ -42,6 +45,7 @@ Summaries are generated from canonical structured records. Blank fields are unco
 - Official Site: https://www.stoneandstrand.com
 - Returns Policy: https://www.stoneandstrand.com/pages/returns-exchanges
 - Canonical evidence: ../evidence/retailers/stone-and-strand.md
+- Independent reputation evidence: ../evidence/retailers/stone-and-strand.md
 - Observation date: `2026-10-23`
 - Return window: `within 100 days of delivery`
 - Exclusions / policy summary: `All items marked at 50% off or more are considered Final Sale and are non-returnable; Made-to-order, custom, and engraved pieces are final sale. Stone and Strand does not offer complimentary resizing; altered pieces are excluded from return.`
@@ -54,6 +58,7 @@ Summaries are generated from canonical structured records. Blank fields are unco
 - Official Site: https://auvere.com/
 - Returns Policy: https://auvere.com/product/diamond-bridge-ring-tall/
 - Canonical evidence: ../explore/sources/#auvere-returns
+- Independent reputation evidence: ../explore/sources/#bbb-auvere
 - Observation date: `2026-10-22`
 - Return window: `15 days from delivery`
 - Exclusions / policy summary: `Start within 15 days of delivery; dispatch within 10 days of the return-instructions email. Original unaltered condition and intact tag. Sale/Rare Collection excluded.`
@@ -66,6 +71,7 @@ Summaries are generated from canonical structured records. Blank fields are unco
 - Official Site: https://mene.com/
 - Returns Policy: https://mene.com/terms-of-service
 - Canonical evidence: ../explore/sources/#mene-terms
+- Independent reputation evidence: ../explore/sources/#tp-mene
 - Observation date: `2026-10-22`
 - Return window: `unconfirmed`
 - Exclusions / policy summary: `Return window not yet confirmed in captured evidence. Crafted-on-Demand weights may vary by up to 1g and final price may be adjusted. Buyback is not a refund.`
@@ -78,6 +84,7 @@ Summaries are generated from canonical structured records. Blank fields are unco
 - Official Site: https://www.bluenile.com
 - Returns Policy: https://www.bluenile.com/policies/returns
 - Canonical evidence: ../evidence/retailers/blue-nile.md
+- Independent reputation evidence: ../evidence/retailers/blue-nile.md
 - Observation date: `2026-10-22`
 - Return window: `30 days from the shipment date`
 - Exclusions / policy summary: `Personalized/custom/engraved items, items resized after initial purchase, Diamond Upgrade Program purchases, clearance and Final Sale items are excluded. Eligible rings: one free resize, up or down two sizes, within 6 months of purchase if the design permits.`
@@ -90,6 +97,7 @@ Summaries are generated from canonical structured records. Blank fields are unco
 - Official Site: https://www.brilliantearth.com
 - Returns Policy: https://www.brilliantearth.com/30-Day-Returns/
 - Canonical evidence: ../evidence/retailers/brilliant-earth.md
+- Independent reputation evidence: ../evidence/retailers/brilliant-earth.md
 - Observation date: `2026-10-22`
 - Return window: `30 days from when purchase is available for shipment or pickup`
 - Exclusions / policy summary: `Resized/modified and custom-designed items are excluded. Engraved rings may be returned with a $40 engraving-removal charge; other exclusions apply. One complimentary resizing within 60 days regardless of sizing range, or up to 1 year within sizing range; restrictions and fees apply.`
@@ -102,6 +110,7 @@ Summaries are generated from canonical structured records. Blank fields are unco
 - Official Site: https://www.vrai.com
 - Returns Policy: https://www.vrai.com/returns-exchanges
 - Canonical evidence: ../evidence/retailers/vrai.md
+- Independent reputation evidence: ../evidence/retailers/vrai.md
 - Observation date: `2026-10-22`
 - Return window: `30 days from delivery; refund/store-credit treatment depends on item price`
 - Exclusions / policy summary: `Modified/resized rings, third-party alterations, custom designs, and other listed items are non-eligible. Below $15,000: store credit or refund less recycling fee; above $15,000: store credit only. Engagement-ring recycling fee is $300, waived for store credit. One complimentary resize up to one full US size, by quarter/half/full size; other restrictions apply.`
@@ -114,6 +123,7 @@ Summaries are generated from canonical structured records. Blank fields are unco
 - Official Site: https://www.zales.com
 - Returns Policy: https://www.zales.com/return-and-exchange-policy?icid=ZAL%3AFOOTER%3ARETURN_EXCHANGE
 - Canonical evidence: ../evidence/retailers/zales.md
+- Independent reputation evidence: ../evidence/retailers/zales.md
 - Observation date: `2026-10-22`
 - Return window: `30 days from purchase (shipment) date; jewelry exchanges within 60 days`
 - Exclusions / policy summary: `Custom designs and jewelry engraved or altered/modified beyond sizing or stone setting are excluded. Separate Zales PDF: rings resized at a Zales store, another retailer, or independent jeweler are not accepted for online refund/exchange; rings purchased and sized from the online store are accepted. Online-purchased and online-sized rings may be returned/exchanged; store, other-retailer, and independent-jeweler resizing is not accepted online. Sized-to-order ring sizing fee is refunded on return.`
@@ -126,6 +136,7 @@ Summaries are generated from canonical structured records. Blank fields are unco
 - Official Site: https://www.factorydirectjewelry.com
 - Returns Policy: https://www.factorydirectjewelry.com/return-policy
 - Canonical evidence: ../evidence/retailers/factory-direct-jewelry.md
+- Independent reputation evidence: ../evidence/retailers/factory-direct-jewelry.md
 - Observation date: `2026-10-23`
 - Return window: `within 30 days from the date of delivery`
 - Exclusions / policy summary: `Engraved, custom-made, or personalized items are non-returnable; altered items carry a 20% restocking fee; third-party jeweler work automatically voids warranty. Any modification, repair, sizing, stone setting, or work performed by another jeweler or third party automatically voids this warranty.`

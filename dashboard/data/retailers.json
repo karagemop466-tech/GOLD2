@@ -19,6 +19,7 @@
       ],
       "evidence_link": "../evidence/retailers/sarraf.md",
       "evidence_label": "Canonical seller evidence",
+      "reputation_evidence_link": "../evidence/retailers/sarraf.md",
       "capture_date": "2026-10-23"
     },
     {
@@ -39,6 +40,7 @@
       ],
       "evidence_link": "../evidence/retailers/automic-gold.md",
       "evidence_label": "Canonical seller evidence",
+      "reputation_evidence_link": "../evidence/retailers/automic-gold.md",
       "capture_date": "2026-10-22"
     },
     {
@@ -59,6 +61,7 @@
       ],
       "evidence_link": "../evidence/retailers/mejuri.md",
       "evidence_label": "Canonical seller evidence",
+      "reputation_evidence_link": "../evidence/retailers/mejuri.md",
       "capture_date": "2026-10-22"
     },
     {
@@ -79,6 +82,7 @@
       ],
       "evidence_link": "../evidence/retailers/stone-and-strand.md",
       "evidence_label": "Canonical seller evidence",
+      "reputation_evidence_link": "../evidence/retailers/stone-and-strand.md",
       "capture_date": "2026-10-23"
     },
     {
@@ -101,6 +105,7 @@
       ],
       "evidence_link": "../explore/sources/#auvere-returns",
       "evidence_label": "Combined evidence record auvere-returns",
+      "reputation_evidence_link": "../explore/sources/#bbb-auvere",
       "capture_date": "2026-10-22"
     },
     {
@@ -124,6 +129,7 @@
       ],
       "evidence_link": "../explore/sources/#mene-terms",
       "evidence_label": "Combined evidence record mene-terms",
+      "reputation_evidence_link": "../explore/sources/#tp-mene",
       "capture_date": "2026-10-22"
     },
     {
@@ -144,6 +150,7 @@
       ],
       "evidence_link": "../evidence/retailers/blue-nile.md",
       "evidence_label": "Canonical seller evidence",
+      "reputation_evidence_link": "../evidence/retailers/blue-nile.md",
       "capture_date": "2026-10-22"
     },
     {
@@ -164,6 +171,7 @@
       ],
       "evidence_link": "../evidence/retailers/brilliant-earth.md",
       "evidence_label": "Canonical seller evidence",
+      "reputation_evidence_link": "../evidence/retailers/brilliant-earth.md",
       "capture_date": "2026-10-22"
     },
     {
@@ -185,6 +193,7 @@
       ],
       "evidence_link": "../evidence/retailers/vrai.md",
       "evidence_label": "Canonical seller evidence",
+      "reputation_evidence_link": "../evidence/retailers/vrai.md",
       "capture_date": "2026-10-22"
     },
     {
@@ -205,6 +214,7 @@
       ],
       "evidence_link": "../evidence/retailers/zales.md",
       "evidence_label": "Canonical seller evidence",
+      "reputation_evidence_link": "../evidence/retailers/zales.md",
       "capture_date": "2026-10-22"
     },
     {
@@ -225,6 +235,7 @@
       ],
       "evidence_link": "../evidence/retailers/factory-direct-jewelry.md",
       "evidence_label": "Canonical seller evidence",
+      "reputation_evidence_link": "../evidence/retailers/factory-direct-jewelry.md",
       "capture_date": "2026-10-23"
     }
   ]

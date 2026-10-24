@@ -93,6 +93,21 @@ class MutationTests(unittest.TestCase):
         self.write("dashboard/data/retailers.json", document)
         self.assert_detected("seller")
 
+    def test_reputation_evidence_pointer_cannot_be_substituted(self):
+        document = self.load("dashboard/data/retailers.json")
+        retailer = next(item for item in document["retailers"] if item["id"] == "mene")
+        retailer["reputation_evidence_link"] = "https://evil.example/reputation"
+        self.write("dashboard/data/retailers.json", document)
+        self.assert_detected("seller")
+
+    def test_undefined_template_token_is_rejected(self):
+        path = self.root / "dashboard/rings.html"
+        text = path.read_text(encoding="utf-8")
+        changed = text.replace("unresolved &#x27;Fine Weight&#x27; definition", "fine-undefined", 1)
+        self.assertNotEqual(text, changed)
+        path.write_text(changed, encoding="utf-8")
+        self.assert_detected("render")
+
     def test_official_rendered_row_link_is_mandatory(self):
         path = self.root / "dashboard/rings.html"
         document = self.load("dashboard/data/rings.json")

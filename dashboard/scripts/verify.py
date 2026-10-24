@@ -484,6 +484,7 @@ def main() -> int:
                 "resized_custom_rule": exclusions,
                 "payment_protection": retailer.get("payment_note") if retailer.get("payment_methods_verified") else None,
                 "evidence_link": "../" + retailer["evidence_file"],
+                "reputation_evidence_link": "../" + retailer["evidence_file"],
                 "capture_date": reputation.get("retrieved_at"),
             }
             return retailer, expected
@@ -508,6 +509,7 @@ def main() -> int:
             "resized_custom_rule": seller.get("summary"),
             "payment_protection": None,
             "evidence_link": f"../explore/sources/#{origin['id']}",
+            "reputation_evidence_link": f"../explore/sources/#{independent['id']}" if independent else None,
             "capture_date": max((source["observedAt"][:10] for source in related), default=None),
         }
         return seller, expected
@@ -516,7 +518,7 @@ def main() -> int:
         required = {
             "id", "name", "site_url", "contact_url", "returns_url", "jewelry_notes_url", "bbb_url",
             "contact_summary", "return_window", "resized_custom_rule", "payment_protection", "bbb_summary",
-            "unverified_fields", "evidence_link", "evidence_label", "capture_date",
+            "unverified_fields", "evidence_link", "evidence_label", "reputation_evidence_link", "capture_date",
         }
         for retailer in retailers:
             if not required.issubset(retailer):
@@ -526,6 +528,11 @@ def main() -> int:
             for field, value in expected.items():
                 if retailer.get(field) != value:
                     failures.append(f"P5 canonical seller mismatch: {retailer['id']}.{field}")
+            reputation_pointer = retailer.get("reputation_evidence_link")
+            if retailer.get("bbb_url") and not reputation_pointer:
+                failures.append(f"P5 confirmed reputation record lacks an internal evidence pointer: {retailer['id']}")
+            if reputation_pointer is not None and (urlparse(reputation_pointer).scheme or not reputation_pointer.startswith("../")):
+                failures.append(f"P5 invalid internal reputation evidence pointer: {retailer['id']}")
             if not isinstance(retailer["unverified_fields"], list) or not all(isinstance(item, str) and item for item in retailer["unverified_fields"]):
                 failures.append(f"P5 invalid unverified-fields list: {retailer['id']}")
             blank_markers = {
@@ -582,6 +589,8 @@ def main() -> int:
             for field in ("site_url", "returns_url", "evidence_link"):
                 if retailer[field] not in section:
                     failures.append(f"P8 seller pointer absent: {retailer['id']}.{field}")
+            if retailer.get("reputation_evidence_link") and retailer["reputation_evidence_link"] not in section:
+                failures.append(f"P8 reputation evidence pointer absent: {retailer['id']}")
             if "; ".join(retailer["unverified_fields"]) not in section:
                 failures.append(f"P8 seller limitations absent: {retailer['id']}")
 
@@ -652,6 +661,8 @@ def main() -> int:
             required_csp = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
             for path in html_pages:
                 parser = parse_page(path)
+                if "undefined" in path.read_text(encoding="utf-8").lower():
+                    failures.append(f"P6 unrendered/ambiguous undefined token: {path.name}")
                 if not parser.has_csp or parser.csp != required_csp:
                     failures.append(f"P6 missing/incorrect CSP: {path.name}")
                 if parser.event_attributes or parser.inline_scripts:
