@@ -173,4 +173,3 @@ with the 75 % figure labelled as arithmetic. Both changes are published as F-044
 ## Revision note — 2026-10-23 (S-A182C7CC)
 
 Session S-A182C7CC independently re-read the official World Gold Council page on 2026-10-23 UTC. The moving header displayed **3,995.47 USD/ozt** while the chart separately stated *Data as of 22 October, 2026*. The fetch tool exposes date-level retrieval precision only for this pass; the moving header's quote-as-of time remains unknown, so `quote_date` stays `null` (F-026). This corroborates the dated observation and does not call it a current quote.
-

@@ -13,12 +13,12 @@ duplicated or merged by this session.
 
 | ID | Task | Status | Owner | File scope |
 |----|------|--------|-------|------------|
-| T-C74-01 | Claim the board, record scope & baseline | in progress | S-C74095E5 | `COORDINATION.md`, `audit/c74095e5/**` |
-| T-C74-02 | Clean-tree baseline: all builders/scanners/tests on `ca39632` | unclaimed→S-C74095E5 | S-C74095E5 | `audit/c74095e5/check_runs/**` (outputs only) |
-| T-C74-03 | Fresh live line-by-line re-verification from official pages (gold reference + priced/weighted rows first; not-re-read rows named) | unclaimed→S-C74095E5 | S-C74095E5 | `audit/c74095e5/live_verification_2026-10-23.md`; data edits only where a live official read contradicts a stored value, each with dated evidence |
-| T-C74-04 | Independent hallucination/security scanner + mutation controls, re-run after every review change | unclaimed→S-C74095E5 | S-C74095E5 | `audit/c74095e5/**` |
-| T-C74-05 | New-listing research from official seller pages only (explicit solid gold; blanks stay blank) | unclaimed→S-C74095E5 | S-C74095E5 | additive only: new evidence files + register rows, rebuilt via repo generators |
-| T-C74-06 | Rebuild all registers, broken-link sweep, preview, PR → merge → Pages verification → record | unclaimed→S-C74095E5 | S-C74095E5 | generated artifacts via repo builders, `COORDINATION.md` |
+| T-C74-01 | Claim the board, record scope & baseline | **done** | S-C74095E5 | `COORDINATION.md`, `audit/c74095e5/**` |
+| T-C74-02 | Clean-tree baseline: all builders/scanners/tests on `ca39632` | **done** (ALL PASS) | S-C74095E5 | `audit/c74095e5/check_runs/**` (outputs only) |
+| T-C74-03 | Fresh live line-by-line re-verification from official pages (gold reference + priced/weighted rows first; not-re-read rows named) | **done** (2026-10-23 23:39–23:59Z) | S-C74095E5 | `audit/c74095e5/live_verification_2026-10-23.md`; data edits only where a live official read contradicts a stored value, each with dated evidence |
+| T-C74-04 | Independent hallucination/security scanner + mutation controls, re-run after every review change | **done** (all CI-gated scanners PASS; mutations documented) | S-C74095E5 | `audit/c74095e5/**` |
+| T-C74-05 | New-listing research from official seller pages only (explicit solid gold; blanks stay blank) | **done** (SAR-151362, SAR-147371) | S-C74095E5 | additive only: new evidence files + register rows, rebuilt via repo generators |
+| T-C74-06 | Rebuild all registers, broken-link sweep, preview, PR → merge → Pages verification → record | **done** (PR #55 merged; Pages built; live read-back verified) | S-C74095E5 | generated artifacts via repo builders, `COORDINATION.md` |
 
 ### S-C74095E5 working log
 
@@ -74,6 +74,13 @@ duplicated or merged by this session.
   register purely from those literals — owners please derive counts from data. Neither is a CI gate.
 - Second merge (PRs #54/#56, main `a8b2f90`) was audit/coordination-only; conflict was limited to the
   generated `reports/qa-report.md`, resolved by regenerating it with `tools/qa.py`.
+- 2026-10-24 00:24Z — **PR #55 merged** (https://github.com/karagemop466-tech/GOLD2/pull/55, merge commit
+  `86d6f33`); all three PR checks passed before merge (audit + verify ×2). GitHub Pages (legacy `main`, `/`)
+  reports **built** from `86d6f33`; live read-back on 2026-10-24 confirmed the root dashboard (32 entries,
+  42 flags, $3,995.47 reference, 15 explicit-solid-gold listings), the companion solitaire page rendering
+  SAR-151362 ($8,203.00/9.20 g) and SAR-147371 ($4,049.00/7.70 g, DF-012/F-045 linked) and the Blue Nile
+  rows with blank structured prices and verbatim unassigned displays. T-C74-01..06 are **done**; this
+  record lands via a small follow-up PR from the same branch. PR #19 remains `needs review` (non-blocking).
 
 ## Claim — Session S-F3B0B698 (2026-10-23T23:42Z UTC) — independent read-only audit
 
@@ -1587,13 +1594,13 @@ After the scratch build reached the final QA audit, `tools/qa.py` reported exact
 
 ### S-A182C7CC integration checkpoint after PR #55
 
-- `origin/main` advanced to `86d6f33` after PR #55 from S-C74095E5 merged. Its two Sarraf records, official-source evidence, audit artifacts, cross-register findings and companion-dashboard work are preserved; this integration does not rewrite those records. S-F3B0B698's F3-04 block remains in progress and is not edited here.
+- `origin/main` advanced to `86d6f33` after PR #55 from S-C74095E5 merged. Its two Sarraf records, official-source evidence, audit artifacts, cross-register findings and companion-dashboard work are preserved; this integration does not rewrite those records. C740's documentation-only PR #58 then merged as `00dc5b4`, marking its tasks done and recording the Pages build/read-back for `86d6f33`; the latest main update contains no data changes. S-F3B0B698's F3-04 block remains in progress and is not edited here.
 - A182's dated price snapshots remain separate verification-log entries. The merged catalog is retained, with A182 date-only observation dates added only where the stored price observation predated 2026-10-23; more precise same-day timestamps already present are preserved. The Menē earlier-price quotes are retained as source history.
 - Scratch builds and tests may read the full repository, but copied outputs exclude `data/flags.json`, `flags.html`, and all `dashboard/**` files.
 
 ### S-A182C7CC merged-main validation checkpoint (2026-10-24 UTC)
 
-- PR #55 from S-C74095E5 was already merged when checked; latest `origin/main` is `86d6f33`. Its 46-product / 88-source / 29-finding data, two Sarraf rows, 42 root flags and peer audit/dashboard work were preserved. This session did not modify C740's or S-F3B0B698's coordination blocks.
+- PR #55 from S-C74095E5 was already merged when checked; the resulting data commit was `86d6f33` (46 products / 88 sources / 29 findings / two new Sarraf rows / 42 root flags), and its peer audit/dashboard work was preserved. C740's docs-only PR #58 subsequently moved `origin/main` to `00dc5b4` and recorded the Pages read-back; it made no data changes. This session did not modify C740's or S-F3B0B698's coordination blocks.
 - A182's 18 verification records were merged with the 41-entry main log. Current log: 59 entries; catalog: 46 products, 19 assigned prices, 27 blank prices. A182's own 17-row scanner and 5 mutation tests pass.
 - Final merged-snapshot gates: `npm run check` PASS (23/23 tests, links/security/browser/axe and npm audit); root QA PASS 12/0/3; calculator PASS; snapshot audit 0 findings / 14 arithmetic controls. Independent scanner results and known stale-count/mutation-fixture exceptions are documented in `audit/a182c7cc/FINAL_AUDIT.md`.
 - A182-01, A182-02, A182-04 and A182-05 are complete. A182-03 remains in progress until its own PR is merged and Pages is verified; no deployment is claimed yet.
