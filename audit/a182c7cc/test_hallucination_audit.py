@@ -41,8 +41,8 @@ class IndependentAuditMutationTests(unittest.TestCase):
         row = next(p for p in catalog["products"] if p["price"] is None)
         row["price"] = {"amount": 1035, "currency": "USD", "observedAt": "2026-10-23", "evidence": []}
         errors = validate_data(catalog, evidence, verification, gold)
-        self.assertTrue(any("expected 17 assigned rows, found 18" in e for e in errors))
-        self.assertTrue(any("does not cover exactly" in e for e in errors))
+        self.assertTrue(any("no cited official quote contains the assigned amount" in e for e in errors))
+        self.assertFalse(any("A182-assigned rows missing" in e for e in errors))
 
     def test_assigning_chart_date_to_wgc_header_fails(self):
         catalog, evidence, verification, gold = self.mutated()

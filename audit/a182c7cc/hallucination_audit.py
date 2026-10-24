@@ -13,8 +13,15 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
-EXPECTED_PRICED_ROWS = 17
-EXPECTED_UNPRICED_ROWS = 27
+# This pass re-checked the 17 rows that were assigned prices on 2026-10-23.
+# Later sessions may add products/prices; they must not be mistaken for missing
+# A182 checks or force this historical audit to rewrite their evidence.
+AUDITED_PRICE_IDS = frozenset({
+    "ag-natural", "ag-cluster", "ag-petal", "ag-ruby", "ag-sapphire",
+    "ag-moissanite", "ag-24k", "ag-coffin-ring", "ag-cushion-signet",
+    "mene-rose", "mene-knot", "ext-be-121h6", "sar-147370",
+    "sar-145362", "sar-145364", "sar-144773", "fdj-gr0001",
+})
 EXPECTED_CORRECTIONS = {"mene-rose", "mene-knot"}
 ALLOWED_HOSTS = {
     "auvere.com", "consumer.ftc.gov", "mejuri.com", "mene.com",
@@ -51,12 +58,14 @@ def validate_data(catalog, evidence, verification, gold) -> list[str]:
         errors.append("duplicate source id")
 
     priced = {row["id"]: row for row in products if row.get("price") is not None}
-    if len(priced) != EXPECTED_PRICED_ROWS:
-        errors.append(f"expected {EXPECTED_PRICED_ROWS} assigned rows, found {len(priced)}")
-    if len(products) - len(priced) != EXPECTED_UNPRICED_ROWS:
-        errors.append(f"expected {EXPECTED_UNPRICED_ROWS} blank prices, found {len(products)-len(priced)}")
+    audited = {pid: by_product[pid] for pid in AUDITED_PRICE_IDS
+               if pid in by_product and by_product[pid].get("price") is not None}
+    if set(audited) != AUDITED_PRICE_IDS:
+        errors.append(f"A182-assigned rows missing from the current catalog: {sorted(AUDITED_PRICE_IDS-set(audited))}")
 
-    # Independently resolve each assigned price to its official source passage(s).
+    # Independently resolve every currently assigned price to its official source passage(s).
+    # Newer sessions may add priced products; they are checked for provenance but do not
+    # become retroactive members of the A182 snapshot.
     for pid, product in priced.items():
         price = product["price"]
         if not isinstance(price.get("amount"), (int, float)) or price["amount"] <= 0:
@@ -77,19 +86,20 @@ def validate_data(catalog, evidence, verification, gold) -> list[str]:
             errors.append(f"{pid}: no cited official quote contains the assigned amount")
         if not currency_proved:
             errors.append(f"{pid}: no cited official quote establishes {price['currency']}")
-        if price.get("observedAt") != "2026-10-23":
-            errors.append(f"{pid}: date-level price observation not recorded")
+        if pid in AUDITED_PRICE_IDS and str(price.get("observedAt", ""))[:10] != "2026-10-23":
+            errors.append(f"{pid}: A182 price observation is not dated 2026-10-23")
 
-    # The independent verification log must have exactly one URL-linked snapshot per assigned row.
+    # The A182 verification log must have exactly one URL-linked snapshot per row
+    # this session actually re-read; later sessions' new priced products are separate.
     snapshots = {entry["id"]: entry for entry in verification.get("entries", []) if entry.get("id", "").startswith("A182-PRICE-")}
-    expected_ids = {f"A182-PRICE-{pid.upper()}" for pid in priced}
+    expected_ids = {f"A182-PRICE-{pid.upper()}" for pid in AUDITED_PRICE_IDS}
     if set(snapshots) != expected_ids:
-        errors.append("dated price snapshot log does not cover exactly the assigned-price rows")
-    statuses = {pid: snapshots.get(f"A182-PRICE-{pid.upper()}", {}).get("status") for pid in priced}
+        errors.append("dated A182 price snapshot log does not cover exactly its 17 re-read rows")
+    statuses = {pid: snapshots.get(f"A182-PRICE-{pid.upper()}", {}).get("status") for pid in AUDITED_PRICE_IDS}
     corrections = {pid for pid, status in statuses.items() if status == "verified_correction"}
     if corrections != EXPECTED_CORRECTIONS:
         errors.append(f"expected only Menē price corrections, found {sorted(corrections)}")
-    for pid, product in priced.items():
+    for pid, product in audited.items():
         entry = snapshots.get(f"A182-PRICE-{pid.upper()}")
         if not entry:
             continue
@@ -149,9 +159,12 @@ def main() -> int:
         for error in errors:
             print(" -", error)
         return 1
+    catalog, evidence, verification, _gold = data
+    products = catalog.get("products", [])
+    assigned = sum(row.get("price") is not None for row in products)
     print("PASS independent A182 provenance/hallucination audit")
-    print("44 products; 17 assigned prices source/currency-linked; 27 prices remain blank.")
-    print("Menē history preserved; WGC quote date remains null; 18 official-source verification entries resolve.")
+    print(f"{len(products)} products; {assigned} currently assigned prices; {len(products)-assigned} remain blank.")
+    print(f"A182 re-read {len(AUDITED_PRICE_IDS)} assigned rows; Menē history preserved; WGC quote date remains null; 18 A182 source-linked verification entries resolve.")
     print("Read-only structural corroboration only—not proof of seller claims or physical gold purity.")
     return 0
 
