@@ -65,7 +65,15 @@ duplicated or merged by this session.
   pre-merge counts (41 flags, DF-008/DF-009) are the historical record of the `ca39632`-based pass and
   are superseded by this note. Final merged state: root 32 rows / 42 flags (F-001–F-045, gaps F-012,
   F-040), explore 46 products / 88 sources / 29 findings, dashboard 28 rings / DF-001–DF-012.
-  Full check matrix re-run on the merged tree before merge (see `audit/c74095e5/check_runs/merged_*`).
+  Full check matrix re-run on the merged tree before merge (see `audit/c74095e5/check_runs/merged_*`):
+  every CI-gated check PASS (qa 12/0/3; explore 46/88/29, 0 approvals; node 23/23; dashboard P1–P10
+  incl. `--check-build`; snapshot audit; 88aa65fd scan; 8c810c15/b200a880/9b875c81 scanners+tests;
+  f03ab52d 9-check audit; session scanner 36 checks; links/security). **Change requests logged, not
+  silently edited:** `audit/86379ca7/hallucination_security_scanner.py` (Check 3 hardcodes 30 root
+  items) and `audit/1b04074f/hallucination_scanner.py` (C13 hardcodes 44/85/30) now fail on the 32/46/88
+  register purely from those literals — owners please derive counts from data. Neither is a CI gate.
+- Second merge (PRs #54/#56, main `a8b2f90`) was audit/coordination-only; conflict was limited to the
+  generated `reports/qa-report.md`, resolved by regenerating it with `tools/qa.py`.
 
 ## Claim — Session S-F3B0B698 (2026-10-23T23:42Z UTC) — independent read-only audit
 
@@ -182,6 +190,23 @@ and pushed **before** any data or page edit.
   records were **not** re-fetched in this pass; their earlier dates stand. Zero physical, scale or XRF checks;
   zero purchase approvals. **Look for hallucinations again after every review — this is one pass, not a seal.**
 
+## Claim — Session S-FE7BA040 (2026-10-23 ~23:45Z UTC) — independent live re-verification, gold-reference refresh, integration
+
+- **Session ID:** `S-FE7BA040` (`fe7ba040`)
+- **Platform-fixed branch:** `arena/fe7ba040-gold2`. This runner is bound to that one branch; no other branch or worktree may be created or pushed. Isolation before integration is enforced by the exclusive file scope below.
+- **Base observed at claim:** `main` @ `ca39632b212684db0caa6bb57d4979860519dd9f` (PR #44 merged); working tree clean; branch even with `main`.
+- **Active-claim check:** no live peer claim. Every prior session on this board is `done` or closed. PR #19 (`arena/70b76800-gold2`) is stale (updated 2026-10-23T00:09Z, >60 min idle) and `mergeable: CONFLICTING`; its `dashboard/**` + BN-316238 + Costco content was already integrated by `S-9B875C81` (PR #31) and `S-305FDD02` (F-041/F-042). Not claimed here.
+- **Claim committed and pushed before any other edit** (see working log).
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| FE7-T1 | Read board, claim scope, baseline full-suite run | done | S-FE7BA040 | `COORDINATION.md` |
+| FE7-T2 | Independent live line-by-line re-verification of the gold reference and a retailer-stratified sample of the register | done | S-FE7BA040 | `audit/fe7ba040/live_verification_2026-10-23.md`, `audit/fe7ba040/verification.json` |
+| FE7-T3 | Independent hallucination/provenance/security scanner with mutation controls + unit tests | done | S-FE7BA040 | `audit/fe7ba040/hallucination_provenance_scan.py`, `audit/fe7ba040/test_scan.py` |
+| FE7-T4 | Refresh the dated gold reference from the live official page; regenerate; re-run every gate | done | S-FE7BA040 | `data/gold-price.json`, `evidence/gold-price.md`, `research/evidence.json`, `data/verification-log.json`, `dashboard/scripts/build.py`, generated root `*.html`, `explore/**`, `dashboard/**`, `reports/**` |
+| FE7-T5 | Final integration, PR from `arena/fe7ba040-gold2` to `main`, merge, Pages deploy confirmation, board record | in progress | S-FE7BA040 | `COORDINATION.md`, PR/merge records |
+
+Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero and never a negative physical finding; nothing is inferred, averaged, or filled from a neighbouring value; every published value needs a field-scoped quote from a page retrieved by the session that publishes it; an automated PASS proves only that the stated controls ran; **look for hallucinations again after every review**.
 ### Integration record (S-E0D6DD62)
 
 - **Branch:** `arena/e0d6dd62-gold2` — the platform binds this runner to one branch, so the board's
@@ -288,6 +313,13 @@ or pushed. The claim was written to this board and pushed as `717b95f` before an
 - **Verification coverage, stated honestly:** 10 official URLs were re-read in this pass (WGC, both Automic product pages and their JSON, Automic cart, Mejuri product/returns/BBB, Zales V-19957449). The other 40 combined-register rows were **not** re-read; their earlier dates in `verification.html` still stand. Full detail: `audit/1eb9f828/live_verification_2026-10-23.md` and `verification.json`.
 - 2026-10-23 20:5xZ — **Post-merge correction (no hallucinated counts).** The sibling-built cross-register sentence on `index.html` walked every `source` reference, including the Automic cart endpoint, and published *45 distinct official product URLs* while the data holds **44**. `tools/build_site.py` now restricts that count to `kind == "product"` evidence; `tools/qa.py` check 12 asserts both the union and shared counts against the data, so the sentence cannot drift again. The live page now reads **44 distinct / 30 shared / 0 root-only**.
 - **Open items carried forward:** Automic's contradictory production-time copy, the unattributed `$2,233` Coffin variant, Mejuri's Materials-heading mismatch, and the still-missing static BBB rating (F-031) — all published, none invented. Physical hallmark/maker's-mark and XRF/scale verification remain **not performed**; the FDJ 1.25 g figure remains a flagged hypothetical.
+
+### S-FE7BA040 record — gold-reference re-read (2026-10-23 ~23:45Z)
+
+- **Gold-reference refresh.** A later same-day re-read of the official WGC header returned **3,995.47 USD/oz** (chart still labelled *Data as of 22 October, 2026*; quote time unconfirmed, F-026) against the stored **3,996.31**. Every derived figure was recomputed at 3,995.47 (`usd_per_fine_gram` `128.457343`, displayed `$128.46`); 3,996.31 moved to `superseded_observations` and appears nowhere as a current quote. Applied through one evidence file (`data/gold-price.json`) plus `dashboard/scripts/build.py` spot and `dashboard/scripts/calc-test.js` fixtures; the QA stale-value guard then passed.
+- **All four pipelines regenerated** rather than hand-edited: root 13 pages, explore 13 pages / 44 rows / 85 sources, dashboard 14 pages / 26 rings / 11 retailers / 7 flags, legacy 6 pages + `data.json`. Re-verified: QA **12 checks / 0 failures / 3 warnings**; Node **23/23**; dashboard `verify` P1–P5,P8 PASS; `npm run check` end-to-end PASS (verify, build, check:links 46/102/179, security, `npm audit` 0 vulns, browser tests).
+- **Independent provenance scan** `audit/fe7ba040/hallucination_provenance_scan.py` (families C1–C7: stale quote, missing/dead URL, non-official host, fabricated category, real-melt-value price, fineness/hallmark null-safety, self-contradictions) → **7 families, 0 failures**; `audit/fe7ba040/test_scan.py` mutation controls **10/10** (baseline + 9 injected defects each caught by the expected family).
+- **Live re-reads recorded honestly.** Re-read: WGC (3,995.47), Automic Coffin ring (page + `.js` JSON, `$1,910` default / $1,910–$2,233), Sarraf SAR-144773 (price + currency match, melt 1,004.32), VRAI Classic 4p (match, no price), Mejuri Bold Eternity (From$2,900, currency unassigned F-025). Blue Nile BN-316238 URL now renders a different product → confirms the F-041/F-042 identity-link mismatch. Brilliant Earth BE-121H6 price is client-rendered and absent from fetched text → not re-confirmed, value unchanged. Full detail: `audit/fe7ba040/live_verification_2026-10-23.md` + `verification.json`.
 
 - 2026-10-23 20:5xZ — Post-rebase verification: `tools/build_site.py` 13 pages; `tools/qa.py` **PASS 12 / 0 failures / 3 warnings**; 23/23 Node tests; `scripts/verify.mjs` PASS **44 products / 85 source records / 26 findings / 0 approvals** (73 warnings); `scripts/build.mjs` 13 pages / 44 rows / 85 sources; dashboard 14 pages + `verify --check-build` PASS 8 + `calc-test` PASS; `check-links` PASS 46/102/179; `security` PASS; `npm audit` 0; all four independent scanners and the snapshot audit PASS; Chromium + axe PASS. A repeat build changes only the QA report timestamp.
 
@@ -1436,9 +1468,19 @@ Blank/`null` means *not confirmed*, never zero.
 | T-8637-02 | Independent live line-by-line verification of official product sources, WGC gold reference, retailer policies, and deployed GitHub Pages (`karagemop466-tech.github.io/GOLD2/`) | done — 46 live page/chunk retrievals logged | S-86379CA7 | `audit/86379ca7/live_verification_2026-10-23.md`, `audit/86379ca7/live_verification_2026-10-23.json` |
 | T-8637-03 | Independent multi-register hallucination, provenance, arithmetic, link, and security scanner + mutation unit tests | done — PASS (8/8 checks, 0 hard failures, 35 cross-register warnings, 10/10 mutation controls caught) | S-86379CA7 | `audit/86379ca7/hallucination_security_scanner.py`, `audit/86379ca7/test_scanner.py` |
 | T-8637-04 | Execute all repository verification, build, calculator, link, accessibility, and peer-scanner passes; record findings and cross-scope requests | done — 14 cross-register findings (`S8637-F01`–`S8637-F14`) logged | S-86379CA7 | `audit/86379ca7/FINDINGS.md`, `audit/86379ca7/findings.json` |
-| T-8637-05 | Rebase onto `origin/main` (preserving all peer merges without discarding work), verify combined build & links, open PR to `main`, merge, verify Pages deployment, and record in `COORDINATION.md` | in progress | S-86379CA7 | `COORDINATION.md`, `audit/86379ca7/**` |
+| T-8637-05 | Rebase onto `origin/main` (preserving all peer merges without discarding work), verify combined build & links, open PR to `main`, merge, verify Pages deployment, and record in `COORDINATION.md` | done | S-86379CA7 | `COORDINATION.md`, `audit/86379ca7/**` |
 
 **Rules carried forward unchanged:** No hallucinations. Blank/`null` means unverified, never zero and never a negative physical finding. Never infer, average, or fill in values. Every table row must link to an official source. Run hallucination and security passes after every review and recommend looking for hallucinations again after every review.
+
+### S-86379CA7 integration record
+
+- **PR:** [#53](https://github.com/karagemop466-tech/GOLD2/pull/53) — *audit(S-86379CA7): live verification of 39 primary URLs, 8-check hallucination/security scanner, 10 mutation tests, and 14 cross-register findings*.
+- **PR checks before merge:** `audit` (`GOLD2 verify` run `40043807579`) PASS · `verify` (`Legacy dashboard verify` run `40043807626`) PASS · `verify` (`Evidence dashboard` run `40043807776`) PASS.
+- **Merge:** **MERGED 2026-10-24T00:14:14Z**, merge commit **`8852b8f2e998d1c6b5e26938c10cae276884999d`**, method `--merge`. Rebased onto `origin/main` across peer merges (`S-1B04074F` PR #45/#46/#49, `S-88AA65FD` PR #47/#48, `S-F03AB52D` PR #50/#52, `S-F3B0B698` PR #51) without discarding any peer work.
+- **Cross-register verification after `S-F3B0B698` PR #51 (`a5a9e69`):** After `S-F3B0B698` reconciled `dashboard/**` against the canonical root register, `python3 audit/86379ca7/hallucination_security_scanner.py` confirmed that all 28 `dashboard/**` warnings (`S8637-F01`–`S8637-F06`) were resolved on `main` (reducing advisory warnings from 35 to 7, with 0 hard failures and 10/10 mutation controls passing).
+- **GitHub Pages:** `status: built`, build `1309513768` (`created_at: 2026-10-24T00:14:15Z`, `updated_at: 2026-10-24T00:14:54Z`) for commit **`8852b8f2e998d1c6b5e26938c10cae276884999d`**, `build_type: legacy`, source `main` / `/`, `https_enforced: true`, live at https://karagemop466-tech.github.io/GOLD2/.
+- **Live post-merge read-back (not assumed):** Directly fetched `https://karagemop466-tech.github.io/GOLD2/?v=8852b8f`, `flags.html?v=8852b8f`, `prices.html?v=8852b8f`, and `dashboard/flagged.html?v=8852b8f`. Verified the No-Hallucinations rule banner at the top of the front page, `$3,995.47 / troy oz` (`F-026`), 30 root rows (10 assigned prices, 7 published metal weights, 41 flags), 44 combined `/explore/` rows, and the reconciled 14-page `/dashboard/` companion with 11 active companion flags (`DF-001`–`DF-011`).
+- **Handover:** Look for hallucinations again after every review (`python3 audit/86379ca7/hallucination_security_scanner.py && python3 audit/86379ca7/test_scanner.py`). Zero physical, hallmark, maker's-mark, scale, or XRF verification has been performed, and zero purchase approvals are issued.
 
 ### S-86379CA7 verification & cross-scope handoff log
 
