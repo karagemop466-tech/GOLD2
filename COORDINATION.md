@@ -1252,3 +1252,75 @@ and re-ran the whole suite on the combined content:
   were re-read directly after deploy.
 - **Unchanged handover:** re-open primary sources and look for hallucinations again next pass; 20 of 30 rows still
   carry no assigned price, 23 of 30 no metal weight, and nothing on the site is physically or XRF verified.
+
+## Claim — Session S-F03AB52D (2026-10-23 UTC) — independent hallucination/provenance audit
+
+Platform constraint: this session is bound to `arena/f03ab52d-gold2`; it cannot create the
+requested `session-<id>/<task>` branch or extra worktrees. Isolation is enforced by the
+exclusive file scope below.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| F03A-01 | Read the board; claim a non-overlapping audit scope; commit and push the claim before editing | done | S-F03AB52D | `COORDINATION.md` |
+| F03A-02 | Independent 9-check hallucination/provenance scanner + 9 mutation controls | done | S-F03AB52D | `audit/f03ab52d/hallucination_audit.py`, `audit/f03ab52d/test_audit.py` |
+| F03A-03 | Live re-verification of a sample of published values against official sources | done | S-F03AB52D | `audit/f03ab52d/live_verification_2026-10-23.md` |
+| F03A-04 | Publish findings register and verification summary | done | S-F03AB52D | `audit/f03ab52d/FINDINGS.md`, `audit/f03ab52d/findings.json`, `audit/f03ab52d/verification-summary.json` |
+| F03A-05 | Run the full existing gate; PR the additive audit; merge; confirm Pages | in progress | S-F03AB52D | `COORDINATION.md` |
+
+**Rules followed:** No edit to any file outside `audit/f03ab52d/**` and `COORDINATION.md`. All
+verification was read-first. No value was inferred, estimated, averaged or derived from a neighbour.
+Blank/`null` means *not confirmed*, never zero.
+
+### S-F03AB52D working log
+
+- 2026-10-23 — Board read. `main` @ `ca39632` (PR #44 merged); branch even with `main`; working tree
+  clean. Prior sessions recorded done/integrated. Claimed non-overlapping scope `audit/f03ab52d/**` +
+  `COORDINATION.md`; no peer file touched.
+- 2026-10-23 — Baseline before editing: `tools/build_site.py` 13 pages byte-reproducible (no diff);
+  `tools/qa.py` PASS 12 checks / 0 failures / 3 warnings; `npm run check` PASS (verify 44 products /
+  85 sources / 26 findings / 0 approvals; 23/23 node tests; 13-page build; 46 pages / 102 local /
+  179 external links; security 0 vulnerabilities; browser/axe 44 gates).
+- 2026-10-23 — Wrote an independent scanner (`audit/f03ab52d/hallucination_audit.py`) from scratch; it
+  does not import `tools/qa.py`, `scripts/verify.mjs` or any other session's scanner. 9 checks: (C1)
+  catalog source existence + official https; (C2) every non-null fact value and price amount present in
+  its evidence quote; (C3) root register official source_url + existing evidence file; (C4) root↔catalog
+  price/weight parity (30 pairs); (C5) gold-reference JSON matches evidence with no unrecorded figure
+  (negation-context exemption for the documented 4,025.54 mention); (C6) derived/assay fields null
+  unless evidenced; (C7) no hallmark/maker-mark claim without evidence; (C8) HTML parity for the headline
+  gold value and product count; (C9) review findings cite a source. Baseline PASS 9 / 0 / 0.
+- 2026-10-23 — Mutation controls (`audit/f03ab52d/test_audit.py`): 9/9 injected defects caught (invented
+  price, karat mismatch, unbacked solidGold, non-https source, unrecorded gold figure, gold-JSON mismatch,
+  unbacked hallmark, root/catalog price conflict, unbacked derived value). A scanner that cannot catch an
+  injected hallucination is not a scanner.
+- 2026-10-23 — Live re-reads (4 official pages): WGC header `3,995.47` USD/oz (stored then `3,996.31`,
+  same-day moving quote, chart 22 Oct 2026); Mejuri Bold Diamond Eternity Ring `From$2,900` / 14k solid gold
+  / 2.6mm (confirmed); Automic Coffin Ring Shopify JSON `price 191000` / `price_max 223300` (confirmed);
+  Brilliant Earth BE121H6 `$890 (Setting Only)` / 14K Yellow Gold / 2.5mm (confirmed). No live read
+  contradicted a stored value.
+- 2026-10-23 — Irregularities recorded (non-blocking): F03A-01 WGC intraday move; F03A-02 F-026 quote-as-of
+  unconfirmed; F03A-03 documented non-observational 4,025.54 mention in evidence; F03A-04 coverage gaps
+  (20/30 root rows no assigned price, 23/30 no metal weight, zero physical/XRF/scale verification, zero
+  purchase approvals). **No hallucinations found. No values inferred or filled.**
+- 2026-10-23 — Full gate re-run after adding the audit files: `tools/qa.py` PASS 12/0/3; snapshot audit
+  PASS; `npm run check` PASS end-to-end. The additive audit files break no existing control.
+
+### S-F03AB52D reconciliation with S-1B04074F (duplicate work, reconciled not doubled)
+
+- This session's branch was cut from `ca39632` and the audit was authored against that base. While the
+  audit was in progress, `main` advanced through PR #45 (`S-1B04074F`), PR #47 (`S-88AA65FD`), PR #48 and
+  PR #49. `S-1B04074F` independently reached the **same** live WGC observation (`3,995.47`) and integrated
+  it (PR #45), and shipped its own independent scanner + mutation controls under `audit/1b04074f/**`. This
+  session's live read and scanner are therefore **corroborating, not re-applied**: this branch keeps no
+  overlapping data edit and adopts `main`'s refreshed gold reference rather than writing a second copy.
+- **No peer work was discarded, reverted or overwritten.** This branch's only unique changes are additive:
+  `audit/f03ab52d/**` and this board block. Each rebase conflict in `COORDINATION.md` was resolved by keeping
+  `main`'s blocks and appending this block after them.
+- F03A-01 (WGC intraday move) is **superseded** by `S-1B04074F`'s merge; it is retained here as the dated
+  observation this session made, not as an open defect.
+
+### S-F03AB52D integration record
+
+- **PR:** [#50](https://github.com/karagemop466-tech/GOLD2/pull/50) — *audit(S-F03AB52D): independent
+  9-check hallucination/provenance audit + 9 mutation controls + live re-verification*.
+- **Merge:** (filled after merge)
+- **Pages:** (filled after merge)

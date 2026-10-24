@@ -1,0 +1,48 @@
+{
+  "session": "S-F03AB52D",
+  "branch": "arena/f03ab52d-gold2",
+  "date": "2026-10-23",
+  "scope": "audit/f03ab52d/** (read-only verification; no peer file edited)",
+  "summary": "Independent 9-check hallucination/provenance scan PASS (0 failures, 0 warnings); 9/9 mutation controls; 4 official pages re-read live with no contradiction.",
+  "findings": [
+    {
+      "id": "F03A-01",
+      "severity": "info",
+      "status": "superseded_by_S-1B04074F",
+      "title": "WGC gold header moved intraday",
+      "detail": "Live header read 3,995.47 USD/oz on 2026-10-23; the stored observation was 3,996.31 at the time this session read it. Moving quote, not a hallucination. S-1B04074F (PR #45) independently read the same 3,995.47 and refreshed the stored value; this session adopts that refresh rather than writing a second copy.",
+      "sources": ["https://www.gold.org/goldhub/data/gold-prices"]
+    },
+    {
+      "id": "F03A-02",
+      "severity": "warning",
+      "status": "open",
+      "title": "WGC quote-as-of timestamp unconfirmed",
+      "detail": "The moving header renders no quote-as-of timestamp; the chart date (22 October 2026) is stored separately and is not assigned to the header. Carried forward as F-026.",
+      "sources": ["https://www.gold.org/goldhub/data/gold-prices"]
+    },
+    {
+      "id": "F03A-03",
+      "severity": "info",
+      "status": "documented_exemption",
+      "title": "Non-observational gold figure mention in evidence",
+      "detail": "evidence/gold-price.md line 131 mentions 4,025.54 only to state that no such figure exists in any data file. Scanner exempts negation contexts; recorded so it is not mistaken for an observation.",
+      "sources": ["https://www.gold.org/goldhub/data/gold-prices"]
+    },
+    {
+      "id": "F03A-04",
+      "severity": "warning",
+      "status": "open",
+      "title": "Coverage gaps (disclosed, non-blocking)",
+      "detail": "20 of 30 root rows have no assigned price; 23 of 30 have no published metal weight; zero independent physical/XRF/scale verification; zero purchase approvals.",
+      "sources": []
+    }
+  ],
+  "live_rereads": [
+    {"url": "https://www.gold.org/goldhub/data/gold-prices", "read": "3,995.47 USD/oz", "stored": "3,996.31 at read time (now 3,995.47 after S-1B04074F PR #45)", "verdict": "moved_intraday_then_refreshed"},
+    {"url": "https://mejuri.com/products/bold-diamond-eternity-ring", "read": "From$2,900; 14k solid gold; 2.6mm", "stored": "From $2,900; solidGold; karat 14", "verdict": "confirmed"},
+    {"url": "https://www.automicgold.com/products/coffin-ring.js", "read": "price 191000; price_max 223300", "stored": "$1,910; range to $2,233", "verdict": "confirmed"},
+    {"url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/", "read": "$890 (Setting Only); 14K Yellow Gold; 2.5mm", "stored": "$890 USD setting-only", "verdict": "confirmed"}
+  ],
+  "scanner": {"checks": 9, "failures": 0, "warnings": 0, "mutation_controls": "9/9"}
+}
