@@ -1232,3 +1232,23 @@ Rules carried forward unchanged: blank/`null` means *not confirmed*, never zero 
   verification · **zero** purchase approvals.
 - **Handover instruction:** this pass is one review, not a certificate. Re-open the primary pages and look for
   hallucinations again after every review, and re-check that no superseded gold figure has crept back into prose.
+
+### S-1B04074F post-peer-merge re-verification (2026-10-23 23:5xZ)
+
+Session `S-88AA65FD` merged PR #47 (`627ee4f`) on top of PR #45/#46. Its own gold refresh was reconciled with this
+session's, and the combined tree stores **3,995.47** once. Rather than assume, this session rebased onto `origin/main`
+and re-ran the whole suite on the combined content:
+
+- `tools/build_site.py` 13 pages · `tools/qa.py` **PASS 12 / 0 / 3** · `scripts/build.mjs` 44 rows / **86** sources ·
+  `scripts/verify.mjs` PASS (44 products / 86 sources / **27** findings / 0 purchase approvals) · `node --test` 23/23 ·
+  `check-links` PASS 46 pages / 179 external · `security` PASS + `npm audit` 0 · dashboard 8/8 + `calc-test` PASS ·
+  Chromium + axe PASS (13 expanded + 33 companion pages).
+- Sibling scanners: `a87a02a5` PASS (5 warnings) · `e0d6dd62` **PASS 12/0/0** · `9b875c81` 0 findings.
+- This session's scanner on the combined tree: **PASS 0 failures**, **9/9** mutation controls still correct, reading
+  30 root rows / 44 products / 86 sources / **41** flags / 40 pages at quote **3,995.47**.
+- **Reproducibility:** regenerating root, Explore and dashboard from the merged data changed exactly one file —
+  the QA report's timestamp. No page, data file or generator drifted, so the peer's merge did not leave stale output.
+- **Pages:** build `completed/success` for `627ee4f`; the site is live and the two gold figures on the published pages
+  were re-read directly after deploy.
+- **Unchanged handover:** re-open primary sources and look for hallucinations again next pass; 20 of 30 rows still
+  carry no assigned price, 23 of 30 no metal weight, and nothing on the site is physically or XRF verified.
