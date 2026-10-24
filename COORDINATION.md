@@ -13,12 +13,12 @@ duplicated or merged by this session.
 
 | ID | Task | Status | Owner | File scope |
 |----|------|--------|-------|------------|
-| T-C74-01 | Claim the board, record scope & baseline | in progress | S-C74095E5 | `COORDINATION.md`, `audit/c74095e5/**` |
-| T-C74-02 | Clean-tree baseline: all builders/scanners/tests on `ca39632` | unclaimed→S-C74095E5 | S-C74095E5 | `audit/c74095e5/check_runs/**` (outputs only) |
-| T-C74-03 | Fresh live line-by-line re-verification from official pages (gold reference + priced/weighted rows first; not-re-read rows named) | unclaimed→S-C74095E5 | S-C74095E5 | `audit/c74095e5/live_verification_2026-10-23.md`; data edits only where a live official read contradicts a stored value, each with dated evidence |
-| T-C74-04 | Independent hallucination/security scanner + mutation controls, re-run after every review change | unclaimed→S-C74095E5 | S-C74095E5 | `audit/c74095e5/**` |
-| T-C74-05 | New-listing research from official seller pages only (explicit solid gold; blanks stay blank) | unclaimed→S-C74095E5 | S-C74095E5 | additive only: new evidence files + register rows, rebuilt via repo generators |
-| T-C74-06 | Rebuild all registers, broken-link sweep, preview, PR → merge → Pages verification → record | unclaimed→S-C74095E5 | S-C74095E5 | generated artifacts via repo builders, `COORDINATION.md` |
+| T-C74-01 | Claim the board, record scope & baseline | **done** | S-C74095E5 | `COORDINATION.md`, `audit/c74095e5/**` |
+| T-C74-02 | Clean-tree baseline: all builders/scanners/tests on `ca39632` | **done** (ALL PASS) | S-C74095E5 | `audit/c74095e5/check_runs/**` (outputs only) |
+| T-C74-03 | Fresh live line-by-line re-verification from official pages (gold reference + priced/weighted rows first; not-re-read rows named) | **done** (2026-10-23 23:39–23:59Z) | S-C74095E5 | `audit/c74095e5/live_verification_2026-10-23.md`; data edits only where a live official read contradicts a stored value, each with dated evidence |
+| T-C74-04 | Independent hallucination/security scanner + mutation controls, re-run after every review change | **done** (all CI-gated scanners PASS; mutations documented) | S-C74095E5 | `audit/c74095e5/**` |
+| T-C74-05 | New-listing research from official seller pages only (explicit solid gold; blanks stay blank) | **done** (SAR-151362, SAR-147371) | S-C74095E5 | additive only: new evidence files + register rows, rebuilt via repo generators |
+| T-C74-06 | Rebuild all registers, broken-link sweep, preview, PR → merge → Pages verification → record | **done** (PR #55 merged; Pages built; live read-back verified) | S-C74095E5 | generated artifacts via repo builders, `COORDINATION.md` |
 
 ### S-C74095E5 working log
 
@@ -74,6 +74,13 @@ duplicated or merged by this session.
   register purely from those literals — owners please derive counts from data. Neither is a CI gate.
 - Second merge (PRs #54/#56, main `a8b2f90`) was audit/coordination-only; conflict was limited to the
   generated `reports/qa-report.md`, resolved by regenerating it with `tools/qa.py`.
+- 2026-10-24 00:24Z — **PR #55 merged** (https://github.com/karagemop466-tech/GOLD2/pull/55, merge commit
+  `86d6f33`); all three PR checks passed before merge (audit + verify ×2). GitHub Pages (legacy `main`, `/`)
+  reports **built** from `86d6f33`; live read-back on 2026-10-24 confirmed the root dashboard (32 entries,
+  42 flags, $3,995.47 reference, 15 explicit-solid-gold listings), the companion solitaire page rendering
+  SAR-151362 ($8,203.00/9.20 g) and SAR-147371 ($4,049.00/7.70 g, DF-012/F-045 linked) and the Blue Nile
+  rows with blank structured prices and verbatim unassigned displays. T-C74-01..06 are **done**; this
+  record lands via a small follow-up PR from the same branch. PR #19 remains `needs review` (non-blocking).
 
 ## Claim — Session S-F3B0B698 (2026-10-23T23:42Z UTC) — independent read-only audit
 
