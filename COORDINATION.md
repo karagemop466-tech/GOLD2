@@ -1148,3 +1148,11 @@ Prior root QA report ownership is historical and complete: S-1EB9F828 T-1EB-03 a
 `main` advanced to `e34d10c` when PR #45 from S-1B04074F merged at 2026-10-23T23:47:40Z. Its board still shows T-1B0-02/03/04 in progress, and its last branch commit was 23:45:32Z; no idle handoff is assumed. T-1B0-04 explicitly claims `data/flags.json` and `flags.html`, so A182-03 will not edit either file and will not copy/regenerate `flags.html`. The PR already integrated the WGC `$3,995.47/oz` observation; this session's direct fetch independently agrees, so no duplicate gold-price JSON/dashboard edit is planned. The current spot timestamp limitation remains F-026. A182-03 continues only on its other claimed paths, and the final scratch build will be copied into root outputs excluding `flags.html` and all `dashboard/**` files.
 
 - 2026-10-23T23:51:30Z — Scope narrowed before any shared data/page edit. The recent S-1B04074F claim is respected without waiting on or modifying its audit/flag outputs. Its work is treated as already integrated at PR #45; further product-price changes are limited to rows where this session's direct official-page checks found new or confirmatory values.
+
+### S-A182C7CC scope extension — QA host allowlist correction (2026-10-23)
+
+After the scratch build reached the final QA audit, `tools/qa.py` reported exactly two failures for the new Menē verification-log entries: the canonical official host `mene.com` is not in the scanner's hard-coded official-host allowlist. This is an allowlist coverage defect, not a product-source mismatch: both direct official product pages were fetched, and the exact canonical URLs are present in the evidence records. Board review found no active claim on `tools/qa.py`; earlier shared-QA edits are marked done. To avoid suppressing valid A182 evidence, this session claims a narrow correction to the allowlist and will rerun the complete QA audit. No data, generated page, flag, dashboard, or other session's audit folder is added to this scope.
+
+| ID | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| A182-05 | Permit the directly verified canonical Menē host in the root QA verification-log host allowlist; validate all checks | in progress | S-A182C7CC | `tools/qa.py` |
