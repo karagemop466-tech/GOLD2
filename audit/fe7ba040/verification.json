@@ -1,0 +1,69 @@
+{
+  "session": "S-FE7BA040",
+  "branch": "arena/fe7ba040-gold2",
+  "pass_at": "2026-10-23T23:45:00Z",
+  "method": "targeted direct fetch_page retrieval of the World Gold Council spot page plus a retailer-stratified sample of the register",
+  "rule": "a stored value is reused only if the official page rendered it again during this pass; not re-read rows keep their earlier dates and are labelled",
+  "reread": [
+    {
+      "id": "WGC-GOLD-SPOT",
+      "url": "https://www.gold.org/goldhub/data/gold-prices",
+      "stored": {"usd_per_troy_oz": 3996.31, "retrieved_at": "2026-10-23"},
+      "observed": ["USD /oz - 3,995.47 Last Updated", "Data as of 22 October, 2026", "Market Data: Provided by ICE Data Services."],
+      "outcome": "drift",
+      "action": "refreshed usd_per_troy_oz to 3995.47; 3,996.31 moved to superseded_observations"
+    },
+    {
+      "id": "AG-COFFIN-RING",
+      "url": "https://www.automicgold.com/products/coffin-ring.js",
+      "stored": {"price": 1910.0, "observed_price_range": "1,910.00-2,233.00"},
+      "observed": ["price:191000", "price_min:191000", "price_max:223300", "Nickel Free 14k White Gold price:203900"],
+      "outcome": "match"
+    },
+    {
+      "id": "SAR-144773",
+      "url": "https://www.sarraf.com/products/14k-yellow-gold-12mm-high-polished-traditional-domed-wedding-band.html",
+      "stored": {"price": 1362.0, "weight_g": 13.4},
+      "observed": ["Now: US$1,362.00", "Was: US$1,593.00", "MSRP: US$5,296.00", "14K Solid Gold", "Approximate Metal Weight 13.40 grams", "SKU ST-LPBWB120-14KY", "Stock Number: 144773"],
+      "outcome": "match"
+    },
+    {
+      "id": "VRAI-CLASSIC-4P",
+      "url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
+      "stored": {"weight_g": 2.86, "price": null},
+      "observed": ["Metal: 18k Yellow Gold", "Band width: Standard", "Band depth: 1.6mm", "Metal weight: 2.86g (Ring size 6)", "Pavé carat weight: 0.18ctw", "Returns accepted within 30 days", "FedEx 2Day $10", "FedEx Overnight $50"],
+      "outcome": "match"
+    },
+    {
+      "id": "BN-316238",
+      "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238",
+      "stored": {"price": null},
+      "observed": ["Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen", "Stock Number 505097w14", "Width 1.50mm", "$1,240(Setting Price)"],
+      "outcome": "match_with_flagged_discrepancy",
+      "note": "URL now serves a different product; confirms F-041/F-042. Row keeps its stored description and blank price."
+    },
+    {
+      "id": "MJ-BOLD-ETERNITY",
+      "url": "https://mejuri.com/products/bold-diamond-eternity-ring",
+      "stored": {"price": null, "display": "From $2,900"},
+      "observed": ["From$2,900", "14k solid gold", "as many as 23 round brilliant cut diamonds", "Band Width: 2.6 mm", "free 30-day returns & exchanges"],
+      "outcome": "match"
+    },
+    {
+      "id": "BE-121H6",
+      "url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
+      "stored": {"price": 890.0},
+      "observed": ["page loaded; setting price client-rendered, absent from retrieved text"],
+      "outcome": "not_reconfirmed",
+      "note": "no value changed; stored dated observation stands"
+    }
+  ],
+  "not_reread": "all other register rows keep their earlier dated observations; see verification.html",
+  "scanner": {
+    "file": "audit/fe7ba040/hallucination_provenance_scan.py",
+    "families": 7,
+    "failures": 0,
+    "mutation_controls": "10/10 (baseline + 9 injected defects)"
+  },
+  "boundaries": "no physical ring, stamp, purity, scale weight or XRF assay examined; zero purchase approvals; no seller contacted"
+}
