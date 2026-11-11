@@ -1629,3 +1629,7 @@ Baseline: root QA PASS 12 checks/0 failures/3 warnings; calculator PASS; compani
 ### S-36620E91 — QA follow-up scope
 
 The first rebuild/QA after the gold change failed because the stale-quote gate rejects an old number even in a dated historical verification-log row. The audit correctly caught that history appears on the page; it is not current data. Claim `tools/qa.py` and a narrow change to the verification renderer to label these rows explicitly as historical and to keep the stale check strict outside those rows. Re-run security/hallucination checks and tests after this review. Do not discard the historical evidence or suppress the stale gate globally.
+
+### S-36620E91 — companion dashboard rebuild scope
+
+The full check found a mismatch: `dashboard/` still embeds the old WGC reference while the browser suite compares it to the new canonical reference. The dashboard is a generated shared output; its earlier claims are historical/stale (last commits 2026-10-24, over 60 minutes ago). Claim its generated `dashboard/**` files for integration rebuild only; do not modify its scripts or peer audit files. Run its own build/verification and re-run all checks after regeneration. The initial `git pull --rebase` for the preceding claim refused to run due to unstaged changes; changes were safely stashed and restored after the successful pull and push.
