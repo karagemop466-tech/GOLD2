@@ -1657,3 +1657,9 @@ Platform constraint: this runner is bound to `arena/c81a689b-gold2`; no alternat
 - 2026-11-11 — PR #62 opened from `arena/c81a689b-gold2` to `main`; merge pending.
 
 - S-D901C3CA: preserved peer PR #62 audit additions; resolved append-only board conflict by retaining both blocks and regenerated QA timestamp rather than discarding peer findings. Final prior CI attempt passed all three checks.
+
+### S-D901C3CA — completed publication
+
+- D901-01 **done**; D901-02 **done**. PR **#60** https://github.com/karagemop466-tech/GOLD2/pull/60 merged 2026-11-11T08:08:52Z with merge commit `62ca07bf19aafd7c79905cd2c1ba5bd56822ba1a`. Final combined PR revision passed all three GitHub checks (audit, evidence verify, preserved verify). Peer PRs #61/#62 preserved.
+- GitHub Pages run **42984733206** https://github.com/karagemop466-tech/GOLD2/actions/runs/42984733206 completed **success**, including build, status report and deployment. Published URL: https://karagemop466-tech.github.io/GOLD2/ . Deployment confirmed through GitHub API/run, not a direct public-host HTTP read (network restriction).
+- Post-merge record is saved on the fixed session branch. Review finding is public at `flags.html#freshness-review`. All current prices/availability remain unverified by this session; no fresh retailer/regulator verification or physical assay claimed. Keep looking for hallucinations and run source/provenance/security checks after every review.
