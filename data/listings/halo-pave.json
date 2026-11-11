@@ -93,7 +93,7 @@
         "$1,255$1,004(Setting Price)"
       ],
       "price_checked_at": "2026-11-11",
-      "price_check_note": "Official product page: display changed from “$1,255(Setting Price)” to “$1,255$1,004(Setting Price)” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned.",
+      "price_check_note": "Official product page: display changed to “$1,255$1,004(Setting Price)” with “-20%” (site promotion, F-046); the earlier single-amount display is kept only as dated history. No ISO currency; price stays unassigned.",
       "superseded_displays": [
         {
           "text": "$1,255(Setting Price)",
@@ -303,7 +303,7 @@
         "$1,300$1,040(Setting Price)"
       ],
       "price_checked_at": "2026-11-11",
-      "price_check_note": "Official product page: display changed from “$1,300(Setting Price)” to “$1,300$1,040(Setting Price)” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned.",
+      "price_check_note": "Official product page: display changed to “$1,300$1,040(Setting Price)” with “-20%” (site promotion, F-046); the earlier single-amount display is kept only as dated history. No ISO currency; price stays unassigned.",
       "superseded_displays": [
         {
           "text": "$1,300(Setting Price)",
@@ -406,7 +406,7 @@
         "$1,050$840(Setting Price)"
       ],
       "price_checked_at": "2026-11-11",
-      "price_check_note": "Official product page: display changed from “$1,050(Setting Price)” to “$1,050$840(Setting Price)” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned.",
+      "price_check_note": "Official product page: display changed to “$1,050$840(Setting Price)” with “-20%” (site promotion, F-046); the earlier single-amount display is kept only as dated history. No ISO currency; price stays unassigned.",
       "superseded_displays": [
         {
           "text": "$1,050(Setting Price)",
@@ -501,7 +501,7 @@
         ]
       },
       "price_checked_at": "2026-11-11",
-      "price_check_note": "Official product page: display changed from “$1,240(Setting Price)” to “$1,240$992(Setting Price)” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned. The URL still serves a differently named product (F-041).",
+      "price_check_note": "Official product page: display changed to “$1,240$992(Setting Price)” with “-20%” (site promotion, F-046); the earlier single-amount display is kept only as dated history. No ISO currency; price stays unassigned. The URL still serves a differently named product (F-041).",
       "superseded_displays": [
         {
           "text": "$1,240(Setting Price)",

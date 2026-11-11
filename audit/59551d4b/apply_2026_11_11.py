@@ -106,7 +106,7 @@ SCOPE = {
 for i in ("SAR-147370", "SAR-145362", "SAR-145364", "SAR-144773", "SAR-151362", "SAR-147371"):
     SCOPE[i] = "Official product page: US$ price and approximate metal weight re-read; unchanged."
 for i, (o, n) in BN_NEW.items():
-    SCOPE[i] = f"Official product page: display changed from “{o}” to “{n}” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned."
+    SCOPE[i] = f"Official product page: display changed to “{n}” with “-20%” (site promotion, F-046); the earlier single-amount display is kept only as dated history. No ISO currency; price stays unassigned."
 SCOPE["BN-316238"] += " The URL still serves a differently named product (F-041)."
 for i, (o, n) in Z_NEW.items():
     SCOPE[i] = f"Official product page: display changed to “{n}”; the earlier promotional amount is no longer rendered (F-048). No ISO currency; price stays unassigned."

@@ -31,6 +31,7 @@ step explore_node_tests    npm test
 step explore_build         npm run -s build
 step explore_check_links   npm run -s check:links
 step explore_security      node scripts/security.mjs
+step scan_59551d4b         python3 audit/59551d4b/hallucination_scan.py .
 echo "--- git status (generated files must be reproducible) ---" >> "$summary"
 git status --short -- . ':!audit/59551d4b' ':!reports/qa-report.md' >> "$summary"
 cat "$summary" | tail -5 >/dev/null

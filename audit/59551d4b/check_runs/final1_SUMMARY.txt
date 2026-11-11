@@ -1,0 +1,35 @@
+PASS  root_build
+PASS  root_qa
+PASS  root_calc_test
+PASS  root_build_again
+PASS  snapshot_audit
+PASS  scan_8c810c15
+PASS  test_8c810c15
+PASS  scan_b200a880
+PASS  test_b200a880
+PASS  scan_88aa65fd
+PASS  dashboard_build
+PASS  dashboard_verify
+PASS  dashboard_calc_test
+PASS  scan_9b875c81
+PASS  test_9b875c81
+PASS  legacy_build
+PASS  legacy_audit
+PASS  legacy_test
+PASS  explore_verify
+PASS  explore_node_tests
+PASS  explore_build
+PASS  explore_check_links
+PASS  explore_security
+PASS  scan_59551d4b
+--- git status (generated files must be reproducible) ---
+ M 18k.html
+ M data/listings/18k.json
+ M data/listings/halo-pave.json
+ M data/listings/solitaire.json
+ M data/listings/three-stone-vintage.json
+ M data/verification-log.json
+ M halo-pave.html
+ M solitaire.html
+ M three-stone-vintage.html
+ M verification.html
