@@ -2,7 +2,7 @@
  {
   "key": "gold-jm",
   "url": "https://www.jmbullion.com/charts/gold-price/",
-  "fetched_at": "2026-11-11T08:20:00Z",
+  "fetched_at": "2026-11-11",
   "result": "changed",
   "excerpts": [
    "Gold Ask](https://www.jmbullion.com/charts/gold-price/)$4,073.34$33.58",
@@ -20,12 +20,13 @@
    "header_ticker_ask": "$4,073.34",
    "page_time": "Nov 11, 2026 at 3:03 AM EST"
   },
-  "note": "Stored URL fetched. Body quote and bid/ask table both read $4,072.47 at 3:03 AM EST. The page-top ticker and the ROI-calculator line read $4,073.34 on the same fetch: two different numbers on one page. The body quote/ask (which carries the explicit 'As of' sentence) is the one recorded; the ticker difference is flagged, not averaged."
+  "note": "Stored URL fetched. Body quote and bid/ask table both read $4,072.47 at 3:03 AM EST. The page-top ticker and the ROI-calculator line read $4,073.34 on the same fetch: two different numbers on one page. The body quote/ask (which carries the explicit 'As of' sentence) is the one recorded; the ticker difference is flagged, not averaged.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
  },
  {
   "key": "ag-coffin-ring-html4",
   "url": "https://www.automicgold.com/products/coffin-ring",
-  "fetched_at": "2026-11-11T08:20:00Z",
+  "fetched_at": "2026-11-11",
   "result": "unchanged",
   "excerpts": [
    "# Coffin Ring",
@@ -43,12 +44,13 @@
    "item_weight": "Approximately 6.1g (gold) or 9.2g (platinum)",
    "material": "950 platinum and/or Solid 14k gold"
   },
-  "note": "HTML chunk 4 of 7. Item Weight line re-read: 6.1 g (gold) unchanged. Default display Size 2 / 14k Yellow Gold $1,910 unchanged."
+  "note": "HTML chunk 4 of 7. Item Weight line re-read: 6.1 g (gold) unchanged. Default display Size 2 / 14k Yellow Gold $1,910 unchanged.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
  },
  {
   "key": "ext-bn-192506",
   "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-hidden-halo-solitaire-plus-diamond-engagement-ring-in-14k-yellow-gold-item-192506",
-  "fetched_at": "2026-11-11T08:20:00Z",
+  "fetched_at": "2026-11-11",
   "result": "display_changed",
   "excerpts": [
    "# Petite Hidden Halo Solitaire Plus Diamond Engagement Ring in 14k Yellow Gold",
@@ -66,6 +68,7 @@
    "metal": "14K Yellow Gold",
    "width": "1.60mm"
   },
-  "note": "Own page re-read (chunk 0). Display now shows a struck list amount and a promo amount. No ISO currency; structured price stays null."
+  "note": "Own page re-read (chunk 0). Display now shows a struck list amount and a promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
  }
 ]

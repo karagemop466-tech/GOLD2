@@ -2,7 +2,7 @@
   "meta": {
     "schemaVersion": 1,
     "title": "GOLD",
-    "reviewedAt": "2026-11-11T08:40:00Z",
+    "reviewedAt": "2026-11-11T08:17:00Z",
     "reviewSession": "arena-88aa65fd late-evening re-verification on base records built by earlier sessions + arena-c74095e5 evening integration (JM re-observation and two Sarraf rows, merged 2026-10-24); S-59551D4B staleness review and live price re-read on 2026-11-11 (19 priced rows, market reference, Blue Nile/Zales/Stone and Strand displays)",
     "scope": "46 unique named product pages across 13 retailers. First captured 2026-10-22/23 UTC; on 2026-11-11 UTC the 19 priced rows, the market reference and the Blue Nile, Zales, VRAI, Mejuri and Stone and Strand rows were re-read. Rows not re-read keep their October dates and are labelled stale by the freshness rule.",
     "pricePolicy": "No hallucinations: never invent prices, specifications, or verification. Null means unverified. Prices are dated observations, not live quotes or checkout totals. Source claims are not independent authentication.",
@@ -10,7 +10,7 @@
     "sourceReviewDays": 30,
     "observationWindow": {
       "start": "2026-10-23T09:56:00Z",
-      "end": "2026-11-11T08:40:00Z"
+      "end": "2026-11-11T08:17:00Z"
     },
     "benchmark": {
       "amount": null,

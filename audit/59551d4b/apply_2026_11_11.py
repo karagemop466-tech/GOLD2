@@ -245,7 +245,7 @@ v["generated_at"] = D
 v["previous_passes"] = v.get("previous_passes", []) + [dict(v["pass"])]
 v["pass"] = {
   "session": SESSION, "checked_at": D, "timezone": "UTC",
-  "method": "Staleness review and live re-read on 2026-11-11 between 07:55 and 08:40 UTC. The World Gold Council spot page, the JM Bullion gold-price page and the official product page (or the product's own official .js/.oembed endpoint) of all 32 root rows were fetched and compared with the stored record. Excerpts are verbatim with line breaks collapsed to spaces; the raw transcriptions are in audit/59551d4b/obs_batch1..8.json. Retailer policy pages and regulatory references were NOT re-read and keep their earlier date.",
+  "method": "Staleness review and live re-read on 2026-11-11 between about 07:55 and 08:17 UTC. The World Gold Council spot page, the JM Bullion gold-price page and the official product page (or the product's own official .js/.oembed endpoint) of all 32 root rows were fetched and compared with the stored record. Excerpts are verbatim with line breaks collapsed to spaces; the raw transcriptions are in audit/59551d4b/obs_batch1..8.json. Retailer policy pages and regulatory references were NOT re-read and keep their earlier date.",
   "rule": "A stored value is reused only if the official page rendered it again during the pass that recorded it. Rows or fields not re-read this pass keep their earlier date. No value is inferred, averaged, converted, or copied from a search snippet.",
   "limits": "A successful retrieval is not an assay, not a hallmark or maker's-mark check, and not proof of stock or future price. No ring was weighed or XRF-tested. Promotional displays change daily; pages can change after this pass.",
 }

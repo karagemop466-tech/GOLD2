@@ -2,7 +2,7 @@
  {
   "key": "ext-bn-195269",
   "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
-  "fetched_at": "2026-11-11T08:25:00Z",
+  "fetched_at": "2026-11-11",
   "result": "display_changed",
   "excerpts": [
    "# Petite Solitaire Engagement Ring in 18k Yellow Gold",
@@ -20,12 +20,13 @@
    "metal": "18K Yellow Gold",
    "width": "1.80mm"
   },
-  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null."
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
  },
  {
   "key": "ext-bn-315661",
   "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
-  "fetched_at": "2026-11-11T08:25:00Z",
+  "fetched_at": "2026-11-11",
   "result": "sold_out_no_price",
   "excerpts": [
    "# Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen",
@@ -36,12 +37,13 @@
    "display": null,
    "availability": "This popular style is sold out"
   },
-  "note": "Own page (chunk 0 of 10) no longer renders a setting price, stock number, metal or width block for this item; it renders a sold-out notice and prices for OTHER items only. The stored '$2,210(Setting Price)' display is no longer supported by the page and must be withdrawn (kept as dated history only)."
+  "note": "Own page (chunk 0 of 10) no longer renders a setting price, stock number, metal or width block for this item; it renders a sold-out notice and prices for OTHER items only. The stored '$2,210(Setting Price)' display is no longer supported by the page and must be withdrawn (kept as dated history only).",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
  },
  {
   "key": "ext-bn-195402",
   "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402",
-  "fetched_at": "2026-11-11T08:25:00Z",
+  "fetched_at": "2026-11-11",
   "result": "display_changed",
   "excerpts": [
    "# Petite Micropavé Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
@@ -61,12 +63,13 @@
    "metal": "14K White Gold",
    "width": "1.70mm"
   },
-  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null."
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
  },
  {
   "key": "ext-bn-302868",
   "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868",
-  "fetched_at": "2026-11-11T08:25:00Z",
+  "fetched_at": "2026-11-11",
   "result": "display_changed",
   "excerpts": [
    "# Petite Micropavé Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)",
@@ -86,6 +89,7 @@
    "metal": "14K White Gold",
    "width": "1.70mm"
   },
-  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null."
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
  }
 ]

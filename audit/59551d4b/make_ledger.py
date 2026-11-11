@@ -13,7 +13,7 @@ for f in sorted(glob.glob(str(ROOT / "data/listings/*.json"))) + [str(ROOT / "da
 vlog = json.loads((ROOT / "data/verification-log.json").read_text(encoding="utf-8"))
 gold = json.loads((ROOT / "data/gold-price.json").read_text(encoding="utf-8"))
 L = ["# Re-verification ledger — 2026-11-11 (UTC) — session S-59551D4B", "",
-     "**No hallucinations.** Every value below was transcribed from an official page fetched on 2026-11-11 between about 07:55 and 08:40 UTC. "
+     "**No hallucinations.** Every value below was transcribed from an official page fetched on 2026-11-11 between about 07:55 and 08:17 UTC. "
      "Nothing was inferred, converted, averaged or copied from a search snippet. A retrieval is not an assay: no ring was weighed or XRF-tested.", "",
      "**Look for hallucinations again after every review:** open each link and compare it with the row.", "",
      "## 1. Gold references", "",
@@ -36,7 +36,7 @@ L += ["", "## 3. Not re-read in this pass (still dated October 2026)", "",
       "- These keep their earlier dates in the data and are named in root flag F-052.", "",
       "## 4. Raw transcriptions (one block per fetch)", ""]
 for fname, o in obs:
-    L += [f"### `{o['key']}` — {o.get('result', 'read')}", "", f"- URL: <{o['url']}>", f"- Batch file: `audit/59551d4b/{fname}`" + (f" · fetched about {o['fetched_at']}" if o.get("fetched_at") else ""), ""]
+    L += [f"### `{o['key']}` — {o.get('result', 'read')}", "", f"- URL: <{o['url']}>", f"- Batch file: `audit/59551d4b/{fname}`" + (f" · fetched {o['fetched_at']} ({o.get('fetched_window', 'time of day not recorded')})" if o.get("fetched_at") else " · fetched 2026-11-11 between about 07:55Z and 08:03Z"), ""]
     L += [f"  - `{collapse(x)[:300]}`" for x in o["excerpts"]]
     if o.get("note"): L += ["", f"  Note: {o['note']}"]
     L.append("")

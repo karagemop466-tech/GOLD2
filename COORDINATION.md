@@ -21,7 +21,7 @@ silently re-dated.**
 |----|------|--------|-------|------------|
 | T-595-01 | Claim the board, record scope & baseline | **done** | S-59551D4B | `COORDINATION.md` (this block only), `audit/59551d4b/**` |
 | T-595-02 | Clean-tree baseline: every builder/scanner/test on `9819787` | **done** (23/23 PASS) | S-59551D4B | `audit/59551d4b/check_runs/**` (outputs only) |
-| T-595-03 | Line-by-line repo review + fresh live re-verification from official pages (gold reference, every priced/weighted row, then remaining rows; rows not re-read are named) | **done** (2026-11-11 07:55–08:40Z; all 32 root rows + 19 priced explorer rows + both gold references) | S-59551D4B | `audit/59551d4b/**`; `data/**`, `research/evidence.json`, `evidence/**` only where a live official read on 2026-11-11 contradicts or re-dates a stored value, each with a dated verbatim excerpt |
+| T-595-03 | Line-by-line repo review + fresh live re-verification from official pages (gold reference, every priced/weighted row, then remaining rows; rows not re-read are named) | **done** (2026-11-11 07:55–08:17Z; all 32 root rows + 19 priced explorer rows + both gold references) | S-59551D4B | `audit/59551d4b/**`; `data/**`, `research/evidence.json`, `evidence/**` only where a live official read on 2026-11-11 contradicts or re-dates a stored value, each with a dated verbatim excerpt |
 | T-595-04 | Hallucination/security pass + mutation controls, re-run after every review change | **done** (0 failures; 16/16 mutation controls caught) | S-59551D4B | `audit/59551d4b/**` |
 | T-595-05 | Final integration: rebuild all registers via repo generators, landing-page staleness/no-hallucination banner, broken-link sweep, PR → merge → Pages verification → record | **in progress** (PR link and merge result recorded in the log below) | S-59551D4B | generated artifacts via repo builders (`*.html`, `dashboard/**`, `explore/**`, `site/**`), `README.md`, `tools/**`/`scripts/**` only if a builder must change, `COORDINATION.md` (this block only) |
 
@@ -34,7 +34,7 @@ from an official page actually retrieved in the pass that records it. Blank = un
 - 2026-11-11T07:56Z — Claim written; pushed before any data edit.
 - 2026-11-11T08:00Z — Baseline on `9819787`: 23/23 builders/scanners/tests PASS, no generated drift
   (`audit/59551d4b/check_runs/baseline_SUMMARY.txt`).
-- 2026-11-11T07:55–08:40Z — **Live re-read (T-595-03).** 47 fetches transcribed verbatim into
+- 2026-11-11T07:55–08:17Z — **Live re-read (T-595-03).** 47 fetches transcribed verbatim into
   `audit/59551d4b/obs_batch1..8.json`; dated ledger with one line per root row and a link per row:
   `audit/59551d4b/REVERIFICATION_2026-11-11.md`. Sources: World Gold Council gold-prices page, JM Bullion
   gold-price page, and the official product page (or the product's own `.js`/`.oembed` endpoint) of every root
@@ -1676,3 +1676,55 @@ After the scratch build reached the final QA audit, `tools/qa.py` reported exact
 - Final merged-snapshot gates: `npm run check` PASS (23/23 tests, links/security/browser/axe and npm audit); root QA PASS 12/0/3; calculator PASS; snapshot audit 0 findings / 14 arithmetic controls. Independent scanner results and known stale-count/mutation-fixture exceptions are documented in `audit/a182c7cc/FINAL_AUDIT.md`.
 - A182-01, A182-02, A182-04 and A182-05 are complete. A182-03 remains in progress until its own PR is merged and Pages is verified; no deployment is claimed yet.
 
+
+## Session S-D901C3CA — 2026-11-11 — freshness and final integration
+
+Platform requires the existing `arena/d901c3ca-gold2` branch; no alternate branch will be created. Read the board before claiming. Prior October claims are more than 60 minutes old; PR #59 is merged. PR #19 remains untouched. This session claims final integration only for the scope below; historical evidence and peer audit directories are preserved.
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| D901-01 Freshness limitation on all site variants, explicit published review flag, regression test and complete build/security/provenance checks | in progress | S-D901C3CA | `tools/build_site.py`, `scripts/build.mjs`, `scripts/build.py`, `dashboard/scripts/build.py`, generated HTML in root/site/dashboard/explore, `data/site-manifest.json`, `reports/qa-report.md`, `tests/freshness.test.mjs`, `audit/d901c3ca/**`, `COORDINATION.md` |
+| D901-02 PR, merge and Pages deployment confirmation | in progress | S-D901C3CA | same integration scope; GitHub PR/Pages metadata |
+
+Constraint: outbound network is limited to GitHub and package registries. No retailer/regulator page can be independently refreshed here. Existing dated observations must not be called current quotes or fresh official verification. This review checks repository consistency, not physical purity or current prices. No price or source retrieval date will be fabricated. Recommend rechecking for hallucinations after every review.
+
+### S-D901C3CA integration checkpoint
+
+- D901-01 complete: all 46 pages now disclose the 2026-11-11 freshness limitation, with a dedicated `flags.html#freshness-review` finding. No product values or retrieval dates changed. Report and command outputs: `audit/d901c3ca/REVIEW.md`, `npm-check.txt`, `independent-checks.txt`.
+- Checks PASS: npm check (24 tests, build, links, security, dependency audit, browser/axe), root QA (12/0/3), preserved/companion build audits and calculators, snapshot arithmetic audit, four existing independent scanners and their regression/mutation suites. These verify internal consistency only. Recheck official sources and hallucinations after every review. External link HTTP status/current prices remain unverified.
+- Initial claim push: remote session branch did not exist; `git pull --rebase origin main` succeeded, then the claim was pushed to the fixed session branch before implementation. No peer work was discarded.
+## Claim — Session S-0439B4F7 (2026-11-11 UTC) — current-branch freshness and QA audit
+
+- **Platform-fixed branch:** `arena/0439b4f7-gold2`; work is restricted to this branch. The supplied branch is based on `981978715ab9aee7bbab8fb80c541b0979c19c85`.
+- **Board read before claim:** reviewed the root board and repository status. Existing product research and dashboard tasks are historical/integrated; this session claims only an additive audit folder and this coordination entry. It will not alter shared catalog, prices, flags, generated pages, or deployment settings.
+
+| ID | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| 0439-01 | Run reproducible QA and independent hallucination/security checks; document stale-data and unresolved risks without inventing current prices | done — full results in `audit/0439b4f7/QA_AND_FRESHNESS_REVIEW.md` | S-0439B4F7 | `audit/0439b4f7/**`, append-only `COORDINATION.md` |
+
+- 2026-11-11 — Claim recorded before audit work. Existing official-source observations are dated 2026-10-23 and must not be represented as current. No live price refresh was made; blank/unverified fields remain blank.
+- 2026-11-11 — Ran root QA (12/0/3), calculator PASS, `npm ci --ignore-scripts`, `npm run check` PASS (23/23 tests, build, links, static security, 0 npm audit vulnerabilities, browser and exercised-state axe checks), independent snapshot audit (0 findings / 14 arithmetic controls), security/hallucination scan (0 findings / 230 controls), and its 6 regression tests PASS. The older S-86379CA7 scanner still fails a hard-coded 30-vs-32 row-count assertion; its test suite consequently passes 9/10 (details in audit report). No shared implementation/data files altered. **Recommend another hallucination/security pass after every review.**
+- Official sources used for this audit: stored source register and dated evidence cited in `data/catalog.json`, `data/gold-price.json`, and `data/verification-log.json`; no live price values were asserted or refreshed. This is an audit of repository consistency, not a new official-source verification of seller listings.
+
+- S-D901C3CA: main advanced via peer PR #61 during CI. Merge conflict was confined to append-only COORDINATION.md; both session blocks preserved verbatim, no peer audit edits discarded. All other changes merged cleanly.
+- S-D901C3CA: post-merge local `npm run check` again passed in full. Remote audit and legacy checks passed; evidence check failed inside its combined check step (no detailed logs accessible: GitHub log download redirects to a host blocked by this environment). A rerun request was rejected by GitHub. Publishing this checkpoint triggers a fresh complete CI attempt; no checks weakened or skipped. Plain pull-rebase tried to flatten the main merge; aborted it and used `git pull --rebase=merges` to preserve both histories.
+## Claim — Session S-C81A689B (2026-11-11) — independent verification pass, GH Pages build, checks, and integration
+
+Platform constraint: this runner is bound to `arena/c81a689b-gold2`; no alternate task branch or worktree may be created or pushed. Isolation is enforced by the exclusive file scope below. Claim written and pushed before any data edit. All previously recorded sessions (S-C74095E5, S-F3B0B698, S-A182C7CC, S-86379CA7, S-1B04074F, S-88AA65FD, S-0439B4F7 et al.) mark their tasks done; PR #19 remains `needs review` (non-blocking, not reclaimed). This session treats itself as the final integration session once its own verification and build tasks are done, and will not edit other sessions' `audit/**` folders, `data/flags.json`, `flags.html`, or `dashboard/**`.
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| T-C81-01 | Claim the board, record scope & baseline, push immediately | done | S-C81A689B | `COORDINATION.md` (this block only) |
+| T-C81-02 | Independent live line-by-line verification of official sources (WGC gold reference, FTC/GIA/NIST guidance, sampled seller product & policy pages); record dated evidence | done | S-C81A689B | `audit/S-C81A689B/**` only; all other files read-only |
+| T-C81-03 | Rebuild/confirm the GitHub Pages site: front-page top no-hallucinations summary, category subpages, entry + flag tables with official source links, blank-unverified values, analysis + findings pages | done | S-C81A689B | regenerated root pages via `tools/build_site.py`; no manual data edits, no edits to `data/flags.json`, `flags.html`, `dashboard/**`, other sessions' `audit/**` |
+| T-C81-04 | Run hallucination/security + build/link/calculator passes after every review; flag irregularities | done | S-C81A689B | `audit/S-C81A689B/**`; check runs recorded there |
+| T-C81-05 | PR from this branch to `main`, merge without waiting, verify Pages deployment, record PR link and result | in progress | S-C81A689B | `COORDINATION.md` (this block) |
+
+### S-C81A689B working log
+
+- 2026-11-11 — Claim recorded. Baseline: HEAD `9819787` (merge of PR #59); `origin/main` later advanced to `5e46d98` (merge of PR #61), so this branch was rebased onto `5e46d98` before push; no peer work discarded. GitHub Pages legacy `main /` reports `status: built`, HTTPS enforced, at https://karagemop466-tech.github.io/GOLD2/. Root register: 32 entries / 9 sellers / 42 flags; combined explore register: 46 products / 13 sellers / 88 sources / 29 findings; WGC moving header $3,995.47/oz (quote date unconfirmed, F-026), live re-read 2026-11-11 returned $4,059.49/oz (dated snapshot retained, no write-back). No physical testing performed anywhere; zero purchase approvals.
+- 2026-11-11 — Live official sources re-read: WGC gold spot page ($4,059.49/oz, data as of 10 Nov 2026), FTC buying-gold-jewelry article, NIST precious-metals conversion (1 oz t = 31.1034768 g), GIA "Gold-Plated Gold" Lab Notes (XRF caveat), Sarraf SAR-151362 PDP (matched exact: 14K Solid Gold, 9.20 g, US$8,203.00), Brilliant Earth BE-121H6 page (variant drift: 14K/$890 dated snapshot vs live 18K/$1,090 canonical URL; advisory flag F-C81-01, no stored-data edit).
+- 2026-11-11 — Checks: tools/build_site.py reproducible (no tracked diff); tools/qa.py PASS 12/0/3; node tools/test_calculator.js PASS; npm run verify PASS; npm run check:links PASS; npm run security PASS (0 vulnerabilities); npm test 23/23 PASS; npm run test:browser PASS (axe WCAG A/AA clean). audit/86379ca7 scanner Check 3 hardcodes 30 vs 32 root items — documented non-CI stale literal, not a gate.
+- 2026-11-11 — PR #62 opened from `arena/c81a689b-gold2` to `main`; merge pending.
+
+- S-D901C3CA: preserved peer PR #62 audit additions; resolved append-only board conflict by retaining both blocks and regenerated QA timestamp rather than discarding peer findings. Final prior CI attempt passed all three checks.

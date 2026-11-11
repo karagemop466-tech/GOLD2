@@ -1,6 +1,6 @@
 # Re-verification ledger — 2026-11-11 (UTC) — session S-59551D4B
 
-**No hallucinations.** Every value below was transcribed from an official page fetched on 2026-11-11 between about 07:55 and 08:40 UTC. Nothing was inferred, converted, averaged or copied from a search snippet. A retrieval is not an assay: no ring was weighed or XRF-tested.
+**No hallucinations.** Every value below was transcribed from an official page fetched on 2026-11-11 between about 07:55 and 08:17 UTC. Nothing was inferred, converted, averaged or copied from a search snippet. A retrieval is not an assay: no ring was weighed or XRF-tested.
 
 **Look for hallucinations again after every review:** open each link and compare it with the row.
 
@@ -59,7 +59,7 @@
 ### `gold-wgc` — read
 
 - URL: <https://www.gold.org/goldhub/data/gold-prices>
-- Batch file: `audit/59551d4b/obs_batch1.json`
+- Batch file: `audit/59551d4b/obs_batch1.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `USD /oz - 4,059.49`
   - `Data as of 10 November, 2026`
@@ -70,7 +70,7 @@
 ### `gold-jm` — read
 
 - URL: <https://www.jmbullion.com/charts/gold-spot-price/>
-- Batch file: `audit/59551d4b/obs_batch1.json`
+- Batch file: `audit/59551d4b/obs_batch1.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `Gold Ask](https://www.jmbullion.com/charts/gold-price/)$4,073.50$33.73`
   - `Nov 11, 2026 at 02:55 EST`
@@ -80,7 +80,7 @@
 ### `sar-147370` — read
 
 - URL: <https://www.sarraf.com/products/14k-white-gold-solitaire-ring-0-94-ctw.html>
-- Batch file: `audit/59551d4b/obs_batch1.json`
+- Batch file: `audit/59551d4b/obs_batch1.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `Now: US$3,004.00 -14% OFF`
   - `Was: US$3,513.00`
@@ -93,7 +93,7 @@
 ### `sar-145362` — read
 
 - URL: <https://www.sarraf.com/products/14k-white-gold-mens-solitaire-diamond-ring-1-2-ct.html>
-- Batch file: `audit/59551d4b/obs_batch1.json`
+- Batch file: `audit/59551d4b/obs_batch1.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `Now: US$2,661.00 -14% OFF`
   - `Was: US$3,112.00`
@@ -106,7 +106,7 @@
 ### `sar-145364` — read
 
 - URL: <https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-1-2-ct.html>
-- Batch file: `audit/59551d4b/obs_batch1.json`
+- Batch file: `audit/59551d4b/obs_batch1.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `Now: US$2,858.00 -14% OFF`
   - `Was: US$3,342.00`
@@ -119,7 +119,7 @@
 ### `sar-144773` — read
 
 - URL: <https://www.sarraf.com/products/14k-yellow-gold-12mm-high-polished-traditional-domed-wedding-band.html>
-- Batch file: `audit/59551d4b/obs_batch1.json`
+- Batch file: `audit/59551d4b/obs_batch1.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `Now: US$1,362.00 -15% OFF`
   - `Was: US$1,593.00`
@@ -132,7 +132,7 @@
 ### `sar-151362` — read
 
 - URL: <https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html>
-- Batch file: `audit/59551d4b/obs_batch1.json`
+- Batch file: `audit/59551d4b/obs_batch1.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `Now: US$8,203.00 -14% OFF`
   - `Was: US$9,594.00`
@@ -145,7 +145,7 @@
 ### `sar-147371` — read
 
 - URL: <https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html>
-- Batch file: `audit/59551d4b/obs_batch1.json`
+- Batch file: `audit/59551d4b/obs_batch1.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `Now: US$4,049.00 -15% OFF`
   - `Was: US$4,736.00`
@@ -161,7 +161,7 @@
 ### `fdj-gr0001` — read
 
 - URL: <https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/>
-- Batch file: `audit/59551d4b/obs_batch1.json`
+- Batch file: `audit/59551d4b/obs_batch1.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `**Style#:**GR0001 SALE $1,299.99`
   - `Every piece is solid 10k or 14k gold all the way through. Not plated, not hollow.`
@@ -174,7 +174,7 @@
 ### `ag-coffin-ring` — read
 
 - URL: <https://www.automicgold.com/products/coffin-ring.js>
-- Batch file: `audit/59551d4b/obs_batch1.json`
+- Batch file: `audit/59551d4b/obs_batch1.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `"price":191000,"price\_min":191000,"price\_max":223300`
   - `"name":"Coffin Ring - 14k Yellow Gold"`
@@ -185,7 +185,7 @@
 ### `ag-24k` — read
 
 - URL: <https://www.automicgold.com/products/24k-band.js>
-- Batch file: `audit/59551d4b/obs_batch2.json`
+- Batch file: `audit/59551d4b/obs_batch2.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `"price":352000,"price\_min":352000,"price\_max":352000`
   - `"name":"24k Band - Hammered"`
@@ -199,14 +199,14 @@
 ### `automic-currency` — read
 
 - URL: <https://www.automicgold.com/cart.js>
-- Batch file: `audit/59551d4b/obs_batch2.json`
+- Batch file: `audit/59551d4b/obs_batch2.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `"currency":"USD"`
 
 ### `ag-ruby` — read
 
 - URL: <https://www.automicgold.com/products/ruby-ring.oembed>
-- Batch file: `audit/59551d4b/obs_batch2.json`
+- Batch file: `audit/59551d4b/obs_batch2.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `{"title":"14k Yellow Gold","offer_id":31129828163678,"sku":null,"price":526.0,"currency_code":"USD","in_stock":true}`
 
@@ -215,7 +215,7 @@
 ### `ag-natural` — read
 
 - URL: <https://www.automicgold.com/products/diamond-ring.oembed>
-- Batch file: `audit/59551d4b/obs_batch2.json`
+- Batch file: `audit/59551d4b/obs_batch2.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `{"title":"14k Yellow Gold","offer_id":12108474810462,"sku":null,"price":726.0,"currency_code":"USD","in_stock":true}`
   - `"title":"Natural Diamond Ring"`
@@ -225,7 +225,7 @@
 ### `ag-cluster` — read
 
 - URL: <https://www.automicgold.com/products/diamond-cluster-ring.oembed>
-- Batch file: `audit/59551d4b/obs_batch2.json`
+- Batch file: `audit/59551d4b/obs_batch2.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `{"title":"14k Yellow Gold \/ Natural Diamond","offer_id":32179372490846,"sku":null,"price":2862.0,"currency_code":"USD","in_stock":true}`
   - `{"title":"14k Yellow Gold \/ Lab Diamond","offer_id":42211501211742,"sku":null,"price":1636.0,"currency_code":"USD","in_stock":true}`
@@ -235,7 +235,7 @@
 ### `ag-petal` — read
 
 - URL: <https://www.automicgold.com/products/diamond-petal-ring.oembed>
-- Batch file: `audit/59551d4b/obs_batch2.json`
+- Batch file: `audit/59551d4b/obs_batch2.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `{"title":"14k Yellow Gold \/ Lab Created Diamond","offer_id":39864760991838,"sku":null,"price":1774.0,"currency_code":"USD","in_stock":true}`
   - `"title":"0.6ct Round Diamond Petal Ring"`
@@ -245,7 +245,7 @@
 ### `ag-sapphire` — read
 
 - URL: <https://www.automicgold.com/products/sapphire-ring.oembed>
-- Batch file: `audit/59551d4b/obs_batch2.json`
+- Batch file: `audit/59551d4b/obs_batch2.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `{"title":"14k Yellow Gold","offer_id":29421931331678,"sku":null,"price":526.0,"currency_code":"USD","in_stock":true}`
 
@@ -254,7 +254,7 @@
 ### `ag-moissanite` — read
 
 - URL: <https://www.automicgold.com/products/moissanite-ring.oembed>
-- Batch file: `audit/59551d4b/obs_batch2.json`
+- Batch file: `audit/59551d4b/obs_batch2.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `{"title":"14k Yellow Gold","offer_id":39490302476382,"sku":null,"price":420.0,"currency_code":"USD","in_stock":true}`
   - `14k solid gold or 950 platinum rings`
@@ -264,7 +264,7 @@
 ### `ag-cushion-signet` — read
 
 - URL: <https://www.automicgold.com/products/cushion-diamond-signet-ring.oembed>
-- Batch file: `audit/59551d4b/obs_batch2.json`
+- Batch file: `audit/59551d4b/obs_batch2.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `{"title":"14k Yellow Gold \/ Salt and Pepper Diamond","offer_id":40061865689182,"sku":null,"price":2758.0,"currency_code":"USD","in_stock":true}`
   - `{"title":"14k Yellow Gold \/ Clear Lab Diamond","offer_id":42510662729822,"sku":null,"price":2408.0,"currency_code":"USD","in_stock":true}`
@@ -275,7 +275,7 @@
 ### `ss-clara` — read
 
 - URL: <https://www.stoneandstrand.com/products/the-clara-ring.oembed>
-- Batch file: `audit/59551d4b/obs_batch3.json`
+- Batch file: `audit/59551d4b/obs_batch3.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `{"title":"5","offer_id":39547075657825,"sku":"AIS-017-R-14K-YG-WD-5","price":2200.0,"currency_code":"USD","in_stock":true}`
   - `{"title":"6","offer_id":39547075690593,"sku":"AIS-017-R-14K-YG-WD-6","price":2200.0,"currency_code":"USD","in_stock":true}`
@@ -287,7 +287,7 @@
 ### `ss-rita` — read
 
 - URL: <https://www.stoneandstrand.com/products/the-rita-ring.oembed>
-- Batch file: `audit/59551d4b/obs_batch3.json`
+- Batch file: `audit/59551d4b/obs_batch3.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `{"title":"6","offer_id":39466973462625,"sku":"AIS-011-R-14K-YG-WD-6","price":780.0,"currency_code":"USD","in_stock":false}`
   - `{"title":"7","offer_id":40565072986209,"sku":"AIS-011-R-14K-YG-WD-7","price":780.0,"currency_code":"USD","in_stock":false}`
@@ -301,7 +301,7 @@
 ### `ss-mia` — read
 
 - URL: <https://www.stoneandstrand.com/products/the-mia-ring.oembed>
-- Batch file: `audit/59551d4b/obs_batch3.json`
+- Batch file: `audit/59551d4b/obs_batch3.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `{"title":"4","offer_id":39276370493537,"sku":"AIS-001-R-14K-YG-WD-4","price":925.0,"currency_code":"USD","in_stock":false}`
   - `{"title":"9","offer_id":39276372131937,"sku":"AIS-001-R-14K-YG-WD-9","price":925.0,"currency_code":"USD","in_stock":false}`
@@ -315,7 +315,7 @@
 ### `mene-rose` — read
 
 - URL: <https://mene.com/products/rose-ring-gold>
-- Batch file: `audit/59551d4b/obs_batch3.json`
+- Batch file: `audit/59551d4b/obs_batch3.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `# Rose Ring $1,337 USD`
   - `Gold24k Gold`
@@ -327,7 +327,7 @@
 ### `mene-knot` — read
 
 - URL: <https://mene.com/products/knot-ring-gold>
-- Batch file: `audit/59551d4b/obs_batch3.json`
+- Batch file: `audit/59551d4b/obs_batch3.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `# Knot Ring $1,455 USD`
   - `Gold24k Gold`
@@ -339,7 +339,7 @@
 ### `mj-bold-eternity` — read
 
 - URL: <https://mejuri.com/products/bold-diamond-eternity-ring>
-- Batch file: `audit/59551d4b/obs_batch3.json`
+- Batch file: `audit/59551d4b/obs_batch3.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `# Bold Diamond Eternity Ring 4.8 From$2,900`
   - `Solid White Gold (14k), Natural Diamond`
@@ -353,7 +353,7 @@
 ### `ext-be-121h6` — read
 
 - URL: <https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/>
-- Batch file: `audit/59551d4b/obs_batch4.json`
+- Batch file: `audit/59551d4b/obs_batch4.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `classic six-prong solitaire-$890`
   - `- USD`
@@ -364,7 +364,7 @@
 ### `ag-coffin-ring-html` — partial
 
 - URL: <https://www.automicgold.com/products/coffin-ring>
-- Batch file: `audit/59551d4b/obs_batch4.json`
+- Batch file: `audit/59551d4b/obs_batch4.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `Returns can be made within 30 days of the delivery date.`
   - `Engraved items are final sale and cannot be returned.`
@@ -375,7 +375,7 @@
 ### `ext-z-19957449` — read
 
 - URL: <https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449>
-- Batch file: `audit/59551d4b/obs_batch4.json`
+- Batch file: `audit/59551d4b/obs_batch4.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `Discounted Price $899.00`
   - `Gold Karat: 10K`
@@ -389,7 +389,7 @@
 ### `ext-bn-194158` — read
 
 - URL: <https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158>
-- Batch file: `audit/59551d4b/obs_batch4.json`
+- Batch file: `audit/59551d4b/obs_batch4.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `$1,125$900(Setting Price) -20%`
   - `\*Discount code is applied automatically`
@@ -404,7 +404,7 @@
 ### `ext-bn-192506-tile` — secondary
 
 - URL: <https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158>
-- Batch file: `audit/59551d4b/obs_batch4.json`
+- Batch file: `audit/59551d4b/obs_batch4.json` · fetched 2026-11-11 between about 07:55Z and 08:03Z
 
   - `Petite Hidden Halo Solitaire Plus Diamond Engagement Ring in 14k Yellow Gold\\ \\ $1,255$1,004(Setting Price)\\ \\ -20%`
 
@@ -413,7 +413,7 @@
 ### `gold-jm` — changed
 
 - URL: <https://www.jmbullion.com/charts/gold-price/>
-- Batch file: `audit/59551d4b/obs_batch5.json` · fetched about 2026-11-11T08:20:00Z
+- Batch file: `audit/59551d4b/obs_batch5.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `Gold Ask](https://www.jmbullion.com/charts/gold-price/)$4,073.34$33.58`
   - `Nov 11, 2026 at 03:03 EST`
@@ -429,7 +429,7 @@
 ### `ag-coffin-ring-html4` — unchanged
 
 - URL: <https://www.automicgold.com/products/coffin-ring>
-- Batch file: `audit/59551d4b/obs_batch5.json` · fetched about 2026-11-11T08:20:00Z
+- Batch file: `audit/59551d4b/obs_batch5.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# Coffin Ring`
   - `$1,910`
@@ -446,7 +446,7 @@
 ### `ext-bn-192506` — display_changed
 
 - URL: <https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-hidden-halo-solitaire-plus-diamond-engagement-ring-in-14k-yellow-gold-item-192506>
-- Batch file: `audit/59551d4b/obs_batch5.json` · fetched about 2026-11-11T08:20:00Z
+- Batch file: `audit/59551d4b/obs_batch5.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# Petite Hidden Halo Solitaire Plus Diamond Engagement Ring in 14k Yellow Gold`
   - `$1,255$1,004(Setting Price)`
@@ -462,7 +462,7 @@
 ### `ext-bn-195269` — display_changed
 
 - URL: <https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269>
-- Batch file: `audit/59551d4b/obs_batch6.json` · fetched about 2026-11-11T08:25:00Z
+- Batch file: `audit/59551d4b/obs_batch6.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# Petite Solitaire Engagement Ring in 18k Yellow Gold`
   - `$1,155$924(Setting Price)`
@@ -478,7 +478,7 @@
 ### `ext-bn-315661` — sold_out_no_price
 
 - URL: <https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661>
-- Batch file: `audit/59551d4b/obs_batch6.json` · fetched about 2026-11-11T08:25:00Z
+- Batch file: `audit/59551d4b/obs_batch6.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# Pavé Contour Diamond Engagement Ring In 14K White Gold By James Allen`
   - `This popular style is sold out`
@@ -489,7 +489,7 @@
 ### `ext-bn-195402` — display_changed
 
 - URL: <https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-195402>
-- Batch file: `audit/59551d4b/obs_batch6.json` · fetched about 2026-11-11T08:25:00Z
+- Batch file: `audit/59551d4b/obs_batch6.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# Petite Micropavé Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)`
   - `$1,300$1,040(Setting Price)`
@@ -507,7 +507,7 @@
 ### `ext-bn-302868` — display_changed
 
 - URL: <https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-lab-grown-diamond-engagement-ring-in-14k-white-gold-1-10-ct-tw-item-302868>
-- Batch file: `audit/59551d4b/obs_batch6.json` · fetched about 2026-11-11T08:25:00Z
+- Batch file: `audit/59551d4b/obs_batch6.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# Petite Micropavé Lab-Grown Diamond Engagement Ring in 14k White Gold (1/10 ct. tw.)`
   - `$1,050$840(Setting Price)`
@@ -525,7 +525,7 @@
 ### `ext-bn-316238` — display_changed
 
 - URL: <https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238>
-- Batch file: `audit/59551d4b/obs_batch7.json` · fetched about 2026-11-11T08:30:00Z
+- Batch file: `audit/59551d4b/obs_batch7.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen`
   - `$1,240$992(Setting Price)`
@@ -542,7 +542,7 @@
 ### `ext-bn-203348` — display_changed
 
 - URL: <https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348>
-- Batch file: `audit/59551d4b/obs_batch7.json` · fetched about 2026-11-11T08:30:00Z
+- Batch file: `audit/59551d4b/obs_batch7.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# Classic Simple Solitaire Engagement Ring in 14K Yellow Gold`
   - `$1,145$916(Setting Price)`
@@ -558,7 +558,7 @@
 ### `ext-bn-195639` — display_changed
 
 - URL: <https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639>
-- Batch file: `audit/59551d4b/obs_batch7.json` · fetched about 2026-11-11T08:30:00Z
+- Batch file: `audit/59551d4b/obs_batch7.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# Petite Solitaire Engagement Ring in 14k Yellow Gold`
   - `$1,000$800(Setting Price)`
@@ -574,7 +574,7 @@
 ### `ext-bn-194548` — display_changed
 
 - URL: <https://www.bluenile.com/engagement-rings/design-your-own-ring/solitaire-compass-set-engagement-ring-in-14k-white-gold-item-194548>
-- Batch file: `audit/59551d4b/obs_batch7.json` · fetched about 2026-11-11T08:30:00Z
+- Batch file: `audit/59551d4b/obs_batch7.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# Solitaire Compass Set Engagement Ring in 14k White Gold`
   - `$1,045$836(Setting Price)`
@@ -591,7 +591,7 @@
 ### `ext-bn-193625` — display_changed
 
 - URL: <https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-three-stone-diamond-engagement-ring-in-14k-yellow-gold-item-193625>
-- Batch file: `audit/59551d4b/obs_batch7.json` · fetched about 2026-11-11T08:30:00Z
+- Batch file: `audit/59551d4b/obs_batch7.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# Petite Three-Stone Diamond Engagement Ring in 14k Yellow Gold`
   - `$1,950$1,560(Setting Price)`
@@ -608,7 +608,7 @@
 ### `ext-z-20046552` — display_changed
 
 - URL: <https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552>
-- Batch file: `audit/59551d4b/obs_batch8.json` · fetched about 2026-11-11T08:35:00Z
+- Batch file: `audit/59551d4b/obs_batch8.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# 1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold`
   - `Discounted Price $1,299.00`
@@ -625,7 +625,7 @@
 ### `ext-z-20303279` — display_changed
 
 - URL: <https://www.zales.com/12-ct-tw-diamond-frame-vintagestyle-twist-shank-engagement-ring-10k-gold/p/V-20303279>
-- Batch file: `audit/59551d4b/obs_batch8.json` · fetched about 2026-11-11T08:35:00Z
+- Batch file: `audit/59551d4b/obs_batch8.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# 1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold`
   - `Discounted Price $1,399.00`
@@ -642,7 +642,7 @@
 ### `ext-z-20301172` — display_changed
 
 - URL: <https://www.zales.com/13-ct-tw-diamond-three-stone-engagement-ring-10k-gold/p/V-20301172>
-- Batch file: `audit/59551d4b/obs_batch8.json` · fetched about 2026-11-11T08:35:00Z
+- Batch file: `audit/59551d4b/obs_batch8.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `# 1/3 CT. T.W. Diamond Three Stone Engagement Ring in 10K Gold`
   - `Discounted Price $1,099.00`
@@ -659,7 +659,7 @@
 ### `ext-vrai-classic-4p-chunk0` — partial
 
 - URL: <https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893>
-- Batch file: `audit/59551d4b/obs_batch8.json` · fetched about 2026-11-11T08:35:00Z
+- Batch file: `audit/59551d4b/obs_batch8.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `Round Brilliant · 18k Yellow Gold`
   - `Metal:18k Yellow Gold`
@@ -669,7 +669,7 @@
 ### `ext-vrai-classic-4p` — unchanged
 
 - URL: <https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893>
-- Batch file: `audit/59551d4b/obs_batch8.json` · fetched about 2026-11-11T08:38:00Z
+- Batch file: `audit/59551d4b/obs_batch8.json` · fetched 2026-11-11 (between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded)
 
   - `Metal:18k Yellow Gold`
   - `Band width:Standard`

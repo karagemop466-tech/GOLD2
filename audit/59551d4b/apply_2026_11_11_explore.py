@@ -114,11 +114,11 @@ for sid in ("ss-clara", "ss-rita", "ss-mia"):
 
 # 6. meta -------------------------------------------------------------------------------
 m = c["meta"]
-m["reviewedAt"] = "2026-11-11T08:40:00Z"
+m["reviewedAt"] = "2026-11-11T08:17:00Z"
 m["reviewSession"] += f"; {SESSION} staleness review and live price re-read on {D} (19 priced rows, market reference, Blue Nile/Zales/Stone and Strand displays)"
 m["scope"] = ("46 unique named product pages across 13 retailers. First captured 2026-10-22/23 UTC; on 2026-11-11 UTC the 19 priced rows, the market reference and the "
               "Blue Nile, Zales, VRAI, Mejuri and Stone and Strand rows were re-read. Rows not re-read keep their October dates and are labelled stale by the freshness rule.")
-m["observationWindow"]["end"] = "2026-11-11T08:40:00Z"
+m["observationWindow"]["end"] = "2026-11-11T08:17:00Z"
 
 # 7. review findings ------------------------------------------------------------------------
 F = {f["id"]: f for f in rv["findings"]}

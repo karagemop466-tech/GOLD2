@@ -2,7 +2,7 @@
  {
   "key": "ext-bn-316238",
   "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238",
-  "fetched_at": "2026-11-11T08:30:00Z",
+  "fetched_at": "2026-11-11",
   "result": "display_changed",
   "excerpts": [
    "# Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen",
@@ -22,12 +22,13 @@
    "width": "1.50mm",
    "title": "Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen"
   },
-  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null."
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
  },
  {
   "key": "ext-bn-203348",
   "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
-  "fetched_at": "2026-11-11T08:30:00Z",
+  "fetched_at": "2026-11-11",
   "result": "display_changed",
   "excerpts": [
    "# Classic Simple Solitaire Engagement Ring in 14K Yellow Gold",
@@ -46,12 +47,13 @@
    "width": "2.40mm",
    "title": "Classic Simple Solitaire Engagement Ring in 14K Yellow Gold"
   },
-  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null."
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
  },
  {
   "key": "ext-bn-195639",
   "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639",
-  "fetched_at": "2026-11-11T08:30:00Z",
+  "fetched_at": "2026-11-11",
   "result": "display_changed",
   "excerpts": [
    "# Petite Solitaire Engagement Ring in 14k Yellow Gold",
@@ -70,12 +72,13 @@
    "width": "1.80mm",
    "title": "Petite Solitaire Engagement Ring in 14k Yellow Gold"
   },
-  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null."
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
  },
  {
   "key": "ext-bn-194548",
   "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/solitaire-compass-set-engagement-ring-in-14k-white-gold-item-194548",
-  "fetched_at": "2026-11-11T08:30:00Z",
+  "fetched_at": "2026-11-11",
   "result": "display_changed",
   "excerpts": [
    "# Solitaire Compass Set Engagement Ring in 14k White Gold",
@@ -95,12 +98,13 @@
    "width": "2.00mm",
    "title": "Solitaire Compass Set Engagement Ring in 14k White Gold"
   },
-  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null."
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
  },
  {
   "key": "ext-bn-193625",
   "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-three-stone-diamond-engagement-ring-in-14k-yellow-gold-item-193625",
-  "fetched_at": "2026-11-11T08:30:00Z",
+  "fetched_at": "2026-11-11",
   "result": "display_changed",
   "excerpts": [
    "# Petite Three-Stone Diamond Engagement Ring in 14k Yellow Gold",
@@ -120,6 +124,7 @@
    "width": "1.80mm",
    "title": "Petite Three-Stone Diamond Engagement Ring in 14k Yellow Gold"
   },
-  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null."
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
  }
 ]

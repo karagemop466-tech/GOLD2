@@ -291,6 +291,7 @@ def render_shell(title: str, active: str, body: str, extra_js: list[str] | None 
   </div>
 </header>
 <main id="main-content"><div class="wrap">
+<section class="policy-banner" aria-label="Freshness limitation"><strong>Freshness review · 2026-11-11 · Needs review.</strong> Current prices and availability are unverified. Stored amounts and gold quotes are historical observations, not live offers. Prices were last re-read from the official pages on 2026-11-11 by session S-59551D4B, and each row shows its own re-read date; an earlier review the same day had no access to retailer sites and refreshed nothing. Other fields keep older dates. No purchase is approved. Recheck official links and look for hallucinations after every review. <a href="../flags.html#freshness-review">Review limitation</a>.</section>
 <section class="policy-banner" aria-labelledby="no-hallucination-heading">
   <span class="policy-pill">Strict No-Hallucinations Policy</span>
   <h2 id="no-hallucination-heading">No hallucinations. No invented prices. Dated evidence; blanks for unknowns.</h2>
