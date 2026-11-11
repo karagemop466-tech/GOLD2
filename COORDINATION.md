@@ -1605,3 +1605,36 @@ After the scratch build reached the final QA audit, `tools/qa.py` reported exact
 - Final merged-snapshot gates: `npm run check` PASS (23/23 tests, links/security/browser/axe and npm audit); root QA PASS 12/0/3; calculator PASS; snapshot audit 0 findings / 14 arithmetic controls. Independent scanner results and known stale-count/mutation-fixture exceptions are documented in `audit/a182c7cc/FINAL_AUDIT.md`.
 - A182-01, A182-02, A182-04 and A182-05 are complete. A182-03 remains in progress until its own PR is merged and Pages is verified; no deployment is claimed yet.
 
+
+## Claim — Session S-62623694 (2026-11-11 UTC) — freshness re-verification + requirement-coverage build
+
+Platform constraint: this runner is bound to branch `arena/62623694-gold2` (base `9819787`, the merge of PR #59).
+Per the board rule, `session-<id>/<task>` branches cannot be created or pushed, so isolation is enforced by the file
+scope below. Claim written before any data edit. **No peer claim is live:** every PR is merged except PR #19
+(`arena/70b76800-gold2`, last updated 2026-10-23T00:09Z — >19 days stale, already logged by S-C74095E5 and
+S-A182C7CC as `needs review` and non-blocking), and no other session has written to the board since 2026-10-24.
+PR #19 is left untouched, not merged, not closed, not duplicated.
+
+**Trigger:** the repo was last verified 2026-10-23/24. All 19 assigned prices and the 68 blank rows are 19 days old.
+This session re-reads every priced official page, records dated observations, and builds the requirement-coverage
+report the brief asks for.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T-626-01 | Claim the board; record scope and measured baseline | **done** | S-62623694 | `COORDINATION.md` (this block only), `audit/62623694/**` |
+| T-626-02 | Baseline: run every CI-gated builder/scanner/test before editing | **in progress** | S-62623694 | `audit/62623694/check_runs/**` (outputs only) |
+| T-626-03 | Fresh dated re-verification of all 19 assigned-price official product pages + official gold reference | **in progress** | S-62623694 | `audit/62623694/live_verification_2026-11-11.md`; data edits only where a live official read contradicts a stored value, each with dated evidence |
+| T-626-04 | Line-by-line requirement coverage: 12-point checklist + 13 `requirements.json` gates mapped to evidence, blanks kept blank | in progress | S-62623694 | `audit/62623694/**`, additive `data/requirements*` only |
+| T-626-05 | Independent hallucination/security scanner for this session + mutation controls, re-run after every review change | in progress | S-62623694 | `audit/62623694/**` |
+| T-626-06 | Rebuild registers, broken-link sweep, PR → merge → Pages verification → record | in progress | S-62623694 | generated artifacts via repo builders, `COORDINATION.md` |
+
+### S-62623694 working log
+
+- 2026-11-11 — Board read on `9819787`. Measured baseline before editing: catalog 46 products / 13 sellers /
+  88 sources, 19 assigned prices and 27 blank; root register 32 rows; `data/flags.json` = 42 flags (F-001–F-045,
+  gaps F-012 and F-040); `data/requirements.json` carries 13 checklist gates; GitHub Pages is legacy `main` `/`.
+  Standing rule re-affirmed: **no invented prices or specs — blank means unverified, never zero or estimated**,
+  and the hallucination/security pass runs after every review change.
+- 2026-11-11 — Live-fetch capability confirmed: `fetch_page` reaches retailer pages; `curl` is blocked by the
+  sandbox for arbitrary hosts. One hand-constructed Sarraf URL 404'd during reconnaissance, which is a live
+  reminder that **no URL is ever inferred — only URLs stored in `research/evidence.json` are re-opened.**
