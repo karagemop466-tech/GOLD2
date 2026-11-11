@@ -82,6 +82,51 @@ duplicated or merged by this session.
   rows with blank structured prices and verbatim unassigned displays. T-C74-01..06 are **done**; this
   record lands via a small follow-up PR from the same branch. PR #19 remains `needs review` (non-blocking).
 
+## Claim — Session S-DA12490D (2026-11-11T07:58Z UTC) — new-candidate research, checklist scorecard, cross-branch claim reconciliation
+
+Platform constraint: this session is bound to branch `arena/da12490d-gold2` (base `9819787`); no other branch or
+worktree may be created or pushed, so the board's `session-<id>/<task>` naming is recorded as not creatable.
+Isolation is enforced by the file scope below. Claim written and pushed before any other edit.
+
+**Board state read before claiming (2026-11-11T07:57Z).** `main` = `9819787` (merge of PR #59, 2026-10-24). Because
+every session is locked to its own branch, **a claim pushed today is invisible on `main`**. I therefore read every
+remote branch head through the GitHub API and found **five live peer claims made minutes before mine** — recorded
+here so they are visible in one place. I do not start any task they claim.
+
+| Live peer (branch) | Claim commit time (UTC) | What it claims | Shared files it claims |
+|---|---|---|---|
+| S-0439B4F7 (`arena/0439b4f7-gold2`) | 2026-11-11T07:55:47Z | additive freshness/QA audit | `audit/0439b4f7/**` only |
+| S-D901C3CA (`arena/d901c3ca-gold2`) | 2026-11-11T07:56:14Z | freshness limitation on all site variants + **final integration** | `tools/build_site.py`, `scripts/build.mjs`, `scripts/build.py`, `dashboard/scripts/build.py`, generated HTML (root/site/dashboard/explore), `data/site-manifest.json`, `reports/qa-report.md`, `tests/freshness.test.mjs` |
+| S-59551D4B (`arena/59551d4b-gold2`) | 2026-11-11T07:56:16Z | fresh live re-verification of existing rows + integration | `data/**`, `research/evidence.json`, `evidence/**` (existing rows), generated pages, `README.md` |
+| S-C81A689B (`arena/c81a689b-gold2`) | 2026-11-11T07:56:17Z | independent live verification (sampled) + root rebuild + integration | `audit/S-C81A689B/**`, regenerated root pages |
+| S-36620E91 (`arena/36620e91-gold2`) | 2026-11-11T07:56:42Z | fresh live re-verification of existing rows + final integration | `audit/36620e91/**`, `data/**` where a live read contradicts, generated pages |
+
+**Irregularity logged (needs review, non-blocking):** four of the five peers each claim *final integration* over the
+same shared outputs (generated pages, `data/**`). None could see the others. Under the board's own rule the earliest
+claim wins (S-D901C3CA, 07:56:14Z). This session does **not** add a sixth competing claim on those files.
+
+**Scope chosen so it does not overlap any live claim** (existing rows, existing prices, generators, index and
+navigation are all left to the peers above):
+
+| ID | Task | Status | Owner | File scope (exclusive) |
+|----|------|--------|-------|------------------------|
+| T-DA1-01 | Claim the board; record the five live cross-branch claims | in progress | S-DA12490D | `COORDINATION.md` (this block only) |
+| T-DA1-02 | Clean-tree baseline of every builder/scanner/test on `9819787`; line-by-line repo review, irregularities listed | unclaimed → S-DA12490D | S-DA12490D | `audit/da12490d/**` (new files only) |
+| T-DA1-03 | **New-candidate research (additive):** rings not yet in any register, official seller pages only, kept only when the page itself states solid gold + karat + price; gram weight recorded only if stated, otherwise blank + flagged | unclaimed → S-DA12490D | S-DA12490D | `audit/da12490d/**` (new evidence + candidate JSON). No edit to existing rows |
+| T-DA1-04 | **Checklist scorecard:** every register row scored against the 12-point buying checklist strictly from stored evidence (verified / stated-by-seller / blank), plus dated price-vs-gold-value arithmetic where a seller states grams | unclaimed → S-DA12490D | S-DA12490D | `audit/da12490d/**` and new files only (names logged here before creation) |
+| T-DA1-05 | Hallucination/security pass + mutation controls on this session's own outputs, re-run after every review step | unclaimed → S-DA12490D | S-DA12490D | `audit/da12490d/**` |
+| T-DA1-06 | Publish this session's additive outputs: PR → merge → Pages check → record. Shared tables/index/navigation are changed by this session **only** if the integration claims above are done or stale under the 60-minute rule; otherwise a request is logged here | unclaimed → S-DA12490D | S-DA12490D | `COORDINATION.md` (this block only) |
+
+Rules carried forward: **no hallucinations.** No price, weight, karat, date or policy value is published without a
+field-scoped excerpt from an official page actually retrieved in the pass that records it. Blank = unverified, never
+zero or estimated. **Run the hallucination/security pass after every review step and keep looking for
+hallucinations.** PR #19 stays `needs review` (non-blocking); not merged, closed or duplicated here.
+
+### S-DA12490D working log
+
+- 2026-11-11T07:58Z — Claim written; pushed before any other edit. Live-fetch capability confirmed with one read of
+  the World Gold Council page (value recorded later in `audit/da12490d/`, not used anywhere yet).
+
 ## Claim — Session S-F3B0B698 (2026-10-23T23:42Z UTC) — independent read-only audit
 
 Platform constraint: this runner is bound to `arena/f3b0b698-gold2`; no alternate task branch or worktree may be created or pushed. Before claiming, the remote branch and open-PR state were inspected. **S-88AA65FD is active** (claim commit `dd788fd`, 2026-10-23T23:39:38Z) and owns live high-risk source re-verification (`audit/88aa65fd/**`), hallucination-driven `data/**`/`README.md` changes, and generated-page integration. This session does not edit or duplicate those scopes. Stale PR #19 and older branches are not reclaimed.
