@@ -44,6 +44,7 @@ async function page(file, {title, eyebrow, intro='', body, active='overview', wi
 <body data-base="${base}"><a class="skip-link" href="#main">Skip to main content</a>
 <header class="site-header"><div class="header-inner"><a class="brand" href="${base}"><span class="brand-symbol" aria-hidden="true"></span><span>GOLD<span class="brand-period">.</span><small>ENGAGEMENT RING RESEARCH</small></span></a><nav aria-label="Main navigation">${nav}</nav></div></header>
 <main id="main" class="${wide ? 'wide' : ''}">${common.policy.replace('BASE',base)}
+<section class="policy" aria-label="Freshness limitation"><div><p><strong>Freshness review · 2026-11-11 · Needs review.</strong> Current prices and availability are unverified. Stored amounts and gold quotes are historical observations, not live offers. This session cannot access retailer or regulator sites; it has not independently refreshed their claims. No purchase is approved. Recheck official links and look for hallucinations after every review. <a href="${base}../flags.html#freshness-review">Review limitation</a>.</p></div></section>
 ${active === 'overview' ? '' : `<div class="breadcrumb"><a href="${base}">Overview</a><span aria-hidden="true">/</span><span>${e(title)}</span></div>`}
 ${eyebrow ? `<p class="eyebrow">${e(eyebrow)}</p>` : ''}
 ${active === 'overview' ? '' : `<div class="page-title"><h1>${e(title)}</h1>${intro ? `<p class="lead">${intro}</p>` : ''}</div>`}

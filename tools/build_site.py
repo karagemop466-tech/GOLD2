@@ -181,6 +181,7 @@ def page(title: str, active: str, body: str, retrieved: str, include_calculator:
   <nav class="main" aria-label="Main navigation">{links}</nav>
 </div></header>
 <main id="main-content"><div class="wrap">
+<section class="note" aria-label="Freshness limitation"><strong>Freshness review · 2026-11-11 · Needs review.</strong> Current prices and availability are unverified. Stored amounts and gold quotes are historical observations, not live offers. This session cannot access retailer or regulator sites; it has not independently refreshed their claims. No purchase is approved. Recheck official links and look for hallucinations after every review. <a href="flags.html#freshness-review">Review limitation</a>.</section>
 <section class="note"><strong>No hallucinations. No invented prices.</strong> Root register covers {SHELL["items"]} source-checked entries across {SHELL["sellers"]} official sellers (including <a href="solid-gold.html"><strong>Explicit Solid Gold</strong></a>) and {SHELL["flags"]} published flags. Open the <a href="dashboard/index.html"><strong>14-Page Companion Dashboard &amp; Gemstone Mass Calculator →</strong></a>, <a href="explore/"><strong>all {SHELL["explore_products"]} researched entries across {SHELL["explore_sellers"]} sellers →</strong></a>, <a href="verification.html">dated re-verification log</a>, or <a href="flags.html">Flagged for Review</a>. Keep checking primary pages for hallucinations after every review.</section>
 {body}
 </div></main>
@@ -532,6 +533,10 @@ def build_flags(flags, items, retrieved):
     weight_missing = sum(1 for item in items if item.get("weight_g") is None)
     body = f"""
 <div class="eyebrow">Open limitations, discrepancies, and policy cautions</div><h1>Flagged for review</h1>
+<article class="flag high" id="freshness-review"><h2>Freshness review — all current prices unverified</h2>
+<p>2026-11-11: This session reviewed stored evidence and code only. Outbound access is limited to GitHub and package registries. No live official product, policy, gold-price, or regulatory page was retrieved in this review. Existing observation dates are preserved; no price was refreshed or invented. The registers are bounded research lists, not a complete market inventory.</p>
+<p><strong>Required follow-up:</strong> Re-open every row’s official product and policy links before purchase. Confirm configuration, currency, solid-gold wording, metal-only grams, marks and return/testing permission. Current prices remain unverified. Never treat an automated PASS as source verification or a purity test.</p>
+<p>Official follow-up links (not fetched in this session): <a href="https://www.gold.org/goldhub/data/gold-prices">World Gold Council gold reference</a> · <a href="https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3">eCFR gold-content guidance</a>. See the product/category rows for each seller’s official product link and historical evidence.</p></article>
 <p class="lead">Every unresolved value, ambiguity, source-scope limit, and material policy restriction is kept visible. Flagged rows remain published with sources; no gap is silently filled and no row is presented as physically verified.</p>
 <div class="note" style="margin-bottom:18px"><strong>No-hallucination policy, applied.</strong> {solid_n} of {len(items)} rows lack item-specific “solid gold” wording; {hallmark_n} of {len(items)} lack complete physical hallmark + maker’s-mark documentation; {weight_missing} lack published metal weight. These are evidence gaps, not findings that a ring is fake. No physical inspection or XRF assay was performed (F-024).</div>
 <div class="grid" style="grid-template-columns:1fr">{''.join(cards)}</div>

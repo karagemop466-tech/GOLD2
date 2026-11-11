@@ -1616,3 +1616,9 @@ Platform requires the existing `arena/d901c3ca-gold2` branch; no alternate branc
 | D901-02 PR, merge and Pages deployment confirmation | in progress | S-D901C3CA | same integration scope; GitHub PR/Pages metadata |
 
 Constraint: outbound network is limited to GitHub and package registries. No retailer/regulator page can be independently refreshed here. Existing dated observations must not be called current quotes or fresh official verification. This review checks repository consistency, not physical purity or current prices. No price or source retrieval date will be fabricated. Recommend rechecking for hallucinations after every review.
+
+### S-D901C3CA integration checkpoint
+
+- D901-01 complete: all 46 pages now disclose the 2026-11-11 freshness limitation, with a dedicated `flags.html#freshness-review` finding. No product values or retrieval dates changed. Report and command outputs: `audit/d901c3ca/REVIEW.md`, `npm-check.txt`, `independent-checks.txt`.
+- Checks PASS: npm check (24 tests, build, links, security, dependency audit, browser/axe), root QA (12/0/3), preserved/companion build audits and calculators, snapshot arithmetic audit, four existing independent scanners and their regression/mutation suites. These verify internal consistency only. Recheck official sources and hallucinations after every review. External link HTTP status/current prices remain unverified.
+- Initial claim push: remote session branch did not exist; `git pull --rebase origin main` succeeded, then the claim was pushed to the fixed session branch before implementation. No peer work was discarded.
