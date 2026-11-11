@@ -1605,3 +1605,17 @@ After the scratch build reached the final QA audit, `tools/qa.py` reported exact
 - Final merged-snapshot gates: `npm run check` PASS (23/23 tests, links/security/browser/axe and npm audit); root QA PASS 12/0/3; calculator PASS; snapshot audit 0 findings / 14 arithmetic controls. Independent scanner results and known stale-count/mutation-fixture exceptions are documented in `audit/a182c7cc/FINAL_AUDIT.md`.
 - A182-01, A182-02, A182-04 and A182-05 are complete. A182-03 remains in progress until its own PR is merged and Pages is verified; no deployment is claimed yet.
 
+
+## Claim — Session S-36620E91 (2026-11-11 UTC) — fresh verification pass + final integration
+
+Platform constraint: this session is bound to branch `arena/36620e91-gold2`; no other branch or worktree may be created or pushed. Isolation is enforced by the file scope below. Claim written and pushed before any data edit.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T-366-01 | Claim the board, record scope & baseline | in progress | S-36620E91 | `COORDINATION.md`, `audit/36620e91/**` |
+| T-366-02 | Clean-tree baseline: builders/scanners/tests on `9819787` | unclaimed | S-36620E91 | `audit/36620e91/check_runs/**` (outputs only) |
+| T-366-03 | Fresh live line-by-line re-verification from official pages (gold reference + priced/weighted rows first) | unclaimed | S-36620E91 | `audit/36620e91/live_verification_2026-11-11.md`; data edits only where a live official read contradicts a stored value, each with dated evidence |
+| T-366-04 | Independent hallucination/security scanner + mutation controls, re-run after every review change | unclaimed | S-36620E91 | `audit/36620e91/**` |
+| T-366-05 | Rebuild all registers, broken-link sweep, preview, PR → merge → Pages verification → record | unclaimed | S-36620E91 | generated artifacts via repo builders, `COORDINATION.md` |
+
+Standing rule re-affirmed: **run the hallucination/security pass after every review change and keep looking for hallucinations.** Blank = unverified, never zero or estimated. No price, weight, karat or policy value is published without a field-scoped excerpt from an official page actually retrieved in the pass that records it. PR #19 (`arena/70b76800-gold2`, open since 2026-10-23) is left untouched and logged as needs-review (non-blocking), not merged or closed by this session.
