@@ -6,6 +6,6 @@ test_clean_fixture_passes_with_zero_findings (__main__.TestSecurityAndHallucinat
 test_detects_hallucinated_color_unlinked_row_unpinned_action_and_low_contrast (__main__.TestSecurityAndHallucinationScanner.test_detects_hallucinated_color_unlinked_row_unpinned_action_and_low_contrast) ... ok
 
 ----------------------------------------------------------------------
-Ran 6 tests in 0.092s
+Ran 6 tests in 0.053s
 
 OK

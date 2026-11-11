@@ -19,11 +19,11 @@ silently re-dated.**
 
 | ID | Task | Status | Owner | File scope |
 |----|------|--------|-------|------------|
-| T-595-01 | Claim the board, record scope & baseline | in progress | S-59551D4B | `COORDINATION.md` (this block only), `audit/59551d4b/**` |
-| T-595-02 | Clean-tree baseline: every builder/scanner/test on `9819787` | unclaimed → S-59551D4B | S-59551D4B | `audit/59551d4b/check_runs/**` (outputs only) |
-| T-595-03 | Line-by-line repo review + fresh live re-verification from official pages (gold reference, every priced/weighted row, then remaining rows; rows not re-read are named) | unclaimed → S-59551D4B | S-59551D4B | `audit/59551d4b/**`; `data/**`, `research/evidence.json`, `evidence/**` only where a live official read on 2026-11-11 contradicts or re-dates a stored value, each with a dated verbatim excerpt |
-| T-595-04 | Hallucination/security pass + mutation controls, re-run after every review change | unclaimed → S-59551D4B | S-59551D4B | `audit/59551d4b/**` |
-| T-595-05 | Final integration: rebuild all registers via repo generators, landing-page staleness/no-hallucination banner, broken-link sweep, PR → merge → Pages verification → record | unclaimed → S-59551D4B | S-59551D4B | generated artifacts via repo builders (`*.html`, `dashboard/**`, `explore/**`, `site/**`), `README.md`, `tools/**`/`scripts/**` only if a builder must change, `COORDINATION.md` (this block only) |
+| T-595-01 | Claim the board, record scope & baseline | **done** | S-59551D4B | `COORDINATION.md` (this block only), `audit/59551d4b/**` |
+| T-595-02 | Clean-tree baseline: every builder/scanner/test on `9819787` | **done** (23/23 PASS) | S-59551D4B | `audit/59551d4b/check_runs/**` (outputs only) |
+| T-595-03 | Line-by-line repo review + fresh live re-verification from official pages (gold reference, every priced/weighted row, then remaining rows; rows not re-read are named) | **done** (2026-11-11 07:55–08:40Z; all 32 root rows + 19 priced explorer rows + both gold references) | S-59551D4B | `audit/59551d4b/**`; `data/**`, `research/evidence.json`, `evidence/**` only where a live official read on 2026-11-11 contradicts or re-dates a stored value, each with a dated verbatim excerpt |
+| T-595-04 | Hallucination/security pass + mutation controls, re-run after every review change | **done** (0 failures; 16/16 mutation controls caught) | S-59551D4B | `audit/59551d4b/**` |
+| T-595-05 | Final integration: rebuild all registers via repo generators, landing-page staleness/no-hallucination banner, broken-link sweep, PR → merge → Pages verification → record | **in progress** (PR link and merge result recorded in the log below) | S-59551D4B | generated artifacts via repo builders (`*.html`, `dashboard/**`, `explore/**`, `site/**`), `README.md`, `tools/**`/`scripts/**` only if a builder must change, `COORDINATION.md` (this block only) |
 
 Rules carried forward: no price, weight, karat, date or policy value is published without a field-scoped excerpt
 from an official page actually retrieved in the pass that records it. Blank = unverified, never zero or estimated.
@@ -32,6 +32,46 @@ from an official page actually retrieved in the pass that records it. Blank = un
 ### S-59551D4B working log
 
 - 2026-11-11T07:56Z — Claim written; pushed before any data edit.
+- 2026-11-11T08:00Z — Baseline on `9819787`: 23/23 builders/scanners/tests PASS, no generated drift
+  (`audit/59551d4b/check_runs/baseline_SUMMARY.txt`).
+- 2026-11-11T07:55–08:40Z — **Live re-read (T-595-03).** 47 fetches transcribed verbatim into
+  `audit/59551d4b/obs_batch1..8.json`; dated ledger with one line per root row and a link per row:
+  `audit/59551d4b/REVERIFICATION_2026-11-11.md`. Sources: World Gold Council gold-prices page, JM Bullion
+  gold-price page, and the official product page (or the product's own `.js`/`.oembed` endpoint) of every root
+  row at Blue Nile, Zales, VRAI, Brilliant Earth, Automic Gold, Mejuri, Sarraf, Factory Direct Jewelry and
+  Stone and Strand, plus Menē for the explorer. **Changed and applied:** WGC header 4,059.49 USD/ozt (chart
+  blocks dated 10 November 2026; quote time still not shown, F-026); JM Bullion 4,072.47 USD; Menē Rose 1,337 and
+  Knot 1,455 USD; ten Blue Nile displays (struck amount + 20%-off amount); three Zales displays; Blue Nile
+  315661 withdrawn (sold out). **Unchanged:** all 12 assigned root prices, all 9 published gram weights, 17 of 19
+  explorer prices. Old values are kept as dated history (`superseded_observations`, `superseded_displays`,
+  `supersededDisplay`), never as current values.
+- **Irregularities flagged (published on `flags.html`, none block the merge):** `F-046` Blue Nile promotion shows
+  two amounts; `F-047` Blue Nile 315661 sold out; `F-048` Zales displays changed and two pages print an item
+  number that differs from the URL id; `F-049` Stone and Strand Clara priced by size; `F-050` Rita and Mia out of
+  stock and final sale; `F-051` Factory Direct $0.00 Black Friday placeholder block; `F-052` staleness and the
+  list of fields NOT re-read (band dimensions, Brilliant Earth metal block, Stone and Strand HTML, retailer
+  policy pages, BBB profiles, regulatory references, Catbird/Auvere/Quince pages, most Automic gram weights in
+  the explorer, the Factory Direct gram-weight line); `F-053` Mejuri holiday return window. Explorer findings
+  29 → 36 (adds the JM Bullion ticker-vs-body difference: 4,073.34 vs 4,072.47 on one fetch, not averaged).
+  Dashboard flag `DF-013`.
+- **Apply scripts (assert-guarded, run once):** `audit/59551d4b/apply_2026_11_11.py` (root register, flags,
+  verification log, evidence files) and `audit/59551d4b/apply_2026_11_11_explore.py` (catalog, evidence, review).
+  Builder changes inside this claim's scope: `tools/build_site.py` (landing-page "How current is this page?"
+  card under the NO HALLUCINATIONS banner; per-row "price re-read" / "weight re-read" dates; "full capture"
+  label), `dashboard/scripts/canonical.py` (price note carries the re-read date and the capture date),
+  `dashboard/scripts/build.py` (`DF-013`), `README.md` counts and dated summary.
+- **Hallucination/security pass (T-595-04), re-run after every change:** `audit/59551d4b/hallucination_scan.py`
+  traces 43 root values and 19 explorer prices digit-for-digit to the raw transcriptions, checks gold
+  references, superseded values, flags, front-page banner, per-row official links and dates, CSP/inline-script/
+  plain-http/credential patterns, future dates and the verification log: **0 failures, 16/16 mutation controls
+  caught**. Its first run caught a real defect (ten row notes re-rendered a superseded display); fixed before
+  commit. The scan is pinned to this pass date, so it is not added as a CI gate. Full suite:
+  `bash audit/59551d4b/run_all_checks.sh final2` → **24/24 PASS**, no generated drift.
+- **Peer change requests still open (not edited here, outside scope):** `audit/86379ca7/hallucination_security_scanner.py`
+  Check 3 and `audit/1b04074f/hallucination_scanner.py` C13 hard-code old register sizes; neither is a CI gate.
+  PR #19 stays `needs review`. The legacy two-setting `site/` keeps its 2026-10-22 check date (no prices published there).
+- **Recommendation: look for hallucinations again.** This pass is already ageing; Blue Nile and Zales promotions
+  end within days. Re-open each official link before acting on a row.
 
 ## Claim — Session S-C74095E5 (2026-10-23 23:39Z UTC) — fresh verification pass + final integration
 

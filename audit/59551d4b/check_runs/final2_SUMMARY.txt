@@ -23,13 +23,3 @@ PASS  explore_check_links
 PASS  explore_security
 PASS  scan_59551d4b
 --- git status (generated files must be reproducible) ---
- M 18k.html
- M data/listings/18k.json
- M data/listings/halo-pave.json
- M data/listings/solitaire.json
- M data/listings/three-stone-vintage.json
- M data/verification-log.json
- M halo-pave.html
- M solitaire.html
- M three-stone-vintage.html
- M verification.html
