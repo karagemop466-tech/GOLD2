@@ -2,6 +2,37 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Claim — Session S-59551D4B (2026-11-11T07:56Z UTC) — staleness review, fresh live re-verification, integration
+
+Platform constraint: this session is bound to branch `arena/59551d4b-gold2`; no other branch or worktree may be
+created or pushed, so the board's `session-<id>/<task>` naming is recorded as not creatable. Isolation is enforced
+by the file scope below. Board state read before claiming (2026-11-11T07:56Z): `main` = `9819787` (merge of PR #59,
+2026-10-24T00:45Z); **no remote branch has a commit newer than 2026-10-24**, so every earlier claim is >60 minutes
+old with no commits and no peer session is live. Open PR #19 (`arena/70b76800-gold2`, last updated
+2026-10-23T00:09Z) stays `needs review` (non-blocking) and is not merged, closed or duplicated here.
+
+**Why this pass exists:** every price, weight and gold-reference observation in the repo is dated 2026-10-22/23 —
+**19 days old on 2026-11-11**. A dated observation is not a current price. This session re-reads the official
+pages, records what each one returned today, and changes a stored value only where today's official read
+contradicts it. **No hallucinations: anything not re-read today keeps its old date and is labelled stale, never
+silently re-dated.**
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T-595-01 | Claim the board, record scope & baseline | in progress | S-59551D4B | `COORDINATION.md` (this block only), `audit/59551d4b/**` |
+| T-595-02 | Clean-tree baseline: every builder/scanner/test on `9819787` | unclaimed → S-59551D4B | S-59551D4B | `audit/59551d4b/check_runs/**` (outputs only) |
+| T-595-03 | Line-by-line repo review + fresh live re-verification from official pages (gold reference, every priced/weighted row, then remaining rows; rows not re-read are named) | unclaimed → S-59551D4B | S-59551D4B | `audit/59551d4b/**`; `data/**`, `research/evidence.json`, `evidence/**` only where a live official read on 2026-11-11 contradicts or re-dates a stored value, each with a dated verbatim excerpt |
+| T-595-04 | Hallucination/security pass + mutation controls, re-run after every review change | unclaimed → S-59551D4B | S-59551D4B | `audit/59551d4b/**` |
+| T-595-05 | Final integration: rebuild all registers via repo generators, landing-page staleness/no-hallucination banner, broken-link sweep, PR → merge → Pages verification → record | unclaimed → S-59551D4B | S-59551D4B | generated artifacts via repo builders (`*.html`, `dashboard/**`, `explore/**`, `site/**`), `README.md`, `tools/**`/`scripts/**` only if a builder must change, `COORDINATION.md` (this block only) |
+
+Rules carried forward: no price, weight, karat, date or policy value is published without a field-scoped excerpt
+from an official page actually retrieved in the pass that records it. Blank = unverified, never zero or estimated.
+**Run the hallucination/security pass after every review change and keep looking for hallucinations.**
+
+### S-59551D4B working log
+
+- 2026-11-11T07:56Z — Claim written; pushed before any data edit.
+
 ## Claim — Session S-C74095E5 (2026-10-23 23:39Z UTC) — fresh verification pass + final integration
 
 Platform constraint: this session is bound to branch `arena/c74095e5-gold2`; no other branch or worktree may be
