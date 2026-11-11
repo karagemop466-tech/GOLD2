@@ -1605,3 +1605,14 @@ After the scratch build reached the final QA audit, `tools/qa.py` reported exact
 - Final merged-snapshot gates: `npm run check` PASS (23/23 tests, links/security/browser/axe and npm audit); root QA PASS 12/0/3; calculator PASS; snapshot audit 0 findings / 14 arithmetic controls. Independent scanner results and known stale-count/mutation-fixture exceptions are documented in `audit/a182c7cc/FINAL_AUDIT.md`.
 - A182-01, A182-02, A182-04 and A182-05 are complete. A182-03 remains in progress until its own PR is merged and Pages is verified; no deployment is claimed yet.
 
+
+## Session S-D901C3CA — 2026-11-11 — freshness and final integration
+
+Platform requires the existing `arena/d901c3ca-gold2` branch; no alternate branch will be created. Read the board before claiming. Prior October claims are more than 60 minutes old; PR #59 is merged. PR #19 remains untouched. This session claims final integration only for the scope below; historical evidence and peer audit directories are preserved.
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| D901-01 Freshness limitation on all site variants, explicit published review flag, regression test and complete build/security/provenance checks | in progress | S-D901C3CA | `tools/build_site.py`, `scripts/build.mjs`, `scripts/build.py`, `dashboard/scripts/build.py`, generated HTML in root/site/dashboard/explore, `data/site-manifest.json`, `reports/qa-report.md`, `tests/freshness.test.mjs`, `audit/d901c3ca/**`, `COORDINATION.md` |
+| D901-02 PR, merge and Pages deployment confirmation | in progress | S-D901C3CA | same integration scope; GitHub PR/Pages metadata |
+
+Constraint: outbound network is limited to GitHub and package registries. No retailer/regulator page can be independently refreshed here. Existing dated observations must not be called current quotes or fresh official verification. This review checks repository consistency, not physical purity or current prices. No price or source retrieval date will be fabricated. Recommend rechecking for hallucinations after every review.
