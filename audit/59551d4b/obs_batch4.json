@@ -1,0 +1,22 @@
+[
+ {"key":"ext-be-121h6","url":"https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/","result":"read",
+  "excerpts":["classic six-prong solitaire-$890","- USD","WITH PURCHASE OVER USD$1,000."],
+  "observed":{"price":890.00,"currency":"USD"},
+  "note":"Read from chunk 3 of 7 (chunks 0-2 were site navigation): the 'Design Your Ring' stepper shows the setting at $890 next to the USD currency selector. Page title: 'Classic Six-Prong Solitaire Ring in 14K Yellow Gold | Brilliant Earth'. Metal/prong specification block not re-read today."},
+ {"key":"ag-coffin-ring-html","url":"https://www.automicgold.com/products/coffin-ring","result":"partial",
+  "excerpts":["Returns can be made within 30 days of the delivery date.","Engraved items are final sale and cannot be returned.","This item is made to order. Production time is 1-2 weeks."],
+  "observed":{"weight_g":null},
+  "note":"Chunks 5 and 6 of 7 were retrieved; the 'Item Weight' line sits earlier and was NOT re-read. The stored 6.1 g approximate item weight therefore keeps its 2026-10-23 date. Page title: 'Coffin Ring - 14k Solid Gold Jewelry - Automic Gold'."},
+ {"key":"ext-z-19957449","url":"https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449","result":"read",
+  "excerpts":["Discounted Price $899.00","Gold Karat: 10K","Rhodium: Yes","Item #: 19957449","Free and easy 30-day returns","Setting Only:  No"],
+  "observed":{"price":null,"currency":null,"display":"Discounted Price $899.00","karat":10},
+  "note":"Display unchanged. No ISO currency statement and no 'solid gold' wording in the retrieved chunk, so price stays blank/unassigned."},
+ {"key":"ext-bn-194158","url":"https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158","result":"read",
+  "excerpts":["$1,125$900(Setting Price)\n\n-20%","\\*Discount code is applied automatically","20% Off\\* Engagement Ring Settings","Stock Number\n\n500000y","18K Yellow Gold","1.90mm","18k yellow gold four-prong solitaire engagement ring with platinum prongs"],
+  "observed":{"price":null,"currency":null,"display":"$1,125$900(Setting Price) -20%","karat":18},
+  "note":"CHANGED DISPLAY: '$1,125(Setting Price)' (2026-10-23) -> '$1,125$900(Setting Price)' with '-20%' (2026-11-11). A site banner reads '20% Off* Engagement Ring Settings'. Still no ISO currency, so price stays blank/unassigned."},
+ {"key":"ext-bn-192506-tile","url":"https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158","result":"secondary",
+  "excerpts":["Petite Hidden Halo Solitaire Plus Diamond Engagement Ring in 14k Yellow Gold\\\\\n\\\\\n$1,255$1,004(Setting Price)\\\\\n\\\\\n-20%"],
+  "observed":{"display_on_other_page":"$1,255$1,004(Setting Price) -20%"},
+  "note":"Seen only on a 'You May Also Like' tile of the BN-194158 page. BN-192506's own page was NOT re-read, so its stored display is not changed; it is flagged as likely stale."}
+]

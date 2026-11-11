@@ -108,7 +108,9 @@
           ],
           "note": "This session's render of the same URL displayed the Discounted/Original labels. Every render is kept verbatim; no amount is assigned a currency or ordered by position (F-018, F-025)."
         }
-      ]
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: “Discounted Price $899.00” re-read; unchanged, still no ISO currency."
     },
     {
       "id": "Z-20046552",
@@ -148,13 +150,14 @@
         "F-021",
         "F-023",
         "F-024",
-        "F-025"
+        "F-025",
+        "F-048"
       ],
       "notes": "The current page explicitly labels discounted and original prices and shows 30% Off.",
       "depth_mm": null,
       "band_width_text": null,
       "weight_basis": null,
-      "unassigned_price_text": "$909.30  $1,299.00 30% Off",
+      "unassigned_price_text": "Discounted Price $1,299.00",
       "prong_metal": null,
       "surface_finish": null,
       "physical_test_status": "not_tested",
@@ -180,16 +183,16 @@
           "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold"
         ],
         "price": [
-          "$909.30  $1,299.00 30% Off"
+          "Discounted Price $1,299.00"
         ],
         "currency": [
-          "$909.30  $1,299.00 30% Off"
+          "Discounted Price $1,299.00"
         ],
         "original_price": [
-          "$909.30  $1,299.00 30% Off"
+          "Discounted Price $1,299.00"
         ],
         "unassigned_price_text": [
-          "$909.30  $1,299.00 30% Off"
+          "Discounted Price $1,299.00"
         ]
       },
       "superseded_normalization": {
@@ -199,7 +202,7 @@
         "status": "Unsupported ISO inference; historical normalization only, not a verified price"
       },
       "observed_native_display": [
-        "$909.30  $1,299.00 30% Off"
+        "Discounted Price $1,299.00"
       ],
       "render_history": [
         {
@@ -218,6 +221,16 @@
             "Discounted Price $909.30  Original Price was $1,299.00 30% Off"
           ],
           "note": "This session's render of the same URL displayed the Discounted/Original labels. Every render is kept verbatim; no amount is assigned a currency or ordered by position (F-018, F-025)."
+        }
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: display changed to “Discounted Price $1,299.00”; the earlier promotional amount is no longer rendered (F-048). No ISO currency; price stays unassigned.",
+      "superseded_displays": [
+        {
+          "text": "$909.30  $1,299.00 30% Off",
+          "last_observed": "2026-10-23",
+          "superseded_at": "2026-11-11",
+          "reason": "The official page rendered a different price display on 2026-11-11. Kept as dated history; not a current value."
         }
       ]
     }

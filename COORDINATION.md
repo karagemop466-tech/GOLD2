@@ -2,6 +2,99 @@
 
 Shared task board for parallel agent sessions. **Read this before editing anything.**
 
+## Claim — Session S-59551D4B (2026-11-11T07:56Z UTC) — staleness review, fresh live re-verification, integration
+
+Platform constraint: this session is bound to branch `arena/59551d4b-gold2`; no other branch or worktree may be
+created or pushed, so the board's `session-<id>/<task>` naming is recorded as not creatable. Isolation is enforced
+by the file scope below. Board state read before claiming (2026-11-11T07:56Z): `main` = `9819787` (merge of PR #59,
+2026-10-24T00:45Z); **no remote branch has a commit newer than 2026-10-24**, so every earlier claim is >60 minutes
+old with no commits and no peer session is live. Open PR #19 (`arena/70b76800-gold2`, last updated
+2026-10-23T00:09Z) stays `needs review` (non-blocking) and is not merged, closed or duplicated here.
+
+**Why this pass exists:** every price, weight and gold-reference observation in the repo is dated 2026-10-22/23 —
+**19 days old on 2026-11-11**. A dated observation is not a current price. This session re-reads the official
+pages, records what each one returned today, and changes a stored value only where today's official read
+contradicts it. **No hallucinations: anything not re-read today keeps its old date and is labelled stale, never
+silently re-dated.**
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T-595-01 | Claim the board, record scope & baseline | **done** | S-59551D4B | `COORDINATION.md` (this block only), `audit/59551d4b/**` |
+| T-595-02 | Clean-tree baseline: every builder/scanner/test on `9819787` | **done** (23/23 PASS) | S-59551D4B | `audit/59551d4b/check_runs/**` (outputs only) |
+| T-595-03 | Line-by-line repo review + fresh live re-verification from official pages (gold reference, every priced/weighted row, then remaining rows; rows not re-read are named) | **done** (2026-11-11 07:55–08:17Z; all 32 root rows + 19 priced explorer rows + both gold references) | S-59551D4B | `audit/59551d4b/**`; `data/**`, `research/evidence.json`, `evidence/**` only where a live official read on 2026-11-11 contradicts or re-dates a stored value, each with a dated verbatim excerpt |
+| T-595-04 | Hallucination/security pass + mutation controls, re-run after every review change | **done** (0 failures; 16/16 mutation controls caught) | S-59551D4B | `audit/59551d4b/**` |
+| T-595-05 | Final integration: rebuild all registers via repo generators, landing-page staleness/no-hallucination banner, broken-link sweep, PR → merge → Pages verification → record | **in progress** (PR link and merge result recorded in the log below) | S-59551D4B | generated artifacts via repo builders (`*.html`, `dashboard/**`, `explore/**`, `site/**`), `README.md`, `tools/**`/`scripts/**` only if a builder must change, `COORDINATION.md` (this block only) |
+
+Rules carried forward: no price, weight, karat, date or policy value is published without a field-scoped excerpt
+from an official page actually retrieved in the pass that records it. Blank = unverified, never zero or estimated.
+**Run the hallucination/security pass after every review change and keep looking for hallucinations.**
+
+### S-59551D4B working log
+
+- 2026-11-11T07:56Z — Claim written; pushed before any data edit.
+- 2026-11-11T08:00Z — Baseline on `9819787`: 23/23 builders/scanners/tests PASS, no generated drift
+  (`audit/59551d4b/check_runs/baseline_SUMMARY.txt`).
+- 2026-11-11T07:55–08:17Z — **Live re-read (T-595-03).** 47 fetches transcribed verbatim into
+  `audit/59551d4b/obs_batch1..8.json`; dated ledger with one line per root row and a link per row:
+  `audit/59551d4b/REVERIFICATION_2026-11-11.md`. Sources: World Gold Council gold-prices page, JM Bullion
+  gold-price page, and the official product page (or the product's own `.js`/`.oembed` endpoint) of every root
+  row at Blue Nile, Zales, VRAI, Brilliant Earth, Automic Gold, Mejuri, Sarraf, Factory Direct Jewelry and
+  Stone and Strand, plus Menē for the explorer. **Changed and applied:** WGC header 4,059.49 USD/ozt (chart
+  blocks dated 10 November 2026; quote time still not shown, F-026); JM Bullion 4,072.47 USD; Menē Rose 1,337 and
+  Knot 1,455 USD; ten Blue Nile displays (struck amount + 20%-off amount); three Zales displays; Blue Nile
+  315661 withdrawn (sold out). **Unchanged:** all 12 assigned root prices, all 9 published gram weights, 17 of 19
+  explorer prices. Old values are kept as dated history (`superseded_observations`, `superseded_displays`,
+  `supersededDisplay`), never as current values.
+- **Irregularities flagged (published on `flags.html`, none block the merge):** `F-046` Blue Nile promotion shows
+  two amounts; `F-047` Blue Nile 315661 sold out; `F-048` Zales displays changed and two pages print an item
+  number that differs from the URL id; `F-049` Stone and Strand Clara priced by size; `F-050` Rita and Mia out of
+  stock and final sale; `F-051` Factory Direct $0.00 Black Friday placeholder block; `F-052` staleness and the
+  list of fields NOT re-read (band dimensions, Brilliant Earth metal block, Stone and Strand HTML, retailer
+  policy pages, BBB profiles, regulatory references, Catbird/Auvere/Quince pages, most Automic gram weights in
+  the explorer, the Factory Direct gram-weight line); `F-053` Mejuri holiday return window. Explorer findings
+  29 → 36 (adds the JM Bullion ticker-vs-body difference: 4,073.34 vs 4,072.47 on one fetch, not averaged).
+  Dashboard flag `DF-013`.
+- **Apply scripts (assert-guarded, run once):** `audit/59551d4b/apply_2026_11_11.py` (root register, flags,
+  verification log, evidence files) and `audit/59551d4b/apply_2026_11_11_explore.py` (catalog, evidence, review).
+  Builder changes inside this claim's scope: `tools/build_site.py` (landing-page "How current is this page?"
+  card under the NO HALLUCINATIONS banner; per-row "price re-read" / "weight re-read" dates; "full capture"
+  label), `dashboard/scripts/canonical.py` (price note carries the re-read date and the capture date),
+  `dashboard/scripts/build.py` (`DF-013`), `README.md` counts and dated summary.
+- **Hallucination/security pass (T-595-04), re-run after every change:** `audit/59551d4b/hallucination_scan.py`
+  traces 43 root values and 19 explorer prices digit-for-digit to the raw transcriptions, checks gold
+  references, superseded values, flags, front-page banner, per-row official links and dates, CSP/inline-script/
+  plain-http/credential patterns, future dates and the verification log: **0 failures, 16/16 mutation controls
+  caught**. Its first run caught a real defect (ten row notes re-rendered a superseded display); fixed before
+  commit. The scan is pinned to this pass date, so it is not added as a CI gate. Full suite:
+  `bash audit/59551d4b/run_all_checks.sh final2` → **24/24 PASS**, no generated drift.
+- **Peer change requests still open (not edited here, outside scope):** `audit/86379ca7/hallucination_security_scanner.py`
+  Check 3 and `audit/1b04074f/hallucination_scanner.py` C13 hard-code old register sizes; neither is a CI gate.
+  PR #19 stays `needs review`. The legacy two-setting `site/` keeps its 2026-10-22 check date (no prices published there).
+- 2026-11-11T08:17Z — **Concurrent peers found at push time; conflicts resolved without discarding peer work.**
+  `main` had advanced from `9819787` to `62ca07b` (PRs #60 S-D901C3CA, #61 S-0439B4F7, #62 S-C81A689B, merged
+  08:01–08:08Z) and PR #63 (S-36620E91) was open, `CONFLICTING`, with a written handoff asking the integrator to
+  keep both coordination records, the peer freshness notices and its gold/provenance changes. Resolution:
+  (1) merged `origin/main`: the peer "Freshness review · 2026-11-11" notice stays on all 46 pages and
+  `tests/freshness.test.mjs` passes unmodified; one sentence of the notice (which said the reviewing session had
+  no retailer access) was reworded in the root, dashboard and explorer builders so it stays true after this
+  session's live re-read, and the peer's `#freshness-review` article is kept verbatim with a dated update
+  paragraph appended; the legacy `site/` notice is untouched. (2) merged `origin/arena/36620e91-gold2` (takeover
+  of its handoff): its provenance-date split in `dashboard/scripts/build.py`, its regression
+  `audit/36620e91/test_provenance_dates.py` (now in `run_all_checks.sh`) and its audit files are kept; its
+  gold-reference edit is identical in value to this session's (4,059.49, chart date 2026-11-10 — read
+  independently by S-36620E91, S-C81A689B and this session), so this session's more specific wording was kept;
+  its "historical observation · not current" rendering was made data-driven (any gold row older than the
+  current reference) and peer A182's historical market row was restored beside the new one. Generated pages were
+  regenerated, never hand-merged. All coordination blocks are retained append-only.
+- **Correction logged:** this session's first draft stated a pass end time of 08:40Z by estimate; the sandbox
+  clock showed 08:17Z. Every such stamp was corrected to the measured bound before publication
+  (`fetched_window` in `obs_batch5..8.json`). No price or weight was affected.
+- Post-merge suite `bash audit/59551d4b/run_all_checks.sh integrated` → **25/25 PASS**, no generated drift.
+- 2026-11-11 — **PR opened:** https://github.com/karagemop466-tech/GOLD2/pull/64 (summary, sources, flagged
+  irregularities in the PR body). Merge result and Pages verification are recorded in the next log line.
+- **Recommendation: look for hallucinations again.** This pass is already ageing; Blue Nile and Zales promotions
+  end within days. Re-open each official link before acting on a row.
+
 ## Claim — Session S-C74095E5 (2026-10-23 23:39Z UTC) — fresh verification pass + final integration
 
 Platform constraint: this session is bound to branch `arena/c74095e5-gold2`; no other branch or worktree may be
@@ -1657,3 +1750,55 @@ Platform constraint: this runner is bound to `arena/c81a689b-gold2`; no alternat
 - 2026-11-11 — PR #62 opened from `arena/c81a689b-gold2` to `main`; merge pending.
 
 - S-D901C3CA: preserved peer PR #62 audit additions; resolved append-only board conflict by retaining both blocks and regenerated QA timestamp rather than discarding peer findings. Final prior CI attempt passed all three checks.
+
+## Claim — Session S-36620E91 (2026-11-11 UTC) — fresh verification pass + final integration
+
+Platform constraint: this session is bound to branch `arena/36620e91-gold2`; no other branch or worktree may be created or pushed. Isolation is enforced by the file scope below. Claim written and pushed before any data edit.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T-366-01 | Claim the board, record scope & baseline | in progress | S-36620E91 | `COORDINATION.md`, `audit/36620e91/**` |
+| T-366-02 | Clean-tree baseline: builders/scanners/tests on `9819787` | unclaimed | S-36620E91 | `audit/36620e91/check_runs/**` (outputs only) |
+| T-366-03 | Fresh live line-by-line re-verification from official pages (gold reference + priced/weighted rows first) | unclaimed | S-36620E91 | `audit/36620e91/live_verification_2026-11-11.md`; data edits only where a live official read contradicts a stored value, each with dated evidence |
+| T-366-04 | Independent hallucination/security scanner + mutation controls, re-run after every review change | unclaimed | S-36620E91 | `audit/36620e91/**` |
+| T-366-05 | Rebuild all registers, broken-link sweep, preview, PR → merge → Pages verification → record | unclaimed | S-36620E91 | generated artifacts via repo builders, `COORDINATION.md` |
+
+Standing rule re-affirmed: **run the hallucination/security pass after every review change and keep looking for hallucinations.** Blank = unverified, never zero or estimated. No price, weight, karat or policy value is published without a field-scoped excerpt from an official page actually retrieved in the pass that records it. PR #19 (`arena/70b76800-gold2`, open since 2026-10-23) is left untouched and logged as needs-review (non-blocking), not merged or closed by this session.
+
+### S-36620E91 — 2026-11-11 live-pass checkpoint and gold-reference scope
+
+Claim T-366-03 is in progress. The World Gold Council page was retrieved on 2026-11-11 and displayed a moving header of **4,059.49 USD/oz**; its chart separately said **Data as of 10 November, 2026**, and the header's own quote timestamp remained unstated. This contradicts the older stored observation if described as a current price; do not infer that the chart date is the header quote date. Source: https://www.gold.org/goldhub/data/gold-prices. Claim the narrow gold reference update and generated root pages: `data/gold-price.json`, `evidence/gold-price.md`, `tools/build_site.py` if needed, generated root HTML, `reports/qa-report.md`, and this board. Existing evidence/history is retained. Preliminary direct reads of six Sarraf product pages found their stored prices, approximate weights, and 14K solid-gold labels unchanged; this does not establish returnability, hallmark, independent testing, or a complete row-by-row verification. Factory Direct's GR0001 page displayed $1,299.99 under USD and solid-gold text. Remaining rows and policies are not yet verified in this pass.
+
+Baseline: root QA PASS 12 checks/0 failures/3 warnings; calculator PASS; companion verify PASS (94 review warnings); node tests PASS 23/23. Automated checks do not establish source truth. The initial claim push was made without the required preceding `git pull --rebase`; this is logged and the requirement applies before subsequent pushes.
+
+### S-36620E91 — QA follow-up scope
+
+The first rebuild/QA after the gold change failed because the stale-quote gate rejects an old number even in a dated historical verification-log row. The audit correctly caught that history appears on the page; it is not current data. Claim `tools/qa.py` and a narrow change to the verification renderer to label these rows explicitly as historical and to keep the stale check strict outside those rows. Re-run security/hallucination checks and tests after this review. Do not discard the historical evidence or suppress the stale gate globally.
+
+### S-36620E91 — companion dashboard rebuild scope
+
+The full check found a mismatch: `dashboard/` still embeds the old WGC reference while the browser suite compares it to the new canonical reference. The dashboard is a generated shared output; its earlier claims are historical/stale (last commits 2026-10-24, over 60 minutes ago). Claim its generated `dashboard/**` files for integration rebuild only; do not modify its scripts or peer audit files. Run its own build/verification and re-run all checks after regeneration. The initial `git pull --rebase` for the preceding claim refused to run due to unstaged changes; changes were safely stashed and restored after the successful pull and push.
+
+### S-36620E91 — provenance-date correction scope
+
+Rebuilding the companion surfaced a provenance defect: the builder uses the gold retrieval date as the date for product and retailer datasets, even though they were not all re-fetched. Claim `dashboard/scripts/build.py` for a targeted split of the gold and catalog dates, plus `README.md` for the stale current-reference paragraph. Existing historical 2026-10-23 entries remain historical; no ring is freshly verified merely by rebuilding. The two historical WGC log rows are visibly labeled and link to retained history; their superseded numbers are not rendered in the generated site, so existing independent scanners stay strict and pass without altering peer scanners. F-037 already flags Clara's final-sale/returns conflict; a 2026-11-11 read again displayed “This product is non-returnable.” Do not buy without a qualifying return after independent verification.
+
+### S-36620E91 — partial integration handoff (2026-11-11 UTC)
+
+| Task | Status | Findings |
+|---|---|---|
+| T-366-01 | done | Claim and scope committed; fixed Arena branch used. |
+| T-366-02 | done | Baseline stored under `audit/36620e91/check_runs/`; old source dates are not refreshed by a build. |
+| T-366-03 | needs review | Partial direct official-source pass only; see `audit/36620e91/live_verification_2026-11-11.md` for 18 subject-specific reads and precise limitations. Remaining rows and seller policies were not freshly re-read; no claim of full line-by-line re-verification. Existing flags F-026/F-034/F-037/F-045 remain applicable. |
+| T-366-04 | done for this patch | Root QA 12/0/3; companion verify and calculator; independent scanners 8C, B200, 88AA (6 mutation controls) and 9B (mutation tests); provenance-date regression; npm audit and static security all passed. These checks verify internal consistency, not truth. Recheck hallucinations after each review. |
+| T-366-05 | needs review | Root and companion rebuilt, `npm run check` passed (23 tests, link structure, security, browser, axe); external URL availability was not certified. Fresh full combined-register and policy verification is incomplete; do not claim completion or merge as final integration until that requirement is satisfied. |
+
+Source for updated moving gold observation: https://www.gold.org/goldhub/data/gold-prices (2026-11-11 UTC, USD 4,059.49/ozt; exact quote timestamp unconfirmed; chart date separately 2026-11-10). The earlier quoted value is preserved as history, not shown as current. A failed first browser pass exposed an unrebuilt companion and two peer scanners objected to historical values being rendered; rebuild and historical-label rendering resolved both without disabling independent gates. Product/retailer capture dates were separated from the newly refreshed gold date; a regression test protects against conflation. The site already flags the final-sale and karat conflicts. The project still has no physically tested or purchase-approved ring.
+
+### S-36620E91 — PR and additional issues (2026-11-11 UTC)
+
+PR https://github.com/karagemop466-tech/GOLD2/pull/63 is **open, not merged**. Pages API still reports the existing `main` site built at https://karagemop466-tech.github.io/GOLD2/; it does not contain this branch's WGC update. Additional Blue Nile/Zales first-party reads are documented in `audit/36620e91/live_verification_2026-11-11.md`: BN-315661 now says sold out; BN-316238 repeats the existing F-041 identity mismatch; Zales selected item IDs differ from two URL identifiers and the variant relationship is not established. **Change request:** publish the new sold-out and identifier findings on Flagged for Review and refresh affected rows only with field-specific official evidence; do not infer whether a variant is identical. The remaining expanded-catalog and policy verification is incomplete. T-366-03/T-366-05 remain needs review, not done. No merge/deployment of this PR is claimed.
+
+### S-36620E91 — concurrent main advancement / conflict handoff
+
+After PR #63 opened, `main` advanced to `62ca07b` (including PRs #60, #61 and #62). GitHub reports PR #63 `CONFLICTING` / `DIRTY`; a read-only merge-tree inspection found overlapping coordination, generators, and generated pages, including peer freshness notices. No merge or rebase was attempted and no peer work was discarded. Resolution must preserve both append-only coordination records, the peer freshness notices, and the independent gold-reference/provenance-date changes, then regenerate and rerun all gates before merging. This is in addition to the unfinished source review and flag-publication change requests above. Existing Pages reports `built` from `main`; branch changes are not deployed.

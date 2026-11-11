@@ -1,0 +1,113 @@
+[
+ {
+  "key": "ext-z-20046552",
+  "url": "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
+  "fetched_at": "2026-11-11",
+  "result": "display_changed",
+  "excerpts": [
+   "# 1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold",
+   "Discounted Price $1,299.00",
+   "Flash Sale: Save $75-$750 off your purchase starting at $250 or more - Discount Applied in Bag.",
+   "Until 11/12/26 at 08:00 AM CST",
+   "Item #: 20046552",
+   "Gold Karat: 10K",
+   "Free and easy 30-day returns",
+   "Rhodium: Yes",
+   "Metal Color: Yellow"
+  ],
+  "observed": {
+   "display": "Discounted Price $1,299.00",
+   "item_number": "20046552",
+   "karat": "Gold Karat: 10K"
+  },
+  "note": "Stored display was '$909.30  $1,299.00 30% Off'. Page now renders one amount labelled 'Discounted Price $1,299.00' and a bag-level flash-sale banner; the $909.30 amount is no longer rendered. No ISO currency.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
+ },
+ {
+  "key": "ext-z-20303279",
+  "url": "https://www.zales.com/12-ct-tw-diamond-frame-vintagestyle-twist-shank-engagement-ring-10k-gold/p/V-20303279",
+  "fetched_at": "2026-11-11",
+  "result": "display_changed",
+  "excerpts": [
+   "# 1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold",
+   "Discounted Price $1,399.00",
+   "Flash Sale: Save $75-$750 off your purchase starting at $250 or more - Discount Applied in Bag.",
+   "Until 11/12/26 at 08:00 AM CST",
+   "Item #: 20615545",
+   "Gold Karat: 10K",
+   "Free and easy 30-day returns",
+   "Metal Finish: Milgrain, Polished",
+   "Metal Color: Yellow"
+  ],
+  "observed": {
+   "display": "Discounted Price $1,399.00",
+   "item_number": "20615545",
+   "karat": "Gold Karat: 10K"
+  },
+  "note": "Stored display was 'Discounted Price $979.30  Original Price was $1,399.00 30% Off'. Page now renders only 'Discounted Price $1,399.00'. The page prints 'Item #: 20615545' on the V-20303279 URL. No 'Rhodium' line in the Metal(s) block on this fetch. No ISO currency.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
+ },
+ {
+  "key": "ext-z-20301172",
+  "url": "https://www.zales.com/13-ct-tw-diamond-three-stone-engagement-ring-10k-gold/p/V-20301172",
+  "fetched_at": "2026-11-11",
+  "result": "display_changed",
+  "excerpts": [
+   "# 1/3 CT. T.W. Diamond Three Stone Engagement Ring in 10K Gold",
+   "Discounted Price $1,099.00",
+   "Flash Sale: Save $75-$750 off your purchase starting at $250 or more - Discount Applied in Bag.",
+   "Until 11/12/26 at 08:00 AM CST",
+   "Item #: 20301161",
+   "Gold Karat: 10K",
+   "Free and easy 30-day returns",
+   "Rhodium: Yes",
+   "Metal Color: Yellow"
+  ],
+  "observed": {
+   "display": "Discounted Price $1,099.00",
+   "item_number": "20301161",
+   "karat": "Gold Karat: 10K"
+  },
+  "note": "Stored display was 'Discounted Price $769.30  Original Price was $1,099.00 30% Off'. Page now renders only 'Discounted Price $1,099.00'. The page prints 'Item #: 20301161' on the V-20301172 URL. No ISO currency.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
+ },
+ {
+  "key": "ext-vrai-classic-4p-chunk0",
+  "url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
+  "fetched_at": "2026-11-11",
+  "result": "partial",
+  "excerpts": [
+   "Round Brilliant · 18k Yellow Gold",
+   "Metal:18k Yellow Gold"
+  ],
+  "observed": {
+   "metal": "18k Yellow Gold"
+  },
+  "note": "Chunk 0 of 4 only: title and metal selector. The gram-weight line was not reached in this chunk.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
+ },
+ {
+  "key": "ext-vrai-classic-4p",
+  "url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
+  "fetched_at": "2026-11-11",
+  "result": "unchanged",
+  "excerpts": [
+   "Metal:18k Yellow Gold",
+   "Band width:Standard",
+   "Band depth:1.6mm",
+   "Metal weight:2.86g (Ring size 6)",
+   "Pavé carat weight:0.18ctw",
+   "Shown with center stone1½",
+   "Returns accepted within 30 days",
+   "Setting Details"
+  ],
+  "observed": {
+   "metal_weight": "Metal weight:2.86g (Ring size 6)",
+   "band_depth": "Band depth:1.6mm",
+   "metal": "Metal:18k Yellow Gold",
+   "price": null
+  },
+  "note": "Chunk 1 of 4. Weight line re-read, unchanged. No price for this setting is rendered in chunks 0-1 (only prices of other 'Similar Styles'). The Setting Details list prints 'Pavé carat weight:0.18ctw' although the selected band is 'Plain band'.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
+ }
+]

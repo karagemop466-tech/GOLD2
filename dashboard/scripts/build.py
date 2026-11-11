@@ -181,9 +181,25 @@ FLAGS = [
             "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html",
         ],
     },
+    {
+        "id": "DF-013",
+        "severity": "high",
+        "title": "Staleness & 2026-11-11 Re-read: Promotions Changed Displays, One Blue Nile Style Sold Out, Stone and Strand Stock Gaps",
+        "detail": "Every canonical observation was 19 days old before session S-59551D4B re-read the prices on 2026-11-11. Assigned USD prices were unchanged except the two Menē rings (now $1,337 and $1,455). Blue Nile setting pages now show a struck amount and a 20%-off amount (canonical root flag F-046); Blue Nile item 315661 reads 'This popular style is sold out' (F-047); three Zales displays changed (F-048); Stone and Strand Clara is priced by size and Rita and Mia are out of stock and final sale (F-049, F-050); the Factory Direct page shows a $0.00 Black Friday placeholder block (F-051). Fields not re-read keep their October dates (F-052). A dated row is not a live quote.",
+        "action": "Re-open the official page in each row before acting, confirm cart total and currency, and look for hallucinations again after every review.",
+        "sources": [
+            "https://www.gold.org/goldhub/data/gold-prices",
+            "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
+            "https://www.stoneandstrand.com/products/the-rita-ring",
+            "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/",
+        ],
+    },
 ]
 
 RINGS = build_rings(REPO_ROOT)
+RINGS_DATE = max(r["capture_date"] for r in RINGS if r.get("capture_date"))
+RETAILERS_DATE = max(r["capture_date"] for r in RETAILERS if r.get("capture_date"))
+FLAGS_DATE = json.loads((REPO_ROOT / "data" / "flags.json").read_text(encoding="utf-8"))["retrieved_at"]
 CHECKLIST_ITEMS = [
     ("Gold purity (karat)", "Confirm the exact stated karat (10K, 14K, 18K, 22K, or 24K). Karat/24 is a nominal calculation ratio, not an assay; seller-declared decimal fineness is a separate input.", "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3"),
     ("Explicit 'solid gold' wording", "Require explicit solid-gold wording on the exact product page. Do not substitute plating, vermeil, gold-filled, overlay, or gold-tone wording, and do not infer solid gold from karat alone.", "https://consumer.ftc.gov/articles/buying-platinum-gold-and-silver-jewelry"),
@@ -278,7 +294,7 @@ def render_shell(title: str, active: str, body: str, extra_js: list[str] | None 
   </div>
 </header>
 <main id="main-content"><div class="wrap">
-<section class="policy-banner" aria-label="Freshness limitation"><strong>Freshness review · 2026-11-11 · Needs review.</strong> Current prices and availability are unverified. Stored amounts and gold quotes are historical observations, not live offers. This session cannot access retailer or regulator sites; it has not independently refreshed their claims. No purchase is approved. Recheck official links and look for hallucinations after every review. <a href="../flags.html#freshness-review">Review limitation</a>.</section>
+<section class="policy-banner" aria-label="Freshness limitation"><strong>Freshness review · 2026-11-11 · Needs review.</strong> Current prices and availability are unverified. Stored amounts and gold quotes are historical observations, not live offers. Prices were last re-read from the official pages on 2026-11-11 by session S-59551D4B, and each row shows its own re-read date; an earlier review the same day had no access to retailer sites and refreshed nothing. Other fields keep older dates. No purchase is approved. Recheck official links and look for hallucinations after every review. <a href="../flags.html#freshness-review">Review limitation</a>.</section>
 <section class="policy-banner" aria-labelledby="no-hallucination-heading">
   <span class="policy-pill">Strict No-Hallucinations Policy</span>
   <h2 id="no-hallucination-heading">No hallucinations. No invented prices. Dated evidence; blanks for unknowns.</h2>
@@ -358,13 +374,13 @@ def main() -> int:
 
     # 1. Write structured JSON data files
     (DATA_DIR / "gold-reference.json").write_text(json.dumps(GOLD_REFERENCE, indent=2) + "\n", encoding="utf-8")
-    (DATA_DIR / "retailers.json").write_text(json.dumps({"retrieved_at": VERIFIED_DATE, "retailers": RETAILERS}, indent=2) + "\n", encoding="utf-8")
-    (DATA_DIR / "flags.json").write_text(json.dumps({"retrieved_at": VERIFIED_DATE, "flags": FLAGS}, indent=2) + "\n", encoding="utf-8")
-    (DATA_DIR / "rings.json").write_text(json.dumps({"retrieved_at": VERIFIED_DATE, "rings": RINGS}, indent=2) + "\n", encoding="utf-8")
+    (DATA_DIR / "retailers.json").write_text(json.dumps({"retrieved_at": RETAILERS_DATE, "retailers": RETAILERS}, indent=2) + "\n", encoding="utf-8")
+    (DATA_DIR / "flags.json").write_text(json.dumps({"retrieved_at": FLAGS_DATE, "flags": FLAGS}, indent=2) + "\n", encoding="utf-8")
+    (DATA_DIR / "rings.json").write_text(json.dumps({"retrieved_at": RINGS_DATE, "rings": RINGS}, indent=2) + "\n", encoding="utf-8")
 
     # 2. Write evidence pointers and exact stored passages. This build is not a fresh fetch.
     rings_ev = [
-        f"# Dashboard Canonical Ring Evidence (observations through `{VERIFIED_DATE}`)\n",
+        f"# Dashboard Canonical Ring Evidence (observations through `{RINGS_DATE}`)\n",
         "These passages are copied from the existing canonical evidence records. "
         "The companion build performs no network request and does not refresh observation dates.\n",
     ]
@@ -384,7 +400,7 @@ def main() -> int:
     (EVIDENCE_DIR / "rings.md").write_text("\n".join(rings_ev), encoding="utf-8")
 
     ret_ev = [
-        f"# Dashboard Canonical Seller Evidence (observations through `{VERIFIED_DATE}`)\n",
+        f"# Dashboard Canonical Seller Evidence (observations through `{RETAILERS_DATE}`)\n",
         "Summaries are generated from canonical structured records. Blank fields are unconfirmed; "
         "review-platform allegations are not established facts or physical tests.\n",
     ]
@@ -425,12 +441,12 @@ def main() -> int:
     )
 
     index_body = f"""
-<div class="eyebrow">Executive Research Overview · Canonical observations through {VERIFIED_DATE}</div>
+<div class="eyebrow">Executive Research Overview · Listing observations through {RINGS_DATE}</div>
 <h1>Solid Gold Engagement Ring Buying Guide &amp; Conditional Price-to-Melt Dashboard</h1>
 <p class="lead">Comparing <strong>{len(RINGS)} source-linked listings</strong> across <strong>{len(RETAILERS)} jewelry sellers</strong> against our 12-point solid-gold buying checklist, NIST precious-metals conversion constants, and a dated World Gold Council header observation (<strong>${SPOT_USD:,.2f} / troy oz</strong>). This is not a live price feed.</p>
 
 <div class="grid g4">
-  <div class="card"><div class="stat-val">{len(RINGS)}</div><div class="stat-lbl">Source-linked companion listings (records through {VERIFIED_DATE})</div></div>
+  <div class="card"><div class="stat-val">{len(RINGS)}</div><div class="stat-lbl">Source-linked companion listings (records through {RINGS_DATE})</div></div>
   <div class="card"><div class="stat-val">{solid_count} / {len(RINGS)}</div><div class="stat-lbl">Explicitly state <em>Solid Gold</em> on PDP</div></div>
   <div class="card"><div class="stat-val">{weight_count} / {len(RINGS)}</div><div class="stat-lbl">Publish metal-only weight in grams (<code>g</code>)</div></div>
   <div class="card"><div class="stat-val">{len(FLAGS)}</div><div class="stat-lbl">Irregularities &amp; policy traps on <a href="flagged.html">Flagged</a></div></div>
@@ -439,7 +455,7 @@ def main() -> int:
 <h2>Browse by Engagement Ring Category</h2>
 <div class="grid g3">{cat_cards_html}</div>
 
-<h2>Seller-Reported Metal-Weight &amp; Solid-Gold Comparisons ({VERIFIED_DATE})</h2>
+<h2>Seller-Reported Metal-Weight &amp; Solid-Gold Comparisons (listing records through {RINGS_DATE})</h2>
 <p class="lead">Only seller-reported metal-only gram weights enter these nominal calculations; none is an independent scale result. Every row links to its official seller listing and opens in the <a href="calculator.html">conditional gold-melt calculator</a>.</p>
 {render_rings_table(weight_rings)}
 
@@ -464,7 +480,7 @@ def main() -> int:
     # Build rings.html (interactive filterable master table)
     rings_body = f"""
 <div class="eyebrow">Master Comparison Register · {priced_count} Priced · {weight_count} Metal-Weight Disclosed</div>
-<h1>All {len(RINGS)} Source-Linked Gold Ring Listings (records through {VERIFIED_DATE})</h1>
+<h1>All {len(RINGS)} Source-Linked Gold Ring Listings (records through {RINGS_DATE})</h1>
 <p class="lead">Filter by search keyword, karat fineness, explicit <em>Solid Gold</em> wording, or published gram weight. Every single table row links directly to its official retailer page.</p>
 <div class="card">
   <div class="filter-bar">
@@ -544,7 +560,7 @@ def main() -> int:
     ret_body = f"""
 <div class="eyebrow">Seller Due Diligence · {len(RETAILERS)} Source-Linked Retailers</div>
 <h1>Official Return Policies, Exclusions, Published Contacts &amp; Independent Reputation Records</h1>
-<p class="lead">Canonical records through {VERIFIED_DATE} separate first-party policy disclosures from independent reputation entries. A blank is unconfirmed, contact details are published rather than tested, and reviews or complaints are not physical authentication.</p>
+<p class="lead">Seller records through {RETAILERS_DATE} separate first-party policy disclosures from independent reputation entries. A blank is unconfirmed, contact details are published rather than tested, and reviews or complaints are not physical authentication.</p>
 <div class="table-wrap"><table><thead><tr><th>Seller &amp; Evidence</th><th>Return Window</th><th>Resized / Custom / Sale Exclusions</th><th>Payment &amp; Published Contact</th><th>Independent Reputation</th></tr></thead><tbody>{ret_rows}</tbody></table></div>
 """
     (DASH_DIR / "retailers.html").write_text(render_shell("Retailers & BBB Audit", "retailers", ret_body), encoding="utf-8")

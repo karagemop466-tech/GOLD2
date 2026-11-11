@@ -1,4 +1,4 @@
-# Dashboard Canonical Ring Evidence (observations through `2026-10-23`)
+# Dashboard Canonical Ring Evidence (observations through `2026-11-11`)
 
 These passages are copied from the existing canonical evidence records. The companion build performs no network request and does not refresh observation dates.
 
@@ -276,7 +276,7 @@ USD
 
 ## MENE-ROSE — Rose Ring
 - Official URL: https://mene.com/products/rose-ring-gold
-- Observation date: `2026-10-23`
+- Observation date: `2026-11-11`
 - Canonical evidence: ../explore/sources/#mene-rose
 - Verification scope: `canonical_combined_record`
 ### Stored product-name passage
@@ -288,7 +288,7 @@ Rose Ring
 ### Stored price quotes passage
 
 ```text
-$1,325
+$1,337
 ```
 
 ### Stored currency quotes passage
@@ -299,7 +299,7 @@ USD
 
 ## MENE-KNOT — Knot Ring
 - Official URL: https://mene.com/products/knot-ring-gold
-- Observation date: `2026-10-23`
+- Observation date: `2026-11-11`
 - Canonical evidence: ../explore/sources/#mene-knot
 - Verification scope: `canonical_combined_record`
 ### Stored product-name passage
@@ -311,7 +311,7 @@ Knot Ring
 ### Stored price quotes passage
 
 ```text
-$1,442
+$1,455
 ```
 
 ### Stored currency quotes passage

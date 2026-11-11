@@ -1,0 +1,1 @@
+PASS links: 46 pages, 104 local targets, 148 external publisher URLs; every data-table row has an official publisher link. External HTTP status is not certified.

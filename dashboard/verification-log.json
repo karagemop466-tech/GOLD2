@@ -1,14 +1,14 @@
 {
-  "canonical_observations_through": "2026-10-23",
+  "canonical_observations_through": "2026-11-11",
   "verification_scope": "companion offline canonical parity, generated HTML, links, security invariants, and nominal arithmetic",
   "network_fetch_performed": false,
   "physical_authentication": "not_tested",
-  "spot_usd_per_troy_oz": 3995.47,
+  "spot_usd_per_troy_oz": 4059.49,
   "counts": {
     "html_pages": 14,
     "rings": 28,
     "retailers": 11,
-    "flags": 12
+    "flags": 13
   },
   "passes": {
     "P1-sources-and-seller-hosts": "PASS",

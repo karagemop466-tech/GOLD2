@@ -181,7 +181,7 @@ def page(title: str, active: str, body: str, retrieved: str, include_calculator:
   <nav class="main" aria-label="Main navigation">{links}</nav>
 </div></header>
 <main id="main-content"><div class="wrap">
-<section class="note" aria-label="Freshness limitation"><strong>Freshness review · 2026-11-11 · Needs review.</strong> Current prices and availability are unverified. Stored amounts and gold quotes are historical observations, not live offers. This session cannot access retailer or regulator sites; it has not independently refreshed their claims. No purchase is approved. Recheck official links and look for hallucinations after every review. <a href="flags.html#freshness-review">Review limitation</a>.</section>
+<section class="note" aria-label="Freshness limitation"><strong>Freshness review · 2026-11-11 · Needs review.</strong> Current prices and availability are unverified. Stored amounts and gold quotes are historical observations, not live offers. Prices were last re-read from the official pages on 2026-11-11 by session S-59551D4B, and each row shows its own re-read date; an earlier review the same day had no access to retailer sites and refreshed nothing. Other fields keep older dates. No purchase is approved. Recheck official links and look for hallucinations after every review. <a href="flags.html#freshness-review">Review limitation</a>.</section>
 <section class="note"><strong>No hallucinations. No invented prices.</strong> Root register covers {SHELL["items"]} source-checked entries across {SHELL["sellers"]} official sellers (including <a href="solid-gold.html"><strong>Explicit Solid Gold</strong></a>) and {SHELL["flags"]} published flags. Open the <a href="dashboard/index.html"><strong>14-Page Companion Dashboard &amp; Gemstone Mass Calculator →</strong></a>, <a href="explore/"><strong>all {SHELL["explore_products"]} researched entries across {SHELL["explore_sellers"]} sellers →</strong></a>, <a href="verification.html">dated re-verification log</a>, or <a href="flags.html">Flagged for Review</a>. Keep checking primary pages for hallucinations after every review.</section>
 {body}
 </div></main>
@@ -231,6 +231,8 @@ def listing_table(items: list[dict]) -> str:
         weight = fmt_num(item.get("weight_g"), " g", 2)
         if item.get("weight_basis"):
             weight += f'<div class="sub">{esc(item["weight_basis"])}</div>'
+        if item.get("weight_checked_at"):
+            weight += f'<div class="sub recheck">weight re-read {esc(item["weight_checked_at"])}</div>'
 
         price = f'<strong>{fmt_price(item)}</strong>'
         displayed = item.get("observed_native_display") or []
@@ -244,6 +246,9 @@ def listing_table(items: list[dict]) -> str:
             price += f'<div class="sub">unassigned official text:<br>“{esc(item["unassigned_price_text"])}”</div>'
         elif item.get("price") is None:
             price += '<div class="sub">no price assigned; see flag</div>'
+        if item.get("price_checked_at"):
+            price += (f'<div class="sub recheck"><strong>price re-read {esc(item["price_checked_at"])}</strong>'
+                      f' — {esc(item.get("price_check_note") or "")}</div>')
 
         stone_scope = (
             "all-metal solid gold ring (no stones)"
@@ -251,7 +256,9 @@ def listing_table(items: list[dict]) -> str:
             else ("centre stone not included" if item.get("center_stone_included") is False else "complete ring as listed")
         )
         source = external_link(item["source_url"], "official listing")
-        source += f'<div class="sub">retrieved {esc(item["retrieved_at"])}</div>'
+        source += f'<div class="sub">full capture {esc(item["retrieved_at"])}</div>'
+        if item.get("price_checked_at"):
+            source += f'<div class="sub">price re-read {esc(item["price_checked_at"])}</div>'
         source += f'<div class="sub"><a href="{esc(item["evidence_file"])}">field evidence</a></div>'
         rows.append(
             f'<tr class="item-row" id="item-{iid.lower()}" data-item-id="{esc(iid)}" data-source-url="{esc(item["source_url"])}">'
@@ -339,6 +346,35 @@ def register_relationship(items):
         f'a market-wide list.</div>'
     )
 
+def freshness_card(items, gold):
+    """Dated currency-of-data summary. Every number is derived from the data files."""
+    checked = sorted({item["price_checked_at"] for item in items if item.get("price_checked_at")})
+    captured = sorted({item["retrieved_at"] for item in items})
+    never = [item["id"] for item in items if not item.get("price_checked_at")]
+    if not checked:
+        return ""
+    latest = checked[-1]
+    on_latest = sum(1 for item in items if item.get("price_checked_at") == latest)
+    weights = [item for item in items if item.get("weight_g") is not None]
+    weights_latest = sum(1 for item in weights if item.get("weight_checked_at") == latest)
+    changed = sum(1 for item in items if any(entry.get("superseded_at") == latest for entry in item.get("superseded_displays") or []))
+    stale = f" {len(never)} row(s) have no price re-read date: {esc(', '.join(never))}." if never else ""
+    return (
+        '<section class="card mt16 freshness" aria-labelledby="freshness-h">'
+        '<div class="eyebrow">How current is this page?</div>'
+        f'<h2 id="freshness-h">Prices last re-read from the official pages on {esc(latest)} (UTC)</h2>'
+        f'<ul class="clean"><li><strong>{on_latest} of {len(items)}</strong> rows had their price, or the absence of one, re-read on {esc(latest)}; '
+        f'<strong>{changed}</strong> displayed amount(s) had changed and were replaced or withdrawn.{stale}</li>'
+        f'<li><strong>{weights_latest} of {len(weights)}</strong> published metal weights were re-read on {esc(latest)}.</li>'
+        f'<li>Gold reference re-read {esc(gold["retrieved_at"])}: ${gold["usd_per_troy_oz"]:,.2f} per troy ounce.</li>'
+        f'<li>Other fields (band width and depth, retailer policies, references) keep their full-capture dates: {esc(", ".join(captured))}. '
+        'They were not re-read in the latest pass — see <a href="flags.html#f-052">F-052</a> and the <a href="verification.html">dated check log</a>.</li></ul>'
+        '<p class="flagline"><strong>A dated row is not a live quote.</strong> Prices and promotions change daily. '
+        'Open the official link in each row before acting, and look for hallucinations again after every review.</p>'
+        '</section>'
+    )
+
+
 def build_index(items, payloads, flags, gold, qa_summary, retrieved):
     priced = sum(1 for item in items if item.get("price") is not None)
     weights = sum(1 for item in items if item.get("weight_g") is not None)
@@ -386,6 +422,8 @@ def build_index(items, payloads, flags, gold, qa_summary, retrieved):
   <p>A published fact must be supported by a field-scoped excerpt from a page actually retrieved. If a value is absent or ambiguous, it remains <strong>blank</strong> and is linked to <a href="flags.html">Flagged for Review</a>. Search snippets are not product facts; unlabeled amounts are not assigned by position or arithmetic.</p>
   <p class="flagline"><strong>Look for hallucinations again after every review.</strong> Re-open the official source, re-read the row, and treat the official page as current if this table becomes stale. Automated checks: <strong>{esc(qa_summary)}</strong> — see <a href="methods.html">Method &amp; QA</a>.</p>
 </section>
+
+{freshness_card(items, gold)}
 
 <h1>Gold engagement-ring research dashboard</h1>
 <p class="lead">{len(items)} researched listings from {len({item['retailer_id'] for item in items})} official retailers, organized into {len(payloads)} categories (including {len(items)-solid_missing} explicit <em>Solid Gold</em> (14k–24k) rings). Official page claims are not physical verification: full physical hallmark + maker’s-mark stamps remain unverified across all {hallmark_missing} pages, while {weights} rows publish stone-free metal weights.</p>
@@ -536,7 +574,8 @@ def build_flags(flags, items, retrieved):
 <article class="flag high" id="freshness-review"><h2>Freshness review — all current prices unverified</h2>
 <p>2026-11-11: This session reviewed stored evidence and code only. Outbound access is limited to GitHub and package registries. No live official product, policy, gold-price, or regulatory page was retrieved in this review. Existing observation dates are preserved; no price was refreshed or invented. The registers are bounded research lists, not a complete market inventory.</p>
 <p><strong>Required follow-up:</strong> Re-open every row’s official product and policy links before purchase. Confirm configuration, currency, solid-gold wording, metal-only grams, marks and return/testing permission. Current prices remain unverified. Never treat an automated PASS as source verification or a purity test.</p>
-<p>Official follow-up links (not fetched in this session): <a href="https://www.gold.org/goldhub/data/gold-prices">World Gold Council gold reference</a> · <a href="https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3">eCFR gold-content guidance</a>. See the product/category rows for each seller’s official product link and historical evidence.</p></article>
+<p>Official follow-up links (not fetched in this session): <a href="https://www.gold.org/goldhub/data/gold-prices">World Gold Council gold reference</a> · <a href="https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-23/section-23.3">eCFR gold-content guidance</a>. See the product/category rows for each seller’s official product link and historical evidence.</p>
+<p><strong>Update — 2026-11-11, session S-59551D4B (later the same day):</strong> a separate pass with page-fetch access re-read the World Gold Council page and the official product page or product endpoint of every root row, and replaced or withdrew the displays that had changed. The statement above describes the earlier review and is kept as written. What the later pass did and did not re-read is listed in <a href="#f-052">F-052</a> and on the <a href="verification.html">dated check log</a>. A dated re-read is still not a live quote: current prices and availability remain unverified until you re-open the official page.</p></article>
 <p class="lead">Every unresolved value, ambiguity, source-scope limit, and material policy restriction is kept visible. Flagged rows remain published with sources; no gap is silently filled and no row is presented as physically verified.</p>
 <div class="note" style="margin-bottom:18px"><strong>No-hallucination policy, applied.</strong> {solid_n} of {len(items)} rows lack item-specific “solid gold” wording; {hallmark_n} of {len(items)} lack complete physical hallmark + maker’s-mark documentation; {weight_missing} lack published metal weight. These are evidence gaps, not findings that a ring is fake. No physical inspection or XRF assay was performed (F-024).</div>
 <div class="grid" style="grid-template-columns:1fr">{''.join(cards)}</div>
@@ -780,9 +819,26 @@ def build_verification(log, items, retrieved):
     for entry in entries:
         counts[entry["status"]] = counts.get(entry["status"], 0) + 1
     rows = []
+    current_gold_retrieved = load(DATA / "gold-price.json")["retrieved_at"]
     for entry in entries:
         css, label = STATUS_LABELS.get(entry["status"], ("b-neutral", entry["status"]))
-        observed = "<br>".join(f"“{esc(text)}”" for text in entry.get("observed") or []) or DASH
+        # Market entries document historical reads, not the active calculator input.
+        # Data-driven (S-59551D4B integration of S-36620E91's safeguard): a gold/market row is
+        # historical whenever it was checked before the current gold reference was retrieved.
+        historical_market = (entry["id"] == "GOLD-QUOTE" or entry["kind"] == "market_snapshot") and entry["checked_at"] != current_gold_retrieved
+        if historical_market:
+            css, label = "b-neutral", "historical observation · not current"
+        # Keep dated historical values in the evidence/log, but do not render
+        # superseded market values in the live site as a possibly current quote.
+        def historical_text(value):
+            if historical_market:
+                for old in load(DATA / "gold-price.json").get("superseded_observations", []):
+                    value = value.replace(f"{old['value']:,.2f}", "superseded quote (see evidence)")
+            return value
+        observed = "<br>".join(f"“{esc(historical_text(text))}”" for text in entry.get("observed") or []) or DASH
+        note = esc(historical_text(entry["note"]))
+        if historical_market:
+            note += ' · <a href="evidence/gold-price.md">dated quote history</a>'
         rows.append(
             f'<tr id="check-{esc(entry["id"].lower())}">'
             f'<td><div class="itemname">{esc(entry["label"])}</div>'
@@ -791,7 +847,7 @@ def build_verification(log, items, retrieved):
             f'<td><span class="badge {css}">{esc(label)}</span></td>'
             f'<td class="src">{observed}</td>'
             f'<td class="src">{external_link(entry["url"], "official page")}</td>'
-            f'<td class="src">{esc(entry["note"])}</td></tr>'
+            f'<td class="src">{note}</td></tr>'
         )
     pass_meta = log["pass"]
     body = f"""

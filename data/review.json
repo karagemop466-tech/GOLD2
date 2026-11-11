@@ -93,7 +93,7 @@
         "mene-knot",
         "mene-terms"
       ],
-      "finding": "Direct official-page reads on 2026-10-23 now show Men\u0113 Rose Ring at $1,325 USD and Knot Ring at $1,442 USD; the earlier same-day $1,336 and $1,454 observations are preserved as superseded history. Both pages identify 24k gold and Crafted-on-Demand, but no buyer size or primary-product grams are bound. Terms permit up to 1g variation and a final-price adjustment. Cancellation after shipment or more than 24 hours can incur up to a 10% restocking fee. The return window is not confirmed in captured clauses.",
+      "finding": "[Historical record \u2014 superseded by the 2026-11-11 re-read; see finding reverification-2026-11-11.] Direct official-page reads on 2026-10-23 now show Men\u0113 Rose Ring at $1,325 USD and Knot Ring at $1,442 USD; the earlier same-day $1,336 and $1,454 observations are preserved as superseded history. Both pages identify 24k gold and Crafted-on-Demand, but no buyer size or primary-product grams are bound. Terms permit up to 1g variation and a final-price adjustment. Cancellation after shipment or more than 24 hours can incur up to a 10% restocking fee. The return window is not confirmed in captured clauses.",
       "action": "Get the final size, weight, total price and applicable return policy before ordering. Buyback is a separate, conditional transaction, not a guaranteed recovery of purchase price."
     },
     {
@@ -218,7 +218,7 @@
         "wgc-panel-review",
         "jm-gold"
       ],
-      "finding": "The World Gold Council page renders a moving spot header without a quote timestamp. The 2026-10-23 date-level re-read displayed $3,995.47 USD/oz while the chart stated \u201cData as of 22 October, 2026\u201d; an earlier same-day header observation is retained in the superseded-price history in data/gold-price.json and evidence/gold-price.md. Neither the retrieval date nor the chart date proves the header quote timestamp. The observation is dated, not represented as live.",
+      "finding": "[Historical record \u2014 superseded by the 2026-11-11 re-read; see finding reverification-2026-11-11.] The World Gold Council page renders a moving spot header without a quote timestamp. The 2026-10-23 date-level re-read displayed $3,995.47 USD/oz while the chart stated \u201cData as of 22 October, 2026\u201d; an earlier same-day header observation is retained in the superseded-price history in data/gold-price.json and evidence/gold-price.md. Neither the retrieval date nor the chart date proves the header quote timestamp. The observation is dated, not represented as live.",
       "action": "Keep an unknown source quote-as-of date blank, distinguish it from the observation date, and preserve the discrepancy. The expanded calculator uses its separately identified dated dealer body/table reference, not an inferred WGC timestamp."
     },
     {
@@ -256,7 +256,7 @@
         "jm-gold",
         "wgc-panel-review"
       ],
-      "finding": "The 2026-10-23 follow-up directly re-read all 17 product rows with assigned prices. Men\u0113 Rose Ring moved $1,346 \u2192 $1,336 \u2192 $1,325 USD and Knot Ring $1,465 \u2192 $1,454 \u2192 $1,442 USD; earlier same-day values remain preserved as dated history. Brilliant Earth still renders $890 (Setting Only) with a USD selector. Automic Gold, Sarraf, and Factory Direct Jewelry displayed the previously recorded amounts on their official pages; Automic Gold\u2019s Cushion Signet page displayed $2,758 for 14k Yellow Gold / Salt and Pepper Diamond, and its JSON separately identifies the selected variant and product range. The WGC header was independently re-read at $3,995.47/oz, matching the value already integrated by PR #45, with no quote-as-of time; chart metadata remained 22 October 2026. The dated JM Bullion dealer reference ($4,035.54) was not re-read by this follow-up. No currency was converted, no ranges averaged, and no amount is a checkout total.",
+      "finding": "[Historical record \u2014 superseded by the 2026-11-11 re-read; see finding reverification-2026-11-11.] The 2026-10-23 follow-up directly re-read all 17 product rows with assigned prices. Men\u0113 Rose Ring moved $1,346 \u2192 $1,336 \u2192 $1,325 USD and Knot Ring $1,465 \u2192 $1,454 \u2192 $1,442 USD; earlier same-day values remain preserved as dated history. Brilliant Earth still renders $890 (Setting Only) with a USD selector. Automic Gold, Sarraf, and Factory Direct Jewelry displayed the previously recorded amounts on their official pages; Automic Gold\u2019s Cushion Signet page displayed $2,758 for 14k Yellow Gold / Salt and Pepper Diamond, and its JSON separately identifies the selected variant and product range. The WGC header was independently re-read at $3,995.47/oz, matching the value already integrated by PR #45, with no quote-as-of time; chart metadata remained 22 October 2026. The dated JM Bullion dealer reference ($4,035.54) was not re-read by this follow-up. No currency was converted, no ranges averaged, and no amount is a checkout total.",
       "action": "Re-open each official page and the cart for the exact configuration before deciding. Treat every amount here as dated, record the observation date with any comparison, and never treat a locale change as an exchange-rate conversion."
     },
     {
@@ -339,7 +339,7 @@
       "id": "jm-reference-reobservation-2026-10-23-evening",
       "title": "Evening 2026-10-23 re-observation supersedes the same-day JM Bullion dealer reference",
       "scope": "jm-gold (meta.marketReference)",
-      "finding": "S-C74095E5 re-read the JM Bullion gold chart page in the evening pass of 2026-10-23: the page (own timestamp 19:46 EDT = 23:46Z) displayed 'Gold Ask $4,009.38', superseding the 05:56 EDT observation of $4,035.54 recorded earlier the same day. The same evening's WGC header ($3,995.47) and Men\u0113 movements were convergently re-observed and recorded by S-88AA65FD. Superseded amounts remain only in dated notes/history, never as current values.",
+      "finding": "[Historical record \u2014 superseded by the 2026-11-11 re-read; see finding reverification-2026-11-11.] S-C74095E5 re-read the JM Bullion gold chart page in the evening pass of 2026-10-23: the page (own timestamp 19:46 EDT = 23:46Z) displayed 'Gold Ask $4,009.38', superseding the 05:56 EDT observation of $4,035.54 recorded earlier the same day. The same evening's WGC header ($3,995.47) and Men\u0113 movements were convergently re-observed and recorded by S-88AA65FD. Superseded amounts remain only in dated notes/history, never as current values.",
       "action": "Treat all gold-linked display prices as dated snapshots; re-read the official page before any purchase decision.",
       "sources": [
         "jm-gold",
@@ -354,6 +354,108 @@
       "action": "Obtain written confirmation of the diamond color from Sarraf before purchase and verify the stone independently on arrival.",
       "sources": [
         "sar-147371"
+      ]
+    },
+    {
+      "id": "reverification-2026-11-11",
+      "title": "Staleness review and live re-read on 2026-11-11",
+      "scope": "all 19 priced rows; market reference; World Gold Council context",
+      "finding": "Every stored observation was 19 days old. On 2026-11-11 session S-59551D4B re-read the 19 priced rows at the official seller pages or their official product endpoints: 17 amounts were unchanged; Men\u0113 Rose Ring now displays $1,337 USD and Knot Ring $1,455 USD (earlier amounts kept as dated history). The JM Bullion page (own timestamp Nov 11, 2026 at 3:03 AM EST) displayed $4,072.47 USD with Bid $4,057.97 / Ask $4,072.47, and the World Gold Council moving header read 4,059.49 USD/oz with chart blocks dated 10 November 2026. Rows not re-read keep their October dates.",
+      "action": "Treat every amount as a dated observation. Re-open the official page before acting; look for hallucinations again after every review.",
+      "sources": [
+        "jm-gold",
+        "wgc-panel-review",
+        "mene-rose",
+        "mene-knot",
+        "ag-24k",
+        "ag-cluster",
+        "ag-coffin-ring",
+        "ag-cushion-signet",
+        "ag-moissanite",
+        "ag-natural",
+        "ag-petal",
+        "ag-ruby",
+        "ag-sapphire",
+        "ext-be-121h6",
+        "fdj-gr0001",
+        "sar-144773",
+        "sar-145362",
+        "sar-145364",
+        "sar-147370",
+        "sar-147371",
+        "sar-151362"
+      ]
+    },
+    {
+      "id": "jm-ticker-vs-body-2026-11-11",
+      "title": "JM Bullion page shows two different gold numbers on one fetch",
+      "scope": "market reference",
+      "finding": "On the 2026-11-11 fetch the page body and the bid/ask table read $4,072.47 while the page-top ticker read 'Gold Ask $4,073.34'. The body quote, which carries the explicit 'As of Nov 11, 2026 at 3:03 AM EST' sentence, is the recorded reference; the ticker value is stored as header-value only. The two are not averaged or reconciled.",
+      "action": "Use the reference only as a dated illustration; enter your own current quote in the calculator when it matters.",
+      "sources": [
+        "jm-gold"
+      ]
+    },
+    {
+      "id": "bluenile-promotion-2026-11-11",
+      "title": "Blue Nile settings show a struck amount and a 20%-off amount",
+      "scope": "Blue Nile setting rows",
+      "finding": "On 2026-11-11 the re-read Blue Nile setting pages rendered a struck list amount directly followed by a lower amount with '-20%' and '*Discount code is applied automatically' (for example '$1,125$900(Setting Price)'). Neither amount is assigned: no ISO currency is printed and the promotion terms were not retrieved. The ext-bn-316238 URL still serves a differently named product.",
+      "action": "Confirm the cart total, currency and promotion end date on the official page.",
+      "sources": [
+        "ext-bn-192506",
+        "ext-bn-193625",
+        "ext-bn-194158",
+        "ext-bn-194548",
+        "ext-bn-195269",
+        "ext-bn-195639",
+        "ext-bn-203348",
+        "ext-bn-316238"
+      ]
+    },
+    {
+      "id": "bluenile-315661-sold-out-2026-11-11",
+      "title": "Blue Nile item 315661 is shown as sold out",
+      "scope": "ext-bn-315661",
+      "finding": "On 2026-11-11 the official page rendered 'This popular style is sold out' and no setting price for this item; the earlier displayed amount was withdrawn from the current record and kept only as dated history.",
+      "action": "Do not plan a purchase around this row.",
+      "sources": [
+        "ext-bn-315661"
+      ]
+    },
+    {
+      "id": "zales-display-change-2026-11-11",
+      "title": "Zales displays changed; two pages print a different item number",
+      "scope": "Zales rows",
+      "finding": "On 2026-11-11 three Zales pages rendered a single 'Discounted Price' ($1,299.00, $1,399.00, $1,099.00); the lower promotional amounts stored in October are no longer rendered. A bag-level flash-sale banner is shown and was not converted into a price. The V-20303279 page prints 'Item #: 20615545' and the V-20301172 page prints 'Item #: 20301161'. No ISO currency is printed; all amounts stay unassigned.",
+      "action": "Confirm item number, bag total and currency in the cart.",
+      "sources": [
+        "ext-z-20046552",
+        "ext-z-20303279",
+        "ext-z-20301172",
+        "ext-z-19957449"
+      ]
+    },
+    {
+      "id": "stone-strand-stock-and-size-2026-11-11",
+      "title": "Stone and Strand: Clara amount depends on size; Rita and Mia out of stock and final sale",
+      "scope": "ss-clara; ss-rita; ss-mia",
+      "finding": "On 2026-11-11 the official .oembed endpoints reported, in USD: Clara 2200.0 for sizes 5 and 6 and 2000.0 for size 7; Rita 780.0 and Mia 925.0 with every listed size out of stock and a 'Final sale and non-returnable' description. No price is assigned to these rows.",
+      "action": "Select the size on the official page; do not buy a final-sale ring that cannot be returned after an independent test.",
+      "sources": [
+        "ss-clara",
+        "ss-rita",
+        "ss-mia"
+      ]
+    },
+    {
+      "id": "fdj-placeholder-2026-11-11",
+      "title": "Factory Direct Jewelry page shows a $0.00 Black Friday placeholder block",
+      "scope": "fdj-gr0001",
+      "finding": "On 2026-11-11 the GR0001 page still rendered the $1,299.99 sale price and also a 'Black Friday Sale' block whose amounts were all $0.00. A placeholder is not a price; nothing was recorded from it. The gram-weight line stored in October was not re-read in this pass.",
+      "action": "Confirm the payable amount in the cart on the day of purchase.",
+      "sources": [
+        "fdj-gr0001"
       ]
     }
   ]

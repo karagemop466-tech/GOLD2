@@ -1,7 +1,7 @@
 # QA / hallucination and integration audit
 
-- Generated: 2026-11-11 08:06:29 UTC
-- Items audited: 32 · retailers: 10 · flags: 42 · field-scoped quotes: 613
+- Generated: 2026-11-11 08:20:49 UTC
+- Items audited: 32 · retailers: 10 · flags: 50 · field-scoped quotes: 612
 - **RESULT: PASS** — 12 checks, 0 failures, 3 warnings
 
 ## Checks
@@ -9,16 +9,16 @@
 | # | Check | Result | Findings |
 |---|-------|--------|----------|
 | 1 | JSON schema, item-scoped records, unique IDs, and dates | ✅ PASS | 0 |
-| 2 | Field-scoped verbatim quotes resolve in their own files (613 quotes) | ✅ PASS | 0 |
+| 2 | Field-scoped verbatim quotes resolve in their own files (612 quotes) | ✅ PASS | 0 |
 | 3 | Item name, SKU, metal, dimensions, price, basis, and scope match field quotes | ✅ PASS | 0 |
 | 4 | Retailer policy, payment, contact, and independent metrics are field-backed | ✅ PASS | 0 |
 | 5 | Official product/policy domains and independent-source URLs are constrained | ✅ PASS | 0 |
 | 6 | Blank states are flagged and item/retailer flag references are bidirectional | ✅ PASS | 0 |
 | 7 | Rejected snippets and superseded gold quotes are not current values | ✅ PASS | 0 |
 | 8 | Nominal fine-gold and melt calculations use current constants | ✅ PASS | 0 |
-| 9 | Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure (1594 link occurrences, 545 external). External retrieval is documented separately; future availability is not guaranteed. | ✅ PASS | 0 |
+| 9 | Built pages: row/source identity, CSP, small-text contrast, internal destinations/fragments, and external URL structure (1674 link occurrences, 570 external). External retrieval is documented separately; future availability is not guaranteed. | ✅ PASS | 0 |
 | 10 | Coverage limitations remain visible | ✅ PASS | 0 |
-| 11 | Dated verification log, analysis arithmetic, and derived shell counts (59 logged records) | ✅ PASS | 0 |
+| 11 | Dated verification log, analysis arithmetic, and derived shell counts (60 logged records) | ✅ PASS | 0 |
 | 12 | Combined register covers every root URL, shell claims are derived, and flag counts/derived melt values are controlled | ✅ PASS | 0 |
 
 ## Failures

@@ -1,0 +1,130 @@
+[
+ {
+  "key": "ext-bn-316238",
+  "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238",
+  "fetched_at": "2026-11-11",
+  "result": "display_changed",
+  "excerpts": [
+   "# Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen",
+   "$1,240$992(Setting Price)",
+   "-20%",
+   "*Discount code is applied automatically",
+   "20% Off* Engagement Ring Settings",
+   "505097w14",
+   "14K White Gold",
+   "1.50mm",
+   "Rhodium Finish"
+  ],
+  "observed": {
+   "display": "$1,240$992(Setting Price)",
+   "stock_number": "505097w14",
+   "metal": "14K White Gold",
+   "width": "1.50mm",
+   "title": "Comfort Fit Solitaire Engagement Ring In 14K White Gold By James Allen"
+  },
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
+ },
+ {
+  "key": "ext-bn-203348",
+  "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
+  "fetched_at": "2026-11-11",
+  "result": "display_changed",
+  "excerpts": [
+   "# Classic Simple Solitaire Engagement Ring in 14K Yellow Gold",
+   "$1,145$916(Setting Price)",
+   "-20%",
+   "*Discount code is applied automatically",
+   "20% Off* Engagement Ring Settings",
+   "502120y14",
+   "14K Yellow Gold",
+   "2.40mm"
+  ],
+  "observed": {
+   "display": "$1,145$916(Setting Price)",
+   "stock_number": "502120y14",
+   "metal": "14K Yellow Gold",
+   "width": "2.40mm",
+   "title": "Classic Simple Solitaire Engagement Ring in 14K Yellow Gold"
+  },
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
+ },
+ {
+  "key": "ext-bn-195639",
+  "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639",
+  "fetched_at": "2026-11-11",
+  "result": "display_changed",
+  "excerpts": [
+   "# Petite Solitaire Engagement Ring in 14k Yellow Gold",
+   "$1,000$800(Setting Price)",
+   "-20%",
+   "*Discount code is applied automatically",
+   "20% Off* Engagement Ring Settings",
+   "501130y14",
+   "14K Yellow Gold",
+   "1.80mm"
+  ],
+  "observed": {
+   "display": "$1,000$800(Setting Price)",
+   "stock_number": "501130y14",
+   "metal": "14K Yellow Gold",
+   "width": "1.80mm",
+   "title": "Petite Solitaire Engagement Ring in 14k Yellow Gold"
+  },
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
+ },
+ {
+  "key": "ext-bn-194548",
+  "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/solitaire-compass-set-engagement-ring-in-14k-white-gold-item-194548",
+  "fetched_at": "2026-11-11",
+  "result": "display_changed",
+  "excerpts": [
+   "# Solitaire Compass Set Engagement Ring in 14k White Gold",
+   "$1,045$836(Setting Price)",
+   "-20%",
+   "*Discount code is applied automatically",
+   "20% Off* Engagement Ring Settings",
+   "501290w14",
+   "14K White Gold",
+   "2.00mm",
+   "Rhodium Finish"
+  ],
+  "observed": {
+   "display": "$1,045$836(Setting Price)",
+   "stock_number": "501290w14",
+   "metal": "14K White Gold",
+   "width": "2.00mm",
+   "title": "Solitaire Compass Set Engagement Ring in 14k White Gold"
+  },
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
+ },
+ {
+  "key": "ext-bn-193625",
+  "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-three-stone-diamond-engagement-ring-in-14k-yellow-gold-item-193625",
+  "fetched_at": "2026-11-11",
+  "result": "display_changed",
+  "excerpts": [
+   "# Petite Three-Stone Diamond Engagement Ring in 14k Yellow Gold",
+   "$1,950$1,560(Setting Price)",
+   "-20%",
+   "*Discount code is applied automatically",
+   "20% Off* Engagement Ring Settings",
+   "502350y14",
+   "14K Yellow Gold",
+   "1.80mm",
+   "Diamond Type:Natural Diamond"
+  ],
+  "observed": {
+   "display": "$1,950$1,560(Setting Price)",
+   "stock_number": "502350y14",
+   "metal": "14K Yellow Gold",
+   "width": "1.80mm",
+   "title": "Petite Three-Stone Diamond Engagement Ring in 14k Yellow Gold"
+  },
+  "note": "Own page re-read (chunk 0). Struck list amount plus promo amount. No ISO currency; structured price stays null.",
+  "fetched_window": "between 08:03Z (JM Bullion page's own timestamp on the first fetch of this group) and 08:17Z (sandbox clock when the group was complete); exact minute not recorded"
+ }
+]
