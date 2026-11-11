@@ -996,6 +996,22 @@
         "Market Data: Provided by ICE Data Services."
       ],
       "note": "World Gold Council header observation used by the calculator, re-read 2026-11-11."
+    },
+    {
+      "id": "A182-MARKET-WGC-2026-10-23",
+      "kind": "market_snapshot",
+      "label": "Gold spot price — moving header",
+      "retailer": "World Gold Council",
+      "url": "https://www.gold.org/goldhub/data/gold-prices",
+      "checked_at": "2026-10-23",
+      "status": "verified_match",
+      "observed": [
+        "USD",
+        "/oz",
+        "3,995.47",
+        "Data as of 22 October, 2026"
+      ],
+      "note": "Official WGC page re-read directly; the value matches the record integrated by PR #45. The page does not timestamp the moving header, so quote_date remains null (F-026); chart date is separate. This is a dated observation, not a live quote."
     }
   ],
   "previous_passes": [

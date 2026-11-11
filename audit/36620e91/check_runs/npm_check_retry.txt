@@ -1,4 +1,14 @@
 
+> gold-evidence-dashboard@1.0.0 check
+> npm run verify && npm test && npm run build && npm run check:links && npm run security && npm run test:browser
+
+
+> gold-evidence-dashboard@1.0.0 verify
+> node scripts/verify.mjs
+
+PASS evidence consistency: 46 products, 88 source records, 29 findings; 0 purchase approvals.
+94 non-blocking review warnings recorded in test-results/evidence-audit.json. Unknowns stay blank; automated tests cannot certify truth.
+
 > gold-evidence-dashboard@1.0.0 test
 > node --test tests/*.test.mjs
 
@@ -6,153 +16,168 @@ TAP version 13
 # Subtest: static build is deterministic and does not renew observation timestamps
 ok 1 - static build is deterministic and does not renew observation timestamps
   ---
-  duration_ms: 301.560905
+  duration_ms: 301.265852
   type: 'test'
   ...
 # Subtest: catalog distinguishes a supported native-currency setting display from unconfirmed prices
 ok 2 - catalog distinguishes a supported native-currency setting display from unconfirmed prices
   ---
-  duration_ms: 2.531021
+  duration_ms: 4.767531
   type: 'test'
   ...
 # Subtest: NIST conversion uses troy ounces, not ordinary ounces
 ok 3 - NIST conversion uses troy ounces, not ordinary ounces
   ---
-  duration_ms: 0.927504
+  duration_ms: 1.742659
   type: 'test'
   ...
 # Subtest: nominal karat and explicit fineness are distinct
 ok 4 - nominal karat and explicit fineness are distinct
   ---
-  duration_ms: 0.387968
+  duration_ms: 0.774211
   type: 'test'
   ...
 # Subtest: conditional calculations require explicit acknowledgement
 ok 5 - conditional calculations require explicit acknowledgement
   ---
-  duration_ms: 0.245393
+  duration_ms: 0.566483
   type: 'test'
   ...
 # Subtest: documented conditional preset uses unrounded inputs and has no automatic catalog effect
 ok 6 - documented conditional preset uses unrounded inputs and has no automatic catalog effect
   ---
-  duration_ms: 0.294559
+  duration_ms: 0.470203
   type: 'test'
   ...
 # Subtest: invalid or excessive numbers never produce gold values
 ok 7 - invalid or excessive numbers never produce gold values
   ---
-  duration_ms: 0.370803
+  duration_ms: 0.57071
   type: 'test'
   ...
 # Subtest: all products block automatic fine-gold and valuation; no gross-weight fallback
 ok 8 - all products block automatic fine-gold and valuation; no gross-weight fallback
   ---
-  duration_ms: 0.537707
+  duration_ms: 0.563495
   type: 'test'
   ...
 # Subtest: numeric form parsing never converts missing input to zero
 ok 9 - numeric form parsing never converts missing input to zero
   ---
-  duration_ms: 0.319039
+  duration_ms: 0.478532
   type: 'test'
   ...
 # Subtest: stale and future observations are explicit and never refreshed implicitly
 ok 10 - stale and future observations are explicit and never refreshed implicitly
   ---
-  duration_ms: 0.170097
+  duration_ms: 0.289453
   type: 'test'
   ...
 # Subtest: current record has no provenance consistency errors; gaps remain warnings
 ok 11 - current record has no provenance consistency errors; gaps remain warnings
   ---
-  duration_ms: 7.032907
+  duration_ms: 11.256622
   type: 'test'
   ...
 # Subtest: existing two Blue Nile records and all sixteen extension candidates are retained
 ok 12 - existing two Blue Nile records and all sixteen extension candidates are retained
   ---
-  duration_ms: 0.31291
+  duration_ms: 0.410335
   type: 'test'
   ...
 # Subtest: combined register covers every original root URL exactly once
 ok 13 - combined register covers every original root URL exactly once
   ---
-  duration_ms: 10.181345
+  duration_ms: 15.538217
   type: 'test'
   ...
 # Subtest: invented or mismatched prices are rejected
 ok 14 - invented or mismatched prices are rejected
   ---
-  duration_ms: 14.606633
+  duration_ms: 17.749453
   type: 'test'
   ...
 # Subtest: shipping/item weight cannot be relabeled net alloy weight
 ok 15 - shipping/item weight cannot be relabeled net alloy weight
   ---
-  duration_ms: 9.934962
+  duration_ms: 11.521409
   type: 'test'
   ...
 # Subtest: source omissions, duplicate IDs, review-platform facts and seller mismatches fail
 ok 16 - source omissions, duplicate IDs, review-platform facts and seller mismatches fail
   ---
-  duration_ms: 26.762906
+  duration_ms: 24.849104
   type: 'test'
   ...
 # Subtest: no fabricated LBMA quote or unsupported purity substitution
 ok 17 - no fabricated LBMA quote or unsupported purity substitution
   ---
-  duration_ms: 10.248075
+  duration_ms: 11.139367
   type: 'test'
   ...
 # Subtest: publisher allowlist is exact, HTTPS only, and disallows embedded credentials
 ok 18 - publisher allowlist is exact, HTTPS only, and disallows embedded credentials
   ---
-  duration_ms: 0.359869
+  duration_ms: 0.343754
   type: 'test'
   ...
 # Subtest: escape rendered fields, and do not match unrelated numeric substrings
 ok 19 - escape rendered fields, and do not match unrelated numeric substrings
   ---
-  duration_ms: 0.946559
-  type: 'test'
-  ...
-# Subtest: every public dashboard page discloses unverified current prices
-ok 20 - every public dashboard page discloses unverified current prices
-  ---
-  duration_ms: 29.95377
+  duration_ms: 0.945564
   type: 'test'
   ...
 # Subtest: preview serves the root and GitHub Pages project-prefix paths
-ok 21 - preview serves the root and GitHub Pages project-prefix paths
+ok 20 - preview serves the root and GitHub Pages project-prefix paths
   ---
-  duration_ms: 45.357295
+  duration_ms: 62.903817
   type: 'test'
   ...
 # Subtest: preview accepts the proxied host and never depends on localhost in browser code
-ok 22 - preview accepts the proxied host and never depends on localhost in browser code
+ok 21 - preview accepts the proxied host and never depends on localhost in browser code
   ---
-  duration_ms: 12.585552
+  duration_ms: 14.345343
   type: 'test'
   ...
 # Subtest: private paths, traversal, malformed escapes and non-read methods are denied
-ok 23 - private paths, traversal, malformed escapes and non-read methods are denied
+ok 22 - private paths, traversal, malformed escapes and non-read methods are denied
   ---
-  duration_ms: 25.705702
+  duration_ms: 24.911733
   type: 'test'
   ...
 # Subtest: HEAD and missing pages return accurate status without an open write surface
-ok 24 - HEAD and missing pages return accurate status without an open write surface
+ok 23 - HEAD and missing pages return accurate status without an open write surface
   ---
-  duration_ms: 11.580308
+  duration_ms: 13.960314
   type: 'test'
   ...
-1..24
-# tests 24
+1..23
+# tests 23
 # suites 0
-# pass 24
+# pass 23
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 930.027279
+# duration_ms 1000.523445
+
+> gold-evidence-dashboard@1.0.0 build
+> node scripts/build.mjs
+
+Built 13 static pages; 46 product rows; 88 source records. Unknown product gold values remain blank.
+
+> gold-evidence-dashboard@1.0.0 check:links
+> node scripts/check-links.mjs
+
+PASS links: 46 pages, 104 local targets, 148 external publisher URLs; every data-table row has an official publisher link. External HTTP status is not certified.
+
+> gold-evidence-dashboard@1.0.0 security
+> node scripts/security.mjs && npm audit --audit-level=low
+
+PASS static security: 46 HTML pages, 6 runtime files, 106 source files and 4 pinned workflows. Run npm audit separately; no guarantee of complete security.
+found 0 vulnerabilities
+
+> gold-evidence-dashboard@1.0.0 test:browser
+> node scripts/browser-tests.mjs
+
+PASS browser: 13 expanded pages + 33 companion/root/preserved pages, desktop/mobile, all 46 automatic gates, filters, conditional + gemstone calculators, stale warning, no-JS research and zero external runtime requests. Automated axe checks found no WCAG A/AA violations in exercised states.

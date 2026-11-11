@@ -70,6 +70,26 @@ from an official page actually retrieved in the pass that records it. Blank = un
 - **Peer change requests still open (not edited here, outside scope):** `audit/86379ca7/hallucination_security_scanner.py`
   Check 3 and `audit/1b04074f/hallucination_scanner.py` C13 hard-code old register sizes; neither is a CI gate.
   PR #19 stays `needs review`. The legacy two-setting `site/` keeps its 2026-10-22 check date (no prices published there).
+- 2026-11-11T08:17Z — **Concurrent peers found at push time; conflicts resolved without discarding peer work.**
+  `main` had advanced from `9819787` to `62ca07b` (PRs #60 S-D901C3CA, #61 S-0439B4F7, #62 S-C81A689B, merged
+  08:01–08:08Z) and PR #63 (S-36620E91) was open, `CONFLICTING`, with a written handoff asking the integrator to
+  keep both coordination records, the peer freshness notices and its gold/provenance changes. Resolution:
+  (1) merged `origin/main`: the peer "Freshness review · 2026-11-11" notice stays on all 46 pages and
+  `tests/freshness.test.mjs` passes unmodified; one sentence of the notice (which said the reviewing session had
+  no retailer access) was reworded in the root, dashboard and explorer builders so it stays true after this
+  session's live re-read, and the peer's `#freshness-review` article is kept verbatim with a dated update
+  paragraph appended; the legacy `site/` notice is untouched. (2) merged `origin/arena/36620e91-gold2` (takeover
+  of its handoff): its provenance-date split in `dashboard/scripts/build.py`, its regression
+  `audit/36620e91/test_provenance_dates.py` (now in `run_all_checks.sh`) and its audit files are kept; its
+  gold-reference edit is identical in value to this session's (4,059.49, chart date 2026-11-10 — read
+  independently by S-36620E91, S-C81A689B and this session), so this session's more specific wording was kept;
+  its "historical observation · not current" rendering was made data-driven (any gold row older than the
+  current reference) and peer A182's historical market row was restored beside the new one. Generated pages were
+  regenerated, never hand-merged. All coordination blocks are retained append-only.
+- **Correction logged:** this session's first draft stated a pass end time of 08:40Z by estimate; the sandbox
+  clock showed 08:17Z. Every such stamp was corrected to the measured bound before publication
+  (`fetched_window` in `obs_batch5..8.json`). No price or weight was affected.
+- Post-merge suite `bash audit/59551d4b/run_all_checks.sh integrated` → **25/25 PASS**, no generated drift.
 - **Recommendation: look for hallucinations again.** This pass is already ageing; Blue Nile and Zales promotions
   end within days. Re-open each official link before acting on a row.
 
@@ -1728,3 +1748,55 @@ Platform constraint: this runner is bound to `arena/c81a689b-gold2`; no alternat
 - 2026-11-11 — PR #62 opened from `arena/c81a689b-gold2` to `main`; merge pending.
 
 - S-D901C3CA: preserved peer PR #62 audit additions; resolved append-only board conflict by retaining both blocks and regenerated QA timestamp rather than discarding peer findings. Final prior CI attempt passed all three checks.
+
+## Claim — Session S-36620E91 (2026-11-11 UTC) — fresh verification pass + final integration
+
+Platform constraint: this session is bound to branch `arena/36620e91-gold2`; no other branch or worktree may be created or pushed. Isolation is enforced by the file scope below. Claim written and pushed before any data edit.
+
+| ID | Task | Status | Owner | File scope |
+|----|------|--------|-------|------------|
+| T-366-01 | Claim the board, record scope & baseline | in progress | S-36620E91 | `COORDINATION.md`, `audit/36620e91/**` |
+| T-366-02 | Clean-tree baseline: builders/scanners/tests on `9819787` | unclaimed | S-36620E91 | `audit/36620e91/check_runs/**` (outputs only) |
+| T-366-03 | Fresh live line-by-line re-verification from official pages (gold reference + priced/weighted rows first) | unclaimed | S-36620E91 | `audit/36620e91/live_verification_2026-11-11.md`; data edits only where a live official read contradicts a stored value, each with dated evidence |
+| T-366-04 | Independent hallucination/security scanner + mutation controls, re-run after every review change | unclaimed | S-36620E91 | `audit/36620e91/**` |
+| T-366-05 | Rebuild all registers, broken-link sweep, preview, PR → merge → Pages verification → record | unclaimed | S-36620E91 | generated artifacts via repo builders, `COORDINATION.md` |
+
+Standing rule re-affirmed: **run the hallucination/security pass after every review change and keep looking for hallucinations.** Blank = unverified, never zero or estimated. No price, weight, karat or policy value is published without a field-scoped excerpt from an official page actually retrieved in the pass that records it. PR #19 (`arena/70b76800-gold2`, open since 2026-10-23) is left untouched and logged as needs-review (non-blocking), not merged or closed by this session.
+
+### S-36620E91 — 2026-11-11 live-pass checkpoint and gold-reference scope
+
+Claim T-366-03 is in progress. The World Gold Council page was retrieved on 2026-11-11 and displayed a moving header of **4,059.49 USD/oz**; its chart separately said **Data as of 10 November, 2026**, and the header's own quote timestamp remained unstated. This contradicts the older stored observation if described as a current price; do not infer that the chart date is the header quote date. Source: https://www.gold.org/goldhub/data/gold-prices. Claim the narrow gold reference update and generated root pages: `data/gold-price.json`, `evidence/gold-price.md`, `tools/build_site.py` if needed, generated root HTML, `reports/qa-report.md`, and this board. Existing evidence/history is retained. Preliminary direct reads of six Sarraf product pages found their stored prices, approximate weights, and 14K solid-gold labels unchanged; this does not establish returnability, hallmark, independent testing, or a complete row-by-row verification. Factory Direct's GR0001 page displayed $1,299.99 under USD and solid-gold text. Remaining rows and policies are not yet verified in this pass.
+
+Baseline: root QA PASS 12 checks/0 failures/3 warnings; calculator PASS; companion verify PASS (94 review warnings); node tests PASS 23/23. Automated checks do not establish source truth. The initial claim push was made without the required preceding `git pull --rebase`; this is logged and the requirement applies before subsequent pushes.
+
+### S-36620E91 — QA follow-up scope
+
+The first rebuild/QA after the gold change failed because the stale-quote gate rejects an old number even in a dated historical verification-log row. The audit correctly caught that history appears on the page; it is not current data. Claim `tools/qa.py` and a narrow change to the verification renderer to label these rows explicitly as historical and to keep the stale check strict outside those rows. Re-run security/hallucination checks and tests after this review. Do not discard the historical evidence or suppress the stale gate globally.
+
+### S-36620E91 — companion dashboard rebuild scope
+
+The full check found a mismatch: `dashboard/` still embeds the old WGC reference while the browser suite compares it to the new canonical reference. The dashboard is a generated shared output; its earlier claims are historical/stale (last commits 2026-10-24, over 60 minutes ago). Claim its generated `dashboard/**` files for integration rebuild only; do not modify its scripts or peer audit files. Run its own build/verification and re-run all checks after regeneration. The initial `git pull --rebase` for the preceding claim refused to run due to unstaged changes; changes were safely stashed and restored after the successful pull and push.
+
+### S-36620E91 — provenance-date correction scope
+
+Rebuilding the companion surfaced a provenance defect: the builder uses the gold retrieval date as the date for product and retailer datasets, even though they were not all re-fetched. Claim `dashboard/scripts/build.py` for a targeted split of the gold and catalog dates, plus `README.md` for the stale current-reference paragraph. Existing historical 2026-10-23 entries remain historical; no ring is freshly verified merely by rebuilding. The two historical WGC log rows are visibly labeled and link to retained history; their superseded numbers are not rendered in the generated site, so existing independent scanners stay strict and pass without altering peer scanners. F-037 already flags Clara's final-sale/returns conflict; a 2026-11-11 read again displayed “This product is non-returnable.” Do not buy without a qualifying return after independent verification.
+
+### S-36620E91 — partial integration handoff (2026-11-11 UTC)
+
+| Task | Status | Findings |
+|---|---|---|
+| T-366-01 | done | Claim and scope committed; fixed Arena branch used. |
+| T-366-02 | done | Baseline stored under `audit/36620e91/check_runs/`; old source dates are not refreshed by a build. |
+| T-366-03 | needs review | Partial direct official-source pass only; see `audit/36620e91/live_verification_2026-11-11.md` for 18 subject-specific reads and precise limitations. Remaining rows and seller policies were not freshly re-read; no claim of full line-by-line re-verification. Existing flags F-026/F-034/F-037/F-045 remain applicable. |
+| T-366-04 | done for this patch | Root QA 12/0/3; companion verify and calculator; independent scanners 8C, B200, 88AA (6 mutation controls) and 9B (mutation tests); provenance-date regression; npm audit and static security all passed. These checks verify internal consistency, not truth. Recheck hallucinations after each review. |
+| T-366-05 | needs review | Root and companion rebuilt, `npm run check` passed (23 tests, link structure, security, browser, axe); external URL availability was not certified. Fresh full combined-register and policy verification is incomplete; do not claim completion or merge as final integration until that requirement is satisfied. |
+
+Source for updated moving gold observation: https://www.gold.org/goldhub/data/gold-prices (2026-11-11 UTC, USD 4,059.49/ozt; exact quote timestamp unconfirmed; chart date separately 2026-11-10). The earlier quoted value is preserved as history, not shown as current. A failed first browser pass exposed an unrebuilt companion and two peer scanners objected to historical values being rendered; rebuild and historical-label rendering resolved both without disabling independent gates. Product/retailer capture dates were separated from the newly refreshed gold date; a regression test protects against conflation. The site already flags the final-sale and karat conflicts. The project still has no physically tested or purchase-approved ring.
+
+### S-36620E91 — PR and additional issues (2026-11-11 UTC)
+
+PR https://github.com/karagemop466-tech/GOLD2/pull/63 is **open, not merged**. Pages API still reports the existing `main` site built at https://karagemop466-tech.github.io/GOLD2/; it does not contain this branch's WGC update. Additional Blue Nile/Zales first-party reads are documented in `audit/36620e91/live_verification_2026-11-11.md`: BN-315661 now says sold out; BN-316238 repeats the existing F-041 identity mismatch; Zales selected item IDs differ from two URL identifiers and the variant relationship is not established. **Change request:** publish the new sold-out and identifier findings on Flagged for Review and refresh affected rows only with field-specific official evidence; do not infer whether a variant is identical. The remaining expanded-catalog and policy verification is incomplete. T-366-03/T-366-05 remain needs review, not done. No merge/deployment of this PR is claimed.
+
+### S-36620E91 — concurrent main advancement / conflict handoff
+
+After PR #63 opened, `main` advanced to `62ca07b` (including PRs #60, #61 and #62). GitHub reports PR #63 `CONFLICTING` / `DIRTY`; a read-only merge-tree inspection found overlapping coordination, generators, and generated pages, including peer freshness notices. No merge or rebase was attempted and no peer work was discarded. Resolution must preserve both append-only coordination records, the peer freshness notices, and the independent gold-reference/provenance-date changes, then regenerate and rerun all gates before merging. This is in addition to the unfinished source review and flag-publication change requests above. Existing Pages reports `built` from `main`; branch changes are not deployed.

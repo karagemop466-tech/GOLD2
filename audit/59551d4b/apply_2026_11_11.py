@@ -293,4 +293,6 @@ for e in v["entries"]:
 # (JM Bullion is recorded in the companion explorer only: www.jmbullion.com is not an allowed host of the root verification log.)
 save("data/verification-log.json", v); changes.append("data/verification-log.json: new pass S-59551D4B; 32 listings + 20 snapshots re-dated; policy rows marked not_re_read")
 
+# NOTE (post-merge with S-36620E91): the original A182-MARKET-WGC-2026-10-23 row was restored next to the new
+# S595-MARKET-WGC-2026-11-11 row so that the peer's "historical observation · not current" rendering keeps its subject.
 print("\n".join(changes))

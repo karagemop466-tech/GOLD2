@@ -4,6 +4,6 @@ test_rejects_invalid_or_stone_exceeding_gross_inputs (__main__.TestS9B875C81Calc
 test_workspace_passes_with_zero_findings (__main__.TestS9B875C81CalculatorAndScanner.test_workspace_passes_with_zero_findings) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.273s
+Ran 4 tests in 0.344s
 
 OK

@@ -1,0 +1,1 @@
+PASS product and seller dates remain independent from WGC observation; unknown quote date stays blank
