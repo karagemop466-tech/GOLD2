@@ -38,7 +38,8 @@
         "F-016",
         "F-021",
         "F-024",
-        "F-025"
+        "F-025",
+        "F-046"
       ],
       "notes": "The page says diamond quantity and total carat weight are based on a 1 ct. center stone.",
       "depth_mm": null,
@@ -70,16 +71,16 @@
           "1.60mm"
         ],
         "price": [
-          "$1,255(Setting Price)"
+          "$1,255$1,004(Setting Price)"
         ],
         "currency": [
-          "$1,255(Setting Price)"
+          "$1,255$1,004(Setting Price)"
         ],
         "price_basis": [
-          "$1,255(Setting Price)"
+          "$1,255$1,004(Setting Price)"
         ],
         "center_stone_included": [
-          "$1,255(Setting Price)"
+          "$1,255$1,004(Setting Price)"
         ]
       },
       "superseded_normalization": {
@@ -89,7 +90,17 @@
         "status": "Unsupported ISO inference; historical normalization only, not a verified price"
       },
       "observed_native_display": [
-        "$1,255(Setting Price)"
+        "$1,255$1,004(Setting Price)"
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: display changed from “$1,255(Setting Price)” to “$1,255$1,004(Setting Price)” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned.",
+      "superseded_displays": [
+        {
+          "text": "$1,255(Setting Price)",
+          "last_observed": "2026-10-23",
+          "superseded_at": "2026-11-11",
+          "reason": "The official page rendered a different price display on 2026-11-11. Kept as dated history; not a current value."
+        }
       ]
     },
     {
@@ -129,13 +140,14 @@
         "F-002",
         "F-003",
         "F-006",
+        "F-008",
         "F-009",
         "F-010",
         "F-015",
         "F-016",
         "F-021",
         "F-024",
-        "F-025"
+        "F-047"
       ],
       "notes": "James Allen design sold on a Blue Nile product page; seller contact and policies are Blue Nile.",
       "depth_mm": null,
@@ -166,12 +178,6 @@
         "width_mm": [
           "1.75mm"
         ],
-        "price": [
-          "$2,210(Setting Price)"
-        ],
-        "currency": [
-          "$2,210(Setting Price)"
-        ],
         "price_basis": [
           "$2,210(Setting Price)"
         ],
@@ -180,6 +186,9 @@
         ],
         "surface_finish": [
           "Rhodium Finish\n\nYes"
+        ],
+        "availability_note": [
+          "This popular style is sold out"
         ]
       },
       "superseded_normalization": {
@@ -188,9 +197,18 @@
         "currency": "USD",
         "status": "Unsupported ISO inference; historical normalization only, not a verified price"
       },
-      "observed_native_display": [
-        "$2,210(Setting Price)"
-      ]
+      "observed_native_display": null,
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page now reads “This popular style is sold out” and renders no setting price for this item (F-047). The earlier display is withdrawn.",
+      "superseded_displays": [
+        {
+          "text": "$2,210(Setting Price)",
+          "last_observed": "2026-10-23",
+          "superseded_at": "2026-11-11",
+          "reason": "On 2026-11-11 the official page rendered “This popular style is sold out” and no setting price for this item. Kept as dated history; not a current value."
+        }
+      ],
+      "availability_note": "This popular style is sold out"
     },
     {
       "id": "BN-195402",
@@ -227,7 +245,8 @@
         "F-016",
         "F-021",
         "F-024",
-        "F-025"
+        "F-025",
+        "F-046"
       ],
       "notes": "Re-fetched during integration. The page lists 22 diamonds totaling 1/10 ct.; the price is Setting Price.",
       "depth_mm": null,
@@ -259,16 +278,16 @@
           "1.70mm"
         ],
         "price": [
-          "$1,300(Setting Price)"
+          "$1,300$1,040(Setting Price)"
         ],
         "currency": [
-          "$1,300(Setting Price)"
+          "$1,300$1,040(Setting Price)"
         ],
         "price_basis": [
-          "$1,300(Setting Price)"
+          "$1,300$1,040(Setting Price)"
         ],
         "center_stone_included": [
-          "$1,300(Setting Price)"
+          "$1,300$1,040(Setting Price)"
         ],
         "surface_finish": [
           "Rhodium Finish\n\nYes"
@@ -281,7 +300,17 @@
         "status": "Unsupported ISO inference; historical normalization only, not a verified price"
       },
       "observed_native_display": [
-        "$1,300(Setting Price)"
+        "$1,300$1,040(Setting Price)"
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: display changed from “$1,300(Setting Price)” to “$1,300$1,040(Setting Price)” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned.",
+      "superseded_displays": [
+        {
+          "text": "$1,300(Setting Price)",
+          "last_observed": "2026-10-23",
+          "superseded_at": "2026-11-11",
+          "reason": "The official page rendered a different price display on 2026-11-11. Kept as dated history; not a current value."
+        }
       ]
     },
     {
@@ -319,7 +348,8 @@
         "F-016",
         "F-021",
         "F-024",
-        "F-025"
+        "F-025",
+        "F-046"
       ],
       "notes": "Re-fetched during integration. The page identifies lab-grown accent diamonds; the price is Setting Price.",
       "depth_mm": null,
@@ -351,16 +381,16 @@
           "1.70mm"
         ],
         "price": [
-          "$1,050(Setting Price)"
+          "$1,050$840(Setting Price)"
         ],
         "currency": [
-          "$1,050(Setting Price)"
+          "$1,050$840(Setting Price)"
         ],
         "price_basis": [
-          "$1,050(Setting Price)"
+          "$1,050$840(Setting Price)"
         ],
         "center_stone_included": [
-          "$1,050(Setting Price)"
+          "$1,050$840(Setting Price)"
         ],
         "surface_finish": [
           "Rhodium Finish\n\nYes"
@@ -373,7 +403,17 @@
         "status": "Unsupported ISO inference; historical normalization only, not a verified price"
       },
       "observed_native_display": [
-        "$1,050(Setting Price)"
+        "$1,050$840(Setting Price)"
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: display changed from “$1,050(Setting Price)” to “$1,050$840(Setting Price)” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned.",
+      "superseded_displays": [
+        {
+          "text": "$1,050(Setting Price)",
+          "last_observed": "2026-10-23",
+          "superseded_at": "2026-11-11",
+          "reason": "The official page rendered a different price display on 2026-11-11. Kept as dated history; not a current value."
+        }
       ]
     },
     {
@@ -397,7 +437,7 @@
       "price_basis": "setting_price",
       "center_stone_included": false,
       "original_price": null,
-      "unassigned_price_text": "$1,240(Setting Price)",
+      "unassigned_price_text": "$1,240$992(Setting Price)",
       "prong_metal": null,
       "surface_finish": "Rhodium Finish: Yes",
       "source_url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238",
@@ -422,7 +462,8 @@
         "F-024",
         "F-025",
         "F-041",
-        "F-042"
+        "F-042",
+        "F-046"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
@@ -450,15 +491,25 @@
           "Rhodium Finish: Yes"
         ],
         "unassigned_price_text": [
-          "$1,240(Setting Price)"
+          "$1,240$992(Setting Price)"
         ],
         "price_basis": [
-          "$1,240(Setting Price)"
+          "$1,240$992(Setting Price)"
         ],
         "center_stone_included": [
-          "$1,240(Setting Price)"
+          "$1,240$992(Setting Price)"
         ]
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: display changed from “$1,240(Setting Price)” to “$1,240$992(Setting Price)” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned. The URL still serves a differently named product (F-041).",
+      "superseded_displays": [
+        {
+          "text": "$1,240(Setting Price)",
+          "last_observed": "2026-10-23",
+          "superseded_at": "2026-11-11",
+          "reason": "The official page rendered a different price display on 2026-11-11. Kept as dated history; not a current value."
+        }
+      ]
     }
   ]
 }

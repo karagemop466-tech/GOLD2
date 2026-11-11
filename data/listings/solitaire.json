@@ -38,7 +38,8 @@
         "F-016",
         "F-021",
         "F-024",
-        "F-025"
+        "F-025",
+        "F-046"
       ],
       "notes": "The official price is labeled Setting Price.",
       "depth_mm": null,
@@ -70,16 +71,16 @@
           "2.40mm"
         ],
         "price": [
-          "$1,145(Setting Price)"
+          "$1,145$916(Setting Price)"
         ],
         "currency": [
-          "$1,145(Setting Price)"
+          "$1,145$916(Setting Price)"
         ],
         "price_basis": [
-          "$1,145(Setting Price)"
+          "$1,145$916(Setting Price)"
         ],
         "center_stone_included": [
-          "$1,145(Setting Price)"
+          "$1,145$916(Setting Price)"
         ]
       },
       "superseded_normalization": {
@@ -89,7 +90,17 @@
         "status": "Unsupported ISO inference; historical normalization only, not a verified price"
       },
       "observed_native_display": [
-        "$1,145(Setting Price)"
+        "$1,145$916(Setting Price)"
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: display changed from “$1,145(Setting Price)” to “$1,145$916(Setting Price)” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned.",
+      "superseded_displays": [
+        {
+          "text": "$1,145(Setting Price)",
+          "last_observed": "2026-10-23",
+          "superseded_at": "2026-11-11",
+          "reason": "The official page rendered a different price display on 2026-11-11. Kept as dated history; not a current value."
+        }
       ]
     },
     {
@@ -127,7 +138,8 @@
         "F-016",
         "F-021",
         "F-024",
-        "F-025"
+        "F-025",
+        "F-046"
       ],
       "notes": "The official price is labeled Setting Price.",
       "depth_mm": null,
@@ -159,16 +171,16 @@
           "1.80mm"
         ],
         "price": [
-          "$1,000(Setting Price)"
+          "$1,000$800(Setting Price)"
         ],
         "currency": [
-          "$1,000(Setting Price)"
+          "$1,000$800(Setting Price)"
         ],
         "price_basis": [
-          "$1,000(Setting Price)"
+          "$1,000$800(Setting Price)"
         ],
         "center_stone_included": [
-          "$1,000(Setting Price)"
+          "$1,000$800(Setting Price)"
         ]
       },
       "superseded_normalization": {
@@ -178,7 +190,17 @@
         "status": "Unsupported ISO inference; historical normalization only, not a verified price"
       },
       "observed_native_display": [
-        "$1,000(Setting Price)"
+        "$1,000$800(Setting Price)"
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: display changed from “$1,000(Setting Price)” to “$1,000$800(Setting Price)” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned.",
+      "superseded_displays": [
+        {
+          "text": "$1,000(Setting Price)",
+          "last_observed": "2026-10-23",
+          "superseded_at": "2026-11-11",
+          "reason": "The official page rendered a different price display on 2026-11-11. Kept as dated history; not a current value."
+        }
       ]
     },
     {
@@ -216,7 +238,8 @@
         "F-016",
         "F-021",
         "F-024",
-        "F-025"
+        "F-025",
+        "F-046"
       ],
       "notes": "The page states 14K White Gold and Rhodium Finish: Yes. It does not state the words solid gold; no underlying-construction claim is inferred from the finish.",
       "depth_mm": null,
@@ -248,16 +271,16 @@
           "2.00mm"
         ],
         "price": [
-          "$1,045(Setting Price)"
+          "$1,045$836(Setting Price)"
         ],
         "currency": [
-          "$1,045(Setting Price)"
+          "$1,045$836(Setting Price)"
         ],
         "price_basis": [
-          "$1,045(Setting Price)"
+          "$1,045$836(Setting Price)"
         ],
         "center_stone_included": [
-          "$1,045(Setting Price)"
+          "$1,045$836(Setting Price)"
         ],
         "surface_finish": [
           "Rhodium Finish\n\nYes"
@@ -270,7 +293,17 @@
         "status": "Unsupported ISO inference; historical normalization only, not a verified price"
       },
       "observed_native_display": [
-        "$1,045(Setting Price)"
+        "$1,045$836(Setting Price)"
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: display changed from “$1,045(Setting Price)” to “$1,045$836(Setting Price)” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned.",
+      "superseded_displays": [
+        {
+          "text": "$1,045(Setting Price)",
+          "last_observed": "2026-10-23",
+          "superseded_at": "2026-11-11",
+          "reason": "The official page rendered a different price display on 2026-11-11. Kept as dated history; not a current value."
+        }
       ]
     },
     {
@@ -367,7 +400,9 @@
           "status": "superseded_region_currency",
           "reason": "The 2026-10-22 retrieval was served a euro price while the 2026-10-23 retrieval was served a dollar price with a USD selector. Neither is converted; only the dated USD observation is used in calculations."
         }
-      ]
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: “$890” setting price beside the USD selector re-read; unchanged. Metal specification block not re-read this pass."
     }
   ]
 }

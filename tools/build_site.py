@@ -230,6 +230,8 @@ def listing_table(items: list[dict]) -> str:
         weight = fmt_num(item.get("weight_g"), " g", 2)
         if item.get("weight_basis"):
             weight += f'<div class="sub">{esc(item["weight_basis"])}</div>'
+        if item.get("weight_checked_at"):
+            weight += f'<div class="sub recheck">weight re-read {esc(item["weight_checked_at"])}</div>'
 
         price = f'<strong>{fmt_price(item)}</strong>'
         displayed = item.get("observed_native_display") or []
@@ -243,6 +245,9 @@ def listing_table(items: list[dict]) -> str:
             price += f'<div class="sub">unassigned official text:<br>“{esc(item["unassigned_price_text"])}”</div>'
         elif item.get("price") is None:
             price += '<div class="sub">no price assigned; see flag</div>'
+        if item.get("price_checked_at"):
+            price += (f'<div class="sub recheck"><strong>price re-read {esc(item["price_checked_at"])}</strong>'
+                      f' — {esc(item.get("price_check_note") or "")}</div>')
 
         stone_scope = (
             "all-metal solid gold ring (no stones)"
@@ -250,7 +255,9 @@ def listing_table(items: list[dict]) -> str:
             else ("centre stone not included" if item.get("center_stone_included") is False else "complete ring as listed")
         )
         source = external_link(item["source_url"], "official listing")
-        source += f'<div class="sub">retrieved {esc(item["retrieved_at"])}</div>'
+        source += f'<div class="sub">full capture {esc(item["retrieved_at"])}</div>'
+        if item.get("price_checked_at"):
+            source += f'<div class="sub">price re-read {esc(item["price_checked_at"])}</div>'
         source += f'<div class="sub"><a href="{esc(item["evidence_file"])}">field evidence</a></div>'
         rows.append(
             f'<tr class="item-row" id="item-{iid.lower()}" data-item-id="{esc(iid)}" data-source-url="{esc(item["source_url"])}">'
@@ -338,6 +345,35 @@ def register_relationship(items):
         f'a market-wide list.</div>'
     )
 
+def freshness_card(items, gold):
+    """Dated currency-of-data summary. Every number is derived from the data files."""
+    checked = sorted({item["price_checked_at"] for item in items if item.get("price_checked_at")})
+    captured = sorted({item["retrieved_at"] for item in items})
+    never = [item["id"] for item in items if not item.get("price_checked_at")]
+    if not checked:
+        return ""
+    latest = checked[-1]
+    on_latest = sum(1 for item in items if item.get("price_checked_at") == latest)
+    weights = [item for item in items if item.get("weight_g") is not None]
+    weights_latest = sum(1 for item in weights if item.get("weight_checked_at") == latest)
+    changed = sum(1 for item in items if any(entry.get("superseded_at") == latest for entry in item.get("superseded_displays") or []))
+    stale = f" {len(never)} row(s) have no price re-read date: {esc(', '.join(never))}." if never else ""
+    return (
+        '<section class="card mt16 freshness" aria-labelledby="freshness-h">'
+        '<div class="eyebrow">How current is this page?</div>'
+        f'<h2 id="freshness-h">Prices last re-read from the official pages on {esc(latest)} (UTC)</h2>'
+        f'<ul class="clean"><li><strong>{on_latest} of {len(items)}</strong> rows had their price, or the absence of one, re-read on {esc(latest)}; '
+        f'<strong>{changed}</strong> displayed amount(s) had changed and were replaced or withdrawn.{stale}</li>'
+        f'<li><strong>{weights_latest} of {len(weights)}</strong> published metal weights were re-read on {esc(latest)}.</li>'
+        f'<li>Gold reference re-read {esc(gold["retrieved_at"])}: ${gold["usd_per_troy_oz"]:,.2f} per troy ounce.</li>'
+        f'<li>Other fields (band width and depth, retailer policies, references) keep their full-capture dates: {esc(", ".join(captured))}. '
+        'They were not re-read in the latest pass — see <a href="flags.html#f-052">F-052</a> and the <a href="verification.html">dated check log</a>.</li></ul>'
+        '<p class="flagline"><strong>A dated row is not a live quote.</strong> Prices and promotions change daily. '
+        'Open the official link in each row before acting, and look for hallucinations again after every review.</p>'
+        '</section>'
+    )
+
+
 def build_index(items, payloads, flags, gold, qa_summary, retrieved):
     priced = sum(1 for item in items if item.get("price") is not None)
     weights = sum(1 for item in items if item.get("weight_g") is not None)
@@ -385,6 +421,8 @@ def build_index(items, payloads, flags, gold, qa_summary, retrieved):
   <p>A published fact must be supported by a field-scoped excerpt from a page actually retrieved. If a value is absent or ambiguous, it remains <strong>blank</strong> and is linked to <a href="flags.html">Flagged for Review</a>. Search snippets are not product facts; unlabeled amounts are not assigned by position or arithmetic.</p>
   <p class="flagline"><strong>Look for hallucinations again after every review.</strong> Re-open the official source, re-read the row, and treat the official page as current if this table becomes stale. Automated checks: <strong>{esc(qa_summary)}</strong> — see <a href="methods.html">Method &amp; QA</a>.</p>
 </section>
+
+{freshness_card(items, gold)}
 
 <h1>Gold engagement-ring research dashboard</h1>
 <p class="lead">{len(items)} researched listings from {len({item['retailer_id'] for item in items})} official retailers, organized into {len(payloads)} categories (including {len(items)-solid_missing} explicit <em>Solid Gold</em> (14k–24k) rings). Official page claims are not physical verification: full physical hallmark + maker’s-mark stamps remain unverified across all {hallmark_missing} pages, while {weights} rows publish stone-free metal weights.</p>

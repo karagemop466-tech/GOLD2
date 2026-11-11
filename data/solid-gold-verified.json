@@ -101,7 +101,10 @@
         "source_url": "https://www.automicgold.com/products/coffin-ring.js",
         "retrieved_at": "2026-10-23",
         "note": "Product JSON price_min 191000 / price_max 223300 minor units; 14k Yellow/White/Rose 191000, Nickel Free 14k White 203900."
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: default display “$1,910” and “Approximately 6.1g (gold)” re-read; unchanged.",
+      "weight_checked_at": "2026-11-11"
     },
     {
       "id": "AG-CUSHION-SIGNET",
@@ -201,7 +204,9 @@
         "source_url": "https://www.automicgold.com/products/cushion-diamond-signet-ring.js",
         "retrieved_at": "2026-10-23",
         "note": "Product JSON price_min 240800 / price_max 325300 minor units; 14k Yellow/Salt and Pepper 275800, 14k Yellow/Clear Lab 240800."
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product .oembed endpoint: price re-read; unchanged. Dimension lines not re-read this pass."
     },
     {
       "id": "AG-SAPPHIRE-RING",
@@ -296,7 +301,9 @@
         ]
       },
       "currency_source_url": "https://www.automicgold.com/cart.js",
-      "currency_evidence": "The store’s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign."
+      "currency_evidence": "The store’s public cart endpoint reports \"currency\":\"USD\"; the item price is displayed with a dollar sign.",
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product .oembed endpoint: price re-read; unchanged. Dimension lines not re-read this pass."
     },
     {
       "id": "MJ-BOLD-ETERNITY",
@@ -340,7 +347,8 @@
         "F-024",
         "F-025",
         "F-030",
-        "F-031"
+        "F-031",
+        "F-053"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
@@ -382,7 +390,9 @@
       },
       "observed_native_display": [
         "From$2,900"
-      ]
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: “From$2,900” re-read; unchanged, still no ISO currency. Holiday return window newly stated (F-053)."
     },
     {
       "id": "SAR-147370",
@@ -467,7 +477,10 @@
           "14k White Gold Solitaire Ring 0.94 ctw.",
           "Diamond Weight: 0.94 Ct."
         ]
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: US$ price and approximate metal weight re-read; unchanged.",
+      "weight_checked_at": "2026-11-11"
     },
     {
       "id": "SAR-145362",
@@ -555,7 +568,10 @@
           "14k White Gold Men's Solitaire Diamond Ring 1/2 ct.",
           "Diamond Weight: 0.50 Ct."
         ]
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: US$ price and approximate metal weight re-read; unchanged.",
+      "weight_checked_at": "2026-11-11"
     },
     {
       "id": "SAR-145364",
@@ -643,7 +659,10 @@
           "14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct.",
           "Diamond Weight: 0.50 Ct."
         ]
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: US$ price and approximate metal weight re-read; unchanged.",
+      "weight_checked_at": "2026-11-11"
     },
     {
       "id": "SAR-144773",
@@ -733,7 +752,10 @@
         "center_stone_included": [
           "14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band"
         ]
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: US$ price and approximate metal weight re-read; unchanged.",
+      "weight_checked_at": "2026-11-11"
     },
     {
       "id": "AG-24K",
@@ -824,7 +846,10 @@
         ]
       },
       "currency_source_url": "https://www.automicgold.com/cart.js",
-      "currency_evidence": "Automic Gold cart.js reports \"currency\":\"USD\"."
+      "currency_evidence": "Automic Gold cart.js reports \"currency\":\"USD\".",
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page and product JSON: price and “Approximate item weight: 11g” re-read; unchanged.",
+      "weight_checked_at": "2026-11-11"
     },
     {
       "id": "FDJ-GR0001",
@@ -868,7 +893,8 @@
         "F-024",
         "F-028",
         "F-031",
-        "F-035"
+        "F-035",
+        "F-051"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
@@ -909,7 +935,9 @@
         "gross_ring_weight_g": [
           "Weight:1.25 Grams"
         ]
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: “SALE $1,299.99” re-read; unchanged. A new Black Friday block shows only $0.00 placeholders (F-051)."
     },
     {
       "id": "SS-CLARA",
@@ -953,7 +981,8 @@
         "F-021",
         "F-024",
         "F-025",
-        "F-037"
+        "F-037",
+        "F-049"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
@@ -986,7 +1015,9 @@
         "center_stone_included": [
           "The Clara Diamond Ring"
         ]
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product .oembed endpoint: offers 2200.0 USD (sizes 5 and 6) and 2000.0 USD (size 7). Amount depends on size, so the price stays unassigned (F-049). Product HTML not re-read."
     },
     {
       "id": "SS-RITA",
@@ -1030,7 +1061,8 @@
         "F-021",
         "F-024",
         "F-025",
-        "F-034"
+        "F-034",
+        "F-050"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
@@ -1063,7 +1095,9 @@
         "center_stone_included": [
           "The Rita Diamond Ring"
         ]
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product .oembed endpoint: 780.0 USD, every size out of stock, final sale (F-050). Product HTML not re-read."
     },
     {
       "id": "SS-MIA",
@@ -1107,7 +1141,8 @@
         "F-021",
         "F-024",
         "F-025",
-        "F-034"
+        "F-034",
+        "F-050"
       ],
       "physical_test_status": "not_tested",
       "independent_test_permission": null,
@@ -1137,7 +1172,9 @@
         "center_stone_included": [
           "The Mia Diamond Ring"
         ]
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product .oembed endpoint: 925.0 USD, every size out of stock, final sale (F-050). Product HTML not re-read."
     },
     {
       "id": "SAR-151362",
@@ -1221,7 +1258,10 @@
           "14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw",
           "Diamond Weight: 1.00 Ct."
         ]
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: US$ price and approximate metal weight re-read; unchanged.",
+      "weight_checked_at": "2026-11-11"
     },
     {
       "id": "SAR-147371",
@@ -1309,7 +1349,10 @@
           "14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.",
           "Diamond Weight: 0.98 Ct."
         ]
-      }
+      },
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: US$ price and approximate metal weight re-read; unchanged.",
+      "weight_checked_at": "2026-11-11"
     }
   ]
 }

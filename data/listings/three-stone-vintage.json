@@ -45,7 +45,8 @@
         "F-016",
         "F-021",
         "F-024",
-        "F-025"
+        "F-025",
+        "F-046"
       ],
       "notes": "The page lists two round side stones totaling 1/4 ct.; the current page price is recorded and the cached snippet is rejected.",
       "depth_mm": null,
@@ -77,16 +78,16 @@
           "1.80mm"
         ],
         "price": [
-          "$1,950(Setting Price)"
+          "$1,950$1,560(Setting Price)"
         ],
         "currency": [
-          "$1,950(Setting Price)"
+          "$1,950$1,560(Setting Price)"
         ],
         "price_basis": [
-          "$1,950(Setting Price)"
+          "$1,950$1,560(Setting Price)"
         ],
         "center_stone_included": [
-          "$1,950(Setting Price)"
+          "$1,950$1,560(Setting Price)"
         ]
       },
       "superseded_normalization": {
@@ -96,7 +97,17 @@
         "status": "Unsupported ISO inference; historical normalization only, not a verified price"
       },
       "observed_native_display": [
-        "$1,950(Setting Price)"
+        "$1,950$1,560(Setting Price)"
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: display changed from “$1,950(Setting Price)” to “$1,950$1,560(Setting Price)” with “-20%” (site promotion, F-046). No ISO currency; price stays unassigned.",
+      "superseded_displays": [
+        {
+          "text": "$1,950(Setting Price)",
+          "last_observed": "2026-10-23",
+          "superseded_at": "2026-11-11",
+          "reason": "The official page rendered a different price display on 2026-11-11. Kept as dated history; not a current value."
+        }
       ]
     },
     {
@@ -137,13 +148,14 @@
         "F-021",
         "F-023",
         "F-024",
-        "F-025"
+        "F-025",
+        "F-048"
       ],
       "notes": "Renders alternate between labeled ('Discounted Price' / 'Original Price was') and unlabeled displays of the same two amounts plus 30% Off (F-018). Neither amount is assigned to a current or original price, and the page states no ISO currency (F-025).",
       "depth_mm": null,
       "band_width_text": null,
       "weight_basis": null,
-      "unassigned_price_text": "Discounted Price $979.30  Original Price was $1,399.00 30% Off",
+      "unassigned_price_text": "Discounted Price $1,399.00",
       "prong_metal": null,
       "surface_finish": null,
       "physical_test_status": "not_tested",
@@ -169,17 +181,17 @@
           "1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold"
         ],
         "price": [
-          "Discounted Price $979.30  Original Price was $1,399.00 30% Off"
+          "Discounted Price $1,399.00"
         ],
         "currency": [
-          "Discounted Price $979.30  Original Price was $1,399.00 30% Off"
+          "Discounted Price $1,399.00"
         ],
         "unassigned_price_text": [
-          "Discounted Price $979.30  Original Price was $1,399.00 30% Off"
+          "Discounted Price $1,399.00"
         ]
       },
       "observed_native_display": [
-        "Discounted Price $979.30  Original Price was $1,399.00 30% Off"
+        "Discounted Price $1,399.00"
       ],
       "render_history": [
         {
@@ -199,6 +211,16 @@
             "Discounted Price $979.30  Original Price was $1,399.00 30% Off"
           ],
           "note": "This session's render of the same URL displayed the Discounted/Original labels. Every render is kept verbatim; no amount is assigned a currency or ordered by position (F-018, F-025)."
+        }
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: display changed to “Discounted Price $1,399.00”; the earlier promotional amount is no longer rendered (F-048). No ISO currency; price stays unassigned.",
+      "superseded_displays": [
+        {
+          "text": "Discounted Price $979.30  Original Price was $1,399.00 30% Off",
+          "last_observed": "2026-10-23",
+          "superseded_at": "2026-11-11",
+          "reason": "The official page rendered a different price display on 2026-11-11. Kept as dated history; not a current value."
         }
       ]
     },
@@ -240,13 +262,14 @@
         "F-021",
         "F-023",
         "F-024",
-        "F-025"
+        "F-025",
+        "F-048"
       ],
       "notes": "Renders alternate between labeled ('Discounted Price' / 'Original Price was') and unlabeled displays of the same two amounts plus 30% Off (F-018). Neither amount is assigned to a current or original price, and the page states no ISO currency (F-025).",
       "depth_mm": null,
       "band_width_text": null,
       "weight_basis": null,
-      "unassigned_price_text": "Discounted Price $769.30  Original Price was $1,099.00 30% Off",
+      "unassigned_price_text": "Discounted Price $1,099.00",
       "prong_metal": null,
       "surface_finish": null,
       "physical_test_status": "not_tested",
@@ -272,17 +295,17 @@
           "1/3 CT. T.W. Diamond Three Stone Engagement Ring in 10K Gold"
         ],
         "price": [
-          "Discounted Price $769.30  Original Price was $1,099.00 30% Off"
+          "Discounted Price $1,099.00"
         ],
         "currency": [
-          "Discounted Price $769.30  Original Price was $1,099.00 30% Off"
+          "Discounted Price $1,099.00"
         ],
         "unassigned_price_text": [
-          "Discounted Price $769.30  Original Price was $1,099.00 30% Off"
+          "Discounted Price $1,099.00"
         ]
       },
       "observed_native_display": [
-        "Discounted Price $769.30  Original Price was $1,099.00 30% Off"
+        "Discounted Price $1,099.00"
       ],
       "render_history": [
         {
@@ -302,6 +325,16 @@
             "Discounted Price $769.30  Original Price was $1,099.00 30% Off"
           ],
           "note": "This session's render of the same URL displayed the Discounted/Original labels. Every render is kept verbatim; no amount is assigned a currency or ordered by position (F-018, F-025)."
+        }
+      ],
+      "price_checked_at": "2026-11-11",
+      "price_check_note": "Official product page: display changed to “Discounted Price $1,099.00”; the earlier promotional amount is no longer rendered (F-048). No ISO currency; price stays unassigned.",
+      "superseded_displays": [
+        {
+          "text": "Discounted Price $769.30  Original Price was $1,099.00 30% Off",
+          "last_observed": "2026-10-23",
+          "superseded_at": "2026-11-11",
+          "reason": "The official page rendered a different price display on 2026-11-11. Kept as dated history; not a current value."
         }
       ]
     }

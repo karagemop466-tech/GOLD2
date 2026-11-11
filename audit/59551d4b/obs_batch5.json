@@ -1,0 +1,71 @@
+[
+ {
+  "key": "gold-jm",
+  "url": "https://www.jmbullion.com/charts/gold-price/",
+  "fetched_at": "2026-11-11T08:20:00Z",
+  "result": "changed",
+  "excerpts": [
+   "Gold Ask](https://www.jmbullion.com/charts/gold-price/)$4,073.34$33.58",
+   "Nov 11, 2026 at 03:03 EST",
+   "$4,072.47 USD",
+   "As of Nov 11, 2026 at 3:03 AM EST, the live Gold spot price for 1 ounce of Gold in U.S. dollars (USD) is $4,072.47, 1 gram of Gold is $130.93 and 1 kilogram of Gold is $130,932.95.",
+   "Bid: $4,057.97   Ask: $4,072.47",
+   "11/11/2026 3:03 AM EST",
+   "Live Metal Spot Prices (24 Hours) Last Updated: 11/11/2026 at 3:03 AM EST",
+   "Current Spot Price Per Ounce: $4,073.34"
+  ],
+  "observed": {
+   "body_quote": "$4,072.47 USD",
+   "bid_ask": "Bid: $4,057.97   Ask: $4,072.47",
+   "header_ticker_ask": "$4,073.34",
+   "page_time": "Nov 11, 2026 at 3:03 AM EST"
+  },
+  "note": "Stored URL fetched. Body quote and bid/ask table both read $4,072.47 at 3:03 AM EST. The page-top ticker and the ROI-calculator line read $4,073.34 on the same fetch: two different numbers on one page. The body quote/ask (which carries the explicit 'As of' sentence) is the one recorded; the ticker difference is flagged, not averaged."
+ },
+ {
+  "key": "ag-coffin-ring-html4",
+  "url": "https://www.automicgold.com/products/coffin-ring",
+  "fetched_at": "2026-11-11T08:20:00Z",
+  "result": "unchanged",
+  "excerpts": [
+   "# Coffin Ring",
+   "$1,910",
+   "Solid 14k Gold and 950 Platinum",
+   "Approximately 6.1g (gold) or 9.2g (platinum)",
+   "950 platinum and/or Solid 14k gold",
+   "Only 3 units left in stock!",
+   "All engraved items are final sale.",
+   "Band is 3mm",
+   "Approximately 1.8mm - 2.3mm"
+  ],
+  "observed": {
+   "price_display": "$1,910",
+   "item_weight": "Approximately 6.1g (gold) or 9.2g (platinum)",
+   "material": "950 platinum and/or Solid 14k gold"
+  },
+  "note": "HTML chunk 4 of 7. Item Weight line re-read: 6.1 g (gold) unchanged. Default display Size 2 / 14k Yellow Gold $1,910 unchanged."
+ },
+ {
+  "key": "ext-bn-192506",
+  "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-hidden-halo-solitaire-plus-diamond-engagement-ring-in-14k-yellow-gold-item-192506",
+  "fetched_at": "2026-11-11T08:20:00Z",
+  "result": "display_changed",
+  "excerpts": [
+   "# Petite Hidden Halo Solitaire Plus Diamond Engagement Ring in 14k Yellow Gold",
+   "$1,255$1,004(Setting Price)",
+   "-20%",
+   "*Discount code is applied automatically",
+   "20% Off* Engagement Ring Settings",
+   "502250y14",
+   "14K Yellow Gold",
+   "1.60mm"
+  ],
+  "observed": {
+   "display": "$1,255$1,004(Setting Price)",
+   "stock_number": "502250y14",
+   "metal": "14K Yellow Gold",
+   "width": "1.60mm"
+  },
+  "note": "Own page re-read (chunk 0). Display now shows a struck list amount and a promo amount. No ISO currency; structured price stays null."
+ }
+]
