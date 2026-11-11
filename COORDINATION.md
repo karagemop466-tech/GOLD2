@@ -1606,6 +1606,22 @@ After the scratch build reached the final QA audit, `tools/qa.py` reported exact
 - A182-01, A182-02, A182-04 and A182-05 are complete. A182-03 remains in progress until its own PR is merged and Pages is verified; no deployment is claimed yet.
 
 
+## Session S-D901C3CA — 2026-11-11 — freshness and final integration
+
+Platform requires the existing `arena/d901c3ca-gold2` branch; no alternate branch will be created. Read the board before claiming. Prior October claims are more than 60 minutes old; PR #59 is merged. PR #19 remains untouched. This session claims final integration only for the scope below; historical evidence and peer audit directories are preserved.
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| D901-01 Freshness limitation on all site variants, explicit published review flag, regression test and complete build/security/provenance checks | in progress | S-D901C3CA | `tools/build_site.py`, `scripts/build.mjs`, `scripts/build.py`, `dashboard/scripts/build.py`, generated HTML in root/site/dashboard/explore, `data/site-manifest.json`, `reports/qa-report.md`, `tests/freshness.test.mjs`, `audit/d901c3ca/**`, `COORDINATION.md` |
+| D901-02 PR, merge and Pages deployment confirmation | in progress | S-D901C3CA | same integration scope; GitHub PR/Pages metadata |
+
+Constraint: outbound network is limited to GitHub and package registries. No retailer/regulator page can be independently refreshed here. Existing dated observations must not be called current quotes or fresh official verification. This review checks repository consistency, not physical purity or current prices. No price or source retrieval date will be fabricated. Recommend rechecking for hallucinations after every review.
+
+### S-D901C3CA integration checkpoint
+
+- D901-01 complete: all 46 pages now disclose the 2026-11-11 freshness limitation, with a dedicated `flags.html#freshness-review` finding. No product values or retrieval dates changed. Report and command outputs: `audit/d901c3ca/REVIEW.md`, `npm-check.txt`, `independent-checks.txt`.
+- Checks PASS: npm check (24 tests, build, links, security, dependency audit, browser/axe), root QA (12/0/3), preserved/companion build audits and calculators, snapshot arithmetic audit, four existing independent scanners and their regression/mutation suites. These verify internal consistency only. Recheck official sources and hallucinations after every review. External link HTTP status/current prices remain unverified.
+- Initial claim push: remote session branch did not exist; `git pull --rebase origin main` succeeded, then the claim was pushed to the fixed session branch before implementation. No peer work was discarded.
 ## Claim — Session S-0439B4F7 (2026-11-11 UTC) — current-branch freshness and QA audit
 
 - **Platform-fixed branch:** `arena/0439b4f7-gold2`; work is restricted to this branch. The supplied branch is based on `981978715ab9aee7bbab8fb80c541b0979c19c85`.
@@ -1619,6 +1635,8 @@ After the scratch build reached the final QA audit, `tools/qa.py` reported exact
 - 2026-11-11 — Ran root QA (12/0/3), calculator PASS, `npm ci --ignore-scripts`, `npm run check` PASS (23/23 tests, build, links, static security, 0 npm audit vulnerabilities, browser and exercised-state axe checks), independent snapshot audit (0 findings / 14 arithmetic controls), security/hallucination scan (0 findings / 230 controls), and its 6 regression tests PASS. The older S-86379CA7 scanner still fails a hard-coded 30-vs-32 row-count assertion; its test suite consequently passes 9/10 (details in audit report). No shared implementation/data files altered. **Recommend another hallucination/security pass after every review.**
 - Official sources used for this audit: stored source register and dated evidence cited in `data/catalog.json`, `data/gold-price.json`, and `data/verification-log.json`; no live price values were asserted or refreshed. This is an audit of repository consistency, not a new official-source verification of seller listings.
 
+- S-D901C3CA: main advanced via peer PR #61 during CI. Merge conflict was confined to append-only COORDINATION.md; both session blocks preserved verbatim, no peer audit edits discarded. All other changes merged cleanly.
+- S-D901C3CA: post-merge local `npm run check` again passed in full. Remote audit and legacy checks passed; evidence check failed inside its combined check step (no detailed logs accessible: GitHub log download redirects to a host blocked by this environment). A rerun request was rejected by GitHub. Publishing this checkpoint triggers a fresh complete CI attempt; no checks weakened or skipped. Plain pull-rebase tried to flatten the main merge; aborted it and used `git pull --rebase=merges` to preserve both histories.
 ## Claim — Session S-C81A689B (2026-11-11) — independent verification pass, GH Pages build, checks, and integration
 
 Platform constraint: this runner is bound to `arena/c81a689b-gold2`; no alternate task branch or worktree may be created or pushed. Isolation is enforced by the exclusive file scope below. Claim written and pushed before any data edit. All previously recorded sessions (S-C74095E5, S-F3B0B698, S-A182C7CC, S-86379CA7, S-1B04074F, S-88AA65FD, S-0439B4F7 et al.) mark their tasks done; PR #19 remains `needs review` (non-blocking, not reclaimed). This session treats itself as the final integration session once its own verification and build tasks are done, and will not edit other sessions' `audit/**` folders, `data/flags.json`, `flags.html`, or `dashboard/**`.
@@ -1637,3 +1655,5 @@ Platform constraint: this runner is bound to `arena/c81a689b-gold2`; no alternat
 - 2026-11-11 — Live official sources re-read: WGC gold spot page ($4,059.49/oz, data as of 10 Nov 2026), FTC buying-gold-jewelry article, NIST precious-metals conversion (1 oz t = 31.1034768 g), GIA "Gold-Plated Gold" Lab Notes (XRF caveat), Sarraf SAR-151362 PDP (matched exact: 14K Solid Gold, 9.20 g, US$8,203.00), Brilliant Earth BE-121H6 page (variant drift: 14K/$890 dated snapshot vs live 18K/$1,090 canonical URL; advisory flag F-C81-01, no stored-data edit).
 - 2026-11-11 — Checks: tools/build_site.py reproducible (no tracked diff); tools/qa.py PASS 12/0/3; node tools/test_calculator.js PASS; npm run verify PASS; npm run check:links PASS; npm run security PASS (0 vulnerabilities); npm test 23/23 PASS; npm run test:browser PASS (axe WCAG A/AA clean). audit/86379ca7 scanner Check 3 hardcodes 30 vs 32 root items — documented non-CI stale literal, not a gate.
 - 2026-11-11 — PR #62 opened from `arena/c81a689b-gold2` to `main`; merge pending.
+
+- S-D901C3CA: preserved peer PR #62 audit additions; resolved append-only board conflict by retaining both blocks and regenerated QA timestamp rather than discarding peer findings. Final prior CI attempt passed all three checks.

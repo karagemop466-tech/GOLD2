@@ -1,0 +1,91 @@
+RESULT: PASS — 12 checks, 0 failures, 3 warnings
+  WARN [gold] Header quote-as-of is unconfirmed; chart/retrieval dates are not substituted (F-026)
+  WARN [coverage] 20 of 32 rows have no explicitly assigned current price (F-008/F-018/F-025)
+  WARN [coverage] 23 of 32 rows have no published metal weight (F-003)
+report -> /home/user/GOLD2/reports/qa-report.md
+PASS calculator: formula, dated VRAI case, asking comparisons, blanks, invalid inputs, negative difference, and formatting
+INDEPENDENT REVIEW: 0 findings; 14 arithmetic controls passed
+PASS [ARITHMETIC AG-COFFIN-RING: 3.558 g; $457.09]
+PASS [ARITHMETIC SAR-147370: 2.217 g; $284.75]
+PASS [ARITHMETIC SAR-145362: 5.833 g; $749.33]
+PASS [ARITHMETIC SAR-145364: 4.667 g; $599.47]
+PASS [ARITHMETIC SAR-144773: 7.817 g; $1,004.11]
+PASS [ARITHMETIC AG-24K: 11.000 g; $1,413.03]
+PASS [ARITHMETIC SAR-151362: 5.367 g; $689.39]
+PASS [ARITHMETIC SAR-147371: 4.492 g; $576.99]
+PASS [ARITHMETIC VRAI-CLASSIC-4P: 2.145 g; $275.54]
+PASS [QUICK-REFERENCE 10K: 10K | 41.67% | 0.833 g | 1.667 g | 2.500 g | $321.14]
+PASS [QUICK-REFERENCE 14K: 14K | 58.33% | 1.167 g | 2.333 g | 3.500 g | $449.60]
+PASS [QUICK-REFERENCE 18K: 18K | 75.00% | 1.500 g | 3.000 g | 4.500 g | $578.06]
+PASS [QUICK-REFERENCE 22K: 22K | 91.67% | 1.833 g | 3.667 g | 5.500 g | $706.52]
+PASS [QUICK-REFERENCE 24K: 24K | 100.00% | 2.000 g | 4.000 g | 6.000 g | $770.74]
+LIMITATION: these static negative checks do not replace official-page retrieval or prove truth.
+NEXT: manually recheck every flag and rerun hallucination/security review after each edit.
+PASS: 2 records, 6 pages; official row links, evidence consistency, blank unknowns, local links, static security checks.
+OPEN: missing product evidence and gold quote. Automated audit cannot establish truth; recheck hallucinations after every review.
+PASS calculator: null, invalid, nominal mass and value cases (synthetic test inputs only).
+dashboard verify: PASS — passes={'P1-sources-and-seller-hosts': 'PASS', 'P2-strict-price-currency-evidence': 'PASS', 'P3-blanks-weight-and-qualification': 'PASS', 'P4-cross-refs': 'PASS', 'P5-canonical-retailers': 'PASS', 'P8-evidence-quotes': 'PASS', 'P9-canonical-product-parity': 'PASS', 'P10-gold-and-arithmetic': 'PASS', 'P6-rendered-data-security-sync': 'PASS', 'P7-link-integrity': 'PASS'}
+  PASS valid inputs accepted
+  PASS pure grams exact
+  PASS per-gram value
+  PASS melt value
+  PASS troy constant exact
+  PASS pennyweight constant exact
+  PASS carat constant exact
+  PASS 1 ozt == 20 dwt == $3,995.47 exact
+  PASS SAR-144773 13.40g 14K melt $1,004.11 & 73.72% gold share (recomputed at $3,995.47/oz)
+  PASS FDJ-GR0001 gross 1.25g minus 1.37ct (0.274g) = 0.976g net 14K ($73.14)
+  PASS rejects Infinity weight
+  PASS rejects Infinity spot
+  PASS rejects zero weight
+  PASS rejects negative weight
+  PASS rejects NaN weight
+  PASS rejects empty weight
+  PASS rejects text weight
+  PASS rejects zero spot
+  PASS rejects negative spot
+  PASS rejects bad karat 12
+  PASS rejects bad karat 0
+  PASS rejects gem mass exceeds gross ring weight
+  PASS fmt guards non-finite
+calc-test: PASS
+SECURITY & HALLUCINATION SCAN: 0 findings; 230 controls passed
+test_invalid_zero_negative_nan_infinity_inputs_rejected (__main__.TestGoldMeltCalculatorMath.test_invalid_zero_negative_nan_infinity_inputs_rejected) ... ok
+test_live_prices_html_dom_calculator_handles_edge_cases (__main__.TestGoldMeltCalculatorMath.test_live_prices_html_dom_calculator_handles_edge_cases) ... ok
+test_nist_unit_conversions_dwt_and_ozt (__main__.TestGoldMeltCalculatorMath.test_nist_unit_conversions_dwt_and_ozt) ... ok
+test_standard_karats_exact_nist_precision (__main__.TestGoldMeltCalculatorMath.test_standard_karats_exact_nist_precision) ... ok
+test_clean_fixture_passes_with_zero_findings (__main__.TestSecurityAndHallucinationScanner.test_clean_fixture_passes_with_zero_findings) ... ok
+test_detects_hallucinated_color_unlinked_row_unpinned_action_and_low_contrast (__main__.TestSecurityAndHallucinationScanner.test_detects_hallucinated_color_unlinked_row_unpinned_action_and_low_contrast) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.054s
+
+OK
+S-B200A880 scanner: 4542 controls, 0 failures, 0 warnings, PASS
+OK — 25 scanner helper/arithmetic controls passed
+S-88AA65FD scanner: 10 checks passed, 0 failures, 6/6 mutation controls caught
+  PASS [C1] 19 assigned prices trace to their own quotes
+  PASS [C8] 46 products resolve to product sources and 13 sellers
+  PASS [C2] every assigned amount is rendered in the explore table
+  PASS [C3] 13 root pages checked against the current gold value
+  PASS [C4] dashboard and root agree at 3,995.47
+  PASS [C5] 42 flags have unique ids and self-consistent title counts
+  PASS [C6] README and manifest counts equal the JSON
+  PASS [C7] 84 distinct evidence URLs on reviewed publisher hosts
+  PASS [C9] no None/NaN cells in the checked tables
+  PASS [C10] superseded Menē amounts are not stored as current
+RESULT: PASS
+LIMITATION: this proves internal traceability and rendering consistency only. It cannot prove a
+publisher's claim, a ring's physical purity, or that a price is still current. Re-read the official
+source and look for hallucinations again after every review.
+S-9B875C81 HALLUCINATION & SECURITY PASS: 0 findings; 3058 controls passed
+REMINDER: Automated PASS verifies internal provenance, NIST math, link integrity, CSP/workflow security, and WCAG AA contrast — keep re-checking primary sources for hallucinations.
+test_negative_mutations_are_caught (__main__.TestS9B875C81CalculatorAndScanner.test_negative_mutations_are_caught) ... ok
+test_nist_conversions_and_2026_10_23_spot_4024_45 (__main__.TestS9B875C81CalculatorAndScanner.test_nist_conversions_and_2026_10_23_spot_4024_45) ... ok
+test_rejects_invalid_or_stone_exceeding_gross_inputs (__main__.TestS9B875C81CalculatorAndScanner.test_rejects_invalid_or_stone_exceeding_gross_inputs) ... ok
+test_workspace_passes_with_zero_findings (__main__.TestS9B875C81CalculatorAndScanner.test_workspace_passes_with_zero_findings) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.258s
+
+OK
