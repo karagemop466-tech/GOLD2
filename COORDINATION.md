@@ -1605,3 +1605,16 @@ After the scratch build reached the final QA audit, `tools/qa.py` reported exact
 - Final merged-snapshot gates: `npm run check` PASS (23/23 tests, links/security/browser/axe and npm audit); root QA PASS 12/0/3; calculator PASS; snapshot audit 0 findings / 14 arithmetic controls. Independent scanner results and known stale-count/mutation-fixture exceptions are documented in `audit/a182c7cc/FINAL_AUDIT.md`.
 - A182-01, A182-02, A182-04 and A182-05 are complete. A182-03 remains in progress until its own PR is merged and Pages is verified; no deployment is claimed yet.
 
+
+## Claim — Session S-0439B4F7 (2026-11-11 UTC) — current-branch freshness and QA audit
+
+- **Platform-fixed branch:** `arena/0439b4f7-gold2`; work is restricted to this branch. The supplied branch is based on `981978715ab9aee7bbab8fb80c541b0979c19c85`.
+- **Board read before claim:** reviewed the root board and repository status. Existing product research and dashboard tasks are historical/integrated; this session claims only an additive audit folder and this coordination entry. It will not alter shared catalog, prices, flags, generated pages, or deployment settings.
+
+| ID | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| 0439-01 | Run reproducible QA and independent hallucination/security checks; document stale-data and unresolved risks without inventing current prices | done — full results in `audit/0439b4f7/QA_AND_FRESHNESS_REVIEW.md` | S-0439B4F7 | `audit/0439b4f7/**`, append-only `COORDINATION.md` |
+
+- 2026-11-11 — Claim recorded before audit work. Existing official-source observations are dated 2026-10-23 and must not be represented as current. No live price refresh was made; blank/unverified fields remain blank.
+- 2026-11-11 — Ran root QA (12/0/3), calculator PASS, `npm ci --ignore-scripts`, `npm run check` PASS (23/23 tests, build, links, static security, 0 npm audit vulnerabilities, browser and exercised-state axe checks), independent snapshot audit (0 findings / 14 arithmetic controls), security/hallucination scan (0 findings / 230 controls), and its 6 regression tests PASS. The older S-86379CA7 scanner still fails a hard-coded 30-vs-32 row-count assertion; its test suite consequently passes 9/10 (details in audit report). No shared implementation/data files altered. **Recommend another hallucination/security pass after every review.**
+- Official sources used for this audit: stored source register and dated evidence cited in `data/catalog.json`, `data/gold-price.json`, and `data/verification-log.json`; no live price values were asserted or refreshed. This is an audit of repository consistency, not a new official-source verification of seller listings.
