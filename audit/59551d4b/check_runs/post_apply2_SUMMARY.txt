@@ -1,0 +1,69 @@
+PASS  root_build
+PASS  root_qa
+PASS  root_calc_test
+PASS  root_build_again
+PASS  snapshot_audit
+PASS  scan_8c810c15
+PASS  test_8c810c15
+PASS  scan_b200a880
+PASS  test_b200a880
+PASS  scan_88aa65fd
+PASS  dashboard_build
+PASS  dashboard_verify
+PASS  dashboard_calc_test
+PASS  scan_9b875c81
+PASS  test_9b875c81
+PASS  legacy_build
+PASS  legacy_audit
+PASS  legacy_test
+PASS  explore_verify
+PASS  explore_node_tests
+PASS  explore_build
+PASS  explore_check_links
+PASS  explore_security
+--- git status (generated files must be reproducible) ---
+ M README.md
+ M dashboard/budget.html
+ M dashboard/calculator.html
+ M dashboard/checklist.html
+ M dashboard/data/flags.json
+ M dashboard/data/gold-reference.json
+ M dashboard/data/retailers.json
+ M dashboard/data/rings.json
+ M dashboard/evidence/retailers.md
+ M dashboard/evidence/rings.md
+ M dashboard/flagged.html
+ M dashboard/halo-pave.html
+ M dashboard/high-karat.html
+ M dashboard/index.html
+ M dashboard/methodology.html
+ M dashboard/reference.html
+ M dashboard/retailers.html
+ M dashboard/rings.html
+ M dashboard/scripts/build.py
+ M dashboard/scripts/canonical.py
+ M dashboard/solid-gold.html
+ M dashboard/solitaire.html
+ M dashboard/three-stone-vintage.html
+ M dashboard/verification-log.json
+ M data/catalog.json
+ M data/review.json
+ M data/site-manifest.json
+ M explore/404.html
+ M explore/calculator/index.html
+ M explore/catalog/bands/index.html
+ M explore/catalog/gemstone/index.html
+ M explore/catalog/index.html
+ M explore/catalog/lab/index.html
+ M explore/catalog/natural/index.html
+ M explore/catalog/settings/index.html
+ M explore/catalog/unclassified/index.html
+ M explore/data/catalog.json
+ M explore/index.html
+ M explore/research/evidence.json
+ M explore/review/index.html
+ M explore/sources/index.html
+ M explore/standards/index.html
+ M index.html
+ M methods.html
+ M research/evidence.json

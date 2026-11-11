@@ -21,7 +21,7 @@ check("troy constant exact", calc.TROY_OZ_GRAMS === 31.1034768);
 check("pennyweight constant exact", calc.DWT_GRAMS === 1.55517384);
 check("carat constant exact", calc.CARAT_GRAMS === 0.2);
 
-// 2. Live 2026-10-23 spot ($3,995.47/oz) across units & asking-price multiples
+// 2. Fixed historical fixture (the 2026-10-23 header value, $3,995.47/oz; NOT the current reference) across units & asking-price multiples
 const ozt24 = calc.compute(1, 24, 3995.47, { unit: "ozt" });
 const dwt24 = calc.compute(20, 24, 3995.47, { unit: "dwt" });
 check("1 ozt == 20 dwt == $3,995.47 exact", Math.abs(ozt24.melt - 3995.47) < 1e-9 && Math.abs(dwt24.melt - 3995.47) < 1e-9);

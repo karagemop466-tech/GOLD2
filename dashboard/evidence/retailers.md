@@ -1,4 +1,4 @@
-# Dashboard Canonical Seller Evidence (observations through `2026-10-23`)
+# Dashboard Canonical Seller Evidence (observations through `2026-11-11`)
 
 Summaries are generated from canonical structured records. Blank fields are unconfirmed; review-platform allegations are not established facts or physical tests.
 

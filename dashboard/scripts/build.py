@@ -181,6 +181,19 @@ FLAGS = [
             "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html",
         ],
     },
+    {
+        "id": "DF-013",
+        "severity": "high",
+        "title": "Staleness & 2026-11-11 Re-read: Promotions Changed Displays, One Blue Nile Style Sold Out, Stone and Strand Stock Gaps",
+        "detail": "Every canonical observation was 19 days old before session S-59551D4B re-read the prices on 2026-11-11. Assigned USD prices were unchanged except the two Menē rings (now $1,337 and $1,455). Blue Nile setting pages now show a struck amount and a 20%-off amount (canonical root flag F-046); Blue Nile item 315661 reads 'This popular style is sold out' (F-047); three Zales displays changed (F-048); Stone and Strand Clara is priced by size and Rita and Mia are out of stock and final sale (F-049, F-050); the Factory Direct page shows a $0.00 Black Friday placeholder block (F-051). Fields not re-read keep their October dates (F-052). A dated row is not a live quote.",
+        "action": "Re-open the official page in each row before acting, confirm cart total and currency, and look for hallucinations again after every review.",
+        "sources": [
+            "https://www.gold.org/goldhub/data/gold-prices",
+            "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
+            "https://www.stoneandstrand.com/products/the-rita-ring",
+            "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/",
+        ],
+    },
 ]
 
 RINGS = build_rings(REPO_ROOT)

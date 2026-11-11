@@ -231,7 +231,8 @@ def from_root(row: dict, categories: tuple[str, ...]) -> dict:
     identity_mismatch = row.get("verification_status") == "partial_identity_mismatch"
     if price is not None:
         price_note = (
-            f"Dated {row['retrieved_at']} seller display: USD ${price:,.2f}; "
+            f"Dated {row.get('price_checked_at') or row['retrieved_at']} seller display "
+            f"(full row capture {row['retrieved_at']}): USD ${price:,.2f}; "
             f"scope: {row['price_basis'].replace('_', ' ')}. Not a live checkout total."
         )
         unassigned = None

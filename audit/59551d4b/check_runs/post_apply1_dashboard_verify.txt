@@ -1,0 +1,13 @@
+dashboard verify: FAIL — passes={'P1-sources-and-seller-hosts': 'PASS', 'P2-strict-price-currency-evidence': 'FAIL', 'P3-blanks-weight-and-qualification': 'PASS', 'P4-cross-refs': 'PASS', 'P5-canonical-retailers': 'PASS', 'P8-evidence-quotes': 'PASS', 'P9-canonical-product-parity': 'PASS', 'P10-gold-and-arithmetic': 'PASS', 'P6-rendered-data-security-sync': 'PASS', 'P7-link-integrity': 'PASS'}
+  FAIL: P2 price note is not dated/scoped: SAR-147370
+  FAIL: P2 price note is not dated/scoped: SAR-145362
+  FAIL: P2 price note is not dated/scoped: SAR-145364
+  FAIL: P2 price note is not dated/scoped: SAR-144773
+  FAIL: P2 price note is not dated/scoped: SAR-151362
+  FAIL: P2 price note is not dated/scoped: SAR-147371
+  FAIL: P2 price note is not dated/scoped: AG-24K
+  FAIL: P2 price note is not dated/scoped: AG-COFFIN-RING
+  FAIL: P2 price note is not dated/scoped: FDJ-GR0001
+  FAIL: P2 price note is not dated/scoped: AG-CUSHION-SIGNET
+  FAIL: P2 price note is not dated/scoped: AG-SAPPHIRE-RING
+  FAIL: P2 price note is not dated/scoped: BE-121H6

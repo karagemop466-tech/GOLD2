@@ -1,0 +1,1 @@
+OK — 25 scanner helper/arithmetic controls passed

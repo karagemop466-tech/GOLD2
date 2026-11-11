@@ -110,22 +110,23 @@
       "publisher": "JM Bullion",
       "kind": "dealer-reference",
       "url": "https://www.jmbullion.com/charts/gold-price/",
-      "observedAt": "2026-10-23T23:52:00Z",
-      "method": "fetch_page; short excerpts transcribed and rechecked 2026-10-23 by session S-C74095E5",
+      "observedAt": "2026-11-11",
+      "method": "fetch_page; short excerpts transcribed and rechecked 2026-11-11 by session S-59551D4B",
       "access": "fetched",
-      "note": "Dealer page timestamped 2026-10-23 19:46 EDT (23:46Z) displayed 'Gold Ask $4,009.38' with 'Bid: $3,994.88 Ask: $4,009.38'. Supersedes the same-day 05:56 EDT observation of $4,035.54 (2026-10-22: $4,039.76). This is a dealer reference, not an LBMA benchmark or live feed.",
+      "note": "Dealer page timestamped Nov 11, 2026 at 3:03 AM EST (08:03Z) displayed '$4,072.47 USD' in the body with 'Bid: $4,057.97 Ask: $4,072.47'. The page-top ticker on the same fetch read 'Gold Ask $4,073.34'; the body quote, which carries the explicit 'As of' sentence, is recorded and the two are not averaged. Supersedes the 2026-10-23 19:46 EDT observation (kept as dated history in data/review.json). This is a dealer reference, not an LBMA benchmark or live feed.",
       "quotes": {
-        "quote": "$4,009.38 USD",
+        "quote": "$4,072.47 USD",
         "units": "A troy ounce of gold is the standard unit of weight equal to 31.1034768 grams",
-        "ask": "Bid: $3,994.88   Ask: $4,009.38",
+        "ask": "Bid: $4,057.97   Ask: $4,072.47",
         "header": "Gold Ask",
-        "header-value": "$4,009.38"
+        "header-value": "$4,073.34",
+        "as-of": "As of Nov 11, 2026 at 3:03 AM EST, the live Gold spot price for 1 ounce of Gold in U.S. dollars (USD) is $4,072.47"
       },
       "relevantChunks": [
         0,
         1
       ],
-      "lastRecheckedAt": "2026-10-23T23:52:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "automic-currency",
@@ -133,16 +134,16 @@
       "kind": "retailer-context",
       "url": "https://www.automicgold.com/cart.js",
       "observedAt": "2026-10-22T23:16:03Z",
-      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Public empty-cart currency context; GET only, no cart changes. Transcribed only the currency field; ephemeral cart identifiers intentionally not retained.",
+      "note": "Public empty-cart currency context; GET only, no cart changes. Transcribed only the currency field; ephemeral cart identifiers intentionally not retained. Re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "usd": "\"currency\":\"USD\""
       },
       "relevantChunks": [
         0
       ],
-      "lastRecheckedAt": "2026-10-23T23:52:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ag-natural",
@@ -150,9 +151,9 @@
       "kind": "product",
       "url": "https://www.automicgold.com/products/diamond-ring",
       "observedAt": "2026-10-22T23:16:03Z",
-      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "Natural Diamond Ring",
         "price": "$726",
@@ -165,7 +166,7 @@
       "relevantChunks": [
         4
       ],
-      "lastRecheckedAt": "2026-10-23T23:52:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ag-cluster",
@@ -173,9 +174,9 @@
       "kind": "product",
       "url": "https://www.automicgold.com/products/diamond-cluster-ring",
       "observedAt": "2026-10-22T23:16:03Z",
-      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "Diamond Cluster Ring",
         "price": "$2,862",
@@ -189,7 +190,7 @@
       "relevantChunks": [
         4
       ],
-      "lastRecheckedAt": "2026-10-23T23:52:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ag-petal",
@@ -197,9 +198,9 @@
       "kind": "product",
       "url": "https://www.automicgold.com/products/diamond-petal-ring",
       "observedAt": "2026-10-22T23:16:03Z",
-      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "0.6ct Round Diamond Petal Ring",
         "price": "$1,774",
@@ -213,7 +214,7 @@
       "relevantChunks": [
         4
       ],
-      "lastRecheckedAt": "2026-10-23T23:52:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ag-ruby",
@@ -221,9 +222,9 @@
       "kind": "product",
       "url": "https://www.automicgold.com/products/ruby-ring",
       "observedAt": "2026-10-22T23:16:03Z",
-      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "Ruby Ring",
         "price": "$526",
@@ -236,7 +237,7 @@
       "relevantChunks": [
         4
       ],
-      "lastRecheckedAt": "2026-10-23T23:52:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ag-sapphire",
@@ -244,9 +245,9 @@
       "kind": "product",
       "url": "https://www.automicgold.com/products/sapphire-ring",
       "observedAt": "2026-10-22T23:16:03Z",
-      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "Sapphire Ring",
         "price": "$526",
@@ -259,7 +260,7 @@
       "relevantChunks": [
         4
       ],
-      "lastRecheckedAt": "2026-10-23T23:52:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ag-moissanite",
@@ -267,9 +268,9 @@
       "kind": "product",
       "url": "https://www.automicgold.com/collections/engagement/products/moissanite-ring",
       "observedAt": "2026-10-22T23:16:03Z",
-      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "Moissanite Ring",
         "price": "$420",
@@ -282,7 +283,7 @@
       "relevantChunks": [
         4
       ],
-      "lastRecheckedAt": "2026-10-23T23:52:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ag-24k",
@@ -290,9 +291,9 @@
       "kind": "product",
       "url": "https://www.automicgold.com/products/24k-band",
       "observedAt": "2026-10-22T23:16:03Z",
-      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight.",
+      "note": "Default displayed option. General approximate item weight has no size-specific net-metal basis. Do not use shipping-weight fields in Shopify JSON as jewelry weight. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "24k Band",
         "price": "$3,520",
@@ -308,7 +309,7 @@
         4,
         5
       ],
-      "lastRecheckedAt": "2026-10-23T23:52:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ag-natural-json",
@@ -645,28 +646,28 @@
       "publisher": "Men\u0113",
       "kind": "product",
       "url": "https://mene.com/products/rose-ring-gold",
-      "observedAt": "2026-10-23T23:46:00Z",
-      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "observedAt": "2026-11-11",
+      "method": "fetch_page; short excerpts transcribed and checked 2026-11-11 by session S-59551D4B",
       "access": "fetched",
-      "note": "Direct official-product fetch on 2026-10-23T23:46:00Z rendered $1,325 USD on the page's default size display; the 2026-10-23T10:00Z observation was $1,336. Men\u0113 prices these Crafted-on-Demand pieces from metal value, so the earlier amount is superseded, not additive. Sizes are sold by weight; no gram weight is published for this piece.",
+      "note": "Direct official-product fetch on 2026-11-11 rendered $1,337 USD on the page's default size display; the 2026-10-23 observation was $1,325. Men\u0113 prices these Crafted-on-Demand pieces from metal value, so the earlier amount is superseded, not additive. Sizes are sold by weight; no gram weight is published for this piece.",
       "quotes": {
         "name": "Rose Ring",
-        "price": "$1,325",
+        "price": "$1,337",
         "currency": "USD",
         "karat": "24k Gold",
         "cod": "This is a Crafted-on-Demand item.",
-        "previous-price": "$1,336 USD \u2014 direct official-page observation at 2026-10-23T10:00:00Z; superseded later on 2026-10-23."
+        "previous-price": "$1,325 USD \u2014 direct official-page observation at 2026-10-23T23:46:00Z; superseded on 2026-11-11."
       },
       "relevantChunks": [
         0,
         2
       ],
-      "lastRecheckedAt": "2026-10-23T23:46:00Z",
+      "lastRecheckedAt": "2026-11-11",
       "supersededDisplay": {
-        "amount": 1336,
+        "amount": 1325,
         "currency": "USD",
-        "observedAt": "2026-10-23T10:00:00Z",
-        "reason": "Earlier same-day observation of the same official page. The page is repriced from metal value, so only the later observation is current; the earlier amount is kept as dated history and is never averaged with the new one."
+        "observedAt": "2026-10-23T23:46:00Z",
+        "reason": "Earlier observation of the same official page. The page is repriced from metal value, so only the later observation is current; the earlier amount is kept as dated history and is never averaged with the new one."
       }
     },
     {
@@ -674,28 +675,28 @@
       "publisher": "Men\u0113",
       "kind": "product",
       "url": "https://mene.com/products/knot-ring-gold",
-      "observedAt": "2026-10-23T23:47:00Z",
-      "method": "fetch_page; short excerpts transcribed and checked by session arena-24aeb4a8",
+      "observedAt": "2026-11-11",
+      "method": "fetch_page; short excerpts transcribed and checked 2026-11-11 by session S-59551D4B",
       "access": "fetched",
-      "note": "Direct official-product fetch on 2026-10-23T23:47:00Z rendered $1,442 USD on the page's default size display; the 2026-10-23T10:00Z observation was $1,454. Men\u0113 prices these Crafted-on-Demand pieces from metal value, so the earlier amount is superseded, not additive. Sizes are sold by weight; no gram weight is published for this piece.",
+      "note": "Direct official-product fetch on 2026-11-11 rendered $1,455 USD on the page's default size display; the 2026-10-23 observation was $1,442. Men\u0113 prices these Crafted-on-Demand pieces from metal value, so the earlier amount is superseded, not additive. Sizes are sold by weight; no gram weight is published for this piece.",
       "quotes": {
         "name": "Knot Ring",
-        "price": "$1,442",
+        "price": "$1,455",
         "currency": "USD",
         "karat": "24k Gold",
         "cod": "This is a Crafted-on-Demand item.",
-        "previous-price": "$1,454 USD \u2014 direct official-page observation at 2026-10-23T10:00:00Z; superseded later on 2026-10-23."
+        "previous-price": "$1,442 USD \u2014 direct official-page observation at 2026-10-23T23:47:00Z; superseded on 2026-11-11."
       },
       "relevantChunks": [
         0,
         2
       ],
-      "lastRecheckedAt": "2026-10-23T23:47:00Z",
+      "lastRecheckedAt": "2026-11-11",
       "supersededDisplay": {
-        "amount": 1454,
+        "amount": 1442,
         "currency": "USD",
-        "observedAt": "2026-10-23T10:00:00Z",
-        "reason": "Earlier same-day observation of the same official page. The page is repriced from metal value, so only the later observation is current; the earlier amount is kept as dated history and is never averaged with the new one."
+        "observedAt": "2026-10-23T23:47:00Z",
+        "reason": "Earlier observation of the same official page. The page is repriced from metal value, so only the later observation is current; the earlier amount is kept as dated history and is never averaged with the new one."
       }
     },
     {
@@ -893,21 +894,24 @@
       "kind": "product",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-four-prong-solitaire-engagement-ring-in-18k-yellow-gold-item-194158",
       "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed. Re-read 2026-11-11 (S-59551D4B): the page shows a struck list amount and a 20%-off promotional amount; neither is assigned (no ISO currency).",
       "quotes": {
         "name": "Classic Four Prong Solitaire Engagement Ring in 18k Yellow Gold",
         "material": "18K Yellow Gold",
-        "display": "$1,125(Setting Price)",
+        "display": "$1,125$900(Setting Price)",
         "stock": "500000y",
         "card": "with the Blue Nile Credit Card",
-        "price": "$1,125(Setting Price)",
-        "mixed": "18k yellow gold four-prong solitaire engagement ring with platinum prongs"
-      }
+        "price": "$1,125$900(Setting Price)",
+        "mixed": "18k yellow gold four-prong solitaire engagement ring with platinum prongs",
+        "promotion": "-20% \u2014 *Discount code is applied automatically",
+        "previous-display": "$1,125(Setting Price) \u2014 observed 2026-10-22; superseded on 2026-11-11."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ext-bn-195269",
@@ -915,20 +919,23 @@
       "kind": "product",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-18k-yellow-gold-item-195269",
       "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed. Re-read 2026-11-11 (S-59551D4B): the page shows a struck list amount and a 20%-off promotional amount; neither is assigned (no ISO currency).",
       "quotes": {
         "name": "Petite Solitaire Engagement Ring in 18k Yellow Gold",
         "material": "18K Yellow Gold",
-        "display": "$1,155(Setting Price)",
+        "display": "$1,155$924(Setting Price)",
         "stock": "501130y",
         "card": "with the Blue Nile Credit Card",
-        "price": "$1,155(Setting Price)"
-      }
+        "price": "$1,155$924(Setting Price)",
+        "promotion": "-20% \u2014 *Discount code is applied automatically",
+        "previous-display": "$1,155(Setting Price) \u2014 observed 2026-10-22; superseded on 2026-11-11."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ext-vrai-classic-4p",
@@ -936,13 +943,13 @@
       "kind": "product",
       "url": "https://www.vrai.com/configure/setting-to-diamond/classic-4-prong-dome/round-brilliant-yellow-gold-32797281484893",
       "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0,
         1
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed. Re-read 2026-11-11 (S-59551D4B): 'Metal weight:2.86g (Ring size 6)' unchanged; no price rendered for this setting.",
       "quotes": {
         "name": "Classic Round Brilliant Engagement Ring",
         "material": "18k Yellow Gold",
@@ -950,7 +957,8 @@
         "stone-context": "We grow our own diamonds",
         "size-context": "Band width:Standard; Band:Plain band",
         "pave-context": "Pav\u00e9 carat weight:0.18 ctw; selected Band:Plain band"
-      }
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ext-z-19957449",
@@ -958,12 +966,12 @@
       "kind": "product",
       "url": "https://www.zales.com/15-ct-diamond-solitaire-engagement-ring-10k-gold/p/V-19957449",
       "observedAt": "2026-10-23T10:00:00Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "2026-10-23 fetch rendered a labeled \"Discounted Price $899.00\" (no original price shown in the retrieved text). The amount is preserved as a display observation; the ISO currency and exact configuration are not confirmed, so the structured price stays blank.",
+      "note": "2026-10-23 fetch rendered a labeled \"Discounted Price $899.00\" (no original price shown in the retrieved text). The amount is preserved as a display observation; the ISO currency and exact configuration are not confirmed, so the structured price stays blank. Re-read 2026-11-11 (S-59551D4B): 'Discounted Price $899.00' unchanged.",
       "quotes": {
         "name": "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
         "material": "1/5 CT. Diamond Solitaire Engagement Ring in 10K Gold",
@@ -972,7 +980,7 @@
         "contact-gap": "Contact details not exposed in the fetched product excerpt.",
         "price_display": "Discounted Price $899.00"
       },
-      "lastRecheckedAt": "2026-10-23T10:00:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ext-z-20046552",
@@ -980,19 +988,22 @@
       "kind": "product",
       "url": "https://www.zales.com/12-ct-tw-multidiamond-cushion-frame-engagement-ring-10k-gold/p/V-20046552",
       "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed. Re-read 2026-11-11 (S-59551D4B): single 'Discounted Price' amount; the earlier promotional amount is no longer rendered. No ISO currency; unassigned.",
       "quotes": {
         "name": "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold",
         "material": "1/2 CT. T.W. Multi-Diamond Cushion Frame Engagement Ring in 10K Gold",
-        "display": "Discounted Price $909.30",
+        "display": "Discounted Price $1,299.00",
         "returns": "Free and easy 30-day returns",
-        "contact-gap": "Contact details not exposed in the fetched product excerpt."
-      }
+        "contact-gap": "Contact details not exposed in the fetched product excerpt.",
+        "previous-display": "Discounted Price $909.30 \u2014 observed 2026-10-22; superseded on 2026-11-11.",
+        "bag-promotion": "Flash Sale: Save $75-$750 off your purchase starting at $250 or more - Discount Applied in Bag."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ext-bn-192506",
@@ -1000,21 +1011,24 @@
       "kind": "product",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-hidden-halo-solitaire-plus-diamond-engagement-ring-in-14k-yellow-gold-item-192506",
       "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed. Re-read 2026-11-11 (S-59551D4B): the page shows a struck list amount and a 20%-off promotional amount; neither is assigned (no ISO currency).",
       "quotes": {
         "name": "Petite Hidden Halo Solitaire Plus Diamond Engagement Ring in 14k Yellow Gold",
         "material": "14K Yellow Gold",
-        "display": "$1,255(Setting Price)",
+        "display": "$1,255$1,004(Setting Price)",
         "stock": "502250y14",
         "card": "with the Blue Nile Credit Card",
-        "price": "$1,255(Setting Price)",
-        "stone": "Natural Diamond Information"
-      }
+        "price": "$1,255$1,004(Setting Price)",
+        "stone": "Natural Diamond Information",
+        "promotion": "-20% \u2014 *Discount code is applied automatically",
+        "previous-display": "$1,255(Setting Price) \u2014 observed 2026-10-22; superseded on 2026-11-11."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ext-bn-315661",
@@ -1022,21 +1036,22 @@
       "kind": "product",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/pave-contour-diamond-engagement-ring-in-14k-white-gold-by-james-allen-item-315661",
       "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed. Re-read 2026-11-11 (S-59551D4B): the page reads 'This popular style is sold out' and renders no setting price, stock number, metal or width block for this item.",
       "quotes": {
         "name": "Pav\u00e9 Contour Diamond Engagement Ring In 14K White Gold By James Allen",
         "material": "14K White Gold",
-        "display": "$2,210(Setting Price)",
+        "display": "This popular style is sold out",
         "stock": "505094w14",
         "card": "with the Blue Nile Credit Card",
-        "price": "$2,210(Setting Price)",
-        "stone": "Natural Diamond Information"
-      }
+        "stone": "Natural Diamond Information",
+        "previous-display": "$2,210(Setting Price) \u2014 observed 2026-10-22; withdrawn on 2026-11-11 because the page no longer renders it."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ext-bn-203348",
@@ -1044,20 +1059,23 @@
       "kind": "product",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/classic-simple-solitaire-engagement-ring-in-14k-yellow-gold-item-203348",
       "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed. Re-read 2026-11-11 (S-59551D4B): the page shows a struck list amount and a 20%-off promotional amount; neither is assigned (no ISO currency).",
       "quotes": {
         "name": "Classic Simple Solitaire Engagement Ring in 14K Yellow Gold",
         "material": "14K Yellow Gold",
-        "display": "$1,145(Setting Price)",
+        "display": "$1,145$916(Setting Price)",
         "stock": "502120y14",
         "card": "with the Blue Nile Credit Card",
-        "price": "$1,145(Setting Price)"
-      }
+        "price": "$1,145$916(Setting Price)",
+        "promotion": "-20% \u2014 *Discount code is applied automatically",
+        "previous-display": "$1,145(Setting Price) \u2014 observed 2026-10-22; superseded on 2026-11-11."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ext-bn-195639",
@@ -1065,20 +1083,23 @@
       "kind": "product",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-solitaire-engagement-ring-in-14k-yellow-gold-item-195639",
       "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed. Re-read 2026-11-11 (S-59551D4B): the page shows a struck list amount and a 20%-off promotional amount; neither is assigned (no ISO currency).",
       "quotes": {
         "name": "Petite Solitaire Engagement Ring in 14k Yellow Gold",
         "material": "14K Yellow Gold",
-        "display": "$1,000(Setting Price)",
+        "display": "$1,000$800(Setting Price)",
         "stock": "501130y14",
         "card": "with the Blue Nile Credit Card",
-        "price": "$1,000(Setting Price)"
-      }
+        "price": "$1,000$800(Setting Price)",
+        "promotion": "-20% \u2014 *Discount code is applied automatically",
+        "previous-display": "$1,000(Setting Price) \u2014 observed 2026-10-22; superseded on 2026-11-11."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ext-bn-194548",
@@ -1086,20 +1107,23 @@
       "kind": "product",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/solitaire-compass-set-engagement-ring-in-14k-white-gold-item-194548",
       "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed. Re-read 2026-11-11 (S-59551D4B): the page shows a struck list amount and a 20%-off promotional amount; neither is assigned (no ISO currency).",
       "quotes": {
         "name": "Solitaire Compass Set Engagement Ring in 14k White Gold",
         "material": "14K White Gold",
-        "display": "$1,045(Setting Price)",
+        "display": "$1,045$836(Setting Price)",
         "stock": "501290w14",
         "card": "with the Blue Nile Credit Card",
-        "price": "$1,045(Setting Price)"
-      }
+        "price": "$1,045$836(Setting Price)",
+        "promotion": "-20% \u2014 *Discount code is applied automatically",
+        "previous-display": "$1,045(Setting Price) \u2014 observed 2026-10-22; superseded on 2026-11-11."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ext-be-121h6",
@@ -1107,13 +1131,13 @@
       "kind": "product",
       "url": "https://www.brilliantearth.com/Classic-Six-Prong-Solitaire-Ring-14K-Gold-BE121H6-76788910/",
       "observedAt": "2026-10-23T10:00:00Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0,
         4
       ],
-      "note": "2026-10-23 fetch: site locale USD, main product amount $890 (Setting Only). 2026-10-22 fetch rendered the same URL in a EUR locale as EUR 990.00 (Setting Only). Both are locale-dependent display observations; no exchange conversion is applied. Center diamond and ring size are not selected, so this is a setting-only amount.",
+      "note": "2026-10-23 fetch: site locale USD, main product amount $890 (Setting Only). 2026-10-22 fetch rendered the same URL in a EUR locale as EUR 990.00 (Setting Only). Both are locale-dependent display observations; no exchange conversion is applied. Center diamond and ring size are not selected, so this is a setting-only amount. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "Classic Six-Prong Solitaire Ring in 14K Yellow Gold",
         "material": "14K Yellow Gold",
@@ -1123,7 +1147,7 @@
         "prongs": "Prong metal: 14K White Gold",
         "phone": "1.415.426.2781"
       },
-      "lastRecheckedAt": "2026-10-23T10:00:00Z",
+      "lastRecheckedAt": "2026-11-11",
       "supersededDisplay": {
         "amount": 990,
         "currency": "EUR",
@@ -1138,21 +1162,24 @@
       "kind": "product",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-three-stone-diamond-engagement-ring-in-14k-yellow-gold-item-193625",
       "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed. Re-read 2026-11-11 (S-59551D4B): the page shows a struck list amount and a 20%-off promotional amount; neither is assigned (no ISO currency).",
       "quotes": {
         "name": "Petite Three-Stone Diamond Engagement Ring in 14k Yellow Gold",
         "material": "14K Yellow Gold",
-        "display": "$1,950(Setting Price)",
+        "display": "$1,950$1,560(Setting Price)",
         "stock": "502350y14",
         "card": "with the Blue Nile Credit Card",
-        "price": "$1,950(Setting Price)",
-        "stone": "Natural Diamond Information"
-      }
+        "price": "$1,950$1,560(Setting Price)",
+        "stone": "Natural Diamond Information",
+        "promotion": "-20% \u2014 *Discount code is applied automatically",
+        "previous-display": "$1,950(Setting Price) \u2014 observed 2026-10-22; superseded on 2026-11-11."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ext-z-20303279",
@@ -1160,19 +1187,22 @@
       "kind": "product",
       "url": "https://www.zales.com/12-ct-tw-diamond-frame-vintagestyle-twist-shank-engagement-ring-10k-gold/p/V-20303279",
       "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed. Re-read 2026-11-11 (S-59551D4B): single 'Discounted Price' amount; the earlier promotional amount is no longer rendered. No ISO currency; unassigned.",
       "quotes": {
         "name": "1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold",
         "material": "1/2 CT. T.W. Diamond Frame Vintage-Style Twist Shank Engagement Ring in 10K Gold",
-        "display": "Discounted Price $979.30",
+        "display": "Discounted Price $1,399.00",
         "returns": "Free and easy 30-day returns",
-        "contact-gap": "Contact details not exposed in the fetched product excerpt."
-      }
+        "contact-gap": "Contact details not exposed in the fetched product excerpt.",
+        "previous-display": "Discounted Price $979.30 \u2014 observed 2026-10-22; superseded on 2026-11-11.",
+        "bag-promotion": "Flash Sale: Save $75-$750 off your purchase starting at $250 or more - Discount Applied in Bag."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ext-z-20301172",
@@ -1180,19 +1210,22 @@
       "kind": "product",
       "url": "https://www.zales.com/13-ct-tw-diamond-three-stone-engagement-ring-10k-gold/p/V-20301172",
       "observedAt": "2026-10-22T23:44:35Z",
-      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only",
+      "method": "fetch_page; directly rechecked after concurrent-main integration, short factual transcriptions only; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed.",
+      "note": "Imported product preserved; official page directly re-fetched in this session. USD is never inferred from a bare dollar sign. Construction, marks and testing remain unconfirmed. Re-read 2026-11-11 (S-59551D4B): single 'Discounted Price' amount; the earlier promotional amount is no longer rendered. No ISO currency; unassigned.",
       "quotes": {
         "name": "1/3 CT. T.W. Diamond Three Stone Engagement Ring in 10K Gold",
         "material": "1/3 CT. T.W. Diamond Three Stone Engagement Ring in 10K Gold",
-        "display": "Discounted Price $769.30",
+        "display": "Discounted Price $1,099.00",
         "returns": "Free and easy 30-day returns",
-        "contact-gap": "Contact details not exposed in the fetched product excerpt."
-      }
+        "contact-gap": "Contact details not exposed in the fetched product excerpt.",
+        "previous-display": "Discounted Price $769.30 \u2014 observed 2026-10-22; superseded on 2026-11-11.",
+        "bag-promotion": "Flash Sale: Save $75-$750 off your purchase starting at $250 or more - Discount Applied in Bag."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "vrai-returns",
@@ -1234,20 +1267,20 @@
       "publisher": "World Gold Council",
       "kind": "market-context",
       "url": "https://www.gold.org/goldhub/data/gold-prices",
-      "observedAt": "2026-10-23T23:45:00Z",
-      "method": "fetch_page; directly rechecked 2026-10-23 (evening) by session S-1EB9F828, short factual transcriptions only; independently re-read by S-A182C7CC on 2026-10-23 UTC (date-level precision only)",
+      "observedAt": "2026-11-11",
+      "method": "fetch_page; directly rechecked 2026-10-23 (evening) by session S-1EB9F828, short factual transcriptions only; independently re-read by S-A182C7CC on 2026-10-23 UTC (date-level precision only); re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
       "relevantChunks": [
         0
       ],
-      "note": "Moving header read 3,995.47 USD/oz on the 2026-10-23T23:4xZ re-read by sessions S-88AA65FD and S-1B04074F, which observed the identical value independently. Earlier same-day readings are retained only inside data/gold-price.json as superseded observations and are not rendered as current values anywhere. The page's data blocks were dated 22 October, 2026. The header carries no quote-as-of timestamp, so chart metadata is stored separately and not bound to the header.",
+      "note": "Moving header read 4,059.49 USD/oz on the 2026-11-11 re-read by session S-59551D4B; the page's data blocks were dated 10 November, 2026. Earlier readings are retained only inside data/gold-price.json as superseded observations and are not rendered as current values anywhere. The header carries no quote-as-of timestamp, so chart metadata is stored separately and not bound to the header.",
       "quotes": {
-        "header": "Gold Spot price USD /oz - 3,995.47",
-        "chart-as-of": "Data as of 22 October, 2026",
+        "header": "Gold Spot price USD /oz - 4,059.49",
+        "chart-as-of": "Data as of 10 November, 2026",
         "units": "Prices are quoted in currency unit per troy ounce unless otherwise stated.",
-        "quote": "3,995.47"
+        "quote": "4,059.49"
       },
-      "lastRecheckedAt": "2026-10-23T23:41:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "sarraf-contact",
@@ -1361,14 +1394,17 @@
       "kind": "product",
       "url": "https://www.bluenile.com/engagement-rings/design-your-own-ring/petite-micropave-engagement-ring-in-14k-white-gold-item-316238",
       "observedAt": "2026-10-23T09:58:00Z",
-      "method": "fetch_page live primary verification by S-9B875C81",
+      "method": "fetch_page live primary verification by S-9B875C81; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Preserved from S-70B76800.",
+      "note": "Preserved from S-70B76800. Re-read 2026-11-11 (S-59551D4B): the page shows a struck list amount and a 20%-off promotional amount; neither is assigned (no ISO currency).",
       "quotes": {
         "name": "Petite Micropav\u00e9 Engagement Ring in 14k White Gold",
         "material": "14k White Gold",
-        "price": "$1,240(Setting Price)"
-      }
+        "price": "$1,240$992(Setting Price)",
+        "promotion": "-20% \u2014 *Discount code is applied automatically",
+        "previous-display": "$1,240(Setting Price) \u2014 observed 2026-10-23; superseded on 2026-11-11."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "sar-147370",
@@ -1376,9 +1412,9 @@
       "kind": "product",
       "url": "https://www.sarraf.com/products/14k-white-gold-solitaire-ring-0-94-ctw.html",
       "observedAt": "2026-10-23T09:58:00Z",
-      "method": "fetch_page live primary verification by S-9B875C81",
+      "method": "fetch_page live primary verification by S-9B875C81; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Complete natural diamond solitaire with separate metal weight.",
+      "note": "Complete natural diamond solitaire with separate metal weight. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "14k White Gold Solitaire Ring 0.94 ctw.",
         "material": "14K Solid Gold",
@@ -1386,7 +1422,7 @@
         "weight": "Approximate Metal Weight: 3.80 grams",
         "price": "Now: US$3,004.00"
       },
-      "lastRecheckedAt": "2026-10-23"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "sar-145362",
@@ -1394,9 +1430,9 @@
       "kind": "product",
       "url": "https://www.sarraf.com/products/14k-white-gold-mens-solitaire-diamond-ring-1-2-ct.html",
       "observedAt": "2026-10-23T09:58:00Z",
-      "method": "fetch_page live primary verification by S-9B875C81",
+      "method": "fetch_page live primary verification by S-9B875C81; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Heavy 10.00g 14K solid white gold solitaire.",
+      "note": "Heavy 10.00g 14K solid white gold solitaire. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "14k White Gold Men's Solitaire Diamond Ring 1/2 ct.",
         "material": "14K Solid Gold",
@@ -1404,7 +1440,7 @@
         "weight": "Approximate Metal Weight: 10.00 grams",
         "price": "Now: US$2,661.00"
       },
-      "lastRecheckedAt": "2026-10-23"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "sar-145364",
@@ -1412,9 +1448,9 @@
       "kind": "product",
       "url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-1-2-ct.html",
       "observedAt": "2026-10-23T09:58:00Z",
-      "method": "fetch_page live primary verification by S-9B875C81",
+      "method": "fetch_page live primary verification by S-9B875C81; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "8.00g 14K solid yellow gold solitaire.",
+      "note": "8.00g 14K solid yellow gold solitaire. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "14k Yellow Gold Men's Solitaire Diamond Ring 1/2 ct.",
         "material": "14K Solid Gold",
@@ -1422,7 +1458,7 @@
         "weight": "Approximate Metal Weight: 8.00 grams",
         "price": "Now: US$2,858.00"
       },
-      "lastRecheckedAt": "2026-10-23"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "sar-144773",
@@ -1430,16 +1466,16 @@
       "kind": "product",
       "url": "https://www.sarraf.com/products/14k-yellow-gold-12mm-high-polished-traditional-domed-wedding-band.html",
       "observedAt": "2026-10-23T09:58:00Z",
-      "method": "fetch_page live primary verification by S-9B875C81",
+      "method": "fetch_page live primary verification by S-9B875C81; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "13.40g 14K solid yellow gold domed band (benchmarked at size 10).",
+      "note": "13.40g 14K solid yellow gold domed band (benchmarked at size 10). Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "14k Yellow Gold 12mm High Polished Traditional Domed Wedding Band",
         "material": "14K Solid Gold",
         "weight": "Approximate Metal Weight: 13.40 grams",
         "price": "Now: US$1,362.00"
       },
-      "lastRecheckedAt": "2026-10-23"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "fdj-gr0001",
@@ -1447,9 +1483,9 @@
       "kind": "product",
       "url": "https://www.factorydirectjewelry.com/gold/lab-grown-diamond-halo-engagement-ring-in-14k-gold/",
       "observedAt": "2026-10-23T09:58:00Z",
-      "method": "fetch_page live primary verification by S-9B875C81",
+      "method": "fetch_page live primary verification by S-9B875C81; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "1.25g displayed weight w/ 1.37cts lab diamonds \u2014 ultra-thin risk.",
+      "note": "1.25g displayed weight w/ 1.37cts lab diamonds \u2014 ultra-thin risk. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "Lab Grown Diamond Halo Engagement Ring in 14K Gold",
         "material": "14K Solid Gold",
@@ -1458,7 +1494,7 @@
         "weight": "Weight:1.25 Grams",
         "price": "$1,299.99 USD"
       },
-      "lastRecheckedAt": "2026-10-23"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ss-clara",
@@ -1466,14 +1502,16 @@
       "kind": "product",
       "url": "https://www.stoneandstrand.com/products/the-clara-ring",
       "observedAt": "2026-10-23T09:58:00Z",
-      "method": "fetch_page live primary verification by S-9B875C81",
+      "method": "fetch_page live primary verification by S-9B875C81; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Preserved from S-75094819.",
+      "note": "Preserved from S-75094819. Product .oembed endpoint re-read 2026-11-11 (S-59551D4B); product HTML not re-read. No price is assigned.",
       "quotes": {
         "name": "The Clara Diamond Ring",
         "material": "Solid 14K yellow gold",
-        "karat": "Gold Karat: 14K"
-      }
+        "karat": "Gold Karat: 14K",
+        "offers-2026-11-11": "Official .oembed endpoint, currency USD: size 5 \u2014 2200.0; size 6 \u2014 2200.0; size 7 \u2014 2000.0; all in stock."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ss-rita",
@@ -1481,14 +1519,16 @@
       "kind": "product",
       "url": "https://www.stoneandstrand.com/products/the-rita-ring",
       "observedAt": "2026-10-23T09:58:00Z",
-      "method": "fetch_page live primary verification by S-9B875C81",
+      "method": "fetch_page live primary verification by S-9B875C81; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Preserved from S-75094819 (Final Sale 60% off).",
+      "note": "Preserved from S-75094819 (Final Sale 60% off). Product .oembed endpoint re-read 2026-11-11 (S-59551D4B); product HTML not re-read. No price is assigned.",
       "quotes": {
         "name": "The Rita Diamond Ring",
         "material": "Solid 14K yellow gold",
-        "karat": "Gold Karat: 14K"
-      }
+        "karat": "Gold Karat: 14K",
+        "offers-2026-11-11": "Official .oembed endpoint, currency USD: 780.0; every listed size in_stock false; description: Final sale and non-returnable."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ss-mia",
@@ -1496,14 +1536,16 @@
       "kind": "product",
       "url": "https://www.stoneandstrand.com/products/the-mia-ring",
       "observedAt": "2026-10-23T09:58:00Z",
-      "method": "fetch_page live primary verification by S-9B875C81",
+      "method": "fetch_page live primary verification by S-9B875C81; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "Preserved from S-75094819 (14K spec vs 10K alt + Final Sale).",
+      "note": "Preserved from S-75094819 (14K spec vs 10K alt + Final Sale). Product .oembed endpoint re-read 2026-11-11 (S-59551D4B); product HTML not re-read. No price is assigned.",
       "quotes": {
         "name": "The Mia Diamond Ring",
         "material": "Solid 14K yellow gold",
-        "karat": "Gold Karat: 14K"
-      }
+        "karat": "Gold Karat: 14K",
+        "offers-2026-11-11": "Official .oembed endpoint, currency USD: 925.0; every listed size in_stock false; description: Final sale and non-returnable."
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ag-coffin-ring",
@@ -1511,9 +1553,9 @@
       "kind": "product",
       "url": "https://www.automicgold.com/products/coffin-ring",
       "observedAt": "2026-10-23T20:00:00Z",
-      "method": "fetch_page; product page and product JSON directly retrieved by session S-1EB9F828 on 2026-10-23",
+      "method": "fetch_page; product page and product JSON directly retrieved by session S-1EB9F828 on 2026-10-23; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "All-metal, stone-free ring. The page displays the default 14k amount; the product JSON shows a variant range (F-039).",
+      "note": "All-metal, stone-free ring. The page displays the default 14k amount; the product JSON shows a variant range (F-039). Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "Coffin Ring",
         "price": "$1,910",
@@ -1522,7 +1564,7 @@
         "selected": "14k Yellow Gold",
         "json": "\"price\":191000,\"price_min\":191000,\"price_max\":223300,\"price_varies\":true"
       },
-      "lastRecheckedAt": "2026-10-23T23:52:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "ag-cushion-signet",
@@ -1530,9 +1572,9 @@
       "kind": "product",
       "url": "https://www.automicgold.com/products/cushion-diamond-signet-ring",
       "observedAt": "2026-10-23T20:00:00Z",
-      "method": "fetch_page; product page and product JSON directly retrieved by session S-1EB9F828 on 2026-10-23",
+      "method": "fetch_page; product page and product JSON directly retrieved by session S-1EB9F828 on 2026-10-23; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "The stored amount is the 14k Yellow Gold / Salt and Pepper Diamond variant; the JSON shows $2,408\u2013$3,253 (F-039). The 5.5 g is a gross item weight including the stone.",
+      "note": "The stored amount is the 14k Yellow Gold / Salt and Pepper Diamond variant; the JSON shows $2,408\u2013$3,253 (F-039). The 5.5 g is a gross item weight including the stone. Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "Cushion Diamond Signet Ring",
         "price": "$2,758",
@@ -1544,7 +1586,7 @@
         "json": "\"price\":240800,\"price_min\":240800,\"price_max\":325300,\"price_varies\":true",
         "variant-price-json": "Official product JSON variant: 14k Yellow Gold / Salt and Pepper Diamond; raw price field 275800."
       },
-      "lastRecheckedAt": "2026-10-23T23:52:00Z"
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "mj-bold-eternity",
@@ -1552,9 +1594,9 @@
       "kind": "product",
       "url": "https://mejuri.com/products/bold-diamond-eternity-ring",
       "observedAt": "2026-10-23T20:00:00Z",
-      "method": "fetch_page; product page directly retrieved by session S-1EB9F828 on 2026-10-23 with Material=Solid White Gold (14k) and Stone=Natural Diamond",
+      "method": "fetch_page; product page directly retrieved by session S-1EB9F828 on 2026-10-23 with Material=Solid White Gold (14k) and Stone=Natural Diamond; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "No ISO currency code appears on the product page, the cart endpoint (404) or the payment FAQ, so the amount is displayed verbatim but left unassigned (F-025, F-030).",
+      "note": "No ISO currency code appears on the product page, the cart endpoint (404) or the payment FAQ, so the amount is displayed verbatim but left unassigned (F-025, F-030). Re-read 2026-11-11 (S-59551D4B): 'From$2,900' unchanged; page now also states a holiday return window (orders Nov 1 \u2013 Dec 31, 2026 returnable through Jan 31, 2027).",
       "quotes": {
         "name": "Bold Diamond Eternity Ring",
         "variants": "Solid White Gold (14k), Natural Diamond",
@@ -1563,7 +1605,8 @@
         "price": "From$2,900",
         "carat": "Minimum Carat Weight: 1.15 ct - 1.57 ct",
         "returns": "We offer free 30-day returns & exchanges starting from the day the shipment is delivered or picked up in-store."
-      }
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "mejuri-returns",
@@ -1671,16 +1714,17 @@
       "kind": "product",
       "url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-belcher-diamond-ring-1ctw.html",
       "observedAt": "2026-10-23T23:52:00Z",
-      "method": "fetch_page live primary verification by S-C74095E5",
+      "method": "fetch_page live primary verification by S-C74095E5; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "New row 2026-10-23: explicit 14K Solid Gold, 9.20 g metal weight, US$8,203.00 (was US$9,594.00).",
+      "note": "New row 2026-10-23: explicit 14K Solid Gold, 9.20 g metal weight, US$8,203.00 (was US$9,594.00). Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "14k Yellow gold Mens Solitaire Belcher Diamond Ring 1ctw",
         "material": "14K Solid Gold",
         "stone": "Natural Diamond 1.00 Ct. (Diamond Weight: 1.00 Ct.; Diamond ( Natural / Lab Created ): Natural; Diamond Color: H; Diamond Clarity: SI 1)",
         "weight": "Approximate Metal Weight: 9.20 grams",
         "price": "Now: US$8,203.00"
-      }
+      },
+      "lastRecheckedAt": "2026-11-11"
     },
     {
       "id": "sar-147371",
@@ -1688,16 +1732,17 @@
       "kind": "product",
       "url": "https://www.sarraf.com/products/14k-yellow-gold-mens-solitaire-diamond-ring-0-98-ct.html",
       "observedAt": "2026-10-23T23:52:00Z",
-      "method": "fetch_page live primary verification by S-C74095E5",
+      "method": "fetch_page live primary verification by S-C74095E5; re-read 2026-11-11 by session S-59551D4B (short excerpts; date-level precision)",
       "access": "fetched",
-      "note": "New row 2026-10-23: explicit 14K Solid Gold, 7.70 g metal weight, US$4,049.00 (was US$4,736.00). Diamond color conflict flagged (root F-045).",
+      "note": "New row 2026-10-23: explicit 14K Solid Gold, 7.70 g metal weight, US$4,049.00 (was US$4,736.00). Diamond color conflict flagged (root F-045). Price re-read 2026-11-11 (S-59551D4B): unchanged.",
       "quotes": {
         "name": "14k Yellow gold Mens Solitaire Diamond Ring 0.98 ct.",
         "material": "14K Solid Gold",
         "stone": "Natural Diamond 0.98 Ct. (Diamond Weight: 0.98 Ct.; Diamond ( Natural / Lab Created ): Natural; Diamond Clarity: I1; Diamond Color: G in specifications vs 'H in color' in description \u2014 unresolved)",
         "weight": "Approximate Metal Weight: 7.70 grams",
         "price": "Now: US$4,049.00"
-      }
+      },
+      "lastRecheckedAt": "2026-11-11"
     }
   ]
 }
