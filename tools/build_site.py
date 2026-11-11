@@ -777,7 +777,21 @@ def build_verification(log, items, retrieved):
     rows = []
     for entry in entries:
         css, label = STATUS_LABELS.get(entry["status"], ("b-neutral", entry["status"]))
-        observed = "<br>".join(f"“{esc(text)}”" for text in entry.get("observed") or []) or DASH
+        # Market entries document historical reads, not the active calculator input.
+        historical_market = entry["id"] in {"GOLD-QUOTE", "A182-MARKET-WGC-2026-10-23"}
+        if historical_market:
+            css, label = "b-neutral", "historical observation · not current"
+        # Keep dated historical values in the evidence/log, but do not render
+        # superseded market values in the live site as a possibly current quote.
+        def historical_text(value):
+            if historical_market:
+                for old in load(DATA / "gold-price.json").get("superseded_observations", []):
+                    value = value.replace(f"{old['value']:,.2f}", "superseded quote (see evidence)")
+            return value
+        observed = "<br>".join(f"“{esc(historical_text(text))}”" for text in entry.get("observed") or []) or DASH
+        note = esc(historical_text(entry["note"]))
+        if historical_market:
+            note += ' · <a href="evidence/gold-price.md">dated quote history</a>'
         rows.append(
             f'<tr id="check-{esc(entry["id"].lower())}">'
             f'<td><div class="itemname">{esc(entry["label"])}</div>'
@@ -786,7 +800,7 @@ def build_verification(log, items, retrieved):
             f'<td><span class="badge {css}">{esc(label)}</span></td>'
             f'<td class="src">{observed}</td>'
             f'<td class="src">{external_link(entry["url"], "official page")}</td>'
-            f'<td class="src">{esc(entry["note"])}</td></tr>'
+            f'<td class="src">{note}</td></tr>'
         )
     pass_meta = log["pass"]
     body = f"""

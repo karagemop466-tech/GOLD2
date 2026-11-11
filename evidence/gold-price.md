@@ -1,6 +1,6 @@
 # Evidence — dated gold quote and calculation constants
 
-- **Current observation retrieved:** 2026-10-23 (UTC), direct page fetch.
+- **Current observation retrieved:** 2026-11-11 (UTC), direct page fetch.
 - **Current quote source:** World Gold Council, Gold spot prices.
 - **Conversion source:** US National Institute of Standards and Technology (NIST).
 - **Karat-labeling context:** government-hosted eCFR; useful regulatory guidance, not a physical assay.
@@ -14,7 +14,7 @@
 
 **URL:** https://www.gold.org/goldhub/data/gold-prices
 
-**Retrieved:** 2026-10-23T23:41Z (UTC). This is the latest direct fetch of the same page on that day; every earlier reading of the moving header is kept only in the dated history table below.
+**Retrieved:** 2026-11-11 (UTC), by direct page fetch. The moving header is not timestamped; chart date is separate.
 
 ### `usd_per_troy_oz`
 
@@ -25,14 +25,14 @@ USD
 
 -
 
-3,995.47
+4,059.49
 Last Updated
 ```
 
 ### Chart date on the same page
 
 ```
-Data as of 22 October, 2026
+Data as of 10 November, 2026
 ```
 
 ### `source_name`
@@ -57,6 +57,7 @@ that retrieval are recorded. This is F-026.
 
 | Value (USD/oz) | Retrieved | Chart date on that page | Status | Why it is not current |
 | --- | --- | --- | --- | --- |
+| 3,995.47 | 2026-10-23T23:41Z | 2026-10-22 | `superseded_moving_header` | Earlier observation, replaced by the later 2026-11-11 retrieval. |
 | 3,996.31 | 2026-10-23T20:00Z | 2026-10-22 | `superseded_moving_header` | Earlier same-day fetch of the same moving header. A later fetch at 23:41Z rendered 3,995.47 with the same chart date. |
 | 4,024.45 | 2026-10-23 | 2026-10-22 | `superseded_intraday` | Earlier same-day fetch of the same moving header. A later fetch displayed a different value with the same chart date. |
 | 4,028.53 | 2026-10-22 | 2026-10-21 | `superseded_moving_header` | Prior-day moving-header observation. |

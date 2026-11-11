@@ -1637,3 +1637,15 @@ The full check found a mismatch: `dashboard/` still embeds the old WGC reference
 ### S-36620E91 — provenance-date correction scope
 
 Rebuilding the companion surfaced a provenance defect: the builder uses the gold retrieval date as the date for product and retailer datasets, even though they were not all re-fetched. Claim `dashboard/scripts/build.py` for a targeted split of the gold and catalog dates, plus `README.md` for the stale current-reference paragraph. Existing historical 2026-10-23 entries remain historical; no ring is freshly verified merely by rebuilding. The two historical WGC log rows are visibly labeled and link to retained history; their superseded numbers are not rendered in the generated site, so existing independent scanners stay strict and pass without altering peer scanners. F-037 already flags Clara's final-sale/returns conflict; a 2026-11-11 read again displayed “This product is non-returnable.” Do not buy without a qualifying return after independent verification.
+
+### S-36620E91 — partial integration handoff (2026-11-11 UTC)
+
+| Task | Status | Findings |
+|---|---|---|
+| T-366-01 | done | Claim and scope committed; fixed Arena branch used. |
+| T-366-02 | done | Baseline stored under `audit/36620e91/check_runs/`; old source dates are not refreshed by a build. |
+| T-366-03 | needs review | Partial direct official-source pass only; see `audit/36620e91/live_verification_2026-11-11.md` for 18 subject-specific reads and precise limitations. Remaining rows and seller policies were not freshly re-read; no claim of full line-by-line re-verification. Existing flags F-026/F-034/F-037/F-045 remain applicable. |
+| T-366-04 | done for this patch | Root QA 12/0/3; companion verify and calculator; independent scanners 8C, B200, 88AA (6 mutation controls) and 9B (mutation tests); provenance-date regression; npm audit and static security all passed. These checks verify internal consistency, not truth. Recheck hallucinations after each review. |
+| T-366-05 | needs review | Root and companion rebuilt, `npm run check` passed (23 tests, link structure, security, browser, axe); external URL availability was not certified. Fresh full combined-register and policy verification is incomplete; do not claim completion or merge as final integration until that requirement is satisfied. |
+
+Source for updated moving gold observation: https://www.gold.org/goldhub/data/gold-prices (2026-11-11 UTC, USD 4,059.49/ozt; exact quote timestamp unconfirmed; chart date separately 2026-11-10). The earlier quoted value is preserved as history, not shown as current. A failed first browser pass exposed an unrebuilt companion and two peer scanners objected to historical values being rendered; rebuild and historical-label rendering resolved both without disabling independent gates. Product/retailer capture dates were separated from the newly refreshed gold date; a regression test protects against conflation. The site already flags the final-sale and karat conflicts. The project still has no physically tested or purchase-approved ring.

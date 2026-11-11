@@ -35,7 +35,7 @@ Two defects found in this late pass are published rather than smoothed: a senten
 
 The expanded calculator records a **dated JM Bullion dealer body/table observation**, not an LBMA benchmark or live feed. It distinguishes nominal `karat / 24` from explicit decimal fineness and uses the NIST **31.1034768 grams per troy ounce** conversion. Product valuation remains blocked; a separate acknowledged hypothetical scenario never writes values back to product data.
 
-The root register records a dated observation of the WGC moving header: **$3,995.47 USD/ozt**, retrieved 2026-10-23 UTC. Its exact **quote-as-of timestamp remains unconfirmed (`quote_date: null`, F-026)**; the page separately stated “Data as of 22 October, 2026” for the chart. Neither chart date nor retrieval date is assigned to the moving-header quote. This observation is not a live/current quote. Root reference calculations are conditional arithmetic, not current valuations or guaranteed resale floors. See root **F-025/F-026** and the expanded review register.
+The root register records a dated observation of the WGC moving header: **$4,059.49 USD/ozt**, retrieved 2026-11-11 UTC. Its exact **quote-as-of timestamp remains unconfirmed (`quote_date: null`, F-026)**; the page separately stated “Data as of 10 November, 2026” for the chart. Neither chart date nor retrieval date is assigned to the moving-header quote. This observation is not a live/current quote. Root reference calculations are conditional arithmetic, not current valuations or guaranteed resale floors. See root **F-025/F-026** and the expanded review register.
 
 ## Repository layout
 
