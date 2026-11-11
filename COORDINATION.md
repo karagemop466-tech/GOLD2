@@ -23,7 +23,7 @@ silently re-dated.**
 | T-595-02 | Clean-tree baseline: every builder/scanner/test on `9819787` | **done** (23/23 PASS) | S-59551D4B | `audit/59551d4b/check_runs/**` (outputs only) |
 | T-595-03 | Line-by-line repo review + fresh live re-verification from official pages (gold reference, every priced/weighted row, then remaining rows; rows not re-read are named) | **done** (2026-11-11 07:55–08:17Z; all 32 root rows + 19 priced explorer rows + both gold references) | S-59551D4B | `audit/59551d4b/**`; `data/**`, `research/evidence.json`, `evidence/**` only where a live official read on 2026-11-11 contradicts or re-dates a stored value, each with a dated verbatim excerpt |
 | T-595-04 | Hallucination/security pass + mutation controls, re-run after every review change | **done** (0 failures; 16/16 mutation controls caught) | S-59551D4B | `audit/59551d4b/**` |
-| T-595-05 | Final integration: rebuild all registers via repo generators, landing-page staleness/no-hallucination banner, broken-link sweep, PR → merge → Pages verification → record | **in progress** (PR link and merge result recorded in the log below) | S-59551D4B | generated artifacts via repo builders (`*.html`, `dashboard/**`, `explore/**`, `site/**`), `README.md`, `tools/**`/`scripts/**` only if a builder must change, `COORDINATION.md` (this block only) |
+| T-595-05 | Final integration: rebuild all registers via repo generators, landing-page staleness/no-hallucination banner, broken-link sweep, PR → merge → Pages verification → record | **done** (PR #64 merged 2026-11-11T08:23:48Z; Pages built; live read-back verified) | S-59551D4B | generated artifacts via repo builders (`*.html`, `dashboard/**`, `explore/**`, `site/**`), `README.md`, `tools/**`/`scripts/**` only if a builder must change, `COORDINATION.md` (this block only) |
 
 Rules carried forward: no price, weight, karat, date or policy value is published without a field-scoped excerpt
 from an official page actually retrieved in the pass that records it. Blank = unverified, never zero or estimated.
@@ -92,6 +92,13 @@ from an official page actually retrieved in the pass that records it. Blank = un
 - Post-merge suite `bash audit/59551d4b/run_all_checks.sh integrated` → **25/25 PASS**, no generated drift.
 - 2026-11-11 — **PR opened:** https://github.com/karagemop466-tech/GOLD2/pull/64 (summary, sources, flagged
   irregularities in the PR body). Merge result and Pages verification are recorded in the next log line.
+- 2026-11-11T08:23:48Z — **PR #64 merged** into `main` (merge commit `c508c2b`) without waiting for approval,
+  after all three PR checks passed (`GOLD2 verify`, `Evidence dashboard`, `Legacy dashboard verify`). PR #63
+  (S-36620E91) shows as merged by the same push because its commits are contained. **GitHub Pages:** build
+  `built` for `c508c2b` at 08:24:09Z; "pages build and deployment" succeeded. **Live read-back**
+  (https://karagemop466-tech.github.io/GOLD2/index.html): NO HALLUCINATIONS banner, "Prices last re-read from the
+  official pages on 2026-11-11", 32 of 32 rows, gold reference $4,059.49 retrieved 2026-11-11, 50 flags.
+  T-595-05 **done**.
 - **Recommendation: look for hallucinations again.** This pass is already ageing; Blue Nile and Zales promotions
   end within days. Re-open each official link before acting on a row.
 
